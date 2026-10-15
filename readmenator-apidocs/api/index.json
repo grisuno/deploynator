@@ -2,34 +2,34 @@
  "schema_version": 1,
  "format": "jsonl",
  "meta": {
-  "modules": 18,
-  "entities": 294,
+  "modules": 19,
+  "entities": 301,
   "languages": {
-   "py": 16,
+   "py": 17,
    "sh": 2
   },
   "kinds": {
    "attribute": 101,
    "class": 28,
    "classmethod": 12,
-   "constant": 7,
+   "constant": 10,
    "constructor": 14,
    "enum": 2,
-   "function": 7,
+   "function": 10,
    "method": 99,
-   "module": 18,
+   "module": 19,
    "property": 4,
    "staticmethod": 2
   },
   "truncated": false,
-  "skipped_files": 15,
+  "skipped_files": 16,
   "privacy_mode": false
  },
  "coverage": {
   "overall": {
-   "documented": 7,
-   "total": 186,
-   "percent": 3.8
+   "documented": 10,
+   "total": 190,
+   "percent": 5.3
   },
   "by_kind": {
    "class": {
@@ -53,9 +53,9 @@
     "percent": 0.0
    },
    "function": {
-    "documented": 1,
-    "total": 7,
-    "percent": 14.3
+    "documented": 4,
+    "total": 10,
+    "percent": 40.0
    },
    "method": {
     "documented": 3,
@@ -64,8 +64,8 @@
    },
    "module": {
     "documented": 3,
-    "total": 18,
-    "percent": 16.7
+    "total": 19,
+    "percent": 15.8
    },
    "property": {
     "documented": 0,
@@ -148,6 +148,11 @@
     "documented": 2,
     "total": 9,
     "percent": 22.2
+   },
+   "deploynator/_readme.py": {
+    "documented": 3,
+    "total": 4,
+    "percent": 75.0
    },
    "deploynator/_runner.py": {
     "documented": 0,
@@ -243,6 +248,11 @@
    "entities": 9
   },
   {
+   "uid": "deploynator/_readme.py",
+   "path": "modules/deploynator._readme.py.jsonl",
+   "entities": 7
+  },
+  {
    "uid": "deploynator/_runner.py",
    "path": "modules/deploynator._runner.py.jsonl",
    "entities": 4
@@ -265,7 +275,7 @@
  ],
  "warnings": {
   "path": "warnings.jsonl",
-  "total": 179
+  "total": 180
  },
  "usage": [
   "grep -h '\"name\":\"<Name>\"' readmenator-apidocs/api/modules/*.jsonl",

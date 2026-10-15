@@ -82,7 +82,7 @@
   - `gh_authd` (method, line 91) `def gh_authd(self)`
   - `glab_authd` (method, line 95) `def glab_authd(self)`
   - `bb_authd` (method, line 99) `def bb_authd(self)`
-- Imported by: `app.py`, `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deploy.py`, `tests/test_init.py`, `tests/test_install_example.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_semver.py`
+- Imported by: `app.py`, `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deploy.py`, `tests/test_init.py`, `tests/test_install_example.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_readme_footer.py`, `tests/test_runner.py`, `tests/test_semver.py`
 
 ## deploynator/_deploy.py
 - Doc: _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.
@@ -98,17 +98,17 @@
   - `__init__` (method, line 77) `def __init__(self, config)`
   - `_resolve_project_path` (method, line 88) `def _resolve_project_path(project)`
   - `deploy` (method, line 97) `def deploy(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...`
-  - `_gh_release_in_repo` (method, line 351) `def _gh_release_in_repo(self, repo_path, project_name, version, notes, branch)`
-  - `_add_temp_remote` (method, line 384) `def _add_temp_remote(self, repo_path, name, url)`
-  - `_remove_temp_remote` (method, line 393) `def _remove_temp_remote(self, repo_path, name)`
-  - `_get_remote_url` (method, line 403) `def _get_remote_url(repo_path, pc)`
-  - `generate_workflows` (method, line 412) `def generate_workflows(self, project, output_dir)`
-  - `_ci_workflow_content` (method, line 431) `def _ci_workflow_content(self, project)`
-  - `_release_workflow_content` (method, line 452) `def _release_workflow_content(self, project)`
-  - `install_dependencies` (method, line 480) `def install_dependencies(self, project)`
-  - `integrate_readmenator` (method, line 490) `def integrate_readmenator(self, project_path)`
-  - `install_lazygit` (method, line 524) `def install_lazygit(self)`
-- Depends on: `deploynator/_changelog.py`, `deploynator/_config.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`
+  - `_gh_release_in_repo` (method, line 360) `def _gh_release_in_repo(self, repo_path, project_name, version, notes, branch)`
+  - `_add_temp_remote` (method, line 393) `def _add_temp_remote(self, repo_path, name, url)`
+  - `_remove_temp_remote` (method, line 402) `def _remove_temp_remote(self, repo_path, name)`
+  - `_get_remote_url` (method, line 412) `def _get_remote_url(repo_path, pc)`
+  - `generate_workflows` (method, line 421) `def generate_workflows(self, project, output_dir)`
+  - `_ci_workflow_content` (method, line 440) `def _ci_workflow_content(self, project)`
+  - `_release_workflow_content` (method, line 461) `def _release_workflow_content(self, project)`
+  - `install_dependencies` (method, line 489) `def install_dependencies(self, project)`
+  - `integrate_readmenator` (method, line 499) `def integrate_readmenator(self, project_path)`
+  - `install_lazygit` (method, line 533) `def install_lazygit(self)`
+- Depends on: `deploynator/_changelog.py`, `deploynator/_config.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`
 - Imported by: `deploynator/_app.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`
 
 ## deploynator/_docs.py
@@ -278,6 +278,18 @@
   - `run` (method, line 107) `def run(self, project_path, toml, version, token)`
 - Depends on: `deploynator/_config.py`, `deploynator/_toml.py`
 - Imported by: `deploynator/_deploy.py`, `tests/test_pypi.py`
+
+## deploynator/_readme.py
+- Doc: footer_block: Return the anchored deploy footer block.
+- Layer: utility
+- Language: py
+- Symbols:
+  - `footer_block` (function, line 19) `def footer_block(config)`
+  - `_find_readme` (function, line 32) `def _find_readme(repo_path)`
+  - `ensure_deployed_footer` (function, line 49) `def ensure_deployed_footer(repo_path, config)`
+  - `footer_line` (function, line 96) `def footer_line(config)`
+- Depends on: `deploynator/_config.py`
+- Imported by: `deploynator/_deploy.py`, `tests/test_readme_footer.py`
 
 ## deploynator/_runner.py
 - Layer: utility

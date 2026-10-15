@@ -1,23 +1,24 @@
 # deploynator
 
-> Static analysis knowledge base for deploynator: 3 communities, 33 files, 347 imports, 2 languages, 405 symbols.
+> Static analysis knowledge base for deploynator: 4 communities, 35 files, 355 imports, 2 languages, 415 symbols.
 
 Generated offline by readmenator (zero LLM tokens). Start with the wiki index for the big picture, then the agent INDEX for file lookup.
 
 ## Wiki
 
-- [readmenator-wiki/index.md](md/readmenator-wiki/index.md): The codebase centres on config.py, deploy.py, models.py. Architecturally it is 4 layers, dominant utility (16 files) across 4 import-based communities....
-- [readmenator-wiki/REPORT.md](md/readmenator-wiki/REPORT.md): Project: deploynator | 2026-10-14 | offline, deterministic
-- [readmenator-wiki/community_0_deploynator_mcp_server.md](md/readmenator-wiki/community_0_deploynator_mcp_server.md): Community 0 | 11 files | cohesion 0.47
-- [readmenator-wiki/community_1_deploynator_platforms.md](md/readmenator-wiki/community_1_deploynator_platforms.md): Community 1 | 11 files | cohesion 0.46
-- [readmenator-wiki/community_2_deploynator_pypi.md](md/readmenator-wiki/community_2_deploynator_pypi.md): Community 2 | 8 files | cohesion 0.38
-- [readmenator-wiki/community_3_orphans.md](md/readmenator-wiki/community_3_orphans.md): Community 3 | 3 files | cohesion 0.00
+- [readmenator-wiki/index.md](md/readmenator-wiki/index.md): The codebase centres on config.py, deploy.py, models.py. Architecturally it is 4 layers, dominant utility (17 files) across 5 import-based communities....
+- [readmenator-wiki/REPORT.md](md/readmenator-wiki/REPORT.md): Project: deploynator | 2026-10-15 | offline, deterministic
+- [readmenator-wiki/community_0_deploynator_platforms.md](md/readmenator-wiki/community_0_deploynator_platforms.md): Community 0 | 11 files | cohesion 0.45
+- [readmenator-wiki/community_1_deploynator_pypi.md](md/readmenator-wiki/community_1_deploynator_pypi.md): Community 1 | 8 files | cohesion 0.38
+- [readmenator-wiki/community_2_deploynator_mcp_server.md](md/readmenator-wiki/community_2_deploynator_mcp_server.md): Community 2 | 7 files | cohesion 0.50
+- [readmenator-wiki/community_3_deploynator_changelog.md](md/readmenator-wiki/community_3_deploynator_changelog.md): Community 3 | 6 files | cohesion 0.21
+- [readmenator-wiki/community_4_orphans.md](md/readmenator-wiki/community_4_orphans.md): Community 4 | 3 files | cohesion 0.00
 - [readmenator-wiki/concepts.md](md/readmenator-wiki/concepts.md): Second-brain semantic layer: nouns map atomically to file sets (EXTRACTED); verbs aggregate structural edges (INFERRED).
 - [readmenator-wiki/queries.md](md/readmenator-wiki/queries.md): Log each answered question here so the wiki compounds. Format: question, answer, cited files.
 
 ## GraphRAG
 
-- [readmenator-graphrag/REPORTS.md](md/readmenator-graphrag/REPORTS.md): Entities: 514 | Relationships: 1434 | Communities: 4 | Themes: 2 | Text units: 417
+- [readmenator-graphrag/REPORTS.md](md/readmenator-graphrag/REPORTS.md): Entities: 527 | Relationships: 1474 | Communities: 5 | Themes: 2 | Text units: 428
 
 ## Agent Docs
 
@@ -29,11 +30,11 @@ Generated offline by readmenator (zero LLM tokens). Start with the wiki index fo
 - [readmenator-agent/KB_deploynator.md](md/readmenator-agent/KB_deploynator.md): Depends on: deploynator/app.py
 - [readmenator-agent/KB_root.md](md/readmenator-agent/KB_root.md): Doc: example: use deploynator programmatically as a library.
 - [readmenator-agent/KB_tests.md](md/readmenator-agent/KB_tests.md): Doc: BDD-style tests for deploynator using behavior-driven patterns.
-- [readmenator-agent/MEMORY.md](md/readmenator-agent/MEMORY.md): Generated from 33 files at commit 62eb195aebe6. Read this first, then readmenator-wiki/index.md, then readmenator . ask "<question>" for anything specific.
+- [readmenator-agent/MEMORY.md](md/readmenator-agent/MEMORY.md): Generated from 35 files at commit 063370c92596. Read this first, then readmenator-wiki/index.md, then readmenator . ask "<question>" for anything specific.
 - [readmenator-agent/SECURITY.md](md/readmenator-agent/SECURITY.md)
 - [readmenator-agent/SYMBOLS.md](md/readmenator-agent/SYMBOLS.md)
 - [readmenator-agent/recipes/add-function.md](md/readmenator-agent/recipes/add-function.md): Find the target file by purpose: grep -in '<topic>' readmenator-agent/INDEX.md
-- [readmenator-agent/recipes/change-impact.md](md/readmenator-agent/recipes/change-impact.md): Riskiest file: deploynator/config.py (27 dependents)
+- [readmenator-agent/recipes/change-impact.md](md/readmenator-agent/recipes/change-impact.md): Riskiest file: deploynator/config.py (29 dependents)
 - [readmenator-agent/recipes/fix-cycle.md](md/readmenator-agent/recipes/fix-cycle.md): Read cycles: grep -A5 'Dependency Cycles' readmenator-agent/GOTCHAS.md
 - [readmenator-agent/recipes/fix-security.md](md/readmenator-agent/recipes/fix-security.md): Read findings: grep -n '<file>' readmenator-agent/SECURITY.md
 - [readmenator-agent/recipes/reduce-complexity.md](md/readmenator-agent/recipes/reduce-complexity.md): Target hotspot: deploynator/app.py
@@ -44,10 +45,11 @@ Generated offline by readmenator (zero LLM tokens). Start with the wiki index fo
 - [README.md](md/README.md): Token-free, offline, multi-platform deployer for GitHub, GitLab, and Bitbucket.
 - [SECURITY.md](md/SECURITY.md): Use this section to tell people about which versions of your project are
 - [SKILL.md](md/SKILL.md): Sucesor de DEPLOY.sh. Un comando despliega con semver correcto: corre tests (salvo --no-test), regenera docs con readmenator (salvo --no-docs), bump, commit...
-- [readmenator-diagrams/deploynator__mcp_server.md](md/readmenator-diagrams/deploynator__mcp_server.md): deploynator: mcpserver groups 11 files (py) around Config, create, resolvepath, ghauthd, glabauthd. example: use deploynator programmatically as a library.
+- [readmenator-diagrams/deploynator__changelog.md](md/readmenator-diagrams/deploynator__changelog.md): deploynator: changelog groups 6 files (py) around Config, create, resolvepath, ghauthd, glabauthd. footerblock: Return the anchored deploy footer block.
+- [readmenator-diagrams/deploynator__mcp_server.md](md/readmenator-diagrams/deploynator__mcp_server.md): deploynator: mcpserver groups 7 files (py) around MCPRequest, init, isnotification, response, error. example: use deploynator programmatically as a library.
 - [readmenator-diagrams/deploynator__platforms.md](md/readmenator-diagrams/deploynator__platforms.md): deploynator: platforms groups 11 files (py) around Platform, fromstring, label, cliname, authenvvar. installpackages: pip install/upgrade packages (default...
 - [readmenator-diagrams/deploynator__pypi.md](md/readmenator-diagrams/deploynator__pypi.md): deploynator: pypi groups 8 files (py) around TomlConfig, postinit, clamptimeout, loadtomlconfig, PyPIRunner. promptforcredentials: Pide el token PyPI por input...
-- [readmenator-diagrams/overview.md](md/readmenator-diagrams/overview.md): Static architecture map of 33 files (py, sh) in 3 components: deploynator: mcpserver, deploynator: platforms, deploynator: pypi. Structure is extracted...
+- [readmenator-diagrams/overview.md](md/readmenator-diagrams/overview.md): Static architecture map of 35 files (py, sh) in 4 components: deploynator: platforms, deploynator: pypi, deploynator: mcpserver, deploynator: changelog....
 
 ## Optional
 

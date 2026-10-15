@@ -1,10 +1,10 @@
 # deploynator API Reference
 
-> Generated offline by readmenator: 18 modules, 294 documented entities, documentation coverage 3.8% (7/186 public items). Deterministic, zero tokens: signatures from source, docs parsed from Google, NumPy, reST, Javadoc/JSDoc/Doxygen, C# XML, and Rustdoc comments.
+> Generated offline by readmenator: 19 modules, 301 documented entities, documentation coverage 5.3% (10/190 public items). Deterministic, zero tokens: signatures from source, docs parsed from Google, NumPy, reST, Javadoc/JSDoc/Doxygen, C# XML, and Rustdoc comments.
 
 Navigate: [Interactive architecture and flows](flows.html) | [Architecture and flows (Mermaid)](architecture.md) | [Class hierarchy](classes.md) | [General index](genindex.md) | [Coverage and warnings](COVERAGE.md) | [`api/index.json`](api/index.json) | [HTML browser](index.html)
 
-Languages: py (16), sh (2)
+Languages: py (17), sh (2)
 
 ## Modules
 
@@ -32,6 +32,7 @@ Languages: py (16), sh (2)
 | [`deploynator._models`](modules/deploynator._models.py.md) |  | 10 | 16 | 0.0% |
 | [`deploynator._platforms`](modules/deploynator._platforms.py.md) |  | 5 | 28 | 0.0% |
 | [`deploynator._pypi`](modules/deploynator._pypi.py.md) |  | 1 | 7 | 22.2% |
+| [`deploynator._readme`](modules/deploynator._readme.py.md) |  | 0 | 3 | 75.0% |
 | [`deploynator._runner`](modules/deploynator._runner.py.md) |  | 1 | 2 | 0.0% |
 | [`deploynator._semver`](modules/deploynator._semver.py.md) |  | 1 | 7 | 0.0% |
 | [`deploynator._toml`](modules/deploynator._toml.py.md) |  | 1 | 1 | 0.0% |

@@ -236,6 +236,19 @@
   - `test_no_credentials_skips_pypi` (method, line 256) `def test_no_credentials_skips_pypi(self, monkeypatch)`
 - Depends on: `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_models.py`, `deploynator/_pypi.py`, `deploynator/_toml.py`
 
+## tests/test_readme_footer.py
+- Doc: Tests for the deploy README footer injector.
+- Layer: testing
+- Language: py
+- Symbols:
+  - `test_footer_line_is_english_without_emoji` (function, line 15) `def test_footer_line_is_english_without_emoji()`
+  - `test_footer_block_is_anchored` (function, line 22) `def test_footer_block_is_anchored()`
+  - `test_ensure_footer_appends_when_missing` (function, line 30) `def test_ensure_footer_appends_when_missing(tmp_path)`
+  - `test_ensure_footer_is_idempotent` (function, line 40) `def test_ensure_footer_is_idempotent(tmp_path)`
+  - `test_ensure_footer_wraps_plain_line` (function, line 48) `def test_ensure_footer_wraps_plain_line(tmp_path)`
+  - `test_ensure_footer_missing_readme` (function, line 58) `def test_ensure_footer_missing_readme(tmp_path)`
+- Depends on: `deploynator/_config.py`, `deploynator/_readme.py`
+
 ## tests/test_runner.py
 - Doc: RED: TestRunner + DocsRunner contracts.
 - Layer: testing

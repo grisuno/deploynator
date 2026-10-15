@@ -24,6 +24,7 @@
 - `deploynator/_deploy.py` -> `deploynator/_models.py`
 - `deploynator/_deploy.py` -> `deploynator/_platforms.py`
 - `deploynator/_deploy.py` -> `deploynator/_pypi.py`
+- `deploynator/_deploy.py` -> `deploynator/_readme.py`
 - `deploynator/_deploy.py` -> `deploynator/_runner.py`
 - `deploynator/_deploy.py` -> `deploynator/_semver.py`
 - `deploynator/_deploy.py` -> `deploynator/_toml.py`
@@ -36,6 +37,7 @@
 - `deploynator/_platforms.py` -> `deploynator/_models.py`
 - `deploynator/_pypi.py` -> `deploynator/_config.py`
 - `deploynator/_pypi.py` -> `deploynator/_toml.py`
+- `deploynator/_readme.py` -> `deploynator/_config.py`
 - `deploynator/_runner.py` -> `deploynator/_config.py`
 - `deploynator/_runner.py` -> `deploynator/_toml.py`
 - `deploynator/_semver.py` -> `deploynator/_config.py`
@@ -79,6 +81,8 @@
 - `tests/test_pypi.py` -> `deploynator/_models.py`
 - `tests/test_pypi.py` -> `deploynator/_pypi.py`
 - `tests/test_pypi.py` -> `deploynator/_toml.py`
+- `tests/test_readme_footer.py` -> `deploynator/_config.py`
+- `tests/test_readme_footer.py` -> `deploynator/_readme.py`
 - `tests/test_runner.py` -> `deploynator/_config.py`
 - `tests/test_runner.py` -> `deploynator/_docs.py`
 - `tests/test_runner.py` -> `deploynator/_runner.py`
@@ -101,6 +105,7 @@
 - `deploynator/_models.py` -> __future__, dataclasses, datetime, enum, re, typing
 - `deploynator/_platforms.py` -> __future__, abc, json, os, subprocess, tempfile, typing
 - `deploynator/_pypi.py` -> __future__, configparser, getpass, os, shutil, subprocess, sys, tomllib
+- `deploynator/_readme.py` -> __future__, os, pathlib
 - `deploynator/_runner.py` -> __future__, os, shlex, subprocess
 - `deploynator/_semver.py` -> __future__, json, os, re, subprocess, typing
 - `deploynator/_toml.py` -> __future__, dataclasses, os, tomllib
@@ -115,6 +120,7 @@
 - `tests/test_path_deploy.py` -> json, os, subprocess, tempfile
 - `tests/test_pipeline.py` -> json, os, pytest, subprocess, tempfile
 - `tests/test_pypi.py` -> configparser, inspect, os, pytest, subprocess, sys, tempfile
+- `tests/test_readme_footer.py` -> __future__
 - `tests/test_runner.py` -> inspect, os, pytest, tempfile
 - `tests/test_semver.py` -> json, os, pytest, tempfile
 - `tests/test_toml.py` -> os, pytest, tempfile

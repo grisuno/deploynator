@@ -235,7 +235,7 @@ def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, 
 
 **Returns:** `DeployResult`
 
-*Calls:* [`ChangelogGenerator.format_for_release`](deploynator._changelog.py.md#changeloggenerator-format_for_release), [`ChangelogGenerator.generate_from_log`](deploynator._changelog.py.md#changeloggenerator-generate_from_log), [`ChangelogGenerator.write_changelog`](deploynator._changelog.py.md#changeloggenerator-write_changelog), [`DocsRunner.run`](deploynator._docs.py.md#docsrunner-run), [`GitOperations.add_all`](deploynator._git.py.md#gitoperations-add_all), [`GitOperations.commit`](deploynator._git.py.md#gitoperations-commit), [`GitOperations.current_branch`](deploynator._git.py.md#gitoperations-current_branch), [`GitOperations.get_changed_files`](deploynator._git.py.md#gitoperations-get_changed_files), [`GitOperations.get_start_ref`](deploynator._git.py.md#gitoperations-get_start_ref), [`GitOperations.has_remote`](deploynator._git.py.md#gitoperations-has_remote), [`GitOperations.push`](deploynator._git.py.md#gitoperations-push), [`GitOperations.tag`](deploynator._git.py.md#gitoperations-tag) and 17 more
+*Calls:* [`ChangelogGenerator.format_for_release`](deploynator._changelog.py.md#changeloggenerator-format_for_release), [`ChangelogGenerator.generate_from_log`](deploynator._changelog.py.md#changeloggenerator-generate_from_log), [`ChangelogGenerator.write_changelog`](deploynator._changelog.py.md#changeloggenerator-write_changelog), [`DocsRunner.run`](deploynator._docs.py.md#docsrunner-run), [`GitOperations.add_all`](deploynator._git.py.md#gitoperations-add_all), [`GitOperations.commit`](deploynator._git.py.md#gitoperations-commit), [`GitOperations.current_branch`](deploynator._git.py.md#gitoperations-current_branch), [`GitOperations.get_changed_files`](deploynator._git.py.md#gitoperations-get_changed_files), [`GitOperations.get_start_ref`](deploynator._git.py.md#gitoperations-get_start_ref), [`GitOperations.has_remote`](deploynator._git.py.md#gitoperations-has_remote), [`GitOperations.push`](deploynator._git.py.md#gitoperations-push), [`GitOperations.tag`](deploynator._git.py.md#gitoperations-tag) and 18 more
 
 *Called by:* [`DeploynatorApp.release`](deploynator._app.py.md#deploynatorapp-release)
 
@@ -243,7 +243,7 @@ def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, 
 
 #### `DeployOrchestrator.generate_workflows`
 
-`method` | [deploynator/_deploy.py:412](../../deploynator/_deploy.py#L412)
+`method` | [deploynator/_deploy.py:421](../../deploynator/_deploy.py#L421)
 
 ```python
 def generate_workflows(self, project: ProjectConfig, output_dir: str = '.github/workflows') -> list[str]
@@ -264,7 +264,7 @@ def generate_workflows(self, project: ProjectConfig, output_dir: str = '.github/
 
 #### `DeployOrchestrator.install_dependencies`
 
-`method` | [deploynator/_deploy.py:480](../../deploynator/_deploy.py#L480)
+`method` | [deploynator/_deploy.py:489](../../deploynator/_deploy.py#L489)
 
 ```python
 def install_dependencies(self, project: ProjectConfig) -> dict[str, bool]
@@ -286,7 +286,7 @@ def install_dependencies(self, project: ProjectConfig) -> dict[str, bool]
 
 #### `DeployOrchestrator.integrate_readmenator`
 
-`method` | [deploynator/_deploy.py:490](../../deploynator/_deploy.py#L490)
+`method` | [deploynator/_deploy.py:499](../../deploynator/_deploy.py#L499)
 
 ```python
 def integrate_readmenator(self, project_path: str) -> bool
@@ -308,7 +308,7 @@ def integrate_readmenator(self, project_path: str) -> bool
 
 #### `DeployOrchestrator.install_lazygit`
 
-`method` | [deploynator/_deploy.py:524](../../deploynator/_deploy.py#L524)
+`method` | [deploynator/_deploy.py:533](../../deploynator/_deploy.py#L533)
 
 ```python
 def install_lazygit(self) -> bool

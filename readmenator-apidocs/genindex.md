@@ -109,6 +109,7 @@
 ## E
 
 - [`enabled`](modules/deploynator._models.py.md#platformconfig-enabled) attribute of `PlatformConfig` in `deploynator._models`
+- [`ensure_deployed_footer`](modules/deploynator._readme.py.md#ensure_deployed_footer) function in `deploynator._readme`
 - [`ensure_pkg`](modules/deploy.sh.md#ensure_pkg) function in `deploy.sh`
 - [`error`](modules/deploynator._models.py.md#deployresult-error) attribute of `DeployResult` in `deploynator._models`
 - [`error`](modules/deploynator._mcp_server.py.md#mcprequest-error) method of `MCPRequest` in `deploynator._mcp_server`
@@ -123,6 +124,10 @@
 - [`find_by_name`](modules/deploynator._deploy.py.md#projectdiscovery-find_by_name) method of `ProjectDiscovery` in `deploynator._deploy`
 - [`FIX`](modules/deploynator._models.py.md#committype-fix) attribute of `CommitType` in `deploynator._models`
 - [`footer`](modules/deploynator._models.py.md#commitmessage-footer) attribute of `CommitMessage` in `deploynator._models`
+- [`footer_block`](modules/deploynator._readme.py.md#footer_block) function in `deploynator._readme`
+- [`FOOTER_END`](modules/deploynator._readme.py.md#footer_end) constant in `deploynator._readme`
+- [`footer_line`](modules/deploynator._readme.py.md#footer_line) function in `deploynator._readme`
+- [`FOOTER_START`](modules/deploynator._readme.py.md#footer_start) constant in `deploynator._readme`
 - [`format`](modules/deploynator._models.py.md#commitmessage-format) method of `CommitMessage` in `deploynator._models`
 - [`format_for_release`](modules/deploynator._changelog.py.md#changeloggenerator-format_for_release) method of `ChangelogGenerator` in `deploynator._changelog`
 - [`from_dict`](modules/deploynator._models.py.md#platformconfig-from_dict) classmethod of `PlatformConfig` in `deploynator._models`
@@ -306,6 +311,7 @@
 ## R
 
 - [`read`](modules/deploynator._mcp_server.py.md#mcpresource-read) method of `MCPResource` in `deploynator._mcp_server`
+- [`README_CANDIDATES`](modules/deploynator._readme.py.md#readme_candidates) constant in `deploynator._readme`
 - [`readme_file`](modules/deploynator._config.py.md#config-readme_file) attribute of `Config` in `deploynator._config`
 - [`REFACTOR`](modules/deploynator._models.py.md#committype-refactor) attribute of `CommitType` in `deploynator._models`
 - [`register`](modules/deploynator._platforms.py.md#platformfactory-register) classmethod of `PlatformFactory` in `deploynator._platforms`

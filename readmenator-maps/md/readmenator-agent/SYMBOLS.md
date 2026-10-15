@@ -58,21 +58,21 @@
 | `ProjectDiscovery` | class | `deploynator/_deploy.py:31` | `class ProjectDiscovery` |
 | `__init__` | method | `deploynator/_deploy.py:32` | `def __init__(self, config)` |
 | `__init__` | method | `deploynator/_deploy.py:77` | `def __init__(self, config)` |
-| `_add_temp_remote` | method | `deploynator/_deploy.py:384` | `def _add_temp_remote(self, repo_path, name, url)` |
-| `_ci_workflow_content` | method | `deploynator/_deploy.py:431` | `def _ci_workflow_content(self, project)` |
-| `_get_remote_url` | method | `deploynator/_deploy.py:403` | `def _get_remote_url(repo_path, pc)` |
-| `_gh_release_in_repo` | method | `deploynator/_deploy.py:351` | `def _gh_release_in_repo(self, repo_path, project_name, version, notes, branch)` |
+| `_add_temp_remote` | method | `deploynator/_deploy.py:393` | `def _add_temp_remote(self, repo_path, name, url)` |
+| `_ci_workflow_content` | method | `deploynator/_deploy.py:440` | `def _ci_workflow_content(self, project)` |
+| `_get_remote_url` | method | `deploynator/_deploy.py:412` | `def _get_remote_url(repo_path, pc)` |
+| `_gh_release_in_repo` | method | `deploynator/_deploy.py:360` | `def _gh_release_in_repo(self, repo_path, project_name, version, notes, branch)` |
 | `_load_single` | method | `deploynator/_deploy.py:63` | `def _load_single(yaml_path)` |
-| `_release_workflow_content` | method | `deploynator/_deploy.py:452` | `def _release_workflow_content(self, project)` |
-| `_remove_temp_remote` | method | `deploynator/_deploy.py:393` | `def _remove_temp_remote(self, repo_path, name)` |
+| `_release_workflow_content` | method | `deploynator/_deploy.py:461` | `def _release_workflow_content(self, project)` |
+| `_remove_temp_remote` | method | `deploynator/_deploy.py:402` | `def _remove_temp_remote(self, repo_path, name)` |
 | `_resolve_project_path` | method | `deploynator/_deploy.py:88` | `def _resolve_project_path(project)` |
 | `deploy` | method | `deploynator/_deploy.py:97` | `def deploy(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...` |
 | `discover` | method | `deploynator/_deploy.py:35` | `def discover(self, search_path)` |
 | `find_by_name` | method | `deploynator/_deploy.py:56` | `def find_by_name(self, name, search_path)` |
-| `generate_workflows` | method | `deploynator/_deploy.py:412` | `def generate_workflows(self, project, output_dir)` |
-| `install_dependencies` | method | `deploynator/_deploy.py:480` | `def install_dependencies(self, project)` |
-| `install_lazygit` | method | `deploynator/_deploy.py:524` | `def install_lazygit(self)` |
-| `integrate_readmenator` | method | `deploynator/_deploy.py:490` | `def integrate_readmenator(self, project_path)` |
+| `generate_workflows` | method | `deploynator/_deploy.py:421` | `def generate_workflows(self, project, output_dir)` |
+| `install_dependencies` | method | `deploynator/_deploy.py:489` | `def install_dependencies(self, project)` |
+| `install_lazygit` | method | `deploynator/_deploy.py:533` | `def install_lazygit(self)` |
+| `integrate_readmenator` | method | `deploynator/_deploy.py:499` | `def integrate_readmenator(self, project_path)` |
 | `DocsRunner` | class | `deploynator/_docs.py:10` | `class DocsRunner` |
 | `__init__` | method | `deploynator/_docs.py:11` | `def __init__(self, config)` |
 | `run` | method | `deploynator/_docs.py:14` | `def run(self, project_path, toml)` |
@@ -198,6 +198,10 @@
 | `prompt_for_credentials` | method | `deploynator/_pypi.py:39` | `def prompt_for_credentials(self)` |
 | `run` | method | `deploynator/_pypi.py:107` | `def run(self, project_path, toml, version, token)` |
 | `save_pypirc` | method | `deploynator/_pypi.py:72` | `def save_pypirc(self, token, path)` |
+| `_find_readme` | function | `deploynator/_readme.py:32` | `def _find_readme(repo_path)` |
+| `ensure_deployed_footer` | function | `deploynator/_readme.py:49` | `def ensure_deployed_footer(repo_path, config)` |
+| `footer_block` | function | `deploynator/_readme.py:19` | `def footer_block(config)` |
+| `footer_line` | function | `deploynator/_readme.py:96` | `def footer_line(config)` |
 | `TestRunner` | class | `deploynator/_runner.py:11` | `class TestRunner` |
 | `__init__` | method | `deploynator/_runner.py:12` | `def __init__(self, config)` |
 | `run` | method | `deploynator/_runner.py:15` | `def run(self, project_path, toml)` |
@@ -373,6 +377,12 @@
 | `test_save_pypirc_rejects_symlink` | method | `tests/test_pypi.py:130` | `def test_save_pypirc_rejects_symlink(self)` |
 | `test_save_pypirc_roundtrip` | method | `tests/test_pypi.py:116` | `def test_save_pypirc_roundtrip(self)` |
 | `test_setup_py_counts` | method | `tests/test_pypi.py:40` | `def test_setup_py_counts(self)` |
+| `test_ensure_footer_appends_when_missing` | function | `tests/test_readme_footer.py:30` | `def test_ensure_footer_appends_when_missing(tmp_path)` |
+| `test_ensure_footer_is_idempotent` | function | `tests/test_readme_footer.py:40` | `def test_ensure_footer_is_idempotent(tmp_path)` |
+| `test_ensure_footer_missing_readme` | function | `tests/test_readme_footer.py:58` | `def test_ensure_footer_missing_readme(tmp_path)` |
+| `test_ensure_footer_wraps_plain_line` | function | `tests/test_readme_footer.py:48` | `def test_ensure_footer_wraps_plain_line(tmp_path)` |
+| `test_footer_block_is_anchored` | function | `tests/test_readme_footer.py:22` | `def test_footer_block_is_anchored()` |
+| `test_footer_line_is_english_without_emoji` | function | `tests/test_readme_footer.py:15` | `def test_footer_line_is_english_without_emoji()` |
 | `TestDocsRunner` | class | `tests/test_runner.py:105` | `class TestDocsRunner` |
 | `TestTestRunner` | class | `tests/test_runner.py:23` | `class TestTestRunner` |
 | `_toml` | function | `tests/test_runner.py:7` | `def _toml(commands, timeout)` |

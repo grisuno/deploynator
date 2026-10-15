@@ -2,15 +2,15 @@
 {"confidence": "INFERRED", "description": "concept all appears in _mcp_server.py", "relation": "documents", "source": "concept:all", "target": "file:deploynator/_mcp_server.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept all appears in _platforms.py", "relation": "documents", "source": "concept:all", "target": "file:deploynator/_platforms.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept all appears in test_config.py", "relation": "documents", "source": "concept:all", "target": "file:tests/test_config.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "app depends_on deploynator", "relation": "depends_on", "source": "concept:app", "target": "concept:deploynator", "weight": 0.6}
-{"confidence": "INFERRED", "description": "concept app appears in app.py", "relation": "documents", "source": "concept:app", "target": "file:app.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "concept app appears in _app.py", "relation": "documents", "source": "concept:app", "target": "file:deploynator/_app.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "concept app appears in test_install_example.py", "relation": "documents", "source": "concept:app", "target": "file:tests/test_install_example.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept auth appears in _app.py", "relation": "documents", "source": "concept:auth", "target": "file:deploynator/_app.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept auth appears in _models.py", "relation": "documents", "source": "concept:auth", "target": "file:deploynator/_models.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept auth appears in test_config.py", "relation": "documents", "source": "concept:auth", "target": "file:tests/test_config.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept auth appears in test_models.py", "relation": "documents", "source": "concept:auth", "target": "file:tests/test_models.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "bump depends_on config", "relation": "depends_on", "source": "concept:bump", "target": "concept:config", "weight": 0.6}
+{"confidence": "INFERRED", "description": "block depends_on deploynator", "relation": "depends_on", "source": "concept:block", "target": "concept:deploynator", "weight": 0.6}
+{"confidence": "INFERRED", "description": "concept block appears in _readme.py", "relation": "documents", "source": "concept:block", "target": "file:deploynator/_readme.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept block appears in bdd_test_deploy.py", "relation": "documents", "source": "concept:block", "target": "file:tests/bdd_test_deploy.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept block appears in test_pipeline.py", "relation": "documents", "source": "concept:block", "target": "file:tests/test_pipeline.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept block appears in test_readme_footer.py", "relation": "documents", "source": "concept:block", "target": "file:tests/test_readme_footer.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "bump depends_on deploynator", "relation": "depends_on", "source": "concept:bump", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept bump appears in deploy.sh", "relation": "documents", "source": "concept:bump", "target": "file:deploy.sh", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept bump appears in _models.py", "relation": "documents", "source": "concept:bump", "target": "file:deploynator/_models.py", "weight": 0.45}
@@ -23,13 +23,11 @@
 {"confidence": "INFERRED", "description": "concept changelog appears in _models.py", "relation": "documents", "source": "concept:changelog", "target": "file:deploynator/_models.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept changelog appears in test_changelog.py", "relation": "documents", "source": "concept:changelog", "target": "file:tests/test_changelog.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept changelog appears in test_models.py", "relation": "documents", "source": "concept:changelog", "target": "file:tests/test_models.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "cli depends_on deploynator", "relation": "depends_on", "source": "concept:cli", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept cli appears in _models.py", "relation": "documents", "source": "concept:cli", "target": "file:deploynator/_models.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept cli appears in _platforms.py", "relation": "documents", "source": "concept:cli", "target": "file:deploynator/_platforms.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept cli appears in test_cli_mcp.py", "relation": "documents", "source": "concept:cli", "target": "file:tests/test_cli_mcp.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept cli appears in test_install_example.py", "relation": "documents", "source": "concept:cli", "target": "file:tests/test_install_example.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept cli appears in test_models.py", "relation": "documents", "source": "concept:cli", "target": "file:tests/test_models.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "commit depends_on config", "relation": "depends_on", "source": "concept:commit", "target": "concept:config", "weight": 0.6}
 {"confidence": "INFERRED", "description": "commit depends_on deploynator", "relation": "depends_on", "source": "concept:commit", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept commit appears in _app.py", "relation": "documents", "source": "concept:commit", "target": "file:deploynator/_app.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept commit appears in _git.py", "relation": "documents", "source": "concept:commit", "target": "file:deploynator/_git.py", "weight": 0.45}
@@ -40,25 +38,25 @@
 {"confidence": "INFERRED", "description": "concept commit appears in test_models.py", "relation": "documents", "source": "concept:commit", "target": "file:tests/test_models.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept config appears in _config.py", "relation": "documents", "source": "concept:config", "target": "file:deploynator/_config.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept config appears in _models.py", "relation": "documents", "source": "concept:config", "target": "file:deploynator/_models.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept config appears in _readme.py", "relation": "documents", "source": "concept:config", "target": "file:deploynator/_readme.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept config appears in _toml.py", "relation": "documents", "source": "concept:config", "target": "file:deploynator/_toml.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept config appears in test_config.py", "relation": "documents", "source": "concept:config", "target": "file:tests/test_config.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept config appears in test_models.py", "relation": "documents", "source": "concept:config", "target": "file:tests/test_models.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept config appears in test_toml.py", "relation": "documents", "source": "concept:config", "target": "file:tests/test_toml.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "concept contract appears in test_config.py", "relation": "documents", "source": "concept:contract", "target": "file:tests/test_config.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "concept contract appears in test_models.py", "relation": "documents", "source": "concept:contract", "target": "file:tests/test_models.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "concept contract appears in test_toml.py", "relation": "documents", "source": "concept:contract", "target": "file:tests/test_toml.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "create depends_on deploynator", "relation": "depends_on", "source": "concept:create", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept create appears in _config.py", "relation": "documents", "source": "concept:create", "target": "file:deploynator/_config.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept create appears in _deploy.py", "relation": "documents", "source": "concept:create", "target": "file:deploynator/_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept create appears in _git.py", "relation": "documents", "source": "concept:create", "target": "file:deploynator/_git.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept create appears in _platforms.py", "relation": "documents", "source": "concept:create", "target": "file:deploynator/_platforms.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept create appears in bdd_test_deploy.py", "relation": "documents", "source": "concept:create", "target": "file:tests/bdd_test_deploy.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "current depends_on config", "relation": "depends_on", "source": "concept:current", "target": "concept:config", "weight": 0.6}
 {"confidence": "INFERRED", "description": "current depends_on deploynator", "relation": "depends_on", "source": "concept:current", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept current appears in deploy.sh", "relation": "documents", "source": "concept:current", "target": "file:deploy.sh", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept current appears in _git.py", "relation": "documents", "source": "concept:current", "target": "file:deploynator/_git.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept current appears in _semver.py", "relation": "documents", "source": "concept:current", "target": "file:deploynator/_semver.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept current appears in bdd_test_deploy.py", "relation": "documents", "source": "concept:current", "target": "file:tests/bdd_test_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept current appears in test_pipeline.py", "relation": "documents", "source": "concept:current", "target": "file:tests/test_pipeline.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept current appears in test_readme_footer.py", "relation": "documents", "source": "concept:current", "target": "file:tests/test_readme_footer.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept current appears in test_semver.py", "relation": "documents", "source": "concept:current", "target": "file:tests/test_semver.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "default depends_on deploynator", "relation": "depends_on", "source": "concept:default", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept default appears in _app.py", "relation": "documents", "source": "concept:default", "target": "file:deploynator/_app.py", "weight": 0.45}
@@ -77,12 +75,14 @@
 {"confidence": "INFERRED", "description": "concept deploy appears in _deploy.py", "relation": "documents", "source": "concept:deploy", "target": "file:deploynator/_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept deploy appears in _mcp_server.py", "relation": "documents", "source": "concept:deploy", "target": "file:deploynator/_mcp_server.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept deploy appears in _models.py", "relation": "documents", "source": "concept:deploy", "target": "file:deploynator/_models.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept deploy appears in _readme.py", "relation": "documents", "source": "concept:deploy", "target": "file:deploynator/_readme.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept deploy appears in bdd_test_deploy.py", "relation": "documents", "source": "concept:deploy", "target": "file:tests/bdd_test_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept deploy appears in test_deploy.py", "relation": "documents", "source": "concept:deploy", "target": "file:tests/test_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept deploy appears in test_init.py", "relation": "documents", "source": "concept:deploy", "target": "file:tests/test_init.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept deploy appears in test_models.py", "relation": "documents", "source": "concept:deploy", "target": "file:tests/test_models.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept deploy appears in test_path_deploy.py", "relation": "documents", "source": "concept:deploy", "target": "file:tests/test_path_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept deploy appears in test_pipeline.py", "relation": "documents", "source": "concept:deploy", "target": "file:tests/test_pipeline.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept deploy appears in test_readme_footer.py", "relation": "documents", "source": "concept:deploy", "target": "file:tests/test_readme_footer.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "deploynator depends_on commit", "relation": "depends_on", "source": "concept:deploynator", "target": "concept:commit", "weight": 0.6}
 {"confidence": "INFERRED", "description": "deploynator depends_on config", "relation": "depends_on", "source": "concept:deploynator", "target": "concept:config", "weight": 0.6}
 {"confidence": "INFERRED", "description": "deploynator depends_on create", "relation": "depends_on", "source": "concept:deploynator", "target": "concept:create", "weight": 0.6}
@@ -109,6 +109,7 @@
 {"confidence": "INFERRED", "description": "concept deploynator appears in _models.py", "relation": "documents", "source": "concept:deploynator", "target": "file:deploynator/_models.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept deploynator appears in _platforms.py", "relation": "documents", "source": "concept:deploynator", "target": "file:deploynator/_platforms.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept deploynator appears in _pypi.py", "relation": "documents", "source": "concept:deploynator", "target": "file:deploynator/_pypi.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept deploynator appears in _readme.py", "relation": "documents", "source": "concept:deploynator", "target": "file:deploynator/_readme.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept deploynator appears in _runner.py", "relation": "documents", "source": "concept:deploynator", "target": "file:deploynator/_runner.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept deploynator appears in _semver.py", "relation": "documents", "source": "concept:deploynator", "target": "file:deploynator/_semver.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept deploynator appears in _toml.py", "relation": "documents", "source": "concept:deploynator", "target": "file:deploynator/_toml.py", "weight": 0.45}
@@ -138,6 +139,10 @@
 {"confidence": "INFERRED", "description": "concept empty appears in test_install_example.py", "relation": "documents", "source": "concept:empty", "target": "file:tests/test_install_example.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept empty appears in test_pypi.py", "relation": "documents", "source": "concept:empty", "target": "file:tests/test_pypi.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept empty appears in test_runner.py", "relation": "documents", "source": "concept:empty", "target": "file:tests/test_runner.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept exists appears in _git.py", "relation": "documents", "source": "concept:exists", "target": "file:deploynator/_git.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept exists appears in _readme.py", "relation": "documents", "source": "concept:exists", "target": "file:deploynator/_readme.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept exists appears in test_cli_mcp.py", "relation": "documents", "source": "concept:exists", "target": "file:tests/test_cli_mcp.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept exists appears in test_install_example.py", "relation": "documents", "source": "concept:exists", "target": "file:tests/test_install_example.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "failure depends_on config", "relation": "depends_on", "source": "concept:failure", "target": "concept:config", "weight": 0.6}
 {"confidence": "INFERRED", "description": "failure depends_on deploynator", "relation": "depends_on", "source": "concept:failure", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept failure appears in bdd_test_deploy.py", "relation": "documents", "source": "concept:failure", "target": "file:tests/bdd_test_deploy.py", "weight": 0.45}
@@ -159,6 +164,7 @@
 {"confidence": "INFERRED", "description": "concept format appears in bdd_test_deploy.py", "relation": "documents", "source": "concept:format", "target": "file:tests/bdd_test_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept format appears in test_changelog.py", "relation": "documents", "source": "concept:format", "target": "file:tests/test_changelog.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept format appears in test_models.py", "relation": "documents", "source": "concept:format", "target": "file:tests/test_models.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "generate depends_on config", "relation": "depends_on", "source": "concept:generate", "target": "concept:config", "weight": 0.6}
 {"confidence": "INFERRED", "description": "generate depends_on deploynator", "relation": "depends_on", "source": "concept:generate", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept generate appears in _app.py", "relation": "documents", "source": "concept:generate", "target": "file:deploynator/_app.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept generate appears in _changelog.py", "relation": "documents", "source": "concept:generate", "target": "file:deploynator/_changelog.py", "weight": 0.45}
@@ -189,6 +195,7 @@
 {"confidence": "INFERRED", "description": "concept header appears in _models.py", "relation": "documents", "source": "concept:header", "target": "file:deploynator/_models.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept header appears in test_changelog.py", "relation": "documents", "source": "concept:header", "target": "file:tests/test_changelog.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept header appears in test_models.py", "relation": "documents", "source": "concept:header", "target": "file:tests/test_models.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "install depends_on config", "relation": "depends_on", "source": "concept:install", "target": "concept:config", "weight": 0.6}
 {"confidence": "INFERRED", "description": "install depends_on create", "relation": "depends_on", "source": "concept:install", "target": "concept:create", "weight": 0.6}
 {"confidence": "INFERRED", "description": "install depends_on deploynator", "relation": "depends_on", "source": "concept:install", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept install appears in app.py", "relation": "documents", "source": "concept:install", "target": "file:app.py", "weight": 0.45}
@@ -198,10 +205,10 @@
 {"confidence": "INFERRED", "description": "concept install appears in install.sh", "relation": "documents", "source": "concept:install", "target": "file:install.sh", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept install appears in test_deploy.py", "relation": "documents", "source": "concept:install", "target": "file:tests/test_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept install appears in test_install_example.py", "relation": "documents", "source": "concept:install", "target": "file:tests/test_install_example.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "interactive depends_on deploynator", "relation": "depends_on", "source": "concept:interactive", "target": "concept:deploynator", "weight": 0.6}
-{"confidence": "INFERRED", "description": "concept interactive appears in _app.py", "relation": "documents", "source": "concept:interactive", "target": "file:deploynator/_app.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "concept interactive appears in _mcp_server.py", "relation": "documents", "source": "concept:interactive", "target": "file:deploynator/_mcp_server.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "concept interactive appears in test_cli_mcp.py", "relation": "documents", "source": "concept:interactive", "target": "file:tests/test_cli_mcp.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept line appears in _models.py", "relation": "documents", "source": "concept:line", "target": "file:deploynator/_models.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept line appears in _readme.py", "relation": "documents", "source": "concept:line", "target": "file:deploynator/_readme.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept line appears in test_models.py", "relation": "documents", "source": "concept:line", "target": "file:tests/test_models.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept line appears in test_readme_footer.py", "relation": "documents", "source": "concept:line", "target": "file:tests/test_readme_footer.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "load depends_on deploynator", "relation": "depends_on", "source": "concept:load", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept load appears in _deploy.py", "relation": "documents", "source": "concept:load", "target": "file:deploynator/_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept load appears in _toml.py", "relation": "documents", "source": "concept:load", "target": "file:deploynator/_toml.py", "weight": 0.45}
@@ -211,13 +218,11 @@
 {"confidence": "INFERRED", "description": "concept log appears in _git.py", "relation": "documents", "source": "concept:log", "target": "file:deploynator/_git.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept log appears in _models.py", "relation": "documents", "source": "concept:log", "target": "file:deploynator/_models.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept log appears in test_models.py", "relation": "documents", "source": "concept:log", "target": "file:tests/test_models.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "concept mcp appears in _mcp_server.py", "relation": "documents", "source": "concept:mcp", "target": "file:deploynator/_mcp_server.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "concept mcp appears in _pypi.py", "relation": "documents", "source": "concept:mcp", "target": "file:deploynator/_pypi.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "concept mcp appears in test_cli_mcp.py", "relation": "documents", "source": "concept:mcp", "target": "file:tests/test_cli_mcp.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept minor appears in deploy.sh", "relation": "documents", "source": "concept:minor", "target": "file:deploy.sh", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept minor appears in bdd_test_deploy.py", "relation": "documents", "source": "concept:minor", "target": "file:tests/bdd_test_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept minor appears in test_models.py", "relation": "documents", "source": "concept:minor", "target": "file:tests/test_models.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept minor appears in test_semver.py", "relation": "documents", "source": "concept:minor", "target": "file:tests/test_semver.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "name depends_on config", "relation": "depends_on", "source": "concept:name", "target": "concept:config", "weight": 0.6}
 {"confidence": "INFERRED", "description": "name depends_on deploynator", "relation": "depends_on", "source": "concept:name", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept name appears in _deploy.py", "relation": "documents", "source": "concept:name", "target": "file:deploynator/_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept name appears in _models.py", "relation": "documents", "source": "concept:name", "target": "file:deploynator/_models.py", "weight": 0.45}
@@ -227,6 +232,7 @@
 {"confidence": "INFERRED", "description": "concept name appears in test_path_deploy.py", "relation": "documents", "source": "concept:name", "target": "file:tests/test_path_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "none depends_on deploynator", "relation": "depends_on", "source": "concept:none", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept none appears in _pypi.py", "relation": "documents", "source": "concept:none", "target": "file:deploynator/_pypi.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept none appears in _readme.py", "relation": "documents", "source": "concept:none", "target": "file:deploynator/_readme.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept none appears in test_models.py", "relation": "documents", "source": "concept:none", "target": "file:tests/test_models.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept none appears in test_pypi.py", "relation": "documents", "source": "concept:none", "target": "file:tests/test_pypi.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept none appears in test_semver.py", "relation": "documents", "source": "concept:none", "target": "file:tests/test_semver.py", "weight": 0.45}
@@ -234,10 +240,13 @@
 {"confidence": "INFERRED", "description": "concept patch appears in bdd_test_deploy.py", "relation": "documents", "source": "concept:patch", "target": "file:tests/bdd_test_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept patch appears in test_models.py", "relation": "documents", "source": "concept:patch", "target": "file:tests/test_models.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept patch appears in test_semver.py", "relation": "documents", "source": "concept:patch", "target": "file:tests/test_semver.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "path depends_on config", "relation": "depends_on", "source": "concept:path", "target": "concept:config", "weight": 0.6}
+{"confidence": "INFERRED", "description": "path depends_on create", "relation": "depends_on", "source": "concept:path", "target": "concept:create", "weight": 0.6}
 {"confidence": "INFERRED", "description": "path depends_on deploynator", "relation": "depends_on", "source": "concept:path", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept path appears in _app.py", "relation": "documents", "source": "concept:path", "target": "file:deploynator/_app.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept path appears in _config.py", "relation": "documents", "source": "concept:path", "target": "file:deploynator/_config.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept path appears in _deploy.py", "relation": "documents", "source": "concept:path", "target": "file:deploynator/_deploy.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept path appears in _readme.py", "relation": "documents", "source": "concept:path", "target": "file:deploynator/_readme.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept path appears in test_config.py", "relation": "documents", "source": "concept:path", "target": "file:tests/test_config.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept path appears in test_path_deploy.py", "relation": "documents", "source": "concept:path", "target": "file:tests/test_path_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "pipeline depends_on deploynator", "relation": "depends_on", "source": "concept:pipeline", "target": "concept:deploynator", "weight": 0.6}
@@ -304,11 +313,21 @@
 {"confidence": "INFERRED", "description": "concept release appears in test_cli_mcp.py", "relation": "documents", "source": "concept:release", "target": "file:tests/test_cli_mcp.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept release appears in test_models.py", "relation": "documents", "source": "concept:release", "target": "file:tests/test_models.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept release appears in test_path_deploy.py", "relation": "documents", "source": "concept:release", "target": "file:tests/test_path_deploy.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "repo depends_on deploynator", "relation": "depends_on", "source": "concept:repo", "target": "concept:deploynator", "weight": 0.6}
+{"confidence": "INFERRED", "description": "concept repo appears in deploy.sh", "relation": "documents", "source": "concept:repo", "target": "file:deploy.sh", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept repo appears in _deploy.py", "relation": "documents", "source": "concept:repo", "target": "file:deploynator/_deploy.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept repo appears in _mcp_server.py", "relation": "documents", "source": "concept:repo", "target": "file:deploynator/_mcp_server.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept repo appears in _readme.py", "relation": "documents", "source": "concept:repo", "target": "file:deploynator/_readme.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "resolve depends_on deploynator", "relation": "depends_on", "source": "concept:resolve", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept resolve appears in _app.py", "relation": "documents", "source": "concept:resolve", "target": "file:deploynator/_app.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept resolve appears in _config.py", "relation": "documents", "source": "concept:resolve", "target": "file:deploynator/_config.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept resolve appears in _deploy.py", "relation": "documents", "source": "concept:resolve", "target": "file:deploynator/_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept resolve appears in test_config.py", "relation": "documents", "source": "concept:resolve", "target": "file:tests/test_config.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "returns depends_on deploynator", "relation": "depends_on", "source": "concept:returns", "target": "concept:deploynator", "weight": 0.6}
+{"confidence": "INFERRED", "description": "concept returns appears in _readme.py", "relation": "documents", "source": "concept:returns", "target": "file:deploynator/_readme.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept returns appears in test_pypi.py", "relation": "documents", "source": "concept:returns", "target": "file:tests/test_pypi.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept returns appears in test_runner.py", "relation": "documents", "source": "concept:returns", "target": "file:tests/test_runner.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept returns appears in test_toml.py", "relation": "documents", "source": "concept:returns", "target": "file:tests/test_toml.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "run depends_on config", "relation": "depends_on", "source": "concept:run", "target": "concept:config", "weight": 0.6}
 {"confidence": "INFERRED", "description": "run depends_on create", "relation": "depends_on", "source": "concept:run", "target": "concept:create", "weight": 0.6}
 {"confidence": "INFERRED", "description": "run depends_on deploynator", "relation": "depends_on", "source": "concept:run", "target": "concept:deploynator", "weight": 0.6}
@@ -325,6 +344,7 @@
 {"confidence": "INFERRED", "description": "concept run appears in test_path_deploy.py", "relation": "documents", "source": "concept:run", "target": "file:tests/test_path_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept run appears in test_pipeline.py", "relation": "documents", "source": "concept:run", "target": "file:tests/test_pipeline.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept run appears in test_pypi.py", "relation": "documents", "source": "concept:run", "target": "file:tests/test_pypi.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept run appears in test_readme_footer.py", "relation": "documents", "source": "concept:run", "target": "file:tests/test_readme_footer.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "runner depends_on deploynator", "relation": "depends_on", "source": "concept:runner", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept runner appears in _docs.py", "relation": "documents", "source": "concept:runner", "target": "file:deploynator/_docs.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept runner appears in _runner.py", "relation": "documents", "source": "concept:runner", "target": "file:deploynator/_runner.py", "weight": 0.45}
@@ -338,10 +358,6 @@
 {"confidence": "INFERRED", "description": "concept semver appears in test_config.py", "relation": "documents", "source": "concept:semver", "target": "file:tests/test_config.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept semver appears in test_pipeline.py", "relation": "documents", "source": "concept:semver", "target": "file:tests/test_pipeline.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept semver appears in test_semver.py", "relation": "documents", "source": "concept:semver", "target": "file:tests/test_semver.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "status depends_on deploynator", "relation": "depends_on", "source": "concept:status", "target": "concept:deploynator", "weight": 0.6}
-{"confidence": "INFERRED", "description": "concept status appears in _app.py", "relation": "documents", "source": "concept:status", "target": "file:deploynator/_app.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "concept status appears in _mcp_server.py", "relation": "documents", "source": "concept:status", "target": "file:deploynator/_mcp_server.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "concept status appears in test_cli_mcp.py", "relation": "documents", "source": "concept:status", "target": "file:tests/test_cli_mcp.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "tag depends_on config", "relation": "depends_on", "source": "concept:tag", "target": "concept:config", "weight": 0.6}
 {"confidence": "INFERRED", "description": "tag depends_on deploynator", "relation": "depends_on", "source": "concept:tag", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept tag appears in _git.py", "relation": "documents", "source": "concept:tag", "target": "file:deploynator/_git.py", "weight": 0.45}
@@ -358,13 +374,11 @@
 {"confidence": "INFERRED", "description": "concept toml appears in test_pypi.py", "relation": "documents", "source": "concept:toml", "target": "file:tests/test_pypi.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept toml appears in test_runner.py", "relation": "documents", "source": "concept:toml", "target": "file:tests/test_runner.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept toml appears in test_toml.py", "relation": "documents", "source": "concept:toml", "target": "file:tests/test_toml.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "type depends_on deploynator", "relation": "depends_on", "source": "concept:type", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept type appears in _models.py", "relation": "documents", "source": "concept:type", "target": "file:deploynator/_models.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept type appears in bdd_test_deploy.py", "relation": "documents", "source": "concept:type", "target": "file:tests/bdd_test_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept type appears in test_changelog.py", "relation": "documents", "source": "concept:type", "target": "file:tests/test_changelog.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept type appears in test_config.py", "relation": "documents", "source": "concept:type", "target": "file:tests/test_config.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept type appears in test_models.py", "relation": "documents", "source": "concept:type", "target": "file:tests/test_models.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "valid depends_on deploynator", "relation": "depends_on", "source": "concept:valid", "target": "concept:deploynator", "weight": 0.6}
 {"confidence": "INFERRED", "description": "concept valid appears in _models.py", "relation": "documents", "source": "concept:valid", "target": "file:deploynator/_models.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept valid appears in _semver.py", "relation": "documents", "source": "concept:valid", "target": "file:deploynator/_semver.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept valid appears in test_config.py", "relation": "documents", "source": "concept:valid", "target": "file:tests/test_config.py", "weight": 0.45}
@@ -381,11 +395,10 @@
 {"confidence": "INFERRED", "description": "concept version appears in test_path_deploy.py", "relation": "documents", "source": "concept:version", "target": "file:tests/test_path_deploy.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept version appears in test_pipeline.py", "relation": "documents", "source": "concept:version", "target": "file:tests/test_pipeline.py", "weight": 0.45}
 {"confidence": "INFERRED", "description": "concept version appears in test_semver.py", "relation": "documents", "source": "concept:version", "target": "file:tests/test_semver.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "write depends_on deploynator", "relation": "depends_on", "source": "concept:write", "target": "concept:deploynator", "weight": 0.6}
-{"confidence": "INFERRED", "description": "concept write appears in _changelog.py", "relation": "documents", "source": "concept:write", "target": "file:deploynator/_changelog.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "concept write appears in _semver.py", "relation": "documents", "source": "concept:write", "target": "file:deploynator/_semver.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "concept write appears in test_path_deploy.py", "relation": "documents", "source": "concept:write", "target": "file:tests/test_path_deploy.py", "weight": 0.45}
-{"confidence": "INFERRED", "description": "concept write appears in test_semver.py", "relation": "documents", "source": "concept:write", "target": "file:tests/test_semver.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept without appears in _mcp_server.py", "relation": "documents", "source": "concept:without", "target": "file:deploynator/_mcp_server.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept without appears in _readme.py", "relation": "documents", "source": "concept:without", "target": "file:deploynator/_readme.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept without appears in test_pypi.py", "relation": "documents", "source": "concept:without", "target": "file:tests/test_pypi.py", "weight": 0.45}
+{"confidence": "INFERRED", "description": "concept without appears in test_readme_footer.py", "relation": "documents", "source": "concept:without", "target": "file:tests/test_readme_footer.py", "weight": 0.45}
 {"confidence": "EXTRACTED", "description": "app.py imports __init__.py", "relation": "resolved_imports", "source": "file:app.py", "target": "file:deploynator/__init__.py", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "app.py imports _config.py", "relation": "resolved_imports", "source": "file:app.py", "target": "file:deploynator/_config.py", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "app.py defines function main", "relation": "defines", "source": "file:app.py", "target": "sym:app.py::main@12", "weight": 0.7}
@@ -487,6 +500,7 @@
 {"confidence": "EXTRACTED", "description": "_deploy.py imports _models.py", "relation": "resolved_imports", "source": "file:deploynator/_deploy.py", "target": "file:deploynator/_models.py", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "_deploy.py imports _platforms.py", "relation": "resolved_imports", "source": "file:deploynator/_deploy.py", "target": "file:deploynator/_platforms.py", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "_deploy.py imports _pypi.py", "relation": "resolved_imports", "source": "file:deploynator/_deploy.py", "target": "file:deploynator/_pypi.py", "weight": 0.85}
+{"confidence": "EXTRACTED", "description": "_deploy.py imports _readme.py", "relation": "resolved_imports", "source": "file:deploynator/_deploy.py", "target": "file:deploynator/_readme.py", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "_deploy.py imports _runner.py", "relation": "resolved_imports", "source": "file:deploynator/_deploy.py", "target": "file:deploynator/_runner.py", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "_deploy.py imports _semver.py", "relation": "resolved_imports", "source": "file:deploynator/_deploy.py", "target": "file:deploynator/_semver.py", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "_deploy.py imports _toml.py", "relation": "resolved_imports", "source": "file:deploynator/_deploy.py", "target": "file:deploynator/_toml.py", "weight": 0.85}
@@ -494,21 +508,21 @@
 {"confidence": "EXTRACTED", "description": "_deploy.py defines class ProjectDiscovery", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::ProjectDiscovery@31", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "_deploy.py defines method __init__", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::__init__@32", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "_deploy.py defines method __init__", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::__init__@77", "weight": 0.7}
-{"confidence": "EXTRACTED", "description": "_deploy.py defines method _add_temp_remote", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::_add_temp_remote@384", "weight": 0.7}
-{"confidence": "EXTRACTED", "description": "_deploy.py defines method _ci_workflow_content", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::_ci_workflow_content@431", "weight": 0.7}
-{"confidence": "EXTRACTED", "description": "_deploy.py defines method _get_remote_url", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::_get_remote_url@403", "weight": 0.7}
-{"confidence": "EXTRACTED", "description": "_deploy.py defines method _gh_release_in_repo", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::_gh_release_in_repo@351", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "_deploy.py defines method _add_temp_remote", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::_add_temp_remote@393", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "_deploy.py defines method _ci_workflow_content", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::_ci_workflow_content@440", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "_deploy.py defines method _get_remote_url", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::_get_remote_url@412", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "_deploy.py defines method _gh_release_in_repo", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::_gh_release_in_repo@360", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "_deploy.py defines method _load_single", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::_load_single@63", "weight": 0.7}
-{"confidence": "EXTRACTED", "description": "_deploy.py defines method _release_workflow_content", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::_release_workflow_content@452", "weight": 0.7}
-{"confidence": "EXTRACTED", "description": "_deploy.py defines method _remove_temp_remote", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::_remove_temp_remote@393", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "_deploy.py defines method _release_workflow_content", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::_release_workflow_content@461", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "_deploy.py defines method _remove_temp_remote", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::_remove_temp_remote@402", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "_deploy.py defines method _resolve_project_path", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::_resolve_project_path@88", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "_deploy.py defines method deploy", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::deploy@97", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "_deploy.py defines method discover", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::discover@35", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "_deploy.py defines method find_by_name", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::find_by_name@56", "weight": 0.7}
-{"confidence": "EXTRACTED", "description": "_deploy.py defines method generate_workflows", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::generate_workflows@412", "weight": 0.7}
-{"confidence": "EXTRACTED", "description": "_deploy.py defines method install_dependencies", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::install_dependencies@480", "weight": 0.7}
-{"confidence": "EXTRACTED", "description": "_deploy.py defines method install_lazygit", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::install_lazygit@524", "weight": 0.7}
-{"confidence": "EXTRACTED", "description": "_deploy.py defines method integrate_readmenator", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::integrate_readmenator@490", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "_deploy.py defines method generate_workflows", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::generate_workflows@421", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "_deploy.py defines method install_dependencies", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::install_dependencies@489", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "_deploy.py defines method install_lazygit", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::install_lazygit@533", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "_deploy.py defines method integrate_readmenator", "relation": "defines", "source": "file:deploynator/_deploy.py", "target": "sym:deploynator/_deploy.py::integrate_readmenator@499", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "_docs.py imports external __future__", "relation": "imports", "source": "file:deploynator/_docs.py", "target": "ext:__future__", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "_docs.py imports external shlex", "relation": "imports", "source": "file:deploynator/_docs.py", "target": "ext:shlex", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "_docs.py imports external subprocess", "relation": "imports", "source": "file:deploynator/_docs.py", "target": "ext:subprocess", "weight": 0.85}
@@ -676,6 +690,14 @@
 {"confidence": "EXTRACTED", "description": "_pypi.py defines method prompt_for_credentials", "relation": "defines", "source": "file:deploynator/_pypi.py", "target": "sym:deploynator/_pypi.py::prompt_for_credentials@39", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "_pypi.py defines method run", "relation": "defines", "source": "file:deploynator/_pypi.py", "target": "sym:deploynator/_pypi.py::run@107", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "_pypi.py defines method save_pypirc", "relation": "defines", "source": "file:deploynator/_pypi.py", "target": "sym:deploynator/_pypi.py::save_pypirc@72", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "_readme.py imports external __future__", "relation": "imports", "source": "file:deploynator/_readme.py", "target": "ext:__future__", "weight": 0.85}
+{"confidence": "EXTRACTED", "description": "_readme.py imports external os", "relation": "imports", "source": "file:deploynator/_readme.py", "target": "ext:os", "weight": 0.85}
+{"confidence": "EXTRACTED", "description": "_readme.py imports external pathlib", "relation": "imports", "source": "file:deploynator/_readme.py", "target": "ext:pathlib", "weight": 0.85}
+{"confidence": "EXTRACTED", "description": "_readme.py imports _config.py", "relation": "resolved_imports", "source": "file:deploynator/_readme.py", "target": "file:deploynator/_config.py", "weight": 0.85}
+{"confidence": "EXTRACTED", "description": "_readme.py defines function _find_readme", "relation": "defines", "source": "file:deploynator/_readme.py", "target": "sym:deploynator/_readme.py::_find_readme@32", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "_readme.py defines function ensure_deployed_footer", "relation": "defines", "source": "file:deploynator/_readme.py", "target": "sym:deploynator/_readme.py::ensure_deployed_footer@49", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "_readme.py defines function footer_block", "relation": "defines", "source": "file:deploynator/_readme.py", "target": "sym:deploynator/_readme.py::footer_block@19", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "_readme.py defines function footer_line", "relation": "defines", "source": "file:deploynator/_readme.py", "target": "sym:deploynator/_readme.py::footer_line@96", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "_runner.py imports external __future__", "relation": "imports", "source": "file:deploynator/_runner.py", "target": "ext:__future__", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "_runner.py imports external os", "relation": "imports", "source": "file:deploynator/_runner.py", "target": "ext:os", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "_runner.py imports external shlex", "relation": "imports", "source": "file:deploynator/_runner.py", "target": "ext:shlex", "weight": 0.85}
@@ -947,6 +969,15 @@
 {"confidence": "EXTRACTED", "description": "test_pypi.py defines method test_save_pypirc_rejects_symlink", "relation": "defines", "source": "file:tests/test_pypi.py", "target": "sym:tests/test_pypi.py::test_save_pypirc_rejects_symlink@130", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "test_pypi.py defines method test_save_pypirc_roundtrip", "relation": "defines", "source": "file:tests/test_pypi.py", "target": "sym:tests/test_pypi.py::test_save_pypirc_roundtrip@116", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "test_pypi.py defines method test_setup_py_counts", "relation": "defines", "source": "file:tests/test_pypi.py", "target": "sym:tests/test_pypi.py::test_setup_py_counts@40", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "test_readme_footer.py imports external __future__", "relation": "imports", "source": "file:tests/test_readme_footer.py", "target": "ext:__future__", "weight": 0.85}
+{"confidence": "EXTRACTED", "description": "test_readme_footer.py imports _config.py", "relation": "resolved_imports", "source": "file:tests/test_readme_footer.py", "target": "file:deploynator/_config.py", "weight": 0.85}
+{"confidence": "EXTRACTED", "description": "test_readme_footer.py imports _readme.py", "relation": "resolved_imports", "source": "file:tests/test_readme_footer.py", "target": "file:deploynator/_readme.py", "weight": 0.85}
+{"confidence": "EXTRACTED", "description": "test_readme_footer.py defines function test_ensure_footer_appends_when_missing", "relation": "defines", "source": "file:tests/test_readme_footer.py", "target": "sym:tests/test_readme_footer.py::test_ensure_footer_appends_when_missing@30", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "test_readme_footer.py defines function test_ensure_footer_is_idempotent", "relation": "defines", "source": "file:tests/test_readme_footer.py", "target": "sym:tests/test_readme_footer.py::test_ensure_footer_is_idempotent@40", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "test_readme_footer.py defines function test_ensure_footer_missing_readme", "relation": "defines", "source": "file:tests/test_readme_footer.py", "target": "sym:tests/test_readme_footer.py::test_ensure_footer_missing_readme@58", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "test_readme_footer.py defines function test_ensure_footer_wraps_plain_line", "relation": "defines", "source": "file:tests/test_readme_footer.py", "target": "sym:tests/test_readme_footer.py::test_ensure_footer_wraps_plain_line@48", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "test_readme_footer.py defines function test_footer_block_is_anchored", "relation": "defines", "source": "file:tests/test_readme_footer.py", "target": "sym:tests/test_readme_footer.py::test_footer_block_is_anchored@22", "weight": 0.7}
+{"confidence": "EXTRACTED", "description": "test_readme_footer.py defines function test_footer_line_is_english_without_emoji", "relation": "defines", "source": "file:tests/test_readme_footer.py", "target": "sym:tests/test_readme_footer.py::test_footer_line_is_english_without_emoji@15", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "test_runner.py imports external inspect", "relation": "imports", "source": "file:tests/test_runner.py", "target": "ext:inspect", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "test_runner.py imports external os", "relation": "imports", "source": "file:tests/test_runner.py", "target": "ext:os", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "test_runner.py imports external pytest", "relation": "imports", "source": "file:tests/test_runner.py", "target": "ext:pytest", "weight": 0.85}
@@ -1043,7 +1074,7 @@
 {"confidence": "INFERRED", "description": "_resolve_project_path calls _looks_like_path", "relation": "calls", "source": "sym:deploynator/_app.py::_resolve_project_path@247", "target": "sym:deploynator/_app.py::_looks_like_path@240", "weight": 1.0}
 {"confidence": "INFERRED", "description": "_resolve_project_path calls find_by_name", "relation": "calls", "source": "sym:deploynator/_app.py::_resolve_project_path@247", "target": "sym:deploynator/_deploy.py::find_by_name@56", "weight": 1.0}
 {"confidence": "INFERRED", "description": "_smart_prepare calls write_changelog", "relation": "calls", "source": "sym:deploynator/_app.py::_smart_prepare@261", "target": "sym:deploynator/_changelog.py::write_changelog@100", "weight": 1.0}
-{"confidence": "INFERRED", "description": "_smart_prepare calls integrate_readmenator", "relation": "calls", "source": "sym:deploynator/_app.py::_smart_prepare@261", "target": "sym:deploynator/_deploy.py::integrate_readmenator@490", "weight": 1.0}
+{"confidence": "INFERRED", "description": "_smart_prepare calls integrate_readmenator", "relation": "calls", "source": "sym:deploynator/_app.py::_smart_prepare@261", "target": "sym:deploynator/_deploy.py::integrate_readmenator@499", "weight": 1.0}
 {"confidence": "INFERRED", "description": "_smart_prepare calls GitOperations", "relation": "calls", "source": "sym:deploynator/_app.py::_smart_prepare@261", "target": "sym:deploynator/_git.py::GitOperations@10", "weight": 1.0}
 {"confidence": "INFERRED", "description": "_smart_prepare calls add_all", "relation": "calls", "source": "sym:deploynator/_app.py::_smart_prepare@261", "target": "sym:deploynator/_git.py::add_all@46", "weight": 1.0}
 {"confidence": "INFERRED", "description": "auth_login calls _auth_bitbucket", "relation": "calls", "source": "sym:deploynator/_app.py::auth_login@31", "target": "sym:deploynator/_app.py::_auth_bitbucket@86", "weight": 1.0}
@@ -1058,13 +1089,13 @@
 {"confidence": "INFERRED", "description": "commit calls format", "relation": "calls", "source": "sym:deploynator/_app.py::commit@276", "target": "sym:deploynator/_models.py::format@183", "weight": 1.0}
 {"confidence": "INFERRED", "description": "generate_ci calls discover", "relation": "calls", "source": "sym:deploynator/_app.py::generate_ci@437", "target": "sym:deploynator/_deploy.py::discover@35", "weight": 1.0}
 {"confidence": "INFERRED", "description": "generate_ci calls find_by_name", "relation": "calls", "source": "sym:deploynator/_app.py::generate_ci@437", "target": "sym:deploynator/_deploy.py::find_by_name@56", "weight": 1.0}
-{"confidence": "INFERRED", "description": "generate_ci calls generate_workflows", "relation": "calls", "source": "sym:deploynator/_app.py::generate_ci@437", "target": "sym:deploynator/_deploy.py::generate_workflows@412", "weight": 1.0}
+{"confidence": "INFERRED", "description": "generate_ci calls generate_workflows", "relation": "calls", "source": "sym:deploynator/_app.py::generate_ci@437", "target": "sym:deploynator/_deploy.py::generate_workflows@421", "weight": 1.0}
 {"confidence": "INFERRED", "description": "generate_docs calls _resolve_project_path", "relation": "calls", "source": "sym:deploynator/_app.py::generate_docs@406", "target": "sym:deploynator/_app.py::_resolve_project_path@247", "weight": 1.0}
-{"confidence": "INFERRED", "description": "generate_docs calls integrate_readmenator", "relation": "calls", "source": "sym:deploynator/_app.py::generate_docs@406", "target": "sym:deploynator/_deploy.py::integrate_readmenator@490", "weight": 1.0}
+{"confidence": "INFERRED", "description": "generate_docs calls integrate_readmenator", "relation": "calls", "source": "sym:deploynator/_app.py::generate_docs@406", "target": "sym:deploynator/_deploy.py::integrate_readmenator@499", "weight": 1.0}
 {"confidence": "INFERRED", "description": "init_project calls format", "relation": "calls", "source": "sym:deploynator/_app.py::init_project@168", "target": "sym:deploynator/_models.py::format@183", "weight": 1.0}
 {"confidence": "INFERRED", "description": "install_deps calls discover", "relation": "calls", "source": "sym:deploynator/_app.py::install_deps@453", "target": "sym:deploynator/_deploy.py::discover@35", "weight": 1.0}
 {"confidence": "INFERRED", "description": "install_deps calls find_by_name", "relation": "calls", "source": "sym:deploynator/_app.py::install_deps@453", "target": "sym:deploynator/_deploy.py::find_by_name@56", "weight": 1.0}
-{"confidence": "INFERRED", "description": "install_deps calls install_dependencies", "relation": "calls", "source": "sym:deploynator/_app.py::install_deps@453", "target": "sym:deploynator/_deploy.py::install_dependencies@480", "weight": 1.0}
+{"confidence": "INFERRED", "description": "install_deps calls install_dependencies", "relation": "calls", "source": "sym:deploynator/_app.py::install_deps@453", "target": "sym:deploynator/_deploy.py::install_dependencies@489", "weight": 1.0}
 {"confidence": "INFERRED", "description": "list_projects calls discover", "relation": "calls", "source": "sym:deploynator/_app.py::list_projects@432", "target": "sym:deploynator/_deploy.py::discover@35", "weight": 1.0}
 {"confidence": "INFERRED", "description": "release calls _looks_like_path", "relation": "calls", "source": "sym:deploynator/_app.py::release@316", "target": "sym:deploynator/_app.py::_looks_like_path@240", "weight": 1.0}
 {"confidence": "INFERRED", "description": "release calls _print_result", "relation": "calls", "source": "sym:deploynator/_app.py::release@316", "target": "sym:deploynator/_app.py::_print_result@677", "weight": 1.0}
@@ -1103,10 +1134,10 @@
 {"confidence": "INFERRED", "description": "deploy calls format_for_release", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_changelog.py::format_for_release@110", "weight": 1.0}
 {"confidence": "INFERRED", "description": "deploy calls generate_from_log", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_changelog.py::generate_from_log@16", "weight": 1.0}
 {"confidence": "INFERRED", "description": "deploy calls write_changelog", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_changelog.py::write_changelog@100", "weight": 1.0}
-{"confidence": "INFERRED", "description": "deploy calls _add_temp_remote", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_deploy.py::_add_temp_remote@384", "weight": 1.0}
-{"confidence": "INFERRED", "description": "deploy calls _get_remote_url", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_deploy.py::_get_remote_url@403", "weight": 1.0}
-{"confidence": "INFERRED", "description": "deploy calls _gh_release_in_repo", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_deploy.py::_gh_release_in_repo@351", "weight": 1.0}
-{"confidence": "INFERRED", "description": "deploy calls _remove_temp_remote", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_deploy.py::_remove_temp_remote@393", "weight": 1.0}
+{"confidence": "INFERRED", "description": "deploy calls _add_temp_remote", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_deploy.py::_add_temp_remote@393", "weight": 1.0}
+{"confidence": "INFERRED", "description": "deploy calls _get_remote_url", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_deploy.py::_get_remote_url@412", "weight": 1.0}
+{"confidence": "INFERRED", "description": "deploy calls _gh_release_in_repo", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_deploy.py::_gh_release_in_repo@360", "weight": 1.0}
+{"confidence": "INFERRED", "description": "deploy calls _remove_temp_remote", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_deploy.py::_remove_temp_remote@402", "weight": 1.0}
 {"confidence": "INFERRED", "description": "deploy calls _resolve_project_path", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_deploy.py::_resolve_project_path@88", "weight": 1.0}
 {"confidence": "INFERRED", "description": "deploy calls add_all", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_git.py::add_all@46", "weight": 1.0}
 {"confidence": "INFERRED", "description": "deploy calls current_branch", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_git.py::current_branch@214", "weight": 1.0}
@@ -1125,6 +1156,7 @@
 {"confidence": "INFERRED", "description": "deploy calls has_credentials", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_pypi.py::has_credentials@33", "weight": 1.0}
 {"confidence": "INFERRED", "description": "deploy calls is_packaging_project", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_pypi.py::is_packaging_project@16", "weight": 1.0}
 {"confidence": "INFERRED", "description": "deploy calls prompt_for_credentials", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_pypi.py::prompt_for_credentials@39", "weight": 1.0}
+{"confidence": "INFERRED", "description": "deploy calls ensure_deployed_footer", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_readme.py::ensure_deployed_footer@49", "weight": 1.0}
 {"confidence": "INFERRED", "description": "deploy calls calculate_next_version", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_semver.py::calculate_next_version@114", "weight": 1.0}
 {"confidence": "INFERRED", "description": "deploy calls determine_bump", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_semver.py::determine_bump@111", "weight": 1.0}
 {"confidence": "INFERRED", "description": "deploy calls get_current_version", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_semver.py::get_current_version@21", "weight": 1.0}
@@ -1132,10 +1164,10 @@
 {"confidence": "INFERRED", "description": "deploy calls load_toml_config", "relation": "calls", "source": "sym:deploynator/_deploy.py::deploy@97", "target": "sym:deploynator/_toml.py::load_toml_config@46", "weight": 1.0}
 {"confidence": "INFERRED", "description": "discover calls _load_single", "relation": "calls", "source": "sym:deploynator/_deploy.py::discover@35", "target": "sym:deploynator/_deploy.py::_load_single@63", "weight": 1.0}
 {"confidence": "INFERRED", "description": "find_by_name calls discover", "relation": "calls", "source": "sym:deploynator/_deploy.py::find_by_name@56", "target": "sym:deploynator/_deploy.py::discover@35", "weight": 1.0}
-{"confidence": "INFERRED", "description": "generate_workflows calls _ci_workflow_content", "relation": "calls", "source": "sym:deploynator/_deploy.py::generate_workflows@412", "target": "sym:deploynator/_deploy.py::_ci_workflow_content@431", "weight": 1.0}
-{"confidence": "INFERRED", "description": "generate_workflows calls _release_workflow_content", "relation": "calls", "source": "sym:deploynator/_deploy.py::generate_workflows@412", "target": "sym:deploynator/_deploy.py::_release_workflow_content@452", "weight": 1.0}
-{"confidence": "INFERRED", "description": "install_dependencies calls label", "relation": "calls", "source": "sym:deploynator/_deploy.py::install_dependencies@480", "target": "sym:deploynator/_models.py::label@27", "weight": 1.0}
-{"confidence": "INFERRED", "description": "integrate_readmenator calls load_toml_config", "relation": "calls", "source": "sym:deploynator/_deploy.py::integrate_readmenator@490", "target": "sym:deploynator/_toml.py::load_toml_config@46", "weight": 1.0}
+{"confidence": "INFERRED", "description": "generate_workflows calls _ci_workflow_content", "relation": "calls", "source": "sym:deploynator/_deploy.py::generate_workflows@421", "target": "sym:deploynator/_deploy.py::_ci_workflow_content@440", "weight": 1.0}
+{"confidence": "INFERRED", "description": "generate_workflows calls _release_workflow_content", "relation": "calls", "source": "sym:deploynator/_deploy.py::generate_workflows@421", "target": "sym:deploynator/_deploy.py::_release_workflow_content@461", "weight": 1.0}
+{"confidence": "INFERRED", "description": "install_dependencies calls label", "relation": "calls", "source": "sym:deploynator/_deploy.py::install_dependencies@489", "target": "sym:deploynator/_models.py::label@27", "weight": 1.0}
+{"confidence": "INFERRED", "description": "integrate_readmenator calls load_toml_config", "relation": "calls", "source": "sym:deploynator/_deploy.py::integrate_readmenator@499", "target": "sym:deploynator/_toml.py::load_toml_config@46", "weight": 1.0}
 {"confidence": "INFERRED", "description": "amend_no_edit calls gpg_sign_flag", "relation": "calls", "source": "sym:deploynator/_git.py::amend_no_edit@68", "target": "sym:deploynator/_git.py::gpg_sign_flag@32", "weight": 1.0}
 {"confidence": "INFERRED", "description": "commit calls gpg_sign_flag", "relation": "calls", "source": "sym:deploynator/_git.py::commit@56", "target": "sym:deploynator/_git.py::gpg_sign_flag@32", "weight": 1.0}
 {"confidence": "INFERRED", "description": "gpg_sign_flag calls check_gpg", "relation": "calls", "source": "sym:deploynator/_git.py::gpg_sign_flag@32", "target": "sym:deploynator/_git.py::check_gpg@14", "weight": 1.0}
@@ -1188,6 +1220,8 @@
 {"confidence": "INFERRED", "description": "run calls clean", "relation": "calls", "source": "sym:deploynator/_pypi.py::run@107", "target": "sym:deploynator/_pypi.py::clean@90", "weight": 1.0}
 {"confidence": "INFERRED", "description": "run calls is_packaging_project", "relation": "calls", "source": "sym:deploynator/_pypi.py::run@107", "target": "sym:deploynator/_pypi.py::is_packaging_project@16", "weight": 1.0}
 {"confidence": "INFERRED", "description": "save_pypirc calls read", "relation": "calls", "source": "sym:deploynator/_pypi.py::save_pypirc@72", "target": "sym:deploynator/_mcp_server.py::read@82", "weight": 1.0}
+{"confidence": "INFERRED", "description": "ensure_deployed_footer calls _find_readme", "relation": "calls", "source": "sym:deploynator/_readme.py::ensure_deployed_footer@49", "target": "sym:deploynator/_readme.py::_find_readme@32", "weight": 1.0}
+{"confidence": "INFERRED", "description": "ensure_deployed_footer calls footer_block", "relation": "calls", "source": "sym:deploynator/_readme.py::ensure_deployed_footer@49", "target": "sym:deploynator/_readme.py::footer_block@19", "weight": 1.0}
 {"confidence": "INFERRED", "description": "calculate_next_version calls bump", "relation": "calls", "source": "sym:deploynator/_semver.py::calculate_next_version@114", "target": "sym:deploynator/_models.py::bump@228", "weight": 1.0}
 {"confidence": "INFERRED", "description": "determine_bump calls bump_strategy", "relation": "calls", "source": "sym:deploynator/_semver.py::determine_bump@111", "target": "sym:deploynator/_models.py::bump_strategy@68", "weight": 1.0}
 {"confidence": "INFERRED", "description": "get_current_version calls read", "relation": "calls", "source": "sym:deploynator/_semver.py::get_current_version@21", "target": "sym:deploynator/_mcp_server.py::read@82", "weight": 1.0}
@@ -1246,7 +1280,7 @@
 {"confidence": "INFERRED", "description": "test_discover_single_yaml calls discover", "relation": "calls", "source": "sym:tests/test_deploy.py::test_discover_single_yaml@21", "target": "sym:deploynator/_deploy.py::discover@35", "weight": 1.0}
 {"confidence": "INFERRED", "description": "test_find_by_name calls find_by_name", "relation": "calls", "source": "sym:tests/test_deploy.py::test_find_by_name@53", "target": "sym:deploynator/_deploy.py::find_by_name@56", "weight": 1.0}
 {"confidence": "INFERRED", "description": "test_install_dependencies_file_not_found calls DeployOrchestrator", "relation": "calls", "source": "sym:tests/test_deploy.py::test_install_dependencies_file_not_found@82", "target": "sym:deploynator/_deploy.py::DeployOrchestrator@76", "weight": 1.0}
-{"confidence": "INFERRED", "description": "test_install_dependencies_file_not_found calls install_dependencies", "relation": "calls", "source": "sym:tests/test_deploy.py::test_install_dependencies_file_not_found@82", "target": "sym:deploynator/_deploy.py::install_dependencies@480", "weight": 1.0}
+{"confidence": "INFERRED", "description": "test_install_dependencies_file_not_found calls install_dependencies", "relation": "calls", "source": "sym:tests/test_deploy.py::test_install_dependencies_file_not_found@82", "target": "sym:deploynator/_deploy.py::install_dependencies@489", "weight": 1.0}
 {"confidence": "INFERRED", "description": "test_install_dependencies_file_not_found calls PlatformConfig", "relation": "calls", "source": "sym:tests/test_deploy.py::test_install_dependencies_file_not_found@82", "target": "sym:deploynator/_models.py::PlatformConfig@98", "weight": 1.0}
 {"confidence": "INFERRED", "description": "test_install_dependencies_file_not_found calls ProjectConfig", "relation": "calls", "source": "sym:tests/test_deploy.py::test_install_dependencies_file_not_found@82", "target": "sym:deploynator/_models.py::ProjectConfig@130", "weight": 1.0}
 {"confidence": "INFERRED", "description": "test_load_single_from_deploynator_yaml calls _load_single", "relation": "calls", "source": "sym:tests/test_deploy.py::test_load_single_from_deploynator_yaml@64", "target": "sym:deploynator/_deploy.py::_load_single@63", "weight": 1.0}
@@ -1387,6 +1421,12 @@
 {"confidence": "INFERRED", "description": "test_save_pypirc_roundtrip calls save_pypirc", "relation": "calls", "source": "sym:tests/test_pypi.py::test_save_pypirc_roundtrip@116", "target": "sym:deploynator/_pypi.py::save_pypirc@72", "weight": 1.0}
 {"confidence": "INFERRED", "description": "test_setup_py_counts calls PyPIRunner", "relation": "calls", "source": "sym:tests/test_pypi.py::test_setup_py_counts@40", "target": "sym:deploynator/_pypi.py::PyPIRunner@12", "weight": 1.0}
 {"confidence": "INFERRED", "description": "test_setup_py_counts calls is_packaging_project", "relation": "calls", "source": "sym:tests/test_pypi.py::test_setup_py_counts@40", "target": "sym:deploynator/_pypi.py::is_packaging_project@16", "weight": 1.0}
+{"confidence": "INFERRED", "description": "test_ensure_footer_appends_when_missing calls ensure_deployed_footer", "relation": "calls", "source": "sym:tests/test_readme_footer.py::test_ensure_footer_appends_when_missing@30", "target": "sym:deploynator/_readme.py::ensure_deployed_footer@49", "weight": 1.0}
+{"confidence": "INFERRED", "description": "test_ensure_footer_is_idempotent calls ensure_deployed_footer", "relation": "calls", "source": "sym:tests/test_readme_footer.py::test_ensure_footer_is_idempotent@40", "target": "sym:deploynator/_readme.py::ensure_deployed_footer@49", "weight": 1.0}
+{"confidence": "INFERRED", "description": "test_ensure_footer_missing_readme calls ensure_deployed_footer", "relation": "calls", "source": "sym:tests/test_readme_footer.py::test_ensure_footer_missing_readme@58", "target": "sym:deploynator/_readme.py::ensure_deployed_footer@49", "weight": 1.0}
+{"confidence": "INFERRED", "description": "test_ensure_footer_wraps_plain_line calls ensure_deployed_footer", "relation": "calls", "source": "sym:tests/test_readme_footer.py::test_ensure_footer_wraps_plain_line@48", "target": "sym:deploynator/_readme.py::ensure_deployed_footer@49", "weight": 1.0}
+{"confidence": "INFERRED", "description": "test_footer_block_is_anchored calls footer_block", "relation": "calls", "source": "sym:tests/test_readme_footer.py::test_footer_block_is_anchored@22", "target": "sym:deploynator/_readme.py::footer_block@19", "weight": 1.0}
+{"confidence": "INFERRED", "description": "test_footer_line_is_english_without_emoji calls footer_line", "relation": "calls", "source": "sym:tests/test_readme_footer.py::test_footer_line_is_english_without_emoji@15", "target": "sym:deploynator/_readme.py::footer_line@96", "weight": 1.0}
 {"confidence": "INFERRED", "description": "_toml calls TomlConfig", "relation": "calls", "source": "sym:tests/test_runner.py::_toml@7", "target": "sym:deploynator/_toml.py::TomlConfig@14", "weight": 1.0}
 {"confidence": "INFERRED", "description": "test_auto_false_skips calls DocsRunner", "relation": "calls", "source": "sym:tests/test_runner.py::test_auto_false_skips@127", "target": "sym:deploynator/_docs.py::DocsRunner@10", "weight": 1.0}
 {"confidence": "INFERRED", "description": "test_auto_false_skips calls TomlConfig", "relation": "calls", "source": "sym:tests/test_runner.py::test_auto_false_skips@127", "target": "sym:deploynator/_toml.py::TomlConfig@14", "weight": 1.0}

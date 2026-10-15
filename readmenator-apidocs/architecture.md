@@ -4,9 +4,9 @@
 
 ## Architecture Overview
 
-4 components stacked in 3 dependency tiers (weighted Eades-Lin-Smyth ordering: arrows point from dependent to dependency, top to bottom). Labels are import counts, thick arrows the top quartile; 1 transitively implied edges are omitted. Dashed red arrows are upward dependencies: the smallest set of imports that closes every cycle and breaks the layering. Cyan components hold entry points. Interactive version: `readmenator-apidocs/index.html#/flows`.
+5 components stacked in 4 dependency tiers (weighted Eades-Lin-Smyth ordering: arrows point from dependent to dependency, top to bottom). Labels are import counts, thick arrows the top quartile; 2 transitively implied edges are omitted. Dashed red arrows are upward dependencies: the smallest set of imports that closes every cycle and breaks the layering. Cyan components hold entry points. Interactive version: `readmenator-apidocs/index.html#/flows`.
 
-Upward dependencies to fix first: `deploynator: _mcp_server` -> `deploynator: _platforms` (3 imports)
+Upward dependencies to fix first: `deploynator: _changelog` -> `deploynator: _platforms` (1 imports)
 
 ```mermaid
 flowchart TB
@@ -15,23 +15,29 @@ flowchart TB
     classDef entry fill:#0e7490,stroke:#22d3ee,color:#ecfeff,stroke-width:2px;
     subgraph lane_0["Tier 1 - entry / orchestration"]
         direction LR
-        n_c1["deploynator: _platforms<br/>6 files, 142 symbols<br/>Core / utility"]:::cycle
+        n_c2["deploynator: _mcp_server<br/>4 files, 36 symbols<br/>Core / utility"]:::entry
         n_d__root_["(root)<br/>2 files, 1 symbols<br/>Core / utility"]:::default
     end
     subgraph lane_1["Tier 2"]
         direction LR
-        n_c2["deploynator: _pypi<br/>4 files, 18 symbols<br/>Core / utility"]:::cycle
+        n_c0["deploynator: _platforms<br/>6 files, 142 symbols<br/>Core / utility"]:::cycle
     end
-    subgraph lane_2["Tier 3 - foundation"]
+    subgraph lane_2["Tier 3"]
         direction LR
-        n_c0["deploynator: _mcp_server<br/>6 files, 51 symbols<br/>Core / utility"]:::entry
+        n_c1["deploynator: _pypi<br/>4 files, 18 symbols<br/>Core / utility"]:::cycle
     end
-    n_c1 ==>|"5"| n_c2
-    n_c2 ==>|"4"| n_c0
-    n_c1 <-.-|"3 upward"| n_c0
-    linkStyle 2 stroke:#f87171,stroke-width:2px;
-    n_c1 ~~~ n_c2
+    subgraph lane_3["Tier 4 - foundation"]
+        direction LR
+        n_c3["deploynator: _changelog<br/>3 files, 19 symbols<br/>Core / utility"]:::cycle
+    end
+    n_c0 ==>|"5"| n_c1
+    n_c1 ==>|"4"| n_c3
+    n_c2 -->|"2"| n_c0
+    n_c0 <-.-|"1 upward"| n_c3
+    linkStyle 3 stroke:#f87171,stroke-width:2px;
     n_c2 ~~~ n_c0
+    n_c0 ~~~ n_c1
+    n_c1 ~~~ n_c3
 ```
 
 ---

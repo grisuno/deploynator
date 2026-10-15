@@ -2,15 +2,16 @@
 
 > Cross-session context for agents. Sections 1-6 are regenerated from the source tree with zero LLM tokens: declared rules are quoted verbatim with `file:line`, measured baselines come from the scan. Section 7 is written by agents and humans and is preserved across rebuilds.
 
-Generated from 33 files at commit `62eb195aebe6`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
+Generated from 35 files at commit `063370c92596`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
 
 ## 1. Purpose and domain
 
 - What it is: Token-free, offline, multi-platform deployer for GitHub, GitLab, and Bitbucket. (`README.md:3`)
-- Domain vocabulary (term, files): `deploynator` (22), `release` (12), `run` (11), `deploy` (10), `git` (10), `project` (10), `version` (7), `bump` (7), `commit` (7), `install` (7), `valid` (7), `red` (7), `docs` (6), `config` (6), `toml` (6)
-- Subsystem `deploynator: _mcp_server`: 11 files, core `deploynator/_mcp_server.py`: MCP (Model Context Protocol) stdio server for deploynator.
+- Domain vocabulary (term, files): `deploynator` (23), `deploy` (12), `release` (12), `run` (12), `git` (10), `project` (10), `version` (7), `config` (7), `bump` (7), `commit` (7), `install` (7), `valid` (7), `current` (7), `red` (7), `docs` (6)
 - Subsystem `deploynator: _platforms`: 11 files, core `deploynator/_platforms.py`
 - Subsystem `deploynator: _pypi`: 8 files, core `deploynator/_pypi.py`: prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.
+- Subsystem `deploynator: _mcp_server`: 7 files, core `deploynator/_mcp_server.py`: MCP (Model Context Protocol) stdio server for deploynator.
+- Subsystem `deploynator: _changelog`: 6 files, core `deploynator/_changelog.py`
 - Business rules that the code cannot show live in section 7: record them there.
 
 ## 2. Workflow
@@ -66,9 +67,9 @@ Declared:
 - none declared in instruction files (add them to AGENTS.md or record them in section 7)
 
 Measured baseline:
-- py: 31 files, 404 symbols; docstrings on 3% of symbols; functions snake_case (100%); types PascalCase (100%); median file 109 lines, max 685.
+- py: 33 files, 414 symbols; docstrings on 5% of symbols; functions snake_case (100%); types PascalCase (100%); median file 106 lines, max 685.
 - sh: 2 files, 1 symbols; docstrings on 100% of symbols; functions snake_case (100%); median file 42 lines, max 42.
-- Tests: 15 files under tests; follow the existing naming (e.g. `bdd_test_deploy.py`).
+- Tests: 16 files under tests; follow the existing naming (e.g. `bdd_test_deploy.py`).
 
 ## 5. Minimum deliverables
 
@@ -77,7 +78,7 @@ Declared:
 
 Measured baseline:
 - Tests pass: `python -m pytest -q`.
-- Docstring coverage stays at or above 3%.
+- Docstring coverage stays at or above 6%.
 - No new security findings at medium or above (current: 0).
 - No new dependency cycles (current: 0).
 - Files stay under 300 lines where possible (`readmenator . lint`).

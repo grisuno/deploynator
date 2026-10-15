@@ -1,6 +1,6 @@
 # Documentation Coverage
 
-Overall: **3.8%** (7 of 186 public modules, types, and callables). Data members are excluded from the ratio.
+Overall: **5.3%** (10 of 190 public modules, types, and callables). Data members are excluded from the ratio.
 
 [Back to index](index.md)
 
@@ -12,9 +12,9 @@ Overall: **3.8%** (7 of 186 public modules, types, and callables). Data members 
 | classmethod | 0 | 12 | 0.0% |
 | constructor | 0 | 14 | 0.0% |
 | enum | 0 | 2 | 0.0% |
-| function | 1 | 7 | 14.3% |
+| function | 4 | 10 | 40.0% |
 | method | 3 | 99 | 3.0% |
-| module | 3 | 18 | 16.7% |
+| module | 3 | 19 | 15.8% |
 | property | 0 | 4 | 0.0% |
 | staticmethod | 0 | 2 | 0.0% |
 
@@ -39,13 +39,14 @@ Overall: **3.8%** (7 of 186 public modules, types, and callables). Data members 
 | [`deploynator._app`](modules/deploynator._app.py.md) | 1 | 16 | 6.2% |
 | [`deploynator._pypi`](modules/deploynator._pypi.py.md) | 2 | 9 | 22.2% |
 | [`app`](modules/app.py.md) | 1 | 2 | 50.0% |
+| [`deploynator._readme`](modules/deploynator._readme.py.md) | 3 | 4 | 75.0% |
 | [`deploy.sh`](modules/deploy.sh.md) | 2 | 2 | 100.0% |
 
 ## Warnings
 
 DOC001 undocumented public item, DOC002 parameter not documented, DOC003 documented parameter missing from the signature (stale doc), DOC004 return value not documented, DOC005 raised exception not documented.
 
-DOC001: 179
+DOC001: 180
 
 - DOC001 `app.py:12` function main is not documented
 - DOC001 `deploynator/__init__.py:1` module deploynator/__init__.py is not documented
@@ -91,10 +92,10 @@ DOC001: 179
 - DOC001 `deploynator/_deploy.py:76` class DeployOrchestrator is not documented
 - DOC001 `deploynator/_deploy.py:77` constructor DeployOrchestrator.__init__ is not documented
 - DOC001 `deploynator/_deploy.py:97` method DeployOrchestrator.deploy is not documented
-- DOC001 `deploynator/_deploy.py:412` method DeployOrchestrator.generate_workflows is not documented
-- DOC001 `deploynator/_deploy.py:480` method DeployOrchestrator.install_dependencies is not documented
-- DOC001 `deploynator/_deploy.py:490` method DeployOrchestrator.integrate_readmenator is not documented
-- DOC001 `deploynator/_deploy.py:524` method DeployOrchestrator.install_lazygit is not documented
+- DOC001 `deploynator/_deploy.py:421` method DeployOrchestrator.generate_workflows is not documented
+- DOC001 `deploynator/_deploy.py:489` method DeployOrchestrator.install_dependencies is not documented
+- DOC001 `deploynator/_deploy.py:499` method DeployOrchestrator.integrate_readmenator is not documented
+- DOC001 `deploynator/_deploy.py:533` method DeployOrchestrator.install_lazygit is not documented
 - DOC001 `deploynator/_docs.py:1` module deploynator/_docs.py is not documented
 - DOC001 `deploynator/_docs.py:10` class DocsRunner is not documented
 - DOC001 `deploynator/_docs.py:11` constructor DocsRunner.__init__ is not documented
@@ -209,6 +210,7 @@ DOC001: 179
 - DOC001 `deploynator/_pypi.py:33` method PyPIRunner.has_credentials is not documented
 - DOC001 `deploynator/_pypi.py:90` method PyPIRunner.clean is not documented
 - DOC001 `deploynator/_pypi.py:107` method PyPIRunner.run is not documented
+- DOC001 `deploynator/_readme.py:1` module deploynator/_readme.py is not documented
 - DOC001 `deploynator/_runner.py:1` module deploynator/_runner.py is not documented
 - DOC001 `deploynator/_runner.py:11` class TestRunner is not documented
 - DOC001 `deploynator/_runner.py:12` constructor TestRunner.__init__ is not documented

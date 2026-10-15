@@ -1,10 +1,10 @@
 # deploynator: _platforms
 
-*Community 1 | 11 files | cohesion 0.46*
+*Community 0 | 11 files | cohesion 0.45*
 
 ## Definition
 
-This community groups 11 file(s) rooted at `deploynator` with dominant language py (cohesion 0.46). Central symbols: `BitbucketCLI`, `ChangelogEntry`, `CommitMessage`, `CommitType`, `DeployOrchestrator`, `DeployResult`, `DeploynatorApp`, `GitHubCLI`. Core file: `tests/test_models.py` (44 symbols). Documented purpose: Path-direct deploy + tag prefijos + version_file toml (ReadMenator real)..
+This community groups 11 file(s) rooted at `deploynator` with dominant language py (cohesion 0.45). Central symbols: `BitbucketCLI`, `ChangelogEntry`, `CommitMessage`, `CommitType`, `DeployOrchestrator`, `DeployResult`, `DeploynatorApp`, `GitHubCLI`. Core file: `tests/test_models.py` (44 symbols). Documented purpose: Path-direct deploy + tag prefijos + version_file toml (ReadMenator real)..
 
 ## Files
 
@@ -58,42 +58,43 @@ This community groups 11 file(s) rooted at `deploynator` with dominant language 
 ## Internal vs External Edges
 
 - Internal resolved imports (EXTRACTED): 39
-- Cross-boundary resolved imports (EXTRACTED): 39
+- Cross-boundary resolved imports (EXTRACTED): 40
 
 ## Connections
 
-- [EXTRACTED] depends_on community 0 <-> 1 (strength 0.9): Extracted import edge crosses communities: deploynator/__init__.py imports deploynator/_app.py.
-- [EXTRACTED] depends_on community 1 <-> 2 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_toml.py.
-- [INFERRED] bridges community 0 <-> 1 (strength 0.6): Inferred cross-community bridge: app.py reaches tests/test_models.py in 4 hops.
-- [INFERRED] bridges community 0 <-> 1 (strength 0.6): Inferred cross-community bridge: tests/test_config.py reaches tests/test_models.py in 4 hops.
-- [INFERRED] bridges community 0 <-> 1 (strength 0.6): Inferred cross-community bridge: tests/test_init.py reaches tests/test_models.py in 4 hops.
-- [INFERRED] bridges community 1 <-> 2 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_runner.py in 4 hops.
-- [INFERRED] bridges community 1 <-> 2 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_toml.py in 4 hops.
+- [EXTRACTED] depends_on community 2 <-> 0 (strength 0.9): Extracted import edge crosses communities: deploynator/__init__.py imports deploynator/_app.py.
+- [EXTRACTED] depends_on community 0 <-> 3 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_config.py.
+- [EXTRACTED] depends_on community 0 <-> 1 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_toml.py.
+- [INFERRED] bridges community 2 <-> 0 (strength 0.6): Inferred cross-community bridge: app.py reaches tests/test_models.py in 4 hops.
+- [INFERRED] bridges community 3 <-> 0 (strength 0.6): Inferred cross-community bridge: tests/test_config.py reaches tests/test_models.py in 4 hops.
+- [INFERRED] bridges community 2 <-> 0 (strength 0.6): Inferred cross-community bridge: tests/test_init.py reaches tests/test_models.py in 4 hops.
+- [INFERRED] bridges community 0 <-> 3 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_readme_footer.py in 4 hops.
+- [INFERRED] bridges community 0 <-> 1 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_runner.py in 4 hops.
 
 ## Risks
 
 - [taint high] `deploynator/_app.py` -> `deploynator/_app.py` via `subprocess` (0 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_platforms.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_models.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_deploy.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_config.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_git.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_models.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_semver.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_changelog.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_pypi.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_app.py` via `subprocess` (0 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_platforms.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_deploy.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_changelog.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_pypi.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_readme.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_semver.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_app.py` via `subprocess` (0 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
 
 ## Open Questions
 
 - Why do 9 file(s) lack file-level docs (e.g. `deploynator/_app.py`)? What purpose do they serve?
 - Is the dangerous import `subprocess` in `deploynator/_app.py` still required, or can it be isolated?
 - What would break if the most connected file in deploynator: _platforms changed?
-- Should deploynator: _platforms be split, given cohesion 0.46?
+- Should deploynator: _platforms be split, given cohesion 0.45?
 
 ## Sources
 

@@ -42,10 +42,10 @@
 {"code":"DOC001","uid":"deploynator/_deploy.py::DeployOrchestrator","file":"deploynator/_deploy.py","line":76,"message":"class DeployOrchestrator is not documented"}
 {"code":"DOC001","uid":"deploynator/_deploy.py::DeployOrchestrator.__init__","file":"deploynator/_deploy.py","line":77,"message":"constructor DeployOrchestrator.__init__ is not documented"}
 {"code":"DOC001","uid":"deploynator/_deploy.py::DeployOrchestrator.deploy","file":"deploynator/_deploy.py","line":97,"message":"method DeployOrchestrator.deploy is not documented"}
-{"code":"DOC001","uid":"deploynator/_deploy.py::DeployOrchestrator.generate_workflows","file":"deploynator/_deploy.py","line":412,"message":"method DeployOrchestrator.generate_workflows is not documented"}
-{"code":"DOC001","uid":"deploynator/_deploy.py::DeployOrchestrator.install_dependencies","file":"deploynator/_deploy.py","line":480,"message":"method DeployOrchestrator.install_dependencies is not documented"}
-{"code":"DOC001","uid":"deploynator/_deploy.py::DeployOrchestrator.integrate_readmenator","file":"deploynator/_deploy.py","line":490,"message":"method DeployOrchestrator.integrate_readmenator is not documented"}
-{"code":"DOC001","uid":"deploynator/_deploy.py::DeployOrchestrator.install_lazygit","file":"deploynator/_deploy.py","line":524,"message":"method DeployOrchestrator.install_lazygit is not documented"}
+{"code":"DOC001","uid":"deploynator/_deploy.py::DeployOrchestrator.generate_workflows","file":"deploynator/_deploy.py","line":421,"message":"method DeployOrchestrator.generate_workflows is not documented"}
+{"code":"DOC001","uid":"deploynator/_deploy.py::DeployOrchestrator.install_dependencies","file":"deploynator/_deploy.py","line":489,"message":"method DeployOrchestrator.install_dependencies is not documented"}
+{"code":"DOC001","uid":"deploynator/_deploy.py::DeployOrchestrator.integrate_readmenator","file":"deploynator/_deploy.py","line":499,"message":"method DeployOrchestrator.integrate_readmenator is not documented"}
+{"code":"DOC001","uid":"deploynator/_deploy.py::DeployOrchestrator.install_lazygit","file":"deploynator/_deploy.py","line":533,"message":"method DeployOrchestrator.install_lazygit is not documented"}
 {"code":"DOC001","uid":"deploynator/_docs.py","file":"deploynator/_docs.py","line":1,"message":"module deploynator/_docs.py is not documented"}
 {"code":"DOC001","uid":"deploynator/_docs.py::DocsRunner","file":"deploynator/_docs.py","line":10,"message":"class DocsRunner is not documented"}
 {"code":"DOC001","uid":"deploynator/_docs.py::DocsRunner.__init__","file":"deploynator/_docs.py","line":11,"message":"constructor DocsRunner.__init__ is not documented"}
@@ -160,6 +160,7 @@
 {"code":"DOC001","uid":"deploynator/_pypi.py::PyPIRunner.has_credentials","file":"deploynator/_pypi.py","line":33,"message":"method PyPIRunner.has_credentials is not documented"}
 {"code":"DOC001","uid":"deploynator/_pypi.py::PyPIRunner.clean","file":"deploynator/_pypi.py","line":90,"message":"method PyPIRunner.clean is not documented"}
 {"code":"DOC001","uid":"deploynator/_pypi.py::PyPIRunner.run","file":"deploynator/_pypi.py","line":107,"message":"method PyPIRunner.run is not documented"}
+{"code":"DOC001","uid":"deploynator/_readme.py","file":"deploynator/_readme.py","line":1,"message":"module deploynator/_readme.py is not documented"}
 {"code":"DOC001","uid":"deploynator/_runner.py","file":"deploynator/_runner.py","line":1,"message":"module deploynator/_runner.py is not documented"}
 {"code":"DOC001","uid":"deploynator/_runner.py::TestRunner","file":"deploynator/_runner.py","line":11,"message":"class TestRunner is not documented"}
 {"code":"DOC001","uid":"deploynator/_runner.py::TestRunner.__init__","file":"deploynator/_runner.py","line":12,"message":"constructor TestRunner.__init__ is not documented"}

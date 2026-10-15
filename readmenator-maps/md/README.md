@@ -214,9 +214,13 @@ See [CHANGELOG.md](CHANGELOG.md) for release history.
 
 AGPL-3.0
 
+<!-- deploynator-footer -->
+
 ---
 
 Deployed with [deploynator](https://github.com/grisuno/deploynator)
+
+<!-- /deploynator-footer -->
 
 <!-- readmenator-kb-link -->
 ## Knowledge Base

@@ -4,8 +4,8 @@
 
 These files have the most connections. Changes here have high blast radius.
 
-- `deploynator/_config.py` (score: 50.60, imported by 25 files)
-- `deploynator/_deploy.py` (score: 33.90, imported by 6 files)
+- `deploynator/_config.py` (score: 54.60, imported by 27 files)
+- `deploynator/_deploy.py` (score: 35.90, imported by 6 files)
 - `deploynator/_models.py` (score: 30.70, imported by 14 files)
 - `deploynator/_toml.py` (score: 22.40, imported by 10 files)
 - `deploynator/_app.py` (score: 17.20, imported by 1 files)
@@ -17,21 +17,21 @@ These files have the most connections. Changes here have high blast radius.
 
 Editing these files can break the listed number of dependents. Run their tests after any change.
 
-- `deploynator/_config.py` -- 25 direct, 27 total dependents
+- `deploynator/_config.py` -- 27 direct, 29 total dependents
 - `deploynator/_models.py` -- 14 direct, 20 total dependents
 - `deploynator/_toml.py` -- 10 direct, 19 total dependents
 - `deploynator/_changelog.py` -- 2 direct, 15 total dependents
 - `deploynator/_docs.py` -- 3 direct, 15 total dependents
+- `deploynator/_readme.py` -- 2 direct, 15 total dependents
 - `deploynator/_runner.py` -- 2 direct, 15 total dependents
 - `deploynator/_semver.py` -- 5 direct, 15 total dependents
 - `deploynator/_git.py` -- 2 direct, 14 total dependents
 - `deploynator/_platforms.py` -- 2 direct, 14 total dependents
-- `deploynator/_pypi.py` -- 2 direct, 14 total dependents
 
 ## Hotspots (complexity + centrality)
 
 - `deploynator/_app.py` -- complexity: 0.7, centrality: 0.4, combined: 0.5
-- `deploynator/_config.py` -- complexity: 0.1, centrality: 0.7, combined: 0.5
+- `deploynator/_config.py` -- complexity: 0.1, centrality: 0.8, combined: 0.5
 - `deploynator/_deploy.py` -- complexity: 0.4, centrality: 0.5, combined: 0.5
 - `deploynator/_models.py` -- complexity: 0.6, centrality: 0.3, combined: 0.4
 - `deploynator/_platforms.py` -- complexity: 0.8, centrality: 0.1, combined: 0.4

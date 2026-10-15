@@ -4,11 +4,11 @@ Log each answered question here so the wiki compounds. Format: question, answer,
 
 ## Suggested
 
-### Q: What does _config.py depend on, and what depends on it? (25 connections)
+### Q: What does _config.py depend on, and what depends on it? (27 connections)
 
 - Status: unanswered
 
-### Q: What does _deploy.py depend on, and what depends on it? (16 connections)
+### Q: What does _deploy.py depend on, and what depends on it? (17 connections)
 
 - Status: unanswered
 
@@ -16,7 +16,7 @@ Log each answered question here so the wiki compounds. Format: question, answer,
 
 - Status: unanswered
 
-### Q: How are the 11 files in 'deploynator: _mcp_server' related to each other?
+### Q: How are the 11 files in 'deploynator: _platforms' related to each other?
 
 - Status: unanswered
 

@@ -43,7 +43,7 @@ Imported by: `deploynator/_deploy.py`, `tests/test_changelog.py`
 - `ChangelogGenerator.format_for_release` (method) `deploynator/_changelog.py:110` `def format_for_release(self, changelog_content, max_chars)`
 
 ## deploynator/_config.py
-Imported by: `app.py`, `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deploy.py`, `tests/test_init.py`, `tests/test_install_example.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_semver.py`
+Imported by: `app.py`, `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deploy.py`, `tests/test_init.py`, `tests/test_install_example.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_readme_footer.py`, `tests/test_runner.py`, `tests/test_semver.py`
 - `Config.create` (method) `deploynator/_config.py:79` `def create(overrides)`
 - `Config.resolve_path` (method) `deploynator/_config.py:85` `def resolve_path(self)`
 - `Config.gh_authd` (method) `deploynator/_config.py:91` `def gh_authd(self)`
@@ -51,17 +51,17 @@ Imported by: `app.py`, `deploynator/__main__.py`, `deploynator/_app.py`, `deploy
 - `Config.bb_authd` (method) `deploynator/_config.py:99` `def bb_authd(self)`
 
 ## deploynator/_deploy.py
-Depends on: `deploynator/_changelog.py`, `deploynator/_config.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`
+Depends on: `deploynator/_changelog.py`, `deploynator/_config.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`
 Imported by: `deploynator/_app.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`
 - `ProjectDiscovery.__init__` (method) `deploynator/_deploy.py:32` `def __init__(self, config)`
 - `ProjectDiscovery.discover` (method) `deploynator/_deploy.py:35` `def discover(self, search_path)`
 - `ProjectDiscovery.find_by_name` (method) `deploynator/_deploy.py:56` `def find_by_name(self, name, search_path)`
 - `DeployOrchestrator.__init__` (method) `deploynator/_deploy.py:77` `def __init__(self, config)`
 - `DeployOrchestrator.deploy` (method) `deploynator/_deploy.py:97` `def deploy(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...`
-- `DeployOrchestrator.generate_workflows` (method) `deploynator/_deploy.py:412` `def generate_workflows(self, project, output_dir)`
-- `DeployOrchestrator.install_dependencies` (method) `deploynator/_deploy.py:480` `def install_dependencies(self, project)`
-- `DeployOrchestrator.integrate_readmenator` (method) `deploynator/_deploy.py:490` `def integrate_readmenator(self, project_path)`
-- `DeployOrchestrator.install_lazygit` (method) `deploynator/_deploy.py:524` `def install_lazygit(self)`
+- `DeployOrchestrator.generate_workflows` (method) `deploynator/_deploy.py:421` `def generate_workflows(self, project, output_dir)`
+- `DeployOrchestrator.install_dependencies` (method) `deploynator/_deploy.py:489` `def install_dependencies(self, project)`
+- `DeployOrchestrator.integrate_readmenator` (method) `deploynator/_deploy.py:499` `def integrate_readmenator(self, project_path)`
+- `DeployOrchestrator.install_lazygit` (method) `deploynator/_deploy.py:533` `def install_lazygit(self)`
 
 ## deploynator/_docs.py
 Depends on: `deploynator/_config.py`, `deploynator/_toml.py`
@@ -174,6 +174,13 @@ Imported by: `deploynator/_deploy.py`, `tests/test_pypi.py`
 - `PyPIRunner.save_pypirc` (method) `deploynator/_pypi.py:72` `def save_pypirc(self, token, path)` -- Guarda el token en ~/.pypirc (username __token__, modo 600).
 - `PyPIRunner.clean` (method) `deploynator/_pypi.py:90` `def clean(self, project_path, toml)`
 - `PyPIRunner.run` (method) `deploynator/_pypi.py:107` `def run(self, project_path, toml, version, token)`
+
+## deploynator/_readme.py
+Depends on: `deploynator/_config.py`
+Imported by: `deploynator/_deploy.py`, `tests/test_readme_footer.py`
+- `footer_block` (function) `deploynator/_readme.py:19` `def footer_block(config)` -- Return the anchored deploy footer block.
+- `ensure_deployed_footer` (function) `deploynator/_readme.py:49` `def ensure_deployed_footer(repo_path, config)` -- Append or refresh the deploy footer in the repository README.
+- `footer_line` (function) `deploynator/_readme.py:96` `def footer_line(config)` -- Return the plain deploy footer line.
 
 ## deploynator/_runner.py
 Depends on: `deploynator/_config.py`, `deploynator/_toml.py`
