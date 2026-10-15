@@ -1,0 +1,276 @@
+{
+ "schema_version": 1,
+ "format": "jsonl",
+ "meta": {
+  "modules": 18,
+  "entities": 289,
+  "languages": {
+   "py": 17,
+   "sh": 1
+  },
+  "kinds": {
+   "attribute": 99,
+   "class": 28,
+   "classmethod": 12,
+   "constant": 7,
+   "constructor": 14,
+   "enum": 2,
+   "function": 5,
+   "method": 98,
+   "module": 18,
+   "property": 4,
+   "staticmethod": 2
+  },
+  "truncated": false,
+  "skipped_files": 13,
+  "privacy_mode": false
+ },
+ "coverage": {
+  "overall": {
+   "documented": 4,
+   "total": 183,
+   "percent": 2.2
+  },
+  "by_kind": {
+   "class": {
+    "documented": 0,
+    "total": 28,
+    "percent": 0.0
+   },
+   "classmethod": {
+    "documented": 0,
+    "total": 12,
+    "percent": 0.0
+   },
+   "constructor": {
+    "documented": 0,
+    "total": 14,
+    "percent": 0.0
+   },
+   "enum": {
+    "documented": 0,
+    "total": 2,
+    "percent": 0.0
+   },
+   "function": {
+    "documented": 0,
+    "total": 5,
+    "percent": 0.0
+   },
+   "method": {
+    "documented": 2,
+    "total": 98,
+    "percent": 2.0
+   },
+   "module": {
+    "documented": 2,
+    "total": 18,
+    "percent": 11.1
+   },
+   "property": {
+    "documented": 0,
+    "total": 4,
+    "percent": 0.0
+   },
+   "staticmethod": {
+    "documented": 0,
+    "total": 2,
+    "percent": 0.0
+   }
+  },
+  "by_module": {
+   "app.py": {
+    "documented": 1,
+    "total": 1,
+    "percent": 100.0
+   },
+   "deploynator/__init__.py": {
+    "documented": 0,
+    "total": 1,
+    "percent": 0.0
+   },
+   "deploynator/__main__.py": {
+    "documented": 0,
+    "total": 4,
+    "percent": 0.0
+   },
+   "deploynator/_app.py": {
+    "documented": 0,
+    "total": 15,
+    "percent": 0.0
+   },
+   "deploynator/_changelog.py": {
+    "documented": 0,
+    "total": 8,
+    "percent": 0.0
+   },
+   "deploynator/_config.py": {
+    "documented": 0,
+    "total": 7,
+    "percent": 0.0
+   },
+   "deploynator/_deploy.py": {
+    "documented": 0,
+    "total": 12,
+    "percent": 0.0
+   },
+   "deploynator/_docs.py": {
+    "documented": 0,
+    "total": 4,
+    "percent": 0.0
+   },
+   "deploynator/_git.py": {
+    "documented": 0,
+    "total": 22,
+    "percent": 0.0
+   },
+   "deploynator/_mcp_server.py": {
+    "documented": 1,
+    "total": 21,
+    "percent": 4.8
+   },
+   "deploynator/_models.py": {
+    "documented": 0,
+    "total": 27,
+    "percent": 0.0
+   },
+   "deploynator/_platforms.py": {
+    "documented": 0,
+    "total": 34,
+    "percent": 0.0
+   },
+   "deploynator/_pypi.py": {
+    "documented": 2,
+    "total": 9,
+    "percent": 22.2
+   },
+   "deploynator/_runner.py": {
+    "documented": 0,
+    "total": 4,
+    "percent": 0.0
+   },
+   "deploynator/_semver.py": {
+    "documented": 0,
+    "total": 9,
+    "percent": 0.0
+   },
+   "deploynator/_toml.py": {
+    "documented": 0,
+    "total": 3,
+    "percent": 0.0
+   },
+   "install.sh": {
+    "documented": 0,
+    "total": 1,
+    "percent": 0.0
+   },
+   "setup.py": {
+    "documented": 0,
+    "total": 1,
+    "percent": 0.0
+   }
+  }
+ },
+ "modules": [
+  {
+   "uid": "app.py",
+   "path": "modules/app.py.jsonl",
+   "entities": 1
+  },
+  {
+   "uid": "deploynator/__init__.py",
+   "path": "modules/deploynator.__init__.py.jsonl",
+   "entities": 1
+  },
+  {
+   "uid": "deploynator/__main__.py",
+   "path": "modules/deploynator.__main__.py.jsonl",
+   "entities": 5
+  },
+  {
+   "uid": "deploynator/_app.py",
+   "path": "modules/deploynator._app.py.jsonl",
+   "entities": 15
+  },
+  {
+   "uid": "deploynator/_changelog.py",
+   "path": "modules/deploynator._changelog.py.jsonl",
+   "entities": 8
+  },
+  {
+   "uid": "deploynator/_config.py",
+   "path": "modules/deploynator._config.py.jsonl",
+   "entities": 40
+  },
+  {
+   "uid": "deploynator/_deploy.py",
+   "path": "modules/deploynator._deploy.py.jsonl",
+   "entities": 12
+  },
+  {
+   "uid": "deploynator/_docs.py",
+   "path": "modules/deploynator._docs.py.jsonl",
+   "entities": 4
+  },
+  {
+   "uid": "deploynator/_git.py",
+   "path": "modules/deploynator._git.py.jsonl",
+   "entities": 22
+  },
+  {
+   "uid": "deploynator/_mcp_server.py",
+   "path": "modules/deploynator._mcp_server.py.jsonl",
+   "entities": 24
+  },
+  {
+   "uid": "deploynator/_models.py",
+   "path": "modules/deploynator._models.py.jsonl",
+   "entities": 79
+  },
+  {
+   "uid": "deploynator/_platforms.py",
+   "path": "modules/deploynator._platforms.py.jsonl",
+   "entities": 34
+  },
+  {
+   "uid": "deploynator/_pypi.py",
+   "path": "modules/deploynator._pypi.py.jsonl",
+   "entities": 9
+  },
+  {
+   "uid": "deploynator/_runner.py",
+   "path": "modules/deploynator._runner.py.jsonl",
+   "entities": 4
+  },
+  {
+   "uid": "deploynator/_semver.py",
+   "path": "modules/deploynator._semver.py.jsonl",
+   "entities": 9
+  },
+  {
+   "uid": "deploynator/_toml.py",
+   "path": "modules/deploynator._toml.py.jsonl",
+   "entities": 20
+  },
+  {
+   "uid": "install.sh",
+   "path": "modules/install.sh.jsonl",
+   "entities": 1
+  },
+  {
+   "uid": "setup.py",
+   "path": "modules/setup.py.jsonl",
+   "entities": 1
+  }
+ ],
+ "warnings": {
+  "path": "warnings.jsonl",
+  "total": 179
+ },
+ "usage": [
+  "grep -h '\"name\":\"<Name>\"' readmenator-apidocs/api/modules/*.jsonl",
+  "grep -h '\"qualname\":\"<Owner.method>\"' readmenator-apidocs/api/modules/*.jsonl",
+  "cat readmenator-apidocs/api/modules/<module-slug>.jsonl",
+  "grep -h '\"code\":\"DOC001\"' readmenator-apidocs/api/warnings.jsonl"
+ ]
+}

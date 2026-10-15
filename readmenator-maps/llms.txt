@@ -1,0 +1,60 @@
+# deploynator
+
+> Static analysis knowledge base for deploynator: 5 communities, 31 files, 305 imports, 2 languages, 381 symbols.
+
+Generated offline by readmenator (zero LLM tokens). Start with the wiki index for the big picture, then the agent INDEX for file lookup.
+
+## Wiki
+
+- [readmenator-wiki/index.md](md/readmenator-wiki/index.md): The codebase centres on config.py, deploy.py, models.py. Architecturally it is 4 layers, dominant utility (15 files) across 6 import-based communities....
+- [readmenator-wiki/REPORT.md](md/readmenator-wiki/REPORT.md): Project: deploynator | 2026-10-14 | offline, deterministic
+- [readmenator-wiki/community_0_deploynator_changelog.md](md/readmenator-wiki/community_0_deploynator_changelog.md): Community 0 | 6 files | cohesion 0.22
+- [readmenator-wiki/community_1_deploynator_toml.md](md/readmenator-wiki/community_1_deploynator_toml.md): Community 1 | 6 files | cohesion 0.36
+- [readmenator-wiki/community_2_deploynator_models.md](md/readmenator-wiki/community_2_deploynator_models.md): Community 2 | 6 files | cohesion 0.31
+- [readmenator-wiki/community_3_deploynator_platforms.md](md/readmenator-wiki/community_3_deploynator_platforms.md): Community 3 | 5 files | cohesion 0.22
+- [readmenator-wiki/community_4_deploynator_mcp_server.md](md/readmenator-wiki/community_4_deploynator_mcp_server.md): Community 4 | 4 files | cohesion 0.50
+- [readmenator-wiki/community_5_orphans.md](md/readmenator-wiki/community_5_orphans.md): Community 5 | 4 files | cohesion 0.00
+- [readmenator-wiki/concepts.md](md/readmenator-wiki/concepts.md): Second-brain semantic layer: nouns map atomically to file sets (EXTRACTED); verbs aggregate structural edges (INFERRED).
+- [readmenator-wiki/queries.md](md/readmenator-wiki/queries.md): Log each answered question here so the wiki compounds. Format: question, answer, cited files.
+
+## GraphRAG
+
+- [readmenator-graphrag/REPORTS.md](md/readmenator-graphrag/REPORTS.md): Entities: 487 | Relationships: 1334 | Communities: 6 | Themes: 2 | Text units: 390
+
+## Agent Docs
+
+- [readmenator-agent/INDEX.md](md/readmenator-agent/INDEX.md)
+- [readmenator-agent/GOTCHAS.md](md/readmenator-agent/GOTCHAS.md): These files have the most connections. Changes here have high blast radius.
+- [readmenator-agent/API.md](md/readmenator-agent/API.md): Depends on: deploynator/init.py, deploynator/config.py, deploynator/mcpserver.py, deploynator/models.py
+- [readmenator-agent/ARCHITECTURE.md](md/readmenator-agent/ARCHITECTURE.md): deploynator/init.py -> deploynator/app.py
+- [readmenator-agent/CONCEPTS.md](md/readmenator-agent/CONCEPTS.md): Nouns map atomically to file sets (EXTRACTED); verbs aggregate structural edges (INFERRED).
+- [readmenator-agent/KB_deploynator.md](md/readmenator-agent/KB_deploynator.md): Depends on: deploynator/app.py
+- [readmenator-agent/KB_root.md](md/readmenator-agent/KB_root.md): Doc: Autor: Gris Iscomeback Correo electrónico: grisiscomeback[at]gmail[dot]com Fecha de creación...
+- [readmenator-agent/KB_tests.md](md/readmenator-agent/KB_tests.md): Doc: BDD-style tests for deploynator using behavior-driven patterns.
+- [readmenator-agent/MEMORY.md](md/readmenator-agent/MEMORY.md): Generated from 31 files at commit 720d9e20fe88. Read this first, then readmenator-wiki/index.md, then readmenator . ask "<question>" for anything specific.
+- [readmenator-agent/SECURITY.md](md/readmenator-agent/SECURITY.md)
+- [readmenator-agent/SYMBOLS.md](md/readmenator-agent/SYMBOLS.md)
+- [readmenator-agent/recipes/add-function.md](md/readmenator-agent/recipes/add-function.md): Find the target file by purpose: grep -in '<topic>' readmenator-agent/INDEX.md
+- [readmenator-agent/recipes/change-impact.md](md/readmenator-agent/recipes/change-impact.md): Riskiest file: deploynator/config.py (24 dependents)
+- [readmenator-agent/recipes/fix-cycle.md](md/readmenator-agent/recipes/fix-cycle.md): Read cycles: grep -A5 'Dependency Cycles' readmenator-agent/GOTCHAS.md
+- [readmenator-agent/recipes/fix-security.md](md/readmenator-agent/recipes/fix-security.md): Read findings: grep -n '<file>' readmenator-agent/SECURITY.md
+- [readmenator-agent/recipes/reduce-complexity.md](md/readmenator-agent/recipes/reduce-complexity.md): Target hotspot: deploynator/app.py
+
+## Project Docs
+
+- [KNOWLEDGE_BASE.md](md/KNOWLEDGE_BASE.md): Start here: Statistics Dashboard for scope, God Nodes for blast radius, Architecture Reference for per-file API. Agents: prefer readmenator-agent/INDEX.md +...
+- [README.md](md/README.md): Token-free, offline, multi-platform deployer for GitHub, GitLab, and Bitbucket.
+- [SECURITY.md](md/SECURITY.md): Use this section to tell people about which versions of your project are
+- [SKILL.md](md/SKILL.md): Sucesor de DEPLOY.sh. Un comando despliega con semver correcto: corre tests (salvo --no-test), regenera docs con readmenator (salvo --no-docs), bump, commit...
+- [readmenator-diagrams/deploynator__changelog.md](md/readmenator-diagrams/deploynator__changelog.md): deploynator: changelog groups 6 files (py) around Config, create, resolvepath, ghauthd, glabauthd. promptforcredentials: Pide el token PyPI por input oculto...
+- [readmenator-diagrams/deploynator__models.md](md/readmenator-diagrams/deploynator__models.md): deploynator: models groups 6 files (py) around Platform, fromstring, label, cliname, authenvvar.
+- [readmenator-diagrams/deploynator__toml.md](md/readmenator-diagrams/deploynator__toml.md): deploynator: toml groups 6 files (py) around TomlConfig, postinit, clamptimeout, loadtomlconfig, TestRunner.
+- [readmenator-diagrams/overview.md](md/readmenator-diagrams/overview.md): Static architecture map of 31 files (py, sh) in 5 components: deploynator: changelog, deploynator: toml, deploynator: models, deploynator: platforms...
+
+## Optional
+
+- [Runtime Architecture](architecture.html): Components, services, storage, and boundaries across layers. (interactive HTML)
+- [Data Flow](dataflow.html): Movement of data from sources through transforms to stores. (interactive HTML)
+- [Change Lifecycle](lifecycle.html): States, transitions, waits, and retry paths of change. (interactive HTML)
+- [Request Sequence](sequence.html): Ordered interaction between top participants over time. (interactive HTML)
+- [Delivery Workflow](workflow.html): Delivery path across lanes from entry to terminal outcomes. (interactive HTML)

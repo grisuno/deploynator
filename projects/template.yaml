@@ -1,0 +1,18 @@
+version: 1.0
+name: my-project
+description: "Project managed by deploynator"
+repo_url: "https://github.com/username/my-project"
+path: "deploynator_repos/my-project"
+platforms:
+  github:
+    repo: "username/my-project"
+    enabled: true
+  gitlab:
+    repo: "group/my-project"
+    enabled: false
+  bitbucket:
+    repo: "workspace/my-project"
+    enabled: false
+version:
+  file: version.json
+  file_type: json

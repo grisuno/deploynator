@@ -1,0 +1,111 @@
+# Architecture
+
+## Internal Dependencies
+
+- `deploynator/__init__.py` -> `deploynator/_app.py`
+- `deploynator/__main__.py` -> `deploynator/__init__.py`
+- `deploynator/__main__.py` -> `deploynator/_config.py`
+- `deploynator/__main__.py` -> `deploynator/_mcp_server.py`
+- `deploynator/__main__.py` -> `deploynator/_models.py`
+- `deploynator/_app.py` -> `deploynator/_config.py`
+- `deploynator/_app.py` -> `deploynator/_deploy.py`
+- `deploynator/_app.py` -> `deploynator/_git.py`
+- `deploynator/_app.py` -> `deploynator/_models.py`
+- `deploynator/_app.py` -> `deploynator/_platforms.py`
+- `deploynator/_app.py` -> `deploynator/_toml.py`
+- `deploynator/_changelog.py` -> `deploynator/_config.py`
+- `deploynator/_changelog.py` -> `deploynator/_models.py`
+- `deploynator/_deploy.py` -> `deploynator/_changelog.py`
+- `deploynator/_deploy.py` -> `deploynator/_config.py`
+- `deploynator/_deploy.py` -> `deploynator/_docs.py`
+- `deploynator/_deploy.py` -> `deploynator/_git.py`
+- `deploynator/_deploy.py` -> `deploynator/_models.py`
+- `deploynator/_deploy.py` -> `deploynator/_platforms.py`
+- `deploynator/_deploy.py` -> `deploynator/_pypi.py`
+- `deploynator/_deploy.py` -> `deploynator/_runner.py`
+- `deploynator/_deploy.py` -> `deploynator/_semver.py`
+- `deploynator/_deploy.py` -> `deploynator/_toml.py`
+- `deploynator/_docs.py` -> `deploynator/_config.py`
+- `deploynator/_docs.py` -> `deploynator/_toml.py`
+- `deploynator/_git.py` -> `deploynator/_config.py`
+- `deploynator/_mcp_server.py` -> `deploynator/__init__.py`
+- `deploynator/_mcp_server.py` -> `deploynator/_config.py`
+- `deploynator/_platforms.py` -> `deploynator/_config.py`
+- `deploynator/_platforms.py` -> `deploynator/_models.py`
+- `deploynator/_pypi.py` -> `deploynator/_config.py`
+- `deploynator/_pypi.py` -> `deploynator/_toml.py`
+- `deploynator/_runner.py` -> `deploynator/_config.py`
+- `deploynator/_runner.py` -> `deploynator/_toml.py`
+- `deploynator/_semver.py` -> `deploynator/_config.py`
+- `deploynator/_semver.py` -> `deploynator/_models.py`
+- `deploynator/_toml.py` -> `deploynator/_config.py`
+- `tests/bdd_test_deploy.py` -> `deploynator/_config.py`
+- `tests/bdd_test_deploy.py` -> `deploynator/_deploy.py`
+- `tests/bdd_test_deploy.py` -> `deploynator/_docs.py`
+- `tests/bdd_test_deploy.py` -> `deploynator/_models.py`
+- `tests/bdd_test_deploy.py` -> `deploynator/_semver.py`
+- `tests/bdd_test_deploy.py` -> `deploynator/_toml.py`
+- `tests/test_changelog.py` -> `deploynator/_changelog.py`
+- `tests/test_changelog.py` -> `deploynator/_config.py`
+- `tests/test_changelog.py` -> `deploynator/_models.py`
+- `tests/test_cli_mcp.py` -> `deploynator/__init__.py`
+- `tests/test_cli_mcp.py` -> `deploynator/__main__.py`
+- `tests/test_cli_mcp.py` -> `deploynator/_config.py`
+- `tests/test_cli_mcp.py` -> `deploynator/_mcp_server.py`
+- `tests/test_config.py` -> `deploynator/_config.py`
+- `tests/test_deploy.py` -> `deploynator/_config.py`
+- `tests/test_deploy.py` -> `deploynator/_deploy.py`
+- `tests/test_deploy.py` -> `deploynator/_models.py`
+- `tests/test_models.py` -> `deploynator/_models.py`
+- `tests/test_path_deploy.py` -> `deploynator/__init__.py`
+- `tests/test_path_deploy.py` -> `deploynator/_config.py`
+- `tests/test_path_deploy.py` -> `deploynator/_deploy.py`
+- `tests/test_path_deploy.py` -> `deploynator/_models.py`
+- `tests/test_path_deploy.py` -> `deploynator/_semver.py`
+- `tests/test_pipeline.py` -> `deploynator/_config.py`
+- `tests/test_pipeline.py` -> `deploynator/_deploy.py`
+- `tests/test_pipeline.py` -> `deploynator/_models.py`
+- `tests/test_pipeline.py` -> `deploynator/_semver.py`
+- `tests/test_pypi.py` -> `deploynator/_config.py`
+- `tests/test_pypi.py` -> `deploynator/_deploy.py`
+- `tests/test_pypi.py` -> `deploynator/_models.py`
+- `tests/test_pypi.py` -> `deploynator/_pypi.py`
+- `tests/test_pypi.py` -> `deploynator/_toml.py`
+- `tests/test_runner.py` -> `deploynator/_config.py`
+- `tests/test_runner.py` -> `deploynator/_docs.py`
+- `tests/test_runner.py` -> `deploynator/_runner.py`
+- `tests/test_runner.py` -> `deploynator/_toml.py`
+- `tests/test_semver.py` -> `deploynator/_config.py`
+- `tests/test_semver.py` -> `deploynator/_models.py`
+- `tests/test_semver.py` -> `deploynator/_semver.py`
+- `tests/test_toml.py` -> `deploynator/_toml.py`
+
+## External Imports
+
+- `deploynator/__main__.py` -> __future__, argparse, sys, typing
+- `deploynator/_app.py` -> __future__, json, os, re, subprocess, sys, typing
+- `deploynator/_changelog.py` -> __future__, collections, os, subprocess, typing
+- `deploynator/_config.py` -> __future__, dataclasses, os
+- `deploynator/_deploy.py` -> __future__, os, readmenator, shutil, subprocess, tempfile, typing, yaml
+- `deploynator/_docs.py` -> __future__, shlex, subprocess
+- `deploynator/_git.py` -> __future__, os, subprocess, typing
+- `deploynator/_mcp_server.py` -> __future__, json, logging, sys, typing
+- `deploynator/_models.py` -> __future__, dataclasses, datetime, enum, re, typing
+- `deploynator/_platforms.py` -> __future__, abc, json, os, subprocess, tempfile, typing
+- `deploynator/_pypi.py` -> __future__, configparser, getpass, os, shutil, subprocess, sys, tomllib
+- `deploynator/_runner.py` -> __future__, os, shlex, subprocess
+- `deploynator/_semver.py` -> __future__, json, os, re, subprocess, typing
+- `deploynator/_toml.py` -> __future__, dataclasses, os, tomllib
+- `setup.py` -> setuptools
+- `tests/bdd_test_deploy.py` -> json, os, pytest, subprocess, tempfile
+- `tests/test_changelog.py` -> pytest
+- `tests/test_cli_mcp.py` -> pytest
+- `tests/test_config.py` -> pytest, re
+- `tests/test_deploy.py` -> json, os, pytest, tempfile
+- `tests/test_models.py` -> datetime, pytest
+- `tests/test_path_deploy.py` -> json, os, subprocess, tempfile
+- `tests/test_pipeline.py` -> json, os, pytest, subprocess, tempfile
+- `tests/test_pypi.py` -> configparser, inspect, os, pytest, subprocess, sys, tempfile
+- `tests/test_runner.py` -> inspect, os, pytest, tempfile
+- `tests/test_semver.py` -> json, os, pytest, tempfile
+- `tests/test_toml.py` -> os, pytest, tempfile

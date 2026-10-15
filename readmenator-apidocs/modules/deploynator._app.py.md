@@ -1,0 +1,386 @@
+# `deploynator._app`
+
+> Source: [deploynator/_app.py:1](../../deploynator/_app.py#L1) | language `py` | coverage 0.0% | [API index](../index.md)
+
+## Contents
+
+- **Classes:** [`DeploynatorApp`](#deploynatorapp)
+
+## Call Graph
+
+Solid arrows stay in this module, dashed arrows leave it.
+
+```mermaid
+flowchart LR
+    n_deploynator__app_py__DeploynatorApp___init__(["DeploynatorApp.__init__"])
+    n_deploynator__config_py__Config_create["_config.Config.create"]
+    n_deploynator__deploy_py__DeployOrchestrator___init__["_deploy.DeployOrchestrator.__init__"]
+    n_deploynator__deploy_py__ProjectDiscovery___init__["_deploy.ProjectDiscovery.__init__"]
+    n_deploynator__app_py__DeploynatorApp_auth_status(["DeploynatorApp.auth_status"])
+    n_deploynator__models_py__Platform_from_string["_models.Platform.from_string"]
+    n_deploynator__platforms_py__PlatformFactory_create["_platforms.PlatformFactory.create"]
+    n_deploynator__app_py__DeploynatorApp_start_branch(["DeploynatorApp.start_branch"])
+    n_deploynator__git_py__GitOperations___init__["_git.GitOperations.__init__"]
+    n_deploynator__git_py__GitOperations_create_branch["_git.GitOperations.create_branch"]
+    n_deploynator__git_py__GitOperations_push["_git.GitOperations.push"]
+    n_deploynator__models_py__CommitType_from_string["_models.CommitType.from_string"]
+    n_deploynator__app_py__DeploynatorApp_commit(["DeploynatorApp.commit"])
+    n_deploynator__changelog_py__ChangelogGenerator_generate_from_messages["_changelog.ChangelogGenerator.generate_from_messages"]
+    n_deploynator__git_py__GitOperations_commit["_git.GitOperations.commit"]
+    n_deploynator__git_py__GitOperations_is_dirty["_git.GitOperations.is_dirty"]
+    n_deploynator__models_py__CommitMessage["_models.CommitMessage"]
+    n_deploynator__app_py__DeploynatorApp_release(["DeploynatorApp.release"])
+    n_deploynator__deploy_py__DeployOrchestrator_deploy["_deploy.DeployOrchestrator.deploy"]
+    n_deploynator__deploy_py__ProjectDiscovery_discover["_deploy.ProjectDiscovery.discover"]
+    n_deploynator__deploy_py__ProjectDiscovery_find_by_name["_deploy.ProjectDiscovery.find_by_name"]
+    n_deploynator__models_py__DeployResult["_models.DeployResult"]
+    n_deploynator__models_py__ProjectConfig["_models.ProjectConfig"]
+    n_deploynator__models_py__VersionConfig["_models.VersionConfig"]
+    n_deploynator__toml_py__load_toml_config["_toml.load_toml_config"]
+    n_deploynator__app_py__DeploynatorApp___init__ -.-> n_deploynator__config_py__Config_create
+    n_deploynator__app_py__DeploynatorApp___init__ -.-> n_deploynator__deploy_py__DeployOrchestrator___init__
+    n_deploynator__app_py__DeploynatorApp___init__ -.-> n_deploynator__deploy_py__ProjectDiscovery___init__
+    n_deploynator__app_py__DeploynatorApp_auth_status -.-> n_deploynator__models_py__Platform_from_string
+    n_deploynator__app_py__DeploynatorApp_auth_status -.-> n_deploynator__platforms_py__PlatformFactory_create
+    n_deploynator__app_py__DeploynatorApp_start_branch -.-> n_deploynator__git_py__GitOperations___init__
+    n_deploynator__app_py__DeploynatorApp_start_branch -.-> n_deploynator__git_py__GitOperations_create_branch
+    n_deploynator__app_py__DeploynatorApp_start_branch -.-> n_deploynator__git_py__GitOperations_push
+    n_deploynator__app_py__DeploynatorApp_start_branch -.-> n_deploynator__models_py__CommitType_from_string
+    n_deploynator__app_py__DeploynatorApp_commit -.-> n_deploynator__changelog_py__ChangelogGenerator_generate_from_messages
+    n_deploynator__app_py__DeploynatorApp_commit -.-> n_deploynator__git_py__GitOperations___init__
+    n_deploynator__app_py__DeploynatorApp_commit -.-> n_deploynator__git_py__GitOperations_commit
+    n_deploynator__app_py__DeploynatorApp_commit -.-> n_deploynator__git_py__GitOperations_is_dirty
+    n_deploynator__app_py__DeploynatorApp_commit -.-> n_deploynator__models_py__CommitMessage
+    n_deploynator__app_py__DeploynatorApp_commit -.-> n_deploynator__models_py__CommitType_from_string
+    n_deploynator__app_py__DeploynatorApp_release -.-> n_deploynator__deploy_py__DeployOrchestrator_deploy
+    n_deploynator__app_py__DeploynatorApp_release -.-> n_deploynator__deploy_py__ProjectDiscovery_discover
+    n_deploynator__app_py__DeploynatorApp_release -.-> n_deploynator__deploy_py__ProjectDiscovery_find_by_name
+    n_deploynator__app_py__DeploynatorApp_release -.-> n_deploynator__models_py__CommitType_from_string
+    n_deploynator__app_py__DeploynatorApp_release -.-> n_deploynator__models_py__DeployResult
+    n_deploynator__app_py__DeploynatorApp_release -.-> n_deploynator__models_py__Platform_from_string
+    n_deploynator__app_py__DeploynatorApp_release -.-> n_deploynator__models_py__ProjectConfig
+    n_deploynator__app_py__DeploynatorApp_release -.-> n_deploynator__models_py__VersionConfig
+    n_deploynator__app_py__DeploynatorApp_release -.-> n_deploynator__toml_py__load_toml_config
+```
+
+## Classes
+
+<a id="deploynatorapp"></a>
+
+### `DeploynatorApp`
+
+`class` | [deploynator/_app.py:20](../../deploynator/_app.py#L20)
+
+```python
+class DeploynatorApp
+```
+
+**Members**
+
+| Member | Kind | Summary |
+|---|---|---|
+| [`__init__`](#deploynatorapp-__init__) | constructor |  |
+| [`auth_login`](#deploynatorapp-auth_login) | method |  |
+| [`auth_status`](#deploynatorapp-auth_status) | method |  |
+| [`init_project`](#deploynatorapp-init_project) | method |  |
+| [`start_branch`](#deploynatorapp-start_branch) | method |  |
+| [`commit`](#deploynatorapp-commit) | method |  |
+| [`release`](#deploynatorapp-release) | method |  |
+| [`generate_docs`](#deploynatorapp-generate_docs) | method |  |
+| [`status`](#deploynatorapp-status) | method |  |
+| [`list_projects`](#deploynatorapp-list_projects) | method |  |
+| [`generate_ci`](#deploynatorapp-generate_ci) | method |  |
+| [`install_deps`](#deploynatorapp-install_deps) | method |  |
+| [`interactive_menu`](#deploynatorapp-interactive_menu) | method |  |
+
+<a id="deploynatorapp-__init__"></a>
+
+#### `DeploynatorApp.__init__`
+
+`constructor` | [deploynator/_app.py:21](../../deploynator/_app.py#L21)
+
+```python
+def __init__(self, config: Optional[Config] = None, workdir: str = '') -> None
+```
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `config` | `Optional[Config]` | `None` |  |
+| `workdir` | `str` | `''` |  |
+
+*Calls:* [`Config.create`](deploynator._config.py.md#config-create), [`DeployOrchestrator.__init__`](deploynator._deploy.py.md#deployorchestrator-__init__), [`ProjectDiscovery.__init__`](deploynator._deploy.py.md#projectdiscovery-__init__)
+
+*Called by:* [`main`](deploynator.__main__.py.md#main), [`main`](deploynator._mcp_server.py.md#main)
+
+<a id="deploynatorapp-auth_login"></a>
+
+#### `DeploynatorApp.auth_login`
+
+`method` | [deploynator/_app.py:31](../../deploynator/_app.py#L31)
+
+```python
+def auth_login(self, platforms: Optional[list[str]] = None) -> dict[str, bool]
+```
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `platforms` | `Optional[list[str]]` | `None` |  |
+
+**Returns:** `dict[str, bool]`
+
+*Called by:* [`main`](deploynator.__main__.py.md#main)
+
+<a id="deploynatorapp-auth_status"></a>
+
+#### `DeploynatorApp.auth_status`
+
+`method` | [deploynator/_app.py:45](../../deploynator/_app.py#L45)
+
+```python
+def auth_status(self) -> dict[str, bool]
+```
+
+**Returns:** `dict[str, bool]`
+
+*Calls:* [`Platform.from_string`](deploynator._models.py.md#platform-from_string), [`PlatformFactory.create`](deploynator._platforms.py.md#platformfactory-create)
+
+*Called by:* [`main`](deploynator.__main__.py.md#main)
+
+<a id="deploynatorapp-init_project"></a>
+
+#### `DeploynatorApp.init_project`
+
+`method` | [deploynator/_app.py:96](../../deploynator/_app.py#L96)
+
+```python
+def init_project(self, project_path: str = '', name: str = '') -> str
+```
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `project_path` | `str` | `''` |  |
+| `name` | `str` | `''` |  |
+
+**Returns:** `str`
+
+*Called by:* [`main`](deploynator.__main__.py.md#main)
+
+<a id="deploynatorapp-start_branch"></a>
+
+#### `DeploynatorApp.start_branch`
+
+`method` | [deploynator/_app.py:131](../../deploynator/_app.py#L131)
+
+```python
+def start_branch(self, commit_type: str, description: str, project_path: str = '', project_name: str = '', remote: bool = False) -> str
+```
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `commit_type` | `str` |  |  |
+| `description` | `str` |  |  |
+| `project_path` | `str` | `''` |  |
+| `project_name` | `str` | `''` |  |
+| `remote` | `bool` | `False` |  |
+
+**Returns:** `str`
+
+*Calls:* [`GitOperations.__init__`](deploynator._git.py.md#gitoperations-__init__), [`GitOperations.create_branch`](deploynator._git.py.md#gitoperations-create_branch), [`GitOperations.push`](deploynator._git.py.md#gitoperations-push), [`CommitType.from_string`](deploynator._models.py.md#committype-from_string)
+
+*Called by:* [`main`](deploynator.__main__.py.md#main)
+
+<a id="deploynatorapp-commit"></a>
+
+#### `DeploynatorApp.commit`
+
+`method` | [deploynator/_app.py:189](../../deploynator/_app.py#L189)
+
+```python
+def commit(self, commit_type: str, subject: str, scope: str = '', body: str = '', project_path: str = '', project_name: str = '', dry_run: bool = False) -> str
+```
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `commit_type` | `str` |  |  |
+| `subject` | `str` |  |  |
+| `scope` | `str` | `''` |  |
+| `body` | `str` | `''` |  |
+| `project_path` | `str` | `''` |  |
+| `project_name` | `str` | `''` |  |
+| `dry_run` | `bool` | `False` |  |
+
+**Returns:** `str`
+
+*Calls:* [`ChangelogGenerator.generate_from_messages`](deploynator._changelog.py.md#changeloggenerator-generate_from_messages), [`GitOperations.__init__`](deploynator._git.py.md#gitoperations-__init__), [`GitOperations.commit`](deploynator._git.py.md#gitoperations-commit), [`GitOperations.is_dirty`](deploynator._git.py.md#gitoperations-is_dirty), [`CommitMessage`](deploynator._models.py.md#commitmessage), [`CommitType.from_string`](deploynator._models.py.md#committype-from_string)
+
+*Called by:* [`main`](deploynator.__main__.py.md#main)
+
+<a id="deploynatorapp-release"></a>
+
+#### `DeploynatorApp.release`
+
+`method` | [deploynator/_app.py:229](../../deploynator/_app.py#L229)
+
+```python
+def release(self, commit_type: str = 'release', subject: str = '', scope: str = '', body: str = '', project_name: str = '', bump: str = '', dry_run: bool = False, platforms: list[str] | None = None, all_projects: bool = False, no_test: bool = False, no_docs: bool = False, no_pypi: bool = False) -> list[DeployResult]
+```
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `commit_type` | `str` | `'release'` |  |
+| `subject` | `str` | `''` |  |
+| `scope` | `str` | `''` |  |
+| `body` | `str` | `''` |  |
+| `project_name` | `str` | `''` |  |
+| `bump` | `str` | `''` |  |
+| `dry_run` | `bool` | `False` |  |
+| `platforms` | `list[str] \| None` | `None` |  |
+| `all_projects` | `bool` | `False` |  |
+| `no_test` | `bool` | `False` |  |
+| `no_docs` | `bool` | `False` |  |
+| `no_pypi` | `bool` | `False` |  |
+
+**Returns:** `list[DeployResult]`
+
+*Calls:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy), [`ProjectDiscovery.discover`](deploynator._deploy.py.md#projectdiscovery-discover), [`ProjectDiscovery.find_by_name`](deploynator._deploy.py.md#projectdiscovery-find_by_name), [`CommitType.from_string`](deploynator._models.py.md#committype-from_string), [`DeployResult`](deploynator._models.py.md#deployresult), [`Platform.from_string`](deploynator._models.py.md#platform-from_string), [`ProjectConfig`](deploynator._models.py.md#projectconfig), [`VersionConfig`](deploynator._models.py.md#versionconfig), [`load_toml_config`](deploynator._toml.py.md#load_toml_config)
+
+*Called by:* [`main`](deploynator.__main__.py.md#main)
+
+<a id="deploynatorapp-generate_docs"></a>
+
+#### `DeploynatorApp.generate_docs`
+
+`method` | [deploynator/_app.py:319](../../deploynator/_app.py#L319)
+
+```python
+def generate_docs(self, project_path: str = '', project_name: str = '') -> bool
+```
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `project_path` | `str` | `''` |  |
+| `project_name` | `str` | `''` |  |
+
+**Returns:** `bool`
+
+*Calls:* [`DeployOrchestrator.integrate_readmenator`](deploynator._deploy.py.md#deployorchestrator-integrate_readmenator)
+
+*Called by:* [`main`](deploynator.__main__.py.md#main)
+
+<a id="deploynatorapp-status"></a>
+
+#### `DeploynatorApp.status`
+
+`method` | [deploynator/_app.py:325](../../deploynator/_app.py#L325)
+
+```python
+def status(self, project_path: str = '', project_name: str = '') -> dict
+```
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `project_path` | `str` | `''` |  |
+| `project_name` | `str` | `''` |  |
+
+**Returns:** `dict`
+
+*Calls:* [`ProjectDiscovery.discover`](deploynator._deploy.py.md#projectdiscovery-discover), [`GitOperations.__init__`](deploynator._git.py.md#gitoperations-__init__), [`GitOperations.current_branch`](deploynator._git.py.md#gitoperations-current_branch), [`GitOperations.has_remote`](deploynator._git.py.md#gitoperations-has_remote), [`GitOperations.is_dirty`](deploynator._git.py.md#gitoperations-is_dirty)
+
+*Called by:* [`main`](deploynator.__main__.py.md#main)
+
+<a id="deploynatorapp-list_projects"></a>
+
+#### `DeploynatorApp.list_projects`
+
+`method` | [deploynator/_app.py:345](../../deploynator/_app.py#L345)
+
+```python
+def list_projects(self, search_path: str = '') -> list[ProjectConfig]
+```
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `search_path` | `str` | `''` |  |
+
+**Returns:** `list[ProjectConfig]`
+
+*Calls:* [`ProjectDiscovery.discover`](deploynator._deploy.py.md#projectdiscovery-discover)
+
+*Called by:* [`main`](deploynator.__main__.py.md#main)
+
+<a id="deploynatorapp-generate_ci"></a>
+
+#### `DeploynatorApp.generate_ci`
+
+`method` | [deploynator/_app.py:350](../../deploynator/_app.py#L350)
+
+```python
+def generate_ci(self, project_name: str = '', all_projects: bool = False) -> list[str]
+```
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `project_name` | `str` | `''` |  |
+| `all_projects` | `bool` | `False` |  |
+
+**Returns:** `list[str]`
+
+*Calls:* [`DeployOrchestrator.generate_workflows`](deploynator._deploy.py.md#deployorchestrator-generate_workflows), [`ProjectDiscovery.discover`](deploynator._deploy.py.md#projectdiscovery-discover), [`ProjectDiscovery.find_by_name`](deploynator._deploy.py.md#projectdiscovery-find_by_name)
+
+*Called by:* [`main`](deploynator.__main__.py.md#main)
+
+<a id="deploynatorapp-install_deps"></a>
+
+#### `DeploynatorApp.install_deps`
+
+`method` | [deploynator/_app.py:366](../../deploynator/_app.py#L366)
+
+```python
+def install_deps(self, project_name: str = '') -> dict[str, bool]
+```
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `project_name` | `str` | `''` |  |
+
+**Returns:** `dict[str, bool]`
+
+*Calls:* [`DeployOrchestrator.install_dependencies`](deploynator._deploy.py.md#deployorchestrator-install_dependencies), [`ProjectDiscovery.discover`](deploynator._deploy.py.md#projectdiscovery-discover), [`ProjectDiscovery.find_by_name`](deploynator._deploy.py.md#projectdiscovery-find_by_name)
+
+*Called by:* [`main`](deploynator.__main__.py.md#main)
+
+<a id="deploynatorapp-interactive_menu"></a>
+
+#### `DeploynatorApp.interactive_menu`
+
+`method` | [deploynator/_app.py:379](../../deploynator/_app.py#L379)
+
+```python
+def interactive_menu(self) -> None
+```
+
+*Called by:* [`main`](deploynator.__main__.py.md#main)
+
+---

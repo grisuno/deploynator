@@ -1,6 +1,6 @@
 # Audit Report
 
-*Project: readmenator_deploynator_kdcy3urq | 2026-10-07 | offline, deterministic*
+*Project: deploynator | 2026-10-14 | offline, deterministic*
 
 ## Confidence Trail
 
@@ -8,17 +8,17 @@ Every edge is tagged. Extracted means parsed from source; inferred means derived
 
 | Confidence | Count | Meaning |
 |------------|-------|---------|
-| EXTRACTED | 0 | Resolved import edges parsed from source |
-| EXTRACTED | 0 | Raw import statements (may include externals) |
-| INFERRED | 0 | Surprising cross-community bridges |
+| EXTRACTED | 174 | Resolved import edges parsed from source |
+| EXTRACTED | 305 | Raw import statements (may include externals) |
+| INFERRED | 5 | Surprising cross-community bridges |
 | AMBIGUOUS | 0 | No uncertain edges are emitted by the static scanner |
 
 ## Coverage
 
-- Files: 2, communities: 1
-- File doc coverage: 1/2
-- Orphans (no docs at any level): 1
-- Layers detected: 1
+- Files: 31, communities: 6
+- File doc coverage: 9/31
+- Orphans (no docs at any level): 20
+- Layers detected: 4
 - Security findings: 0
 - Large files (>256KB, maybe generated): 0
 
@@ -31,7 +31,7 @@ Every edge is tagged. Extracted means parsed from source; inferred means derived
 
 ## Token Benchmark
 
-- Wiki index plus community pages estimate: ~539 tokens (chars/4).
+- Wiki index plus community pages estimate: ~2983 tokens (chars/4).
 - Full re-read of every source file would cost strictly more on any non-trivial project; this wiki is the cheaper entry point.
 - Generation cost: $0, offline, no network calls.
 
