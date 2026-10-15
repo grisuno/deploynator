@@ -1,6 +1,6 @@
 {
   "app.py": "7a62ed40a83c5799247685943037599ffb50e6b72c8439b3e86e4468720f00d1",
-  "deploynator/__init__.py": "6360d26d76df1b627d9da0e1f3bfff2c597d5434224d1d40fd2df3c844fd2623",
+  "deploynator/__init__.py": "2fba7977f99bac8054859c84fc0b7917b9e8e769e577b55a1b86a2cbfb99bc84",
   "deploynator/__main__.py": "18b99c64d18f19970b4927f15d41354084c5721558b082ebad8e1e0c214cea91",
   "deploynator/_app.py": "c3a0b1e84868e9a31df194eb94510e853d3985b95036f6869a66e35e2312fea5",
   "deploynator/_changelog.py": "43bb16b6202eb08134692f24c936f7186837b912a6f4a8ab707d76d954e62148",
@@ -16,7 +16,6 @@
   "deploynator/_semver.py": "0f0ae23946ea820b6a8d21ca94e5542023059a16fe69fcce24c7484885bd2e81",
   "deploynator/_toml.py": "93db364ad3326702d489855fa7f52f2474ace488828bdaef4559a325006c4d9a",
   "install.sh": "7ba797a6e471e29a8ee90f4027dd3891a6cecfa78f03ca0e8ed84621cd5a64d3",
-  "setup.py": "4bc096827b19a4205c090f88eef87dc92b361988173f43d38e0142de821a7081",
   "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "tests/bdd_test_deploy.py": "60fb965ebc81ecd056cc7c591cb859832fedbf36f6102f2bc2f0e8c78907be6a",
   "tests/test_changelog.py": "54e926ece53bdb3dd20adb57dd35264b994ff86a736f7a738be54c4562c490a9",

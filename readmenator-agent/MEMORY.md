@@ -2,7 +2,7 @@
 
 > Cross-session context for agents. Sections 1-6 are regenerated from the source tree with zero LLM tokens: declared rules are quoted verbatim with `file:line`, measured baselines come from the scan. Section 7 is written by agents and humans and is preserved across rebuilds.
 
-Generated from 31 files at commit `720d9e20fe88`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
+Generated from 30 files at commit `7a24779a7a64`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
 
 ## 1. Purpose and domain
 
@@ -18,7 +18,9 @@ Generated from 31 files at commit `720d9e20fe88`. Read this first, then `readmen
 ## 2. Workflow
 
 Detected commands:
-- `python -m pytest -q` (tests/ layout)
+- `python -m pytest -q` (pyproject.toml)
+- `deploynator --help` (pyproject.toml [project.scripts])
+- `deploynator-mcp --help` (pyproject.toml [project.scripts])
 - `CI workflow github-actions-demo.yml` (workflows/github-actions-demo.yml)
 
 Session protocol:
@@ -66,7 +68,7 @@ Declared:
 - none declared in instruction files (add them to AGENTS.md or record them in section 7)
 
 Measured baseline:
-- py: 30 files, 381 symbols; docstrings on 2% of symbols; functions snake_case (100%); types PascalCase (100%); median file 116 lines, max 572.
+- py: 29 files, 381 symbols; docstrings on 2% of symbols; functions snake_case (100%); types PascalCase (100%); median file 116 lines, max 572.
 - sh: 1 files, 0 symbols; median file 4 lines, max 4.
 - Tests: 13 files under tests; follow the existing naming (e.g. `bdd_test_deploy.py`).
 

@@ -19,7 +19,6 @@
 | `deploynator/_semver.py` | - | deploynator | 9 | 5 |
 | `deploynator/_toml.py` | - | deploynator | 4 | 9 |
 | `install.sh` | - | root | 0 | 0 |
-| `setup.py` | - | root | 0 | 0 |
 | `tests/__init__.py` | - | tests | 0 | 0 |
 | `tests/bdd_test_deploy.py` | BDD-style tests for deploynator using behavior-driven patterns. | tests | 10 | 0 |
 | `tests/test_changelog.py` | - | tests | 8 | 0 |

@@ -28,7 +28,7 @@ graph LR
 
 ## Details
 
-Static architecture map of 31 files (py, sh) in 5 components: deploynator: _changelog, deploynator: _toml, deploynator: _models, deploynator: _platforms, deploynator: _mcp_server. Structure is extracted statically without LLM calls; component prose may be enriched locally.
+Static architecture map of 30 files (py, sh) in 5 components: deploynator: _changelog, deploynator: _toml, deploynator: _models, deploynator: _platforms, deploynator: _mcp_server. Structure is extracted statically without LLM calls; component prose may be enriched locally.
 
 ### deploynator: _changelog (1)
 

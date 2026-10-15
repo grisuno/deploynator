@@ -176,4 +176,3 @@
 {"code":"DOC001","uid":"deploynator/_toml.py::TomlConfig","file":"deploynator/_toml.py","line":14,"message":"class TomlConfig is not documented"}
 {"code":"DOC001","uid":"deploynator/_toml.py::load_toml_config","file":"deploynator/_toml.py","line":46,"message":"function load_toml_config is not documented"}
 {"code":"DOC001","uid":"install.sh","file":"install.sh","line":1,"message":"module install.sh is not documented"}
-{"code":"DOC001","uid":"setup.py","file":"setup.py","line":1,"message":"module setup.py is not documented"}

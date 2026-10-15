@@ -1,6 +1,6 @@
 # Documentation Coverage
 
-Overall: **2.2%** (4 of 183 public modules, types, and callables). Data members are excluded from the ratio.
+Overall: **2.2%** (4 of 182 public modules, types, and callables). Data members are excluded from the ratio.
 
 [Back to index](index.md)
 
@@ -14,7 +14,7 @@ Overall: **2.2%** (4 of 183 public modules, types, and callables). Data members 
 | enum | 0 | 2 | 0.0% |
 | function | 0 | 5 | 0.0% |
 | method | 2 | 98 | 2.0% |
-| module | 2 | 18 | 11.1% |
+| module | 2 | 17 | 11.8% |
 | property | 0 | 4 | 0.0% |
 | staticmethod | 0 | 2 | 0.0% |
 
@@ -36,7 +36,6 @@ Overall: **2.2%** (4 of 183 public modules, types, and callables). Data members 
 | [`deploynator._semver`](modules/deploynator._semver.py.md) | 0 | 9 | 0.0% |
 | [`deploynator._toml`](modules/deploynator._toml.py.md) | 0 | 3 | 0.0% |
 | [`install.sh`](modules/install.sh.md) | 0 | 1 | 0.0% |
-| [`setup`](modules/setup.py.md) | 0 | 1 | 0.0% |
 | [`deploynator._mcp_server`](modules/deploynator._mcp_server.py.md) | 1 | 21 | 4.8% |
 | [`deploynator._pypi`](modules/deploynator._pypi.py.md) | 2 | 9 | 22.2% |
 | [`app`](modules/app.py.md) | 1 | 1 | 100.0% |
@@ -45,7 +44,7 @@ Overall: **2.2%** (4 of 183 public modules, types, and callables). Data members 
 
 DOC001 undocumented public item, DOC002 parameter not documented, DOC003 documented parameter missing from the signature (stale doc), DOC004 return value not documented, DOC005 raised exception not documented.
 
-DOC001: 179
+DOC001: 178
 
 - DOC001 `deploynator/__init__.py:1` module deploynator/__init__.py is not documented
 - DOC001 `deploynator/__main__.py:1` module deploynator/__main__.py is not documented
@@ -225,4 +224,3 @@ DOC001: 179
 - DOC001 `deploynator/_toml.py:14` class TomlConfig is not documented
 - DOC001 `deploynator/_toml.py:46` function load_toml_config is not documented
 - DOC001 `install.sh:1` module install.sh is not documented
-- DOC001 `setup.py:1` module setup.py is not documented

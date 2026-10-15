@@ -1,27 +1,27 @@
 {
   "tool": "readmenator",
   "schema_version": 2,
-  "generated_at": "2026-10-15T01:30:04Z",
+  "generated_at": "2026-10-15T01:41:07Z",
   "project_root": ".",
   "project_name": "deploynator",
-  "git_commit": "720d9e20fe8826127b5c6094294ec4369b236f70",
+  "git_commit": "7a24779a7a649c0205472ca763a7bec4487e7eef",
   "git_branch": "main",
-  "source_fingerprint": "b2b12e39eacaa1c763c0f3d24a80beaa749dd7a0dd0d5baf4ad94fe89e965f29",
+  "source_fingerprint": "4af569b5303d607d8caff72d22412be87adf8b736b2a1103c830a8209e9532c3",
   "freshness_check": "readmenator . fresh  # exit 0 = docs match sources, exit 1 = run: readmenator . --rebuild",
-  "files": 31,
+  "files": 30,
   "symbols": 381,
-  "imports": 305,
+  "imports": 304,
   "calls": 1800,
   "inherits": 6,
   "resolved_imports": 174,
   "security_findings": 0,
   "languages": {
-    "py": 30,
+    "py": 29,
     "sh": 1
   },
   "subsystems": {
     "deploynator": 15,
-    "root": 3,
+    "root": 2,
     "tests": 13
   },
   "entrypoints": [
@@ -51,8 +51,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "lines": 111,
-      "approx_tokens": 1500
+      "lines": 110,
+      "approx_tokens": 1493
     },
     {
       "path": "CONCEPTS.md",
@@ -66,8 +66,8 @@
     },
     {
       "path": "INDEX.md",
-      "lines": 35,
-      "approx_tokens": 602
+      "lines": 34,
+      "approx_tokens": 594
     },
     {
       "path": "KB_deploynator.md",
@@ -76,13 +76,18 @@
     },
     {
       "path": "KB_root.md",
-      "lines": 14,
-      "approx_tokens": 65
+      "lines": 10,
+      "approx_tokens": 52
     },
     {
       "path": "KB_tests.md",
       "lines": 256,
       "approx_tokens": 4389
+    },
+    {
+      "path": "MEMORY.md",
+      "lines": 97,
+      "approx_tokens": 1471
     },
     {
       "path": "SECURITY.md",

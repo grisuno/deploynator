@@ -8,7 +8,3 @@
 ## install.sh
 - Layer: utility
 - Language: sh
-
-## setup.py
-- Layer: infrastructure
-- Language: py

@@ -1,10 +1,10 @@
 # orphans
 
-*Community 5 | 4 files | cohesion 0.00*
+*Community 5 | 3 files | cohesion 0.00*
 
 ## Definition
 
-This community groups 4 file(s) rooted at `root` with dominant language py (cohesion 0.00). Central symbols: no extracted symbols. Documented purpose: Autor: Gris Iscomeback Correo electrónico: grisiscomeback[at]gmail[dot]com Fecha de creación: xx/xx/xxxx Licencia: GPL v3  Descripción:.
+This community groups 3 file(s) rooted at `root` with dominant language py (cohesion 0.00). Central symbols: no extracted symbols. Documented purpose: Autor: Gris Iscomeback Correo electrónico: grisiscomeback[at]gmail[dot]com Fecha de creación: xx/xx/xxxx Licencia: GPL v3  Descripción:.
 
 ## Files
 
@@ -12,7 +12,6 @@ This community groups 4 file(s) rooted at `root` with dominant language py (cohe
 |------|----------|-------|---------|-----|
 | `app.py` | py | utility | 0 | yes |
 | `install.sh` | sh | utility | 0 | no |
-| `setup.py` | py | infrastructure | 0 | no |
 | `tests/__init__.py` | py | testing | 0 | no |
 
 ## Key Symbols
@@ -38,7 +37,7 @@ This community groups 4 file(s) rooted at `root` with dominant language py (cohe
 
 ## Open Questions
 
-- Why do 3 file(s) lack file-level docs (e.g. `install.sh`)? What purpose do they serve?
+- Why do 2 file(s) lack file-level docs (e.g. `install.sh`)? What purpose do they serve?
 - What would break if the most connected file in orphans changed?
 - Should orphans be split, given cohesion 0.00?
 
@@ -46,5 +45,4 @@ This community groups 4 file(s) rooted at `root` with dominant language py (cohe
 
 - `app.py`
 - `install.sh`
-- `setup.py`
 - `tests/__init__.py`

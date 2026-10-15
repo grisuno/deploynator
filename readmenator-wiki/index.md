@@ -1,6 +1,6 @@
 # Second Brain
 
-*Last synthesized: 2026-10-14 | 31 files | 6 concept pages | offline, zero tokens*
+*Last synthesized: 2026-10-14 | 30 files | 6 concept pages | offline, zero tokens*
 
 > Raw sources -> readmenator wiki -> links (Karpathy LLM Wiki Pattern, deterministic).
 > Start here, then open one community page. Prefer grep over full reads.
@@ -11,20 +11,20 @@ The codebase centres on `_config.py`, `_deploy.py`, `_models.py`. Architecturall
 
 Surprising tissue lives between deploynator: _changelog, deploynator: _toml, deploynator: _models: 9 extracted cross-community imports and 10 inferred bridges. Follow `connections.json` sorted by strength before refactoring.
 
-Open work clusters around documentation (29% file coverage), 0 security findings, 20 taint paths, and 5 suggested exploration questions in `queries.md`.
+Open work clusters around documentation (30% file coverage), 0 security findings, 20 taint paths, and 5 suggested exploration questions in `queries.md`.
 
 ## Stats
 
 | Metric | Value |
 |--------|-------|
-| Files | 31 |
+| Files | 30 |
 | Symbols | 381 |
 | Resolved imports | 174 |
 | Languages | py, sh |
 | Communities | 6 |
-| Doc coverage | 29% (9/31 files) |
+| Doc coverage | 30% (9/30 files) |
 | Security findings | 0 |
-| Estimated read cost | ~3553 tokens (chars/4, offline so $0) |
+| Estimated read cost | ~3551 tokens (chars/4, offline so $0) |
 
 ## Reading Order
 
@@ -44,7 +44,7 @@ readmenator query "<question>" --target deploynator
 - [deploynator: _models (6 files, cohesion 0.31)](./community_2_deploynator_models.md)
 - [deploynator: _platforms (5 files, cohesion 0.22)](./community_3_deploynator_platforms.md)
 - [deploynator: _mcp_server (4 files, cohesion 0.50)](./community_4_deploynator_mcp_server.md)
-- [orphans (4 files, cohesion 0.00)](./community_5_orphans.md)
+- [orphans (3 files, cohesion 0.00)](./community_5_orphans.md)
 
 ## God Nodes
 

@@ -678,7 +678,6 @@
 {"confidence": "EXTRACTED", "description": "_toml.py defines method __post_init__", "relation": "defines", "source": "file:deploynator/_toml.py", "target": "sym:deploynator/_toml.py::__post_init__@30", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "_toml.py defines function _clamp_timeout", "relation": "defines", "source": "file:deploynator/_toml.py", "target": "sym:deploynator/_toml.py::_clamp_timeout@38", "weight": 0.7}
 {"confidence": "EXTRACTED", "description": "_toml.py defines function load_toml_config", "relation": "defines", "source": "file:deploynator/_toml.py", "target": "sym:deploynator/_toml.py::load_toml_config@46", "weight": 0.7}
-{"confidence": "EXTRACTED", "description": "setup.py imports external setuptools", "relation": "imports", "source": "file:setup.py", "target": "ext:setuptools", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "bdd_test_deploy.py imports external json", "relation": "imports", "source": "file:tests/bdd_test_deploy.py", "target": "ext:json", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "bdd_test_deploy.py imports external os", "relation": "imports", "source": "file:tests/bdd_test_deploy.py", "target": "ext:os", "weight": 0.85}
 {"confidence": "EXTRACTED", "description": "bdd_test_deploy.py imports external pytest", "relation": "imports", "source": "file:tests/bdd_test_deploy.py", "target": "ext:pytest", "weight": 0.85}

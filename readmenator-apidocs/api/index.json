@@ -2,10 +2,10 @@
  "schema_version": 1,
  "format": "jsonl",
  "meta": {
-  "modules": 18,
-  "entities": 289,
+  "modules": 17,
+  "entities": 288,
   "languages": {
-   "py": 17,
+   "py": 16,
    "sh": 1
   },
   "kinds": {
@@ -17,7 +17,7 @@
    "enum": 2,
    "function": 5,
    "method": 98,
-   "module": 18,
+   "module": 17,
    "property": 4,
    "staticmethod": 2
   },
@@ -28,7 +28,7 @@
  "coverage": {
   "overall": {
    "documented": 4,
-   "total": 183,
+   "total": 182,
    "percent": 2.2
   },
   "by_kind": {
@@ -64,8 +64,8 @@
    },
    "module": {
     "documented": 2,
-    "total": 18,
-    "percent": 11.1
+    "total": 17,
+    "percent": 11.8
    },
    "property": {
     "documented": 0,
@@ -163,11 +163,6 @@
     "documented": 0,
     "total": 1,
     "percent": 0.0
-   },
-   "setup.py": {
-    "documented": 0,
-    "total": 1,
-    "percent": 0.0
    }
   }
  },
@@ -256,16 +251,11 @@
    "uid": "install.sh",
    "path": "modules/install.sh.jsonl",
    "entities": 1
-  },
-  {
-   "uid": "setup.py",
-   "path": "modules/setup.py.jsonl",
-   "entities": 1
   }
  ],
  "warnings": {
   "path": "warnings.jsonl",
-  "total": 179
+  "total": 178
  },
  "usage": [
   "grep -h '\"name\":\"<Name>\"' readmenator-apidocs/api/modules/*.jsonl",

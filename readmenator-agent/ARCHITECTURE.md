@@ -96,7 +96,6 @@
 - `deploynator/_runner.py` -> __future__, os, shlex, subprocess
 - `deploynator/_semver.py` -> __future__, json, os, re, subprocess, typing
 - `deploynator/_toml.py` -> __future__, dataclasses, os, tomllib
-- `setup.py` -> setuptools
 - `tests/bdd_test_deploy.py` -> json, os, pytest, subprocess, tempfile
 - `tests/test_changelog.py` -> pytest
 - `tests/test_cli_mcp.py` -> pytest

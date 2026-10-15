@@ -16,7 +16,7 @@ flowchart TB
     subgraph lane_0["Tier 1 - entry / orchestration"]
         direction LR
         n_c4["deploynator: _mcp_server<br/>3 files, 35 symbols<br/>Core / utility"]:::entry
-        n_d__root_["(root)<br/>3 files, 0 symbols<br/>Core / utility"]:::entry
+        n_d__root_["(root)<br/>2 files, 0 symbols<br/>Core / utility"]:::entry
     end
     subgraph lane_1["Tier 2"]
         direction LR
