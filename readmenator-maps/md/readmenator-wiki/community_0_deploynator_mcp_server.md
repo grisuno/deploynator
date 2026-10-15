@@ -67,6 +67,7 @@ This community groups 11 file(s) rooted at `deploynator` with dominant language 
 - [INFERRED] bridges community 0 <-> 1 (strength 0.6): Inferred cross-community bridge: app.py reaches tests/test_models.py in 4 hops.
 - [INFERRED] bridges community 0 <-> 1 (strength 0.6): Inferred cross-community bridge: tests/test_config.py reaches tests/test_models.py in 4 hops.
 - [INFERRED] bridges community 0 <-> 1 (strength 0.6): Inferred cross-community bridge: tests/test_init.py reaches tests/test_models.py in 4 hops.
+- [INFERRED] shares_context community 0 <-> 3 (strength 0.5): Inferred shared context (layer utility) with no import path between community 0 (deploynator: _mcp_server) and community 3 (orphans).
 
 ## Risks
 

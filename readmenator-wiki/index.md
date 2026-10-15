@@ -64,7 +64,7 @@ readmenator query "<question>" --target deploynator
 - 0 -> 1: bridges (strength 0.6, INFERRED)
 - 1 -> 2: bridges (strength 0.6, INFERRED)
 - 1 -> 2: bridges (strength 0.6, INFERRED)
-- 2 -> 3: shares_context (strength 0.5, INFERRED)
+- 0 -> 3: shares_context (strength 0.5, INFERRED)
 
 ## Navigation Tips
 

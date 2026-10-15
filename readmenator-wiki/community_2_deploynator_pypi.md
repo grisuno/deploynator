@@ -63,16 +63,14 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 - [EXTRACTED] depends_on community 2 <-> 0 (strength 0.9): Extracted import edge crosses communities: deploynator/_docs.py imports deploynator/_config.py.
 - [INFERRED] bridges community 1 <-> 2 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_runner.py in 4 hops.
 - [INFERRED] bridges community 1 <-> 2 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_toml.py in 4 hops.
-- [INFERRED] shares_context community 2 <-> 3 (strength 0.5): Inferred shared context (layer utility) with no import path between community 2 (deploynator: _pypi) and community 3 (orphans).
 
 ## Risks
 
 - [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_pypi.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
 
 ## Open Questions
 

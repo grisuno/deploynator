@@ -25,7 +25,7 @@ This community groups 3 file(s) rooted at `root` with dominant language sh (cohe
 
 ## Connections
 
-- [INFERRED] shares_context community 2 <-> 3 (strength 0.5): Inferred shared context (layer utility) with no import path between community 2 (deploynator: _pypi) and community 3 (orphans).
+- [INFERRED] shares_context community 0 <-> 3 (strength 0.5): Inferred shared context (layer utility) with no import path between community 0 (deploynator: _mcp_server) and community 3 (orphans).
 
 ## Risks
 

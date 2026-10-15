@@ -64,7 +64,7 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.7).
 - `deploynator/_deploy.py` ranks 3 by PageRank, 15 importers, 19 symbols: _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.
 - Hotspot `deploynator/_app.py`: 32 symbols, 39 connections (score 0.55).
 - Hotspot `deploynator/_deploy.py`: 19 symbols, 43 connections (score 0.45).
-- Taint: 11 paths reach this group via subprocess.
+- Taint: 12 paths reach this group via subprocess.
 - Surprising bridge: app.py <-> test_models.py (4 hops across communities).
 - Key entities: file:tests/test_models.py, file:deploynator/_platforms.py, file:deploynator/_models.py, file:deploynator/_app.py, file:deploynator/_deploy.py, sym:deploynator/_deploy.py::deploy@97, file:deploynator/_git.py, file:deploynator/_semver.py
 - Rating 5.6/10 = 7 x PageRank share 0.80 + 3 x risk 0.00. Internal imports: 39.
@@ -78,7 +78,7 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.7).
 - `deploynator/_runner.py` ranks 3 by PageRank, 10 importers, 3 symbols.
 - Hotspot `tests/test_pypi.py`: 25 symbols, 92 connections (score 0.83).
 - Hotspot `tests/test_runner.py`: 15 symbols, 61 connections (score 0.53).
-- Taint: 6 paths reach this group via subprocess.
+- Taint: 5 paths reach this group via subprocess.
 - Surprising bridge: test_models.py <-> test_runner.py (4 hops across communities).
 - Key entities: file:tests/test_pypi.py, file:tests/bdd_test_deploy.py, file:tests/test_runner.py, file:deploynator/_pypi.py, file:deploynator/_toml.py, sym:deploynator/_pypi.py::PyPIRunner@12, file:tests/test_toml.py, sym:deploynator/_toml.py::load_toml_config@46
 - Rating 3.0/10 = 7 x PageRank share 0.43 + 3 x risk 0.00. Internal imports: 45.
