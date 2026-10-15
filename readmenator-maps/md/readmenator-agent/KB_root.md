@@ -9,6 +9,8 @@
 - Doc: one-liner deploy via deploynator (generic per-repo script).
 - Layer: utility
 - Language: sh
+- Symbols:
+  - `ensure_pkg` (function, line 22)
 
 ## install.sh
 - Layer: utility

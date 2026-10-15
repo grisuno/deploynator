@@ -35,7 +35,9 @@ class TestInitScript:
             DeploynatorApp(Config.create()).init_project(project_path=tmp, name="demo")
             content = open(os.path.join(tmp, "deploy.sh")).read()
             assert "dirname" in content  # autodetecta su directorio
-            assert "pip install" in content  # instala/actualiza tooling
+            assert "PIP_BIN" in content and "install" in content  # instala/actualiza tooling
+            assert "break-system-packages" in content  # PEP 668 (Kali)
+            assert "ensure_pkg" in content
             assert "deploynator" in content and "readmenator" in content
             assert "--project" in content  # one-liner con path detectado
             assert "grisuno/deploynator" in content  # fallback git

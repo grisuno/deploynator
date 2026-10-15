@@ -7,8 +7,8 @@ Second-brain semantic layer: nouns map atomically to file sets (EXTRACTED); verb
 | `deploynator` | 20 | 31 | `deploy.sh`, `deploynator/__init__.py`, `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py` |
 | `release` | 12 | 33 | `deploy.sh`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_mcp_server.py` |
 | `deploy` | 10 | 31 | `deploy.sh`, `deploynator/_deploy.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`, `tests/bdd_test_deploy.py` |
+| `git` | 10 | 18 | `deploy.sh`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py` |
 | `project` | 10 | 16 | `deploynator/_app.py`, `deploynator/_deploy.py`, `deploynator/_models.py`, `deploynator/_pypi.py`, `tests/bdd_test_deploy.py` |
-| `git` | 9 | 17 | `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `tests/bdd_test_deploy.py` |
 | `run` | 9 | 12 | `deploy.sh`, `deploynator/_docs.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py` |
 | `version` | 7 | 27 | `deploynator/_models.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_models.py`, `tests/test_path_deploy.py` |
 | `bump` | 7 | 18 | `deploy.sh`, `deploynator/_models.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_models.py` |
@@ -21,12 +21,13 @@ Second-brain semantic layer: nouns map atomically to file sets (EXTRACTED); verb
 | `file` | 6 | 13 | `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py` |
 | `semver` | 6 | 10 | `deploynator/_mcp_server.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_config.py`, `tests/test_pipeline.py` |
 | `name` | 6 | 9 | `deploynator/_deploy.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `tests/test_deploy.py`, `tests/test_models.py` |
+| `current` | 6 | 7 | `deploy.sh`, `deploynator/_git.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_pipeline.py` |
 | `red` | 6 | 6 | `tests/test_cli_mcp.py`, `tests/test_init.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_runner.py` |
 | `create` | 5 | 18 | `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_git.py`, `deploynator/_platforms.py`, `tests/bdd_test_deploy.py` |
 | `type` | 5 | 14 | `deploynator/_models.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_config.py`, `tests/test_models.py` |
 | `path` | 5 | 11 | `deploynator/_app.py`, `deploynator/_config.py`, `deploynator/_deploy.py`, `tests/test_config.py`, `tests/test_path_deploy.py` |
 | `format` | 5 | 9 | `deploynator/_changelog.py`, `deploynator/_models.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_models.py` |
-| `current` | 5 | 6 | `deploynator/_git.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_pipeline.py`, `tests/test_semver.py` |
+| `install` | 5 | 7 | `deploy.sh`, `deploynator/_app.py`, `deploynator/_deploy.py`, `install.sh`, `tests/test_deploy.py` |
 | `platform` | 4 | 13 | `deploynator/_models.py`, `deploynator/_platforms.py`, `tests/bdd_test_deploy.py`, `tests/test_models.py` |
 | `runner` | 4 | 12 | `deploynator/_docs.py`, `deploynator/_runner.py`, `tests/test_pypi.py`, `tests/test_runner.py` |
 | `auth` | 4 | 10 | `deploynator/_app.py`, `deploynator/_models.py`, `tests/test_config.py`, `tests/test_models.py` |
@@ -37,7 +38,6 @@ Second-brain semantic layer: nouns map atomically to file sets (EXTRACTED); verb
 | `empty` | 4 | 7 | `tests/test_changelog.py`, `tests/test_deploy.py`, `tests/test_pypi.py`, `tests/test_runner.py` |
 | `pipeline` | 4 | 7 | `deploynator/_mcp_server.py`, `tests/bdd_test_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py` |
 | `failure` | 4 | 6 | `tests/bdd_test_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_runner.py` |
-| `install` | 4 | 6 | `deploynator/_app.py`, `deploynator/_deploy.py`, `install.sh`, `tests/test_deploy.py` |
 | `load` | 4 | 6 | `deploynator/_deploy.py`, `deploynator/_toml.py`, `tests/test_deploy.py`, `tests/test_toml.py` |
 | `log` | 4 | 6 | `deploynator/_changelog.py`, `deploynator/_git.py`, `deploynator/_models.py`, `tests/test_models.py` |
 | `patch` | 4 | 6 | `deploy.sh`, `tests/bdd_test_deploy.py`, `tests/test_models.py`, `tests/test_semver.py` |

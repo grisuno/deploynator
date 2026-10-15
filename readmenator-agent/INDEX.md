@@ -3,7 +3,7 @@
 | File | Purpose | Subsystem | Symbols | Used by |
 |------|---------|-----------|---------|---------|
 | `app.py` | Autor: Gris Iscomeback Correo electrónico: grisiscomeback[at]gmail[dot]com Fecha de creación... | root | 0 | 0 |
-| `deploy.sh` | one-liner deploy via deploynator (generic per-repo script). | root | 0 | 0 |
+| `deploy.sh` | one-liner deploy via deploynator (generic per-repo script). | root | 1 | 0 |
 | `deploynator/__init__.py` | - | deploynator | 0 | 5 |
 | `deploynator/__main__.py` | - | deploynator | 3 | 1 |
 | `deploynator/_app.py` | - | deploynator | 31 | 1 |

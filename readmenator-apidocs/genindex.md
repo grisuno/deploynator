@@ -109,6 +109,7 @@
 ## E
 
 - [`enabled`](modules/deploynator._models.py.md#platformconfig-enabled) attribute of `PlatformConfig` in `deploynator._models`
+- [`ensure_pkg`](modules/deploy.sh.md#ensure_pkg) function in `deploy.sh`
 - [`error`](modules/deploynator._models.py.md#deployresult-error) attribute of `DeployResult` in `deploynator._models`
 - [`error`](modules/deploynator._mcp_server.py.md#mcprequest-error) method of `MCPRequest` in `deploynator._mcp_server`
 

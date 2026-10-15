@@ -95,8 +95,8 @@
   - `test_init_creates_files` (method, line 8) `def test_init_creates_files(self)`
   - `test_deploy_sh_executable_and_valid_bash` (method, line 19) `def test_deploy_sh_executable_and_valid_bash(self)`
   - `test_deploy_sh_content_generic` (method, line 30) `def test_deploy_sh_content_generic(self)`
-  - `test_init_no_overwrite` (method, line 44) `def test_init_no_overwrite(self)`
-  - `test_toml_starter_parseable` (method, line 56) `def test_toml_starter_parseable(self)`
+  - `test_init_no_overwrite` (method, line 46) `def test_init_no_overwrite(self)`
+  - `test_toml_starter_parseable` (method, line 58) `def test_toml_starter_parseable(self)`
 - Depends on: `deploynator/__init__.py`, `deploynator/_config.py`, `deploynator/_toml.py`
 
 ## tests/test_models.py

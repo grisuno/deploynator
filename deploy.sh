@@ -14,11 +14,25 @@ if [ $# -gt 0 ]; then
     shift
 fi
 
-# Install or update deploy tooling (best effort: works offline with current versions).
-pip install -U deploynator 2>/dev/null \
-    || pip install -U "git+https://github.com/grisuno/deploynator.git" \
-    || true
-pip install -U readmenator 2>/dev/null || true
+PIP_BIN="pip"
+command -v pip >/dev/null 2>&1 || PIP_BIN="pip3"
+
+# Install or update one package (best effort: works offline with current versions,
+# on PEP 668 systems, and before the PyPI upload via git fallback).
+ensure_pkg() {
+    if python3 -c "import $1" 2>/dev/null; then
+        "$PIP_BIN" install -U "$2" 2>/dev/null || true
+    else
+        "$PIP_BIN" install "$2" 2>/dev/null \
+            || "$PIP_BIN" install "$3" 2>/dev/null \
+            || "$PIP_BIN" install --break-system-packages "$2" 2>/dev/null \
+            || "$PIP_BIN" install --break-system-packages "$3" 2>/dev/null \
+            || true
+    fi
+}
+
+ensure_pkg deploynator deploynator "git+https://github.com/grisuno/deploynator.git"
+ensure_pkg readmenator readmenator readmenator
 
 if ! python3 -c "import deploynator" 2>/dev/null; then
     echo "[!] deploynator not available and install failed (offline?)." >&2

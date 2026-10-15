@@ -1,5 +1,8 @@
 # API
 
+## deploy.sh
+- `ensure_pkg` (function) `deploy.sh:22` -- Install or update one package (best effort: works offline with current versions, on PEP 668 systems, and before the...
+
 ## deploynator/__main__.py
 Depends on: `deploynator/__init__.py`, `deploynator/_config.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`
 Imported by: `tests/test_cli_mcp.py`
@@ -13,16 +16,16 @@ Imported by: `deploynator/__init__.py`
 - `DeploynatorApp.__init__` (method) `deploynator/_app.py:21` `def __init__(self, config, workdir)`
 - `DeploynatorApp.auth_login` (method) `deploynator/_app.py:31` `def auth_login(self, platforms)`
 - `DeploynatorApp.auth_status` (method) `deploynator/_app.py:45` `def auth_status(self)`
-- `DeploynatorApp.init_project` (method) `deploynator/_app.py:154` `def init_project(self, project_path, name)`
-- `DeploynatorApp.start_branch` (method) `deploynator/_app.py:204` `def start_branch(self, commit_type, description, project_path, project_name, remote)`
-- `DeploynatorApp.commit` (method) `deploynator/_app.py:262` `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
-- `DeploynatorApp.release` (method) `deploynator/_app.py:302` `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...`
-- `DeploynatorApp.generate_docs` (method) `deploynator/_app.py:392` `def generate_docs(self, project_path, project_name)`
-- `DeploynatorApp.status` (method) `deploynator/_app.py:398` `def status(self, project_path, project_name)`
-- `DeploynatorApp.list_projects` (method) `deploynator/_app.py:418` `def list_projects(self, search_path)`
-- `DeploynatorApp.generate_ci` (method) `deploynator/_app.py:423` `def generate_ci(self, project_name, all_projects)`
-- `DeploynatorApp.install_deps` (method) `deploynator/_app.py:439` `def install_deps(self, project_name)`
-- `DeploynatorApp.interactive_menu` (method) `deploynator/_app.py:452` `def interactive_menu(self)`
+- `DeploynatorApp.init_project` (method) `deploynator/_app.py:168` `def init_project(self, project_path, name)`
+- `DeploynatorApp.start_branch` (method) `deploynator/_app.py:218` `def start_branch(self, commit_type, description, project_path, project_name, remote)`
+- `DeploynatorApp.commit` (method) `deploynator/_app.py:276` `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
+- `DeploynatorApp.release` (method) `deploynator/_app.py:316` `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...`
+- `DeploynatorApp.generate_docs` (method) `deploynator/_app.py:406` `def generate_docs(self, project_path, project_name)`
+- `DeploynatorApp.status` (method) `deploynator/_app.py:412` `def status(self, project_path, project_name)`
+- `DeploynatorApp.list_projects` (method) `deploynator/_app.py:432` `def list_projects(self, search_path)`
+- `DeploynatorApp.generate_ci` (method) `deploynator/_app.py:437` `def generate_ci(self, project_name, all_projects)`
+- `DeploynatorApp.install_deps` (method) `deploynator/_app.py:453` `def install_deps(self, project_name)`
+- `DeploynatorApp.interactive_menu` (method) `deploynator/_app.py:466` `def interactive_menu(self)`
 
 ## deploynator/_changelog.py
 Depends on: `deploynator/_config.py`, `deploynator/_models.py`

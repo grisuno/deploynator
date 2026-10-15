@@ -64,6 +64,23 @@
       "confidence": "EXTRACTED"
     },
     {
+      "name": "git",
+      "files": [
+        "deploy.sh",
+        "deploynator/_git.py",
+        "deploynator/_models.py",
+        "deploynator/_platforms.py",
+        "deploynator/_pypi.py",
+        "tests/bdd_test_deploy.py",
+        "tests/test_models.py",
+        "tests/test_path_deploy.py",
+        "tests/test_pipeline.py",
+        "tests/test_pypi.py"
+      ],
+      "mentions": 18,
+      "confidence": "EXTRACTED"
+    },
+    {
       "name": "project",
       "files": [
         "deploynator/_app.py",
@@ -78,22 +95,6 @@
         "tests/test_toml.py"
       ],
       "mentions": 16,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "git",
-      "files": [
-        "deploynator/_git.py",
-        "deploynator/_models.py",
-        "deploynator/_platforms.py",
-        "deploynator/_pypi.py",
-        "tests/bdd_test_deploy.py",
-        "tests/test_models.py",
-        "tests/test_path_deploy.py",
-        "tests/test_pipeline.py",
-        "tests/test_pypi.py"
-      ],
-      "mentions": 17,
       "confidence": "EXTRACTED"
     },
     {
@@ -260,6 +261,19 @@
       "confidence": "EXTRACTED"
     },
     {
+      "name": "current",
+      "files": [
+        "deploy.sh",
+        "deploynator/_git.py",
+        "deploynator/_semver.py",
+        "tests/bdd_test_deploy.py",
+        "tests/test_pipeline.py",
+        "tests/test_semver.py"
+      ],
+      "mentions": 7,
+      "confidence": "EXTRACTED"
+    },
+    {
       "name": "red",
       "files": [
         "tests/test_cli_mcp.py",
@@ -321,15 +335,15 @@
       "confidence": "EXTRACTED"
     },
     {
-      "name": "current",
+      "name": "install",
       "files": [
-        "deploynator/_git.py",
-        "deploynator/_semver.py",
-        "tests/bdd_test_deploy.py",
-        "tests/test_pipeline.py",
-        "tests/test_semver.py"
+        "deploy.sh",
+        "deploynator/_app.py",
+        "deploynator/_deploy.py",
+        "install.sh",
+        "tests/test_deploy.py"
       ],
-      "mentions": 6,
+      "mentions": 7,
       "confidence": "EXTRACTED"
     },
     {
@@ -438,17 +452,6 @@
         "tests/test_pipeline.py",
         "tests/test_pypi.py",
         "tests/test_runner.py"
-      ],
-      "mentions": 6,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "install",
-      "files": [
-        "deploynator/_app.py",
-        "deploynator/_deploy.py",
-        "install.sh",
-        "tests/test_deploy.py"
       ],
       "mentions": 6,
       "confidence": "EXTRACTED"

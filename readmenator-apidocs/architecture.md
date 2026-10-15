@@ -16,7 +16,7 @@ flowchart TB
     subgraph lane_0["Tier 1 - entry / orchestration"]
         direction LR
         n_c3["deploynator: _mcp_server<br/>3 files, 35 symbols<br/>Core / utility"]:::entry
-        n_d__root_["(root)<br/>3 files, 0 symbols<br/>Core / utility"]:::entry
+        n_d__root_["(root)<br/>3 files, 1 symbols<br/>Core / utility"]:::entry
     end
     subgraph lane_1["Tier 2"]
         direction LR
@@ -185,17 +185,17 @@ flowchart LR
     n_deploynator__config_py__create["_config.Config.create<br/>_config.py:79"]:::external
     n_deploynator__config_py__Config["_config.Config<br/>_config.py:8"]:::external
     n_deploynator__app_py__DeploynatorApp["_app.DeploynatorApp<br/>_app.py:20"]:::external
-    n_deploynator__app_py__interactive_menu["_app.DeploynatorApp.interactive_menu<br/>_app.py:452"]:::external
+    n_deploynator__app_py__interactive_menu["_app.DeploynatorApp.interactive_menu<br/>_app.py:466"]:::external
     n_deploynator___main___py__preprocess_argv["__main__.preprocess_argv<br/>__main__.py:130"]:::default
     n_deploynator___main___py__build_parser["__main__.build_parser<br/>__main__.py:17"]:::default
     n_deploynator__models_py__valid_types["_models.CommitType.valid_types<br/>_models.py:65"]:::external
-    n_deploynator__app_py__release["_app.DeploynatorApp.release<br/>_app.py:302"]:::external
+    n_deploynator__app_py__release["_app.DeploynatorApp.release<br/>_app.py:316"]:::external
     n_deploynator__models_py__from_string_58["_models.CommitType.from_string<br/>_models.py:58"]:::external
     n_deploynator__deploy_py__discover["_deploy.ProjectDiscovery.discover<br/>_deploy.py:35"]:::external
     n_deploynator__deploy_py___load_single["_deploy.ProjectDiscovery._load_single<br/>_deploy.py:63"]:::external
     n_deploynator__models_py__from_dict_139["_models.ProjectConfig.from_dict<br/>_models.py:139"]:::external
     n_deploynator__deploy_py__find_by_name["_deploy.ProjectDiscovery.find_by_name<br/>_deploy.py:56"]:::external
-    n_deploynator__app_py___looks_like_path["_app.DeploynatorApp._looks_like_path<br/>_app.py:226"]:::external
+    n_deploynator__app_py___looks_like_path["_app.DeploynatorApp._looks_like_path<br/>_app.py:240"]:::external
     n_deploynator__toml_py__load_toml_config["_toml.load_toml_config<br/>_toml.py:46"]:::external
     n_deploynator__toml_py__TomlConfig["_toml.TomlConfig<br/>_toml.py:14"]:::external
     n_deploynator__toml_py___clamp_timeout["_toml._clamp_timeout<br/>_toml.py:38"]:::external

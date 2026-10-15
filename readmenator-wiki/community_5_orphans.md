@@ -4,20 +4,20 @@
 
 ## Definition
 
-This community groups 4 file(s) rooted at `root` with dominant language py (cohesion 0.00). Central symbols: no extracted symbols. Documented purpose: Autor: Gris Iscomeback Correo electrónico: grisiscomeback[at]gmail[dot]com Fecha de creación: xx/xx/xxxx Licencia: GPL v3  Descripción:.
+This community groups 4 file(s) rooted at `root` with dominant language py (cohesion 0.00). Central symbols: `ensure_pkg`. Core file: `deploy.sh` (1 symbols). Documented purpose: Autor: Gris Iscomeback Correo electrónico: grisiscomeback[at]gmail[dot]com Fecha de creación: xx/xx/xxxx Licencia: GPL v3  Descripción:.
 
 ## Files
 
 | File | Language | Layer | Symbols | Doc |
 |------|----------|-------|---------|-----|
 | `app.py` | py | utility | 0 | yes |
-| `deploy.sh` | sh | utility | 0 | yes |
+| `deploy.sh` | sh | utility | 1 | yes |
 | `install.sh` | sh | utility | 0 | no |
 | `tests/__init__.py` | py | testing | 0 | no |
 
 ## Key Symbols
 
-- No symbols extracted in this community.
+- `ensure_pkg` (function, `deploy.sh:22`) - Install or update one package (best effort: works offline with current versions, on PEP 668 systems,
 
 ## Internal vs External Edges
 

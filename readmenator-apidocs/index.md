@@ -1,6 +1,6 @@
 # deploynator API Reference
 
-> Generated offline by readmenator: 18 modules, 291 documented entities, documentation coverage 2.7% (5/183 public items). Deterministic, zero tokens: signatures from source, docs parsed from Google, NumPy, reST, Javadoc/JSDoc/Doxygen, C# XML, and Rustdoc comments.
+> Generated offline by readmenator: 18 modules, 292 documented entities, documentation coverage 3.3% (6/184 public items). Deterministic, zero tokens: signatures from source, docs parsed from Google, NumPy, reST, Javadoc/JSDoc/Doxygen, C# XML, and Rustdoc comments.
 
 Navigate: [Interactive architecture and flows](flows.html) | [Architecture and flows (Mermaid)](architecture.md) | [Class hierarchy](classes.md) | [General index](genindex.md) | [Coverage and warnings](COVERAGE.md) | [`api/index.json`](api/index.json) | [HTML browser](index.html)
 
@@ -13,7 +13,7 @@ Languages: py (16), sh (2)
 | Module | Summary | Types | Callables | Coverage |
 |---|---|---|---|---|
 | [`app`](modules/app.py.md) | app.py | 0 | 0 | 100.0% |
-| [`deploy.sh`](modules/deploy.sh.md) | deploy.sh -- one-liner deploy via deploynator (generic per-repo script). | 0 | 0 | 100.0% |
+| [`deploy.sh`](modules/deploy.sh.md) | deploy.sh -- one-liner deploy via deploynator (generic per-repo script). | 0 | 1 | 100.0% |
 | [`install.sh`](modules/install.sh.md) |  | 0 | 0 | 0.0% |
 
 ### `deploynator`

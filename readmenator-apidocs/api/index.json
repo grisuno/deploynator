@@ -3,7 +3,7 @@
  "format": "jsonl",
  "meta": {
   "modules": 18,
-  "entities": 291,
+  "entities": 292,
   "languages": {
    "py": 16,
    "sh": 2
@@ -15,7 +15,7 @@
    "constant": 7,
    "constructor": 14,
    "enum": 2,
-   "function": 5,
+   "function": 6,
    "method": 98,
    "module": 18,
    "property": 4,
@@ -27,9 +27,9 @@
  },
  "coverage": {
   "overall": {
-   "documented": 5,
-   "total": 183,
-   "percent": 2.7
+   "documented": 6,
+   "total": 184,
+   "percent": 3.3
   },
   "by_kind": {
    "class": {
@@ -53,9 +53,9 @@
     "percent": 0.0
    },
    "function": {
-    "documented": 0,
-    "total": 5,
-    "percent": 0.0
+    "documented": 1,
+    "total": 6,
+    "percent": 16.7
    },
    "method": {
     "documented": 2,
@@ -85,8 +85,8 @@
     "percent": 100.0
    },
    "deploy.sh": {
-    "documented": 1,
-    "total": 1,
+    "documented": 2,
+    "total": 2,
     "percent": 100.0
    },
    "deploynator/__init__.py": {
@@ -180,7 +180,7 @@
   {
    "uid": "deploy.sh",
    "path": "modules/deploy.sh.jsonl",
-   "entities": 1
+   "entities": 2
   },
   {
    "uid": "deploynator/__init__.py",

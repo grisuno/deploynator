@@ -2,12 +2,12 @@
 
 > Cross-session context for agents. Sections 1-6 are regenerated from the source tree with zero LLM tokens: declared rules are quoted verbatim with `file:line`, measured baselines come from the scan. Section 7 is written by agents and humans and is preserved across rebuilds.
 
-Generated from 32 files at commit `72dfb9892c7f`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
+Generated from 32 files at commit `699ec786af1b`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
 
 ## 1. Purpose and domain
 
 - What it is: Token-free, offline, multi-platform deployer for GitHub, GitLab, and Bitbucket. (`README.md:3`)
-- Domain vocabulary (term, files): `deploynator` (20), `release` (12), `deploy` (10), `project` (10), `git` (9), `run` (9), `version` (7), `bump` (7), `commit` (7), `valid` (7), `docs` (6), `config` (6), `toml` (6), `tag` (6), `file` (6)
+- Domain vocabulary (term, files): `deploynator` (20), `release` (12), `deploy` (10), `git` (10), `project` (10), `run` (9), `version` (7), `bump` (7), `commit` (7), `valid` (7), `docs` (6), `config` (6), `toml` (6), `tag` (6), `file` (6)
 - Subsystem `deploynator: _changelog`: 6 files, core `deploynator/_changelog.py`
 - Subsystem `deploynator: _toml`: 6 files, core `deploynator/_toml.py`
 - Subsystem `deploynator: _models`: 6 files, core `deploynator/_models.py`
@@ -68,8 +68,8 @@ Declared:
 - none declared in instruction files (add them to AGENTS.md or record them in section 7)
 
 Measured baseline:
-- py: 30 files, 389 symbols; docstrings on 3% of symbols; functions snake_case (100%); types PascalCase (100%); median file 116 lines, max 645.
-- sh: 2 files, 0 symbols; median file 28 lines, max 28.
+- py: 30 files, 389 symbols; docstrings on 3% of symbols; functions snake_case (100%); types PascalCase (100%); median file 116 lines, max 659.
+- sh: 2 files, 1 symbols; docstrings on 100% of symbols; functions snake_case (100%); median file 42 lines, max 42.
 - Tests: 14 files under tests; follow the existing naming (e.g. `bdd_test_deploy.py`).
 
 ## 5. Minimum deliverables

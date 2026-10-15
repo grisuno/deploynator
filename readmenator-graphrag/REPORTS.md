@@ -1,6 +1,6 @@
 # GraphRAG Community Reports
 
-Entities: 496 | Relationships: 1379 | Communities: 6 | Themes: 2 | Text units: 400
+Entities: 497 | Relationships: 1383 | Communities: 6 | Themes: 2 | Text units: 401
 
 Query with `readmenator . ask "<question>"` (local: BM25 + Personalized PageRank; global: map-reduce over these reports) or the MCP tool `readmenator.graphrag`.
 
@@ -39,8 +39,8 @@ Theme of 5 communities and 28 files: deploynator: _changelog (6 files, rating 7.
 Theme of 1 communities and 4 files: unassigned files (4 files, rating 1.3).
 
 - [unassigned files] `app.py` ranks 1 by PageRank, 0 importers, 0 symbols: Autor: Gris Iscomeback Correo electrónico: grisiscomeback[at]gmail[dot]com Fecha de creación: xx/xx/xxxx Licencia: GPL v3  Descripción:
-- [unassigned files] `deploy.sh` ranks 2 by PageRank, 0 importers, 0 symbols: one-liner deploy via deploynator (generic per-repo script).
-- Key entities: file:deploy.sh, file:install.sh
+- [unassigned files] `deploy.sh` ranks 2 by PageRank, 0 importers, 1 symbols: one-liner deploy via deploynator (generic per-repo script).
+- Key entities: file:deploy.sh, sym:deploy.sh::ensure_pkg@22
 - Children: c5
 - Theme rating = highest child community rating.
 
@@ -96,7 +96,7 @@ Theme of 1 communities and 4 files: unassigned files (4 files, rating 1.3).
 - Hotspot `deploynator/_app.py`: 31 symbols, 37 connections (score 0.53).
 - Hotspot `deploynator/_deploy.py`: 19 symbols, 43 connections (score 0.46).
 - Taint: 8 paths reach this group via subprocess.
-- Key entities: file:deploynator/_platforms.py, file:deploynator/_app.py, file:deploynator/_deploy.py, sym:deploynator/_deploy.py::deploy@97, file:deploynator/_git.py, file:tests/test_deploy.py, sym:deploynator/_app.py::release@302, sym:deploynator/_deploy.py::discover@35
+- Key entities: file:deploynator/_platforms.py, file:deploynator/_app.py, file:deploynator/_deploy.py, sym:deploynator/_deploy.py::deploy@97, file:deploynator/_git.py, file:tests/test_deploy.py, sym:deploynator/_app.py::release@316, sym:deploynator/_deploy.py::discover@35
 - Rating 3.4/10 = 7 x PageRank share 0.48 + 3 x risk 0.00. Internal imports: 12.
 
 ## deploynator: _mcp_server (`c3`, community, rating 2.5)
@@ -115,12 +115,12 @@ Theme of 1 communities and 4 files: unassigned files (4 files, rating 1.3).
 
 ## unassigned files (`c5`, community, rating 1.3)
 
-4 files under root (py 2, sh 2), mostly utility. Core file app.py (PageRank 0.0151, imported by 0 files): Autor: Gris Iscomeback Correo electrónico: grisiscomeback[at]gmail[dot]com Fecha de creación: xx/xx/xxxx Licencia: GPL v3  Descripción:
+4 files under root (py 2, sh 2), mostly utility. Core file app.py (PageRank 0.0151, imported by 0 files): Autor: Gris Iscomeback Correo electrónico: grisiscomeback[at]gmail[dot]com Fecha de creación: xx/xx/xxxx Licencia: GPL v3  Descripción: Key abstractions: ensure_pkg.
 
 - `app.py` ranks 1 by PageRank, 0 importers, 0 symbols: Autor: Gris Iscomeback Correo electrónico: grisiscomeback[at]gmail[dot]com Fecha de creación: xx/xx/xxxx Licencia: GPL v3  Descripción:
-- `deploy.sh` ranks 2 by PageRank, 0 importers, 0 symbols: one-liner deploy via deploynator (generic per-repo script).
+- `deploy.sh` ranks 2 by PageRank, 0 importers, 1 symbols: one-liner deploy via deploynator (generic per-repo script).
 - `install.sh` ranks 3 by PageRank, 0 importers, 0 symbols.
+- Hotspot `deploy.sh`: 1 symbols, 0 connections (score 0.01).
 - Hotspot `app.py`: 0 symbols, 0 connections (score 0.00).
-- Hotspot `deploy.sh`: 0 symbols, 0 connections (score 0.00).
-- Key entities: file:deploy.sh, file:install.sh, file:app.py, file:tests/__init__.py
+- Key entities: file:deploy.sh, sym:deploy.sh::ensure_pkg@22, file:install.sh, file:app.py, file:tests/__init__.py
 - Rating 1.3/10 = 7 x PageRank share 0.19 + 3 x risk 0.00. Internal imports: 0.

@@ -107,7 +107,7 @@ footer{color:var(--cb-muted);font-size:12px;margin:24px 0}
 <br><code>deploynator/__main__.py::main@169 → deploynator/_config.py::create</code> · <code>deploynator/__main__.py::main@175 → deploynator/_config.py::create</code> · <code>deploynator/_mcp_server.py::main@273 → deploynator/_config.py::create</code>
 </li>
 <li><b>deploynator: _mcp_server</b> calls into <b>deploynator: _toml</b> — 1 imports, 1 calls across the boundary
-<br><code>tests/test_init.py::test_toml_starter_parseable@63 → deploynator/_toml.py::load_toml_config</code>
+<br><code>tests/test_init.py::test_toml_starter_parseable@65 → deploynator/_toml.py::load_toml_config</code>
 </li>
 <li><b>deploynator: _mcp_server</b> calls into <b>deploynator: _models</b> — 1 imports, 5 calls across the boundary
 <br><code>deploynator/__main__.py::build_parser@38 → deploynator/_models.py::valid_types</code> · <code>deploynator/__main__.py::build_parser@64 → deploynator/_models.py::valid_types</code> · <code>deploynator/__main__.py::build_parser@77 → deploynator/_models.py::valid_types</code>
@@ -119,10 +119,10 @@ footer{color:var(--cb-muted);font-size:12px;margin:24px 0}
 <br><code>deploynator/_app.py::__init__@22 → deploynator/_config.py::create</code> · <code>deploynator/_app.py::__init__@25 → deploynator/_config.py::create</code> · <code>deploynator/_app.py::auth_status@48 → deploynator/_config.py::create</code>
 </li>
 <li><b>deploynator: _platforms</b> calls into <b>deploynator: _toml</b> — 4 imports, 18 calls across the boundary
-<br><code>deploynator/_app.py::release@334 → deploynator/_toml.py::load_toml_config</code> · <code>deploynator/_deploy.py::__init__@83 → deploynator/_runner.py::TestRunner</code> · <code>deploynator/_deploy.py::__init__@84 → deploynator/_docs.py::DocsRunner</code>
+<br><code>deploynator/_app.py::release@348 → deploynator/_toml.py::load_toml_config</code> · <code>deploynator/_deploy.py::__init__@83 → deploynator/_runner.py::TestRunner</code> · <code>deploynator/_deploy.py::__init__@84 → deploynator/_docs.py::DocsRunner</code>
 </li>
 <li><b>deploynator: _platforms</b> calls into <b>deploynator: _models</b> — 8 imports, 45 calls across the boundary
-<br><code>deploynator/_app.py::auth_status@48 → deploynator/_models.py::from_string</code> · <code>deploynator/_app.py::start_branch@208 → deploynator/_models.py::from_string</code> · <code>deploynator/_app.py::commit@267 → deploynator/_models.py::from_string</code>
+<br><code>deploynator/_app.py::auth_status@48 → deploynator/_models.py::from_string</code> · <code>deploynator/_app.py::start_branch@222 → deploynator/_models.py::from_string</code> · <code>deploynator/_app.py::commit@281 → deploynator/_models.py::from_string</code>
 </li>
 </ul>
 <section class="component" id="comp-1">
@@ -257,8 +257,8 @@ footer{color:var(--cb-muted);font-size:12px;margin:24px 0}
 <li><a href="../deploynator/_app.py#L45-L55"><code>deploynator/_app.py::auth_status</code></a></li>
 <li><a href="../deploynator/_app.py#L56-L68"><code>deploynator/_app.py::_auth_github</code></a></li>
 <li><a href="../deploynator/_app.py#L69-L85"><code>deploynator/_app.py::_auth_gitlab</code></a></li>
-<li><a href="../deploynator/_app.py#L86-L153"><code>deploynator/_app.py::_auth_bitbucket</code></a></li>
-<li><a href="../deploynator/_app.py#L154-L203"><code>deploynator/_app.py::init_project</code></a></li>
+<li><a href="../deploynator/_app.py#L86-L167"><code>deploynator/_app.py::_auth_bitbucket</code></a></li>
+<li><a href="../deploynator/_app.py#L168-L217"><code>deploynator/_app.py::init_project</code></a></li>
 </ul>
 <h4>Files</h4>
 <ul class="references">
@@ -269,7 +269,7 @@ footer{color:var(--cb-muted);font-size:12px;margin:24px 0}
 <li><code>tests/test_deploy.py</code></li>
 </ul>
 </section>
-<footer>Generated offline from static analysis &middot; 7136f6fb4a25</footer>
+<footer>Generated offline from static analysis &middot; 72942996ac85</footer>
 </main>
 <div id="cb-tip" role="tooltip"></div>
 <script>

@@ -103,5 +103,5 @@ deploynator: _platforms groups 5 files (py) around DeploynatorApp, __init__, aut
 - <a href="../deploynator/_app.py#L45-L55">deploynator/_app.py::auth_status</a>
 - <a href="../deploynator/_app.py#L56-L68">deploynator/_app.py::_auth_github</a>
 - <a href="../deploynator/_app.py#L69-L85">deploynator/_app.py::_auth_gitlab</a>
-- <a href="../deploynator/_app.py#L86-L153">deploynator/_app.py::_auth_bitbucket</a>
-- <a href="../deploynator/_app.py#L154-L203">deploynator/_app.py::init_project</a>
+- <a href="../deploynator/_app.py#L86-L167">deploynator/_app.py::_auth_bitbucket</a>
+- <a href="../deploynator/_app.py#L168-L217">deploynator/_app.py::init_project</a>

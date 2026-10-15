@@ -27,30 +27,30 @@
   - `_auth_github` (method, line 56) `def _auth_github()`
   - `_auth_gitlab` (method, line 69) `def _auth_gitlab()`
   - `_auth_bitbucket` (method, line 86) `def _auth_bitbucket()`
-  - `init_project` (method, line 154) `def init_project(self, project_path, name)`
-  - `start_branch` (method, line 204) `def start_branch(self, commit_type, description, project_path, project_name, remote)`
-  - `_is_path_like` (method, line 222) `def _is_path_like(value)`
-  - `_looks_like_path` (method, line 226) `def _looks_like_path(value)`
-  - `_resolve_project_path` (method, line 233) `def _resolve_project_path(self, project_name)`
-  - `_smart_prepare` (method, line 247) `def _smart_prepare(self, base, changelog_content, dry_run)`
-  - `commit` (method, line 262) `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
-  - `release` (method, line 302) `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...`
-  - `generate_docs` (method, line 392) `def generate_docs(self, project_path, project_name)`
-  - `status` (method, line 398) `def status(self, project_path, project_name)`
-  - `list_projects` (method, line 418) `def list_projects(self, search_path)`
-  - `generate_ci` (method, line 423) `def generate_ci(self, project_name, all_projects)`
-  - `install_deps` (method, line 439) `def install_deps(self, project_name)`
-  - `interactive_menu` (method, line 452) `def interactive_menu(self)`
-  - `_interactive_release` (method, line 488) `def _interactive_release(self)`
-  - `_interactive_commit` (method, line 530) `def _interactive_commit(self)`
-  - `_interactive_start` (method, line 557) `def _interactive_start(self)`
-  - `_interactive_auth` (method, line 581) `def _interactive_auth(self)`
-  - `_interactive_auth_status` (method, line 604) `def _interactive_auth_status(self)`
-  - `_interactive_docs` (method, line 610) `def _interactive_docs(self)`
-  - `_interactive_ci` (method, line 617) `def _interactive_ci(self)`
-  - `_interactive_status` (method, line 626) `def _interactive_status(self)`
-  - `_interactive_init` (method, line 631) `def _interactive_init(self)`
-  - `_print_result` (method, line 637) `def _print_result(result)`
+  - `init_project` (method, line 168) `def init_project(self, project_path, name)`
+  - `start_branch` (method, line 218) `def start_branch(self, commit_type, description, project_path, project_name, remote)`
+  - `_is_path_like` (method, line 236) `def _is_path_like(value)`
+  - `_looks_like_path` (method, line 240) `def _looks_like_path(value)`
+  - `_resolve_project_path` (method, line 247) `def _resolve_project_path(self, project_name)`
+  - `_smart_prepare` (method, line 261) `def _smart_prepare(self, base, changelog_content, dry_run)`
+  - `commit` (method, line 276) `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
+  - `release` (method, line 316) `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...`
+  - `generate_docs` (method, line 406) `def generate_docs(self, project_path, project_name)`
+  - `status` (method, line 412) `def status(self, project_path, project_name)`
+  - `list_projects` (method, line 432) `def list_projects(self, search_path)`
+  - `generate_ci` (method, line 437) `def generate_ci(self, project_name, all_projects)`
+  - `install_deps` (method, line 453) `def install_deps(self, project_name)`
+  - `interactive_menu` (method, line 466) `def interactive_menu(self)`
+  - `_interactive_release` (method, line 502) `def _interactive_release(self)`
+  - `_interactive_commit` (method, line 544) `def _interactive_commit(self)`
+  - `_interactive_start` (method, line 571) `def _interactive_start(self)`
+  - `_interactive_auth` (method, line 595) `def _interactive_auth(self)`
+  - `_interactive_auth_status` (method, line 618) `def _interactive_auth_status(self)`
+  - `_interactive_docs` (method, line 624) `def _interactive_docs(self)`
+  - `_interactive_ci` (method, line 631) `def _interactive_ci(self)`
+  - `_interactive_status` (method, line 640) `def _interactive_status(self)`
+  - `_interactive_init` (method, line 645) `def _interactive_init(self)`
+  - `_print_result` (method, line 651) `def _print_result(result)`
 - Depends on: `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_toml.py`
 - Imported by: `deploynator/__init__.py`
 
