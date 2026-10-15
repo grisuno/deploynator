@@ -1,0 +1,18 @@
+version: 1.0
+name: LazyOwn
+description: "LazyOwn RedTeam Framework"
+repo_url: "https://github.com/grisuno/LazyOwn"
+path: "/home/grisun0/LazyOwn"
+platforms:
+  github:
+    repo: "grisuno/LazyOwn"
+    enabled: true
+  gitlab:
+    repo: "grisuno/LazyOwn"
+    enabled: false
+  bitbucket:
+    repo: "grisuno/LazyOwn"
+    enabled: false
+version:
+  file: version.json
+  file_type: json

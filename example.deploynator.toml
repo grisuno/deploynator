@@ -1,0 +1,35 @@
+# deploynator.toml — per-project config (sucesor de DEPLOY.sh flags).
+# Vive en la raíz del proyecto objetivo. `deploynator release` lo lee.
+# Flags CLI siempre ganan: --no-test, --no-docs, --bump major|minor|patch.
+
+[project]
+name = "my-app"
+version_file = "version.json"
+
+[tests]
+# Comandos en orden. Se ejecutan con shell=False (shlex), cwd=project_path.
+# Default si falta el archivo: ["python -m pytest tests/ -q"]
+commands = ["python -m pytest tests/ -q"]
+timeout_s = 300
+# Si true y commands=[] → pasa sin tests. Si false y sin tests/ → falla.
+allow_no_tests = false
+
+[docs]
+# Docs auto con herramienta hermana readmenator (igual que `readmenator . --rebuild`).
+auto = true
+command = "python -m readmenator . --rebuild"
+timeout_s = 300
+
+[deploy]
+branch = "main"
+remote = "origin"
+
+[pypi]
+# Si el proyecto tiene packaging (pyproject con [project] o setup.py),
+# tras pushear a GitHub: limpia dist/, build limpio, twine upload.
+# Credenciales por env: TWINE_PASSWORD o PYPI_TOKEN (user __token__),
+# o ~/.pypirc. Sin credenciales → warning y sigue.
+enabled = true
+repo = "pypi"      # pypi | testpypi | URL custom
+clean_dist = true
+timeout_s = 600

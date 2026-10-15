@@ -1,0 +1,19 @@
+version: 1.0
+name: deploynator
+description: "Multi-platform deployer for GitHub, GitLab, and Bitbucket"
+repo_url: "https://github.com/grisuno/deploynator"
+path: "deploynator_repos/deploynator"
+platforms:
+  github:
+    repo: "grisuno/deploynator"
+    enabled: true
+  gitlab:
+    repo: "grisuno/deploynator"
+    enabled: false
+  bitbucket:
+    repo: "grisuno/deploynator"
+    enabled: false
+version:
+  file: deploynator/__init__.py
+  file_type: python
+  pattern: __version__ = "(\d+)\.(\d+)\.(\d+)"

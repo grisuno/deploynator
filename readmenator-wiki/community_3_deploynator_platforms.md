@@ -1,0 +1,96 @@
+# deploynator: _platforms
+
+*Community 3 | 5 files | cohesion 0.22*
+
+## Definition
+
+This community groups 5 file(s) rooted at `deploynator` with dominant language py (cohesion 0.22). Central symbols: `BitbucketCLI`, `DeployOrchestrator`, `DeploynatorApp`, `GitHubCLI`, `GitLabCLI`, `GitOperations`, `PlatformClient`, `PlatformFactory`. Core file: `deploynator/_platforms.py` (34 symbols).
+
+## Files
+
+| File | Language | Layer | Symbols | Doc |
+|------|----------|-------|---------|-----|
+| `deploynator/_app.py` | py | utility | 30 | no |
+| `deploynator/_deploy.py` | py | utility | 19 | no |
+| `deploynator/_git.py` | py | utility | 21 | no |
+| `deploynator/_platforms.py` | py | utility | 34 | no |
+| `tests/test_deploy.py` | py | testing | 11 | no |
+
+## Key Symbols
+
+- `DeploynatorApp` (class, `deploynator/_app.py:20`) `class DeploynatorApp`
+- `__init__` (method, `deploynator/_app.py:21`) `def __init__(self, config, workdir)`
+- `auth_login` (method, `deploynator/_app.py:31`) `def auth_login(self, platforms)`
+- `auth_status` (method, `deploynator/_app.py:45`) `def auth_status(self)`
+- `_auth_github` (method, `deploynator/_app.py:56`) `def _auth_github()`
+- `_auth_gitlab` (method, `deploynator/_app.py:69`) `def _auth_gitlab()`
+- `_auth_bitbucket` (method, `deploynator/_app.py:86`) `def _auth_bitbucket()`
+- `init_project` (method, `deploynator/_app.py:96`) `def init_project(self, project_path, name)`
+- `start_branch` (method, `deploynator/_app.py:131`) `def start_branch(self, commit_type, description, project_path, project_name, rem`
+- `_is_path_like` (method, `deploynator/_app.py:149`) `def _is_path_like(value)`
+- `_resolve_project_path` (method, `deploynator/_app.py:152`) `def _resolve_project_path(self, project_name)`
+- `_smart_prepare` (method, `deploynator/_app.py:164`) `def _smart_prepare(self, base, changelog_content, dry_run)`
+- `commit` (method, `deploynator/_app.py:179`) `def commit(self, commit_type, subject, scope, body, project_path, project_name,`
+- `release` (method, `deploynator/_app.py:219`) `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run`
+- `generate_docs` (method, `deploynator/_app.py:306`) `def generate_docs(self, project_path, project_name)`
+- `status` (method, `deploynator/_app.py:312`) `def status(self, project_path, project_name)`
+- `list_projects` (method, `deploynator/_app.py:332`) `def list_projects(self, search_path)`
+- `generate_ci` (method, `deploynator/_app.py:337`) `def generate_ci(self, project_name, all_projects)`
+- `install_deps` (method, `deploynator/_app.py:353`) `def install_deps(self, project_name)`
+- `interactive_menu` (method, `deploynator/_app.py:366`) `def interactive_menu(self)`
+- `_interactive_release` (method, `deploynator/_app.py:402`) `def _interactive_release(self)`
+- `_interactive_commit` (method, `deploynator/_app.py:444`) `def _interactive_commit(self)`
+- `_interactive_start` (method, `deploynator/_app.py:471`) `def _interactive_start(self)`
+- `_interactive_auth` (method, `deploynator/_app.py:495`) `def _interactive_auth(self)`
+- `_interactive_auth_status` (method, `deploynator/_app.py:518`) `def _interactive_auth_status(self)`
+- `_interactive_docs` (method, `deploynator/_app.py:524`) `def _interactive_docs(self)`
+- `_interactive_ci` (method, `deploynator/_app.py:531`) `def _interactive_ci(self)`
+- `_interactive_status` (method, `deploynator/_app.py:540`) `def _interactive_status(self)`
+- `_interactive_init` (method, `deploynator/_app.py:545`) `def _interactive_init(self)`
+- `_print_result` (method, `deploynator/_app.py:551`) `def _print_result(result)`
+
+## Internal vs External Edges
+
+- Internal resolved imports (EXTRACTED): 11
+- Cross-boundary resolved imports (EXTRACTED): 30
+
+## Connections
+
+- [EXTRACTED] depends_on community 4 <-> 3 (strength 0.9): Extracted import edge crosses communities: deploynator/__init__.py imports deploynator/_app.py.
+- [EXTRACTED] depends_on community 3 <-> 0 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_config.py.
+- [EXTRACTED] depends_on community 3 <-> 2 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_models.py.
+- [EXTRACTED] depends_on community 3 <-> 1 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_toml.py.
+- [INFERRED] shares_context community 3 <-> 5 (strength 0.5): Inferred shared context (language py and layer utility) with no import path between community 3 (deploynator: _platforms) and community 5 (orphans).
+
+## Risks
+
+- [taint high] `deploynator/_app.py` -> `deploynator/_app.py` via `subprocess` (0 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_models.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_platforms.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_config.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_deploy.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_git.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_semver.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_pypi.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_changelog.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_app.py` via `subprocess` (0 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_models.py` via `subprocess` (1 hops)
+
+## Open Questions
+
+- Why do 5 file(s) lack file-level docs (e.g. `deploynator/_app.py`)? What purpose do they serve?
+- Is the dangerous import `subprocess` in `deploynator/_app.py` still required, or can it be isolated?
+- What would break if the most connected file in deploynator: _platforms changed?
+- Should deploynator: _platforms be split, given cohesion 0.22?
+
+## Sources
+
+- `deploynator/_app.py`
+- `deploynator/_deploy.py`
+- `deploynator/_git.py`
+- `deploynator/_platforms.py`
+- `tests/test_deploy.py`

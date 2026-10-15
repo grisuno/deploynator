@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Component Diagrams | Component diagrams</title>
+<style>
+:root{--cb-bg:#020617;--cb-stage:#030a1c;--cb-panel:#0b1224;--cb-panel2:#111c33;--cb-ink:#f8fafc;--cb-muted:#94a3b8;--cb-faint:#475569;--cb-border:#1e293b;--cb-accent:#22d3ee;--cb-accent2:#f472b6;--cb-chip:#111c33;--cb-glow:rgba(34,211,238,.16)}
+html[data-theme="light"]{--cb-bg:#f8fafc;--cb-stage:#eef2f7;--cb-panel:#ffffff;--cb-panel2:#f1f5f9;--cb-ink:#0f172a;--cb-muted:#475569;--cb-faint:#94a3b8;--cb-border:#e2e8f0;--cb-accent:#0891b2;--cb-accent2:#db2777;--cb-chip:#f1f5f9;--cb-glow:rgba(8,145,178,.10)}
+*{box-sizing:border-box}
+body{margin:0 auto;max-width:1240px;padding:20px;background:var(--cb-bg);color:var(--cb-ink);font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;line-height:1.6}
+a{color:var(--cb-accent)}
+.topbar{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.brand{font-weight:700;background:linear-gradient(90deg,var(--cb-ink),var(--cb-accent) 70%,var(--cb-accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.spacer{flex:1}
+.home,.topbar button{font:inherit;font-size:12px;text-decoration:none;border:1px solid var(--cb-border);border-radius:9px;padding:6px 10px;color:var(--cb-ink);background:var(--cb-panel);cursor:pointer}
+.home:hover,.topbar button:hover{border-color:var(--cb-accent)}
+h1{margin:.4em 0 .2em;font-size:22px}
+h2{font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--cb-muted);margin:26px 0 8px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 4px}
+.chips span{background:var(--cb-chip);border:1px solid var(--cb-border);border-radius:999px;padding:2px 10px;font-size:12px;color:var(--cb-muted)}
+.chips span b{color:var(--cb-accent)}
+.legend{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:10px 0 2px;font-size:12px;color:var(--cb-muted)}
+.legend-title{letter-spacing:.12em;text-transform:uppercase;font-size:10px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;box-shadow:0 0 8px currentColor}
+.diagram-controls{margin:10px 0;text-align:center}
+.diagram-controls button{font:inherit;margin:0 5px;padding:8px 16px;background:var(--cb-panel);color:var(--cb-ink);border:1px solid var(--cb-border);border-radius:9px;cursor:pointer}
+.diagram-controls button:hover{border-color:var(--cb-accent)}
+.cb-wrap{border:1px solid var(--cb-border);border-radius:12px;background:radial-gradient(900px 400px at 20% 0%,var(--cb-glow),transparent 70%),var(--cb-stage);overflow:hidden}
+svg.cb-diagram{display:block;width:100%;height:auto;touch-action:none;cursor:grab}
+.cb-node rect{fill:var(--cb-panel2)}
+.cb-node:hover rect{stroke:var(--cb-accent)!important;stroke-width:3}
+.cb-node.hub rect{filter:drop-shadow(0 0 10px var(--cb-glow))}
+.cb-node a{text-decoration:none}
+.cb-node-label{fill:var(--cb-ink);font-size:13px;font-weight:700}
+.cb-node-sub{fill:var(--cb-muted);font-size:10px}
+.cb-node-layer{fill:var(--cb-muted);font-size:10px}
+.cb-node-sym{fill:var(--cb-accent);font-size:10.5px;font-family:ui-monospace,Menlo,Consolas,monospace}
+.cb-node-hub{fill:var(--cb-accent2);font-size:9px;font-weight:700;text-anchor:end;letter-spacing:.1em}
+.cb-edge{fill:none;stroke:#38bdf8;stroke-opacity:.75}
+.cb-arrow{fill:#38bdf8;fill-opacity:.9}
+.cb-edge-label{fill:var(--cb-ink);font-size:10.5px;text-anchor:middle;paint-order:stroke;stroke:var(--cb-stage);stroke-width:4px}
+.cb-edge-sub{fill:var(--cb-muted);font-size:9px;text-anchor:middle;paint-order:stroke;stroke:var(--cb-stage);stroke-width:4px}
+.component{border:1px solid var(--cb-border);border-left:3px solid var(--cb-accent);background:var(--cb-panel);padding:15px;border-radius:10px;margin-bottom:20px}
+.component h3{color:var(--cb-ink);margin-top:0}
+.component h4{color:var(--cb-muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.rellist{list-style:none;padding-left:0}
+.rellist li{background:var(--cb-panel);border:1px solid var(--cb-border);border-radius:8px;padding:8px 12px;margin:6px 0;font-size:12px}
+.rellist b{color:var(--cb-accent)}
+.references{list-style:none;padding-left:0;margin:10px 0}
+.references li{margin:4px 0}
+code{background:var(--cb-chip);border:1px solid var(--cb-border);padding:1px 6px;border-radius:6px;font-size:12px}
+.muted{color:var(--cb-muted)}
+footer{color:var(--cb-muted);font-size:12px;margin:24px 0}
+#cb-tip{position:fixed;z-index:50;pointer-events:none;display:none;max-width:340px;background:var(--cb-panel);color:var(--cb-ink);border:1px solid var(--cb-border);border-radius:10px;padding:8px 10px;font-size:12px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><span class="brand">Component diagrams</span>
+
+<span class="spacer"></span>
+<button type="button" id="cb-theme" title="Toggle light and dark theme">Theme</button></div>
+<main>
+<h1>Component Diagrams</h1>
+<div class="chips"><span>5 components</span><span>16 relations</span><span>31 files</span></div>
+<div class="legend"><span class="legend-title">Layer</span><span><i style="background:#fb923c"></i>testing</span><span><i style="background:#94a3b8"></i>utility</span></div>
+<div class="diagram-controls"><button type="button" id="cb-reset" title="Reset pan and zoom">Reset Layout</button><button type="button" id="cb-fit" title="Fit the diagram to the view">Fit to View</button><button type="button" id="cb-png" title="Export the diagram as PNG">Export PNG</button></div>
+<div class="cb-wrap"><svg id="cb-diagram" class="cb-diagram" viewBox="0 0 11870 808" role="img" aria-label="Component diagram"><defs><marker id="cb-diagram-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="cb-arrow"/></marker></defs><path d="M11830.0 107.0 C11880.0 107.0 11510.0 305.0 11560.0 305.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:3.5"/><text x="11695.0" y="198.0" class="cb-edge-label">depends on</text><text x="11695.0" y="212.0" class="cb-edge-sub">1 calls · 2 imports</text><path d="M11830.0 107.0 C11880.0 107.0 11510.0 503.0 11560.0 503.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:5.0"/><text x="11695.0" y="297.0" class="cb-edge-label">calls into</text><text x="11695.0" y="311.0" class="cb-edge-sub">8 calls · 5 imports</text><path d="M11830.0 107.0 C11880.0 107.0 11510.0 701.0 11560.0 701.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:4.8"/><text x="11695.0" y="396.0" class="cb-edge-label">calls into</text><text x="11695.0" y="410.0" class="cb-edge-sub">6 calls · 3 imports</text><path d="M11830.0 107.0 C11880.0 107.0 11030.0 404.0 11080.0 404.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:3.1"/><text x="11455.0" y="247.5" class="cb-edge-label">calls into</text><text x="11455.0" y="261.5" class="cb-edge-sub">2 calls · 0 imports</text><path d="M11830.0 305.0 C11880.0 305.0 11510.0 107.0 11560.0 107.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:5.0"/><text x="11695.0" y="198.0" class="cb-edge-label">depends on</text><text x="11695.0" y="212.0" class="cb-edge-sub">15 calls · 17 imports</text><path d="M11830.0 305.0 C11880.0 305.0 11510.0 503.0 11560.0 503.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:5.0"/><text x="11695.0" y="396.0" class="cb-edge-label">calls into</text><text x="11695.0" y="410.0" class="cb-edge-sub">12 calls · 6 imports</text><path d="M11830.0 305.0 C11880.0 305.0 11510.0 701.0 11560.0 701.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:3.5"/><text x="11695.0" y="495.0" class="cb-edge-label">calls into</text><text x="11695.0" y="509.0" class="cb-edge-sub">2 calls · 1 imports</text><path d="M11830.0 503.0 C11880.0 503.0 11510.0 107.0 11560.0 107.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:5.0"/><text x="11695.0" y="297.0" class="cb-edge-label">calls into</text><text x="11695.0" y="311.0" class="cb-edge-sub">14 calls · 8 imports</text><path d="M11830.0 503.0 C11880.0 503.0 11510.0 701.0 11560.0 701.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:5.0"/><text x="11695.0" y="594.0" class="cb-edge-label">calls into</text><text x="11695.0" y="608.0" class="cb-edge-sub">14 calls · 6 imports</text><path d="M11830.0 503.0 C11880.0 503.0 11030.0 404.0 11080.0 404.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:4.1"/><text x="11455.0" y="445.5" class="cb-edge-label">calls into</text><text x="11455.0" y="459.5" class="cb-edge-sub">4 calls · 1 imports</text><path d="M11830.0 701.0 C11880.0 701.0 11510.0 107.0 11560.0 107.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:5.0"/><text x="11695.0" y="396.0" class="cb-edge-label">calls into</text><text x="11695.0" y="410.0" class="cb-edge-sub">19 calls · 7 imports</text><path d="M11830.0 701.0 C11880.0 701.0 11510.0 305.0 11560.0 305.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:5.0"/><text x="11695.0" y="495.0" class="cb-edge-label">calls into</text><text x="11695.0" y="509.0" class="cb-edge-sub">18 calls · 4 imports</text><path d="M11830.0 701.0 C11880.0 701.0 11510.0 503.0 11560.0 503.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:5.0"/><text x="11695.0" y="594.0" class="cb-edge-label">calls into</text><text x="11695.0" y="608.0" class="cb-edge-sub">45 calls · 8 imports</text><path d="M11350.0 404.0 C11455.0 404.0 11455.0 107.0 11560.0 107.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:4.5"/><text x="11455.0" y="247.5" class="cb-edge-label">calls into</text><text x="11455.0" y="261.5" class="cb-edge-sub">4 calls · 3 imports</text><path d="M11350.0 404.0 C11455.0 404.0 11455.0 503.0 11560.0 503.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:4.3"/><text x="11455.0" y="445.5" class="cb-edge-label">calls into</text><text x="11455.0" y="459.5" class="cb-edge-sub">5 calls · 1 imports</text><path d="M11350.0 404.0 C11455.0 404.0 11455.0 701.0 11560.0 701.0" class="cb-edge" marker-end="url(#cb-diagram-arrow)" style="stroke-width:5.0"/><text x="11455.0" y="544.5" class="cb-edge-label">calls into</text><text x="11455.0" y="558.5" class="cb-edge-sub">21 calls · 1 imports</text><g class="cb-node linked hub" data-desc="deploynator: _changelog groups 6 files (py) around Config, create, resolve_path, gh_authd, glab_authd. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY."><a href="#comp-1"><rect x="11560.0" y="40.0" width="270" height="134" rx="10" stroke="#fb923c" stroke-width="3"/><text x="11574.0" y="64.0" class="cb-node-label">deploynator: _changelog</text><text x="11574.0" y="80.0" class="cb-node-sub">6 files · 63 symbols</text><circle cx="11580.0" cy="92.0" r="4" fill="#fb923c"/><text x="11590.0" y="96.0" class="cb-node-layer">testing</text><text x="11574.0" y="112.0" class="cb-node-sym">Config</text><text x="11574.0" y="126.0" class="cb-node-sym">create</text><text x="11574.0" y="140.0" class="cb-node-sym">resolve_path</text><text x="11574.0" y="154.0" class="cb-node-sub">+59 more</text><text x="11816.0" y="60.0" class="cb-node-hub">HUB</text></a></g><g class="cb-node linked" data-desc="deploynator: _toml groups 6 files (py) around TomlConfig, __post_init__, _clamp_timeout, load_toml_config, TestRunner."><a href="#comp-2"><rect x="11560.0" y="238.0" width="270" height="134" rx="10" stroke="#fb923c" stroke-width="3"/><text x="11574.0" y="262.0" class="cb-node-label">deploynator: _toml</text><text x="11574.0" y="278.0" class="cb-node-sub">6 files · 43 symbols</text><circle cx="11580.0" cy="290.0" r="4" fill="#fb923c"/><text x="11590.0" y="294.0" class="cb-node-layer">testing</text><text x="11574.0" y="310.0" class="cb-node-sym">TomlConfig</text><text x="11574.0" y="324.0" class="cb-node-sym">__post_init__</text><text x="11574.0" y="338.0" class="cb-node-sym">_clamp_timeout</text><text x="11574.0" y="352.0" class="cb-node-sub">+37 more</text></a></g><g class="cb-node linked" data-desc="deploynator: _models groups 6 files (py) around Platform, from_string, label, cli_name, auth_env_var."><a href="#comp-3"><rect x="11560.0" y="436.0" width="270" height="134" rx="10" stroke="#fb923c" stroke-width="3"/><text x="11574.0" y="460.0" class="cb-node-label">deploynator: _models</text><text x="11574.0" y="476.0" class="cb-node-sub">6 files · 112 symbols</text><circle cx="11580.0" cy="488.0" r="4" fill="#fb923c"/><text x="11590.0" y="492.0" class="cb-node-layer">testing</text><text x="11574.0" y="508.0" class="cb-node-sym">Platform</text><text x="11574.0" y="522.0" class="cb-node-sym">from_string</text><text x="11574.0" y="536.0" class="cb-node-sym">label</text><text x="11574.0" y="550.0" class="cb-node-sub">+101 more</text></a></g><g class="cb-node" data-desc="deploynator: _platforms groups 5 files (py) around DeploynatorApp, __init__, auth_login, auth_status, _auth_github. _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin."><a href="#comp-4"><rect x="11560.0" y="634.0" width="270" height="134" rx="10" stroke="#94a3b8" stroke-width="2.5"/><text x="11574.0" y="658.0" class="cb-node-label">deploynator: _platforms</text><text x="11574.0" y="674.0" class="cb-node-sub">5 files · 115 symbols</text><circle cx="11580.0" cy="686.0" r="4" fill="#94a3b8"/><text x="11590.0" y="690.0" class="cb-node-layer">utility</text><text x="11574.0" y="706.0" class="cb-node-sym">DeploynatorApp</text><text x="11574.0" y="720.0" class="cb-node-sym">__init__</text><text x="11574.0" y="734.0" class="cb-node-sym">auth_login</text><text x="11574.0" y="748.0" class="cb-node-sub">+88 more</text></a></g><g class="cb-node" data-desc="deploynator: _mcp_server groups 4 files (py) around MCPRequest, __init__, is_notification, response, error. MCP (Model Context Protocol) stdio server for deploynator."><a href="#comp-5"><rect x="11080.0" y="337.0" width="270" height="134" rx="10" stroke="#94a3b8" stroke-width="2.5"/><text x="11094.0" y="361.0" class="cb-node-label">deploynator: _mcp_server</text><text x="11094.0" y="377.0" class="cb-node-sub">4 files · 46 symbols</text><circle cx="11100.0" cy="389.0" r="4" fill="#94a3b8"/><text x="11110.0" y="393.0" class="cb-node-layer">utility</text><text x="11094.0" y="409.0" class="cb-node-sym">MCPRequest</text><text x="11094.0" y="423.0" class="cb-node-sym">__init__</text><text x="11094.0" y="437.0" class="cb-node-sym">is_notification</text><text x="11094.0" y="451.0" class="cb-node-sub">+38 more</text></a></g></svg></div>
+<h2>Details</h2>
+<p>Static architecture map of 31 files (py, sh) in 5 components: deploynator: _changelog, deploynator: _toml, deploynator: _models, deploynator: _platforms, deploynator: _mcp_server. Structure is extracted statically without LLM calls; component prose may be enriched locally.</p>
+<h2>Relations</h2>
+<ul class="rellist">
+<li><b>deploynator: _changelog</b> depends on <b>deploynator: _toml</b> — 2 imports, 1 calls across the boundary
+<br><code>tests/test_pypi.py::_toml@154 → deploynator/_toml.py::TomlConfig</code>
+</li>
+<li><b>deploynator: _changelog</b> calls into <b>deploynator: _models</b> — 5 imports, 8 calls across the boundary
+<br><code>deploynator/_changelog.py::generate_from_messages@29 → deploynator/_models.py::parse</code> · <code>deploynator/_changelog.py::generate_from_messages@31 → deploynator/_models.py::ChangelogEntry</code> · <code>deploynator/_changelog.py::generate_from_messages@38 → deploynator/_models.py::ChangelogEntry</code>
+</li>
+<li><b>deploynator: _changelog</b> calls into <b>deploynator: _platforms</b> — 3 imports, 6 calls across the boundary
+<br><code>tests/test_pypi.py::test_prompted_token_used_for_upload@137 → deploynator/_deploy.py::DeployOrchestrator</code> · <code>tests/test_pypi.py::test_prompted_token_used_for_upload@137 → deploynator/_deploy.py::deploy</code> · <code>tests/test_pypi.py::test_pypi_failure_aborts_with_error@212 → deploynator/_deploy.py::DeployOrchestrator</code>
+</li>
+<li><b>deploynator: _changelog</b> calls into <b>deploynator: _mcp_server</b> — 0 imports, 2 calls across the boundary
+<br><code>deploynator/_pypi.py::save_pypirc@80 → deploynator/_mcp_server.py::read</code> · <code>tests/test_pypi.py::test_save_pypirc_roundtrip@91 → deploynator/_mcp_server.py::read</code>
+</li>
+<li><b>deploynator: _toml</b> depends on <b>deploynator: _changelog</b> — 17 imports, 15 calls across the boundary
+<br><code>deploynator/_toml.py::load_toml_config@52 → deploynator/_config.py::create</code> · <code>tests/bdd_test_deploy.py::test_tests_failure_blocks_release@111 → deploynator/_config.py::create</code> · <code>tests/bdd_test_deploy.py::test_docs_failure_does_not_block_release@135 → deploynator/_config.py::create</code>
+</li>
+<li><b>deploynator: _toml</b> calls into <b>deploynator: _models</b> — 6 imports, 12 calls across the boundary
+<br><code>tests/bdd_test_deploy.py::test_version_bump_by_commit_type@47 → deploynator/_models.py::from_string</code> · <code>tests/bdd_test_deploy.py::test_version_bump_by_commit_type@48 → deploynator/_models.py::bump_strategy</code> · <code>tests/bdd_test_deploy.py::test_version_bump_by_commit_type@51 → deploynator/_models.py::parse</code>
+</li>
+<li><b>deploynator: _toml</b> calls into <b>deploynator: _platforms</b> — 1 imports, 2 calls across the boundary
+<br><code>tests/bdd_test_deploy.py::test_tests_failure_blocks_release@111 → deploynator/_deploy.py::DeployOrchestrator</code> · <code>tests/bdd_test_deploy.py::test_tests_failure_blocks_release@112 → deploynator/_deploy.py::deploy</code>
+</li>
+<li><b>deploynator: _models</b> calls into <b>deploynator: _changelog</b> — 8 imports, 14 calls across the boundary
+<br><code>tests/test_path_deploy.py::test_release_v_prefix@22 → deploynator/_config.py::create</code> · <code>tests/test_path_deploy.py::test_v_prefix@31 → deploynator/_config.py::create</code> · <code>tests/test_path_deploy.py::test_write_pyproject_toml@43 → deploynator/_config.py::create</code>
+</li>
+<li><b>deploynator: _models</b> calls into <b>deploynator: _platforms</b> — 6 imports, 14 calls across the boundary
+<br><code>tests/test_path_deploy.py::test_release_by_path_dry_run@58 → deploynator/_app.py::DeploynatorApp</code> · <code>tests/test_path_deploy.py::test_release_by_path_dry_run@59 → deploynator/_app.py::release</code> · <code>tests/test_path_deploy.py::test_no_platforms_pushes_to_origin@83 → deploynator/_deploy.py::DeployOrchestrator</code>
+</li>
+<li><b>deploynator: _models</b> calls into <b>deploynator: _mcp_server</b> — 1 imports, 4 calls across the boundary
+<br><code>deploynator/_semver.py::get_current_version@35 → deploynator/_mcp_server.py::read</code> · <code>deploynator/_semver.py::write_version_file@75 → deploynator/_mcp_server.py::read</code> · <code>deploynator/_semver.py::write_version_file@85 → deploynator/_mcp_server.py::read</code>
+</li>
+<li><b>deploynator: _platforms</b> calls into <b>deploynator: _changelog</b> — 7 imports, 19 calls across the boundary
+<br><code>deploynator/_app.py::__init__@22 → deploynator/_config.py::create</code> · <code>deploynator/_app.py::__init__@25 → deploynator/_config.py::create</code> · <code>deploynator/_app.py::auth_status@48 → deploynator/_config.py::create</code>
+</li>
+<li><b>deploynator: _platforms</b> calls into <b>deploynator: _toml</b> — 4 imports, 18 calls across the boundary
+<br><code>deploynator/_app.py::release@247 → deploynator/_toml.py::load_toml_config</code> · <code>deploynator/_deploy.py::__init__@83 → deploynator/_runner.py::TestRunner</code> · <code>deploynator/_deploy.py::__init__@84 → deploynator/_docs.py::DocsRunner</code>
+</li>
+<li><b>deploynator: _platforms</b> calls into <b>deploynator: _models</b> — 8 imports, 45 calls across the boundary
+<br><code>deploynator/_app.py::auth_status@48 → deploynator/_models.py::from_string</code> · <code>deploynator/_app.py::start_branch@135 → deploynator/_models.py::from_string</code> · <code>deploynator/_app.py::commit@184 → deploynator/_models.py::from_string</code>
+</li>
+<li><b>deploynator: _mcp_server</b> calls into <b>deploynator: _changelog</b> — 3 imports, 4 calls across the boundary
+<br><code>deploynator/__main__.py::main@169 → deploynator/_config.py::create</code> · <code>deploynator/__main__.py::main@175 → deploynator/_config.py::create</code> · <code>deploynator/_mcp_server.py::main@273 → deploynator/_config.py::create</code>
+</li>
+<li><b>deploynator: _mcp_server</b> calls into <b>deploynator: _models</b> — 1 imports, 5 calls across the boundary
+<br><code>deploynator/__main__.py::build_parser@38 → deploynator/_models.py::valid_types</code> · <code>deploynator/__main__.py::build_parser@64 → deploynator/_models.py::valid_types</code> · <code>deploynator/__main__.py::build_parser@77 → deploynator/_models.py::valid_types</code>
+</li>
+<li><b>deploynator: _mcp_server</b> calls into <b>deploynator: _platforms</b> — 1 imports, 21 calls across the boundary
+<br><code>deploynator/__main__.py::main@170 → deploynator/_app.py::DeploynatorApp</code> · <code>deploynator/__main__.py::main@170 → deploynator/_app.py::interactive_menu</code> · <code>deploynator/__main__.py::main@176 → deploynator/_app.py::DeploynatorApp</code>
+</li>
+</ul>
+<section class="component" id="comp-1">
+<h3>deploynator: _changelog (1)
+ <a href="#comp-1-children">[Expand]</a>
+</h3>
+<p>deploynator: _changelog groups 6 files (py) around Config, create, resolve_path, gh_authd, glab_authd. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.</p>
+<h4>Related Classes/Methods:</h4>
+<ul class="references">
+<li><a href="../deploynator/_config.py#L8-L78"><code>deploynator/_config.py::Config</code></a></li>
+<li><a href="../deploynator/_config.py#L79-L84"><code>deploynator/_config.py::create</code></a></li>
+<li><a href="../deploynator/_config.py#L85-L90"><code>deploynator/_config.py::resolve_path</code></a></li>
+<li><a href="../deploynator/_config.py#L91-L94"><code>deploynator/_config.py::gh_authd</code></a></li>
+<li><a href="../deploynator/_config.py#L95-L98"><code>deploynator/_config.py::glab_authd</code></a></li>
+<li><a href="../deploynator/_config.py#L99-L100"><code>deploynator/_config.py::bb_authd</code></a></li>
+<li><a href="../deploynator/_pypi.py"><code>deploynator/_pypi.py::PyPIRunner</code></a></li>
+<li><a href="../deploynator/_pypi.py#L13-L15"><code>deploynator/_pypi.py::__init__</code></a></li>
+</ul>
+<h4 id="comp-1-children">Sub-components</h4>
+<div class="cb-wrap"><svg id="cb-sub-comp-1" class="cb-diagram" viewBox="0 0 830 214" role="img" aria-label="Component diagram"><defs><marker id="cb-sub-comp-1-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="cb-arrow"/></marker></defs><path d="M310.0 107.0 C415.0 107.0 415.0 107.0 520.0 107.0" class="cb-edge" marker-end="url(#cb-sub-comp-1-arrow)" style="stroke-width:5.0"/><text x="415.0" y="99.0" class="cb-edge-label">calls into</text><text x="415.0" y="113.0" class="cb-edge-sub">90 calls · 31 imports</text><g class="cb-node" data-desc="deploynator groups 3 files (py) around Config, create, resolve_path, gh_authd, glab_authd. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY."><a href="#comp-1-1"><rect x="520.0" y="40.0" width="270" height="134" rx="10" stroke="#94a3b8" stroke-width="2.5"/><text x="534.0" y="64.0" class="cb-node-label">deploynator</text><text x="534.0" y="80.0" class="cb-node-sub">3 files · 23 symbols</text><circle cx="540.0" cy="92.0" r="4" fill="#94a3b8"/><text x="550.0" y="96.0" class="cb-node-layer">utility</text><text x="534.0" y="112.0" class="cb-node-sym">Config</text><text x="534.0" y="126.0" class="cb-node-sym">create</text><text x="534.0" y="140.0" class="cb-node-sym">resolve_path</text><text x="534.0" y="154.0" class="cb-node-sub">+19 more</text></a></g><g class="cb-node" data-desc="tests groups 3 files (py) around TestChangelogGenerator, generator, test_generate_header, test_generate_from_messages, test_generate_from_messages_organizes_by_type. RED: PyPI runner — detecta packaging, build limpio, upload twine."><a href="#comp-1-2"><rect x="40.0" y="40.0" width="270" height="134" rx="10" stroke="#fb923c" stroke-width="2.5"/><text x="54.0" y="64.0" class="cb-node-label">tests</text><text x="54.0" y="80.0" class="cb-node-sub">3 files · 40 symbols</text><circle cx="60.0" cy="92.0" r="4" fill="#fb923c"/><text x="70.0" y="96.0" class="cb-node-layer">testing</text><text x="54.0" y="112.0" class="cb-node-sym">TestChangelogGenerator</text><text x="54.0" y="126.0" class="cb-node-sym">generator</text><text x="54.0" y="140.0" class="cb-node-sym">test_generate_header</text><text x="54.0" y="154.0" class="cb-node-sub">+37 more</text></a></g></svg></div>
+<h5 id="comp-1-1">deploynator (1.1)</h5>
+<p>deploynator groups 3 files (py) around Config, create, resolve_path, gh_authd, glab_authd. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.</p>
+<h5 id="comp-1-2">tests (1.2)</h5>
+<p>tests groups 3 files (py) around TestChangelogGenerator, generator, test_generate_header, test_generate_from_messages, test_generate_from_messages_organizes_by_type. RED: PyPI runner — detecta packaging, build limpio, upload twine.</p>
+<h4>Files</h4>
+<ul class="references">
+<li><code>deploynator/_changelog.py</code></li>
+<li><code>deploynator/_config.py</code></li>
+<li><code>deploynator/_pypi.py</code></li>
+<li><code>tests/test_changelog.py</code></li>
+<li><code>tests/test_config.py</code></li>
+<li><code>tests/test_pypi.py</code></li>
+</ul>
+</section>
+<section class="component" id="comp-2">
+<h3>deploynator: _toml (2)
+ <a href="#comp-2-children">[Expand]</a>
+</h3>
+<p>deploynator: _toml groups 6 files (py) around TomlConfig, __post_init__, _clamp_timeout, load_toml_config, TestRunner.</p>
+<h4>Related Classes/Methods:</h4>
+<ul class="references">
+<li><a href="../deploynator/_toml.py#L14-L29"><code>deploynator/_toml.py::TomlConfig</code></a></li>
+<li><a href="../deploynator/_toml.py#L30-L37"><code>deploynator/_toml.py::__post_init__</code></a></li>
+<li><a href="../deploynator/_toml.py#L38-L45"><code>deploynator/_toml.py::_clamp_timeout</code></a></li>
+<li><a href="../deploynator/_toml.py#L46-L100"><code>deploynator/_toml.py::load_toml_config</code></a></li>
+<li><a href="../deploynator/_runner.py"><code>deploynator/_runner.py::TestRunner</code></a></li>
+<li><a href="../deploynator/_runner.py#L12-L14"><code>deploynator/_runner.py::__init__</code></a></li>
+<li><a href="../deploynator/_runner.py#L15-L51"><code>deploynator/_runner.py::run</code></a></li>
+<li><a href="../deploynator/_docs.py"><code>deploynator/_docs.py::DocsRunner</code></a></li>
+</ul>
+<h4 id="comp-2-children">Sub-components</h4>
+<div class="cb-wrap"><svg id="cb-sub-comp-2" class="cb-diagram" viewBox="0 0 830 214" role="img" aria-label="Component diagram"><defs><marker id="cb-sub-comp-2-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="cb-arrow"/></marker></defs><path d="M310.0 107.0 C415.0 107.0 415.0 107.0 520.0 107.0" class="cb-edge" marker-end="url(#cb-sub-comp-2-arrow)" style="stroke-width:5.0"/><text x="415.0" y="99.0" class="cb-edge-label">calls into</text><text x="415.0" y="113.0" class="cb-edge-sub">48 calls · 26 imports</text><g class="cb-node" data-desc="deploynator groups 3 files (py) around TomlConfig, __post_init__, _clamp_timeout, load_toml_config, TestRunner."><a href="#comp-2-1"><rect x="520.0" y="40.0" width="270" height="134" rx="10" stroke="#94a3b8" stroke-width="2.5"/><text x="534.0" y="64.0" class="cb-node-label">deploynator</text><text x="534.0" y="80.0" class="cb-node-sub">3 files · 10 symbols</text><circle cx="540.0" cy="92.0" r="4" fill="#94a3b8"/><text x="550.0" y="96.0" class="cb-node-layer">utility</text><text x="534.0" y="112.0" class="cb-node-sym">TomlConfig</text><text x="534.0" y="126.0" class="cb-node-sym">__post_init__</text><text x="534.0" y="140.0" class="cb-node-sym">_clamp_timeout</text><text x="534.0" y="154.0" class="cb-node-sub">+5 more</text></a></g><g class="cb-node" data-desc="tests groups 3 files (py) around TestBDDDeployScenarios, project, test_version_bump_by_commit_type, test_conventional_commit_parsing, test_commit_message_format_is_consistent. BDD-style tests for deploynator using behavior-driven patterns."><a href="#comp-2-2"><rect x="40.0" y="40.0" width="270" height="134" rx="10" stroke="#fb923c" stroke-width="2.5"/><text x="54.0" y="64.0" class="cb-node-label">tests</text><text x="54.0" y="80.0" class="cb-node-sub">3 files · 33 symbols</text><circle cx="60.0" cy="92.0" r="4" fill="#fb923c"/><text x="70.0" y="96.0" class="cb-node-layer">testing</text><text x="54.0" y="112.0" class="cb-node-sym">TestBDDDeployScenarios</text><text x="54.0" y="126.0" class="cb-node-sym">project</text><text x="54.0" y="140.0" class="cb-node-sym">test_version_bump_by_co…</text><text x="54.0" y="154.0" class="cb-node-sub">+29 more</text></a></g></svg></div>
+<h5 id="comp-2-1">deploynator (2.1)</h5>
+<p>deploynator groups 3 files (py) around TomlConfig, __post_init__, _clamp_timeout, load_toml_config, TestRunner.</p>
+<h5 id="comp-2-2">tests (2.2)</h5>
+<p>tests groups 3 files (py) around TestBDDDeployScenarios, project, test_version_bump_by_commit_type, test_conventional_commit_parsing, test_commit_message_format_is_consistent. BDD-style tests for deploynator using behavior-driven patterns.</p>
+<h4>Files</h4>
+<ul class="references">
+<li><code>deploynator/_docs.py</code></li>
+<li><code>deploynator/_runner.py</code></li>
+<li><code>deploynator/_toml.py</code></li>
+<li><code>tests/bdd_test_deploy.py</code></li>
+<li><code>tests/test_runner.py</code></li>
+<li><code>tests/test_toml.py</code></li>
+</ul>
+</section>
+<section class="component" id="comp-3">
+<h3>deploynator: _models (3)
+ <a href="#comp-3-children">[Expand]</a>
+</h3>
+<p>deploynator: _models groups 6 files (py) around Platform, from_string, label, cli_name, auth_env_var.</p>
+<h4>Related Classes/Methods:</h4>
+<ul class="references">
+<li><a href="../deploynator/_models.py#L10-L15"><code>deploynator/_models.py::Platform</code></a></li>
+<li><a href="../deploynator/_models.py#L16-L26"><code>deploynator/_models.py::from_string</code></a></li>
+<li><a href="../deploynator/_models.py#L27-L29"><code>deploynator/_models.py::label</code></a></li>
+<li><a href="../deploynator/_models.py#L30-L36"><code>deploynator/_models.py::cli_name</code></a></li>
+<li><a href="../deploynator/_models.py#L37-L44"><code>deploynator/_models.py::auth_env_var</code></a></li>
+<li><a href="../deploynator/_models.py#L45-L57"><code>deploynator/_models.py::CommitType</code></a></li>
+<li><a href="../deploynator/_models.py#L58-L64"><code>deploynator/_models.py::from_string</code></a></li>
+<li><a href="../deploynator/_models.py#L65-L67"><code>deploynator/_models.py::valid_types</code></a></li>
+</ul>
+<h4 id="comp-3-children">Sub-components</h4>
+<div class="cb-wrap"><svg id="cb-sub-comp-3" class="cb-diagram" viewBox="0 0 830 214" role="img" aria-label="Component diagram"><defs><marker id="cb-sub-comp-3-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="cb-arrow"/></marker></defs><path d="M310.0 107.0 C415.0 107.0 415.0 107.0 520.0 107.0" class="cb-edge" marker-end="url(#cb-sub-comp-3-arrow)" style="stroke-width:5.0"/><text x="415.0" y="99.0" class="cb-edge-label">calls into</text><text x="415.0" y="113.0" class="cb-edge-sub">93 calls · 12 imports</text><g class="cb-node" data-desc="deploynator groups 2 files (py) around Platform, from_string, label, cli_name, auth_env_var."><a href="#comp-3-1"><rect x="520.0" y="40.0" width="270" height="134" rx="10" stroke="#34d399" stroke-width="2.5"/><text x="534.0" y="64.0" class="cb-node-label">deploynator</text><text x="534.0" y="80.0" class="cb-node-sub">2 files · 36 symbols</text><circle cx="540.0" cy="92.0" r="4" fill="#34d399"/><text x="550.0" y="96.0" class="cb-node-layer">business logic</text><text x="534.0" y="112.0" class="cb-node-sym">Platform</text><text x="534.0" y="126.0" class="cb-node-sym">from_string</text><text x="534.0" y="140.0" class="cb-node-sym">label</text><text x="534.0" y="154.0" class="cb-node-sub">+29 more</text></a></g><g class="cb-node" data-desc="tests groups 4 files (py) around TestPlatformContract, test_platform_from_string, test_platform_from_string_case, test_platform_from_string_invalid, test_platform_cli_name. Path-direct deploy + tag prefijos + version_file toml (ReadMenator real)."><a href="#comp-3-2"><rect x="40.0" y="40.0" width="270" height="134" rx="10" stroke="#fb923c" stroke-width="2.5"/><text x="54.0" y="64.0" class="cb-node-label">tests</text><text x="54.0" y="80.0" class="cb-node-sub">4 files · 76 symbols</text><circle cx="60.0" cy="92.0" r="4" fill="#fb923c"/><text x="70.0" y="96.0" class="cb-node-layer">testing</text><text x="54.0" y="112.0" class="cb-node-sym">TestPlatformContract</text><text x="54.0" y="126.0" class="cb-node-sym">test_platform_from_stri…</text><text x="54.0" y="140.0" class="cb-node-sym">test_platform_from_stri…</text><text x="54.0" y="154.0" class="cb-node-sub">+69 more</text></a></g></svg></div>
+<h5 id="comp-3-1">deploynator (3.1)</h5>
+<p>deploynator groups 2 files (py) around Platform, from_string, label, cli_name, auth_env_var.</p>
+<h5 id="comp-3-2">tests (3.2)</h5>
+<p>tests groups 4 files (py) around TestPlatformContract, test_platform_from_string, test_platform_from_string_case, test_platform_from_string_invalid, test_platform_cli_name. Path-direct deploy + tag prefijos + version_file toml (ReadMenator real).</p>
+<h4>Files</h4>
+<ul class="references">
+<li><code>deploynator/_models.py</code></li>
+<li><code>deploynator/_semver.py</code></li>
+<li><code>tests/test_models.py</code></li>
+<li><code>tests/test_path_deploy.py</code></li>
+<li><code>tests/test_pipeline.py</code></li>
+<li><code>tests/test_semver.py</code></li>
+</ul>
+</section>
+<section class="component" id="comp-4">
+<h3>deploynator: _platforms (4)
+</h3>
+<p>deploynator: _platforms groups 5 files (py) around DeploynatorApp, __init__, auth_login, auth_status, _auth_github. _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.</p>
+<h4>Related Classes/Methods:</h4>
+<ul class="references">
+<li><a href="../deploynator/_app.py"><code>deploynator/_app.py::DeploynatorApp</code></a></li>
+<li><a href="../deploynator/_app.py#L21-L30"><code>deploynator/_app.py::__init__</code></a></li>
+<li><a href="../deploynator/_app.py#L31-L44"><code>deploynator/_app.py::auth_login</code></a></li>
+<li><a href="../deploynator/_app.py#L45-L55"><code>deploynator/_app.py::auth_status</code></a></li>
+<li><a href="../deploynator/_app.py#L56-L68"><code>deploynator/_app.py::_auth_github</code></a></li>
+<li><a href="../deploynator/_app.py#L69-L85"><code>deploynator/_app.py::_auth_gitlab</code></a></li>
+<li><a href="../deploynator/_app.py#L86-L95"><code>deploynator/_app.py::_auth_bitbucket</code></a></li>
+<li><a href="../deploynator/_app.py#L96-L130"><code>deploynator/_app.py::init_project</code></a></li>
+</ul>
+<h4>Files</h4>
+<ul class="references">
+<li><code>deploynator/_app.py</code></li>
+<li><code>deploynator/_deploy.py</code></li>
+<li><code>deploynator/_git.py</code></li>
+<li><code>deploynator/_platforms.py</code></li>
+<li><code>tests/test_deploy.py</code></li>
+</ul>
+</section>
+<section class="component" id="comp-5">
+<h3>deploynator: _mcp_server (5)
+</h3>
+<p>deploynator: _mcp_server groups 4 files (py) around MCPRequest, __init__, is_notification, response, error. MCP (Model Context Protocol) stdio server for deploynator.</p>
+<h4>Related Classes/Methods:</h4>
+<ul class="references">
+<li><a href="../deploynator/_mcp_server.py"><code>deploynator/_mcp_server.py::MCPRequest</code></a></li>
+<li><a href="../deploynator/_mcp_server.py#L36-L42"><code>deploynator/_mcp_server.py::__init__</code></a></li>
+<li><a href="../deploynator/_mcp_server.py#L43-L45"><code>deploynator/_mcp_server.py::is_notification</code></a></li>
+<li><a href="../deploynator/_mcp_server.py#L46-L48"><code>deploynator/_mcp_server.py::response</code></a></li>
+<li><a href="../deploynator/_mcp_server.py#L49-L55"><code>deploynator/_mcp_server.py::error</code></a></li>
+<li><a href="../deploynator/_mcp_server.py"><code>deploynator/_mcp_server.py::MCPTool</code></a></li>
+<li><a href="../deploynator/_mcp_server.py#L57-L63"><code>deploynator/_mcp_server.py::__init__</code></a></li>
+<li><a href="../deploynator/_mcp_server.py#L64-L66"><code>deploynator/_mcp_server.py::definition</code></a></li>
+</ul>
+<h4>Files</h4>
+<ul class="references">
+<li><code>deploynator/__init__.py</code></li>
+<li><code>deploynator/__main__.py</code></li>
+<li><code>deploynator/_mcp_server.py</code></li>
+<li><code>tests/test_cli_mcp.py</code></li>
+</ul>
+</section>
+<footer>Generated offline from static analysis &middot; f7d461610b75</footer>
+</main>
+<div id="cb-tip" role="tooltip"></div>
+<script>
+(function(){
+"use strict";
+try{var s=localStorage.getItem("readmenator-theme");if(s==="light"||s==="dark")document.documentElement.setAttribute("data-theme",s);}catch(e){}
+document.getElementById("cb-theme").addEventListener("click",function(){
+  var r=document.documentElement,n=r.getAttribute("data-theme")==="light"?"dark":"light";
+  r.setAttribute("data-theme",n);try{localStorage.setItem("readmenator-theme",n);}catch(e){}
+});
+var tip=document.getElementById("cb-tip");
+document.querySelectorAll(".cb-node").forEach(function(g){
+  g.addEventListener("mousemove",function(ev){
+    var d=g.getAttribute("data-desc");
+    if(!d){tip.style.display="none";return;}
+    tip.textContent=d;tip.style.display="block";
+    tip.style.left=Math.min(window.innerWidth-330,ev.clientX+12)+"px";
+    tip.style.top=(ev.clientY+14)+"px";
+  });
+  g.addEventListener("mouseleave",function(){tip.style.display="none";});
+});
+document.querySelectorAll("svg.cb-diagram").forEach(function(svg){
+  var vb=svg.viewBox.baseVal,home={x:vb.x,y:vb.y,w:vb.width,h:vb.height},drag=null;
+  function set(x,y,w,h){svg.setAttribute("viewBox",x+" "+y+" "+w+" "+h);}
+  function cur(){var v=svg.viewBox.baseVal;return {x:v.x,y:v.y,w:v.width,h:v.height};}
+  svg.addEventListener("pointerdown",function(ev){drag={x:ev.clientX,y:ev.clientY,v:cur()};svg.setPointerCapture(ev.pointerId);});
+  svg.addEventListener("pointermove",function(ev){
+    if(!drag)return;
+    var r=svg.getBoundingClientRect(),k=drag.v.w/r.width;
+    set(drag.v.x-(ev.clientX-drag.x)*k,drag.v.y-(ev.clientY-drag.y)*k,drag.v.w,drag.v.h);
+  });
+  svg.addEventListener("pointerup",function(){drag=null;});
+  svg.addEventListener("wheel",function(ev){
+    ev.preventDefault();
+    var v=cur(),r=svg.getBoundingClientRect(),f=Math.exp(ev.deltaY*0.0012);
+    var mx=v.x+(ev.clientX-r.left)/r.width*v.w,my=v.y+(ev.clientY-r.top)/r.height*v.h;
+    var w=Math.min(home.w*4,Math.max(home.w/8,v.w*f)),h=w*v.h/v.w;
+    set(mx-(mx-v.x)*w/v.w,my-(my-v.y)*h/v.h,w,h);
+  },{passive:false});
+  svg._home=home;svg._set=set;
+});
+document.getElementById("cb-reset").addEventListener("click",function(){
+  var svg=document.getElementById("cb-diagram");if(!svg)return;var h=svg._home;svg._set(h.x,h.y,h.w,h.h);
+});
+document.getElementById("cb-fit").addEventListener("click",function(){
+  var svg=document.getElementById("cb-diagram");if(!svg)return;var h=svg._home;svg._set(h.x,h.y,h.w,h.h);
+});
+document.getElementById("cb-png").addEventListener("click",function(){
+  var svg=document.getElementById("cb-diagram");if(!svg)return;
+  try{
+    var data=new XMLSerializer().serializeToString(svg);
+    var img=new Image();
+    img.onload=function(){
+      var c=document.createElement("canvas"),k=2;
+      c.width=svg.viewBox.baseVal.width*k;c.height=svg.viewBox.baseVal.height*k;
+      var x=c.getContext("2d");x.fillStyle="#020617";x.fillRect(0,0,c.width,c.height);
+      x.drawImage(img,0,0,c.width,c.height);
+      var a=document.createElement("a");a.download="component-diagram.png";a.href=c.toDataURL("image/png");a.click();
+    };
+    img.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(data);
+  }catch(e){}
+});
+})();
+</script>
+
+</body>
+</html>
