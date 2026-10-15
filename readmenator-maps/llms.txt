@@ -1,6 +1,6 @@
 # deploynator
 
-> Static analysis knowledge base for deploynator: 3 communities, 33 files, 346 imports, 2 languages, 404 symbols.
+> Static analysis knowledge base for deploynator: 3 communities, 33 files, 347 imports, 2 languages, 405 symbols.
 
 Generated offline by readmenator (zero LLM tokens). Start with the wiki index for the big picture, then the agent INDEX for file lookup.
 
@@ -17,7 +17,7 @@ Generated offline by readmenator (zero LLM tokens). Start with the wiki index fo
 
 ## GraphRAG
 
-- [readmenator-graphrag/REPORTS.md](md/readmenator-graphrag/REPORTS.md): Entities: 513 | Relationships: 1433 | Communities: 4 | Themes: 2 | Text units: 416
+- [readmenator-graphrag/REPORTS.md](md/readmenator-graphrag/REPORTS.md): Entities: 514 | Relationships: 1434 | Communities: 4 | Themes: 2 | Text units: 417
 
 ## Agent Docs
 
@@ -29,7 +29,7 @@ Generated offline by readmenator (zero LLM tokens). Start with the wiki index fo
 - [readmenator-agent/KB_deploynator.md](md/readmenator-agent/KB_deploynator.md): Depends on: deploynator/app.py
 - [readmenator-agent/KB_root.md](md/readmenator-agent/KB_root.md): Doc: example: use deploynator programmatically as a library.
 - [readmenator-agent/KB_tests.md](md/readmenator-agent/KB_tests.md): Doc: BDD-style tests for deploynator using behavior-driven patterns.
-- [readmenator-agent/MEMORY.md](md/readmenator-agent/MEMORY.md): Generated from 33 files at commit 72de9b538b7f. Read this first, then readmenator-wiki/index.md, then readmenator . ask "<question>" for anything specific.
+- [readmenator-agent/MEMORY.md](md/readmenator-agent/MEMORY.md): Generated from 33 files at commit 821c8ca93a3c. Read this first, then readmenator-wiki/index.md, then readmenator . ask "<question>" for anything specific.
 - [readmenator-agent/SECURITY.md](md/readmenator-agent/SECURITY.md)
 - [readmenator-agent/SYMBOLS.md](md/readmenator-agent/SYMBOLS.md)
 - [readmenator-agent/recipes/add-function.md](md/readmenator-agent/recipes/add-function.md): Find the target file by purpose: grep -in '<topic>' readmenator-agent/INDEX.md

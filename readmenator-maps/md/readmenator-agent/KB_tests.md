@@ -209,30 +209,31 @@
 - Layer: testing
 - Language: py
 - Symbols:
-  - `_git_init` (function, line 7) `def _git_init(tmp)`
-  - `TestDetect` (class, line 17) `class TestDetect`
-  - `TestPromptCredentials` (class, line 56) `class TestPromptCredentials`
-  - `TestCleanAndRun` (class, line 173) `class TestCleanAndRun`
-  - `TestPipelinePyPI` (class, line 215) `class TestPipelinePyPI`
-  - `test_pyproject_with_project_table` (method, line 18) `def test_pyproject_with_project_table(self)`
-  - `test_empty_dir_no_packaging` (method, line 26) `def test_empty_dir_no_packaging(self)`
-  - `test_setup_py_counts` (method, line 32) `def test_setup_py_counts(self)`
-  - `test_credentials_from_env` (method, line 40) `def test_credentials_from_env(self, monkeypatch)`
-  - `test_no_shell_in_runner` (method, line 50) `def test_no_shell_in_runner(self)`
-  - `test_no_tty_returns_none` (method, line 57) `def test_no_tty_returns_none(self, monkeypatch)`
-  - `test_prompt_returns_token_without_save` (method, line 64) `def test_prompt_returns_token_without_save(self, monkeypatch)`
-  - `test_prompt_empty_token_returns_none` (method, line 73) `def test_prompt_empty_token_returns_none(self, monkeypatch)`
-  - `test_prompt_default_is_no_save` (method, line 81) `def test_prompt_default_is_no_save(self, monkeypatch)`
-  - `test_prompt_yes_saves` (method, line 95) `def test_prompt_yes_saves(self, monkeypatch)`
-  - `test_save_pypirc_roundtrip` (method, line 108) `def test_save_pypirc_roundtrip(self)`
-  - `test_save_pypirc_rejects_symlink` (method, line 122) `def test_save_pypirc_rejects_symlink(self)`
-  - `test_prompted_token_used_for_upload` (method, line 136) `def test_prompted_token_used_for_upload(self, monkeypatch)`
-  - `_toml` (method, line 174) `def _toml(self)`
-  - `test_clean_removes_dist` (method, line 183) `def test_clean_removes_dist(self)`
-  - `test_run_fails_on_broken_build` (method, line 195) `def test_run_fails_on_broken_build(self, monkeypatch)`
-  - `test_run_skips_without_packaging` (method, line 206) `def test_run_skips_without_packaging(self)`
-  - `test_pypi_failure_aborts_with_error` (method, line 216) `def test_pypi_failure_aborts_with_error(self, monkeypatch)`
-  - `test_no_credentials_skips_pypi` (method, line 248) `def test_no_credentials_skips_pypi(self, monkeypatch)`
+  - `_isolated_home` (function, line 10) `def _isolated_home(tmp_path, monkeypatch)`
+  - `_git_init` (function, line 15) `def _git_init(tmp)`
+  - `TestDetect` (class, line 25) `class TestDetect`
+  - `TestPromptCredentials` (class, line 64) `class TestPromptCredentials`
+  - `TestCleanAndRun` (class, line 181) `class TestCleanAndRun`
+  - `TestPipelinePyPI` (class, line 223) `class TestPipelinePyPI`
+  - `test_pyproject_with_project_table` (method, line 26) `def test_pyproject_with_project_table(self)`
+  - `test_empty_dir_no_packaging` (method, line 34) `def test_empty_dir_no_packaging(self)`
+  - `test_setup_py_counts` (method, line 40) `def test_setup_py_counts(self)`
+  - `test_credentials_from_env` (method, line 48) `def test_credentials_from_env(self, monkeypatch)`
+  - `test_no_shell_in_runner` (method, line 58) `def test_no_shell_in_runner(self)`
+  - `test_no_tty_returns_none` (method, line 65) `def test_no_tty_returns_none(self, monkeypatch)`
+  - `test_prompt_returns_token_without_save` (method, line 72) `def test_prompt_returns_token_without_save(self, monkeypatch)`
+  - `test_prompt_empty_token_returns_none` (method, line 81) `def test_prompt_empty_token_returns_none(self, monkeypatch)`
+  - `test_prompt_default_is_no_save` (method, line 89) `def test_prompt_default_is_no_save(self, monkeypatch)`
+  - `test_prompt_yes_saves` (method, line 103) `def test_prompt_yes_saves(self, monkeypatch)`
+  - `test_save_pypirc_roundtrip` (method, line 116) `def test_save_pypirc_roundtrip(self)`
+  - `test_save_pypirc_rejects_symlink` (method, line 130) `def test_save_pypirc_rejects_symlink(self)`
+  - `test_prompted_token_used_for_upload` (method, line 144) `def test_prompted_token_used_for_upload(self, monkeypatch)`
+  - `_toml` (method, line 182) `def _toml(self)`
+  - `test_clean_removes_dist` (method, line 191) `def test_clean_removes_dist(self)`
+  - `test_run_fails_on_broken_build` (method, line 203) `def test_run_fails_on_broken_build(self, monkeypatch)`
+  - `test_run_skips_without_packaging` (method, line 214) `def test_run_skips_without_packaging(self)`
+  - `test_pypi_failure_aborts_with_error` (method, line 224) `def test_pypi_failure_aborts_with_error(self, monkeypatch)`
+  - `test_no_credentials_skips_pypi` (method, line 256) `def test_no_credentials_skips_pypi(self, monkeypatch)`
 - Depends on: `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_models.py`, `deploynator/_pypi.py`, `deploynator/_toml.py`
 
 ## tests/test_runner.py

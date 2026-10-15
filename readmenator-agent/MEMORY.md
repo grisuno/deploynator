@@ -2,7 +2,7 @@
 
 > Cross-session context for agents. Sections 1-6 are regenerated from the source tree with zero LLM tokens: declared rules are quoted verbatim with `file:line`, measured baselines come from the scan. Section 7 is written by agents and humans and is preserved across rebuilds.
 
-Generated from 33 files at commit `72de9b538b7f`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
+Generated from 33 files at commit `821c8ca93a3c`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
 
 ## 1. Purpose and domain
 
@@ -66,7 +66,7 @@ Declared:
 - none declared in instruction files (add them to AGENTS.md or record them in section 7)
 
 Measured baseline:
-- py: 31 files, 403 symbols; docstrings on 3% of symbols; functions snake_case (100%); types PascalCase (100%); median file 109 lines, max 685.
+- py: 31 files, 404 symbols; docstrings on 3% of symbols; functions snake_case (100%); types PascalCase (100%); median file 109 lines, max 685.
 - sh: 2 files, 1 symbols; docstrings on 100% of symbols; functions snake_case (100%); median file 42 lines, max 42.
 - Tests: 15 files under tests; follow the existing naming (e.g. `bdd_test_deploy.py`).
 

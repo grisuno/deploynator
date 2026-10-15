@@ -348,30 +348,31 @@
 | `test_force_bump_overrides` | method | `tests/test_pipeline.py:121` | `def test_force_bump_overrides(self)` |
 | `test_max_version_helper` | method | `tests/test_pipeline.py:44` | `def test_max_version_helper(self)` |
 | `test_no_test_skips_failing_tests` | method | `tests/test_pipeline.py:86` | `def test_no_test_skips_failing_tests(self)` |
-| `TestCleanAndRun` | class | `tests/test_pypi.py:173` | `class TestCleanAndRun` |
-| `TestDetect` | class | `tests/test_pypi.py:17` | `class TestDetect` |
-| `TestPipelinePyPI` | class | `tests/test_pypi.py:215` | `class TestPipelinePyPI` |
-| `TestPromptCredentials` | class | `tests/test_pypi.py:56` | `class TestPromptCredentials` |
-| `_git_init` | function | `tests/test_pypi.py:7` | `def _git_init(tmp)` |
-| `_toml` | method | `tests/test_pypi.py:174` | `def _toml(self)` |
-| `test_clean_removes_dist` | method | `tests/test_pypi.py:183` | `def test_clean_removes_dist(self)` |
-| `test_credentials_from_env` | method | `tests/test_pypi.py:40` | `def test_credentials_from_env(self, monkeypatch)` |
-| `test_empty_dir_no_packaging` | method | `tests/test_pypi.py:26` | `def test_empty_dir_no_packaging(self)` |
-| `test_no_credentials_skips_pypi` | method | `tests/test_pypi.py:248` | `def test_no_credentials_skips_pypi(self, monkeypatch)` |
-| `test_no_shell_in_runner` | method | `tests/test_pypi.py:50` | `def test_no_shell_in_runner(self)` |
-| `test_no_tty_returns_none` | method | `tests/test_pypi.py:57` | `def test_no_tty_returns_none(self, monkeypatch)` |
-| `test_prompt_default_is_no_save` | method | `tests/test_pypi.py:81` | `def test_prompt_default_is_no_save(self, monkeypatch)` |
-| `test_prompt_empty_token_returns_none` | method | `tests/test_pypi.py:73` | `def test_prompt_empty_token_returns_none(self, monkeypatch)` |
-| `test_prompt_returns_token_without_save` | method | `tests/test_pypi.py:64` | `def test_prompt_returns_token_without_save(self, monkeypatch)` |
-| `test_prompt_yes_saves` | method | `tests/test_pypi.py:95` | `def test_prompt_yes_saves(self, monkeypatch)` |
-| `test_prompted_token_used_for_upload` | method | `tests/test_pypi.py:136` | `def test_prompted_token_used_for_upload(self, monkeypatch)` |
-| `test_pypi_failure_aborts_with_error` | method | `tests/test_pypi.py:216` | `def test_pypi_failure_aborts_with_error(self, monkeypatch)` |
-| `test_pyproject_with_project_table` | method | `tests/test_pypi.py:18` | `def test_pyproject_with_project_table(self)` |
-| `test_run_fails_on_broken_build` | method | `tests/test_pypi.py:195` | `def test_run_fails_on_broken_build(self, monkeypatch)` |
-| `test_run_skips_without_packaging` | method | `tests/test_pypi.py:206` | `def test_run_skips_without_packaging(self)` |
-| `test_save_pypirc_rejects_symlink` | method | `tests/test_pypi.py:122` | `def test_save_pypirc_rejects_symlink(self)` |
-| `test_save_pypirc_roundtrip` | method | `tests/test_pypi.py:108` | `def test_save_pypirc_roundtrip(self)` |
-| `test_setup_py_counts` | method | `tests/test_pypi.py:32` | `def test_setup_py_counts(self)` |
+| `TestCleanAndRun` | class | `tests/test_pypi.py:181` | `class TestCleanAndRun` |
+| `TestDetect` | class | `tests/test_pypi.py:25` | `class TestDetect` |
+| `TestPipelinePyPI` | class | `tests/test_pypi.py:223` | `class TestPipelinePyPI` |
+| `TestPromptCredentials` | class | `tests/test_pypi.py:64` | `class TestPromptCredentials` |
+| `_git_init` | function | `tests/test_pypi.py:15` | `def _git_init(tmp)` |
+| `_isolated_home` | function | `tests/test_pypi.py:10` | `def _isolated_home(tmp_path, monkeypatch)` |
+| `_toml` | method | `tests/test_pypi.py:182` | `def _toml(self)` |
+| `test_clean_removes_dist` | method | `tests/test_pypi.py:191` | `def test_clean_removes_dist(self)` |
+| `test_credentials_from_env` | method | `tests/test_pypi.py:48` | `def test_credentials_from_env(self, monkeypatch)` |
+| `test_empty_dir_no_packaging` | method | `tests/test_pypi.py:34` | `def test_empty_dir_no_packaging(self)` |
+| `test_no_credentials_skips_pypi` | method | `tests/test_pypi.py:256` | `def test_no_credentials_skips_pypi(self, monkeypatch)` |
+| `test_no_shell_in_runner` | method | `tests/test_pypi.py:58` | `def test_no_shell_in_runner(self)` |
+| `test_no_tty_returns_none` | method | `tests/test_pypi.py:65` | `def test_no_tty_returns_none(self, monkeypatch)` |
+| `test_prompt_default_is_no_save` | method | `tests/test_pypi.py:89` | `def test_prompt_default_is_no_save(self, monkeypatch)` |
+| `test_prompt_empty_token_returns_none` | method | `tests/test_pypi.py:81` | `def test_prompt_empty_token_returns_none(self, monkeypatch)` |
+| `test_prompt_returns_token_without_save` | method | `tests/test_pypi.py:72` | `def test_prompt_returns_token_without_save(self, monkeypatch)` |
+| `test_prompt_yes_saves` | method | `tests/test_pypi.py:103` | `def test_prompt_yes_saves(self, monkeypatch)` |
+| `test_prompted_token_used_for_upload` | method | `tests/test_pypi.py:144` | `def test_prompted_token_used_for_upload(self, monkeypatch)` |
+| `test_pypi_failure_aborts_with_error` | method | `tests/test_pypi.py:224` | `def test_pypi_failure_aborts_with_error(self, monkeypatch)` |
+| `test_pyproject_with_project_table` | method | `tests/test_pypi.py:26` | `def test_pyproject_with_project_table(self)` |
+| `test_run_fails_on_broken_build` | method | `tests/test_pypi.py:203` | `def test_run_fails_on_broken_build(self, monkeypatch)` |
+| `test_run_skips_without_packaging` | method | `tests/test_pypi.py:214` | `def test_run_skips_without_packaging(self)` |
+| `test_save_pypirc_rejects_symlink` | method | `tests/test_pypi.py:130` | `def test_save_pypirc_rejects_symlink(self)` |
+| `test_save_pypirc_roundtrip` | method | `tests/test_pypi.py:116` | `def test_save_pypirc_roundtrip(self)` |
+| `test_setup_py_counts` | method | `tests/test_pypi.py:40` | `def test_setup_py_counts(self)` |
 | `TestDocsRunner` | class | `tests/test_runner.py:105` | `class TestDocsRunner` |
 | `TestTestRunner` | class | `tests/test_runner.py:23` | `class TestTestRunner` |
 | `_toml` | function | `tests/test_runner.py:7` | `def _toml(commands, timeout)` |

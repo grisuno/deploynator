@@ -1,6 +1,6 @@
 # GraphRAG Community Reports
 
-Entities: 513 | Relationships: 1433 | Communities: 4 | Themes: 2 | Text units: 416
+Entities: 514 | Relationships: 1434 | Communities: 4 | Themes: 2 | Text units: 417
 
 Query with `readmenator . ask "<question>"` (local: BM25 + Personalized PageRank; global: map-reduce over these reports) or the MCP tool `readmenator.graphrag`.
 
@@ -47,7 +47,7 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.7).
 - `deploynator/_config.py` ranks 1 by PageRank, 64 importers, 6 symbols.
 - `deploynator/__init__.py` ranks 2 by PageRank, 16 importers, 0 symbols.
 - `deploynator/_mcp_server.py` ranks 3 by PageRank, 6 importers, 32 symbols: MCP (Model Context Protocol) stdio server for deploynator.
-- Hotspot `deploynator/_config.py`: 6 symbols, 67 connections (score 0.50).
+- Hotspot `deploynator/_config.py`: 6 symbols, 67 connections (score 0.49).
 - Hotspot `deploynator/_mcp_server.py`: 32 symbols, 15 connections (score 0.39).
 - Taint: 3 paths reach this group via subprocess.
 - Dataflow: 2 INFERRED issues (first: UNCHECKED_ALLOC in test_deploy_sh_content_generic).
@@ -63,7 +63,7 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.7).
 - `deploynator/_app.py` ranks 2 by PageRank, 1 importers, 32 symbols: install_packages: pip install/upgrade packages (default: deploynator from PyPI).
 - `deploynator/_deploy.py` ranks 3 by PageRank, 15 importers, 19 symbols: _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.
 - Hotspot `deploynator/_app.py`: 32 symbols, 39 connections (score 0.55).
-- Hotspot `deploynator/_deploy.py`: 19 symbols, 43 connections (score 0.46).
+- Hotspot `deploynator/_deploy.py`: 19 symbols, 43 connections (score 0.45).
 - Taint: 11 paths reach this group via subprocess.
 - Surprising bridge: app.py <-> test_models.py (4 hops across communities).
 - Key entities: file:tests/test_models.py, file:deploynator/_platforms.py, file:deploynator/_models.py, file:deploynator/_app.py, file:deploynator/_deploy.py, sym:deploynator/_deploy.py::deploy@97, file:deploynator/_git.py, file:deploynator/_semver.py
@@ -76,8 +76,8 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.7).
 - `deploynator/_toml.py` ranks 1 by PageRank, 19 importers, 4 symbols.
 - `deploynator/_pypi.py` ranks 2 by PageRank, 16 importers, 8 symbols: prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.
 - `deploynator/_runner.py` ranks 3 by PageRank, 10 importers, 3 symbols.
-- Hotspot `tests/test_pypi.py`: 24 symbols, 91 connections (score 0.82).
-- Hotspot `tests/test_runner.py`: 15 symbols, 61 connections (score 0.54).
+- Hotspot `tests/test_pypi.py`: 25 symbols, 92 connections (score 0.83).
+- Hotspot `tests/test_runner.py`: 15 symbols, 61 connections (score 0.53).
 - Taint: 6 paths reach this group via subprocess.
 - Surprising bridge: test_models.py <-> test_runner.py (4 hops across communities).
 - Key entities: file:tests/test_pypi.py, file:tests/bdd_test_deploy.py, file:tests/test_runner.py, file:deploynator/_pypi.py, file:deploynator/_toml.py, sym:deploynator/_pypi.py::PyPIRunner@12, file:tests/test_toml.py, sym:deploynator/_toml.py::load_toml_config@46

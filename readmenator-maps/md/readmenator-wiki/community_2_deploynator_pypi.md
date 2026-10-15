@@ -4,7 +4,7 @@
 
 ## Definition
 
-This community groups 8 file(s) rooted at `deploynator` with dominant language py (cohesion 0.38). Central symbols: `DocsRunner`, `PyPIRunner`, `TestBDDDeployScenarios`, `TestBDDPipeline`, `TestCleanAndRun`, `TestDetect`, `TestDocsRunner`, `TestPipelinePyPI`. Core file: `tests/test_pypi.py` (24 symbols). Documented purpose: BDD-style tests for deploynator using behavior-driven patterns.  Feature: Multi-platform deployment As a developer I want to deploy my project to multiple git p.
+This community groups 8 file(s) rooted at `deploynator` with dominant language py (cohesion 0.38). Central symbols: `DocsRunner`, `PyPIRunner`, `TestBDDDeployScenarios`, `TestBDDPipeline`, `TestCleanAndRun`, `TestDetect`, `TestDocsRunner`, `TestPipelinePyPI`. Core file: `tests/test_pypi.py` (25 symbols). Documented purpose: BDD-style tests for deploynator using behavior-driven patterns.  Feature: Multi-platform deployment As a developer I want to deploy my project to multiple git p.
 
 ## Files
 
@@ -15,7 +15,7 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 | `deploynator/_runner.py` | py | utility | 3 | no |
 | `deploynator/_toml.py` | py | utility | 4 | no |
 | `tests/bdd_test_deploy.py` | py | testing | 10 | yes |
-| `tests/test_pypi.py` | py | testing | 24 | yes |
+| `tests/test_pypi.py` | py | testing | 25 | yes |
 | `tests/test_runner.py` | py | testing | 15 | yes |
 | `tests/test_toml.py` | py | testing | 8 | yes |
 
@@ -49,8 +49,8 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 - `test_docs_failure_does_not_block_release` (method, `tests/bdd_test_deploy.py:120`) `def test_docs_failure_does_not_block_release(self)` - Given docs fallan, When deploy, Then continúa (solo warning).
 - `test_force_bump_overrides_commit_type` (method, `tests/bdd_test_deploy.py:137`) `def test_force_bump_overrides_commit_type(self)` - Given type fix (patch), When --bump major, Then 1.2.3 -> 2.0.0.
 - `test_version_is_max_file_tag` (method, `tests/bdd_test_deploy.py:144`) `def test_version_is_max_file_tag(self)` - Given file 1.2.3 y tag 1.4.0, When current, Then 1.4.0.
-- `_git_init` (function, `tests/test_pypi.py:7`) `def _git_init(tmp)`
-- `TestDetect` (class, `tests/test_pypi.py:17`) `class TestDetect`
+- `_isolated_home` (function, `tests/test_pypi.py:10`) `def _isolated_home(tmp_path, monkeypatch)` - Aísla ~/.pypirc real: los tests nunca ven ni tocan credenciales del operador.
+- `_git_init` (function, `tests/test_pypi.py:15`) `def _git_init(tmp)`
 
 ## Internal vs External Edges
 
@@ -68,11 +68,11 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 ## Risks
 
 - [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_pypi.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
 
 ## Open Questions
 

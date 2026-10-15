@@ -31,7 +31,7 @@
 | `tests/test_models.py` | - | tests | 44 | 0 |
 | `tests/test_path_deploy.py` | Path-direct deploy + tag prefijos + version_file toml (ReadMenator real). | tests | 10 | 0 |
 | `tests/test_pipeline.py` | RED: pipeline deploy — tests gate + docs non-blocking + bump override + max(file,tag). | tests | 12 | 0 |
-| `tests/test_pypi.py` | RED: PyPI runner — detecta packaging, build limpio, upload twine. | tests | 24 | 0 |
+| `tests/test_pypi.py` | RED: PyPI runner — detecta packaging, build limpio, upload twine. | tests | 25 | 0 |
 | `tests/test_runner.py` | RED: TestRunner + DocsRunner contracts. | tests | 15 | 0 |
 | `tests/test_semver.py` | - | tests | 11 | 0 |
 | `tests/test_toml.py` | RED: TomlConfig contract — deploynator.toml per-project. | tests | 8 | 0 |

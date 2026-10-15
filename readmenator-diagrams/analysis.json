@@ -1,7 +1,7 @@
 {
  "metadata": {
-  "generated_at": "2026-10-15T02:01:51.608964+00:00",
-  "source_tree_hash": "01b02a034560cf1f68ce1ac916a0f64527190d2e753e0b78bb9090fbef9a4451",
+  "generated_at": "2026-10-15T02:13:43.738012+00:00",
+  "source_tree_hash": "3b5f1884eb5e0aab7b760d53e80de701d0ce84880470975653439aaac542cb73",
   "repo_name": "deploynator",
   "depth_level": 2,
   "depth_cap": 3,
@@ -133,7 +133,7 @@
   },
   "tests/test_pypi.py": {
    "language": "py",
-   "symbols": 24
+   "symbols": 25
   },
   "tests/test_runner.py": {
    "language": "py",
@@ -2669,197 +2669,205 @@
    "type": "FUNCTION",
    "content_hash": "9662505b0d730390"
   },
+  "tests/test_pypi.py|tests/test_pypi.py::_isolated_home": {
+   "file_path": "tests/test_pypi.py",
+   "qualified_name": "tests/test_pypi.py::_isolated_home",
+   "start_line": 10,
+   "end_line": 14,
+   "type": "FUNCTION",
+   "content_hash": "4d0320e3ee3fd5ca"
+  },
   "tests/test_pypi.py|tests/test_pypi.py::_git_init": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::_git_init",
-   "start_line": 7,
-   "end_line": 16,
+   "start_line": 15,
+   "end_line": 24,
    "type": "FUNCTION",
-   "content_hash": "2303af49e14e72af"
+   "content_hash": "c5b97fa58f5ae767"
   },
   "tests/test_pypi.py|tests/test_pypi.py::TestDetect": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::TestDetect",
-   "start_line": 17,
-   "end_line": 17,
+   "start_line": 25,
+   "end_line": 25,
    "type": "CLASS",
-   "content_hash": "59df88f6f04171e9"
+   "content_hash": "842f496804388212"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_pyproject_with_project_table": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_pyproject_with_project_table",
-   "start_line": 18,
-   "end_line": 25,
+   "start_line": 26,
+   "end_line": 33,
    "type": "FUNCTION",
-   "content_hash": "a3f92fcc733d56eb"
+   "content_hash": "a6067ca4e6e23157"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_empty_dir_no_packaging": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_empty_dir_no_packaging",
-   "start_line": 26,
-   "end_line": 31,
+   "start_line": 34,
+   "end_line": 39,
    "type": "FUNCTION",
-   "content_hash": "87693bd312daff51"
+   "content_hash": "b33839403ea4f9d4"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_setup_py_counts": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_setup_py_counts",
-   "start_line": 32,
-   "end_line": 39,
+   "start_line": 40,
+   "end_line": 47,
    "type": "FUNCTION",
-   "content_hash": "d9378d2398db8653"
+   "content_hash": "cf559e26a35a9f25"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_credentials_from_env": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_credentials_from_env",
-   "start_line": 40,
-   "end_line": 49,
+   "start_line": 48,
+   "end_line": 57,
    "type": "FUNCTION",
-   "content_hash": "5d310513a760fb71"
+   "content_hash": "2a75a5d214efefd8"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_no_shell_in_runner": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_no_shell_in_runner",
-   "start_line": 50,
-   "end_line": 55,
+   "start_line": 58,
+   "end_line": 63,
    "type": "FUNCTION",
-   "content_hash": "e4e0ed6047732ea7"
+   "content_hash": "9ef910e952fd3baf"
   },
   "tests/test_pypi.py|tests/test_pypi.py::TestPromptCredentials": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::TestPromptCredentials",
-   "start_line": 56,
-   "end_line": 56,
+   "start_line": 64,
+   "end_line": 64,
    "type": "CLASS",
-   "content_hash": "f192c7f471981f6d"
+   "content_hash": "0134006fa4165518"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_no_tty_returns_none": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_no_tty_returns_none",
-   "start_line": 57,
-   "end_line": 63,
+   "start_line": 65,
+   "end_line": 71,
    "type": "FUNCTION",
-   "content_hash": "31c02338058754da"
+   "content_hash": "100e06ec6274c438"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_prompt_returns_token_without_save": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_prompt_returns_token_without_save",
-   "start_line": 64,
-   "end_line": 72,
+   "start_line": 72,
+   "end_line": 80,
    "type": "FUNCTION",
-   "content_hash": "2c5005f07ec4a787"
+   "content_hash": "909ccf7ce534312b"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_prompt_empty_token_returns_none": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_prompt_empty_token_returns_none",
-   "start_line": 73,
-   "end_line": 80,
+   "start_line": 81,
+   "end_line": 88,
    "type": "FUNCTION",
-   "content_hash": "09da57d2c7138f20"
+   "content_hash": "a9b396d875785a34"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_prompt_default_is_no_save": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_prompt_default_is_no_save",
-   "start_line": 81,
-   "end_line": 94,
+   "start_line": 89,
+   "end_line": 102,
    "type": "FUNCTION",
-   "content_hash": "9144c7604a64a264"
+   "content_hash": "533c4e4c975ba2c3"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_prompt_yes_saves": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_prompt_yes_saves",
-   "start_line": 95,
-   "end_line": 107,
+   "start_line": 103,
+   "end_line": 115,
    "type": "FUNCTION",
-   "content_hash": "7ec8dc5caaab4290"
+   "content_hash": "f5a20017b3cd6e18"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_save_pypirc_roundtrip": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_save_pypirc_roundtrip",
-   "start_line": 108,
-   "end_line": 121,
+   "start_line": 116,
+   "end_line": 129,
    "type": "FUNCTION",
-   "content_hash": "f1f0b270d3241c83"
+   "content_hash": "44f8f31305e0514a"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_save_pypirc_rejects_symlink": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_save_pypirc_rejects_symlink",
-   "start_line": 122,
-   "end_line": 135,
+   "start_line": 130,
+   "end_line": 143,
    "type": "FUNCTION",
-   "content_hash": "b6693e818c1a4b6d"
+   "content_hash": "4a2150aba539e549"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_prompted_token_used_for_upload",
-   "start_line": 136,
-   "end_line": 172,
+   "start_line": 144,
+   "end_line": 180,
    "type": "FUNCTION",
-   "content_hash": "39d8c12b35978b49"
+   "content_hash": "e8c40ee1c999a196"
   },
   "tests/test_pypi.py|tests/test_pypi.py::TestCleanAndRun": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::TestCleanAndRun",
-   "start_line": 173,
-   "end_line": 173,
+   "start_line": 181,
+   "end_line": 181,
    "type": "CLASS",
-   "content_hash": "a485b7636056f86f"
+   "content_hash": "29d37a1b1b0c3764"
   },
   "tests/test_pypi.py|tests/test_pypi.py::_toml": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::_toml",
-   "start_line": 174,
-   "end_line": 182,
+   "start_line": 182,
+   "end_line": 190,
    "type": "FUNCTION",
-   "content_hash": "df1a07124b76aeb3"
+   "content_hash": "02107ccb8ab2c0d6"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_clean_removes_dist": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_clean_removes_dist",
-   "start_line": 183,
-   "end_line": 194,
+   "start_line": 191,
+   "end_line": 202,
    "type": "FUNCTION",
-   "content_hash": "70a5226daa26a804"
+   "content_hash": "1a410079e0c15f1d"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_run_fails_on_broken_build": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_run_fails_on_broken_build",
-   "start_line": 195,
-   "end_line": 205,
+   "start_line": 203,
+   "end_line": 213,
    "type": "FUNCTION",
-   "content_hash": "53ea3a9b37bd59b0"
+   "content_hash": "765b2113f3535792"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_run_skips_without_packaging": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_run_skips_without_packaging",
-   "start_line": 206,
-   "end_line": 214,
+   "start_line": 214,
+   "end_line": 222,
    "type": "FUNCTION",
-   "content_hash": "559a2ca3f8bb3368"
+   "content_hash": "8c12f511c5439498"
   },
   "tests/test_pypi.py|tests/test_pypi.py::TestPipelinePyPI": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::TestPipelinePyPI",
-   "start_line": 215,
-   "end_line": 215,
+   "start_line": 223,
+   "end_line": 223,
    "type": "CLASS",
-   "content_hash": "9f773cfded7c72ed"
+   "content_hash": "0f8d02e9ff0caf61"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_pypi_failure_aborts_with_error": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_pypi_failure_aborts_with_error",
-   "start_line": 216,
-   "end_line": 247,
+   "start_line": 224,
+   "end_line": 255,
    "type": "FUNCTION",
-   "content_hash": "53f41d12459df05f"
+   "content_hash": "45f607b438deb896"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_no_credentials_skips_pypi": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_no_credentials_skips_pypi",
-   "start_line": 248,
-   "end_line": 276,
+   "start_line": 256,
+   "end_line": 284,
    "type": "FUNCTION",
-   "content_hash": "9d79cf040ed92321"
+   "content_hash": "87924201997c25d9"
   },
   "tests/test_runner.py|tests/test_runner.py::_toml": {
    "file_path": "tests/test_runner.py",
@@ -5957,6 +5965,7 @@
     {
      "file_path": "tests/test_pypi.py",
      "methods": [
+      "tests/test_pypi.py::_isolated_home",
       "tests/test_pypi.py::_git_init",
       "tests/test_pypi.py::TestDetect",
       "tests/test_pypi.py::test_pyproject_with_project_table",
@@ -6209,6 +6218,7 @@
       {
        "file_path": "tests/test_pypi.py",
        "methods": [
+        "tests/test_pypi.py::_isolated_home",
         "tests/test_pypi.py::_git_init",
         "tests/test_pypi.py::TestDetect",
         "tests/test_pypi.py::test_pyproject_with_project_table",
@@ -6274,7 +6284,7 @@
      "components": [],
      "components_relations": [],
      "layer": "testing",
-     "symbol_count": 57,
+     "symbol_count": 58,
      "top_symbols": [
       {
        "n": "TestBDDDeployScenarios",
@@ -6289,7 +6299,7 @@
        "k": "method"
       }
      ],
-     "top_symbols_more": 52
+     "top_symbols_more": 53
     }
    ],
    "components_relations": [
@@ -6553,7 +6563,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::run",
        "call_sites": [
         {
-         "line": 8,
+         "line": 16,
          "column": 4
         }
        ],
@@ -6564,7 +6574,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::run",
        "call_sites": [
         {
-         "line": 9,
+         "line": 17,
          "column": 4
         }
        ],
@@ -6575,7 +6585,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::run",
        "call_sites": [
         {
-         "line": 10,
+         "line": 18,
          "column": 4
         }
        ],
@@ -6586,7 +6596,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::run",
        "call_sites": [
         {
-         "line": 13,
+         "line": 21,
          "column": 4
         }
        ],
@@ -6597,7 +6607,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::run",
        "call_sites": [
         {
-         "line": 14,
+         "line": 22,
          "column": 4
         }
        ],
@@ -6608,7 +6618,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::PyPIRunner",
        "call_sites": [
         {
-         "line": 24,
+         "line": 32,
          "column": 19
         }
        ],
@@ -6619,7 +6629,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::is_packaging_project",
        "call_sites": [
         {
-         "line": 24,
+         "line": 32,
          "column": 19
         }
        ],
@@ -6630,7 +6640,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::PyPIRunner",
        "call_sites": [
         {
-         "line": 30,
+         "line": 38,
          "column": 19
         }
        ],
@@ -6641,17 +6651,6 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::is_packaging_project",
        "call_sites": [
         {
-         "line": 30,
-         "column": 19
-        }
-       ],
-       "description": ""
-      },
-      {
-       "source": "tests/test_pypi.py|tests/test_pypi.py::test_setup_py_counts",
-       "target": "deploynator/_pypi.py|deploynator/_pypi.py::PyPIRunner",
-       "call_sites": [
-        {
          "line": 38,
          "column": 19
         }
@@ -6660,32 +6659,43 @@
       },
       {
        "source": "tests/test_pypi.py|tests/test_pypi.py::test_setup_py_counts",
-       "target": "deploynator/_pypi.py|deploynator/_pypi.py::is_packaging_project",
-       "call_sites": [
-        {
-         "line": 38,
-         "column": 19
-        }
-       ],
-       "description": ""
-      },
-      {
-       "source": "tests/test_pypi.py|tests/test_pypi.py::test_credentials_from_env",
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::PyPIRunner",
-       "call_sites": [
-        {
-         "line": 43,
-         "column": 12
-        }
-       ],
-       "description": ""
-      },
-      {
-       "source": "tests/test_pypi.py|tests/test_pypi.py::test_credentials_from_env",
-       "target": "deploynator/_pypi.py|deploynator/_pypi.py::has_credentials",
        "call_sites": [
         {
          "line": 46,
+         "column": 19
+        }
+       ],
+       "description": ""
+      },
+      {
+       "source": "tests/test_pypi.py|tests/test_pypi.py::test_setup_py_counts",
+       "target": "deploynator/_pypi.py|deploynator/_pypi.py::is_packaging_project",
+       "call_sites": [
+        {
+         "line": 46,
+         "column": 19
+        }
+       ],
+       "description": ""
+      },
+      {
+       "source": "tests/test_pypi.py|tests/test_pypi.py::test_credentials_from_env",
+       "target": "deploynator/_pypi.py|deploynator/_pypi.py::PyPIRunner",
+       "call_sites": [
+        {
+         "line": 51,
+         "column": 12
+        }
+       ],
+       "description": ""
+      },
+      {
+       "source": "tests/test_pypi.py|tests/test_pypi.py::test_credentials_from_env",
+       "target": "deploynator/_pypi.py|deploynator/_pypi.py::has_credentials",
+       "call_sites": [
+        {
+         "line": 54,
          "column": 15
         }
        ],
@@ -6696,7 +6706,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::has_credentials",
        "call_sites": [
         {
-         "line": 48,
+         "line": 56,
          "column": 15
         }
        ],
@@ -6707,7 +6717,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::PyPIRunner",
        "call_sites": [
         {
-         "line": 62,
+         "line": 70,
          "column": 15
         }
        ],
@@ -6718,7 +6728,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::prompt_for_credentials",
        "call_sites": [
         {
-         "line": 62,
+         "line": 70,
          "column": 15
         }
        ],
@@ -6729,7 +6739,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::PyPIRunner",
        "call_sites": [
         {
-         "line": 71,
+         "line": 79,
          "column": 15
         }
        ],
@@ -6740,7 +6750,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::prompt_for_credentials",
        "call_sites": [
         {
-         "line": 71,
+         "line": 79,
          "column": 15
         }
        ],
@@ -6751,7 +6761,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::PyPIRunner",
        "call_sites": [
         {
-         "line": 79,
+         "line": 87,
          "column": 15
         }
        ],
@@ -6762,7 +6772,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::prompt_for_credentials",
        "call_sites": [
         {
-         "line": 79,
+         "line": 87,
          "column": 15
         }
        ],
@@ -6773,7 +6783,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::PyPIRunner",
        "call_sites": [
         {
-         "line": 92,
+         "line": 100,
          "column": 15
         }
        ],
@@ -6784,7 +6794,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::prompt_for_credentials",
        "call_sites": [
         {
-         "line": 92,
+         "line": 100,
          "column": 15
         }
        ],
@@ -6795,7 +6805,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::PyPIRunner",
        "call_sites": [
         {
-         "line": 105,
+         "line": 113,
          "column": 15
         }
        ],
@@ -6806,7 +6816,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::prompt_for_credentials",
        "call_sites": [
         {
-         "line": 105,
+         "line": 113,
          "column": 15
         }
        ],
@@ -6817,7 +6827,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::PyPIRunner",
        "call_sites": [
         {
-         "line": 115,
+         "line": 123,
          "column": 12
         }
        ],
@@ -6828,7 +6838,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::save_pypirc",
        "call_sites": [
         {
-         "line": 115,
+         "line": 123,
          "column": 12
         }
        ],
@@ -6839,7 +6849,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::PyPIRunner",
        "call_sites": [
         {
-         "line": 134,
+         "line": 142,
          "column": 16
         }
        ],
@@ -6850,7 +6860,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::save_pypirc",
        "call_sites": [
         {
-         "line": 134,
+         "line": 142,
          "column": 16
         }
        ],
@@ -6861,40 +6871,7 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::run",
        "call_sites": [
         {
-         "line": 149,
-         "column": 12
-        }
-       ],
-       "description": ""
-      },
-      {
-       "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload",
-       "target": "deploynator/_pypi.py|deploynator/_pypi.py::run",
-       "call_sites": [
-        {
-         "line": 150,
-         "column": 12
-        }
-       ],
-       "description": ""
-      },
-      {
-       "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload",
-       "target": "deploynator/_pypi.py|deploynator/_pypi.py::run",
-       "call_sites": [
-        {
-         "line": 151,
-         "column": 12
-        }
-       ],
-       "description": ""
-      },
-      {
-       "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload",
-       "target": "deploynator/_pypi.py|deploynator/_pypi.py::run",
-       "call_sites": [
-        {
-         "line": 152,
+         "line": 157,
          "column": 12
         }
        ],
@@ -6938,7 +6915,40 @@
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::run",
        "call_sites": [
         {
-         "line": 161,
+         "line": 166,
+         "column": 12
+        }
+       ],
+       "description": ""
+      },
+      {
+       "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload",
+       "target": "deploynator/_pypi.py|deploynator/_pypi.py::run",
+       "call_sites": [
+        {
+         "line": 167,
+         "column": 12
+        }
+       ],
+       "description": ""
+      },
+      {
+       "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload",
+       "target": "deploynator/_pypi.py|deploynator/_pypi.py::run",
+       "call_sites": [
+        {
+         "line": 168,
+         "column": 12
+        }
+       ],
+       "description": ""
+      },
+      {
+       "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload",
+       "target": "deploynator/_pypi.py|deploynator/_pypi.py::run",
+       "call_sites": [
+        {
+         "line": 169,
          "column": 12
         }
        ],
@@ -6948,7 +6958,7 @@
     }
    ],
    "layer": "testing",
-   "symbol_count": 75,
+   "symbol_count": 76,
    "top_symbols": [
     {
      "n": "TomlConfig",
@@ -6963,7 +6973,7 @@
      "k": "function"
     }
    ],
-   "top_symbols_more": 66,
+   "top_symbols_more": 67,
    "hub": false
   }
  ],
@@ -8548,7 +8558,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 24,
+       "line": 32,
        "column": 30
       }
      ],
@@ -8559,7 +8569,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 30,
+       "line": 38,
        "column": 30
       }
      ],
@@ -8570,7 +8580,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 38,
+       "line": 46,
        "column": 30
       }
      ],
@@ -8641,7 +8651,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 24,
+       "line": 32,
        "column": 30
       }
      ],
@@ -8652,7 +8662,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 30,
+       "line": 38,
        "column": 30
       }
      ],
@@ -8663,7 +8673,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 38,
+       "line": 46,
        "column": 30
       }
      ],
@@ -8674,7 +8684,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 43,
+       "line": 51,
        "column": 23
       }
      ],
@@ -8685,7 +8695,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 62,
+       "line": 70,
        "column": 26
       }
      ],
@@ -8696,7 +8706,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 71,
+       "line": 79,
        "column": 26
       }
      ],
@@ -8707,7 +8717,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 79,
+       "line": 87,
        "column": 26
       }
      ],
@@ -8718,7 +8728,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 92,
+       "line": 100,
        "column": 26
       }
      ],
@@ -8729,7 +8739,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 105,
+       "line": 113,
        "column": 26
       }
      ],
@@ -8740,7 +8750,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 115,
+       "line": 123,
        "column": 23
       }
      ],
@@ -8751,7 +8761,7 @@
      "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
      "call_sites": [
       {
-       "line": 118,
+       "line": 126,
        "column": 12
       }
      ],
@@ -8762,7 +8772,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 134,
+       "line": 142,
        "column": 27
       }
      ],
@@ -8773,7 +8783,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 164,
+       "line": 172,
        "column": 37
       }
      ],
@@ -8784,7 +8794,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 191,
+       "line": 199,
        "column": 27
       }
      ],
@@ -8795,7 +8805,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 203,
+       "line": 211,
        "column": 33
       }
      ],
@@ -8806,7 +8816,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 210,
+       "line": 218,
        "column": 33
       }
      ],
@@ -8817,7 +8827,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 239,
+       "line": 247,
        "column": 37
       }
      ],
@@ -8828,7 +8838,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 271,
+       "line": 279,
        "column": 37
       }
      ],
@@ -9217,7 +9227,7 @@
      "target": "deploynator/_deploy.py|deploynator/_deploy.py::DeployOrchestrator",
      "call_sites": [
       {
-       "line": 164,
+       "line": 172,
        "column": 18
       }
      ],
@@ -9228,7 +9238,7 @@
      "target": "deploynator/_deploy.py|deploynator/_deploy.py::deploy",
      "call_sites": [
       {
-       "line": 164,
+       "line": 172,
        "column": 18
       }
      ],
@@ -9239,7 +9249,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::ProjectConfig",
      "call_sites": [
       {
-       "line": 165,
+       "line": 173,
        "column": 24
       }
      ],
@@ -9250,7 +9260,7 @@
      "target": "deploynator/_deploy.py|deploynator/_deploy.py::DeployOrchestrator",
      "call_sites": [
       {
-       "line": 239,
+       "line": 247,
        "column": 18
       }
      ],
@@ -9261,7 +9271,7 @@
      "target": "deploynator/_deploy.py|deploynator/_deploy.py::deploy",
      "call_sites": [
       {
-       "line": 239,
+       "line": 247,
        "column": 18
       }
      ],
@@ -9272,7 +9282,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::ProjectConfig",
      "call_sites": [
       {
-       "line": 240,
+       "line": 248,
        "column": 24
       }
      ],
@@ -9283,7 +9293,7 @@
      "target": "deploynator/_deploy.py|deploynator/_deploy.py::DeployOrchestrator",
      "call_sites": [
       {
-       "line": 271,
+       "line": 279,
        "column": 18
       }
      ],
@@ -9294,7 +9304,7 @@
      "target": "deploynator/_deploy.py|deploynator/_deploy.py::deploy",
      "call_sites": [
       {
-       "line": 271,
+       "line": 279,
        "column": 18
       }
      ],
@@ -9305,7 +9315,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::ProjectConfig",
      "call_sites": [
       {
-       "line": 272,
+       "line": 280,
        "column": 24
       }
      ],

@@ -36,8 +36,8 @@ Editing these files can break the listed number of dependents. Run their tests a
 - `deploynator/_models.py` -- complexity: 0.6, centrality: 0.3, combined: 0.4
 - `deploynator/_platforms.py` -- complexity: 0.8, centrality: 0.1, combined: 0.4
 - `deploynator/_mcp_server.py` -- complexity: 0.7, centrality: 0.2, combined: 0.4
-- `deploynator/_pypi.py` -- complexity: 0.2, centrality: 0.3, combined: 0.3
 - `deploynator/_git.py` -- complexity: 0.5, centrality: 0.1, combined: 0.3
+- `deploynator/_pypi.py` -- complexity: 0.2, centrality: 0.3, combined: 0.3
 - `deploynator/_semver.py` -- complexity: 0.2, centrality: 0.2, combined: 0.2
 - `deploynator/_toml.py` -- complexity: 0.1, centrality: 0.3, combined: 0.2
 

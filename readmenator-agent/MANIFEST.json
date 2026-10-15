@@ -1,17 +1,17 @@
 {
   "tool": "readmenator",
   "schema_version": 2,
-  "generated_at": "2026-10-15T02:00:58Z",
+  "generated_at": "2026-10-15T02:13:02Z",
   "project_root": ".",
   "project_name": "deploynator",
-  "git_commit": "72de9b538b7f2eef2f9fd128f0fa883d63e9bc6b",
+  "git_commit": "821c8ca93a3cbad0de6dbbb5beffabbdb595774a",
   "git_branch": "main",
-  "source_fingerprint": "01b02a034560cf1f68ce1ac916a0f64527190d2e753e0b78bb9090fbef9a4451",
+  "source_fingerprint": "3b5f1884eb5e0aab7b760d53e80de701d0ce84880470975653439aaac542cb73",
   "freshness_check": "readmenator . fresh  # exit 0 = docs match sources, exit 1 = run: readmenator . --rebuild",
   "files": 33,
-  "symbols": 404,
-  "imports": 346,
-  "calls": 1925,
+  "symbols": 405,
+  "imports": 347,
+  "calls": 1928,
   "inherits": 6,
   "resolved_imports": 199,
   "security_findings": 0,
@@ -81,13 +81,13 @@
     },
     {
       "path": "KB_tests.md",
-      "lines": 290,
-      "approx_tokens": 4918
+      "lines": 291,
+      "approx_tokens": 4940
     },
     {
       "path": "MEMORY.md",
-      "lines": 99,
-      "approx_tokens": 1517
+      "lines": 97,
+      "approx_tokens": 1499
     },
     {
       "path": "SECURITY.md",
@@ -96,8 +96,8 @@
     },
     {
       "path": "SYMBOLS.md",
-      "lines": 408,
-      "approx_tokens": 10352
+      "lines": 409,
+      "approx_tokens": 10378
     },
     {
       "path": "recipes/add-function.md",

@@ -3,6 +3,14 @@ import os
 import subprocess
 import tempfile
 
+import pytest
+
+
+@pytest.fixture(autouse=True)
+def _isolated_home(tmp_path, monkeypatch):
+    """Aísla ~/.pypirc real: los tests nunca ven ni tocan credenciales del operador."""
+    monkeypatch.setenv("HOME", str(tmp_path))
+
 
 def _git_init(tmp):
     subprocess.run(["git", "init", "-q", tmp], check=True)
