@@ -1,6 +1,6 @@
 # Documentation Coverage
 
-Overall: **2.2%** (4 of 182 public modules, types, and callables). Data members are excluded from the ratio.
+Overall: **2.7%** (5 of 183 public modules, types, and callables). Data members are excluded from the ratio.
 
 [Back to index](index.md)
 
@@ -14,7 +14,7 @@ Overall: **2.2%** (4 of 182 public modules, types, and callables). Data members 
 | enum | 0 | 2 | 0.0% |
 | function | 0 | 5 | 0.0% |
 | method | 2 | 98 | 2.0% |
-| module | 2 | 17 | 11.8% |
+| module | 3 | 18 | 16.7% |
 | property | 0 | 4 | 0.0% |
 | staticmethod | 0 | 2 | 0.0% |
 
@@ -39,6 +39,7 @@ Overall: **2.2%** (4 of 182 public modules, types, and callables). Data members 
 | [`deploynator._mcp_server`](modules/deploynator._mcp_server.py.md) | 1 | 21 | 4.8% |
 | [`deploynator._pypi`](modules/deploynator._pypi.py.md) | 2 | 9 | 22.2% |
 | [`app`](modules/app.py.md) | 1 | 1 | 100.0% |
+| [`deploy.sh`](modules/deploy.sh.md) | 1 | 1 | 100.0% |
 
 ## Warnings
 
@@ -56,16 +57,16 @@ DOC001: 178
 - DOC001 `deploynator/_app.py:21` constructor DeploynatorApp.__init__ is not documented
 - DOC001 `deploynator/_app.py:31` method DeploynatorApp.auth_login is not documented
 - DOC001 `deploynator/_app.py:45` method DeploynatorApp.auth_status is not documented
-- DOC001 `deploynator/_app.py:96` method DeploynatorApp.init_project is not documented
-- DOC001 `deploynator/_app.py:131` method DeploynatorApp.start_branch is not documented
-- DOC001 `deploynator/_app.py:189` method DeploynatorApp.commit is not documented
-- DOC001 `deploynator/_app.py:229` method DeploynatorApp.release is not documented
-- DOC001 `deploynator/_app.py:319` method DeploynatorApp.generate_docs is not documented
-- DOC001 `deploynator/_app.py:325` method DeploynatorApp.status is not documented
-- DOC001 `deploynator/_app.py:345` method DeploynatorApp.list_projects is not documented
-- DOC001 `deploynator/_app.py:350` method DeploynatorApp.generate_ci is not documented
-- DOC001 `deploynator/_app.py:366` method DeploynatorApp.install_deps is not documented
-- DOC001 `deploynator/_app.py:379` method DeploynatorApp.interactive_menu is not documented
+- DOC001 `deploynator/_app.py:154` method DeploynatorApp.init_project is not documented
+- DOC001 `deploynator/_app.py:204` method DeploynatorApp.start_branch is not documented
+- DOC001 `deploynator/_app.py:262` method DeploynatorApp.commit is not documented
+- DOC001 `deploynator/_app.py:302` method DeploynatorApp.release is not documented
+- DOC001 `deploynator/_app.py:392` method DeploynatorApp.generate_docs is not documented
+- DOC001 `deploynator/_app.py:398` method DeploynatorApp.status is not documented
+- DOC001 `deploynator/_app.py:418` method DeploynatorApp.list_projects is not documented
+- DOC001 `deploynator/_app.py:423` method DeploynatorApp.generate_ci is not documented
+- DOC001 `deploynator/_app.py:439` method DeploynatorApp.install_deps is not documented
+- DOC001 `deploynator/_app.py:452` method DeploynatorApp.interactive_menu is not documented
 - DOC001 `deploynator/_changelog.py:1` module deploynator/_changelog.py is not documented
 - DOC001 `deploynator/_changelog.py:12` class ChangelogGenerator is not documented
 - DOC001 `deploynator/_changelog.py:13` constructor ChangelogGenerator.__init__ is not documented

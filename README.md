@@ -47,6 +47,9 @@ deploynator release --type feat --project my-app
 ## Installation
 
 ```bash
+# From PyPI
+pip install deploynator
+
 # From source
 git clone https://github.com/grisuno/deploynator.git
 cd deploynator

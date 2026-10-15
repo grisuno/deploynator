@@ -1,10 +1,10 @@
 # deploynator: _changelog
 
-*Community 0 | 6 files | cohesion 0.22*
+*Community 0 | 6 files | cohesion 0.21*
 
 ## Definition
 
-This community groups 6 file(s) rooted at `deploynator` with dominant language py (cohesion 0.22). Central symbols: `ChangelogGenerator`, `Config`, `PyPIRunner`, `TestChangelogGenerator`, `TestCleanAndRun`, `TestConfigContract`, `TestDetect`, `TestPipelinePyPI`. Core file: `tests/test_pypi.py` (22 symbols). Documented purpose: RED: PyPI runner — detecta packaging, build limpio, upload twine..
+This community groups 6 file(s) rooted at `deploynator` with dominant language py (cohesion 0.21). Central symbols: `ChangelogGenerator`, `Config`, `PyPIRunner`, `TestChangelogGenerator`, `TestCleanAndRun`, `TestConfigContract`, `TestDetect`, `TestPipelinePyPI`. Core file: `tests/test_pypi.py` (24 symbols). Documented purpose: RED: PyPI runner — detecta packaging, build limpio, upload twine..
 
 ## Files
 
@@ -15,7 +15,7 @@ This community groups 6 file(s) rooted at `deploynator` with dominant language p
 | `deploynator/_pypi.py` | py | utility | 8 | no |
 | `tests/test_changelog.py` | py | testing | 8 | no |
 | `tests/test_config.py` | py | testing | 10 | no |
-| `tests/test_pypi.py` | py | testing | 22 | yes |
+| `tests/test_pypi.py` | py | testing | 24 | yes |
 
 ## Key Symbols
 
@@ -52,16 +52,16 @@ This community groups 6 file(s) rooted at `deploynator` with dominant language p
 
 ## Internal vs External Edges
 
-- Internal resolved imports (EXTRACTED): 33
-- Cross-boundary resolved imports (EXTRACTED): 46
+- Internal resolved imports (EXTRACTED): 37
+- Cross-boundary resolved imports (EXTRACTED): 51
 
 ## Connections
 
-- [EXTRACTED] depends_on community 4 <-> 0 (strength 0.9): Extracted import edge crosses communities: deploynator/__main__.py imports deploynator/_config.py.
-- [EXTRACTED] depends_on community 3 <-> 0 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_config.py.
+- [EXTRACTED] depends_on community 3 <-> 0 (strength 0.9): Extracted import edge crosses communities: deploynator/__main__.py imports deploynator/_config.py.
+- [EXTRACTED] depends_on community 4 <-> 0 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_config.py.
 - [EXTRACTED] depends_on community 0 <-> 2 (strength 0.9): Extracted import edge crosses communities: deploynator/_changelog.py imports deploynator/_models.py.
 - [EXTRACTED] depends_on community 1 <-> 0 (strength 0.9): Extracted import edge crosses communities: deploynator/_docs.py imports deploynator/_config.py.
-- [INFERRED] bridges community 4 <-> 0 (strength 0.7): Inferred cross-community bridge: deploynator/__init__.py reaches deploynator/_changelog.py in 3 hops.
+- [INFERRED] bridges community 3 <-> 0 (strength 0.7): Inferred cross-community bridge: deploynator/__init__.py reaches deploynator/_changelog.py in 3 hops.
 - [INFERRED] bridges community 0 <-> 2 (strength 0.6): Inferred cross-community bridge: tests/test_config.py reaches tests/test_models.py in 4 hops.
 - [INFERRED] shares_context community 0 <-> 5 (strength 0.5): Inferred shared context (language py) with no import path between community 0 (deploynator: _changelog) and community 5 (orphans).
 
@@ -76,7 +76,7 @@ This community groups 6 file(s) rooted at `deploynator` with dominant language p
 
 - Why do 5 file(s) lack file-level docs (e.g. `deploynator/_changelog.py`)? What purpose do they serve?
 - What would break if the most connected file in deploynator: _changelog changed?
-- Should deploynator: _changelog be split, given cohesion 0.22?
+- Should deploynator: _changelog be split, given cohesion 0.21?
 
 ## Sources
 

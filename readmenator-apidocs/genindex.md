@@ -86,6 +86,8 @@
 - [`deploy`](modules/deploynator._deploy.py.md#deployorchestrator-deploy) method of `DeployOrchestrator` in `deploynator._deploy`
 - [`deploy_branch`](modules/deploynator._toml.py.md#tomlconfig-deploy_branch) attribute of `TomlConfig` in `deploynator._toml`
 - [`deploy_remote`](modules/deploynator._toml.py.md#tomlconfig-deploy_remote) attribute of `TomlConfig` in `deploynator._toml`
+- [`DEPLOY_SH_TEMPLATE`](modules/deploynator._app.py.md#deploynatorapp-deploy_sh_template) attribute of `DeploynatorApp` in `deploynator._app`
+- [`DEPLOY_TOML_TEMPLATE`](modules/deploynator._app.py.md#deploynatorapp-deploy_toml_template) attribute of `DeploynatorApp` in `deploynator._app`
 - [`deploynator_badge_text`](modules/deploynator._config.py.md#config-deploynator_badge_text) attribute of `Config` in `deploynator._config`
 - [`deploynator_badge_url`](modules/deploynator._config.py.md#config-deploynator_badge_url) attribute of `Config` in `deploynator._config`
 - [`DeploynatorApp`](modules/deploynator._app.py.md#deploynatorapp) class in `deploynator._app`

@@ -93,15 +93,72 @@ class DeploynatorApp:
 
     # ---- Init ----
 
+    DEPLOY_SH_TEMPLATE = """#!/bin/bash
+# deploy.sh -- one-liner deploy via deploynator (generic per-repo script).
+# Deployed by deploynator: detects its own directory, ensures tooling,
+# then releases this repo. Usage:
+#   ./deploy.sh                    # patch release (smallest bump)
+#   ./deploy.sh feat --dry-run     # preview a minor release
+#   ./deploy.sh fix --no-test      # patch release skipping tests
+set -euo pipefail
+
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+TYPE="patch"
+if [ $# -gt 0 ]; then
+    TYPE="$1"
+    shift
+fi
+
+# Install or update deploy tooling (best effort: works offline with current versions).
+pip install -U deploynator 2>/dev/null \\
+    || pip install -U "git+https://github.com/grisuno/deploynator.git" \\
+    || true
+pip install -U readmenator 2>/dev/null || true
+
+if ! python3 -c "import deploynator" 2>/dev/null; then
+    echo "[!] deploynator not available and install failed (offline?)." >&2
+    exit 1
+fi
+
+exec python3 -m deploynator release --type "$TYPE" --project "$DIR" "$@"
+"""
+
+    DEPLOY_TOML_TEMPLATE = """# deploynator.toml -- per-project deploy config (created by `deploynator init`).
+# Docs: specify version file, tests, docs and PyPI behaviour for this repo.
+
+[project]
+name = "{name}"
+version_file = "version.json"
+
+[tests]
+commands = ["python -m pytest tests/ -q"]
+timeout_s = 300
+allow_no_tests = false
+
+[docs]
+auto = true
+command = "python -m readmenator . --rebuild"
+timeout_s = 300
+
+[deploy]
+branch = "main"
+remote = "origin"
+
+[pypi]
+enabled = true
+repo = "pypi"
+clean_dist = true
+timeout_s = 600
+"""
+
     def init_project(self, project_path: str = "", name: str = "") -> str:
         base = project_path or os.getcwd()
         project_name = name or os.path.basename(base)
         config_path = os.path.join(base, "deploynator.yaml")
+        created = []
 
-        if os.path.isfile(config_path):
-            return f"deploynator.yaml already exists at {config_path}"
-
-        content = f"""version: 1.0
+        if not os.path.isfile(config_path):
+            content = f"""version: 1.0
 name: {project_name}
 description: "Project managed by deploynator"
 platforms:
@@ -118,13 +175,29 @@ version:
   file: version.json
   file_type: json
 """
-        with open(config_path, "w") as f:
-            f.write(content)
+            with open(config_path, "w") as f:
+                f.write(content)
+            created.append(config_path)
+
+        toml_path = os.path.join(base, "deploynator.toml")
+        if not os.path.isfile(toml_path):
+            with open(toml_path, "w") as f:
+                f.write(self.DEPLOY_TOML_TEMPLATE.format(name=project_name))
+            created.append(toml_path)
+
+        script_path = os.path.join(base, "deploy.sh")
+        if not os.path.isfile(script_path):
+            with open(script_path, "w") as f:
+                f.write(self.DEPLOY_SH_TEMPLATE)
+            os.chmod(script_path, 0o755)
+            created.append(script_path)
 
         projects_dir = os.path.join(base, self._config.projects_dir)
         os.makedirs(projects_dir, exist_ok=True)
 
-        return f"Initialized deploynator project at {config_path}"
+        if not created:
+            return f"deploynator already initialized at {base}"
+        return "Initialized deploynator: " + ", ".join(created)
 
     # ---- Start ----
 

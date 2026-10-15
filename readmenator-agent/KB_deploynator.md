@@ -4,7 +4,7 @@
 - Layer: utility
 - Language: py
 - Depends on: `deploynator/_app.py`
-- Imported by: `deploynator/__main__.py`, `deploynator/_mcp_server.py`, `tests/test_cli_mcp.py`, `tests/test_path_deploy.py`
+- Imported by: `deploynator/__main__.py`, `deploynator/_mcp_server.py`, `tests/test_cli_mcp.py`, `tests/test_init.py`, `tests/test_path_deploy.py`
 
 ## deploynator/__main__.py
 - Layer: utility
@@ -27,30 +27,30 @@
   - `_auth_github` (method, line 56) `def _auth_github()`
   - `_auth_gitlab` (method, line 69) `def _auth_gitlab()`
   - `_auth_bitbucket` (method, line 86) `def _auth_bitbucket()`
-  - `init_project` (method, line 96) `def init_project(self, project_path, name)`
-  - `start_branch` (method, line 131) `def start_branch(self, commit_type, description, project_path, project_name, remote)`
-  - `_is_path_like` (method, line 149) `def _is_path_like(value)`
-  - `_looks_like_path` (method, line 153) `def _looks_like_path(value)`
-  - `_resolve_project_path` (method, line 160) `def _resolve_project_path(self, project_name)`
-  - `_smart_prepare` (method, line 174) `def _smart_prepare(self, base, changelog_content, dry_run)`
-  - `commit` (method, line 189) `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
-  - `release` (method, line 229) `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...`
-  - `generate_docs` (method, line 319) `def generate_docs(self, project_path, project_name)`
-  - `status` (method, line 325) `def status(self, project_path, project_name)`
-  - `list_projects` (method, line 345) `def list_projects(self, search_path)`
-  - `generate_ci` (method, line 350) `def generate_ci(self, project_name, all_projects)`
-  - `install_deps` (method, line 366) `def install_deps(self, project_name)`
-  - `interactive_menu` (method, line 379) `def interactive_menu(self)`
-  - `_interactive_release` (method, line 415) `def _interactive_release(self)`
-  - `_interactive_commit` (method, line 457) `def _interactive_commit(self)`
-  - `_interactive_start` (method, line 484) `def _interactive_start(self)`
-  - `_interactive_auth` (method, line 508) `def _interactive_auth(self)`
-  - `_interactive_auth_status` (method, line 531) `def _interactive_auth_status(self)`
-  - `_interactive_docs` (method, line 537) `def _interactive_docs(self)`
-  - `_interactive_ci` (method, line 544) `def _interactive_ci(self)`
-  - `_interactive_status` (method, line 553) `def _interactive_status(self)`
-  - `_interactive_init` (method, line 558) `def _interactive_init(self)`
-  - `_print_result` (method, line 564) `def _print_result(result)`
+  - `init_project` (method, line 154) `def init_project(self, project_path, name)`
+  - `start_branch` (method, line 204) `def start_branch(self, commit_type, description, project_path, project_name, remote)`
+  - `_is_path_like` (method, line 222) `def _is_path_like(value)`
+  - `_looks_like_path` (method, line 226) `def _looks_like_path(value)`
+  - `_resolve_project_path` (method, line 233) `def _resolve_project_path(self, project_name)`
+  - `_smart_prepare` (method, line 247) `def _smart_prepare(self, base, changelog_content, dry_run)`
+  - `commit` (method, line 262) `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
+  - `release` (method, line 302) `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...`
+  - `generate_docs` (method, line 392) `def generate_docs(self, project_path, project_name)`
+  - `status` (method, line 398) `def status(self, project_path, project_name)`
+  - `list_projects` (method, line 418) `def list_projects(self, search_path)`
+  - `generate_ci` (method, line 423) `def generate_ci(self, project_name, all_projects)`
+  - `install_deps` (method, line 439) `def install_deps(self, project_name)`
+  - `interactive_menu` (method, line 452) `def interactive_menu(self)`
+  - `_interactive_release` (method, line 488) `def _interactive_release(self)`
+  - `_interactive_commit` (method, line 530) `def _interactive_commit(self)`
+  - `_interactive_start` (method, line 557) `def _interactive_start(self)`
+  - `_interactive_auth` (method, line 581) `def _interactive_auth(self)`
+  - `_interactive_auth_status` (method, line 604) `def _interactive_auth_status(self)`
+  - `_interactive_docs` (method, line 610) `def _interactive_docs(self)`
+  - `_interactive_ci` (method, line 617) `def _interactive_ci(self)`
+  - `_interactive_status` (method, line 626) `def _interactive_status(self)`
+  - `_interactive_init` (method, line 631) `def _interactive_init(self)`
+  - `_print_result` (method, line 637) `def _print_result(result)`
 - Depends on: `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_toml.py`
 - Imported by: `deploynator/__init__.py`
 
@@ -80,7 +80,7 @@
   - `gh_authd` (method, line 91) `def gh_authd(self)`
   - `glab_authd` (method, line 95) `def glab_authd(self)`
   - `bb_authd` (method, line 99) `def bb_authd(self)`
-- Imported by: `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deploy.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_semver.py`
+- Imported by: `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deploy.py`, `tests/test_init.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_semver.py`
 
 ## deploynator/_deploy.py
 - Doc: _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.
@@ -312,4 +312,4 @@
   - `load_toml_config` (function, line 46) `def load_toml_config(project_path)`
   - `__post_init__` (method, line 30) `def __post_init__(self)`
 - Depends on: `deploynator/_config.py`
-- Imported by: `deploynator/_app.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `tests/bdd_test_deploy.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_toml.py`
+- Imported by: `deploynator/_app.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `tests/bdd_test_deploy.py`, `tests/test_init.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_toml.py`

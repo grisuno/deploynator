@@ -2,14 +2,14 @@
  "schema_version": 1,
  "format": "jsonl",
  "meta": {
-  "modules": 17,
-  "entities": 288,
+  "modules": 18,
+  "entities": 291,
   "languages": {
    "py": 16,
-   "sh": 1
+   "sh": 2
   },
   "kinds": {
-   "attribute": 99,
+   "attribute": 101,
    "class": 28,
    "classmethod": 12,
    "constant": 7,
@@ -17,19 +17,19 @@
    "enum": 2,
    "function": 5,
    "method": 98,
-   "module": 17,
+   "module": 18,
    "property": 4,
    "staticmethod": 2
   },
   "truncated": false,
-  "skipped_files": 13,
+  "skipped_files": 14,
   "privacy_mode": false
  },
  "coverage": {
   "overall": {
-   "documented": 4,
-   "total": 182,
-   "percent": 2.2
+   "documented": 5,
+   "total": 183,
+   "percent": 2.7
   },
   "by_kind": {
    "class": {
@@ -63,9 +63,9 @@
     "percent": 2.0
    },
    "module": {
-    "documented": 2,
-    "total": 17,
-    "percent": 11.8
+    "documented": 3,
+    "total": 18,
+    "percent": 16.7
    },
    "property": {
     "documented": 0,
@@ -80,6 +80,11 @@
   },
   "by_module": {
    "app.py": {
+    "documented": 1,
+    "total": 1,
+    "percent": 100.0
+   },
+   "deploy.sh": {
     "documented": 1,
     "total": 1,
     "percent": 100.0
@@ -173,6 +178,11 @@
    "entities": 1
   },
   {
+   "uid": "deploy.sh",
+   "path": "modules/deploy.sh.jsonl",
+   "entities": 1
+  },
+  {
    "uid": "deploynator/__init__.py",
    "path": "modules/deploynator.__init__.py.jsonl",
    "entities": 1
@@ -185,7 +195,7 @@
   {
    "uid": "deploynator/_app.py",
    "path": "modules/deploynator._app.py.jsonl",
-   "entities": 15
+   "entities": 17
   },
   {
    "uid": "deploynator/_changelog.py",

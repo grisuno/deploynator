@@ -1,28 +1,28 @@
 {
   "tool": "readmenator",
   "schema_version": 2,
-  "generated_at": "2026-10-15T01:41:07Z",
+  "generated_at": "2026-10-15T01:51:48Z",
   "project_root": ".",
   "project_name": "deploynator",
-  "git_commit": "7a24779a7a649c0205472ca763a7bec4487e7eef",
+  "git_commit": "72dfb9892c7f3561ea3e3d8ecc6f12a6fd89b91c",
   "git_branch": "main",
-  "source_fingerprint": "4af569b5303d607d8caff72d22412be87adf8b736b2a1103c830a8209e9532c3",
+  "source_fingerprint": "7136f6fb4a259dcae3847cb5a1995e15677a7e9f9877cda01cd85ac755f5f0cc",
   "freshness_check": "readmenator . fresh  # exit 0 = docs match sources, exit 1 = run: readmenator . --rebuild",
-  "files": 30,
-  "symbols": 381,
-  "imports": 304,
-  "calls": 1800,
+  "files": 32,
+  "symbols": 389,
+  "imports": 329,
+  "calls": 1870,
   "inherits": 6,
-  "resolved_imports": 174,
+  "resolved_imports": 189,
   "security_findings": 0,
   "languages": {
-    "py": 29,
-    "sh": 1
+    "py": 30,
+    "sh": 2
   },
   "subsystems": {
     "deploynator": 15,
-    "root": 2,
-    "tests": 13
+    "root": 3,
+    "tests": 14
   },
   "entrypoints": [
     "app.py",
@@ -47,47 +47,47 @@
     {
       "path": "API.md",
       "lines": 190,
-      "approx_tokens": 4435
+      "approx_tokens": 4446
     },
     {
       "path": "ARCHITECTURE.md",
-      "lines": 110,
-      "approx_tokens": 1493
+      "lines": 114,
+      "approx_tokens": 1545
     },
     {
       "path": "CONCEPTS.md",
       "lines": 120,
-      "approx_tokens": 3205
+      "approx_tokens": 3242
     },
     {
       "path": "GOTCHAS.md",
-      "lines": 42,
-      "approx_tokens": 544
+      "lines": 46,
+      "approx_tokens": 596
     },
     {
       "path": "INDEX.md",
-      "lines": 34,
-      "approx_tokens": 594
+      "lines": 36,
+      "approx_tokens": 643
     },
     {
       "path": "KB_deploynator.md",
       "lines": 315,
-      "approx_tokens": 5003
+      "approx_tokens": 5020
     },
     {
       "path": "KB_root.md",
-      "lines": 10,
-      "approx_tokens": 52
+      "lines": 15,
+      "approx_tokens": 81
     },
     {
       "path": "KB_tests.md",
-      "lines": 256,
-      "approx_tokens": 4389
+      "lines": 271,
+      "approx_tokens": 4630
     },
     {
       "path": "MEMORY.md",
-      "lines": 97,
-      "approx_tokens": 1471
+      "lines": 99,
+      "approx_tokens": 1501
     },
     {
       "path": "SECURITY.md",
@@ -96,8 +96,8 @@
     },
     {
       "path": "SYMBOLS.md",
-      "lines": 385,
-      "approx_tokens": 9760
+      "lines": 393,
+      "approx_tokens": 9983
     },
     {
       "path": "recipes/add-function.md",

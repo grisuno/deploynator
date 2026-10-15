@@ -57,11 +57,11 @@ class PyPIRunner:
         if not token:
             return None
         try:
-            save = input("Save token to ~/.pypirc (mode 600)? (Y/n): ").strip().lower()
+            save = input("Save token to ~/.pypirc (mode 600)? (y/N): ").strip().lower()
         except (EOFError, KeyboardInterrupt):
             print()
             return token
-        if save in ("", "y", "yes", "s", "si"):
+        if save in ("y", "yes", "s", "si"):
             try:
                 self.save_pypirc(token)
                 print("[+] Token saved to ~/.pypirc")

@@ -1,22 +1,26 @@
 {
  "metadata": {
-  "generated_at": "2026-10-15T01:41:47.538033+00:00",
-  "source_tree_hash": "4af569b5303d607d8caff72d22412be87adf8b736b2a1103c830a8209e9532c3",
+  "generated_at": "2026-10-15T01:52:28.606655+00:00",
+  "source_tree_hash": "7136f6fb4a259dcae3847cb5a1995e15677a7e9f9877cda01cd85ac755f5f0cc",
   "repo_name": "deploynator",
   "depth_level": 2,
   "depth_cap": 3,
   "file_coverage_summary": {
-   "total_files": 30,
-   "analyzed": 30,
+   "total_files": 32,
+   "analyzed": 32,
    "not_analyzed": 0,
    "not_analyzed_by_reason": {}
   },
   "tree_spec": {}
  },
- "description": "Static architecture map of 30 files (py, sh) in 5 components: deploynator: _changelog, deploynator: _toml, deploynator: _models, deploynator: _platforms, deploynator: _mcp_server. Structure is extracted statically without LLM calls; component prose may be enriched locally.",
+ "description": "Static architecture map of 32 files (py, sh) in 5 components: deploynator: _changelog, deploynator: _toml, deploynator: _models, deploynator: _mcp_server, deploynator: _platforms. Structure is extracted statically without LLM calls; component prose may be enriched locally.",
  "files": {
   "app.py": {
    "language": "py",
+   "symbols": 0
+  },
+  "deploy.sh": {
+   "language": "sh",
    "symbols": 0
   },
   "deploynator/__init__.py": {
@@ -107,6 +111,10 @@
    "language": "py",
    "symbols": 11
   },
+  "tests/test_init.py": {
+   "language": "py",
+   "symbols": 6
+  },
   "tests/test_models.py": {
    "language": "py",
    "symbols": 44
@@ -121,7 +129,7 @@
   },
   "tests/test_pypi.py": {
    "language": "py",
-   "symbols": 22
+   "symbols": 24
   },
   "tests/test_runner.py": {
    "language": "py",
@@ -213,201 +221,201 @@
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_auth_bitbucket",
    "start_line": 86,
-   "end_line": 95,
+   "end_line": 153,
    "type": "FUNCTION",
    "content_hash": "94f051ec240a9def"
   },
   "deploynator/_app.py|deploynator/_app.py::init_project": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::init_project",
-   "start_line": 96,
-   "end_line": 130,
+   "start_line": 154,
+   "end_line": 203,
    "type": "FUNCTION",
-   "content_hash": "6f823db801a18c73"
+   "content_hash": "cdbc8483cc91123a"
   },
   "deploynator/_app.py|deploynator/_app.py::start_branch": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::start_branch",
-   "start_line": 131,
-   "end_line": 148,
+   "start_line": 204,
+   "end_line": 221,
    "type": "FUNCTION",
-   "content_hash": "2df1a4c37f60d8be"
+   "content_hash": "76d9b84d0b68dfc3"
   },
   "deploynator/_app.py|deploynator/_app.py::_is_path_like": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_is_path_like",
-   "start_line": 149,
-   "end_line": 152,
+   "start_line": 222,
+   "end_line": 225,
    "type": "FUNCTION",
-   "content_hash": "3a17e20e6973461a"
+   "content_hash": "5a15b661393ab596"
   },
   "deploynator/_app.py|deploynator/_app.py::_looks_like_path": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_looks_like_path",
-   "start_line": 153,
-   "end_line": 159,
+   "start_line": 226,
+   "end_line": 232,
    "type": "FUNCTION",
-   "content_hash": "8492b9975c0d6da9"
+   "content_hash": "852868442655ba7d"
   },
   "deploynator/_app.py|deploynator/_app.py::_resolve_project_path": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_resolve_project_path",
-   "start_line": 160,
-   "end_line": 173,
+   "start_line": 233,
+   "end_line": 246,
    "type": "FUNCTION",
-   "content_hash": "ee6d8f8e9556601a"
+   "content_hash": "2a6d44ab01f49cd1"
   },
   "deploynator/_app.py|deploynator/_app.py::_smart_prepare": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_smart_prepare",
-   "start_line": 174,
-   "end_line": 188,
+   "start_line": 247,
+   "end_line": 261,
    "type": "FUNCTION",
-   "content_hash": "77783c696e20b237"
+   "content_hash": "e09af161e060998a"
   },
   "deploynator/_app.py|deploynator/_app.py::commit": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::commit",
-   "start_line": 189,
-   "end_line": 228,
+   "start_line": 262,
+   "end_line": 301,
    "type": "FUNCTION",
-   "content_hash": "9b38ea21273fcc80"
+   "content_hash": "33560e629e04887b"
   },
   "deploynator/_app.py|deploynator/_app.py::release": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::release",
-   "start_line": 229,
-   "end_line": 318,
+   "start_line": 302,
+   "end_line": 391,
    "type": "FUNCTION",
-   "content_hash": "6fd1025444a88f5a"
+   "content_hash": "ce4735198661645a"
   },
   "deploynator/_app.py|deploynator/_app.py::generate_docs": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::generate_docs",
-   "start_line": 319,
-   "end_line": 324,
+   "start_line": 392,
+   "end_line": 397,
    "type": "FUNCTION",
-   "content_hash": "6952f3d54a2fd537"
+   "content_hash": "5a61781e509ab02a"
   },
   "deploynator/_app.py|deploynator/_app.py::status": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::status",
-   "start_line": 325,
-   "end_line": 344,
+   "start_line": 398,
+   "end_line": 417,
    "type": "FUNCTION",
-   "content_hash": "48a5b7b3909cd236"
+   "content_hash": "c53a1b03a6a5197c"
   },
   "deploynator/_app.py|deploynator/_app.py::list_projects": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::list_projects",
-   "start_line": 345,
-   "end_line": 349,
+   "start_line": 418,
+   "end_line": 422,
    "type": "FUNCTION",
-   "content_hash": "065dd62e3e53fd3e"
+   "content_hash": "8a4eb72627d47c45"
   },
   "deploynator/_app.py|deploynator/_app.py::generate_ci": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::generate_ci",
-   "start_line": 350,
-   "end_line": 365,
+   "start_line": 423,
+   "end_line": 438,
    "type": "FUNCTION",
-   "content_hash": "a005446770850a23"
+   "content_hash": "5ba191a65a4f1556"
   },
   "deploynator/_app.py|deploynator/_app.py::install_deps": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::install_deps",
-   "start_line": 366,
-   "end_line": 378,
+   "start_line": 439,
+   "end_line": 451,
    "type": "FUNCTION",
-   "content_hash": "4421e901343b9d51"
+   "content_hash": "4cd0433bb98b2564"
   },
   "deploynator/_app.py|deploynator/_app.py::interactive_menu": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::interactive_menu",
-   "start_line": 379,
-   "end_line": 414,
+   "start_line": 452,
+   "end_line": 487,
    "type": "FUNCTION",
-   "content_hash": "48555713c639a9b8"
+   "content_hash": "0c933d35cf9ad3b1"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_release": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_release",
-   "start_line": 415,
-   "end_line": 456,
+   "start_line": 488,
+   "end_line": 529,
    "type": "FUNCTION",
-   "content_hash": "ad9b01034cc7a865"
+   "content_hash": "1ffe1acc98c22a39"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_commit": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_commit",
-   "start_line": 457,
-   "end_line": 483,
+   "start_line": 530,
+   "end_line": 556,
    "type": "FUNCTION",
-   "content_hash": "84cb1d5ca896d941"
+   "content_hash": "8d5289a4732f1575"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_start": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_start",
-   "start_line": 484,
-   "end_line": 507,
+   "start_line": 557,
+   "end_line": 580,
    "type": "FUNCTION",
-   "content_hash": "bdc7f8da92bd0423"
+   "content_hash": "c0fff8a5edb83a78"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_auth": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_auth",
-   "start_line": 508,
-   "end_line": 530,
+   "start_line": 581,
+   "end_line": 603,
    "type": "FUNCTION",
-   "content_hash": "4b03dc20cc0dd8a5"
+   "content_hash": "cf577ad69d05265d"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_auth_status": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_auth_status",
-   "start_line": 531,
-   "end_line": 536,
+   "start_line": 604,
+   "end_line": 609,
    "type": "FUNCTION",
-   "content_hash": "393fe752b55d9f82"
+   "content_hash": "6296cd575e6ef0a6"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_docs": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_docs",
-   "start_line": 537,
-   "end_line": 543,
+   "start_line": 610,
+   "end_line": 616,
    "type": "FUNCTION",
-   "content_hash": "cddb59ab549d0978"
+   "content_hash": "b42125e943b8e2eb"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_ci": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_ci",
-   "start_line": 544,
-   "end_line": 552,
+   "start_line": 617,
+   "end_line": 625,
    "type": "FUNCTION",
-   "content_hash": "003b28b27c2af981"
+   "content_hash": "8116722fdcd3e0e1"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_status": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_status",
-   "start_line": 553,
-   "end_line": 557,
+   "start_line": 626,
+   "end_line": 630,
    "type": "FUNCTION",
-   "content_hash": "2f2124caf3aba8fd"
+   "content_hash": "4d1e74c4369f46b0"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_init": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_init",
-   "start_line": 558,
-   "end_line": 563,
+   "start_line": 631,
+   "end_line": 636,
    "type": "FUNCTION",
-   "content_hash": "c28150e06c78d3b3"
+   "content_hash": "0a7c4a013de63185"
   },
   "deploynator/_app.py|deploynator/_app.py::_print_result": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_print_result",
-   "start_line": 564,
-   "end_line": 572,
+   "start_line": 637,
+   "end_line": 645,
    "type": "FUNCTION",
-   "content_hash": "d2407fbdc6bf13b4"
+   "content_hash": "7e12661558d50cd4"
   },
   "deploynator/_changelog.py|deploynator/_changelog.py::ChangelogGenerator": {
    "file_path": "deploynator/_changelog.py",
@@ -1993,6 +2001,54 @@
    "type": "FUNCTION",
    "content_hash": "0f4d9fcdf6dc30d4"
   },
+  "tests/test_init.py|tests/test_init.py::TestInitScript": {
+   "file_path": "tests/test_init.py",
+   "qualified_name": "tests/test_init.py::TestInitScript",
+   "start_line": 7,
+   "end_line": 7,
+   "type": "CLASS",
+   "content_hash": "6bbcfa3b007dfc98"
+  },
+  "tests/test_init.py|tests/test_init.py::test_init_creates_files": {
+   "file_path": "tests/test_init.py",
+   "qualified_name": "tests/test_init.py::test_init_creates_files",
+   "start_line": 8,
+   "end_line": 18,
+   "type": "FUNCTION",
+   "content_hash": "13534e868a924dc3"
+  },
+  "tests/test_init.py|tests/test_init.py::test_deploy_sh_executable_and_valid_bash": {
+   "file_path": "tests/test_init.py",
+   "qualified_name": "tests/test_init.py::test_deploy_sh_executable_and_valid_bash",
+   "start_line": 19,
+   "end_line": 29,
+   "type": "FUNCTION",
+   "content_hash": "fe5ca41e4c560de5"
+  },
+  "tests/test_init.py|tests/test_init.py::test_deploy_sh_content_generic": {
+   "file_path": "tests/test_init.py",
+   "qualified_name": "tests/test_init.py::test_deploy_sh_content_generic",
+   "start_line": 30,
+   "end_line": 43,
+   "type": "FUNCTION",
+   "content_hash": "2a2d888ec1792a02"
+  },
+  "tests/test_init.py|tests/test_init.py::test_init_no_overwrite": {
+   "file_path": "tests/test_init.py",
+   "qualified_name": "tests/test_init.py::test_init_no_overwrite",
+   "start_line": 44,
+   "end_line": 55,
+   "type": "FUNCTION",
+   "content_hash": "ad604fa733cb4c48"
+  },
+  "tests/test_init.py|tests/test_init.py::test_toml_starter_parseable": {
+   "file_path": "tests/test_init.py",
+   "qualified_name": "tests/test_init.py::test_toml_starter_parseable",
+   "start_line": 56,
+   "end_line": 65,
+   "type": "FUNCTION",
+   "content_hash": "d701e7e2955b6a8a"
+  },
   "tests/test_models.py|tests/test_models.py::TestPlatformContract": {
    "file_path": "tests/test_models.py",
    "qualified_name": "tests/test_models.py::TestPlatformContract",
@@ -2585,93 +2641,109 @@
    "type": "FUNCTION",
    "content_hash": "09da57d2c7138f20"
   },
-  "tests/test_pypi.py|tests/test_pypi.py::test_save_pypirc_roundtrip": {
+  "tests/test_pypi.py|tests/test_pypi.py::test_prompt_default_is_no_save": {
    "file_path": "tests/test_pypi.py",
-   "qualified_name": "tests/test_pypi.py::test_save_pypirc_roundtrip",
+   "qualified_name": "tests/test_pypi.py::test_prompt_default_is_no_save",
    "start_line": 81,
    "end_line": 94,
    "type": "FUNCTION",
-   "content_hash": "54e5ba6b1809cd93"
+   "content_hash": "9144c7604a64a264"
+  },
+  "tests/test_pypi.py|tests/test_pypi.py::test_prompt_yes_saves": {
+   "file_path": "tests/test_pypi.py",
+   "qualified_name": "tests/test_pypi.py::test_prompt_yes_saves",
+   "start_line": 95,
+   "end_line": 107,
+   "type": "FUNCTION",
+   "content_hash": "7ec8dc5caaab4290"
+  },
+  "tests/test_pypi.py|tests/test_pypi.py::test_save_pypirc_roundtrip": {
+   "file_path": "tests/test_pypi.py",
+   "qualified_name": "tests/test_pypi.py::test_save_pypirc_roundtrip",
+   "start_line": 108,
+   "end_line": 121,
+   "type": "FUNCTION",
+   "content_hash": "f1f0b270d3241c83"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_save_pypirc_rejects_symlink": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_save_pypirc_rejects_symlink",
-   "start_line": 95,
-   "end_line": 108,
+   "start_line": 122,
+   "end_line": 135,
    "type": "FUNCTION",
-   "content_hash": "69ef4483fc0d6e5a"
+   "content_hash": "b6693e818c1a4b6d"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_prompted_token_used_for_upload",
-   "start_line": 109,
-   "end_line": 145,
+   "start_line": 136,
+   "end_line": 172,
    "type": "FUNCTION",
-   "content_hash": "4146aacef57d14b4"
+   "content_hash": "39d8c12b35978b49"
   },
   "tests/test_pypi.py|tests/test_pypi.py::TestCleanAndRun": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::TestCleanAndRun",
-   "start_line": 146,
-   "end_line": 146,
+   "start_line": 173,
+   "end_line": 173,
    "type": "CLASS",
-   "content_hash": "8164ae9b1432ee24"
+   "content_hash": "a485b7636056f86f"
   },
   "tests/test_pypi.py|tests/test_pypi.py::_toml": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::_toml",
-   "start_line": 147,
-   "end_line": 155,
+   "start_line": 174,
+   "end_line": 182,
    "type": "FUNCTION",
-   "content_hash": "fc70d6003aa320c0"
+   "content_hash": "df1a07124b76aeb3"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_clean_removes_dist": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_clean_removes_dist",
-   "start_line": 156,
-   "end_line": 167,
+   "start_line": 183,
+   "end_line": 194,
    "type": "FUNCTION",
-   "content_hash": "879907ce3d4f2bc0"
+   "content_hash": "70a5226daa26a804"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_run_fails_on_broken_build": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_run_fails_on_broken_build",
-   "start_line": 168,
-   "end_line": 178,
+   "start_line": 195,
+   "end_line": 205,
    "type": "FUNCTION",
-   "content_hash": "bd2f09fb4ec72cc7"
+   "content_hash": "53ea3a9b37bd59b0"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_run_skips_without_packaging": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_run_skips_without_packaging",
-   "start_line": 179,
-   "end_line": 187,
+   "start_line": 206,
+   "end_line": 214,
    "type": "FUNCTION",
-   "content_hash": "81756ff75af7e132"
+   "content_hash": "559a2ca3f8bb3368"
   },
   "tests/test_pypi.py|tests/test_pypi.py::TestPipelinePyPI": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::TestPipelinePyPI",
-   "start_line": 188,
-   "end_line": 188,
+   "start_line": 215,
+   "end_line": 215,
    "type": "CLASS",
-   "content_hash": "8eb6ba0824a61f73"
+   "content_hash": "9f773cfded7c72ed"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_pypi_failure_aborts_with_error": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_pypi_failure_aborts_with_error",
-   "start_line": 189,
-   "end_line": 220,
+   "start_line": 216,
+   "end_line": 247,
    "type": "FUNCTION",
-   "content_hash": "33f2ad8f7dd425cc"
+   "content_hash": "53f41d12459df05f"
   },
   "tests/test_pypi.py|tests/test_pypi.py::test_no_credentials_skips_pypi": {
    "file_path": "tests/test_pypi.py",
    "qualified_name": "tests/test_pypi.py::test_no_credentials_skips_pypi",
-   "start_line": 221,
-   "end_line": 249,
+   "start_line": 248,
+   "end_line": 276,
    "type": "FUNCTION",
-   "content_hash": "a8cc0ebccd93a972"
+   "content_hash": "9d79cf040ed92321"
   },
   "tests/test_runner.py|tests/test_runner.py::_toml": {
    "file_path": "tests/test_runner.py",
@@ -3074,6 +3146,8 @@
       "tests/test_pypi.py::test_no_tty_returns_none",
       "tests/test_pypi.py::test_prompt_returns_token_without_save",
       "tests/test_pypi.py::test_prompt_empty_token_returns_none",
+      "tests/test_pypi.py::test_prompt_default_is_no_save",
+      "tests/test_pypi.py::test_prompt_yes_saves",
       "tests/test_pypi.py::test_save_pypirc_roundtrip",
       "tests/test_pypi.py::test_save_pypirc_rejects_symlink",
       "tests/test_pypi.py::test_prompted_token_used_for_upload",
@@ -3304,6 +3378,8 @@
         "tests/test_pypi.py::test_no_tty_returns_none",
         "tests/test_pypi.py::test_prompt_returns_token_without_save",
         "tests/test_pypi.py::test_prompt_empty_token_returns_none",
+        "tests/test_pypi.py::test_prompt_default_is_no_save",
+        "tests/test_pypi.py::test_prompt_yes_saves",
         "tests/test_pypi.py::test_save_pypirc_roundtrip",
         "tests/test_pypi.py::test_save_pypirc_rejects_symlink",
         "tests/test_pypi.py::test_prompted_token_used_for_upload",
@@ -3323,7 +3399,7 @@
      "components": [],
      "components_relations": [],
      "layer": "testing",
-     "symbol_count": 40,
+     "symbol_count": 42,
      "top_symbols": [
       {
        "n": "TestChangelogGenerator",
@@ -3338,7 +3414,7 @@
        "k": "method"
       }
      ],
-     "top_symbols_more": 37
+     "top_symbols_more": 39
     }
    ],
    "components_relations": [
@@ -3346,9 +3422,9 @@
      "relation": "calls into",
      "src_name": "tests",
      "dst_name": "deploynator",
-     "evidence": "31 imports, 90 calls across the boundary",
-     "import_count": 31,
-     "call_count": 90,
+     "evidence": "35 imports, 96 calls across the boundary",
+     "import_count": 35,
+     "call_count": 96,
      "key_edges": [
       {
        "source": "tests/test_changelog.py|tests/test_changelog.py::generator",
@@ -3972,23 +4048,23 @@
        "description": ""
       },
       {
-       "source": "tests/test_pypi.py|tests/test_pypi.py::test_save_pypirc_roundtrip",
+       "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompt_default_is_no_save",
        "target": "deploynator/_pypi.py|deploynator/_pypi.py::PyPIRunner",
        "call_sites": [
         {
-         "line": 88,
-         "column": 12
+         "line": 92,
+         "column": 15
         }
        ],
        "description": ""
       },
       {
-       "source": "tests/test_pypi.py|tests/test_pypi.py::test_save_pypirc_roundtrip",
+       "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompt_default_is_no_save",
        "target": "deploynator/_config.py|deploynator/_config.py::create",
        "call_sites": [
         {
-         "line": 88,
-         "column": 23
+         "line": 92,
+         "column": 26
         }
        ],
        "description": ""
@@ -3997,7 +4073,7 @@
     }
    ],
    "layer": "testing",
-   "symbol_count": 63,
+   "symbol_count": 65,
    "top_symbols": [
     {
      "n": "Config",
@@ -4012,7 +4088,7 @@
      "k": "method"
     }
    ],
-   "top_symbols_more": 59,
+   "top_symbols_more": 61,
    "hub": true
   },
   {
@@ -6206,6 +6282,161 @@
    "hub": false
   },
   {
+   "name": "deploynator: _mcp_server",
+   "description": "deploynator: _mcp_server groups 5 files (py) around MCPRequest, __init__, is_notification, response, error. MCP (Model Context Protocol) stdio server for deploynator.",
+   "key_entities": [
+    {
+     "qualified_name": "deploynator/_mcp_server.py::MCPRequest",
+     "reference_file": "deploynator/_mcp_server.py",
+     "reference_start_line": 35,
+     "reference_end_line": 35
+    },
+    {
+     "qualified_name": "deploynator/_mcp_server.py::__init__",
+     "reference_file": "deploynator/_mcp_server.py",
+     "reference_start_line": 36,
+     "reference_end_line": 42
+    },
+    {
+     "qualified_name": "deploynator/_mcp_server.py::is_notification",
+     "reference_file": "deploynator/_mcp_server.py",
+     "reference_start_line": 43,
+     "reference_end_line": 45
+    },
+    {
+     "qualified_name": "deploynator/_mcp_server.py::response",
+     "reference_file": "deploynator/_mcp_server.py",
+     "reference_start_line": 46,
+     "reference_end_line": 48
+    },
+    {
+     "qualified_name": "deploynator/_mcp_server.py::error",
+     "reference_file": "deploynator/_mcp_server.py",
+     "reference_start_line": 49,
+     "reference_end_line": 55
+    },
+    {
+     "qualified_name": "deploynator/_mcp_server.py::MCPTool",
+     "reference_file": "deploynator/_mcp_server.py",
+     "reference_start_line": 56,
+     "reference_end_line": 56
+    },
+    {
+     "qualified_name": "deploynator/_mcp_server.py::__init__",
+     "reference_file": "deploynator/_mcp_server.py",
+     "reference_start_line": 57,
+     "reference_end_line": 63
+    },
+    {
+     "qualified_name": "deploynator/_mcp_server.py::definition",
+     "reference_file": "deploynator/_mcp_server.py",
+     "reference_start_line": 64,
+     "reference_end_line": 66
+    }
+   ],
+   "source_cluster_ids": [],
+   "file_methods": [
+    {
+     "file_path": "deploynator/__init__.py",
+     "methods": []
+    },
+    {
+     "file_path": "deploynator/__main__.py",
+     "methods": [
+      "deploynator/__main__.py::build_parser",
+      "deploynator/__main__.py::preprocess_argv",
+      "deploynator/__main__.py::main"
+     ]
+    },
+    {
+     "file_path": "deploynator/_mcp_server.py",
+     "methods": [
+      "deploynator/_mcp_server.py::MCPRequest",
+      "deploynator/_mcp_server.py::__init__",
+      "deploynator/_mcp_server.py::is_notification",
+      "deploynator/_mcp_server.py::response",
+      "deploynator/_mcp_server.py::error",
+      "deploynator/_mcp_server.py::MCPTool",
+      "deploynator/_mcp_server.py::__init__",
+      "deploynator/_mcp_server.py::definition",
+      "deploynator/_mcp_server.py::call",
+      "deploynator/_mcp_server.py::MCPResource",
+      "deploynator/_mcp_server.py::__init__",
+      "deploynator/_mcp_server.py::definition",
+      "deploynator/_mcp_server.py::read",
+      "deploynator/_mcp_server.py::MCPServer",
+      "deploynator/_mcp_server.py::__init__",
+      "deploynator/_mcp_server.py::register_tool",
+      "deploynator/_mcp_server.py::register_resource",
+      "deploynator/_mcp_server.py::_handle_initialize",
+      "deploynator/_mcp_server.py::_handle_list_tools",
+      "deploynator/_mcp_server.py::_handle_call_tool",
+      "deploynator/_mcp_server.py::_handle_list_resources",
+      "deploynator/_mcp_server.py::_handle_read_resource",
+      "deploynator/_mcp_server.py::dispatch",
+      "deploynator/_mcp_server.py::run",
+      "deploynator/_mcp_server.py::_register_all",
+      "deploynator/_mcp_server.py::_tool_release",
+      "deploynator/_mcp_server.py::_tool_commit",
+      "deploynator/_mcp_server.py::_tool_status",
+      "deploynator/_mcp_server.py::_tool_projects",
+      "deploynator/_mcp_server.py::_tool_docs",
+      "deploynator/_mcp_server.py::_resource_projects",
+      "deploynator/_mcp_server.py::main"
+     ]
+    },
+    {
+     "file_path": "tests/test_cli_mcp.py",
+     "methods": [
+      "tests/test_cli_mcp.py::TestCliMode",
+      "tests/test_cli_mcp.py::test_bare_invokes_interactive",
+      "tests/test_cli_mcp.py::test_explicit_interactive_still_works",
+      "tests/test_cli_mcp.py::test_release_flags_headless",
+      "tests/test_cli_mcp.py::test_serve_command_exists",
+      "tests/test_cli_mcp.py::TestMCPServer",
+      "tests/test_cli_mcp.py::_server",
+      "tests/test_cli_mcp.py::test_initialize_and_list",
+      "tests/test_cli_mcp.py::test_call_status_and_projects",
+      "tests/test_cli_mcp.py::test_unknown_tool_errors",
+      "tests/test_cli_mcp.py::test_resources_list"
+     ]
+    },
+    {
+     "file_path": "tests/test_init.py",
+     "methods": [
+      "tests/test_init.py::TestInitScript",
+      "tests/test_init.py::test_init_creates_files",
+      "tests/test_init.py::test_deploy_sh_executable_and_valid_bash",
+      "tests/test_init.py::test_deploy_sh_content_generic",
+      "tests/test_init.py::test_init_no_overwrite",
+      "tests/test_init.py::test_toml_starter_parseable"
+     ]
+    }
+   ],
+   "component_id": "4",
+   "can_expand": false,
+   "components": [],
+   "components_relations": [],
+   "layer": "utility",
+   "symbol_count": 52,
+   "top_symbols": [
+    {
+     "n": "MCPRequest",
+     "k": "class"
+    },
+    {
+     "n": "__init__",
+     "k": "method"
+    },
+    {
+     "n": "is_notification",
+     "k": "method"
+    }
+   ],
+   "top_symbols_more": 44,
+   "hub": false
+  },
+  {
    "name": "deploynator: _platforms",
    "description": "deploynator: _platforms groups 5 files (py) around DeploynatorApp, __init__, auth_login, auth_status, _auth_github. _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.",
    "key_entities": [
@@ -6249,13 +6480,13 @@
      "qualified_name": "deploynator/_app.py::_auth_bitbucket",
      "reference_file": "deploynator/_app.py",
      "reference_start_line": 86,
-     "reference_end_line": 95
+     "reference_end_line": 153
     },
     {
      "qualified_name": "deploynator/_app.py::init_project",
      "reference_file": "deploynator/_app.py",
-     "reference_start_line": 96,
-     "reference_end_line": 130
+     "reference_start_line": 154,
+     "reference_end_line": 203
     }
    ],
    "source_cluster_ids": [],
@@ -6402,7 +6633,7 @@
      ]
     }
    ],
-   "component_id": "4",
+   "component_id": "5",
    "can_expand": false,
    "components": [],
    "components_relations": [],
@@ -6424,150 +6655,6 @@
    ],
    "top_symbols_more": 89,
    "hub": false
-  },
-  {
-   "name": "deploynator: _mcp_server",
-   "description": "deploynator: _mcp_server groups 4 files (py) around MCPRequest, __init__, is_notification, response, error. MCP (Model Context Protocol) stdio server for deploynator.",
-   "key_entities": [
-    {
-     "qualified_name": "deploynator/_mcp_server.py::MCPRequest",
-     "reference_file": "deploynator/_mcp_server.py",
-     "reference_start_line": 35,
-     "reference_end_line": 35
-    },
-    {
-     "qualified_name": "deploynator/_mcp_server.py::__init__",
-     "reference_file": "deploynator/_mcp_server.py",
-     "reference_start_line": 36,
-     "reference_end_line": 42
-    },
-    {
-     "qualified_name": "deploynator/_mcp_server.py::is_notification",
-     "reference_file": "deploynator/_mcp_server.py",
-     "reference_start_line": 43,
-     "reference_end_line": 45
-    },
-    {
-     "qualified_name": "deploynator/_mcp_server.py::response",
-     "reference_file": "deploynator/_mcp_server.py",
-     "reference_start_line": 46,
-     "reference_end_line": 48
-    },
-    {
-     "qualified_name": "deploynator/_mcp_server.py::error",
-     "reference_file": "deploynator/_mcp_server.py",
-     "reference_start_line": 49,
-     "reference_end_line": 55
-    },
-    {
-     "qualified_name": "deploynator/_mcp_server.py::MCPTool",
-     "reference_file": "deploynator/_mcp_server.py",
-     "reference_start_line": 56,
-     "reference_end_line": 56
-    },
-    {
-     "qualified_name": "deploynator/_mcp_server.py::__init__",
-     "reference_file": "deploynator/_mcp_server.py",
-     "reference_start_line": 57,
-     "reference_end_line": 63
-    },
-    {
-     "qualified_name": "deploynator/_mcp_server.py::definition",
-     "reference_file": "deploynator/_mcp_server.py",
-     "reference_start_line": 64,
-     "reference_end_line": 66
-    }
-   ],
-   "source_cluster_ids": [],
-   "file_methods": [
-    {
-     "file_path": "deploynator/__init__.py",
-     "methods": []
-    },
-    {
-     "file_path": "deploynator/__main__.py",
-     "methods": [
-      "deploynator/__main__.py::build_parser",
-      "deploynator/__main__.py::preprocess_argv",
-      "deploynator/__main__.py::main"
-     ]
-    },
-    {
-     "file_path": "deploynator/_mcp_server.py",
-     "methods": [
-      "deploynator/_mcp_server.py::MCPRequest",
-      "deploynator/_mcp_server.py::__init__",
-      "deploynator/_mcp_server.py::is_notification",
-      "deploynator/_mcp_server.py::response",
-      "deploynator/_mcp_server.py::error",
-      "deploynator/_mcp_server.py::MCPTool",
-      "deploynator/_mcp_server.py::__init__",
-      "deploynator/_mcp_server.py::definition",
-      "deploynator/_mcp_server.py::call",
-      "deploynator/_mcp_server.py::MCPResource",
-      "deploynator/_mcp_server.py::__init__",
-      "deploynator/_mcp_server.py::definition",
-      "deploynator/_mcp_server.py::read",
-      "deploynator/_mcp_server.py::MCPServer",
-      "deploynator/_mcp_server.py::__init__",
-      "deploynator/_mcp_server.py::register_tool",
-      "deploynator/_mcp_server.py::register_resource",
-      "deploynator/_mcp_server.py::_handle_initialize",
-      "deploynator/_mcp_server.py::_handle_list_tools",
-      "deploynator/_mcp_server.py::_handle_call_tool",
-      "deploynator/_mcp_server.py::_handle_list_resources",
-      "deploynator/_mcp_server.py::_handle_read_resource",
-      "deploynator/_mcp_server.py::dispatch",
-      "deploynator/_mcp_server.py::run",
-      "deploynator/_mcp_server.py::_register_all",
-      "deploynator/_mcp_server.py::_tool_release",
-      "deploynator/_mcp_server.py::_tool_commit",
-      "deploynator/_mcp_server.py::_tool_status",
-      "deploynator/_mcp_server.py::_tool_projects",
-      "deploynator/_mcp_server.py::_tool_docs",
-      "deploynator/_mcp_server.py::_resource_projects",
-      "deploynator/_mcp_server.py::main"
-     ]
-    },
-    {
-     "file_path": "tests/test_cli_mcp.py",
-     "methods": [
-      "tests/test_cli_mcp.py::TestCliMode",
-      "tests/test_cli_mcp.py::test_bare_invokes_interactive",
-      "tests/test_cli_mcp.py::test_explicit_interactive_still_works",
-      "tests/test_cli_mcp.py::test_release_flags_headless",
-      "tests/test_cli_mcp.py::test_serve_command_exists",
-      "tests/test_cli_mcp.py::TestMCPServer",
-      "tests/test_cli_mcp.py::_server",
-      "tests/test_cli_mcp.py::test_initialize_and_list",
-      "tests/test_cli_mcp.py::test_call_status_and_projects",
-      "tests/test_cli_mcp.py::test_unknown_tool_errors",
-      "tests/test_cli_mcp.py::test_resources_list"
-     ]
-    }
-   ],
-   "component_id": "5",
-   "can_expand": false,
-   "components": [],
-   "components_relations": [],
-   "layer": "utility",
-   "symbol_count": 46,
-   "top_symbols": [
-    {
-     "n": "MCPRequest",
-     "k": "class"
-    },
-    {
-     "n": "__init__",
-     "k": "method"
-    },
-    {
-     "n": "is_notification",
-     "k": "method"
-    }
-   ],
-   "top_symbols_more": 38,
-   "hub": false
   }
  ],
  "components_relations": [
@@ -6584,7 +6671,7 @@
      "target": "deploynator/_toml.py|deploynator/_toml.py::TomlConfig",
      "call_sites": [
       {
-       "line": 154,
+       "line": 181,
        "column": 15
       }
      ],
@@ -6600,7 +6687,7 @@
      "target": "deploynator/_toml.py|deploynator/_toml.py::TomlConfig",
      "call_sites": [
       {
-       "line": 154,
+       "line": 181,
        "column": 15
       }
      ],
@@ -6676,7 +6763,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::ProjectConfig",
      "call_sites": [
       {
-       "line": 138,
+       "line": 165,
        "column": 24
       }
      ],
@@ -6687,7 +6774,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::ProjectConfig",
      "call_sites": [
       {
-       "line": 213,
+       "line": 240,
        "column": 24
       }
      ],
@@ -6698,7 +6785,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::ProjectConfig",
      "call_sites": [
       {
-       "line": 245,
+       "line": 272,
        "column": 24
       }
      ],
@@ -6769,7 +6856,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::ProjectConfig",
      "call_sites": [
       {
-       "line": 138,
+       "line": 165,
        "column": 24
       }
      ],
@@ -6780,7 +6867,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::ProjectConfig",
      "call_sites": [
       {
-       "line": 213,
+       "line": 240,
        "column": 24
       }
      ],
@@ -6791,155 +6878,8 @@
      "target": "deploynator/_models.py|deploynator/_models.py::ProjectConfig",
      "call_sites": [
       {
-       "line": 245,
+       "line": 272,
        "column": 24
-      }
-     ],
-     "description": ""
-    }
-   ]
-  },
-  {
-   "relation": "calls into",
-   "src_name": "deploynator: _changelog",
-   "dst_name": "deploynator: _platforms",
-   "evidence": "3 imports, 6 calls across the boundary",
-   "import_count": 3,
-   "call_count": 6,
-   "key_edges": [
-    {
-     "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload",
-     "target": "deploynator/_deploy.py|deploynator/_deploy.py::DeployOrchestrator",
-     "call_sites": [
-      {
-       "line": 137,
-       "column": 18
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload",
-     "target": "deploynator/_deploy.py|deploynator/_deploy.py::deploy",
-     "call_sites": [
-      {
-       "line": 137,
-       "column": 18
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "tests/test_pypi.py|tests/test_pypi.py::test_pypi_failure_aborts_with_error",
-     "target": "deploynator/_deploy.py|deploynator/_deploy.py::DeployOrchestrator",
-     "call_sites": [
-      {
-       "line": 212,
-       "column": 18
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "tests/test_pypi.py|tests/test_pypi.py::test_pypi_failure_aborts_with_error",
-     "target": "deploynator/_deploy.py|deploynator/_deploy.py::deploy",
-     "call_sites": [
-      {
-       "line": 212,
-       "column": 18
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "tests/test_pypi.py|tests/test_pypi.py::test_no_credentials_skips_pypi",
-     "target": "deploynator/_deploy.py|deploynator/_deploy.py::DeployOrchestrator",
-     "call_sites": [
-      {
-       "line": 244,
-       "column": 18
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "tests/test_pypi.py|tests/test_pypi.py::test_no_credentials_skips_pypi",
-     "target": "deploynator/_deploy.py|deploynator/_deploy.py::deploy",
-     "call_sites": [
-      {
-       "line": 244,
-       "column": 18
-      }
-     ],
-     "description": ""
-    }
-   ],
-   "src_id": "1",
-   "dst_id": "4",
-   "is_static": true,
-   "all_edges": [
-    {
-     "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload",
-     "target": "deploynator/_deploy.py|deploynator/_deploy.py::DeployOrchestrator",
-     "call_sites": [
-      {
-       "line": 137,
-       "column": 18
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload",
-     "target": "deploynator/_deploy.py|deploynator/_deploy.py::deploy",
-     "call_sites": [
-      {
-       "line": 137,
-       "column": 18
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "tests/test_pypi.py|tests/test_pypi.py::test_pypi_failure_aborts_with_error",
-     "target": "deploynator/_deploy.py|deploynator/_deploy.py::DeployOrchestrator",
-     "call_sites": [
-      {
-       "line": 212,
-       "column": 18
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "tests/test_pypi.py|tests/test_pypi.py::test_pypi_failure_aborts_with_error",
-     "target": "deploynator/_deploy.py|deploynator/_deploy.py::deploy",
-     "call_sites": [
-      {
-       "line": 212,
-       "column": 18
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "tests/test_pypi.py|tests/test_pypi.py::test_no_credentials_skips_pypi",
-     "target": "deploynator/_deploy.py|deploynator/_deploy.py::DeployOrchestrator",
-     "call_sites": [
-      {
-       "line": 244,
-       "column": 18
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "tests/test_pypi.py|tests/test_pypi.py::test_no_credentials_skips_pypi",
-     "target": "deploynator/_deploy.py|deploynator/_deploy.py::deploy",
-     "call_sites": [
-      {
-       "line": 244,
-       "column": 18
       }
      ],
      "description": ""
@@ -6970,7 +6910,7 @@
      "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
      "call_sites": [
       {
-       "line": 91,
+       "line": 118,
        "column": 12
       }
      ],
@@ -6978,7 +6918,7 @@
     }
    ],
    "src_id": "1",
-   "dst_id": "5",
+   "dst_id": "4",
    "is_static": true,
    "all_edges": [
     {
@@ -6997,8 +6937,155 @@
      "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
      "call_sites": [
       {
-       "line": 91,
+       "line": 118,
        "column": 12
+      }
+     ],
+     "description": ""
+    }
+   ]
+  },
+  {
+   "relation": "calls into",
+   "src_name": "deploynator: _changelog",
+   "dst_name": "deploynator: _platforms",
+   "evidence": "3 imports, 6 calls across the boundary",
+   "import_count": 3,
+   "call_count": 6,
+   "key_edges": [
+    {
+     "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload",
+     "target": "deploynator/_deploy.py|deploynator/_deploy.py::DeployOrchestrator",
+     "call_sites": [
+      {
+       "line": 164,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload",
+     "target": "deploynator/_deploy.py|deploynator/_deploy.py::deploy",
+     "call_sites": [
+      {
+       "line": 164,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_pypi.py|tests/test_pypi.py::test_pypi_failure_aborts_with_error",
+     "target": "deploynator/_deploy.py|deploynator/_deploy.py::DeployOrchestrator",
+     "call_sites": [
+      {
+       "line": 239,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_pypi.py|tests/test_pypi.py::test_pypi_failure_aborts_with_error",
+     "target": "deploynator/_deploy.py|deploynator/_deploy.py::deploy",
+     "call_sites": [
+      {
+       "line": 239,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_pypi.py|tests/test_pypi.py::test_no_credentials_skips_pypi",
+     "target": "deploynator/_deploy.py|deploynator/_deploy.py::DeployOrchestrator",
+     "call_sites": [
+      {
+       "line": 271,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_pypi.py|tests/test_pypi.py::test_no_credentials_skips_pypi",
+     "target": "deploynator/_deploy.py|deploynator/_deploy.py::deploy",
+     "call_sites": [
+      {
+       "line": 271,
+       "column": 18
+      }
+     ],
+     "description": ""
+    }
+   ],
+   "src_id": "1",
+   "dst_id": "5",
+   "is_static": true,
+   "all_edges": [
+    {
+     "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload",
+     "target": "deploynator/_deploy.py|deploynator/_deploy.py::DeployOrchestrator",
+     "call_sites": [
+      {
+       "line": 164,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_pypi.py|tests/test_pypi.py::test_prompted_token_used_for_upload",
+     "target": "deploynator/_deploy.py|deploynator/_deploy.py::deploy",
+     "call_sites": [
+      {
+       "line": 164,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_pypi.py|tests/test_pypi.py::test_pypi_failure_aborts_with_error",
+     "target": "deploynator/_deploy.py|deploynator/_deploy.py::DeployOrchestrator",
+     "call_sites": [
+      {
+       "line": 239,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_pypi.py|tests/test_pypi.py::test_pypi_failure_aborts_with_error",
+     "target": "deploynator/_deploy.py|deploynator/_deploy.py::deploy",
+     "call_sites": [
+      {
+       "line": 239,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_pypi.py|tests/test_pypi.py::test_no_credentials_skips_pypi",
+     "target": "deploynator/_deploy.py|deploynator/_deploy.py::DeployOrchestrator",
+     "call_sites": [
+      {
+       "line": 271,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_pypi.py|tests/test_pypi.py::test_no_credentials_skips_pypi",
+     "target": "deploynator/_deploy.py|deploynator/_deploy.py::deploy",
+     "call_sites": [
+      {
+       "line": 271,
+       "column": 18
       }
      ],
      "description": ""
@@ -7540,7 +7627,7 @@
     }
    ],
    "src_id": "2",
-   "dst_id": "4",
+   "dst_id": "5",
    "is_static": true,
    "all_edges": [
     {
@@ -7838,6 +7925,109 @@
   {
    "relation": "calls into",
    "src_name": "deploynator: _models",
+   "dst_name": "deploynator: _mcp_server",
+   "evidence": "2 imports, 4 calls across the boundary",
+   "import_count": 2,
+   "call_count": 4,
+   "key_edges": [
+    {
+     "source": "deploynator/_semver.py|deploynator/_semver.py::get_current_version",
+     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
+     "call_sites": [
+      {
+       "line": 35,
+       "column": 34
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_semver.py|deploynator/_semver.py::write_version_file",
+     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
+     "call_sites": [
+      {
+       "line": 75,
+       "column": 26
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_semver.py|deploynator/_semver.py::write_version_file",
+     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
+     "call_sites": [
+      {
+       "line": 85,
+       "column": 26
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_semver.py|deploynator/_semver.py::write_version_file",
+     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
+     "call_sites": [
+      {
+       "line": 98,
+       "column": 26
+      }
+     ],
+     "description": ""
+    }
+   ],
+   "src_id": "3",
+   "dst_id": "4",
+   "is_static": true,
+   "all_edges": [
+    {
+     "source": "deploynator/_semver.py|deploynator/_semver.py::get_current_version",
+     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
+     "call_sites": [
+      {
+       "line": 35,
+       "column": 34
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_semver.py|deploynator/_semver.py::write_version_file",
+     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
+     "call_sites": [
+      {
+       "line": 75,
+       "column": 26
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_semver.py|deploynator/_semver.py::write_version_file",
+     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
+     "call_sites": [
+      {
+       "line": 85,
+       "column": 26
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_semver.py|deploynator/_semver.py::write_version_file",
+     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
+     "call_sites": [
+      {
+       "line": 98,
+       "column": 26
+      }
+     ],
+     "description": ""
+    }
+   ]
+  },
+  {
+   "relation": "calls into",
+   "src_name": "deploynator: _models",
    "dst_name": "deploynator: _platforms",
    "evidence": "6 imports, 16 calls across the boundary",
    "import_count": 6,
@@ -7933,7 +8123,7 @@
     }
    ],
    "src_id": "3",
-   "dst_id": "4",
+   "dst_id": "5",
    "is_static": true,
    "all_edges": [
     {
@@ -8116,101 +8306,817 @@
   },
   {
    "relation": "calls into",
-   "src_name": "deploynator: _models",
-   "dst_name": "deploynator: _mcp_server",
-   "evidence": "2 imports, 4 calls across the boundary",
-   "import_count": 2,
-   "call_count": 4,
+   "src_name": "deploynator: _mcp_server",
+   "dst_name": "deploynator: _changelog",
+   "evidence": "8 imports, 9 calls across the boundary",
+   "import_count": 8,
+   "call_count": 9,
    "key_edges": [
     {
-     "source": "deploynator/_semver.py|deploynator/_semver.py::get_current_version",
-     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 169,
+       "column": 17
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 175,
+       "column": 13
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::main",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 273,
+       "column": 25
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_cli_mcp.py|tests/test_cli_mcp.py::_server",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 41,
+       "column": 29
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_init_creates_files",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 13,
+       "column": 33
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_deploy_sh_executable_and_valid_bash",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 24,
+       "column": 27
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_deploy_sh_content_generic",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
        "line": 35,
-       "column": 34
+       "column": 27
       }
      ],
      "description": ""
     },
     {
-     "source": "deploynator/_semver.py|deploynator/_semver.py::write_version_file",
-     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
+     "source": "tests/test_init.py|tests/test_init.py::test_init_no_overwrite",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 75,
-       "column": 26
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/_semver.py|deploynator/_semver.py::write_version_file",
-     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
-     "call_sites": [
-      {
-       "line": 85,
-       "column": 26
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/_semver.py|deploynator/_semver.py::write_version_file",
-     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
-     "call_sites": [
-      {
-       "line": 98,
-       "column": 26
+       "line": 49,
+       "column": 33
       }
      ],
      "description": ""
     }
    ],
-   "src_id": "3",
+   "src_id": "4",
+   "dst_id": "1",
+   "is_static": true,
+   "all_edges": [
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 169,
+       "column": 17
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 175,
+       "column": 13
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::main",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 273,
+       "column": 25
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_cli_mcp.py|tests/test_cli_mcp.py::_server",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 41,
+       "column": 29
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_init_creates_files",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 13,
+       "column": 33
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_deploy_sh_executable_and_valid_bash",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 24,
+       "column": 27
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_deploy_sh_content_generic",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 35,
+       "column": 27
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_init_no_overwrite",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 49,
+       "column": 33
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_toml_starter_parseable",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 62,
+       "column": 27
+      }
+     ],
+     "description": ""
+    }
+   ]
+  },
+  {
+   "relation": "calls into",
+   "src_name": "deploynator: _mcp_server",
+   "dst_name": "deploynator: _toml",
+   "evidence": "1 imports, 1 calls across the boundary",
+   "import_count": 1,
+   "call_count": 1,
+   "key_edges": [
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_toml_starter_parseable",
+     "target": "deploynator/_toml.py|deploynator/_toml.py::load_toml_config",
+     "call_sites": [
+      {
+       "line": 63,
+       "column": 18
+      }
+     ],
+     "description": ""
+    }
+   ],
+   "src_id": "4",
+   "dst_id": "2",
+   "is_static": true,
+   "all_edges": [
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_toml_starter_parseable",
+     "target": "deploynator/_toml.py|deploynator/_toml.py::load_toml_config",
+     "call_sites": [
+      {
+       "line": 63,
+       "column": 18
+      }
+     ],
+     "description": ""
+    }
+   ]
+  },
+  {
+   "relation": "calls into",
+   "src_name": "deploynator: _mcp_server",
+   "dst_name": "deploynator: _models",
+   "evidence": "1 imports, 5 calls across the boundary",
+   "import_count": 1,
+   "call_count": 5,
+   "key_edges": [
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::build_parser",
+     "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
+     "call_sites": [
+      {
+       "line": 38,
+       "column": 16
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::build_parser",
+     "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
+     "call_sites": [
+      {
+       "line": 64,
+       "column": 16
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::build_parser",
+     "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
+     "call_sites": [
+      {
+       "line": 77,
+       "column": 16
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_models.py|deploynator/_models.py::label",
+     "call_sites": [
+      {
+       "line": 255,
+       "column": 19
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::_tool_projects",
+     "target": "deploynator/_models.py|deploynator/_models.py::label",
+     "call_sites": [
+      {
+       "line": 258,
+       "column": 45
+      }
+     ],
+     "description": ""
+    }
+   ],
+   "src_id": "4",
+   "dst_id": "3",
+   "is_static": true,
+   "all_edges": [
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::build_parser",
+     "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
+     "call_sites": [
+      {
+       "line": 38,
+       "column": 16
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::build_parser",
+     "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
+     "call_sites": [
+      {
+       "line": 64,
+       "column": 16
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::build_parser",
+     "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
+     "call_sites": [
+      {
+       "line": 77,
+       "column": 16
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_models.py|deploynator/_models.py::label",
+     "call_sites": [
+      {
+       "line": 255,
+       "column": 19
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::_tool_projects",
+     "target": "deploynator/_models.py|deploynator/_models.py::label",
+     "call_sites": [
+      {
+       "line": 258,
+       "column": 45
+      }
+     ],
+     "description": ""
+    }
+   ]
+  },
+  {
+   "relation": "calls into",
+   "src_name": "deploynator: _mcp_server",
+   "dst_name": "deploynator: _platforms",
+   "evidence": "1 imports, 32 calls across the boundary",
+   "import_count": 1,
+   "call_count": 32,
+   "key_edges": [
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
+     "call_sites": [
+      {
+       "line": 170,
+       "column": 8
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::interactive_menu",
+     "call_sites": [
+      {
+       "line": 170,
+       "column": 8
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
+     "call_sites": [
+      {
+       "line": 176,
+       "column": 10
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::release",
+     "call_sites": [
+      {
+       "line": 186,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::start_branch",
+     "call_sites": [
+      {
+       "line": 214,
+       "column": 17
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::auth_login",
+     "call_sites": [
+      {
+       "line": 225,
+       "column": 22
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::auth_status",
+     "call_sites": [
+      {
+       "line": 229,
+       "column": 21
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::generate_docs",
+     "call_sites": [
+      {
+       "line": 236,
+       "column": 13
+      }
+     ],
+     "description": ""
+    }
+   ],
+   "src_id": "4",
    "dst_id": "5",
    "is_static": true,
    "all_edges": [
     {
-     "source": "deploynator/_semver.py|deploynator/_semver.py::get_current_version",
-     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
+     "call_sites": [
+      {
+       "line": 170,
+       "column": 8
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::interactive_menu",
+     "call_sites": [
+      {
+       "line": 170,
+       "column": 8
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
+     "call_sites": [
+      {
+       "line": 176,
+       "column": 10
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::release",
+     "call_sites": [
+      {
+       "line": 186,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::start_branch",
+     "call_sites": [
+      {
+       "line": 214,
+       "column": 17
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::auth_login",
+     "call_sites": [
+      {
+       "line": 225,
+       "column": 22
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::auth_status",
+     "call_sites": [
+      {
+       "line": 229,
+       "column": 21
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::generate_docs",
+     "call_sites": [
+      {
+       "line": 236,
+       "column": 13
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::init_project",
+     "call_sites": [
+      {
+       "line": 240,
+       "column": 17
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::status",
+     "call_sites": [
+      {
+       "line": 244,
+       "column": 15
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::list_projects",
+     "call_sites": [
+      {
+       "line": 249,
+       "column": 19
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::generate_ci",
+     "call_sites": [
+      {
+       "line": 260,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::install_deps",
+     "call_sites": [
+      {
+       "line": 268,
+       "column": 15
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::interactive_menu",
+     "call_sites": [
+      {
+       "line": 273,
+       "column": 8
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::_register_all",
+     "target": "deploynator/_app.py|deploynator/_app.py::status",
+     "call_sites": [
+      {
+       "line": 230,
+       "column": 40
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::_tool_release",
+     "target": "deploynator/_app.py|deploynator/_app.py::release",
+     "call_sites": [
+      {
+       "line": 237,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::_tool_status",
+     "target": "deploynator/_app.py|deploynator/_app.py::status",
+     "call_sites": [
+      {
+       "line": 253,
+       "column": 26
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::_tool_projects",
+     "target": "deploynator/_app.py|deploynator/_app.py::list_projects",
+     "call_sites": [
+      {
+       "line": 256,
+       "column": 19
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::_tool_docs",
+     "target": "deploynator/_app.py|deploynator/_app.py::generate_docs",
+     "call_sites": [
+      {
+       "line": 262,
+       "column": 13
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::main",
+     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
+     "call_sites": [
+      {
+       "line": 273,
+       "column": 10
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_cli_mcp.py|tests/test_cli_mcp.py::_server",
+     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
+     "call_sites": [
+      {
+       "line": 41,
+       "column": 14
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_init_creates_files",
+     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
+     "call_sites": [
+      {
+       "line": 13,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_init_creates_files",
+     "target": "deploynator/_app.py|deploynator/_app.py::init_project",
+     "call_sites": [
+      {
+       "line": 13,
+       "column": 18
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_deploy_sh_executable_and_valid_bash",
+     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
+     "call_sites": [
+      {
+       "line": 24,
+       "column": 12
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_deploy_sh_executable_and_valid_bash",
+     "target": "deploynator/_app.py|deploynator/_app.py::init_project",
+     "call_sites": [
+      {
+       "line": 24,
+       "column": 12
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_deploy_sh_content_generic",
+     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
      "call_sites": [
       {
        "line": 35,
-       "column": 34
+       "column": 12
       }
      ],
      "description": ""
     },
     {
-     "source": "deploynator/_semver.py|deploynator/_semver.py::write_version_file",
-     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
+     "source": "tests/test_init.py|tests/test_init.py::test_deploy_sh_content_generic",
+     "target": "deploynator/_app.py|deploynator/_app.py::init_project",
      "call_sites": [
       {
-       "line": 75,
-       "column": 26
+       "line": 35,
+       "column": 12
       }
      ],
      "description": ""
     },
     {
-     "source": "deploynator/_semver.py|deploynator/_semver.py::write_version_file",
-     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
+     "source": "tests/test_init.py|tests/test_init.py::test_init_no_overwrite",
+     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
      "call_sites": [
       {
-       "line": 85,
-       "column": 26
+       "line": 49,
+       "column": 18
       }
      ],
      "description": ""
     },
     {
-     "source": "deploynator/_semver.py|deploynator/_semver.py::write_version_file",
-     "target": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::read",
+     "source": "tests/test_init.py|tests/test_init.py::test_init_no_overwrite",
+     "target": "deploynator/_app.py|deploynator/_app.py::init_project",
      "call_sites": [
       {
-       "line": 98,
-       "column": 26
+       "line": 50,
+       "column": 12
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_init_no_overwrite",
+     "target": "deploynator/_app.py|deploynator/_app.py::init_project",
+     "call_sites": [
+      {
+       "line": 53,
+       "column": 12
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_toml_starter_parseable",
+     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
+     "call_sites": [
+      {
+       "line": 62,
+       "column": 12
+      }
+     ],
+     "description": ""
+    },
+    {
+     "source": "tests/test_init.py|tests/test_init.py::test_toml_starter_parseable",
+     "target": "deploynator/_app.py|deploynator/_app.py::init_project",
+     "call_sites": [
+      {
+       "line": 62,
+       "column": 12
       }
      ],
      "description": ""
@@ -8263,7 +9169,7 @@
      "target": "deploynator/_changelog.py|deploynator/_changelog.py::write_changelog",
      "call_sites": [
       {
-       "line": 182,
+       "line": 255,
        "column": 12
       }
      ],
@@ -8274,7 +9180,7 @@
      "target": "deploynator/_changelog.py|deploynator/_changelog.py::generate_from_messages",
      "call_sites": [
       {
-       "line": 203,
+       "line": 276,
        "column": 20
       }
      ],
@@ -8314,7 +9220,7 @@
      "description": ""
     }
    ],
-   "src_id": "4",
+   "src_id": "5",
    "dst_id": "1",
    "is_static": true,
    "all_edges": [
@@ -8356,7 +9262,7 @@
      "target": "deploynator/_changelog.py|deploynator/_changelog.py::write_changelog",
      "call_sites": [
       {
-       "line": 182,
+       "line": 255,
        "column": 12
       }
      ],
@@ -8367,7 +9273,7 @@
      "target": "deploynator/_changelog.py|deploynator/_changelog.py::generate_from_messages",
      "call_sites": [
       {
-       "line": 203,
+       "line": 276,
        "column": 20
       }
      ],
@@ -8542,7 +9448,7 @@
      "target": "deploynator/_toml.py|deploynator/_toml.py::load_toml_config",
      "call_sites": [
       {
-       "line": 261,
+       "line": 334,
        "column": 35
       }
      ],
@@ -8626,7 +9532,7 @@
      "description": ""
     }
    ],
-   "src_id": "4",
+   "src_id": "5",
    "dst_id": "2",
    "is_static": true,
    "all_edges": [
@@ -8635,7 +9541,7 @@
      "target": "deploynator/_toml.py|deploynator/_toml.py::load_toml_config",
      "call_sites": [
       {
-       "line": 261,
+       "line": 334,
        "column": 35
       }
      ],
@@ -8854,7 +9760,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::from_string",
      "call_sites": [
       {
-       "line": 135,
+       "line": 208,
        "column": 27
       }
      ],
@@ -8865,7 +9771,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::from_string",
      "call_sites": [
       {
-       "line": 194,
+       "line": 267,
        "column": 16
       }
      ],
@@ -8876,7 +9782,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::CommitMessage",
      "call_sites": [
       {
-       "line": 212,
+       "line": 285,
        "column": 21
       }
      ],
@@ -8887,7 +9793,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::from_string",
      "call_sites": [
       {
-       "line": 245,
+       "line": 318,
        "column": 16
       }
      ],
@@ -8898,7 +9804,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::ProjectConfig",
      "call_sites": [
       {
-       "line": 265,
+       "line": 338,
        "column": 32
       }
      ],
@@ -8909,7 +9815,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::VersionConfig",
      "call_sites": [
       {
-       "line": 269,
+       "line": 342,
        "column": 32
       }
      ],
@@ -8920,14 +9826,14 @@
      "target": "deploynator/_models.py|deploynator/_models.py::DeployResult",
      "call_sites": [
       {
-       "line": 283,
+       "line": 356,
        "column": 20
       }
      ],
      "description": ""
     }
    ],
-   "src_id": "4",
+   "src_id": "5",
    "dst_id": "3",
    "is_static": true,
    "all_edges": [
@@ -8947,7 +9853,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::from_string",
      "call_sites": [
       {
-       "line": 135,
+       "line": 208,
        "column": 27
       }
      ],
@@ -8958,7 +9864,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::from_string",
      "call_sites": [
       {
-       "line": 194,
+       "line": 267,
        "column": 16
       }
      ],
@@ -8969,7 +9875,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::CommitMessage",
      "call_sites": [
       {
-       "line": 212,
+       "line": 285,
        "column": 21
       }
      ],
@@ -8980,7 +9886,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::from_string",
      "call_sites": [
       {
-       "line": 245,
+       "line": 318,
        "column": 16
       }
      ],
@@ -8991,7 +9897,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::ProjectConfig",
      "call_sites": [
       {
-       "line": 265,
+       "line": 338,
        "column": 32
       }
      ],
@@ -9002,7 +9908,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::VersionConfig",
      "call_sites": [
       {
-       "line": 269,
+       "line": 342,
        "column": 32
       }
      ],
@@ -9013,7 +9919,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::DeployResult",
      "call_sites": [
       {
-       "line": 283,
+       "line": 356,
        "column": 20
       }
      ],
@@ -9024,7 +9930,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::from_string",
      "call_sites": [
       {
-       "line": 292,
+       "line": 365,
        "column": 29
       }
      ],
@@ -9035,7 +9941,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
      "call_sites": [
       {
-       "line": 417,
+       "line": 490,
        "column": 31
       }
      ],
@@ -9046,7 +9952,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
      "call_sites": [
       {
-       "line": 421,
+       "line": 494,
        "column": 20
       }
      ],
@@ -9057,7 +9963,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
      "call_sites": [
       {
-       "line": 459,
+       "line": 532,
        "column": 31
       }
      ],
@@ -9068,7 +9974,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
      "call_sites": [
       {
-       "line": 463,
+       "line": 536,
        "column": 20
       }
      ],
@@ -9079,7 +9985,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
      "call_sites": [
       {
-       "line": 486,
+       "line": 559,
        "column": 31
       }
      ],
@@ -9090,7 +9996,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
      "call_sites": [
       {
-       "line": 490,
+       "line": 563,
        "column": 20
       }
      ],
@@ -9422,568 +10328,6 @@
       {
        "line": 91,
        "column": 16
-      }
-     ],
-     "description": ""
-    }
-   ]
-  },
-  {
-   "relation": "calls into",
-   "src_name": "deploynator: _mcp_server",
-   "dst_name": "deploynator: _changelog",
-   "evidence": "3 imports, 4 calls across the boundary",
-   "import_count": 3,
-   "call_count": 4,
-   "key_edges": [
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_config.py|deploynator/_config.py::create",
-     "call_sites": [
-      {
-       "line": 169,
-       "column": 17
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_config.py|deploynator/_config.py::create",
-     "call_sites": [
-      {
-       "line": 175,
-       "column": 13
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::main",
-     "target": "deploynator/_config.py|deploynator/_config.py::create",
-     "call_sites": [
-      {
-       "line": 273,
-       "column": 25
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "tests/test_cli_mcp.py|tests/test_cli_mcp.py::_server",
-     "target": "deploynator/_config.py|deploynator/_config.py::create",
-     "call_sites": [
-      {
-       "line": 41,
-       "column": 29
-      }
-     ],
-     "description": ""
-    }
-   ],
-   "src_id": "5",
-   "dst_id": "1",
-   "is_static": true,
-   "all_edges": [
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_config.py|deploynator/_config.py::create",
-     "call_sites": [
-      {
-       "line": 169,
-       "column": 17
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_config.py|deploynator/_config.py::create",
-     "call_sites": [
-      {
-       "line": 175,
-       "column": 13
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::main",
-     "target": "deploynator/_config.py|deploynator/_config.py::create",
-     "call_sites": [
-      {
-       "line": 273,
-       "column": 25
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "tests/test_cli_mcp.py|tests/test_cli_mcp.py::_server",
-     "target": "deploynator/_config.py|deploynator/_config.py::create",
-     "call_sites": [
-      {
-       "line": 41,
-       "column": 29
-      }
-     ],
-     "description": ""
-    }
-   ]
-  },
-  {
-   "relation": "calls into",
-   "src_name": "deploynator: _mcp_server",
-   "dst_name": "deploynator: _models",
-   "evidence": "1 imports, 5 calls across the boundary",
-   "import_count": 1,
-   "call_count": 5,
-   "key_edges": [
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::build_parser",
-     "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
-     "call_sites": [
-      {
-       "line": 38,
-       "column": 16
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::build_parser",
-     "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
-     "call_sites": [
-      {
-       "line": 64,
-       "column": 16
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::build_parser",
-     "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
-     "call_sites": [
-      {
-       "line": 77,
-       "column": 16
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_models.py|deploynator/_models.py::label",
-     "call_sites": [
-      {
-       "line": 255,
-       "column": 19
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::_tool_projects",
-     "target": "deploynator/_models.py|deploynator/_models.py::label",
-     "call_sites": [
-      {
-       "line": 258,
-       "column": 45
-      }
-     ],
-     "description": ""
-    }
-   ],
-   "src_id": "5",
-   "dst_id": "3",
-   "is_static": true,
-   "all_edges": [
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::build_parser",
-     "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
-     "call_sites": [
-      {
-       "line": 38,
-       "column": 16
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::build_parser",
-     "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
-     "call_sites": [
-      {
-       "line": 64,
-       "column": 16
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::build_parser",
-     "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
-     "call_sites": [
-      {
-       "line": 77,
-       "column": 16
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_models.py|deploynator/_models.py::label",
-     "call_sites": [
-      {
-       "line": 255,
-       "column": 19
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::_tool_projects",
-     "target": "deploynator/_models.py|deploynator/_models.py::label",
-     "call_sites": [
-      {
-       "line": 258,
-       "column": 45
-      }
-     ],
-     "description": ""
-    }
-   ]
-  },
-  {
-   "relation": "calls into",
-   "src_name": "deploynator: _mcp_server",
-   "dst_name": "deploynator: _platforms",
-   "evidence": "1 imports, 21 calls across the boundary",
-   "import_count": 1,
-   "call_count": 21,
-   "key_edges": [
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
-     "call_sites": [
-      {
-       "line": 170,
-       "column": 8
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::interactive_menu",
-     "call_sites": [
-      {
-       "line": 170,
-       "column": 8
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
-     "call_sites": [
-      {
-       "line": 176,
-       "column": 10
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::release",
-     "call_sites": [
-      {
-       "line": 186,
-       "column": 18
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::start_branch",
-     "call_sites": [
-      {
-       "line": 214,
-       "column": 17
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::auth_login",
-     "call_sites": [
-      {
-       "line": 225,
-       "column": 22
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::auth_status",
-     "call_sites": [
-      {
-       "line": 229,
-       "column": 21
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::generate_docs",
-     "call_sites": [
-      {
-       "line": 236,
-       "column": 13
-      }
-     ],
-     "description": ""
-    }
-   ],
-   "src_id": "5",
-   "dst_id": "4",
-   "is_static": true,
-   "all_edges": [
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
-     "call_sites": [
-      {
-       "line": 170,
-       "column": 8
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::interactive_menu",
-     "call_sites": [
-      {
-       "line": 170,
-       "column": 8
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
-     "call_sites": [
-      {
-       "line": 176,
-       "column": 10
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::release",
-     "call_sites": [
-      {
-       "line": 186,
-       "column": 18
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::start_branch",
-     "call_sites": [
-      {
-       "line": 214,
-       "column": 17
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::auth_login",
-     "call_sites": [
-      {
-       "line": 225,
-       "column": 22
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::auth_status",
-     "call_sites": [
-      {
-       "line": 229,
-       "column": 21
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::generate_docs",
-     "call_sites": [
-      {
-       "line": 236,
-       "column": 13
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::init_project",
-     "call_sites": [
-      {
-       "line": 240,
-       "column": 17
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::status",
-     "call_sites": [
-      {
-       "line": 244,
-       "column": 15
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::list_projects",
-     "call_sites": [
-      {
-       "line": 249,
-       "column": 19
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::generate_ci",
-     "call_sites": [
-      {
-       "line": 260,
-       "column": 18
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::install_deps",
-     "call_sites": [
-      {
-       "line": 268,
-       "column": 15
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/__main__.py|deploynator/__main__.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::interactive_menu",
-     "call_sites": [
-      {
-       "line": 273,
-       "column": 8
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::_register_all",
-     "target": "deploynator/_app.py|deploynator/_app.py::status",
-     "call_sites": [
-      {
-       "line": 230,
-       "column": 40
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::_tool_release",
-     "target": "deploynator/_app.py|deploynator/_app.py::release",
-     "call_sites": [
-      {
-       "line": 237,
-       "column": 18
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::_tool_status",
-     "target": "deploynator/_app.py|deploynator/_app.py::status",
-     "call_sites": [
-      {
-       "line": 253,
-       "column": 26
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::_tool_projects",
-     "target": "deploynator/_app.py|deploynator/_app.py::list_projects",
-     "call_sites": [
-      {
-       "line": 256,
-       "column": 19
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::_tool_docs",
-     "target": "deploynator/_app.py|deploynator/_app.py::generate_docs",
-     "call_sites": [
-      {
-       "line": 262,
-       "column": 13
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "deploynator/_mcp_server.py|deploynator/_mcp_server.py::main",
-     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
-     "call_sites": [
-      {
-       "line": 273,
-       "column": 10
-      }
-     ],
-     "description": ""
-    },
-    {
-     "source": "tests/test_cli_mcp.py|tests/test_cli_mcp.py::_server",
-     "target": "deploynator/_app.py|deploynator/_app.py::DeploynatorApp",
-     "call_sites": [
-      {
-       "line": 41,
-       "column": 14
       }
      ],
      "description": ""

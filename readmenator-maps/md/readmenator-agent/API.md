@@ -13,16 +13,16 @@ Imported by: `deploynator/__init__.py`
 - `DeploynatorApp.__init__` (method) `deploynator/_app.py:21` `def __init__(self, config, workdir)`
 - `DeploynatorApp.auth_login` (method) `deploynator/_app.py:31` `def auth_login(self, platforms)`
 - `DeploynatorApp.auth_status` (method) `deploynator/_app.py:45` `def auth_status(self)`
-- `DeploynatorApp.init_project` (method) `deploynator/_app.py:96` `def init_project(self, project_path, name)`
-- `DeploynatorApp.start_branch` (method) `deploynator/_app.py:131` `def start_branch(self, commit_type, description, project_path, project_name, remote)`
-- `DeploynatorApp.commit` (method) `deploynator/_app.py:189` `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
-- `DeploynatorApp.release` (method) `deploynator/_app.py:229` `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...`
-- `DeploynatorApp.generate_docs` (method) `deploynator/_app.py:319` `def generate_docs(self, project_path, project_name)`
-- `DeploynatorApp.status` (method) `deploynator/_app.py:325` `def status(self, project_path, project_name)`
-- `DeploynatorApp.list_projects` (method) `deploynator/_app.py:345` `def list_projects(self, search_path)`
-- `DeploynatorApp.generate_ci` (method) `deploynator/_app.py:350` `def generate_ci(self, project_name, all_projects)`
-- `DeploynatorApp.install_deps` (method) `deploynator/_app.py:366` `def install_deps(self, project_name)`
-- `DeploynatorApp.interactive_menu` (method) `deploynator/_app.py:379` `def interactive_menu(self)`
+- `DeploynatorApp.init_project` (method) `deploynator/_app.py:154` `def init_project(self, project_path, name)`
+- `DeploynatorApp.start_branch` (method) `deploynator/_app.py:204` `def start_branch(self, commit_type, description, project_path, project_name, remote)`
+- `DeploynatorApp.commit` (method) `deploynator/_app.py:262` `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
+- `DeploynatorApp.release` (method) `deploynator/_app.py:302` `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...`
+- `DeploynatorApp.generate_docs` (method) `deploynator/_app.py:392` `def generate_docs(self, project_path, project_name)`
+- `DeploynatorApp.status` (method) `deploynator/_app.py:398` `def status(self, project_path, project_name)`
+- `DeploynatorApp.list_projects` (method) `deploynator/_app.py:418` `def list_projects(self, search_path)`
+- `DeploynatorApp.generate_ci` (method) `deploynator/_app.py:423` `def generate_ci(self, project_name, all_projects)`
+- `DeploynatorApp.install_deps` (method) `deploynator/_app.py:439` `def install_deps(self, project_name)`
+- `DeploynatorApp.interactive_menu` (method) `deploynator/_app.py:452` `def interactive_menu(self)`
 
 ## deploynator/_changelog.py
 Depends on: `deploynator/_config.py`, `deploynator/_models.py`
@@ -35,7 +35,7 @@ Imported by: `deploynator/_deploy.py`, `tests/test_changelog.py`
 - `ChangelogGenerator.format_for_release` (method) `deploynator/_changelog.py:110` `def format_for_release(self, changelog_content, max_chars)`
 
 ## deploynator/_config.py
-Imported by: `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deploy.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_semver.py`
+Imported by: `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deploy.py`, `tests/test_init.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_semver.py`
 - `Config.create` (method) `deploynator/_config.py:79` `def create(overrides)`
 - `Config.resolve_path` (method) `deploynator/_config.py:85` `def resolve_path(self)`
 - `Config.gh_authd` (method) `deploynator/_config.py:91` `def gh_authd(self)`
@@ -186,5 +186,5 @@ Imported by: `deploynator/_deploy.py`, `tests/bdd_test_deploy.py`, `tests/test_p
 
 ## deploynator/_toml.py
 Depends on: `deploynator/_config.py`
-Imported by: `deploynator/_app.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `tests/bdd_test_deploy.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_toml.py`
+Imported by: `deploynator/_app.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `tests/bdd_test_deploy.py`, `tests/test_init.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_toml.py`
 - `load_toml_config` (function) `deploynator/_toml.py:46` `def load_toml_config(project_path)`

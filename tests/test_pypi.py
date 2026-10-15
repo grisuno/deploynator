@@ -78,6 +78,33 @@ class TestPromptCredentials:
         monkeypatch.setattr("getpass.getpass", lambda *a, **k: "   ")
         assert PyPIRunner(Config.create()).prompt_for_credentials() is None
 
+    def test_prompt_default_is_no_save(self, monkeypatch):
+        """Enter (vacío) NO guarda: el default es NO."""
+        import sys
+        from deploynator._pypi import PyPIRunner
+        from deploynator._config import Config
+        monkeypatch.setattr(sys.stdin, "isatty", lambda: True)
+        monkeypatch.setattr("getpass.getpass", lambda *a, **k: "pypi-fake-token")
+        monkeypatch.setattr("builtins.input", lambda *a, **k: "")
+        saved = []
+        monkeypatch.setattr(PyPIRunner, "save_pypirc",
+                            lambda self, token, path=None: saved.append(token))
+        assert PyPIRunner(Config.create()).prompt_for_credentials() == "pypi-fake-token"
+        assert saved == []
+
+    def test_prompt_yes_saves(self, monkeypatch):
+        import sys
+        from deploynator._pypi import PyPIRunner
+        from deploynator._config import Config
+        monkeypatch.setattr(sys.stdin, "isatty", lambda: True)
+        monkeypatch.setattr("getpass.getpass", lambda *a, **k: "pypi-fake-token")
+        monkeypatch.setattr("builtins.input", lambda *a, **k: "y")
+        saved = []
+        monkeypatch.setattr(PyPIRunner, "save_pypirc",
+                            lambda self, token, path=None: saved.append(token) or "/tmp/x")
+        assert PyPIRunner(Config.create()).prompt_for_credentials() == "pypi-fake-token"
+        assert saved == ["pypi-fake-token"]
+
     def test_save_pypirc_roundtrip(self):
         import configparser
         from deploynator._pypi import PyPIRunner

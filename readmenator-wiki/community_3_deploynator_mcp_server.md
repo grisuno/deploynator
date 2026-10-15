@@ -1,10 +1,10 @@
 # deploynator: _mcp_server
 
-*Community 4 | 4 files | cohesion 0.50*
+*Community 3 | 5 files | cohesion 0.47*
 
 ## Definition
 
-This community groups 4 file(s) rooted at `deploynator` with dominant language py (cohesion 0.50). Central symbols: `MCPRequest`, `MCPResource`, `MCPServer`, `MCPTool`, `TestCliMode`, `TestMCPServer`, `__init__`, `_handle_call_tool`. Core file: `deploynator/_mcp_server.py` (32 symbols). Documented purpose: MCP (Model Context Protocol) stdio server for deploynator.  Exposes headless deploy operations as MCP tools so AI harnesses (claude code, codex, opencode) can r.
+This community groups 5 file(s) rooted at `deploynator` with dominant language py (cohesion 0.47). Central symbols: `MCPRequest`, `MCPResource`, `MCPServer`, `MCPTool`, `TestCliMode`, `TestInitScript`, `TestMCPServer`, `__init__`. Core file: `deploynator/_mcp_server.py` (32 symbols). Documented purpose: MCP (Model Context Protocol) stdio server for deploynator.  Exposes headless deploy operations as MCP tools so AI harnesses (claude code, codex, opencode) can r.
 
 ## Files
 
@@ -14,6 +14,7 @@ This community groups 4 file(s) rooted at `deploynator` with dominant language p
 | `deploynator/__main__.py` | py | utility | 3 | no |
 | `deploynator/_mcp_server.py` | py | utility | 32 | yes |
 | `tests/test_cli_mcp.py` | py | testing | 11 | yes |
+| `tests/test_init.py` | py | testing | 6 | yes |
 
 ## Key Symbols
 
@@ -50,27 +51,28 @@ This community groups 4 file(s) rooted at `deploynator` with dominant language p
 
 ## Internal vs External Edges
 
-- Internal resolved imports (EXTRACTED): 13
-- Cross-boundary resolved imports (EXTRACTED): 7
+- Internal resolved imports (EXTRACTED): 18
+- Cross-boundary resolved imports (EXTRACTED): 13
 
 ## Connections
 
-- [EXTRACTED] depends_on community 4 <-> 3 (strength 0.9): Extracted import edge crosses communities: deploynator/__init__.py imports deploynator/_app.py.
-- [EXTRACTED] depends_on community 4 <-> 0 (strength 0.9): Extracted import edge crosses communities: deploynator/__main__.py imports deploynator/_config.py.
-- [EXTRACTED] depends_on community 4 <-> 2 (strength 0.9): Extracted import edge crosses communities: deploynator/__main__.py imports deploynator/_models.py.
-- [INFERRED] bridges community 4 <-> 0 (strength 0.7): Inferred cross-community bridge: deploynator/__init__.py reaches deploynator/_changelog.py in 3 hops.
-- [INFERRED] bridges community 4 <-> 1 (strength 0.7): Inferred cross-community bridge: deploynator/__init__.py reaches deploynator/_docs.py in 3 hops.
-- [INFERRED] shares_context community 4 <-> 5 (strength 0.5): Inferred shared context (language py and layer utility) with no import path between community 4 (deploynator: _mcp_server) and community 5 (orphans).
+- [EXTRACTED] depends_on community 3 <-> 4 (strength 0.9): Extracted import edge crosses communities: deploynator/__init__.py imports deploynator/_app.py.
+- [EXTRACTED] depends_on community 3 <-> 0 (strength 0.9): Extracted import edge crosses communities: deploynator/__main__.py imports deploynator/_config.py.
+- [EXTRACTED] depends_on community 3 <-> 2 (strength 0.9): Extracted import edge crosses communities: deploynator/__main__.py imports deploynator/_models.py.
+- [EXTRACTED] depends_on community 3 <-> 1 (strength 0.9): Extracted import edge crosses communities: tests/test_init.py imports deploynator/_toml.py.
+- [INFERRED] bridges community 3 <-> 0 (strength 0.7): Inferred cross-community bridge: deploynator/__init__.py reaches deploynator/_changelog.py in 3 hops.
+- [INFERRED] bridges community 3 <-> 2 (strength 0.6): Inferred cross-community bridge: tests/test_init.py reaches tests/test_models.py in 4 hops.
+- [INFERRED] shares_context community 3 <-> 5 (strength 0.5): Inferred shared context (language py and layer utility) with no import path between community 3 (deploynator: _mcp_server) and community 5 (orphans).
 
 ## Risks
 
-- No scoped security, taint, cycle, or layer risks.
+- [dataflow UNCHECKED_ALLOC] `tests/test_init.py:36` `test_deploy_sh_content_generic` `content`: Result of allocator stored in `content` is never checked against NULL.
 
 ## Open Questions
 
 - Why do 2 file(s) lack file-level docs (e.g. `deploynator/__init__.py`)? What purpose do they serve?
 - What would break if the most connected file in deploynator: _mcp_server changed?
-- Should deploynator: _mcp_server be split, given cohesion 0.50?
+- Should deploynator: _mcp_server be split, given cohesion 0.47?
 
 ## Sources
 
@@ -78,3 +80,4 @@ This community groups 4 file(s) rooted at `deploynator` with dominant language p
 - `deploynator/__main__.py`
 - `deploynator/_mcp_server.py`
 - `tests/test_cli_mcp.py`
+- `tests/test_init.py`

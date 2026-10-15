@@ -10,32 +10,32 @@
 | `_auth_bitbucket` | method | `deploynator/_app.py:86` | `def _auth_bitbucket()` |
 | `_auth_github` | method | `deploynator/_app.py:56` | `def _auth_github()` |
 | `_auth_gitlab` | method | `deploynator/_app.py:69` | `def _auth_gitlab()` |
-| `_interactive_auth` | method | `deploynator/_app.py:508` | `def _interactive_auth(self)` |
-| `_interactive_auth_status` | method | `deploynator/_app.py:531` | `def _interactive_auth_status(self)` |
-| `_interactive_ci` | method | `deploynator/_app.py:544` | `def _interactive_ci(self)` |
-| `_interactive_commit` | method | `deploynator/_app.py:457` | `def _interactive_commit(self)` |
-| `_interactive_docs` | method | `deploynator/_app.py:537` | `def _interactive_docs(self)` |
-| `_interactive_init` | method | `deploynator/_app.py:558` | `def _interactive_init(self)` |
-| `_interactive_release` | method | `deploynator/_app.py:415` | `def _interactive_release(self)` |
-| `_interactive_start` | method | `deploynator/_app.py:484` | `def _interactive_start(self)` |
-| `_interactive_status` | method | `deploynator/_app.py:553` | `def _interactive_status(self)` |
-| `_is_path_like` | method | `deploynator/_app.py:149` | `def _is_path_like(value)` |
-| `_looks_like_path` | method | `deploynator/_app.py:153` | `def _looks_like_path(value)` |
-| `_print_result` | method | `deploynator/_app.py:564` | `def _print_result(result)` |
-| `_resolve_project_path` | method | `deploynator/_app.py:160` | `def _resolve_project_path(self, project_name)` |
-| `_smart_prepare` | method | `deploynator/_app.py:174` | `def _smart_prepare(self, base, changelog_content, dry_run)` |
+| `_interactive_auth` | method | `deploynator/_app.py:581` | `def _interactive_auth(self)` |
+| `_interactive_auth_status` | method | `deploynator/_app.py:604` | `def _interactive_auth_status(self)` |
+| `_interactive_ci` | method | `deploynator/_app.py:617` | `def _interactive_ci(self)` |
+| `_interactive_commit` | method | `deploynator/_app.py:530` | `def _interactive_commit(self)` |
+| `_interactive_docs` | method | `deploynator/_app.py:610` | `def _interactive_docs(self)` |
+| `_interactive_init` | method | `deploynator/_app.py:631` | `def _interactive_init(self)` |
+| `_interactive_release` | method | `deploynator/_app.py:488` | `def _interactive_release(self)` |
+| `_interactive_start` | method | `deploynator/_app.py:557` | `def _interactive_start(self)` |
+| `_interactive_status` | method | `deploynator/_app.py:626` | `def _interactive_status(self)` |
+| `_is_path_like` | method | `deploynator/_app.py:222` | `def _is_path_like(value)` |
+| `_looks_like_path` | method | `deploynator/_app.py:226` | `def _looks_like_path(value)` |
+| `_print_result` | method | `deploynator/_app.py:637` | `def _print_result(result)` |
+| `_resolve_project_path` | method | `deploynator/_app.py:233` | `def _resolve_project_path(self, project_name)` |
+| `_smart_prepare` | method | `deploynator/_app.py:247` | `def _smart_prepare(self, base, changelog_content, dry_run)` |
 | `auth_login` | method | `deploynator/_app.py:31` | `def auth_login(self, platforms)` |
 | `auth_status` | method | `deploynator/_app.py:45` | `def auth_status(self)` |
-| `commit` | method | `deploynator/_app.py:189` | `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)` |
-| `generate_ci` | method | `deploynator/_app.py:350` | `def generate_ci(self, project_name, all_projects)` |
-| `generate_docs` | method | `deploynator/_app.py:319` | `def generate_docs(self, project_path, project_name)` |
-| `init_project` | method | `deploynator/_app.py:96` | `def init_project(self, project_path, name)` |
-| `install_deps` | method | `deploynator/_app.py:366` | `def install_deps(self, project_name)` |
-| `interactive_menu` | method | `deploynator/_app.py:379` | `def interactive_menu(self)` |
-| `list_projects` | method | `deploynator/_app.py:345` | `def list_projects(self, search_path)` |
-| `release` | method | `deploynator/_app.py:229` | `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...` |
-| `start_branch` | method | `deploynator/_app.py:131` | `def start_branch(self, commit_type, description, project_path, project_name, remote)` |
-| `status` | method | `deploynator/_app.py:325` | `def status(self, project_path, project_name)` |
+| `commit` | method | `deploynator/_app.py:262` | `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)` |
+| `generate_ci` | method | `deploynator/_app.py:423` | `def generate_ci(self, project_name, all_projects)` |
+| `generate_docs` | method | `deploynator/_app.py:392` | `def generate_docs(self, project_path, project_name)` |
+| `init_project` | method | `deploynator/_app.py:154` | `def init_project(self, project_path, name)` |
+| `install_deps` | method | `deploynator/_app.py:439` | `def install_deps(self, project_name)` |
+| `interactive_menu` | method | `deploynator/_app.py:452` | `def interactive_menu(self)` |
+| `list_projects` | method | `deploynator/_app.py:418` | `def list_projects(self, search_path)` |
+| `release` | method | `deploynator/_app.py:302` | `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...` |
+| `start_branch` | method | `deploynator/_app.py:204` | `def start_branch(self, commit_type, description, project_path, project_name, remote)` |
+| `status` | method | `deploynator/_app.py:398` | `def status(self, project_path, project_name)` |
 | `ChangelogGenerator` | class | `deploynator/_changelog.py:12` | `class ChangelogGenerator` |
 | `__init__` | method | `deploynator/_changelog.py:13` | `def __init__(self, config)` |
 | `_collect_entries` | method | `deploynator/_changelog.py:48` | `def _collect_entries(self, repo_path, from_ref, to_ref)` |
@@ -261,6 +261,12 @@
 | `test_install_dependencies_file_not_found` | method | `tests/test_deploy.py:82` | `def test_install_dependencies_file_not_found(self)` |
 | `test_load_single_from_deploynator_yaml` | method | `tests/test_deploy.py:64` | `def test_load_single_from_deploynator_yaml(self, discovery)` |
 | `test_load_single_invalid` | method | `tests/test_deploy.py:72` | `def test_load_single_invalid(self, discovery)` |
+| `TestInitScript` | class | `tests/test_init.py:7` | `class TestInitScript` |
+| `test_deploy_sh_content_generic` | method | `tests/test_init.py:30` | `def test_deploy_sh_content_generic(self)` |
+| `test_deploy_sh_executable_and_valid_bash` | method | `tests/test_init.py:19` | `def test_deploy_sh_executable_and_valid_bash(self)` |
+| `test_init_creates_files` | method | `tests/test_init.py:8` | `def test_init_creates_files(self)` |
+| `test_init_no_overwrite` | method | `tests/test_init.py:44` | `def test_init_no_overwrite(self)` |
+| `test_toml_starter_parseable` | method | `tests/test_init.py:56` | `def test_toml_starter_parseable(self)` |
 | `TestChangelogEntryContract` | class | `tests/test_models.py:196` | `class TestChangelogEntryContract` |
 | `TestCommitMessageContract` | class | `tests/test_models.py:65` | `class TestCommitMessageContract` |
 | `TestCommitTypeContract` | class | `tests/test_models.py:34` | `class TestCommitTypeContract` |
@@ -327,27 +333,29 @@
 | `test_force_bump_overrides` | method | `tests/test_pipeline.py:121` | `def test_force_bump_overrides(self)` |
 | `test_max_version_helper` | method | `tests/test_pipeline.py:44` | `def test_max_version_helper(self)` |
 | `test_no_test_skips_failing_tests` | method | `tests/test_pipeline.py:86` | `def test_no_test_skips_failing_tests(self)` |
-| `TestCleanAndRun` | class | `tests/test_pypi.py:146` | `class TestCleanAndRun` |
+| `TestCleanAndRun` | class | `tests/test_pypi.py:173` | `class TestCleanAndRun` |
 | `TestDetect` | class | `tests/test_pypi.py:17` | `class TestDetect` |
-| `TestPipelinePyPI` | class | `tests/test_pypi.py:188` | `class TestPipelinePyPI` |
+| `TestPipelinePyPI` | class | `tests/test_pypi.py:215` | `class TestPipelinePyPI` |
 | `TestPromptCredentials` | class | `tests/test_pypi.py:56` | `class TestPromptCredentials` |
 | `_git_init` | function | `tests/test_pypi.py:7` | `def _git_init(tmp)` |
-| `_toml` | method | `tests/test_pypi.py:147` | `def _toml(self)` |
-| `test_clean_removes_dist` | method | `tests/test_pypi.py:156` | `def test_clean_removes_dist(self)` |
+| `_toml` | method | `tests/test_pypi.py:174` | `def _toml(self)` |
+| `test_clean_removes_dist` | method | `tests/test_pypi.py:183` | `def test_clean_removes_dist(self)` |
 | `test_credentials_from_env` | method | `tests/test_pypi.py:40` | `def test_credentials_from_env(self, monkeypatch)` |
 | `test_empty_dir_no_packaging` | method | `tests/test_pypi.py:26` | `def test_empty_dir_no_packaging(self)` |
-| `test_no_credentials_skips_pypi` | method | `tests/test_pypi.py:221` | `def test_no_credentials_skips_pypi(self, monkeypatch)` |
+| `test_no_credentials_skips_pypi` | method | `tests/test_pypi.py:248` | `def test_no_credentials_skips_pypi(self, monkeypatch)` |
 | `test_no_shell_in_runner` | method | `tests/test_pypi.py:50` | `def test_no_shell_in_runner(self)` |
 | `test_no_tty_returns_none` | method | `tests/test_pypi.py:57` | `def test_no_tty_returns_none(self, monkeypatch)` |
+| `test_prompt_default_is_no_save` | method | `tests/test_pypi.py:81` | `def test_prompt_default_is_no_save(self, monkeypatch)` |
 | `test_prompt_empty_token_returns_none` | method | `tests/test_pypi.py:73` | `def test_prompt_empty_token_returns_none(self, monkeypatch)` |
 | `test_prompt_returns_token_without_save` | method | `tests/test_pypi.py:64` | `def test_prompt_returns_token_without_save(self, monkeypatch)` |
-| `test_prompted_token_used_for_upload` | method | `tests/test_pypi.py:109` | `def test_prompted_token_used_for_upload(self, monkeypatch)` |
-| `test_pypi_failure_aborts_with_error` | method | `tests/test_pypi.py:189` | `def test_pypi_failure_aborts_with_error(self, monkeypatch)` |
+| `test_prompt_yes_saves` | method | `tests/test_pypi.py:95` | `def test_prompt_yes_saves(self, monkeypatch)` |
+| `test_prompted_token_used_for_upload` | method | `tests/test_pypi.py:136` | `def test_prompted_token_used_for_upload(self, monkeypatch)` |
+| `test_pypi_failure_aborts_with_error` | method | `tests/test_pypi.py:216` | `def test_pypi_failure_aborts_with_error(self, monkeypatch)` |
 | `test_pyproject_with_project_table` | method | `tests/test_pypi.py:18` | `def test_pyproject_with_project_table(self)` |
-| `test_run_fails_on_broken_build` | method | `tests/test_pypi.py:168` | `def test_run_fails_on_broken_build(self, monkeypatch)` |
-| `test_run_skips_without_packaging` | method | `tests/test_pypi.py:179` | `def test_run_skips_without_packaging(self)` |
-| `test_save_pypirc_rejects_symlink` | method | `tests/test_pypi.py:95` | `def test_save_pypirc_rejects_symlink(self)` |
-| `test_save_pypirc_roundtrip` | method | `tests/test_pypi.py:81` | `def test_save_pypirc_roundtrip(self)` |
+| `test_run_fails_on_broken_build` | method | `tests/test_pypi.py:195` | `def test_run_fails_on_broken_build(self, monkeypatch)` |
+| `test_run_skips_without_packaging` | method | `tests/test_pypi.py:206` | `def test_run_skips_without_packaging(self)` |
+| `test_save_pypirc_rejects_symlink` | method | `tests/test_pypi.py:122` | `def test_save_pypirc_rejects_symlink(self)` |
+| `test_save_pypirc_roundtrip` | method | `tests/test_pypi.py:108` | `def test_save_pypirc_roundtrip(self)` |
 | `test_setup_py_counts` | method | `tests/test_pypi.py:32` | `def test_setup_py_counts(self)` |
 | `TestDocsRunner` | class | `tests/test_runner.py:105` | `class TestDocsRunner` |
 | `TestTestRunner` | class | `tests/test_runner.py:23` | `class TestTestRunner` |

@@ -3,24 +3,25 @@ graph LR
     deploynator__changelog["deploynator: _changelog"]
     deploynator__toml["deploynator: _toml"]
     deploynator__models["deploynator: _models"]
-    deploynator__platforms["deploynator: _platforms"]
     deploynator__mcp_server["deploynator: _mcp_server"]
+    deploynator__platforms["deploynator: _platforms"]
     deploynator__changelog -- "depends on" --> deploynator__toml
     deploynator__changelog -- "calls into" --> deploynator__models
-    deploynator__changelog -- "calls into" --> deploynator__platforms
     deploynator__changelog -- "calls into" --> deploynator__mcp_server
+    deploynator__changelog -- "calls into" --> deploynator__platforms
     deploynator__toml -- "depends on" --> deploynator__changelog
     deploynator__toml -- "calls into" --> deploynator__models
     deploynator__toml -- "calls into" --> deploynator__platforms
     deploynator__models -- "calls into" --> deploynator__changelog
-    deploynator__models -- "calls into" --> deploynator__platforms
     deploynator__models -- "calls into" --> deploynator__mcp_server
+    deploynator__models -- "calls into" --> deploynator__platforms
+    deploynator__mcp_server -- "calls into" --> deploynator__changelog
+    deploynator__mcp_server -- "calls into" --> deploynator__toml
+    deploynator__mcp_server -- "calls into" --> deploynator__models
+    deploynator__mcp_server -- "calls into" --> deploynator__platforms
     deploynator__platforms -- "calls into" --> deploynator__changelog
     deploynator__platforms -- "calls into" --> deploynator__toml
     deploynator__platforms -- "calls into" --> deploynator__models
-    deploynator__mcp_server -- "calls into" --> deploynator__changelog
-    deploynator__mcp_server -- "calls into" --> deploynator__models
-    deploynator__mcp_server -- "calls into" --> deploynator__platforms
     click deploynator__changelog href "./deploynator__changelog.md" "Details"
     click deploynator__toml href "./deploynator__toml.md" "Details"
     click deploynator__models href "./deploynator__models.md" "Details"
@@ -28,7 +29,7 @@ graph LR
 
 ## Details
 
-Static architecture map of 30 files (py, sh) in 5 components: deploynator: _changelog, deploynator: _toml, deploynator: _models, deploynator: _platforms, deploynator: _mcp_server. Structure is extracted statically without LLM calls; component prose may be enriched locally.
+Static architecture map of 32 files (py, sh) in 5 components: deploynator: _changelog, deploynator: _toml, deploynator: _models, deploynator: _mcp_server, deploynator: _platforms. Structure is extracted statically without LLM calls; component prose may be enriched locally.
 
 ### deploynator: _changelog (1)
 
@@ -75,24 +76,9 @@ deploynator: _models groups 6 files (py) around Platform, from_string, label, cl
 - <a href="../deploynator/_models.py#L58-L64">deploynator/_models.py::from_string</a>
 - <a href="../deploynator/_models.py#L65-L67">deploynator/_models.py::valid_types</a>
 
-### deploynator: _platforms (4)
+### deploynator: _mcp_server (4)
 
-deploynator: _platforms groups 5 files (py) around DeploynatorApp, __init__, auth_login, auth_status, _auth_github. _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.
-
-**Related Classes/Methods**:
-
-- <a href="../deploynator/_app.py">deploynator/_app.py::DeploynatorApp</a>
-- <a href="../deploynator/_app.py#L21-L30">deploynator/_app.py::__init__</a>
-- <a href="../deploynator/_app.py#L31-L44">deploynator/_app.py::auth_login</a>
-- <a href="../deploynator/_app.py#L45-L55">deploynator/_app.py::auth_status</a>
-- <a href="../deploynator/_app.py#L56-L68">deploynator/_app.py::_auth_github</a>
-- <a href="../deploynator/_app.py#L69-L85">deploynator/_app.py::_auth_gitlab</a>
-- <a href="../deploynator/_app.py#L86-L95">deploynator/_app.py::_auth_bitbucket</a>
-- <a href="../deploynator/_app.py#L96-L130">deploynator/_app.py::init_project</a>
-
-### deploynator: _mcp_server (5)
-
-deploynator: _mcp_server groups 4 files (py) around MCPRequest, __init__, is_notification, response, error. MCP (Model Context Protocol) stdio server for deploynator.
+deploynator: _mcp_server groups 5 files (py) around MCPRequest, __init__, is_notification, response, error. MCP (Model Context Protocol) stdio server for deploynator.
 
 **Related Classes/Methods**:
 
@@ -104,3 +90,18 @@ deploynator: _mcp_server groups 4 files (py) around MCPRequest, __init__, is_not
 - <a href="../deploynator/_mcp_server.py">deploynator/_mcp_server.py::MCPTool</a>
 - <a href="../deploynator/_mcp_server.py#L57-L63">deploynator/_mcp_server.py::__init__</a>
 - <a href="../deploynator/_mcp_server.py#L64-L66">deploynator/_mcp_server.py::definition</a>
+
+### deploynator: _platforms (5)
+
+deploynator: _platforms groups 5 files (py) around DeploynatorApp, __init__, auth_login, auth_status, _auth_github. _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.
+
+**Related Classes/Methods**:
+
+- <a href="../deploynator/_app.py">deploynator/_app.py::DeploynatorApp</a>
+- <a href="../deploynator/_app.py#L21-L30">deploynator/_app.py::__init__</a>
+- <a href="../deploynator/_app.py#L31-L44">deploynator/_app.py::auth_login</a>
+- <a href="../deploynator/_app.py#L45-L55">deploynator/_app.py::auth_status</a>
+- <a href="../deploynator/_app.py#L56-L68">deploynator/_app.py::_auth_github</a>
+- <a href="../deploynator/_app.py#L69-L85">deploynator/_app.py::_auth_gitlab</a>
+- <a href="../deploynator/_app.py#L86-L153">deploynator/_app.py::_auth_bitbucket</a>
+- <a href="../deploynator/_app.py#L154-L203">deploynator/_app.py::init_project</a>
