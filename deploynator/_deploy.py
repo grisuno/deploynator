@@ -155,6 +155,15 @@ class DeployOrchestrator:
             if not docs_ok:
                 print(f"[!] docs step failed for {project.name}, continuing deploy")
 
+        if not dry_run:
+            try:
+                from deploynator._readme import ensure_deployed_footer
+
+                if ensure_deployed_footer(repo_path, self._config):
+                    print(f"[+] deploy footer ensured for {project.name}")
+            except Exception as exc:
+                print(f"[!] deploy footer skipped for {project.name}: {exc}")
+
         if not dry_run and not self._git.has_remote(repo_path):
             return DeployResult(
                 project=project.name,
