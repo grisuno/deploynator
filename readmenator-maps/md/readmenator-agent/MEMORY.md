@@ -2,17 +2,15 @@
 
 > Cross-session context for agents. Sections 1-6 are regenerated from the source tree with zero LLM tokens: declared rules are quoted verbatim with `file:line`, measured baselines come from the scan. Section 7 is written by agents and humans and is preserved across rebuilds.
 
-Generated from 32 files at commit `699ec786af1b`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
+Generated from 33 files at commit `72de9b538b7f`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
 
 ## 1. Purpose and domain
 
 - What it is: Token-free, offline, multi-platform deployer for GitHub, GitLab, and Bitbucket. (`README.md:3`)
-- Domain vocabulary (term, files): `deploynator` (20), `release` (12), `deploy` (10), `git` (10), `project` (10), `run` (9), `version` (7), `bump` (7), `commit` (7), `valid` (7), `docs` (6), `config` (6), `toml` (6), `tag` (6), `file` (6)
-- Subsystem `deploynator: _changelog`: 6 files, core `deploynator/_changelog.py`
-- Subsystem `deploynator: _toml`: 6 files, core `deploynator/_toml.py`
-- Subsystem `deploynator: _models`: 6 files, core `deploynator/_models.py`
-- Subsystem `deploynator: _mcp_server`: 5 files, core `deploynator/_mcp_server.py`: MCP (Model Context Protocol) stdio server for deploynator.
-- Subsystem `deploynator: _platforms`: 5 files, core `deploynator/_platforms.py`
+- Domain vocabulary (term, files): `deploynator` (22), `release` (12), `run` (11), `deploy` (10), `git` (10), `project` (10), `version` (7), `bump` (7), `commit` (7), `install` (7), `valid` (7), `red` (7), `docs` (6), `config` (6), `toml` (6)
+- Subsystem `deploynator: _mcp_server`: 11 files, core `deploynator/_mcp_server.py`: MCP (Model Context Protocol) stdio server for deploynator.
+- Subsystem `deploynator: _platforms`: 11 files, core `deploynator/_platforms.py`
+- Subsystem `deploynator: _pypi`: 8 files, core `deploynator/_pypi.py`: prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.
 - Business rules that the code cannot show live in section 7: record them there.
 
 ## 2. Workflow
@@ -68,9 +66,9 @@ Declared:
 - none declared in instruction files (add them to AGENTS.md or record them in section 7)
 
 Measured baseline:
-- py: 30 files, 389 symbols; docstrings on 3% of symbols; functions snake_case (100%); types PascalCase (100%); median file 116 lines, max 659.
+- py: 31 files, 403 symbols; docstrings on 3% of symbols; functions snake_case (100%); types PascalCase (100%); median file 109 lines, max 685.
 - sh: 2 files, 1 symbols; docstrings on 100% of symbols; functions snake_case (100%); median file 42 lines, max 42.
-- Tests: 14 files under tests; follow the existing naming (e.g. `bdd_test_deploy.py`).
+- Tests: 15 files under tests; follow the existing naming (e.g. `bdd_test_deploy.py`).
 
 ## 5. Minimum deliverables
 
@@ -88,7 +86,7 @@ Measured baseline:
 ## 6. Risks to respect
 
 - God nodes (changes ripple widely): `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_models.py`, `deploynator/_toml.py`, `deploynator/_app.py`
-- Hotspots (complex and central): `tests/test_pypi.py`, `tests/test_runner.py`, `deploynator/_app.py`, `deploynator/_config.py`, `deploynator/_deploy.py`
+- Hotspots (complex and central): `tests/test_pypi.py`, `deploynator/_app.py`, `tests/test_runner.py`, `deploynator/_config.py`, `deploynator/_deploy.py`
 - Full blast radius: `readmenator-agent/GOTCHAS.md`; findings: `readmenator-agent/SECURITY.md`.
 
 ## 7. Session log (preserved across rebuilds)

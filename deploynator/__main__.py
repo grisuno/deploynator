@@ -112,9 +112,12 @@ def build_parser() -> argparse.ArgumentParser:
     workflow_p.add_argument("--project", "-p", type=str, default="", help="Specific project")
     workflow_p.add_argument("--all", action="store_true", help="All projects")
 
-    # install
-    install_p = subparsers.add_parser("install", help="Install platform dependencies")
-    install_p.add_argument("--project", "-p", type=str, default="", help="Specific project")
+    # install (pip packages from PyPI; --project keeps legacy platform CLI check)
+    install_p = subparsers.add_parser("install", help="pip install packages (default: deploynator)")
+    install_p.add_argument("packages", type=str, nargs="*", default=[],
+                           help="Packages to install (default: deploynator)")
+    install_p.add_argument("--project", "-p", type=str, default="",
+                           help="Check platform CLI availability for a project instead")
 
     # interactive (no args/flags — bare mode menu)
     subparsers.add_parser("interactive", help="Start interactive menu (also default with no args)")
@@ -265,9 +268,14 @@ def main(argv: list[str] | None = None) -> NoReturn | None:
             print(f"[+] Created {path}")
 
     elif args.command == "install":
-        deps = app.install_deps(project_name=project)
-        for p, ok in deps.items():
-            print(f"  {p}: {'available' if ok else 'not found'}")
+        if project:
+            deps = app.install_deps(project_name=project)
+            for p, ok in deps.items():
+                print(f"  {p}: {'available' if ok else 'not found'}")
+        else:
+            results = app.install_packages(getattr(args, "packages", []) or None)
+            if not all(results.values()):
+                sys.exit(1)
 
     elif args.command == "interactive":
         app.interactive_menu()

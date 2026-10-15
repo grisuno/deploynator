@@ -148,7 +148,8 @@ deploynator docs
 deploynator init [--name <name>]
 deploynator status
 deploynator workflow [--project <name>] [--all]
-deploynator install [--project <name>]
+deploynator install [packages...]      # pip install from PyPI (default: deploynator)
+deploynator install --project <name>  # legacy: check platform CLI availability
 deploynator interactive
 ```
 
@@ -158,8 +159,8 @@ deploynator interactive
 deploynator docs -> pip install readmenator -> python -m readmenator .
 
 ### lazygit
-Install automatically with: deploynator install
 Configured via git config deploynator.lazygit.enabled
+Install package via: deploynator install  (pip install deploynator from PyPI)
 
 ### CI/CD
 deploynator workflow --all creates:

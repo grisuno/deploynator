@@ -1,14 +1,18 @@
 # API
 
+## app.py
+Depends on: `deploynator/__init__.py`, `deploynator/_config.py`
+- `main` (function) `app.py:12` `def main()`
+
 ## deploy.sh
 - `ensure_pkg` (function) `deploy.sh:22` -- Install or update one package (best effort: works offline with current versions, on PEP 668 systems, and before the...
 
 ## deploynator/__main__.py
 Depends on: `deploynator/__init__.py`, `deploynator/_config.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`
-Imported by: `tests/test_cli_mcp.py`
+Imported by: `tests/test_cli_mcp.py`, `tests/test_install_example.py`
 - `build_parser` (function) `deploynator/__main__.py:17` `def build_parser()`
-- `preprocess_argv` (function) `deploynator/__main__.py:130` `def preprocess_argv(argv)`
-- `main` (function) `deploynator/__main__.py:164` `def main(argv)`
+- `preprocess_argv` (function) `deploynator/__main__.py:133` `def preprocess_argv(argv)`
+- `main` (function) `deploynator/__main__.py:167` `def main(argv)`
 
 ## deploynator/_app.py
 Depends on: `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_toml.py`
@@ -25,7 +29,8 @@ Imported by: `deploynator/__init__.py`
 - `DeploynatorApp.list_projects` (method) `deploynator/_app.py:432` `def list_projects(self, search_path)`
 - `DeploynatorApp.generate_ci` (method) `deploynator/_app.py:437` `def generate_ci(self, project_name, all_projects)`
 - `DeploynatorApp.install_deps` (method) `deploynator/_app.py:453` `def install_deps(self, project_name)`
-- `DeploynatorApp.interactive_menu` (method) `deploynator/_app.py:466` `def interactive_menu(self)`
+- `DeploynatorApp.install_packages` (method) `deploynator/_app.py:464` `def install_packages(self, packages)` -- pip install/upgrade packages (default: deploynator from PyPI).
+- `DeploynatorApp.interactive_menu` (method) `deploynator/_app.py:492` `def interactive_menu(self)`
 
 ## deploynator/_changelog.py
 Depends on: `deploynator/_config.py`, `deploynator/_models.py`
@@ -38,7 +43,7 @@ Imported by: `deploynator/_deploy.py`, `tests/test_changelog.py`
 - `ChangelogGenerator.format_for_release` (method) `deploynator/_changelog.py:110` `def format_for_release(self, changelog_content, max_chars)`
 
 ## deploynator/_config.py
-Imported by: `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deploy.py`, `tests/test_init.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_semver.py`
+Imported by: `app.py`, `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deploy.py`, `tests/test_init.py`, `tests/test_install_example.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_semver.py`
 - `Config.create` (method) `deploynator/_config.py:79` `def create(overrides)`
 - `Config.resolve_path` (method) `deploynator/_config.py:85` `def resolve_path(self)`
 - `Config.gh_authd` (method) `deploynator/_config.py:91` `def gh_authd(self)`

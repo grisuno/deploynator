@@ -190,6 +190,7 @@
 - [`install_dependencies`](modules/deploynator._deploy.py.md#deployorchestrator-install_dependencies) method of `DeployOrchestrator` in `deploynator._deploy`
 - [`install_deps`](modules/deploynator._app.py.md#deploynatorapp-install_deps) method of `DeploynatorApp` in `deploynator._app`
 - [`install_lazygit`](modules/deploynator._deploy.py.md#deployorchestrator-install_lazygit) method of `DeployOrchestrator` in `deploynator._deploy`
+- [`install_packages`](modules/deploynator._app.py.md#deploynatorapp-install_packages) method of `DeploynatorApp` in `deploynator._app`
 - [`integrate_readmenator`](modules/deploynator._deploy.py.md#deployorchestrator-integrate_readmenator) method of `DeployOrchestrator` in `deploynator._deploy`
 - [`interactive_menu`](modules/deploynator._app.py.md#deploynatorapp-interactive_menu) method of `DeploynatorApp` in `deploynator._app`
 - [`INTERNAL_ERROR`](modules/deploynator._mcp_server.py.md#internal_error) constant in `deploynator._mcp_server`
@@ -234,6 +235,7 @@
 
 ## M
 
+- [`main`](modules/app.py.md#main) function in `app`
 - [`main`](modules/deploynator.__main__.py.md#main) function in `deploynator.__main__`
 - [`main`](modules/deploynator._mcp_server.py.md#main) function in `deploynator._mcp_server`
 - [`major`](modules/deploynator._models.py.md#versioninfo-major) attribute of `VersionInfo` in `deploynator._models`

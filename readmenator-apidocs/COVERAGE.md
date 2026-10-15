@@ -1,6 +1,6 @@
 # Documentation Coverage
 
-Overall: **3.3%** (6 of 184 public modules, types, and callables). Data members are excluded from the ratio.
+Overall: **3.8%** (7 of 186 public modules, types, and callables). Data members are excluded from the ratio.
 
 [Back to index](index.md)
 
@@ -12,8 +12,8 @@ Overall: **3.3%** (6 of 184 public modules, types, and callables). Data members 
 | classmethod | 0 | 12 | 0.0% |
 | constructor | 0 | 14 | 0.0% |
 | enum | 0 | 2 | 0.0% |
-| function | 1 | 6 | 16.7% |
-| method | 2 | 98 | 2.0% |
+| function | 1 | 7 | 14.3% |
+| method | 3 | 99 | 3.0% |
 | module | 3 | 18 | 16.7% |
 | property | 0 | 4 | 0.0% |
 | staticmethod | 0 | 2 | 0.0% |
@@ -24,7 +24,6 @@ Overall: **3.3%** (6 of 184 public modules, types, and callables). Data members 
 |---|---|---|---|
 | [`deploynator`](modules/deploynator.__init__.py.md) | 0 | 1 | 0.0% |
 | [`deploynator.__main__`](modules/deploynator.__main__.py.md) | 0 | 4 | 0.0% |
-| [`deploynator._app`](modules/deploynator._app.py.md) | 0 | 15 | 0.0% |
 | [`deploynator._changelog`](modules/deploynator._changelog.py.md) | 0 | 8 | 0.0% |
 | [`deploynator._config`](modules/deploynator._config.py.md) | 0 | 7 | 0.0% |
 | [`deploynator._deploy`](modules/deploynator._deploy.py.md) | 0 | 12 | 0.0% |
@@ -37,21 +36,23 @@ Overall: **3.3%** (6 of 184 public modules, types, and callables). Data members 
 | [`deploynator._toml`](modules/deploynator._toml.py.md) | 0 | 3 | 0.0% |
 | [`install.sh`](modules/install.sh.md) | 0 | 1 | 0.0% |
 | [`deploynator._mcp_server`](modules/deploynator._mcp_server.py.md) | 1 | 21 | 4.8% |
+| [`deploynator._app`](modules/deploynator._app.py.md) | 1 | 16 | 6.2% |
 | [`deploynator._pypi`](modules/deploynator._pypi.py.md) | 2 | 9 | 22.2% |
-| [`app`](modules/app.py.md) | 1 | 1 | 100.0% |
+| [`app`](modules/app.py.md) | 1 | 2 | 50.0% |
 | [`deploy.sh`](modules/deploy.sh.md) | 2 | 2 | 100.0% |
 
 ## Warnings
 
 DOC001 undocumented public item, DOC002 parameter not documented, DOC003 documented parameter missing from the signature (stale doc), DOC004 return value not documented, DOC005 raised exception not documented.
 
-DOC001: 178
+DOC001: 179
 
+- DOC001 `app.py:12` function main is not documented
 - DOC001 `deploynator/__init__.py:1` module deploynator/__init__.py is not documented
 - DOC001 `deploynator/__main__.py:1` module deploynator/__main__.py is not documented
 - DOC001 `deploynator/__main__.py:17` function build_parser is not documented
-- DOC001 `deploynator/__main__.py:130` function preprocess_argv is not documented
-- DOC001 `deploynator/__main__.py:164` function main is not documented
+- DOC001 `deploynator/__main__.py:133` function preprocess_argv is not documented
+- DOC001 `deploynator/__main__.py:167` function main is not documented
 - DOC001 `deploynator/_app.py:1` module deploynator/_app.py is not documented
 - DOC001 `deploynator/_app.py:20` class DeploynatorApp is not documented
 - DOC001 `deploynator/_app.py:21` constructor DeploynatorApp.__init__ is not documented
@@ -66,7 +67,7 @@ DOC001: 178
 - DOC001 `deploynator/_app.py:432` method DeploynatorApp.list_projects is not documented
 - DOC001 `deploynator/_app.py:437` method DeploynatorApp.generate_ci is not documented
 - DOC001 `deploynator/_app.py:453` method DeploynatorApp.install_deps is not documented
-- DOC001 `deploynator/_app.py:466` method DeploynatorApp.interactive_menu is not documented
+- DOC001 `deploynator/_app.py:492` method DeploynatorApp.interactive_menu is not documented
 - DOC001 `deploynator/_changelog.py:1` module deploynator/_changelog.py is not documented
 - DOC001 `deploynator/_changelog.py:12` class ChangelogGenerator is not documented
 - DOC001 `deploynator/_changelog.py:13` constructor ChangelogGenerator.__init__ is not documented

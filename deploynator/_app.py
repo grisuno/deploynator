@@ -461,6 +461,32 @@ version:
             all_deps.update(self._orchestrator.install_dependencies(project))
         return all_deps
 
+    def install_packages(self, packages: list[str] | None = None) -> dict[str, bool]:
+        """pip install/upgrade packages (default: deploynator from PyPI)."""
+        import subprocess
+        import sys
+        targets = packages if packages is not None else ["deploynator"]
+        results: dict[str, bool] = {}
+        for pkg in targets:
+            ok = False
+            for cmd in (
+                [sys.executable, "-m", "pip", "install", "-U", pkg],
+                [sys.executable, "-m", "pip", "install", "-U", "--break-system-packages", pkg],
+            ):
+                try:
+                    result = subprocess.run(
+                        cmd, capture_output=True, text=True, check=False,
+                        shell=False, timeout=300,
+                    )
+                    if result.returncode == 0:
+                        ok = True
+                        break
+                except (FileNotFoundError, subprocess.TimeoutExpired):
+                    continue
+            results[pkg] = ok
+            print(f"  {pkg}: {'installed' if ok else 'FAILED'}")
+        return results
+
     # ---- Interactive ----
 
     def interactive_menu(self) -> None:

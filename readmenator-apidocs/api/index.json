@@ -3,7 +3,7 @@
  "format": "jsonl",
  "meta": {
   "modules": 18,
-  "entities": 292,
+  "entities": 294,
   "languages": {
    "py": 16,
    "sh": 2
@@ -15,21 +15,21 @@
    "constant": 7,
    "constructor": 14,
    "enum": 2,
-   "function": 6,
-   "method": 98,
+   "function": 7,
+   "method": 99,
    "module": 18,
    "property": 4,
    "staticmethod": 2
   },
   "truncated": false,
-  "skipped_files": 14,
+  "skipped_files": 15,
   "privacy_mode": false
  },
  "coverage": {
   "overall": {
-   "documented": 6,
-   "total": 184,
-   "percent": 3.3
+   "documented": 7,
+   "total": 186,
+   "percent": 3.8
   },
   "by_kind": {
    "class": {
@@ -54,13 +54,13 @@
    },
    "function": {
     "documented": 1,
-    "total": 6,
-    "percent": 16.7
+    "total": 7,
+    "percent": 14.3
    },
    "method": {
-    "documented": 2,
-    "total": 98,
-    "percent": 2.0
+    "documented": 3,
+    "total": 99,
+    "percent": 3.0
    },
    "module": {
     "documented": 3,
@@ -81,8 +81,8 @@
   "by_module": {
    "app.py": {
     "documented": 1,
-    "total": 1,
-    "percent": 100.0
+    "total": 2,
+    "percent": 50.0
    },
    "deploy.sh": {
     "documented": 2,
@@ -100,9 +100,9 @@
     "percent": 0.0
    },
    "deploynator/_app.py": {
-    "documented": 0,
-    "total": 15,
-    "percent": 0.0
+    "documented": 1,
+    "total": 16,
+    "percent": 6.2
    },
    "deploynator/_changelog.py": {
     "documented": 0,
@@ -175,7 +175,7 @@
   {
    "uid": "app.py",
    "path": "modules/app.py.jsonl",
-   "entities": 1
+   "entities": 2
   },
   {
    "uid": "deploy.sh",
@@ -195,7 +195,7 @@
   {
    "uid": "deploynator/_app.py",
    "path": "modules/deploynator._app.py.jsonl",
-   "entities": 17
+   "entities": 18
   },
   {
    "uid": "deploynator/_changelog.py",
@@ -265,7 +265,7 @@
  ],
  "warnings": {
   "path": "warnings.jsonl",
-  "total": 178
+  "total": 179
  },
  "usage": [
   "grep -h '\"name\":\"<Name>\"' readmenator-apidocs/api/modules/*.jsonl",

@@ -4,29 +4,29 @@
 
 These files have the most connections. Changes here have high blast radius.
 
-- `deploynator/_config.py` (score: 46.60, imported by 23 files)
+- `deploynator/_config.py` (score: 50.60, imported by 25 files)
 - `deploynator/_deploy.py` (score: 33.90, imported by 6 files)
 - `deploynator/_models.py` (score: 30.70, imported by 14 files)
 - `deploynator/_toml.py` (score: 22.40, imported by 10 files)
-- `deploynator/_app.py` (score: 17.10, imported by 1 files)
+- `deploynator/_app.py` (score: 17.20, imported by 1 files)
+- `deploynator/__init__.py` (score: 16.00, imported by 7 files)
 - `deploynator/_semver.py` (score: 14.90, imported by 5 files)
-- `deploynator/__init__.py` (score: 12.00, imported by 5 files)
-- `deploynator/_platforms.py` (score: 11.40, imported by 2 files)
+- `deploynator/__main__.py` (score: 12.30, imported by 2 files)
 
 ## Blast Radius (change impact)
 
 Editing these files can break the listed number of dependents. Run their tests after any change.
 
-- `deploynator/_config.py` -- 23 direct, 25 total dependents
-- `deploynator/_models.py` -- 14 direct, 18 total dependents
-- `deploynator/_toml.py` -- 10 direct, 17 total dependents
-- `deploynator/_changelog.py` -- 2 direct, 13 total dependents
-- `deploynator/_docs.py` -- 3 direct, 13 total dependents
-- `deploynator/_runner.py` -- 2 direct, 13 total dependents
-- `deploynator/_semver.py` -- 5 direct, 13 total dependents
-- `deploynator/_git.py` -- 2 direct, 12 total dependents
-- `deploynator/_platforms.py` -- 2 direct, 12 total dependents
-- `deploynator/_pypi.py` -- 2 direct, 12 total dependents
+- `deploynator/_config.py` -- 25 direct, 27 total dependents
+- `deploynator/_models.py` -- 14 direct, 20 total dependents
+- `deploynator/_toml.py` -- 10 direct, 19 total dependents
+- `deploynator/_changelog.py` -- 2 direct, 15 total dependents
+- `deploynator/_docs.py` -- 3 direct, 15 total dependents
+- `deploynator/_runner.py` -- 2 direct, 15 total dependents
+- `deploynator/_semver.py` -- 5 direct, 15 total dependents
+- `deploynator/_git.py` -- 2 direct, 14 total dependents
+- `deploynator/_platforms.py` -- 2 direct, 14 total dependents
+- `deploynator/_pypi.py` -- 2 direct, 14 total dependents
 
 ## Hotspots (complexity + centrality)
 
@@ -44,3 +44,4 @@ Editing these files can break the listed number of dependents. Run their tests a
 ## Dataflow Issues (INFERRED, review each lead)
 
 - `tests/test_init.py:36` `test_deploy_sh_content_generic` [UNCHECKED_ALLOC] `content`: Result of allocator stored in `content` is never checked against NULL.
+- `tests/test_install_example.py:65` `test_example_uses_library` [UNCHECKED_ALLOC] `content`: Result of allocator stored in `content` is never checked against NULL.

@@ -2,13 +2,13 @@
 
 | File | Purpose | Subsystem | Symbols | Used by |
 |------|---------|-----------|---------|---------|
-| `app.py` | Autor: Gris Iscomeback Correo electrónico: grisiscomeback[at]gmail[dot]com Fecha de creación... | root | 0 | 0 |
+| `app.py` | example: use deploynator programmatically as a library. | root | 1 | 0 |
 | `deploy.sh` | one-liner deploy via deploynator (generic per-repo script). | root | 1 | 0 |
-| `deploynator/__init__.py` | - | deploynator | 0 | 5 |
-| `deploynator/__main__.py` | - | deploynator | 3 | 1 |
-| `deploynator/_app.py` | - | deploynator | 31 | 1 |
+| `deploynator/__init__.py` | - | deploynator | 0 | 7 |
+| `deploynator/__main__.py` | - | deploynator | 3 | 2 |
+| `deploynator/_app.py` | install_packages: pip install/upgrade packages (default: deploynator from PyPI). | deploynator | 32 | 1 |
 | `deploynator/_changelog.py` | - | deploynator | 9 | 2 |
-| `deploynator/_config.py` | - | deploynator | 6 | 23 |
+| `deploynator/_config.py` | - | deploynator | 6 | 25 |
 | `deploynator/_deploy.py` | _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin. | deploynator | 19 | 6 |
 | `deploynator/_docs.py` | - | deploynator | 3 | 3 |
 | `deploynator/_git.py` | - | deploynator | 21 | 2 |
@@ -27,6 +27,7 @@
 | `tests/test_config.py` | - | tests | 10 | 0 |
 | `tests/test_deploy.py` | - | tests | 11 | 0 |
 | `tests/test_init.py` | RED: init deja deploy.sh genérico + deploynator.toml starter. | tests | 6 | 0 |
+| `tests/test_install_example.py` | RED: install como pip install + app.py ejemplo de librería. | tests | 12 | 0 |
 | `tests/test_models.py` | - | tests | 44 | 0 |
 | `tests/test_path_deploy.py` | Path-direct deploy + tag prefijos + version_file toml (ReadMenator real). | tests | 10 | 0 |
 | `tests/test_pipeline.py` | RED: pipeline deploy — tests gate + docs non-blocking + bump override + max(file,tag). | tests | 12 | 0 |

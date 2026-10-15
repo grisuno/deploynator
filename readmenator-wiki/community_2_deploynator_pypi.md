@@ -1,19 +1,21 @@
-# deploynator: _toml
+# deploynator: _pypi
 
-*Community 1 | 6 files | cohesion 0.35*
+*Community 2 | 8 files | cohesion 0.38*
 
 ## Definition
 
-This community groups 6 file(s) rooted at `deploynator` with dominant language py (cohesion 0.35). Central symbols: `DocsRunner`, `TestBDDDeployScenarios`, `TestBDDPipeline`, `TestDocsRunner`, `TestRunner`, `TestTestRunner`, `TestTomlConfig`, `TomlConfig`. Core file: `tests/test_runner.py` (15 symbols). Documented purpose: BDD-style tests for deploynator using behavior-driven patterns.  Feature: Multi-platform deployment As a developer I want to deploy my project to multiple git p.
+This community groups 8 file(s) rooted at `deploynator` with dominant language py (cohesion 0.38). Central symbols: `DocsRunner`, `PyPIRunner`, `TestBDDDeployScenarios`, `TestBDDPipeline`, `TestCleanAndRun`, `TestDetect`, `TestDocsRunner`, `TestPipelinePyPI`. Core file: `tests/test_pypi.py` (24 symbols). Documented purpose: BDD-style tests for deploynator using behavior-driven patterns.  Feature: Multi-platform deployment As a developer I want to deploy my project to multiple git p.
 
 ## Files
 
 | File | Language | Layer | Symbols | Doc |
 |------|----------|-------|---------|-----|
 | `deploynator/_docs.py` | py | utility | 3 | no |
+| `deploynator/_pypi.py` | py | utility | 8 | no |
 | `deploynator/_runner.py` | py | utility | 3 | no |
 | `deploynator/_toml.py` | py | utility | 4 | no |
 | `tests/bdd_test_deploy.py` | py | testing | 10 | yes |
+| `tests/test_pypi.py` | py | testing | 24 | yes |
 | `tests/test_runner.py` | py | testing | 15 | yes |
 | `tests/test_toml.py` | py | testing | 8 | yes |
 
@@ -22,6 +24,14 @@ This community groups 6 file(s) rooted at `deploynator` with dominant language p
 - `DocsRunner` (class, `deploynator/_docs.py:10`) `class DocsRunner`
 - `__init__` (method, `deploynator/_docs.py:11`) `def __init__(self, config)`
 - `run` (method, `deploynator/_docs.py:14`) `def run(self, project_path, toml)`
+- `PyPIRunner` (class, `deploynator/_pypi.py:12`) `class PyPIRunner`
+- `__init__` (method, `deploynator/_pypi.py:13`) `def __init__(self, config)`
+- `is_packaging_project` (method, `deploynator/_pypi.py:16`) `def is_packaging_project(self, project_path)`
+- `has_credentials` (method, `deploynator/_pypi.py:33`) `def has_credentials(self)`
+- `prompt_for_credentials` (method, `deploynator/_pypi.py:39`) `def prompt_for_credentials(self)` - Pide el token PyPI por input oculto solo si hay TTY.
+- `save_pypirc` (method, `deploynator/_pypi.py:72`) `def save_pypirc(self, token, path)` - Guarda el token en ~/.pypirc (username __token__, modo 600).
+- `clean` (method, `deploynator/_pypi.py:90`) `def clean(self, project_path, toml)`
+- `run` (method, `deploynator/_pypi.py:107`) `def run(self, project_path, toml, version, token)`
 - `TestRunner` (class, `deploynator/_runner.py:11`) `class TestRunner`
 - `__init__` (method, `deploynator/_runner.py:12`) `def __init__(self, config)`
 - `run` (method, `deploynator/_runner.py:15`) `def run(self, project_path, toml)`
@@ -39,51 +49,44 @@ This community groups 6 file(s) rooted at `deploynator` with dominant language p
 - `test_docs_failure_does_not_block_release` (method, `tests/bdd_test_deploy.py:120`) `def test_docs_failure_does_not_block_release(self)` - Given docs fallan, When deploy, Then continúa (solo warning).
 - `test_force_bump_overrides_commit_type` (method, `tests/bdd_test_deploy.py:137`) `def test_force_bump_overrides_commit_type(self)` - Given type fix (patch), When --bump major, Then 1.2.3 -> 2.0.0.
 - `test_version_is_max_file_tag` (method, `tests/bdd_test_deploy.py:144`) `def test_version_is_max_file_tag(self)` - Given file 1.2.3 y tag 1.4.0, When current, Then 1.4.0.
-- `_toml` (function, `tests/test_runner.py:7`) `def _toml(commands, timeout)`
-- `TestTestRunner` (class, `tests/test_runner.py:23`) `class TestTestRunner`
-- `test_passing_command` (method, `tests/test_runner.py:24`) `def test_passing_command(self)`
-- `test_failing_command` (method, `tests/test_runner.py:32`) `def test_failing_command(self)`
-- `test_multiple_commands_stop_on_first_failure` (method, `tests/test_runner.py:41`) `def test_multiple_commands_stop_on_first_failure(self)`
-- `test_empty_commands_no_tests_dir_fails` (method, `tests/test_runner.py:49`) `def test_empty_commands_no_tests_dir_fails(self)`
-- `test_empty_commands_allow_no_tests_passes` (method, `tests/test_runner.py:58`) `def test_empty_commands_allow_no_tests_passes(self)`
-- `test_no_shell_injection` (method, `tests/test_runner.py:73`) `def test_no_shell_injection(self)`
-- `test_timeout_fails` (method, `tests/test_runner.py:87`) `def test_timeout_fails(self)`
-- `test_empty_string_command_rejected` (method, `tests/test_runner.py:96`) `def test_empty_string_command_rejected(self)`
+- `_git_init` (function, `tests/test_pypi.py:7`) `def _git_init(tmp)`
+- `TestDetect` (class, `tests/test_pypi.py:17`) `class TestDetect`
 
 ## Internal vs External Edges
 
-- Internal resolved imports (EXTRACTED): 28
-- Cross-boundary resolved imports (EXTRACTED): 31
+- Internal resolved imports (EXTRACTED): 45
+- Cross-boundary resolved imports (EXTRACTED): 54
 
 ## Connections
 
-- [EXTRACTED] depends_on community 4 <-> 1 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_toml.py.
-- [EXTRACTED] depends_on community 1 <-> 0 (strength 0.9): Extracted import edge crosses communities: deploynator/_docs.py imports deploynator/_config.py.
-- [EXTRACTED] depends_on community 1 <-> 2 (strength 0.9): Extracted import edge crosses communities: tests/bdd_test_deploy.py imports deploynator/_models.py.
-- [EXTRACTED] depends_on community 3 <-> 1 (strength 0.9): Extracted import edge crosses communities: tests/test_init.py imports deploynator/_toml.py.
-- [INFERRED] bridges community 2 <-> 1 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_runner.py in 4 hops.
-- [INFERRED] bridges community 2 <-> 1 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_toml.py in 4 hops.
-- [INFERRED] shares_context community 1 <-> 5 (strength 0.5): Inferred shared context (language py and layer utility) with no import path between community 1 (deploynator: _toml) and community 5 (orphans).
+- [EXTRACTED] depends_on community 1 <-> 2 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_toml.py.
+- [EXTRACTED] depends_on community 2 <-> 0 (strength 0.9): Extracted import edge crosses communities: deploynator/_docs.py imports deploynator/_config.py.
+- [INFERRED] bridges community 1 <-> 2 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_runner.py in 4 hops.
+- [INFERRED] bridges community 1 <-> 2 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_toml.py in 4 hops.
+- [INFERRED] shares_context community 2 <-> 3 (strength 0.5): Inferred shared context (layer utility) with no import path between community 2 (deploynator: _pypi) and community 3 (orphans).
 
 ## Risks
 
 - [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_pypi.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
 
 ## Open Questions
 
-- Why do 3 file(s) lack file-level docs (e.g. `deploynator/_docs.py`)? What purpose do they serve?
-- What would break if the most connected file in deploynator: _toml changed?
-- Should deploynator: _toml be split, given cohesion 0.35?
+- Why do 4 file(s) lack file-level docs (e.g. `deploynator/_docs.py`)? What purpose do they serve?
+- What would break if the most connected file in deploynator: _pypi changed?
+- Should deploynator: _pypi be split, given cohesion 0.38?
 
 ## Sources
 
 - `deploynator/_docs.py`
+- `deploynator/_pypi.py`
 - `deploynator/_runner.py`
 - `deploynator/_toml.py`
 - `tests/bdd_test_deploy.py`
+- `tests/test_pypi.py`
 - `tests/test_runner.py`
 - `tests/test_toml.py`

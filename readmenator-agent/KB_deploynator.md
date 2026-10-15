@@ -4,19 +4,20 @@
 - Layer: utility
 - Language: py
 - Depends on: `deploynator/_app.py`
-- Imported by: `deploynator/__main__.py`, `deploynator/_mcp_server.py`, `tests/test_cli_mcp.py`, `tests/test_init.py`, `tests/test_path_deploy.py`
+- Imported by: `app.py`, `deploynator/__main__.py`, `deploynator/_mcp_server.py`, `tests/test_cli_mcp.py`, `tests/test_init.py`, `tests/test_install_example.py`, `tests/test_path_deploy.py`
 
 ## deploynator/__main__.py
 - Layer: utility
 - Language: py
 - Symbols:
   - `build_parser` (function, line 17) `def build_parser()`
-  - `preprocess_argv` (function, line 130) `def preprocess_argv(argv)`
-  - `main` (function, line 164) `def main(argv)`
+  - `preprocess_argv` (function, line 133) `def preprocess_argv(argv)`
+  - `main` (function, line 167) `def main(argv)`
 - Depends on: `deploynator/__init__.py`, `deploynator/_config.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`
-- Imported by: `tests/test_cli_mcp.py`
+- Imported by: `tests/test_cli_mcp.py`, `tests/test_install_example.py`
 
 ## deploynator/_app.py
+- Doc: install_packages: pip install/upgrade packages (default: deploynator from PyPI).
 - Layer: utility
 - Language: py
 - Symbols:
@@ -40,17 +41,18 @@
   - `list_projects` (method, line 432) `def list_projects(self, search_path)`
   - `generate_ci` (method, line 437) `def generate_ci(self, project_name, all_projects)`
   - `install_deps` (method, line 453) `def install_deps(self, project_name)`
-  - `interactive_menu` (method, line 466) `def interactive_menu(self)`
-  - `_interactive_release` (method, line 502) `def _interactive_release(self)`
-  - `_interactive_commit` (method, line 544) `def _interactive_commit(self)`
-  - `_interactive_start` (method, line 571) `def _interactive_start(self)`
-  - `_interactive_auth` (method, line 595) `def _interactive_auth(self)`
-  - `_interactive_auth_status` (method, line 618) `def _interactive_auth_status(self)`
-  - `_interactive_docs` (method, line 624) `def _interactive_docs(self)`
-  - `_interactive_ci` (method, line 631) `def _interactive_ci(self)`
-  - `_interactive_status` (method, line 640) `def _interactive_status(self)`
-  - `_interactive_init` (method, line 645) `def _interactive_init(self)`
-  - `_print_result` (method, line 651) `def _print_result(result)`
+  - `install_packages` (method, line 464) `def install_packages(self, packages)`
+  - `interactive_menu` (method, line 492) `def interactive_menu(self)`
+  - `_interactive_release` (method, line 528) `def _interactive_release(self)`
+  - `_interactive_commit` (method, line 570) `def _interactive_commit(self)`
+  - `_interactive_start` (method, line 597) `def _interactive_start(self)`
+  - `_interactive_auth` (method, line 621) `def _interactive_auth(self)`
+  - `_interactive_auth_status` (method, line 644) `def _interactive_auth_status(self)`
+  - `_interactive_docs` (method, line 650) `def _interactive_docs(self)`
+  - `_interactive_ci` (method, line 657) `def _interactive_ci(self)`
+  - `_interactive_status` (method, line 666) `def _interactive_status(self)`
+  - `_interactive_init` (method, line 671) `def _interactive_init(self)`
+  - `_print_result` (method, line 677) `def _print_result(result)`
 - Depends on: `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_toml.py`
 - Imported by: `deploynator/__init__.py`
 
@@ -80,7 +82,7 @@
   - `gh_authd` (method, line 91) `def gh_authd(self)`
   - `glab_authd` (method, line 95) `def glab_authd(self)`
   - `bb_authd` (method, line 99) `def bb_authd(self)`
-- Imported by: `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deploy.py`, `tests/test_init.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_semver.py`
+- Imported by: `app.py`, `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deploy.py`, `tests/test_init.py`, `tests/test_install_example.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_semver.py`
 
 ## deploynator/_deploy.py
 - Doc: _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.

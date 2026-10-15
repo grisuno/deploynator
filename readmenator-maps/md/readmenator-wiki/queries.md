@@ -4,7 +4,7 @@ Log each answered question here so the wiki compounds. Format: question, answer,
 
 ## Suggested
 
-### Q: What does _config.py depend on, and what depends on it? (23 connections)
+### Q: What does _config.py depend on, and what depends on it? (25 connections)
 
 - Status: unanswered
 
@@ -16,11 +16,11 @@ Log each answered question here so the wiki compounds. Format: question, answer,
 
 - Status: unanswered
 
-### Q: How are the 6 files in 'deploynator: _changelog' related to each other?
+### Q: How are the 11 files in 'deploynator: _mcp_server' related to each other?
 
 - Status: unanswered
 
-### Q: Why are test_config.py and test_models.py connected through 4 hops across 3 communities?
+### Q: Why are app.py and test_models.py connected through 4 hops across 2 communities?
 
 - Status: unanswered
 

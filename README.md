@@ -61,6 +61,19 @@ pip install -e ".[dev]"
 
 ## Usage
 
+### Programmatic use (library)
+
+```python
+from deploynator import DeploynatorApp
+from deploynator._config import Config
+
+app = DeploynatorApp(Config.create())
+app.status()
+app.release(commit_type="feat", subject="add login", dry_run=True)
+```
+
+See `app.py` for a runnable example.
+
 ### Initialize a project
 
 ```bash

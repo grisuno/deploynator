@@ -99,6 +99,25 @@
   - `test_toml_starter_parseable` (method, line 58) `def test_toml_starter_parseable(self)`
 - Depends on: `deploynator/__init__.py`, `deploynator/_config.py`, `deploynator/_toml.py`
 
+## tests/test_install_example.py
+- Doc: RED: install como pip install + app.py ejemplo de librería.
+- Layer: testing
+- Language: py
+- Symbols:
+  - `TestInstallPackages` (class, line 5) `class TestInstallPackages`
+  - `TestAppExample` (class, line 54) `class TestAppExample`
+  - `test_empty_is_noop` (method, line 6) `def test_empty_is_noop(self)`
+  - `test_default_targets_deploynator` (method, line 11) `def test_default_targets_deploynator(self, monkeypatch)`
+  - `test_failure_reported` (method, line 29) `def test_failure_reported(self, monkeypatch)`
+  - `test_no_shell` (method, line 39) `def test_no_shell(self)`
+  - `test_cli_install_parses_packages` (method, line 45) `def test_cli_install_parses_packages(self)`
+  - `test_example_exists_and_compiles` (method, line 55) `def test_example_exists_and_compiles(self)`
+  - `test_example_uses_library` (method, line 62) `def test_example_uses_library(self)`
+  - `fake_run` (function, line 17) `def fake_run(cmd)`
+  - `fake_run` (function, line 34) `def fake_run(cmd)`
+  - `R` (class, line 19) `class R`
+- Depends on: `deploynator/__init__.py`, `deploynator/__main__.py`, `deploynator/_config.py`
+
 ## tests/test_models.py
 - Layer: testing
 - Language: py

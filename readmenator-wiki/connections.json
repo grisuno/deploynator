@@ -1,62 +1,22 @@
 [
   {
-    "community_a": 3,
-    "community_b": 4,
+    "community_a": 0,
+    "community_b": 1,
     "connection_type": "depends_on",
     "explanation": "Extracted import edge crosses communities: deploynator/__init__.py imports deploynator/_app.py.",
     "strength": 0.9,
     "confidence": "EXTRACTED"
   },
   {
-    "community_a": 3,
-    "community_b": 0,
-    "connection_type": "depends_on",
-    "explanation": "Extracted import edge crosses communities: deploynator/__main__.py imports deploynator/_config.py.",
-    "strength": 0.9,
-    "confidence": "EXTRACTED"
-  },
-  {
-    "community_a": 3,
+    "community_a": 1,
     "community_b": 2,
-    "connection_type": "depends_on",
-    "explanation": "Extracted import edge crosses communities: deploynator/__main__.py imports deploynator/_models.py.",
-    "strength": 0.9,
-    "confidence": "EXTRACTED"
-  },
-  {
-    "community_a": 4,
-    "community_b": 0,
-    "connection_type": "depends_on",
-    "explanation": "Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_config.py.",
-    "strength": 0.9,
-    "confidence": "EXTRACTED"
-  },
-  {
-    "community_a": 4,
-    "community_b": 2,
-    "connection_type": "depends_on",
-    "explanation": "Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_models.py.",
-    "strength": 0.9,
-    "confidence": "EXTRACTED"
-  },
-  {
-    "community_a": 4,
-    "community_b": 1,
     "connection_type": "depends_on",
     "explanation": "Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_toml.py.",
     "strength": 0.9,
     "confidence": "EXTRACTED"
   },
   {
-    "community_a": 0,
-    "community_b": 2,
-    "connection_type": "depends_on",
-    "explanation": "Extracted import edge crosses communities: deploynator/_changelog.py imports deploynator/_models.py.",
-    "strength": 0.9,
-    "confidence": "EXTRACTED"
-  },
-  {
-    "community_a": 1,
+    "community_a": 2,
     "community_b": 0,
     "connection_type": "depends_on",
     "explanation": "Extracted import edge crosses communities: deploynator/_docs.py imports deploynator/_config.py.",
@@ -64,98 +24,50 @@
     "confidence": "EXTRACTED"
   },
   {
-    "community_a": 1,
-    "community_b": 2,
-    "connection_type": "depends_on",
-    "explanation": "Extracted import edge crosses communities: tests/bdd_test_deploy.py imports deploynator/_models.py.",
-    "strength": 0.9,
-    "confidence": "EXTRACTED"
-  },
-  {
-    "community_a": 3,
+    "community_a": 0,
     "community_b": 1,
-    "connection_type": "depends_on",
-    "explanation": "Extracted import edge crosses communities: tests/test_init.py imports deploynator/_toml.py.",
-    "strength": 0.9,
-    "confidence": "EXTRACTED"
-  },
-  {
-    "community_a": 3,
-    "community_b": 0,
     "connection_type": "bridges",
-    "explanation": "Inferred cross-community bridge: deploynator/__init__.py reaches deploynator/_changelog.py in 3 hops.",
-    "strength": 0.7,
+    "explanation": "Inferred cross-community bridge: app.py reaches tests/test_models.py in 4 hops.",
+    "strength": 0.6,
     "confidence": "INFERRED"
   },
   {
     "community_a": 0,
-    "community_b": 2,
+    "community_b": 1,
     "connection_type": "bridges",
     "explanation": "Inferred cross-community bridge: tests/test_config.py reaches tests/test_models.py in 4 hops.",
     "strength": 0.6,
     "confidence": "INFERRED"
   },
   {
-    "community_a": 3,
-    "community_b": 2,
+    "community_a": 0,
+    "community_b": 1,
     "connection_type": "bridges",
     "explanation": "Inferred cross-community bridge: tests/test_init.py reaches tests/test_models.py in 4 hops.",
     "strength": 0.6,
     "confidence": "INFERRED"
   },
   {
-    "community_a": 2,
-    "community_b": 1,
+    "community_a": 1,
+    "community_b": 2,
     "connection_type": "bridges",
     "explanation": "Inferred cross-community bridge: tests/test_models.py reaches tests/test_runner.py in 4 hops.",
     "strength": 0.6,
     "confidence": "INFERRED"
   },
   {
-    "community_a": 2,
-    "community_b": 1,
+    "community_a": 1,
+    "community_b": 2,
     "connection_type": "bridges",
     "explanation": "Inferred cross-community bridge: tests/test_models.py reaches tests/test_toml.py in 4 hops.",
     "strength": 0.6,
     "confidence": "INFERRED"
   },
   {
-    "community_a": 0,
-    "community_b": 5,
-    "connection_type": "shares_context",
-    "explanation": "Inferred shared context (language py) with no import path between community 0 (deploynator: _changelog) and community 5 (orphans).",
-    "strength": 0.5,
-    "confidence": "INFERRED"
-  },
-  {
-    "community_a": 1,
-    "community_b": 5,
-    "connection_type": "shares_context",
-    "explanation": "Inferred shared context (language py and layer utility) with no import path between community 1 (deploynator: _toml) and community 5 (orphans).",
-    "strength": 0.5,
-    "confidence": "INFERRED"
-  },
-  {
     "community_a": 2,
-    "community_b": 5,
+    "community_b": 3,
     "connection_type": "shares_context",
-    "explanation": "Inferred shared context (language py) with no import path between community 2 (deploynator: _models) and community 5 (orphans).",
-    "strength": 0.5,
-    "confidence": "INFERRED"
-  },
-  {
-    "community_a": 3,
-    "community_b": 5,
-    "connection_type": "shares_context",
-    "explanation": "Inferred shared context (language py and layer utility) with no import path between community 3 (deploynator: _mcp_server) and community 5 (orphans).",
-    "strength": 0.5,
-    "confidence": "INFERRED"
-  },
-  {
-    "community_a": 4,
-    "community_b": 5,
-    "connection_type": "shares_context",
-    "explanation": "Inferred shared context (language py and layer utility) with no import path between community 4 (deploynator: _platforms) and community 5 (orphans).",
+    "explanation": "Inferred shared context (layer utility) with no import path between community 2 (deploynator: _pypi) and community 3 (orphans).",
     "strength": 0.5,
     "confidence": "INFERRED"
   }

@@ -101,7 +101,7 @@ def create(overrides: dict | None = None) -> Config
 
 *Calls:* [`Config`](#config)
 
-*Called by:* [`main`](deploynator.__main__.py.md#main), [`DeploynatorApp.__init__`](deploynator._app.py.md#deploynatorapp-__init__), [`main`](deploynator._mcp_server.py.md#main), [`load_toml_config`](deploynator._toml.py.md#load_toml_config)
+*Called by:* [`main`](app.py.md#main), [`main`](deploynator.__main__.py.md#main), [`DeploynatorApp.__init__`](deploynator._app.py.md#deploynatorapp-__init__), [`main`](deploynator._mcp_server.py.md#main), [`load_toml_config`](deploynator._toml.py.md#load_toml_config)
 
 <a id="config-resolve_path"></a>
 

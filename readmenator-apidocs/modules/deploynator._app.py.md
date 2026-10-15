@@ -1,6 +1,6 @@
 # `deploynator._app`
 
-> Source: [deploynator/_app.py:1](../../deploynator/_app.py#L1) | language `py` | coverage 0.0% | [API index](../index.md)
+> Source: [deploynator/_app.py:1](../../deploynator/_app.py#L1) | language `py` | coverage 6.2% | [API index](../index.md)
 
 ## Contents
 
@@ -98,6 +98,7 @@ class DeploynatorApp
 | [`list_projects`](#deploynatorapp-list_projects) | method |  |
 | [`generate_ci`](#deploynatorapp-generate_ci) | method |  |
 | [`install_deps`](#deploynatorapp-install_deps) | method |  |
+| [`install_packages`](#deploynatorapp-install_packages) | method | pip install/upgrade packages (default: deploynator from PyPI). |
 | [`interactive_menu`](#deploynatorapp-interactive_menu) | method |  |
 
 <a id="deploynatorapp-__init__"></a>
@@ -119,7 +120,7 @@ def __init__(self, config: Optional[Config] = None, workdir: str = '') -> None
 
 *Calls:* [`Config.create`](deploynator._config.py.md#config-create), [`DeployOrchestrator.__init__`](deploynator._deploy.py.md#deployorchestrator-__init__), [`ProjectDiscovery.__init__`](deploynator._deploy.py.md#projectdiscovery-__init__)
 
-*Called by:* [`main`](deploynator.__main__.py.md#main), [`main`](deploynator._mcp_server.py.md#main)
+*Called by:* [`main`](app.py.md#main), [`main`](deploynator.__main__.py.md#main), [`main`](deploynator._mcp_server.py.md#main)
 
 <a id="deploynatorapp-auth_login"></a>
 
@@ -263,7 +264,7 @@ def release(self, commit_type: str = 'release', subject: str = '', scope: str = 
 
 *Calls:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy), [`ProjectDiscovery.discover`](deploynator._deploy.py.md#projectdiscovery-discover), [`ProjectDiscovery.find_by_name`](deploynator._deploy.py.md#projectdiscovery-find_by_name), [`CommitType.from_string`](deploynator._models.py.md#committype-from_string), [`DeployResult`](deploynator._models.py.md#deployresult), [`Platform.from_string`](deploynator._models.py.md#platform-from_string), [`ProjectConfig`](deploynator._models.py.md#projectconfig), [`VersionConfig`](deploynator._models.py.md#versionconfig), [`load_toml_config`](deploynator._toml.py.md#load_toml_config)
 
-*Called by:* [`main`](deploynator.__main__.py.md#main)
+*Called by:* [`main`](app.py.md#main), [`main`](deploynator.__main__.py.md#main)
 
 <a id="deploynatorapp-generate_docs"></a>
 
@@ -309,7 +310,7 @@ def status(self, project_path: str = '', project_name: str = '') -> dict
 
 *Calls:* [`ProjectDiscovery.discover`](deploynator._deploy.py.md#projectdiscovery-discover), [`GitOperations.__init__`](deploynator._git.py.md#gitoperations-__init__), [`GitOperations.current_branch`](deploynator._git.py.md#gitoperations-current_branch), [`GitOperations.has_remote`](deploynator._git.py.md#gitoperations-has_remote), [`GitOperations.is_dirty`](deploynator._git.py.md#gitoperations-is_dirty)
 
-*Called by:* [`main`](deploynator.__main__.py.md#main)
+*Called by:* [`main`](app.py.md#main), [`main`](deploynator.__main__.py.md#main)
 
 <a id="deploynatorapp-list_projects"></a>
 
@@ -331,7 +332,7 @@ def list_projects(self, search_path: str = '') -> list[ProjectConfig]
 
 *Calls:* [`ProjectDiscovery.discover`](deploynator._deploy.py.md#projectdiscovery-discover)
 
-*Called by:* [`main`](deploynator.__main__.py.md#main)
+*Called by:* [`main`](app.py.md#main), [`main`](deploynator.__main__.py.md#main)
 
 <a id="deploynatorapp-generate_ci"></a>
 
@@ -378,11 +379,33 @@ def install_deps(self, project_name: str = '') -> dict[str, bool]
 
 *Called by:* [`main`](deploynator.__main__.py.md#main)
 
+<a id="deploynatorapp-install_packages"></a>
+
+#### `DeploynatorApp.install_packages`
+
+`method` | [deploynator/_app.py:464](../../deploynator/_app.py#L464)
+
+```python
+def install_packages(self, packages: list[str] | None = None) -> dict[str, bool]
+```
+
+pip install/upgrade packages (default: deploynator from PyPI).
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `packages` | `list[str] \| None` | `None` |  |
+
+**Returns:** `dict[str, bool]`
+
+*Called by:* [`main`](deploynator.__main__.py.md#main)
+
 <a id="deploynatorapp-interactive_menu"></a>
 
 #### `DeploynatorApp.interactive_menu`
 
-`method` | [deploynator/_app.py:466](../../deploynator/_app.py#L466)
+`method` | [deploynator/_app.py:492](../../deploynator/_app.py#L492)
 
 ```python
 def interactive_menu(self) -> None

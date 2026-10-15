@@ -1,8 +1,9 @@
+{"code":"DOC001","uid":"app.py::main","file":"app.py","line":12,"message":"function main is not documented"}
 {"code":"DOC001","uid":"deploynator/__init__.py","file":"deploynator/__init__.py","line":1,"message":"module deploynator/__init__.py is not documented"}
 {"code":"DOC001","uid":"deploynator/__main__.py","file":"deploynator/__main__.py","line":1,"message":"module deploynator/__main__.py is not documented"}
 {"code":"DOC001","uid":"deploynator/__main__.py::build_parser","file":"deploynator/__main__.py","line":17,"message":"function build_parser is not documented"}
-{"code":"DOC001","uid":"deploynator/__main__.py::preprocess_argv","file":"deploynator/__main__.py","line":130,"message":"function preprocess_argv is not documented"}
-{"code":"DOC001","uid":"deploynator/__main__.py::main","file":"deploynator/__main__.py","line":164,"message":"function main is not documented"}
+{"code":"DOC001","uid":"deploynator/__main__.py::preprocess_argv","file":"deploynator/__main__.py","line":133,"message":"function preprocess_argv is not documented"}
+{"code":"DOC001","uid":"deploynator/__main__.py::main","file":"deploynator/__main__.py","line":167,"message":"function main is not documented"}
 {"code":"DOC001","uid":"deploynator/_app.py","file":"deploynator/_app.py","line":1,"message":"module deploynator/_app.py is not documented"}
 {"code":"DOC001","uid":"deploynator/_app.py::DeploynatorApp","file":"deploynator/_app.py","line":20,"message":"class DeploynatorApp is not documented"}
 {"code":"DOC001","uid":"deploynator/_app.py::DeploynatorApp.__init__","file":"deploynator/_app.py","line":21,"message":"constructor DeploynatorApp.__init__ is not documented"}
@@ -17,7 +18,7 @@
 {"code":"DOC001","uid":"deploynator/_app.py::DeploynatorApp.list_projects","file":"deploynator/_app.py","line":432,"message":"method DeploynatorApp.list_projects is not documented"}
 {"code":"DOC001","uid":"deploynator/_app.py::DeploynatorApp.generate_ci","file":"deploynator/_app.py","line":437,"message":"method DeploynatorApp.generate_ci is not documented"}
 {"code":"DOC001","uid":"deploynator/_app.py::DeploynatorApp.install_deps","file":"deploynator/_app.py","line":453,"message":"method DeploynatorApp.install_deps is not documented"}
-{"code":"DOC001","uid":"deploynator/_app.py::DeploynatorApp.interactive_menu","file":"deploynator/_app.py","line":466,"message":"method DeploynatorApp.interactive_menu is not documented"}
+{"code":"DOC001","uid":"deploynator/_app.py::DeploynatorApp.interactive_menu","file":"deploynator/_app.py","line":492,"message":"method DeploynatorApp.interactive_menu is not documented"}
 {"code":"DOC001","uid":"deploynator/_changelog.py","file":"deploynator/_changelog.py","line":1,"message":"module deploynator/_changelog.py is not documented"}
 {"code":"DOC001","uid":"deploynator/_changelog.py::ChangelogGenerator","file":"deploynator/_changelog.py","line":12,"message":"class ChangelogGenerator is not documented"}
 {"code":"DOC001","uid":"deploynator/_changelog.py::ChangelogGenerator.__init__","file":"deploynator/_changelog.py","line":13,"message":"constructor ChangelogGenerator.__init__ is not documented"}

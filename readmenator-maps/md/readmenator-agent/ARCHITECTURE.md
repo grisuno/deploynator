@@ -2,6 +2,8 @@
 
 ## Internal Dependencies
 
+- `app.py` -> `deploynator/__init__.py`
+- `app.py` -> `deploynator/_config.py`
 - `deploynator/__init__.py` -> `deploynator/_app.py`
 - `deploynator/__main__.py` -> `deploynator/__init__.py`
 - `deploynator/__main__.py` -> `deploynator/_config.py`
@@ -59,6 +61,9 @@
 - `tests/test_init.py` -> `deploynator/__init__.py`
 - `tests/test_init.py` -> `deploynator/_config.py`
 - `tests/test_init.py` -> `deploynator/_toml.py`
+- `tests/test_install_example.py` -> `deploynator/__init__.py`
+- `tests/test_install_example.py` -> `deploynator/__main__.py`
+- `tests/test_install_example.py` -> `deploynator/_config.py`
 - `tests/test_models.py` -> `deploynator/_models.py`
 - `tests/test_path_deploy.py` -> `deploynator/__init__.py`
 - `tests/test_path_deploy.py` -> `deploynator/_config.py`
@@ -105,6 +110,7 @@
 - `tests/test_config.py` -> pytest, re
 - `tests/test_deploy.py` -> json, os, pytest, tempfile
 - `tests/test_init.py` -> os, stat, subprocess, tempfile
+- `tests/test_install_example.py` -> inspect, os, py_compile, subprocess
 - `tests/test_models.py` -> datetime, pytest
 - `tests/test_path_deploy.py` -> json, os, subprocess, tempfile
 - `tests/test_pipeline.py` -> json, os, pytest, subprocess, tempfile

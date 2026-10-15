@@ -2,27 +2,28 @@
 
 | Symbol | Kind | File:Line | Signature |
 |--------|------|-----------|-----------|
+| `main` | function | `app.py:12` | `def main()` |
 | `ensure_pkg` | function | `deploy.sh:22` | `` |
 | `build_parser` | function | `deploynator/__main__.py:17` | `def build_parser()` |
-| `main` | function | `deploynator/__main__.py:164` | `def main(argv)` |
-| `preprocess_argv` | function | `deploynator/__main__.py:130` | `def preprocess_argv(argv)` |
+| `main` | function | `deploynator/__main__.py:167` | `def main(argv)` |
+| `preprocess_argv` | function | `deploynator/__main__.py:133` | `def preprocess_argv(argv)` |
 | `DeploynatorApp` | class | `deploynator/_app.py:20` | `class DeploynatorApp` |
 | `__init__` | method | `deploynator/_app.py:21` | `def __init__(self, config, workdir)` |
 | `_auth_bitbucket` | method | `deploynator/_app.py:86` | `def _auth_bitbucket()` |
 | `_auth_github` | method | `deploynator/_app.py:56` | `def _auth_github()` |
 | `_auth_gitlab` | method | `deploynator/_app.py:69` | `def _auth_gitlab()` |
-| `_interactive_auth` | method | `deploynator/_app.py:595` | `def _interactive_auth(self)` |
-| `_interactive_auth_status` | method | `deploynator/_app.py:618` | `def _interactive_auth_status(self)` |
-| `_interactive_ci` | method | `deploynator/_app.py:631` | `def _interactive_ci(self)` |
-| `_interactive_commit` | method | `deploynator/_app.py:544` | `def _interactive_commit(self)` |
-| `_interactive_docs` | method | `deploynator/_app.py:624` | `def _interactive_docs(self)` |
-| `_interactive_init` | method | `deploynator/_app.py:645` | `def _interactive_init(self)` |
-| `_interactive_release` | method | `deploynator/_app.py:502` | `def _interactive_release(self)` |
-| `_interactive_start` | method | `deploynator/_app.py:571` | `def _interactive_start(self)` |
-| `_interactive_status` | method | `deploynator/_app.py:640` | `def _interactive_status(self)` |
+| `_interactive_auth` | method | `deploynator/_app.py:621` | `def _interactive_auth(self)` |
+| `_interactive_auth_status` | method | `deploynator/_app.py:644` | `def _interactive_auth_status(self)` |
+| `_interactive_ci` | method | `deploynator/_app.py:657` | `def _interactive_ci(self)` |
+| `_interactive_commit` | method | `deploynator/_app.py:570` | `def _interactive_commit(self)` |
+| `_interactive_docs` | method | `deploynator/_app.py:650` | `def _interactive_docs(self)` |
+| `_interactive_init` | method | `deploynator/_app.py:671` | `def _interactive_init(self)` |
+| `_interactive_release` | method | `deploynator/_app.py:528` | `def _interactive_release(self)` |
+| `_interactive_start` | method | `deploynator/_app.py:597` | `def _interactive_start(self)` |
+| `_interactive_status` | method | `deploynator/_app.py:666` | `def _interactive_status(self)` |
 | `_is_path_like` | method | `deploynator/_app.py:236` | `def _is_path_like(value)` |
 | `_looks_like_path` | method | `deploynator/_app.py:240` | `def _looks_like_path(value)` |
-| `_print_result` | method | `deploynator/_app.py:651` | `def _print_result(result)` |
+| `_print_result` | method | `deploynator/_app.py:677` | `def _print_result(result)` |
 | `_resolve_project_path` | method | `deploynator/_app.py:247` | `def _resolve_project_path(self, project_name)` |
 | `_smart_prepare` | method | `deploynator/_app.py:261` | `def _smart_prepare(self, base, changelog_content, dry_run)` |
 | `auth_login` | method | `deploynator/_app.py:31` | `def auth_login(self, platforms)` |
@@ -32,7 +33,8 @@
 | `generate_docs` | method | `deploynator/_app.py:406` | `def generate_docs(self, project_path, project_name)` |
 | `init_project` | method | `deploynator/_app.py:168` | `def init_project(self, project_path, name)` |
 | `install_deps` | method | `deploynator/_app.py:453` | `def install_deps(self, project_name)` |
-| `interactive_menu` | method | `deploynator/_app.py:466` | `def interactive_menu(self)` |
+| `install_packages` | method | `deploynator/_app.py:464` | `def install_packages(self, packages)` |
+| `interactive_menu` | method | `deploynator/_app.py:492` | `def interactive_menu(self)` |
 | `list_projects` | method | `deploynator/_app.py:432` | `def list_projects(self, search_path)` |
 | `release` | method | `deploynator/_app.py:316` | `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...` |
 | `start_branch` | method | `deploynator/_app.py:218` | `def start_branch(self, commit_type, description, project_path, project_name, remote)` |
@@ -268,6 +270,18 @@
 | `test_init_creates_files` | method | `tests/test_init.py:8` | `def test_init_creates_files(self)` |
 | `test_init_no_overwrite` | method | `tests/test_init.py:46` | `def test_init_no_overwrite(self)` |
 | `test_toml_starter_parseable` | method | `tests/test_init.py:58` | `def test_toml_starter_parseable(self)` |
+| `R` | class | `tests/test_install_example.py:19` | `class R` |
+| `TestAppExample` | class | `tests/test_install_example.py:54` | `class TestAppExample` |
+| `TestInstallPackages` | class | `tests/test_install_example.py:5` | `class TestInstallPackages` |
+| `fake_run` | function | `tests/test_install_example.py:17` | `def fake_run(cmd)` |
+| `fake_run` | function | `tests/test_install_example.py:34` | `def fake_run(cmd)` |
+| `test_cli_install_parses_packages` | method | `tests/test_install_example.py:45` | `def test_cli_install_parses_packages(self)` |
+| `test_default_targets_deploynator` | method | `tests/test_install_example.py:11` | `def test_default_targets_deploynator(self, monkeypatch)` |
+| `test_empty_is_noop` | method | `tests/test_install_example.py:6` | `def test_empty_is_noop(self)` |
+| `test_example_exists_and_compiles` | method | `tests/test_install_example.py:55` | `def test_example_exists_and_compiles(self)` |
+| `test_example_uses_library` | method | `tests/test_install_example.py:62` | `def test_example_uses_library(self)` |
+| `test_failure_reported` | method | `tests/test_install_example.py:29` | `def test_failure_reported(self, monkeypatch)` |
+| `test_no_shell` | method | `tests/test_install_example.py:39` | `def test_no_shell(self)` |
 | `TestChangelogEntryContract` | class | `tests/test_models.py:196` | `class TestChangelogEntryContract` |
 | `TestCommitMessageContract` | class | `tests/test_models.py:65` | `class TestCommitMessageContract` |
 | `TestCommitTypeContract` | class | `tests/test_models.py:34` | `class TestCommitTypeContract` |

@@ -25,6 +25,7 @@ flowchart LR
     n_deploynator__app_py__DeploynatorApp_generate_docs["_app.DeploynatorApp.generate_docs"]
     n_deploynator__app_py__DeploynatorApp_init_project["_app.DeploynatorApp.init_project"]
     n_deploynator__app_py__DeploynatorApp_install_deps["_app.DeploynatorApp.install_deps"]
+    n_deploynator__app_py__DeploynatorApp_install_packages["_app.DeploynatorApp.install_packages"]
     n_deploynator__app_py__DeploynatorApp_interactive_menu["_app.DeploynatorApp.interactive_menu"]
     n_deploynator__app_py__DeploynatorApp_list_projects["_app.DeploynatorApp.list_projects"]
     n_deploynator__app_py__DeploynatorApp_release["_app.DeploynatorApp.release"]
@@ -45,6 +46,7 @@ flowchart LR
     n_deploynator___main___py__main -.-> n_deploynator__app_py__DeploynatorApp_generate_docs
     n_deploynator___main___py__main -.-> n_deploynator__app_py__DeploynatorApp_init_project
     n_deploynator___main___py__main -.-> n_deploynator__app_py__DeploynatorApp_install_deps
+    n_deploynator___main___py__main -.-> n_deploynator__app_py__DeploynatorApp_install_packages
     n_deploynator___main___py__main -.-> n_deploynator__app_py__DeploynatorApp_interactive_menu
     n_deploynator___main___py__main -.-> n_deploynator__app_py__DeploynatorApp_list_projects
     n_deploynator___main___py__main -.-> n_deploynator__app_py__DeploynatorApp_release
@@ -79,7 +81,7 @@ def build_parser() -> argparse.ArgumentParser
 
 ### `preprocess_argv`
 
-`function` | [deploynator/__main__.py:130](../../deploynator/__main__.py#L130)
+`function` | [deploynator/__main__.py:133](../../deploynator/__main__.py#L133)
 
 ```python
 def preprocess_argv(argv: list[str]) -> tuple[argparse.Namespace, str]
@@ -103,7 +105,7 @@ def preprocess_argv(argv: list[str]) -> tuple[argparse.Namespace, str]
 
 ### `main`
 
-`function` | [deploynator/__main__.py:164](../../deploynator/__main__.py#L164)
+`function` | [deploynator/__main__.py:167](../../deploynator/__main__.py#L167)
 
 ```python
 def main(argv: list[str] | None = None) -> NoReturn | None
@@ -117,7 +119,7 @@ def main(argv: list[str] | None = None) -> NoReturn | None
 
 **Returns:** `NoReturn | None`
 
-*Calls:* [`build_parser`](#build_parser), [`preprocess_argv`](#preprocess_argv), [`DeploynatorApp.__init__`](deploynator._app.py.md#deploynatorapp-__init__), [`DeploynatorApp.auth_login`](deploynator._app.py.md#deploynatorapp-auth_login), [`DeploynatorApp.auth_status`](deploynator._app.py.md#deploynatorapp-auth_status), [`DeploynatorApp.commit`](deploynator._app.py.md#deploynatorapp-commit), [`DeploynatorApp.generate_ci`](deploynator._app.py.md#deploynatorapp-generate_ci), [`DeploynatorApp.generate_docs`](deploynator._app.py.md#deploynatorapp-generate_docs), [`DeploynatorApp.init_project`](deploynator._app.py.md#deploynatorapp-init_project), [`DeploynatorApp.install_deps`](deploynator._app.py.md#deploynatorapp-install_deps), [`DeploynatorApp.interactive_menu`](deploynator._app.py.md#deploynatorapp-interactive_menu), [`DeploynatorApp.list_projects`](deploynator._app.py.md#deploynatorapp-list_projects) and 6 more
+*Calls:* [`build_parser`](#build_parser), [`preprocess_argv`](#preprocess_argv), [`DeploynatorApp.__init__`](deploynator._app.py.md#deploynatorapp-__init__), [`DeploynatorApp.auth_login`](deploynator._app.py.md#deploynatorapp-auth_login), [`DeploynatorApp.auth_status`](deploynator._app.py.md#deploynatorapp-auth_status), [`DeploynatorApp.commit`](deploynator._app.py.md#deploynatorapp-commit), [`DeploynatorApp.generate_ci`](deploynator._app.py.md#deploynatorapp-generate_ci), [`DeploynatorApp.generate_docs`](deploynator._app.py.md#deploynatorapp-generate_docs), [`DeploynatorApp.init_project`](deploynator._app.py.md#deploynatorapp-init_project), [`DeploynatorApp.install_deps`](deploynator._app.py.md#deploynatorapp-install_deps), [`DeploynatorApp.install_packages`](deploynator._app.py.md#deploynatorapp-install_packages), [`DeploynatorApp.interactive_menu`](deploynator._app.py.md#deploynatorapp-interactive_menu) and 7 more
 
 ---
 
