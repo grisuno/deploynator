@@ -1,10 +1,10 @@
 {
   "tool": "readmenator",
   "schema_version": 2,
-  "generated_at": "2026-10-16T05:55:36Z",
+  "generated_at": "2026-10-16T05:57:06Z",
   "project_root": ".",
   "project_name": "deploynator",
-  "git_commit": "787590dc6f0ad583a253932616b5e3ebbcfe4c1c",
+  "git_commit": "939323b79d25e1344ce7f30d76984c8fce2fa3d6",
   "git_branch": "main",
   "source_fingerprint": "f4e23ef56097adf4709dcaa409f70709218eacaa1aeedc85d31e8a12b18c0669",
   "freshness_check": "readmenator . fresh  # exit 0 = docs match sources, exit 1 = run: readmenator . --rebuild",

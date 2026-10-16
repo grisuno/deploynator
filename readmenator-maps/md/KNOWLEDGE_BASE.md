@@ -12,7 +12,7 @@
 **Total Files Parsed:** 35 | **Total Symbols Extracted:** 433 | **Total Imports:** 369
  | **Resolved Imports:** 214
 
-<!-- ranking_model: v1.0 | weights: {ppr:0.45,auth:0.2,test:0.15,doc:0.1,fresh:0.1} | alpha:0.85 | commit:787590d | date:2026-07-18 -->
+<!-- ranking_model: v1.0 | weights: {ppr:0.45,auth:0.2,test:0.15,doc:0.1,fresh:0.1} | alpha:0.85 | commit:939323b | date:2026-07-18 -->
 
 
 ## Table of Contents
@@ -770,44 +770,44 @@ Taint analysis traces how dangerous imports propagate through the codebase via t
 
 - `_app.py` imports `subprocess` (0 hop to `_app.py`) [high]
   Path: _app.py
-- `_app.py` imports `subprocess` (1 hop to `_config.py`) [high]
-  Path: _app.py -> _config.py
-- `_app.py` imports `subprocess` (1 hop to `_deploy.py`) [high]
-  Path: _app.py -> _deploy.py
-- `_app.py` imports `subprocess` (1 hop to `_git.py`) [high]
-  Path: _app.py -> _git.py
 - `_app.py` imports `subprocess` (1 hop to `_toml.py`) [high]
   Path: _app.py -> _toml.py
-- `_app.py` imports `subprocess` (1 hop to `_models.py`) [high]
-  Path: _app.py -> _models.py
+- `_app.py` imports `subprocess` (1 hop to `_git.py`) [high]
+  Path: _app.py -> _git.py
 - `_app.py` imports `subprocess` (1 hop to `_platforms.py`) [high]
   Path: _app.py -> _platforms.py
-- `_app.py` imports `subprocess` (2 hops to `_pypi.py`) [high]
-  Path: _app.py -> _deploy.py -> _pypi.py
-- `_app.py` imports `subprocess` (2 hops to `_changelog.py`) [high]
-  Path: _app.py -> _deploy.py -> _changelog.py
-- `_app.py` imports `subprocess` (2 hops to `_semver.py`) [high]
-  Path: _app.py -> _deploy.py -> _semver.py
+- `_app.py` imports `subprocess` (1 hop to `_deploy.py`) [high]
+  Path: _app.py -> _deploy.py
+- `_app.py` imports `subprocess` (1 hop to `_models.py`) [high]
+  Path: _app.py -> _models.py
+- `_app.py` imports `subprocess` (1 hop to `_config.py`) [high]
+  Path: _app.py -> _config.py
 - `_app.py` imports `subprocess` (2 hops to `_docs.py`) [high]
   Path: _app.py -> _deploy.py -> _docs.py
 - `_app.py` imports `subprocess` (2 hops to `_runner.py`) [high]
   Path: _app.py -> _deploy.py -> _runner.py
+- `_app.py` imports `subprocess` (2 hops to `_changelog.py`) [high]
+  Path: _app.py -> _deploy.py -> _changelog.py
 - `_app.py` imports `subprocess` (2 hops to `_readme.py`) [high]
   Path: _app.py -> _deploy.py -> _readme.py
+- `_app.py` imports `subprocess` (2 hops to `_pypi.py`) [high]
+  Path: _app.py -> _deploy.py -> _pypi.py
+- `_app.py` imports `subprocess` (2 hops to `_semver.py`) [high]
+  Path: _app.py -> _deploy.py -> _semver.py
 - `_app.py` imports `subprocess` (0 hop to `_app.py`) [high]
   Path: _app.py
-- `_app.py` imports `subprocess` (1 hop to `_config.py`) [high]
-  Path: _app.py -> _config.py
-- `_app.py` imports `subprocess` (1 hop to `_deploy.py`) [high]
-  Path: _app.py -> _deploy.py
-- `_app.py` imports `subprocess` (1 hop to `_git.py`) [high]
-  Path: _app.py -> _git.py
 - `_app.py` imports `subprocess` (1 hop to `_toml.py`) [high]
   Path: _app.py -> _toml.py
-- `_app.py` imports `subprocess` (1 hop to `_models.py`) [high]
-  Path: _app.py -> _models.py
+- `_app.py` imports `subprocess` (1 hop to `_git.py`) [high]
+  Path: _app.py -> _git.py
 - `_app.py` imports `subprocess` (1 hop to `_platforms.py`) [high]
   Path: _app.py -> _platforms.py
+- `_app.py` imports `subprocess` (1 hop to `_deploy.py`) [high]
+  Path: _app.py -> _deploy.py
+- `_app.py` imports `subprocess` (1 hop to `_models.py`) [high]
+  Path: _app.py -> _models.py
+- `_app.py` imports `subprocess` (1 hop to `_config.py`) [high]
+  Path: _app.py -> _config.py
 
 ---
 
