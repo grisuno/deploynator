@@ -18,13 +18,13 @@ Open work clusters around documentation (37% file coverage), 0 security findings
 | Metric | Value |
 |--------|-------|
 | Files | 35 |
-| Symbols | 433 |
-| Resolved imports | 214 |
+| Symbols | 442 |
+| Resolved imports | 221 |
 | Languages | py, sh |
 | Communities | 5 |
 | Doc coverage | 37% (13/35 files) |
 | Security findings | 0 |
-| Estimated read cost | ~4271 tokens (chars/4, offline so $0) |
+| Estimated read cost | ~4507 tokens (chars/4, offline so $0) |
 
 ## Reading Order
 
@@ -52,7 +52,7 @@ readmenator query "<question>" --target deploynator
 | `deploynator/_config.py` | 54.6 |
 | `deploynator/_deploy.py` | 36.0 |
 | `deploynator/_models.py` | 30.7 |
-| `deploynator/_toml.py` | 22.9 |
+| `deploynator/_toml.py` | 23.0 |
 | `deploynator/_app.py` | 17.2 |
 
 ## Strongest Connections

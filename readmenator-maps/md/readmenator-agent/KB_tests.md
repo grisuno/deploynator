@@ -113,8 +113,8 @@
   - `test_cli_install_parses_packages` (method, line 45) `def test_cli_install_parses_packages(self)`
   - `test_example_exists_and_compiles` (method, line 55) `def test_example_exists_and_compiles(self)`
   - `test_example_uses_library` (method, line 62) `def test_example_uses_library(self)`
-  - `fake_run` (function, line 17) `def fake_run(cmd)`
-  - `fake_run` (function, line 34) `def fake_run(cmd)`
+  - `fake_run` (method, line 17) `def fake_run(cmd)`
+  - `fake_run` (method, line 34) `def fake_run(cmd)`
   - `R` (class, line 19) `class R`
 - Depends on: `deploynator/__init__.py`, `deploynator/__main__.py`, `deploynator/_config.py`
 
@@ -296,6 +296,7 @@
 - Symbols:
   - `TestTomlConfig` (class, line 7) `class TestTomlConfig`
   - `TestCMakefileDetection` (class, line 84) `class TestCMakefileDetection`
+  - `TestMultiTargetAndPyPIInference` (class, line 164) `class TestMultiTargetAndPyPIInference`
   - `test_load_missing_returns_defaults` (method, line 8) `def test_load_missing_returns_defaults(self)`
   - `test_load_valid_toml` (method, line 18) `def test_load_valid_toml(self)`
   - `test_symlink_rejected` (method, line 37) `def test_symlink_rejected(self)`
@@ -313,4 +314,11 @@
   - `test_python_with_aux_makefile_keeps_pytest` (method, line 133) `def test_python_with_aux_makefile_keeps_pytest(self)`
   - `test_test_host_wins_over_python_tests` (method, line 143) `def test_test_host_wins_over_python_tests(self)`
   - `test_makefile_symlink_rejected` (method, line 153) `def test_makefile_symlink_rejected(self)`
+  - `_mk` (method, line 168) `def _mk(self, tmp, content)`
+  - `test_detect_combines_test_targets` (method, line 172) `def test_detect_combines_test_targets(self)`
+  - `test_detect_test_host_alone_wins` (method, line 179) `def test_detect_test_host_alone_wins(self)`
+  - `test_detect_bare_tests_alone_kept` (method, line 186) `def test_detect_bare_tests_alone_kept(self)`
+  - `test_auto_pypi_enabled_for_packaging` (method, line 192) `def test_auto_pypi_enabled_for_packaging(self)`
+  - `test_auto_pypi_disabled_for_plain_c` (method, line 202) `def test_auto_pypi_disabled_for_plain_c(self)`
+  - `test_looks_like_packaging_setup_py` (method, line 210) `def test_looks_like_packaging_setup_py(self)`
 - Depends on: `deploynator/_toml.py`

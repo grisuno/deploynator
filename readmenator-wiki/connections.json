@@ -88,10 +88,10 @@
     "confidence": "INFERRED"
   },
   {
-    "community_a": 0,
+    "community_a": 1,
     "community_b": 4,
     "connection_type": "shares_context",
-    "explanation": "Inferred shared context (layer utility) with no import path between community 0 (deploynator: _platforms) and community 4 (orphans).",
+    "explanation": "Inferred shared context (layer utility) with no import path between community 1 (deploynator: _toml) and community 4 (orphans).",
     "strength": 0.5,
     "confidence": "INFERRED"
   },

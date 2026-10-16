@@ -6,8 +6,8 @@ Nouns map atomically to file sets (EXTRACTED); verbs aggregate structural edges 
 - `deploy` | files=12 | mentions=35 | `deploy.sh`, `deploynator/_deploy.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`, `deploynator/_readme.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_init.py`, `tests/test_models.py`, `tests/test_path_deploy.py`
 - `release` | files=12 | mentions=33 | `deploy.sh`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`
 - `run` | files=12 | mentions=17 | `app.py`, `deploy.sh`, `deploynator/_docs.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `tests/test_install_example.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`
+- `project` | files=11 | mentions=19 | `deploynator/_app.py`, `deploynator/_deploy.py`, `deploynator/_models.py`, `deploynator/_pypi.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_models.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`
 - `git` | files=10 | mentions=18 | `deploy.sh`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `tests/bdd_test_deploy.py`, `tests/test_models.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`
-- `project` | files=10 | mentions=16 | `deploynator/_app.py`, `deploynator/_deploy.py`, `deploynator/_models.py`, `deploynator/_pypi.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_models.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_toml.py`
 - `version` | files=7 | mentions=27 | `deploynator/_models.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_models.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_semver.py`
 - `config` | files=7 | mentions=25 | `deploynator/_config.py`, `deploynator/_models.py`, `deploynator/_readme.py`, `deploynator/_toml.py`, `tests/test_config.py`, `tests/test_models.py`, `tests/test_toml.py`
 - `bump` | files=7 | mentions=18 | `deploy.sh`, `deploynator/_models.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_models.py`, `tests/test_pipeline.py`, `tests/test_semver.py`
@@ -30,12 +30,14 @@ Nouns map atomically to file sets (EXTRACTED); verbs aggregate structural edges 
 - `format` | files=5 | mentions=9 | `deploynator/_changelog.py`, `deploynator/_models.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_models.py`
 - `empty` | files=5 | mentions=8 | `tests/test_changelog.py`, `tests/test_deploy.py`, `tests/test_install_example.py`, `tests/test_pypi.py`, `tests/test_runner.py`
 - `list` | files=5 | mentions=8 | `deploynator/_app.py`, `deploynator/_mcp_server.py`, `deploynator/_toml.py`, `tests/test_cli_mcp.py`, `tests/test_toml.py`
+- `default` | files=5 | mentions=7 | `deploynator/_app.py`, `deploynator/_toml.py`, `tests/test_config.py`, `tests/test_install_example.py`, `tests/test_pypi.py`
 - `failure` | files=5 | mentions=7 | `tests/bdd_test_deploy.py`, `tests/test_install_example.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_runner.py`
-- `default` | files=5 | mentions=6 | `deploynator/_app.py`, `deploynator/_toml.py`, `tests/test_config.py`, `tests/test_install_example.py`, `tests/test_pypi.py`
 - `dry` | files=5 | mentions=5 | `app.py`, `deploy.sh`, `deploynator/_mcp_server.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`
 - `platform` | files=4 | mentions=13 | `deploynator/_models.py`, `deploynator/_platforms.py`, `tests/bdd_test_deploy.py`, `tests/test_models.py`
+- `pypi` | files=4 | mentions=12 | `deploynator/_pypi.py`, `deploynator/_toml.py`, `tests/test_pypi.py`, `tests/test_toml.py`
 - `runner` | files=4 | mentions=12 | `deploynator/_docs.py`, `deploynator/_runner.py`, `tests/test_pypi.py`, `tests/test_runner.py`
 - `line` | files=4 | mentions=11 | `deploynator/_models.py`, `deploynator/_readme.py`, `tests/test_models.py`, `tests/test_readme_footer.py`
+- `packaging` | files=4 | mentions=11 | `deploynator/_pypi.py`, `deploynator/_toml.py`, `tests/test_pypi.py`, `tests/test_toml.py`
 - `auth` | files=4 | mentions=10 | `deploynator/_app.py`, `deploynator/_models.py`, `tests/test_config.py`, `tests/test_models.py`
 - `generate` | files=4 | mentions=10 | `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `tests/test_changelog.py`
 - `changelog` | files=4 | mentions=9 | `deploynator/_changelog.py`, `deploynator/_models.py`, `tests/test_changelog.py`, `tests/test_models.py`
@@ -50,13 +52,11 @@ Nouns map atomically to file sets (EXTRACTED); verbs aggregate structural edges 
 - `patch` | files=4 | mentions=6 | `deploy.sh`, `tests/bdd_test_deploy.py`, `tests/test_models.py`, `tests/test_semver.py`
 - `without` | files=4 | mentions=6 | `deploynator/_mcp_server.py`, `deploynator/_readme.py`, `tests/test_pypi.py`, `tests/test_readme_footer.py`
 - `all` | files=4 | mentions=4 | `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `tests/test_config.py`
-- `exists` | files=4 | mentions=4 | `deploynator/_git.py`, `deploynator/_readme.py`, `tests/test_cli_mcp.py`, `tests/test_install_example.py`
-- `header` | files=4 | mentions=4 | `deploynator/_changelog.py`, `deploynator/_models.py`, `tests/test_changelog.py`, `tests/test_models.py`
 
 ## Verb Edges
 
 - `release` --depends_on--> `deploynator` (strength 1.00)
-- `project` --depends_on--> `deploynator` (strength 0.93)
+- `project` --depends_on--> `deploynator` (strength 0.95)
 - `deploy` --depends_on--> `deploynator` (strength 0.90)
 - `deploynator` --depends_on--> `config` (strength 0.83)
 - `run` --depends_on--> `deploynator` (strength 0.74)
@@ -71,7 +71,8 @@ Nouns map atomically to file sets (EXTRACTED); verbs aggregate structural edges 
 - `failure` --depends_on--> `deploynator` (strength 0.52)
 - `generate` --depends_on--> `deploynator` (strength 0.52)
 - `name` --depends_on--> `deploynator` (strength 0.52)
-- `project` --depends_on--> `config` (strength 0.50)
+- `project` --depends_on--> `config` (strength 0.52)
+- `deploynator` --depends_on--> `project` (strength 0.50)
 - `release` --depends_on--> `config` (strength 0.50)
 - `version` --depends_on--> `deploynator` (strength 0.50)
 - `create` --depends_on--> `deploynator` (strength 0.48)
@@ -85,26 +86,25 @@ Nouns map atomically to file sets (EXTRACTED); verbs aggregate structural edges 
 - `commit` --depends_on--> `deploynator` (strength 0.40)
 - `get` --depends_on--> `deploynator` (strength 0.40)
 - `pipeline` --depends_on--> `deploynator` (strength 0.40)
+- `project` --depends_on--> `create` (strength 0.40)
 - `bump` --depends_on--> `deploynator` (strength 0.38)
 - `default` --depends_on--> `deploynator` (strength 0.38)
 - `deploynator` --depends_on--> `release` (strength 0.38)
 - `git` --depends_on--> `config` (strength 0.38)
 - `load` --depends_on--> `deploynator` (strength 0.38)
-- `project` --depends_on--> `create` (strength 0.38)
 - `release` --depends_on--> `create` (strength 0.38)
 - `deploy` --depends_on--> `create` (strength 0.36)
 - `deploy` --depends_on--> `path` (strength 0.36)
 - `project` --depends_on--> `release` (strength 0.36)
+- `release` --depends_on--> `project` (strength 0.36)
 - `run` --depends_on--> `path` (strength 0.36)
+- `deploy` --depends_on--> `project` (strength 0.33)
 - `file` --depends_on--> `config` (strength 0.33)
+- `git` --depends_on--> `project` (strength 0.33)
 - `list` --depends_on--> `deploynator` (strength 0.33)
 - `project` --depends_on--> `name` (strength 0.33)
+- `project` --depends_on--> `path` (strength 0.33)
 - `repo` --depends_on--> `deploynator` (strength 0.33)
-- `run` --depends_on--> `create` (strength 0.33)
-- `block` --depends_on--> `deploynator` (strength 0.31)
-- `deploynator` --depends_on--> `deploy` (strength 0.31)
-- `deploynator` --depends_on--> `git` (strength 0.31)
-- `deploynator` --depends_on--> `name` (strength 0.31)
 
 ## Dialectic
 
@@ -112,9 +112,9 @@ Nouns map atomically to file sets (EXTRACTED); verbs aggregate structural edges 
 - Thesis: `auth` centralizes 4 files; Antithesis: `changelog` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
 - Thesis: `auth` centralizes 4 files; Antithesis: `commit` pulls 7 files with 4 shared (Jaccard 0.57); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
 - Thesis: `auth` centralizes 4 files; Antithesis: `config` pulls 7 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
-- Thesis: `auth` centralizes 4 files; Antithesis: `header` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
 - Thesis: `auth` centralizes 4 files; Antithesis: `line` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
 - Thesis: `auth` centralizes 4 files; Antithesis: `log` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
 - Thesis: `auth` centralizes 4 files; Antithesis: `platform` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
 - Thesis: `auth` centralizes 4 files; Antithesis: `type` pulls 5 files with 3 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
 - Thesis: `auth` centralizes 4 files; Antithesis: `valid` pulls 7 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
+- Thesis: `block` centralizes 4 files; Antithesis: `current` pulls 7 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?

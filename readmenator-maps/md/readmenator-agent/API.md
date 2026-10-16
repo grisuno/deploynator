@@ -20,17 +20,17 @@ Imported by: `deploynator/__init__.py`
 - `DeploynatorApp.__init__` (method) `deploynator/_app.py:21` `def __init__(self, config, workdir)`
 - `DeploynatorApp.auth_login` (method) `deploynator/_app.py:31` `def auth_login(self, platforms)`
 - `DeploynatorApp.auth_status` (method) `deploynator/_app.py:45` `def auth_status(self)`
-- `DeploynatorApp.init_project` (method) `deploynator/_app.py:168` `def init_project(self, project_path, name)`
-- `DeploynatorApp.start_branch` (method) `deploynator/_app.py:218` `def start_branch(self, commit_type, description, project_path, project_name, remote)`
-- `DeploynatorApp.commit` (method) `deploynator/_app.py:276` `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
-- `DeploynatorApp.release` (method) `deploynator/_app.py:316` `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...`
-- `DeploynatorApp.generate_docs` (method) `deploynator/_app.py:406` `def generate_docs(self, project_path, project_name)`
-- `DeploynatorApp.status` (method) `deploynator/_app.py:412` `def status(self, project_path, project_name)`
-- `DeploynatorApp.list_projects` (method) `deploynator/_app.py:432` `def list_projects(self, search_path)`
-- `DeploynatorApp.generate_ci` (method) `deploynator/_app.py:437` `def generate_ci(self, project_name, all_projects)`
-- `DeploynatorApp.install_deps` (method) `deploynator/_app.py:453` `def install_deps(self, project_name)`
-- `DeploynatorApp.install_packages` (method) `deploynator/_app.py:464` `def install_packages(self, packages)` -- pip install/upgrade packages (default: deploynator from PyPI).
-- `DeploynatorApp.interactive_menu` (method) `deploynator/_app.py:492` `def interactive_menu(self)`
+- `DeploynatorApp.init_project` (method) `deploynator/_app.py:170` `def init_project(self, project_path, name)`
+- `DeploynatorApp.start_branch` (method) `deploynator/_app.py:247` `def start_branch(self, commit_type, description, project_path, project_name, remote)`
+- `DeploynatorApp.commit` (method) `deploynator/_app.py:305` `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
+- `DeploynatorApp.release` (method) `deploynator/_app.py:345` `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...`
+- `DeploynatorApp.generate_docs` (method) `deploynator/_app.py:435` `def generate_docs(self, project_path, project_name)`
+- `DeploynatorApp.status` (method) `deploynator/_app.py:441` `def status(self, project_path, project_name)`
+- `DeploynatorApp.list_projects` (method) `deploynator/_app.py:461` `def list_projects(self, search_path)`
+- `DeploynatorApp.generate_ci` (method) `deploynator/_app.py:466` `def generate_ci(self, project_name, all_projects)`
+- `DeploynatorApp.install_deps` (method) `deploynator/_app.py:482` `def install_deps(self, project_name)`
+- `DeploynatorApp.install_packages` (method) `deploynator/_app.py:493` `def install_packages(self, packages)` -- pip install/upgrade packages (default: deploynator from PyPI).
+- `DeploynatorApp.interactive_menu` (method) `deploynator/_app.py:521` `def interactive_menu(self)`
 
 ## deploynator/_changelog.py
 Depends on: `deploynator/_config.py`, `deploynator/_models.py`
@@ -111,7 +111,7 @@ Imported by: `deploynator/__main__.py`, `tests/test_cli_mcp.py`
 - `MCPServer.register_resource` (method) `deploynator/_mcp_server.py:97` `def register_resource(self, resource)`
 - `MCPServer.dispatch` (method) `deploynator/_mcp_server.py:144` `def dispatch(self, req)`
 - `MCPServer.run` (method) `deploynator/_mcp_server.py:162` `def run(self)`
-- `main` (function) `deploynator/_mcp_server.py:269` `def main()`
+- `MCPServer.main` (method) `deploynator/_mcp_server.py:269` `def main()`
 
 ## deploynator/_models.py
 Imported by: `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_platforms.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_deploy.py`, `tests/test_models.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_semver.py`
@@ -203,5 +203,6 @@ Imported by: `deploynator/_deploy.py`, `tests/bdd_test_deploy.py`, `tests/test_p
 Depends on: `deploynator/_config.py`
 Imported by: `deploynator/_app.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `tests/bdd_test_deploy.py`, `tests/test_init.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_toml.py`
 - `list_make_targets` (function) `deploynator/_toml.py:31` `def list_make_targets(project_path)` -- Lee el Makefile y devuelve sus targets sin ejecutar nada.
-- `detect_test_commands` (function) `deploynator/_toml.py:77` `def detect_test_commands(project_path)` -- Detecta comandos de test para proyectos C/autotools sin toml.
-- `load_toml_config` (function) `deploynator/_toml.py:164` `def load_toml_config(project_path)`
+- `looks_like_packaging_project` (function) `deploynator/_toml.py:76` `def looks_like_packaging_project(project_path)` -- Inferencia runtime (multi-proyecto): ¿es un paquete PyPI?
+- `detect_test_commands` (function) `deploynator/_toml.py:102` `def detect_test_commands(project_path)` -- Detecta comandos de test para proyectos C/autotools sin toml.
+- `TomlConfig.load_toml_config` (method) `deploynator/_toml.py:211` `def load_toml_config(project_path)`

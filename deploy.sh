@@ -33,6 +33,8 @@ ensure_pkg() {
 
 ensure_pkg deploynator deploynator "git+https://github.com/grisuno/deploynator.git"
 ensure_pkg readmenator readmenator readmenator
+ensure_pkg build build build
+ensure_pkg twine twine twine
 
 if ! python3 -c "import deploynator" 2>/dev/null; then
     echo "[!] deploynator not available and install failed (offline?)." >&2

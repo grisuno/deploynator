@@ -2,12 +2,12 @@
 
 > Cross-session context for agents. Sections 1-6 are regenerated from the source tree with zero LLM tokens: declared rules are quoted verbatim with `file:line`, measured baselines come from the scan. Section 7 is written by agents and humans and is preserved across rebuilds.
 
-Generated from 35 files at commit `939323b79d25`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
+Generated from 35 files at commit `68595c6f99f4`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
 
 ## 1. Purpose and domain
 
 - What it is: Token-free, offline, multi-platform deployer for GitHub, GitLab, and Bitbucket. (`README.md:3`)
-- Domain vocabulary (term, files): `deploynator` (23), `deploy` (12), `release` (12), `run` (12), `git` (10), `project` (10), `version` (7), `config` (7), `bump` (7), `commit` (7), `install` (7), `file` (7), `valid` (7), `current` (7), `red` (7)
+- Domain vocabulary (term, files): `deploynator` (23), `deploy` (12), `release` (12), `run` (12), `project` (11), `git` (10), `version` (7), `config` (7), `bump` (7), `commit` (7), `install` (7), `file` (7), `valid` (7), `current` (7), `red` (7)
 - Subsystem `deploynator: _platforms`: 11 files, core `deploynator/_platforms.py`
 - Subsystem `deploynator: _toml`: 8 files, core `deploynator/_toml.py`: list_make_targets: Lee el Makefile y devuelve sus targets sin ejecutar nada.
 - Subsystem `deploynator: _mcp_server`: 7 files, core `deploynator/_mcp_server.py`: MCP (Model Context Protocol) stdio server for deploynator.
@@ -67,8 +67,8 @@ Declared:
 - none declared in instruction files (add them to AGENTS.md or record them in section 7)
 
 Measured baseline:
-- py: 33 files, 432 symbols; docstrings on 6% of symbols; functions snake_case (100%); types PascalCase (100%); median file 116 lines, max 685.
-- sh: 2 files, 1 symbols; docstrings on 100% of symbols; functions snake_case (100%); median file 42 lines, max 42.
+- py: 33 files, 441 symbols; docstrings on 6% of symbols; functions snake_case (100%); types PascalCase (100%); median file 116 lines, max 714.
+- sh: 2 files, 1 symbols; docstrings on 100% of symbols; functions snake_case (100%); median file 44 lines, max 44.
 - Tests: 16 files under tests; follow the existing naming (e.g. `bdd_test_deploy.py`).
 
 ## 5. Minimum deliverables
@@ -87,7 +87,7 @@ Measured baseline:
 ## 6. Risks to respect
 
 - God nodes (changes ripple widely): `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_models.py`, `deploynator/_toml.py`, `deploynator/_app.py`
-- Hotspots (complex and central): `tests/test_pypi.py`, `tests/test_runner.py`, `deploynator/_app.py`, `deploynator/_config.py`, `deploynator/_deploy.py`
+- Hotspots (complex and central): `tests/test_pypi.py`, `tests/test_runner.py`, `deploynator/_app.py`, `tests/test_toml.py`, `deploynator/_config.py`
 - Full blast radius: `readmenator-agent/GOTCHAS.md`; findings: `readmenator-agent/SECURITY.md`.
 
 ## 7. Session log (preserved across rebuilds)

@@ -1,9 +1,9 @@
 {
   "app.py": "d4dd50a555369ceb2fbe05973908d7e07ef26c5992834697bbb44dd30bd606ff",
-  "deploy.sh": "d6cac3f5f7851823691e61e329c1b67563a65049636170cfb6988ae6b52c6cee",
-  "deploynator/__init__.py": "bf76ce8aca4f308493265bb499e90a4cb0d2cc752214a4b1d218f6ec0dfe73aa",
+  "deploy.sh": "1c5fe239006e177942ee91522a397e24bcfa25f55dc8e75f8af1da28a53e23b9",
+  "deploynator/__init__.py": "c7bf511eeb53fbddf8a39bdf0913a56e0e8d75623720129311931e09bf4ac18f",
   "deploynator/__main__.py": "d8d43a163116061d5064d11a43dc51692de036ddf1b10d284e323c4ba8090f9c",
-  "deploynator/_app.py": "e55ed5405f9bbfc750eba2dc5f3067b0a24aab0f5b80cf0dce04f5ad5b102cf2",
+  "deploynator/_app.py": "946237e53fb020702231061130a2db7ba95e2a759adbd0b8eba7aed08472042f",
   "deploynator/_changelog.py": "43bb16b6202eb08134692f24c936f7186837b912a6f4a8ab707d76d954e62148",
   "deploynator/_config.py": "390cc845eca5bbf43f9aa062874b8e79e88645c570ac5635e5e6b0205a6c9396",
   "deploynator/_deploy.py": "7e4af3f5a55f75e1f676780b6648215461947ee3bf5e24291c3461a5906b441a",
@@ -16,7 +16,7 @@
   "deploynator/_readme.py": "e8091c0dc87fff93a934aa1037119c9c8c7e836f5dede529c776dde92c48c858",
   "deploynator/_runner.py": "8977f08a6291c56569cac3147c2d159ea562a229952aa8755e012c8953c16fbd",
   "deploynator/_semver.py": "0f0ae23946ea820b6a8d21ca94e5542023059a16fe69fcce24c7484885bd2e81",
-  "deploynator/_toml.py": "f12d081696a45f1f3a114b62f6671356764408fde3936943801e7c14e7cc3678",
+  "deploynator/_toml.py": "111c35f76224fd9c4b62a0e38d03c33c22e68a9018ca0a2bf22f69c7a926dd2b",
   "install.sh": "7ba797a6e471e29a8ee90f4027dd3891a6cecfa78f03ca0e8ed84621cd5a64d3",
   "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "tests/bdd_test_deploy.py": "60fb965ebc81ecd056cc7c591cb859832fedbf36f6102f2bc2f0e8c78907be6a",
@@ -33,5 +33,5 @@
   "tests/test_readme_footer.py": "dbca2e61b5bc98960849835ff083a2b7c2247cd1f53f5148a6069f1b91a8773d",
   "tests/test_runner.py": "b9cf0d28bc1073527cd6a61465f9fb9d415d10f085150b6313ead8533c194c73",
   "tests/test_semver.py": "f6aa2d9d905880e92498d504e8cf5e550c3127878f9357dd7fdf841c0139f221",
-  "tests/test_toml.py": "7c8d59e4d883aec70c4363933401d361d747d7005036c7dd7239b2a3316fff42"
+  "tests/test_toml.py": "47b046dff04efe562a5276bdc4ec37b09426886a0d73e21d7f6255f68e7ca995"
 }

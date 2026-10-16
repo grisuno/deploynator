@@ -71,14 +71,42 @@ def _has_python_tests(project_path: str) -> bool:
                 return True
     except OSError:
         return False
+
+
+def looks_like_packaging_project(project_path: str) -> bool:
+    """Inferencia runtime (multi-proyecto): ¿es un paquete PyPI?
+
+    Espejo liviano de PyPIRunner.is_packaging_project sin importar
+    _pypi (evita ciclo). El gate final sigue en PyPIRunner al
+    desplegar; aquí solo se usa para el default de pypi_enabled.
+    """
+    pyproject = os.path.join(project_path, "pyproject.toml")
+    if os.path.isfile(pyproject) and not os.path.islink(pyproject):
+        try:
+            import tomllib
+            with open(pyproject, "rb") as f:
+                data = tomllib.load(f)
+            project = data.get("project", {})
+            if isinstance(project, dict) and project.get("name"):
+                return True
+        except Exception:
+            pass
+    for candidate in ("setup.py", "setup.cfg"):
+        candidate_path = os.path.join(project_path, candidate)
+        if os.path.isfile(candidate_path) and not os.path.islink(candidate_path):
+            return True
+    return False
     return False
 
 
 def detect_test_commands(project_path: str) -> list[str] | None:
     """Detecta comandos de test para proyectos C/autotools sin toml.
 
-    Orden: Makefile (test-host > test > check > tests, o primer
-    test* disponible) → CMake (build+ctest) → meson (setup+test).
+    Runtime multi-proyecto, sin hardcodear nombres de proyecto:
+    Makefile (test-host canónico solo; si no, TODOS los targets de
+    test en una sola invocación `make test test-* ...`, p. ej.
+    `make test test-dsp test-transport`) → CMake (build+ctest) →
+    meson (setup+test).
     Devuelve None si no hay nada detectable (caller usa pytest default).
     """
     try:
@@ -86,12 +114,26 @@ def detect_test_commands(project_path: str) -> list[str] | None:
     except ValueError:
         targets = []
     if targets:
-        for preferred in MAKE_TEST_PRIORITY:
-            if preferred in targets:
-                return [f"make {preferred}"]
-        test_like = sorted(t for t in targets if t.startswith("test-") or t.startswith("test_"))
-        if test_like:
-            return [f"make {test_like[0]}"]
+        # `test-host` es la suite canónica (drivers internos propios):
+        # va sola, manda sobre todo (incluso sobre tests/*.py).
+        if "test-host" in targets:
+            return ["make test-host"]
+        combined: list[str] = []
+        for preferred in MAKE_TEST_PRIORITY[1:]:
+            # `tests` desnudo suele ser helper mkdir (dependencia order-only
+            # `| tests`), no runner: se excluye si hay otro target de test.
+            if preferred == "tests" and any(
+                t in targets for t in ("test", "check")
+            ):
+                continue
+            if preferred in targets and preferred not in combined:
+                combined.append(preferred)
+        for extra in sorted(t for t in targets
+                            if (t.startswith("test-") or t.startswith("test_"))
+                            and t not in combined):
+            combined.append(extra)
+        if combined:
+            return [f"make {' '.join(combined)}"]
         # Makefile sin target de test: al menos verifica que compila.
         if "all" in targets:
             return ["make"]
@@ -108,7 +150,12 @@ def detect_test_commands(project_path: str) -> list[str] | None:
 
 
 def _auto_toml_config(project_path: str) -> TomlConfig | None:
-    """Config auto para proyectos sin deploynator.toml (C primero)."""
+    """Config auto para proyectos sin deploynator.toml (C primero).
+
+    Multi-proyecto: pypi_enabled se infiere al vuelo de los ficheros
+    de packaging (pyproject/setup.py/setup.cfg); el gate final sigue
+    en PyPIRunner.is_packaging_project al desplegar.
+    """
     detected = detect_test_commands(project_path)
     if detected is None:
         return None
@@ -124,7 +171,7 @@ def _auto_toml_config(project_path: str) -> TomlConfig | None:
         test_commands=detected,
         test_timeout_s=C_TEST_TIMEOUT_S,
         docs_auto=True,
-        pypi_enabled=False,
+        pypi_enabled=looks_like_packaging_project(project_path),
     )
 
 

@@ -159,3 +159,58 @@ class TestCMakefileDetection:
             os.symlink(real, os.path.join(tmp, "Makefile"))
             with pytest.raises(ValueError, match="Symlink"):
                 list_make_targets(tmp)
+
+
+class TestMultiTargetAndPyPIInference:
+    """Runtime multi-proyecto: todos los targets test en una invocación
+    y pypi_enabled inferido de los ficheros de packaging."""
+
+    def _mk(self, tmp, content):
+        with open(os.path.join(tmp, "Makefile"), "w") as f:
+            f.write(content)
+
+    def test_detect_combines_test_targets(self):
+        from deploynator._toml import detect_test_commands
+        with tempfile.TemporaryDirectory() as tmp:
+            self._mk(tmp, "test:\n\techo t\ntest-dsp:\n\techo d\n"
+                          "test-transport:\n\techo r\ntests:\n\tmkdir -p tests\n")
+            assert detect_test_commands(tmp) == ["make test test-dsp test-transport"]
+
+    def test_detect_test_host_alone_wins(self):
+        from deploynator._toml import detect_test_commands
+        with tempfile.TemporaryDirectory() as tmp:
+            self._mk(tmp, "test-host:\n\techo h\ntest:\n\techo t\n"
+                          "test-dsp:\n\techo d\n")
+            assert detect_test_commands(tmp) == ["make test-host"]
+
+    def test_detect_bare_tests_alone_kept(self):
+        from deploynator._toml import detect_test_commands
+        with tempfile.TemporaryDirectory() as tmp:
+            self._mk(tmp, "tests:\n\techo t\n")
+            assert detect_test_commands(tmp) == ["make tests"]
+
+    def test_auto_pypi_enabled_for_packaging(self):
+        from deploynator._toml import load_toml_config
+        with tempfile.TemporaryDirectory() as tmp:
+            self._mk(tmp, "test:\n\techo t\n")
+            with open(os.path.join(tmp, "pyproject.toml"), "w") as f:
+                f.write('[project]\nname = "x"\nversion = "0.1.0"\n')
+            cfg = load_toml_config(tmp)
+            assert cfg.test_commands == ["make test"]
+            assert cfg.pypi_enabled is True
+
+    def test_auto_pypi_disabled_for_plain_c(self):
+        from deploynator._toml import load_toml_config
+        with tempfile.TemporaryDirectory() as tmp:
+            self._mk(tmp, "test:\n\techo t\n")
+            cfg = load_toml_config(tmp)
+            assert cfg.test_commands == ["make test"]
+            assert cfg.pypi_enabled is False
+
+    def test_looks_like_packaging_setup_py(self):
+        from deploynator._toml import looks_like_packaging_project
+        with tempfile.TemporaryDirectory() as tmp:
+            assert looks_like_packaging_project(tmp) is False
+            with open(os.path.join(tmp, "setup.py"), "w") as f:
+                f.write("from setuptools import setup\nsetup(name='x')\n")
+            assert looks_like_packaging_project(tmp) is True

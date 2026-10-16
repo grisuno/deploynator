@@ -128,6 +128,8 @@ ensure_pkg() {
 
 ensure_pkg deploynator deploynator "git+https://github.com/grisuno/deploynator.git"
 ensure_pkg readmenator readmenator readmenator
+ensure_pkg build build build
+ensure_pkg twine twine twine
 
 if ! python3 -c "import deploynator" 2>/dev/null; then
     echo "[!] deploynator not available and install failed (offline?)." >&2
@@ -195,8 +197,35 @@ version:
 
         toml_path = os.path.join(base, "deploynator.toml")
         if not os.path.isfile(toml_path):
+            from deploynator._toml import detect_test_commands, _has_python_tests
+            inferred: list[str] | None = None
+            try:
+                detected = detect_test_commands(base)
+                if detected is not None and not (
+                    detected != ["make test-host"]
+                    and detected[0].startswith("make")
+                    and _has_python_tests(base)
+                ):
+                    inferred = detected
+            except ValueError:
+                inferred = None
+            if inferred is not None:
+                commands_repr = "[" + ", ".join(f'"{c}"' for c in inferred) + "]"
+                timeout = 900
+            else:
+                commands_repr = '["python -m pytest tests/ -q"]'
+                timeout = 300
+            content = self.DEPLOY_TOML_TEMPLATE.format(name=project_name)
+            content = content.replace(
+                'commands = ["python -m pytest tests/ -q"]',
+                f"commands = {commands_repr}",
+            ).replace(
+                "timeout_s = 300",
+                f"timeout_s = {timeout}",
+                1,
+            )
             with open(toml_path, "w") as f:
-                f.write(self.DEPLOY_TOML_TEMPLATE.format(name=project_name))
+                f.write(content)
             created.append(toml_path)
 
         script_path = os.path.join(base, "deploy.sh")

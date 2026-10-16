@@ -12,33 +12,33 @@
 | `_auth_bitbucket` | method | `deploynator/_app.py:86` | `def _auth_bitbucket()` |
 | `_auth_github` | method | `deploynator/_app.py:56` | `def _auth_github()` |
 | `_auth_gitlab` | method | `deploynator/_app.py:69` | `def _auth_gitlab()` |
-| `_interactive_auth` | method | `deploynator/_app.py:621` | `def _interactive_auth(self)` |
-| `_interactive_auth_status` | method | `deploynator/_app.py:644` | `def _interactive_auth_status(self)` |
-| `_interactive_ci` | method | `deploynator/_app.py:657` | `def _interactive_ci(self)` |
-| `_interactive_commit` | method | `deploynator/_app.py:570` | `def _interactive_commit(self)` |
-| `_interactive_docs` | method | `deploynator/_app.py:650` | `def _interactive_docs(self)` |
-| `_interactive_init` | method | `deploynator/_app.py:671` | `def _interactive_init(self)` |
-| `_interactive_release` | method | `deploynator/_app.py:528` | `def _interactive_release(self)` |
-| `_interactive_start` | method | `deploynator/_app.py:597` | `def _interactive_start(self)` |
-| `_interactive_status` | method | `deploynator/_app.py:666` | `def _interactive_status(self)` |
-| `_is_path_like` | method | `deploynator/_app.py:236` | `def _is_path_like(value)` |
-| `_looks_like_path` | method | `deploynator/_app.py:240` | `def _looks_like_path(value)` |
-| `_print_result` | method | `deploynator/_app.py:677` | `def _print_result(result)` |
-| `_resolve_project_path` | method | `deploynator/_app.py:247` | `def _resolve_project_path(self, project_name)` |
-| `_smart_prepare` | method | `deploynator/_app.py:261` | `def _smart_prepare(self, base, changelog_content, dry_run)` |
+| `_interactive_auth` | method | `deploynator/_app.py:650` | `def _interactive_auth(self)` |
+| `_interactive_auth_status` | method | `deploynator/_app.py:673` | `def _interactive_auth_status(self)` |
+| `_interactive_ci` | method | `deploynator/_app.py:686` | `def _interactive_ci(self)` |
+| `_interactive_commit` | method | `deploynator/_app.py:599` | `def _interactive_commit(self)` |
+| `_interactive_docs` | method | `deploynator/_app.py:679` | `def _interactive_docs(self)` |
+| `_interactive_init` | method | `deploynator/_app.py:700` | `def _interactive_init(self)` |
+| `_interactive_release` | method | `deploynator/_app.py:557` | `def _interactive_release(self)` |
+| `_interactive_start` | method | `deploynator/_app.py:626` | `def _interactive_start(self)` |
+| `_interactive_status` | method | `deploynator/_app.py:695` | `def _interactive_status(self)` |
+| `_is_path_like` | method | `deploynator/_app.py:265` | `def _is_path_like(value)` |
+| `_looks_like_path` | method | `deploynator/_app.py:269` | `def _looks_like_path(value)` |
+| `_print_result` | method | `deploynator/_app.py:706` | `def _print_result(result)` |
+| `_resolve_project_path` | method | `deploynator/_app.py:276` | `def _resolve_project_path(self, project_name)` |
+| `_smart_prepare` | method | `deploynator/_app.py:290` | `def _smart_prepare(self, base, changelog_content, dry_run)` |
 | `auth_login` | method | `deploynator/_app.py:31` | `def auth_login(self, platforms)` |
 | `auth_status` | method | `deploynator/_app.py:45` | `def auth_status(self)` |
-| `commit` | method | `deploynator/_app.py:276` | `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)` |
-| `generate_ci` | method | `deploynator/_app.py:437` | `def generate_ci(self, project_name, all_projects)` |
-| `generate_docs` | method | `deploynator/_app.py:406` | `def generate_docs(self, project_path, project_name)` |
-| `init_project` | method | `deploynator/_app.py:168` | `def init_project(self, project_path, name)` |
-| `install_deps` | method | `deploynator/_app.py:453` | `def install_deps(self, project_name)` |
-| `install_packages` | method | `deploynator/_app.py:464` | `def install_packages(self, packages)` |
-| `interactive_menu` | method | `deploynator/_app.py:492` | `def interactive_menu(self)` |
-| `list_projects` | method | `deploynator/_app.py:432` | `def list_projects(self, search_path)` |
-| `release` | method | `deploynator/_app.py:316` | `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...` |
-| `start_branch` | method | `deploynator/_app.py:218` | `def start_branch(self, commit_type, description, project_path, project_name, remote)` |
-| `status` | method | `deploynator/_app.py:412` | `def status(self, project_path, project_name)` |
+| `commit` | method | `deploynator/_app.py:305` | `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)` |
+| `generate_ci` | method | `deploynator/_app.py:466` | `def generate_ci(self, project_name, all_projects)` |
+| `generate_docs` | method | `deploynator/_app.py:435` | `def generate_docs(self, project_path, project_name)` |
+| `init_project` | method | `deploynator/_app.py:170` | `def init_project(self, project_path, name)` |
+| `install_deps` | method | `deploynator/_app.py:482` | `def install_deps(self, project_name)` |
+| `install_packages` | method | `deploynator/_app.py:493` | `def install_packages(self, packages)` |
+| `interactive_menu` | method | `deploynator/_app.py:521` | `def interactive_menu(self)` |
+| `list_projects` | method | `deploynator/_app.py:461` | `def list_projects(self, search_path)` |
+| `release` | method | `deploynator/_app.py:345` | `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...` |
+| `start_branch` | method | `deploynator/_app.py:247` | `def start_branch(self, commit_type, description, project_path, project_name, remote)` |
+| `status` | method | `deploynator/_app.py:441` | `def status(self, project_path, project_name)` |
 | `ChangelogGenerator` | class | `deploynator/_changelog.py:12` | `class ChangelogGenerator` |
 | `__init__` | method | `deploynator/_changelog.py:13` | `def __init__(self, config)` |
 | `_collect_entries` | method | `deploynator/_changelog.py:48` | `def _collect_entries(self, repo_path, from_ref, to_ref)` |
@@ -62,7 +62,7 @@
 | `_ci_workflow_content` | method | `deploynator/_deploy.py:450` | `def _ci_workflow_content(self, project)` |
 | `_get_remote_url` | method | `deploynator/_deploy.py:422` | `def _get_remote_url(repo_path, pc)` |
 | `_gh_release_in_repo` | method | `deploynator/_deploy.py:370` | `def _gh_release_in_repo(self, repo_path, project_name, version, notes, branch)` |
-| `_listed` | function | `deploynator/_deploy.py:196` | `def _listed(files)` |
+| `_listed` | method | `deploynator/_deploy.py:196` | `def _listed(files)` |
 | `_load_single` | method | `deploynator/_deploy.py:63` | `def _load_single(yaml_path)` |
 | `_release_workflow_content` | method | `deploynator/_deploy.py:471` | `def _release_workflow_content(self, project)` |
 | `_remove_temp_remote` | method | `deploynator/_deploy.py:412` | `def _remove_temp_remote(self, repo_path, name)` |
@@ -124,7 +124,7 @@
 | `dispatch` | method | `deploynator/_mcp_server.py:144` | `def dispatch(self, req)` |
 | `error` | method | `deploynator/_mcp_server.py:49` | `def error(self, code, message, data)` |
 | `is_notification` | method | `deploynator/_mcp_server.py:43` | `def is_notification(self)` |
-| `main` | function | `deploynator/_mcp_server.py:269` | `def main()` |
+| `main` | method | `deploynator/_mcp_server.py:269` | `def main()` |
 | `read` | method | `deploynator/_mcp_server.py:82` | `def read(self)` |
 | `register_resource` | method | `deploynator/_mcp_server.py:97` | `def register_resource(self, resource)` |
 | `register_tool` | method | `deploynator/_mcp_server.py:94` | `def register_tool(self, tool)` |
@@ -215,15 +215,16 @@
 | `is_valid_version` | method | `deploynator/_semver.py:118` | `def is_valid_version(version_str)` |
 | `max_version` | method | `deploynator/_semver.py:16` | `def max_version(self, a, b)` |
 | `write_version_file` | method | `deploynator/_semver.py:66` | `def write_version_file(self, project_path, version, version_file)` |
-| `TomlConfig` | class | `deploynator/_toml.py:132` | `class TomlConfig` |
-| `__post_init__` | method | `deploynator/_toml.py:148` | `def __post_init__(self)` |
-| `_auto_toml_config` | function | `deploynator/_toml.py:110` | `def _auto_toml_config(project_path)` |
-| `_clamp_timeout` | function | `deploynator/_toml.py:156` | `def _clamp_timeout(value)` |
+| `TomlConfig` | class | `deploynator/_toml.py:179` | `class TomlConfig` |
+| `__post_init__` | method | `deploynator/_toml.py:195` | `def __post_init__(self)` |
+| `_auto_toml_config` | function | `deploynator/_toml.py:152` | `def _auto_toml_config(project_path)` |
+| `_clamp_timeout` | method | `deploynator/_toml.py:203` | `def _clamp_timeout(value)` |
 | `_has_python_tests` | function | `deploynator/_toml.py:64` | `def _has_python_tests(project_path)` |
 | `_target_regex` | function | `deploynator/_toml.py:23` | `def _target_regex()` |
-| `detect_test_commands` | function | `deploynator/_toml.py:77` | `def detect_test_commands(project_path)` |
+| `detect_test_commands` | function | `deploynator/_toml.py:102` | `def detect_test_commands(project_path)` |
 | `list_make_targets` | function | `deploynator/_toml.py:31` | `def list_make_targets(project_path)` |
-| `load_toml_config` | function | `deploynator/_toml.py:164` | `def load_toml_config(project_path)` |
+| `load_toml_config` | method | `deploynator/_toml.py:211` | `def load_toml_config(project_path)` |
+| `looks_like_packaging_project` | function | `deploynator/_toml.py:76` | `def looks_like_packaging_project(project_path)` |
 | `TestBDDDeployScenarios` | class | `tests/bdd_test_deploy.py:28` | `class TestBDDDeployScenarios` |
 | `TestBDDPipeline` | class | `tests/bdd_test_deploy.py:84` | `class TestBDDPipeline` |
 | `project` | method | `tests/bdd_test_deploy.py:30` | `def project(self)` |
@@ -283,8 +284,8 @@
 | `R` | class | `tests/test_install_example.py:19` | `class R` |
 | `TestAppExample` | class | `tests/test_install_example.py:54` | `class TestAppExample` |
 | `TestInstallPackages` | class | `tests/test_install_example.py:5` | `class TestInstallPackages` |
-| `fake_run` | function | `tests/test_install_example.py:17` | `def fake_run(cmd)` |
-| `fake_run` | function | `tests/test_install_example.py:34` | `def fake_run(cmd)` |
+| `fake_run` | method | `tests/test_install_example.py:17` | `def fake_run(cmd)` |
+| `fake_run` | method | `tests/test_install_example.py:34` | `def fake_run(cmd)` |
 | `test_cli_install_parses_packages` | method | `tests/test_install_example.py:45` | `def test_cli_install_parses_packages(self)` |
 | `test_default_targets_deploynator` | method | `tests/test_install_example.py:11` | `def test_default_targets_deploynator(self, monkeypatch)` |
 | `test_empty_is_noop` | method | `tests/test_install_example.py:6` | `def test_empty_is_noop(self)` |
@@ -417,17 +418,25 @@
 | `test_is_valid_version` | method | `tests/test_semver.py:72` | `def test_is_valid_version(self, manager, ver_str, expected)` |
 | `test_write_version_file` | method | `tests/test_semver.py:29` | `def test_write_version_file(self, manager)` |
 | `TestCMakefileDetection` | class | `tests/test_toml.py:84` | `class TestCMakefileDetection` |
+| `TestMultiTargetAndPyPIInference` | class | `tests/test_toml.py:164` | `class TestMultiTargetAndPyPIInference` |
 | `TestTomlConfig` | class | `tests/test_toml.py:7` | `class TestTomlConfig` |
 | `_mk` | method | `tests/test_toml.py:85` | `def _mk(self, tmp, content)` |
+| `_mk` | method | `tests/test_toml.py:168` | `def _mk(self, tmp, content)` |
+| `test_auto_pypi_disabled_for_plain_c` | method | `tests/test_toml.py:202` | `def test_auto_pypi_disabled_for_plain_c(self)` |
+| `test_auto_pypi_enabled_for_packaging` | method | `tests/test_toml.py:192` | `def test_auto_pypi_enabled_for_packaging(self)` |
+| `test_detect_bare_tests_alone_kept` | method | `tests/test_toml.py:186` | `def test_detect_bare_tests_alone_kept(self)` |
 | `test_detect_cmake` | method | `tests/test_toml.py:116` | `def test_detect_cmake(self)` |
+| `test_detect_combines_test_targets` | method | `tests/test_toml.py:172` | `def test_detect_combines_test_targets(self)` |
 | `test_detect_falls_back_to_check` | method | `tests/test_toml.py:110` | `def test_detect_falls_back_to_check(self)` |
 | `test_detect_falls_back_to_test` | method | `tests/test_toml.py:104` | `def test_detect_falls_back_to_test(self)` |
 | `test_detect_prefers_test_host` | method | `tests/test_toml.py:98` | `def test_detect_prefers_test_host(self)` |
+| `test_detect_test_host_alone_wins` | method | `tests/test_toml.py:179` | `def test_detect_test_host_alone_wins(self)` |
 | `test_frozen` | method | `tests/test_toml.py:76` | `def test_frozen(self)` |
 | `test_list_targets_ignores_recipes` | method | `tests/test_toml.py:89` | `def test_list_targets_ignores_recipes(self)` |
 | `test_load_missing_makefile_uses_make` | method | `tests/test_toml.py:124` | `def test_load_missing_makefile_uses_make(self)` |
 | `test_load_missing_returns_defaults` | method | `tests/test_toml.py:8` | `def test_load_missing_returns_defaults(self)` |
 | `test_load_valid_toml` | method | `tests/test_toml.py:18` | `def test_load_valid_toml(self)` |
+| `test_looks_like_packaging_setup_py` | method | `tests/test_toml.py:210` | `def test_looks_like_packaging_setup_py(self)` |
 | `test_makefile_symlink_rejected` | method | `tests/test_toml.py:153` | `def test_makefile_symlink_rejected(self)` |
 | `test_malformed_toml_raises` | method | `tests/test_toml.py:56` | `def test_malformed_toml_raises(self)` |
 | `test_oversize_rejected` | method | `tests/test_toml.py:48` | `def test_oversize_rejected(self)` |

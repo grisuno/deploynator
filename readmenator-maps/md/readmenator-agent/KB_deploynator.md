@@ -28,31 +28,31 @@
   - `_auth_github` (method, line 56) `def _auth_github()`
   - `_auth_gitlab` (method, line 69) `def _auth_gitlab()`
   - `_auth_bitbucket` (method, line 86) `def _auth_bitbucket()`
-  - `init_project` (method, line 168) `def init_project(self, project_path, name)`
-  - `start_branch` (method, line 218) `def start_branch(self, commit_type, description, project_path, project_name, remote)`
-  - `_is_path_like` (method, line 236) `def _is_path_like(value)`
-  - `_looks_like_path` (method, line 240) `def _looks_like_path(value)`
-  - `_resolve_project_path` (method, line 247) `def _resolve_project_path(self, project_name)`
-  - `_smart_prepare` (method, line 261) `def _smart_prepare(self, base, changelog_content, dry_run)`
-  - `commit` (method, line 276) `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
-  - `release` (method, line 316) `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...`
-  - `generate_docs` (method, line 406) `def generate_docs(self, project_path, project_name)`
-  - `status` (method, line 412) `def status(self, project_path, project_name)`
-  - `list_projects` (method, line 432) `def list_projects(self, search_path)`
-  - `generate_ci` (method, line 437) `def generate_ci(self, project_name, all_projects)`
-  - `install_deps` (method, line 453) `def install_deps(self, project_name)`
-  - `install_packages` (method, line 464) `def install_packages(self, packages)`
-  - `interactive_menu` (method, line 492) `def interactive_menu(self)`
-  - `_interactive_release` (method, line 528) `def _interactive_release(self)`
-  - `_interactive_commit` (method, line 570) `def _interactive_commit(self)`
-  - `_interactive_start` (method, line 597) `def _interactive_start(self)`
-  - `_interactive_auth` (method, line 621) `def _interactive_auth(self)`
-  - `_interactive_auth_status` (method, line 644) `def _interactive_auth_status(self)`
-  - `_interactive_docs` (method, line 650) `def _interactive_docs(self)`
-  - `_interactive_ci` (method, line 657) `def _interactive_ci(self)`
-  - `_interactive_status` (method, line 666) `def _interactive_status(self)`
-  - `_interactive_init` (method, line 671) `def _interactive_init(self)`
-  - `_print_result` (method, line 677) `def _print_result(result)`
+  - `init_project` (method, line 170) `def init_project(self, project_path, name)`
+  - `start_branch` (method, line 247) `def start_branch(self, commit_type, description, project_path, project_name, remote)`
+  - `_is_path_like` (method, line 265) `def _is_path_like(value)`
+  - `_looks_like_path` (method, line 269) `def _looks_like_path(value)`
+  - `_resolve_project_path` (method, line 276) `def _resolve_project_path(self, project_name)`
+  - `_smart_prepare` (method, line 290) `def _smart_prepare(self, base, changelog_content, dry_run)`
+  - `commit` (method, line 305) `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
+  - `release` (method, line 345) `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...`
+  - `generate_docs` (method, line 435) `def generate_docs(self, project_path, project_name)`
+  - `status` (method, line 441) `def status(self, project_path, project_name)`
+  - `list_projects` (method, line 461) `def list_projects(self, search_path)`
+  - `generate_ci` (method, line 466) `def generate_ci(self, project_name, all_projects)`
+  - `install_deps` (method, line 482) `def install_deps(self, project_name)`
+  - `install_packages` (method, line 493) `def install_packages(self, packages)`
+  - `interactive_menu` (method, line 521) `def interactive_menu(self)`
+  - `_interactive_release` (method, line 557) `def _interactive_release(self)`
+  - `_interactive_commit` (method, line 599) `def _interactive_commit(self)`
+  - `_interactive_start` (method, line 626) `def _interactive_start(self)`
+  - `_interactive_auth` (method, line 650) `def _interactive_auth(self)`
+  - `_interactive_auth_status` (method, line 673) `def _interactive_auth_status(self)`
+  - `_interactive_docs` (method, line 679) `def _interactive_docs(self)`
+  - `_interactive_ci` (method, line 686) `def _interactive_ci(self)`
+  - `_interactive_status` (method, line 695) `def _interactive_status(self)`
+  - `_interactive_init` (method, line 700) `def _interactive_init(self)`
+  - `_print_result` (method, line 706) `def _print_result(result)`
 - Depends on: `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_toml.py`
 - Imported by: `deploynator/__init__.py`
 
@@ -108,7 +108,7 @@
   - `install_dependencies` (method, line 499) `def install_dependencies(self, project)`
   - `integrate_readmenator` (method, line 509) `def integrate_readmenator(self, project_path)`
   - `install_lazygit` (method, line 543) `def install_lazygit(self)`
-  - `_listed` (function, line 196) `def _listed(files)`
+  - `_listed` (method, line 196) `def _listed(files)`
 - Depends on: `deploynator/_changelog.py`, `deploynator/_config.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`
 - Imported by: `deploynator/_app.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`
 
@@ -159,7 +159,7 @@
   - `MCPTool` (class, line 56) `class MCPTool`
   - `MCPResource` (class, line 71) `class MCPResource`
   - `MCPServer` (class, line 86) `class MCPServer`
-  - `main` (function, line 269) `def main()`
+  - `main` (method, line 269) `def main()`
   - `__init__` (method, line 36) `def __init__(self, msg)`
   - `is_notification` (method, line 43) `def is_notification(self)`
   - `response` (method, line 46) `def response(self, result)`
@@ -326,11 +326,12 @@
   - `_target_regex` (function, line 23) `def _target_regex()`
   - `list_make_targets` (function, line 31) `def list_make_targets(project_path)`
   - `_has_python_tests` (function, line 64) `def _has_python_tests(project_path)`
-  - `detect_test_commands` (function, line 77) `def detect_test_commands(project_path)`
-  - `_auto_toml_config` (function, line 110) `def _auto_toml_config(project_path)`
-  - `TomlConfig` (class, line 132) `class TomlConfig`
-  - `_clamp_timeout` (function, line 156) `def _clamp_timeout(value)`
-  - `load_toml_config` (function, line 164) `def load_toml_config(project_path)`
-  - `__post_init__` (method, line 148) `def __post_init__(self)`
+  - `looks_like_packaging_project` (function, line 76) `def looks_like_packaging_project(project_path)`
+  - `detect_test_commands` (function, line 102) `def detect_test_commands(project_path)`
+  - `_auto_toml_config` (function, line 152) `def _auto_toml_config(project_path)`
+  - `TomlConfig` (class, line 179) `class TomlConfig`
+  - `_clamp_timeout` (method, line 203) `def _clamp_timeout(value)`
+  - `load_toml_config` (method, line 211) `def load_toml_config(project_path)`
+  - `__post_init__` (method, line 195) `def __post_init__(self)`
 - Depends on: `deploynator/_config.py`
 - Imported by: `deploynator/_app.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `tests/bdd_test_deploy.py`, `tests/test_init.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_toml.py`
