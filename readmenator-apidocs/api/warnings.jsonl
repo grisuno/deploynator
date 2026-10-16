@@ -175,6 +175,6 @@
 {"code":"DOC001","uid":"deploynator/_semver.py::SemverManager.calculate_next_version","file":"deploynator/_semver.py","line":114,"message":"method SemverManager.calculate_next_version is not documented"}
 {"code":"DOC001","uid":"deploynator/_semver.py::SemverManager.is_valid_version","file":"deploynator/_semver.py","line":118,"message":"staticmethod SemverManager.is_valid_version is not documented"}
 {"code":"DOC001","uid":"deploynator/_toml.py","file":"deploynator/_toml.py","line":1,"message":"module deploynator/_toml.py is not documented"}
-{"code":"DOC001","uid":"deploynator/_toml.py::TomlConfig","file":"deploynator/_toml.py","line":14,"message":"class TomlConfig is not documented"}
-{"code":"DOC001","uid":"deploynator/_toml.py::load_toml_config","file":"deploynator/_toml.py","line":46,"message":"function load_toml_config is not documented"}
+{"code":"DOC001","uid":"deploynator/_toml.py::TomlConfig","file":"deploynator/_toml.py","line":132,"message":"class TomlConfig is not documented"}
+{"code":"DOC001","uid":"deploynator/_toml.py::load_toml_config","file":"deploynator/_toml.py","line":164,"message":"function load_toml_config is not documented"}
 {"code":"DOC001","uid":"install.sh","file":"install.sh","line":1,"message":"module install.sh is not documented"}

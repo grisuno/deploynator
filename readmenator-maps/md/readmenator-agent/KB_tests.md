@@ -256,7 +256,7 @@
 - Symbols:
   - `_toml` (function, line 7) `def _toml(commands, timeout)`
   - `TestTestRunner` (class, line 23) `class TestTestRunner`
-  - `TestDocsRunner` (class, line 105) `class TestDocsRunner`
+  - `TestDocsRunner` (class, line 119) `class TestDocsRunner`
   - `test_passing_command` (method, line 24) `def test_passing_command(self)`
   - `test_failing_command` (method, line 32) `def test_failing_command(self)`
   - `test_multiple_commands_stop_on_first_failure` (method, line 41) `def test_multiple_commands_stop_on_first_failure(self)`
@@ -265,10 +265,11 @@
   - `test_no_shell_injection` (method, line 73) `def test_no_shell_injection(self)`
   - `test_timeout_fails` (method, line 87) `def test_timeout_fails(self)`
   - `test_empty_string_command_rejected` (method, line 96) `def test_empty_string_command_rejected(self)`
-  - `test_passing_docs` (method, line 106) `def test_passing_docs(self)`
-  - `test_failing_docs_returns_false` (method, line 113) `def test_failing_docs_returns_false(self)`
-  - `test_auto_false_skips` (method, line 127) `def test_auto_false_skips(self)`
-  - `test_no_shell_injection` (method, line 141) `def test_no_shell_injection(self)`
+  - `test_make_target_runs` (method, line 104) `def test_make_target_runs(self)`
+  - `test_passing_docs` (method, line 120) `def test_passing_docs(self)`
+  - `test_failing_docs_returns_false` (method, line 127) `def test_failing_docs_returns_false(self)`
+  - `test_auto_false_skips` (method, line 141) `def test_auto_false_skips(self)`
+  - `test_no_shell_injection` (method, line 155) `def test_no_shell_injection(self)`
 - Depends on: `deploynator/_config.py`, `deploynator/_docs.py`, `deploynator/_runner.py`, `deploynator/_toml.py`
 
 ## tests/test_semver.py
@@ -294,6 +295,7 @@
 - Language: py
 - Symbols:
   - `TestTomlConfig` (class, line 7) `class TestTomlConfig`
+  - `TestCMakefileDetection` (class, line 84) `class TestCMakefileDetection`
   - `test_load_missing_returns_defaults` (method, line 8) `def test_load_missing_returns_defaults(self)`
   - `test_load_valid_toml` (method, line 18) `def test_load_valid_toml(self)`
   - `test_symlink_rejected` (method, line 37) `def test_symlink_rejected(self)`
@@ -301,4 +303,14 @@
   - `test_malformed_toml_raises` (method, line 56) `def test_malformed_toml_raises(self)`
   - `test_timeout_clamped` (method, line 64) `def test_timeout_clamped(self)`
   - `test_frozen` (method, line 76) `def test_frozen(self)`
+  - `_mk` (method, line 85) `def _mk(self, tmp, content)`
+  - `test_list_targets_ignores_recipes` (method, line 89) `def test_list_targets_ignores_recipes(self)`
+  - `test_detect_prefers_test_host` (method, line 98) `def test_detect_prefers_test_host(self)`
+  - `test_detect_falls_back_to_test` (method, line 104) `def test_detect_falls_back_to_test(self)`
+  - `test_detect_falls_back_to_check` (method, line 110) `def test_detect_falls_back_to_check(self)`
+  - `test_detect_cmake` (method, line 116) `def test_detect_cmake(self)`
+  - `test_load_missing_makefile_uses_make` (method, line 124) `def test_load_missing_makefile_uses_make(self)`
+  - `test_python_with_aux_makefile_keeps_pytest` (method, line 133) `def test_python_with_aux_makefile_keeps_pytest(self)`
+  - `test_test_host_wins_over_python_tests` (method, line 143) `def test_test_host_wins_over_python_tests(self)`
+  - `test_makefile_symlink_rejected` (method, line 153) `def test_makefile_symlink_rejected(self)`
 - Depends on: `deploynator/_toml.py`

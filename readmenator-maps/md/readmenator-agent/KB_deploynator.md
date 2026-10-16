@@ -319,12 +319,18 @@
 - Imported by: `deploynator/_deploy.py`, `tests/bdd_test_deploy.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_semver.py`
 
 ## deploynator/_toml.py
+- Doc: list_make_targets: Lee el Makefile y devuelve sus targets sin ejecutar nada.
 - Layer: utility
 - Language: py
 - Symbols:
-  - `TomlConfig` (class, line 14) `class TomlConfig`
-  - `_clamp_timeout` (function, line 38) `def _clamp_timeout(value)`
-  - `load_toml_config` (function, line 46) `def load_toml_config(project_path)`
-  - `__post_init__` (method, line 30) `def __post_init__(self)`
+  - `_target_regex` (function, line 23) `def _target_regex()`
+  - `list_make_targets` (function, line 31) `def list_make_targets(project_path)`
+  - `_has_python_tests` (function, line 64) `def _has_python_tests(project_path)`
+  - `detect_test_commands` (function, line 77) `def detect_test_commands(project_path)`
+  - `_auto_toml_config` (function, line 110) `def _auto_toml_config(project_path)`
+  - `TomlConfig` (class, line 132) `class TomlConfig`
+  - `_clamp_timeout` (function, line 156) `def _clamp_timeout(value)`
+  - `load_toml_config` (function, line 164) `def load_toml_config(project_path)`
+  - `__post_init__` (method, line 148) `def __post_init__(self)`
 - Depends on: `deploynator/_config.py`
 - Imported by: `deploynator/_app.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `tests/bdd_test_deploy.py`, `tests/test_init.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_toml.py`

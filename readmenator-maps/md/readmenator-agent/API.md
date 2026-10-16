@@ -202,4 +202,6 @@ Imported by: `deploynator/_deploy.py`, `tests/bdd_test_deploy.py`, `tests/test_p
 ## deploynator/_toml.py
 Depends on: `deploynator/_config.py`
 Imported by: `deploynator/_app.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `tests/bdd_test_deploy.py`, `tests/test_init.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_toml.py`
-- `load_toml_config` (function) `deploynator/_toml.py:46` `def load_toml_config(project_path)`
+- `list_make_targets` (function) `deploynator/_toml.py:31` `def list_make_targets(project_path)` -- Lee el Makefile y devuelve sus targets sin ejecutar nada.
+- `detect_test_commands` (function) `deploynator/_toml.py:77` `def detect_test_commands(project_path)` -- Detecta comandos de test para proyectos C/autotools sin toml.
+- `load_toml_config` (function) `deploynator/_toml.py:164` `def load_toml_config(project_path)`

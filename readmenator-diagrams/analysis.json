@@ -1,7 +1,7 @@
 {
  "metadata": {
-  "generated_at": "2026-10-16T01:29:35.601214+00:00",
-  "source_tree_hash": "f7f55d4f7b5038e683d3ca378211c61d8e8b2a90c478d0d7649952e1c2ff40d5",
+  "generated_at": "2026-10-16T05:56:15.438095+00:00",
+  "source_tree_hash": "f4e23ef56097adf4709dcaa409f70709218eacaa1aeedc85d31e8a12b18c0669",
   "repo_name": "deploynator",
   "depth_level": 2,
   "depth_cap": 3,
@@ -13,7 +13,7 @@
   },
   "tree_spec": {}
  },
- "description": "Static architecture map of 35 files (py, sh) in 4 components: deploynator: _platforms, deploynator: _pypi, deploynator: _mcp_server, deploynator: _changelog. Structure is extracted statically without LLM calls; component prose may be enriched locally.",
+ "description": "Static architecture map of 35 files (py, sh) in 4 components: deploynator: _platforms, deploynator: _toml, deploynator: _mcp_server, deploynator: _changelog. Structure is extracted statically without LLM calls; component prose may be enriched locally.",
  "files": {
   "app.py": {
    "language": "py",
@@ -85,7 +85,7 @@
   },
   "deploynator/_toml.py": {
    "language": "py",
-   "symbols": 4
+   "symbols": 9
   },
   "install.sh": {
    "language": "sh",
@@ -145,7 +145,7 @@
   },
   "tests/test_runner.py": {
    "language": "py",
-   "symbols": 15
+   "symbols": 16
   },
   "tests/test_semver.py": {
    "language": "py",
@@ -153,7 +153,7 @@
   },
   "tests/test_toml.py": {
    "language": "py",
-   "symbols": 8
+   "symbols": 19
   }
  },
  "methods_index": {
@@ -1645,37 +1645,77 @@
    "type": "FUNCTION",
    "content_hash": "f727249cdf661f22"
   },
+  "deploynator/_toml.py|deploynator/_toml.py::_target_regex": {
+   "file_path": "deploynator/_toml.py",
+   "qualified_name": "deploynator/_toml.py::_target_regex",
+   "start_line": 23,
+   "end_line": 30,
+   "type": "FUNCTION",
+   "content_hash": "b3813603f4088e40"
+  },
+  "deploynator/_toml.py|deploynator/_toml.py::list_make_targets": {
+   "file_path": "deploynator/_toml.py",
+   "qualified_name": "deploynator/_toml.py::list_make_targets",
+   "start_line": 31,
+   "end_line": 63,
+   "type": "FUNCTION",
+   "content_hash": "aaa9e3622e44e557"
+  },
+  "deploynator/_toml.py|deploynator/_toml.py::_has_python_tests": {
+   "file_path": "deploynator/_toml.py",
+   "qualified_name": "deploynator/_toml.py::_has_python_tests",
+   "start_line": 64,
+   "end_line": 76,
+   "type": "FUNCTION",
+   "content_hash": "c022702ae641147d"
+  },
+  "deploynator/_toml.py|deploynator/_toml.py::detect_test_commands": {
+   "file_path": "deploynator/_toml.py",
+   "qualified_name": "deploynator/_toml.py::detect_test_commands",
+   "start_line": 77,
+   "end_line": 109,
+   "type": "FUNCTION",
+   "content_hash": "8875edc299ed7365"
+  },
+  "deploynator/_toml.py|deploynator/_toml.py::_auto_toml_config": {
+   "file_path": "deploynator/_toml.py",
+   "qualified_name": "deploynator/_toml.py::_auto_toml_config",
+   "start_line": 110,
+   "end_line": 131,
+   "type": "FUNCTION",
+   "content_hash": "b79cb75a576b64d4"
+  },
   "deploynator/_toml.py|deploynator/_toml.py::TomlConfig": {
    "file_path": "deploynator/_toml.py",
    "qualified_name": "deploynator/_toml.py::TomlConfig",
-   "start_line": 14,
-   "end_line": 29,
+   "start_line": 132,
+   "end_line": 147,
    "type": "CLASS",
-   "content_hash": "abe77b25f5f64a92"
+   "content_hash": "9727f78b3a141261"
   },
   "deploynator/_toml.py|deploynator/_toml.py::__post_init__": {
    "file_path": "deploynator/_toml.py",
    "qualified_name": "deploynator/_toml.py::__post_init__",
-   "start_line": 30,
-   "end_line": 37,
+   "start_line": 148,
+   "end_line": 155,
    "type": "FUNCTION",
-   "content_hash": "2871063996a1faa0"
+   "content_hash": "cbe3907dc1d6fe1e"
   },
   "deploynator/_toml.py|deploynator/_toml.py::_clamp_timeout": {
    "file_path": "deploynator/_toml.py",
    "qualified_name": "deploynator/_toml.py::_clamp_timeout",
-   "start_line": 38,
-   "end_line": 45,
+   "start_line": 156,
+   "end_line": 163,
    "type": "FUNCTION",
-   "content_hash": "24c52a164bfc4094"
+   "content_hash": "75b7cc7a97d25784"
   },
   "deploynator/_toml.py|deploynator/_toml.py::load_toml_config": {
    "file_path": "deploynator/_toml.py",
    "qualified_name": "deploynator/_toml.py::load_toml_config",
-   "start_line": 46,
-   "end_line": 100,
+   "start_line": 164,
+   "end_line": 240,
    "type": "FUNCTION",
-   "content_hash": "b5ac09aa80b1f6d4"
+   "content_hash": "b608f9d85dfc52bf"
   },
   "tests/bdd_test_deploy.py|tests/bdd_test_deploy.py::TestBDDDeployScenarios": {
    "file_path": "tests/bdd_test_deploy.py",
@@ -3024,10 +3064,10 @@
   "tests/test_runner.py|tests/test_runner.py::test_no_shell_injection": {
    "file_path": "tests/test_runner.py",
    "qualified_name": "tests/test_runner.py::test_no_shell_injection",
-   "start_line": 141,
-   "end_line": 144,
+   "start_line": 155,
+   "end_line": 158,
    "type": "FUNCTION",
-   "content_hash": "faa1b5074a83fbba"
+   "content_hash": "e33f0af360d9ac38"
   },
   "tests/test_runner.py|tests/test_runner.py::test_timeout_fails": {
    "file_path": "tests/test_runner.py",
@@ -3041,41 +3081,49 @@
    "file_path": "tests/test_runner.py",
    "qualified_name": "tests/test_runner.py::test_empty_string_command_rejected",
    "start_line": 96,
-   "end_line": 104,
+   "end_line": 103,
    "type": "FUNCTION",
    "content_hash": "3617465d011f0a8e"
+  },
+  "tests/test_runner.py|tests/test_runner.py::test_make_target_runs": {
+   "file_path": "tests/test_runner.py",
+   "qualified_name": "tests/test_runner.py::test_make_target_runs",
+   "start_line": 104,
+   "end_line": 118,
+   "type": "FUNCTION",
+   "content_hash": "1e58517e13487046"
   },
   "tests/test_runner.py|tests/test_runner.py::TestDocsRunner": {
    "file_path": "tests/test_runner.py",
    "qualified_name": "tests/test_runner.py::TestDocsRunner",
-   "start_line": 105,
-   "end_line": 105,
+   "start_line": 119,
+   "end_line": 119,
    "type": "CLASS",
-   "content_hash": "469c728cd4ac5205"
+   "content_hash": "84bf8c69e90b7bb1"
   },
   "tests/test_runner.py|tests/test_runner.py::test_passing_docs": {
    "file_path": "tests/test_runner.py",
    "qualified_name": "tests/test_runner.py::test_passing_docs",
-   "start_line": 106,
-   "end_line": 112,
+   "start_line": 120,
+   "end_line": 126,
    "type": "FUNCTION",
-   "content_hash": "003b5092c5e517c7"
+   "content_hash": "96c93415160d424f"
   },
   "tests/test_runner.py|tests/test_runner.py::test_failing_docs_returns_false": {
    "file_path": "tests/test_runner.py",
    "qualified_name": "tests/test_runner.py::test_failing_docs_returns_false",
-   "start_line": 113,
-   "end_line": 126,
+   "start_line": 127,
+   "end_line": 140,
    "type": "FUNCTION",
-   "content_hash": "a713f0ed7692c370"
+   "content_hash": "b486d09266552972"
   },
   "tests/test_runner.py|tests/test_runner.py::test_auto_false_skips": {
    "file_path": "tests/test_runner.py",
    "qualified_name": "tests/test_runner.py::test_auto_false_skips",
-   "start_line": 127,
-   "end_line": 140,
+   "start_line": 141,
+   "end_line": 154,
    "type": "FUNCTION",
-   "content_hash": "a544c21b6e42f363"
+   "content_hash": "de1b5e774dba8f57"
   },
   "tests/test_semver.py|tests/test_semver.py::TestSemverManager": {
    "file_path": "tests/test_semver.py",
@@ -3225,9 +3273,97 @@
    "file_path": "tests/test_toml.py",
    "qualified_name": "tests/test_toml.py::test_frozen",
    "start_line": 76,
-   "end_line": 81,
+   "end_line": 83,
    "type": "FUNCTION",
    "content_hash": "887caae9e13d392b"
+  },
+  "tests/test_toml.py|tests/test_toml.py::TestCMakefileDetection": {
+   "file_path": "tests/test_toml.py",
+   "qualified_name": "tests/test_toml.py::TestCMakefileDetection",
+   "start_line": 84,
+   "end_line": 84,
+   "type": "CLASS",
+   "content_hash": "7b79ffdb340445b6"
+  },
+  "tests/test_toml.py|tests/test_toml.py::_mk": {
+   "file_path": "tests/test_toml.py",
+   "qualified_name": "tests/test_toml.py::_mk",
+   "start_line": 85,
+   "end_line": 88,
+   "type": "FUNCTION",
+   "content_hash": "783bb1f47d80c26f"
+  },
+  "tests/test_toml.py|tests/test_toml.py::test_list_targets_ignores_recipes": {
+   "file_path": "tests/test_toml.py",
+   "qualified_name": "tests/test_toml.py::test_list_targets_ignores_recipes",
+   "start_line": 89,
+   "end_line": 97,
+   "type": "FUNCTION",
+   "content_hash": "56dbcabcf6afb72d"
+  },
+  "tests/test_toml.py|tests/test_toml.py::test_detect_prefers_test_host": {
+   "file_path": "tests/test_toml.py",
+   "qualified_name": "tests/test_toml.py::test_detect_prefers_test_host",
+   "start_line": 98,
+   "end_line": 103,
+   "type": "FUNCTION",
+   "content_hash": "91a5018ebb927d31"
+  },
+  "tests/test_toml.py|tests/test_toml.py::test_detect_falls_back_to_test": {
+   "file_path": "tests/test_toml.py",
+   "qualified_name": "tests/test_toml.py::test_detect_falls_back_to_test",
+   "start_line": 104,
+   "end_line": 109,
+   "type": "FUNCTION",
+   "content_hash": "88489bf71ee3f0dd"
+  },
+  "tests/test_toml.py|tests/test_toml.py::test_detect_falls_back_to_check": {
+   "file_path": "tests/test_toml.py",
+   "qualified_name": "tests/test_toml.py::test_detect_falls_back_to_check",
+   "start_line": 110,
+   "end_line": 115,
+   "type": "FUNCTION",
+   "content_hash": "562edffcca0c5dca"
+  },
+  "tests/test_toml.py|tests/test_toml.py::test_detect_cmake": {
+   "file_path": "tests/test_toml.py",
+   "qualified_name": "tests/test_toml.py::test_detect_cmake",
+   "start_line": 116,
+   "end_line": 123,
+   "type": "FUNCTION",
+   "content_hash": "5d3a1e385af7c3c0"
+  },
+  "tests/test_toml.py|tests/test_toml.py::test_load_missing_makefile_uses_make": {
+   "file_path": "tests/test_toml.py",
+   "qualified_name": "tests/test_toml.py::test_load_missing_makefile_uses_make",
+   "start_line": 124,
+   "end_line": 132,
+   "type": "FUNCTION",
+   "content_hash": "cd58822ba19aa955"
+  },
+  "tests/test_toml.py|tests/test_toml.py::test_python_with_aux_makefile_keeps_pytest": {
+   "file_path": "tests/test_toml.py",
+   "qualified_name": "tests/test_toml.py::test_python_with_aux_makefile_keeps_pytest",
+   "start_line": 133,
+   "end_line": 142,
+   "type": "FUNCTION",
+   "content_hash": "d2862a8ec4f1e4dc"
+  },
+  "tests/test_toml.py|tests/test_toml.py::test_test_host_wins_over_python_tests": {
+   "file_path": "tests/test_toml.py",
+   "qualified_name": "tests/test_toml.py::test_test_host_wins_over_python_tests",
+   "start_line": 143,
+   "end_line": 152,
+   "type": "FUNCTION",
+   "content_hash": "61e61146c3ef7140"
+  },
+  "tests/test_toml.py|tests/test_toml.py::test_makefile_symlink_rejected": {
+   "file_path": "tests/test_toml.py",
+   "qualified_name": "tests/test_toml.py::test_makefile_symlink_rejected",
+   "start_line": 153,
+   "end_line": 161,
+   "type": "FUNCTION",
+   "content_hash": "70f8da5304106891"
   }
  },
  "components": [
@@ -4694,56 +4830,56 @@
    "hub": false
   },
   {
-   "name": "deploynator: _pypi",
-   "description": "deploynator: _pypi groups 8 files (py) around TomlConfig, __post_init__, _clamp_timeout, load_toml_config, PyPIRunner. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.",
+   "name": "deploynator: _toml",
+   "description": "deploynator: _toml groups 8 files (py) around _target_regex, list_make_targets, _has_python_tests, detect_test_commands, _auto_toml_config. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.",
    "key_entities": [
+    {
+     "qualified_name": "deploynator/_toml.py::_target_regex",
+     "reference_file": "deploynator/_toml.py",
+     "reference_start_line": 23,
+     "reference_end_line": 30
+    },
+    {
+     "qualified_name": "deploynator/_toml.py::list_make_targets",
+     "reference_file": "deploynator/_toml.py",
+     "reference_start_line": 31,
+     "reference_end_line": 63
+    },
+    {
+     "qualified_name": "deploynator/_toml.py::_has_python_tests",
+     "reference_file": "deploynator/_toml.py",
+     "reference_start_line": 64,
+     "reference_end_line": 76
+    },
+    {
+     "qualified_name": "deploynator/_toml.py::detect_test_commands",
+     "reference_file": "deploynator/_toml.py",
+     "reference_start_line": 77,
+     "reference_end_line": 109
+    },
+    {
+     "qualified_name": "deploynator/_toml.py::_auto_toml_config",
+     "reference_file": "deploynator/_toml.py",
+     "reference_start_line": 110,
+     "reference_end_line": 131
+    },
     {
      "qualified_name": "deploynator/_toml.py::TomlConfig",
      "reference_file": "deploynator/_toml.py",
-     "reference_start_line": 14,
-     "reference_end_line": 29
+     "reference_start_line": 132,
+     "reference_end_line": 147
     },
     {
      "qualified_name": "deploynator/_toml.py::__post_init__",
      "reference_file": "deploynator/_toml.py",
-     "reference_start_line": 30,
-     "reference_end_line": 37
+     "reference_start_line": 148,
+     "reference_end_line": 155
     },
     {
      "qualified_name": "deploynator/_toml.py::_clamp_timeout",
      "reference_file": "deploynator/_toml.py",
-     "reference_start_line": 38,
-     "reference_end_line": 45
-    },
-    {
-     "qualified_name": "deploynator/_toml.py::load_toml_config",
-     "reference_file": "deploynator/_toml.py",
-     "reference_start_line": 46,
-     "reference_end_line": 100
-    },
-    {
-     "qualified_name": "deploynator/_pypi.py::PyPIRunner",
-     "reference_file": "deploynator/_pypi.py",
-     "reference_start_line": 12,
-     "reference_end_line": 12
-    },
-    {
-     "qualified_name": "deploynator/_pypi.py::__init__",
-     "reference_file": "deploynator/_pypi.py",
-     "reference_start_line": 13,
-     "reference_end_line": 15
-    },
-    {
-     "qualified_name": "deploynator/_pypi.py::is_packaging_project",
-     "reference_file": "deploynator/_pypi.py",
-     "reference_start_line": 16,
-     "reference_end_line": 32
-    },
-    {
-     "qualified_name": "deploynator/_pypi.py::has_credentials",
-     "reference_file": "deploynator/_pypi.py",
-     "reference_start_line": 33,
-     "reference_end_line": 38
+     "reference_start_line": 156,
+     "reference_end_line": 163
     }
    ],
    "source_cluster_ids": [],
@@ -4780,6 +4916,11 @@
     {
      "file_path": "deploynator/_toml.py",
      "methods": [
+      "deploynator/_toml.py::_target_regex",
+      "deploynator/_toml.py::list_make_targets",
+      "deploynator/_toml.py::_has_python_tests",
+      "deploynator/_toml.py::detect_test_commands",
+      "deploynator/_toml.py::_auto_toml_config",
       "deploynator/_toml.py::TomlConfig",
       "deploynator/_toml.py::__post_init__",
       "deploynator/_toml.py::_clamp_timeout",
@@ -4844,6 +4985,7 @@
       "tests/test_runner.py::test_no_shell_injection",
       "tests/test_runner.py::test_timeout_fails",
       "tests/test_runner.py::test_empty_string_command_rejected",
+      "tests/test_runner.py::test_make_target_runs",
       "tests/test_runner.py::TestDocsRunner",
       "tests/test_runner.py::test_passing_docs",
       "tests/test_runner.py::test_failing_docs_returns_false",
@@ -4861,7 +5003,18 @@
       "tests/test_toml.py::test_oversize_rejected",
       "tests/test_toml.py::test_malformed_toml_raises",
       "tests/test_toml.py::test_timeout_clamped",
-      "tests/test_toml.py::test_frozen"
+      "tests/test_toml.py::test_frozen",
+      "tests/test_toml.py::TestCMakefileDetection",
+      "tests/test_toml.py::_mk",
+      "tests/test_toml.py::test_list_targets_ignores_recipes",
+      "tests/test_toml.py::test_detect_prefers_test_host",
+      "tests/test_toml.py::test_detect_falls_back_to_test",
+      "tests/test_toml.py::test_detect_falls_back_to_check",
+      "tests/test_toml.py::test_detect_cmake",
+      "tests/test_toml.py::test_load_missing_makefile_uses_make",
+      "tests/test_toml.py::test_python_with_aux_makefile_keeps_pytest",
+      "tests/test_toml.py::test_test_host_wins_over_python_tests",
+      "tests/test_toml.py::test_makefile_symlink_rejected"
      ]
     }
    ],
@@ -4870,55 +5023,55 @@
    "components": [
     {
      "name": "deploynator",
-     "description": "deploynator groups 4 files (py) around TomlConfig, __post_init__, _clamp_timeout, load_toml_config, PyPIRunner. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.",
+     "description": "deploynator groups 4 files (py) around _target_regex, list_make_targets, _has_python_tests, detect_test_commands, _auto_toml_config. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.",
      "key_entities": [
+      {
+       "qualified_name": "deploynator/_toml.py::_target_regex",
+       "reference_file": "deploynator/_toml.py",
+       "reference_start_line": 23,
+       "reference_end_line": 30
+      },
+      {
+       "qualified_name": "deploynator/_toml.py::list_make_targets",
+       "reference_file": "deploynator/_toml.py",
+       "reference_start_line": 31,
+       "reference_end_line": 63
+      },
+      {
+       "qualified_name": "deploynator/_toml.py::_has_python_tests",
+       "reference_file": "deploynator/_toml.py",
+       "reference_start_line": 64,
+       "reference_end_line": 76
+      },
+      {
+       "qualified_name": "deploynator/_toml.py::detect_test_commands",
+       "reference_file": "deploynator/_toml.py",
+       "reference_start_line": 77,
+       "reference_end_line": 109
+      },
+      {
+       "qualified_name": "deploynator/_toml.py::_auto_toml_config",
+       "reference_file": "deploynator/_toml.py",
+       "reference_start_line": 110,
+       "reference_end_line": 131
+      },
       {
        "qualified_name": "deploynator/_toml.py::TomlConfig",
        "reference_file": "deploynator/_toml.py",
-       "reference_start_line": 14,
-       "reference_end_line": 29
+       "reference_start_line": 132,
+       "reference_end_line": 147
       },
       {
        "qualified_name": "deploynator/_toml.py::__post_init__",
        "reference_file": "deploynator/_toml.py",
-       "reference_start_line": 30,
-       "reference_end_line": 37
+       "reference_start_line": 148,
+       "reference_end_line": 155
       },
       {
        "qualified_name": "deploynator/_toml.py::_clamp_timeout",
        "reference_file": "deploynator/_toml.py",
-       "reference_start_line": 38,
-       "reference_end_line": 45
-      },
-      {
-       "qualified_name": "deploynator/_toml.py::load_toml_config",
-       "reference_file": "deploynator/_toml.py",
-       "reference_start_line": 46,
-       "reference_end_line": 100
-      },
-      {
-       "qualified_name": "deploynator/_pypi.py::PyPIRunner",
-       "reference_file": "deploynator/_pypi.py",
-       "reference_start_line": 12,
-       "reference_end_line": 12
-      },
-      {
-       "qualified_name": "deploynator/_pypi.py::__init__",
-       "reference_file": "deploynator/_pypi.py",
-       "reference_start_line": 13,
-       "reference_end_line": 15
-      },
-      {
-       "qualified_name": "deploynator/_pypi.py::is_packaging_project",
-       "reference_file": "deploynator/_pypi.py",
-       "reference_start_line": 16,
-       "reference_end_line": 32
-      },
-      {
-       "qualified_name": "deploynator/_pypi.py::has_credentials",
-       "reference_file": "deploynator/_pypi.py",
-       "reference_start_line": 33,
-       "reference_end_line": 38
+       "reference_start_line": 156,
+       "reference_end_line": 163
       }
      ],
      "source_cluster_ids": [],
@@ -4955,6 +5108,11 @@
       {
        "file_path": "deploynator/_toml.py",
        "methods": [
+        "deploynator/_toml.py::_target_regex",
+        "deploynator/_toml.py::list_make_targets",
+        "deploynator/_toml.py::_has_python_tests",
+        "deploynator/_toml.py::detect_test_commands",
+        "deploynator/_toml.py::_auto_toml_config",
         "deploynator/_toml.py::TomlConfig",
         "deploynator/_toml.py::__post_init__",
         "deploynator/_toml.py::_clamp_timeout",
@@ -4967,22 +5125,22 @@
      "components": [],
      "components_relations": [],
      "layer": "utility",
-     "symbol_count": 18,
+     "symbol_count": 23,
      "top_symbols": [
       {
-       "n": "TomlConfig",
-       "k": "class"
+       "n": "_target_regex",
+       "k": "function"
       },
       {
-       "n": "__post_init__",
-       "k": "method"
+       "n": "list_make_targets",
+       "k": "function"
       },
       {
-       "n": "_clamp_timeout",
+       "n": "_has_python_tests",
        "k": "function"
       }
      ],
-     "top_symbols_more": 11
+     "top_symbols_more": 16
     },
     {
      "name": "tests",
@@ -5097,6 +5255,7 @@
         "tests/test_runner.py::test_no_shell_injection",
         "tests/test_runner.py::test_timeout_fails",
         "tests/test_runner.py::test_empty_string_command_rejected",
+        "tests/test_runner.py::test_make_target_runs",
         "tests/test_runner.py::TestDocsRunner",
         "tests/test_runner.py::test_passing_docs",
         "tests/test_runner.py::test_failing_docs_returns_false",
@@ -5114,7 +5273,18 @@
         "tests/test_toml.py::test_oversize_rejected",
         "tests/test_toml.py::test_malformed_toml_raises",
         "tests/test_toml.py::test_timeout_clamped",
-        "tests/test_toml.py::test_frozen"
+        "tests/test_toml.py::test_frozen",
+        "tests/test_toml.py::TestCMakefileDetection",
+        "tests/test_toml.py::_mk",
+        "tests/test_toml.py::test_list_targets_ignores_recipes",
+        "tests/test_toml.py::test_detect_prefers_test_host",
+        "tests/test_toml.py::test_detect_falls_back_to_test",
+        "tests/test_toml.py::test_detect_falls_back_to_check",
+        "tests/test_toml.py::test_detect_cmake",
+        "tests/test_toml.py::test_load_missing_makefile_uses_make",
+        "tests/test_toml.py::test_python_with_aux_makefile_keeps_pytest",
+        "tests/test_toml.py::test_test_host_wins_over_python_tests",
+        "tests/test_toml.py::test_makefile_symlink_rejected"
        ]
       }
      ],
@@ -5123,7 +5293,7 @@
      "components": [],
      "components_relations": [],
      "layer": "testing",
-     "symbol_count": 58,
+     "symbol_count": 70,
      "top_symbols": [
       {
        "n": "TestBDDDeployScenarios",
@@ -5138,7 +5308,7 @@
        "k": "method"
       }
      ],
-     "top_symbols_more": 53
+     "top_symbols_more": 65
     }
    ],
    "components_relations": [
@@ -5146,9 +5316,9 @@
      "relation": "calls into",
      "src_name": "tests",
      "dst_name": "deploynator",
-     "evidence": "42 imports, 107 calls across the boundary",
-     "import_count": 42,
-     "call_count": 107,
+     "evidence": "52 imports, 118 calls across the boundary",
+     "import_count": 52,
+     "call_count": 118,
      "key_edges": [
       {
        "source": "tests/bdd_test_deploy.py|tests/bdd_test_deploy.py::test_tests_failure_blocks_release",
@@ -5797,22 +5967,22 @@
     }
    ],
    "layer": "testing",
-   "symbol_count": 76,
+   "symbol_count": 93,
    "top_symbols": [
     {
-     "n": "TomlConfig",
-     "k": "class"
+     "n": "_target_regex",
+     "k": "function"
     },
     {
-     "n": "__post_init__",
-     "k": "method"
+     "n": "list_make_targets",
+     "k": "function"
     },
     {
-     "n": "_clamp_timeout",
+     "n": "_has_python_tests",
      "k": "function"
     }
    ],
-   "top_symbols_more": 67,
+   "top_symbols_more": 84,
    "hub": false
   },
   {
@@ -7622,7 +7792,7 @@
   {
    "relation": "calls into",
    "src_name": "deploynator: _platforms",
-   "dst_name": "deploynator: _pypi",
+   "dst_name": "deploynator: _toml",
    "evidence": "5 imports, 22 calls across the boundary",
    "import_count": 5,
    "call_count": 22,
@@ -8513,7 +8683,7 @@
   },
   {
    "relation": "calls into",
-   "src_name": "deploynator: _pypi",
+   "src_name": "deploynator: _toml",
    "dst_name": "deploynator: _platforms",
    "evidence": "13 imports, 23 calls across the boundary",
    "import_count": 13,
@@ -8869,7 +9039,7 @@
   },
   {
    "relation": "calls into",
-   "src_name": "deploynator: _pypi",
+   "src_name": "deploynator: _toml",
    "dst_name": "deploynator: _mcp_server",
    "evidence": "0 imports, 2 calls across the boundary",
    "import_count": 0,
@@ -8928,18 +9098,29 @@
   },
   {
    "relation": "depends on",
-   "src_name": "deploynator: _pypi",
+   "src_name": "deploynator: _toml",
    "dst_name": "deploynator: _changelog",
-   "evidence": "35 imports, 32 calls across the boundary",
-   "import_count": 35,
-   "call_count": 32,
+   "evidence": "36 imports, 34 calls across the boundary",
+   "import_count": 36,
+   "call_count": 34,
    "key_edges": [
+    {
+     "source": "deploynator/_toml.py|deploynator/_toml.py::list_make_targets",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 46,
+       "column": 35
+      }
+     ],
+     "description": ""
+    },
     {
      "source": "deploynator/_toml.py|deploynator/_toml.py::load_toml_config",
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 52,
+       "line": 173,
        "column": 36
       }
      ],
@@ -9010,17 +9191,6 @@
       }
      ],
      "description": ""
-    },
-    {
-     "source": "tests/test_pypi.py|tests/test_pypi.py::test_credentials_from_env",
-     "target": "deploynator/_config.py|deploynator/_config.py::create",
-     "call_sites": [
-      {
-       "line": 51,
-       "column": 23
-      }
-     ],
-     "description": ""
     }
    ],
    "src_id": "2",
@@ -9028,11 +9198,22 @@
    "is_static": true,
    "all_edges": [
     {
+     "source": "deploynator/_toml.py|deploynator/_toml.py::list_make_targets",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 46,
+       "column": 35
+      }
+     ],
+     "description": ""
+    },
+    {
      "source": "deploynator/_toml.py|deploynator/_toml.py::load_toml_config",
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 52,
+       "line": 173,
        "column": 36
       }
      ],
@@ -9347,11 +9528,22 @@
      "description": ""
     },
     {
+     "source": "tests/test_runner.py|tests/test_runner.py::test_make_target_runs",
+     "target": "deploynator/_config.py|deploynator/_config.py::create",
+     "call_sites": [
+      {
+       "line": 110,
+       "column": 23
+      }
+     ],
+     "description": ""
+    },
+    {
      "source": "tests/test_runner.py|tests/test_runner.py::test_passing_docs",
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 109,
+       "line": 123,
        "column": 23
       }
      ],
@@ -9362,7 +9554,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 117,
+       "line": 131,
        "column": 23
       }
      ],
@@ -9373,7 +9565,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 131,
+       "line": 145,
        "column": 23
       }
      ],
@@ -10015,7 +10207,7 @@
   {
    "relation": "calls into",
    "src_name": "deploynator: _mcp_server",
-   "dst_name": "deploynator: _pypi",
+   "dst_name": "deploynator: _toml",
    "evidence": "1 imports, 1 calls across the boundary",
    "import_count": 1,
    "call_count": 1,

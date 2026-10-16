@@ -79,3 +79,83 @@ class TestTomlConfig:
             cfg = load_toml_config(tmp)
             with pytest.raises(Exception):
                 cfg.project_name = "mutated"
+
+
+class TestCMakefileDetection:
+    def _mk(self, tmp, content="all:\n\techo hi\ntest-host:\n\techo host\ntest:\n\techo t\n"):
+        with open(os.path.join(tmp, "Makefile"), "w") as f:
+            f.write(content)
+
+    def test_list_targets_ignores_recipes(self):
+        from deploynator._toml import list_make_targets
+        with tempfile.TemporaryDirectory() as tmp:
+            self._mk(tmp, "all:\n\techo hi\ntest-host:\n\techo host\n")
+            targets = list_make_targets(tmp)
+            assert "all" in targets
+            assert "test-host" in targets
+            assert "echo hi" not in targets
+
+    def test_detect_prefers_test_host(self):
+        from deploynator._toml import detect_test_commands
+        with tempfile.TemporaryDirectory() as tmp:
+            self._mk(tmp)
+            assert detect_test_commands(tmp) == ["make test-host"]
+
+    def test_detect_falls_back_to_test(self):
+        from deploynator._toml import detect_test_commands
+        with tempfile.TemporaryDirectory() as tmp:
+            self._mk(tmp, "all:\n\techo hi\ntest:\n\techo t\n")
+            assert detect_test_commands(tmp) == ["make test"]
+
+    def test_detect_falls_back_to_check(self):
+        from deploynator._toml import detect_test_commands
+        with tempfile.TemporaryDirectory() as tmp:
+            self._mk(tmp, "all:\n\techo hi\ncheck:\n\techo c\n")
+            assert detect_test_commands(tmp) == ["make check"]
+
+    def test_detect_cmake(self):
+        from deploynator._toml import detect_test_commands
+        with tempfile.TemporaryDirectory() as tmp:
+            with open(os.path.join(tmp, "CMakeLists.txt"), "w") as f:
+                f.write("cmake_minimum_required(VERSION 3.10)\n")
+            cmds = detect_test_commands(tmp)
+            assert cmds is not None and any("ctest" in c for c in cmds)
+
+    def test_load_missing_makefile_uses_make(self):
+        from deploynator._toml import load_toml_config
+        with tempfile.TemporaryDirectory() as tmp:
+            self._mk(tmp, "test-host:\n\techo host\n")
+            cfg = load_toml_config(tmp)
+            assert cfg.test_commands == ["make test-host"]
+            assert cfg.test_timeout_s == 900
+            assert cfg.pypi_enabled is False
+
+    def test_python_with_aux_makefile_keeps_pytest(self):
+        from deploynator._toml import load_toml_config
+        with tempfile.TemporaryDirectory() as tmp:
+            self._mk(tmp, "test:\n\techo t\n")
+            os.makedirs(os.path.join(tmp, "tests"))
+            with open(os.path.join(tmp, "tests", "test_x.py"), "w") as f:
+                f.write("def test_x(): pass\n")
+            cfg = load_toml_config(tmp)
+            assert cfg.test_commands == ["python -m pytest tests/ -q"]
+
+    def test_test_host_wins_over_python_tests(self):
+        from deploynator._toml import load_toml_config
+        with tempfile.TemporaryDirectory() as tmp:
+            self._mk(tmp, "test-host:\n\techo host\ntest:\n\techo t\n")
+            os.makedirs(os.path.join(tmp, "tests"))
+            with open(os.path.join(tmp, "tests", "test_x.py"), "w") as f:
+                f.write("def test_x(): pass\n")
+            cfg = load_toml_config(tmp)
+            assert cfg.test_commands == ["make test-host"]
+
+    def test_makefile_symlink_rejected(self):
+        from deploynator._toml import list_make_targets
+        with tempfile.TemporaryDirectory() as tmp:
+            real = os.path.join(tmp, "RealMakefile")
+            with open(real, "w") as f:
+                f.write("test:\n\techo t\n")
+            os.symlink(real, os.path.join(tmp, "Makefile"))
+            with pytest.raises(ValueError, match="Symlink"):
+                list_make_targets(tmp)

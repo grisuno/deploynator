@@ -215,10 +215,15 @@
 | `is_valid_version` | method | `deploynator/_semver.py:118` | `def is_valid_version(version_str)` |
 | `max_version` | method | `deploynator/_semver.py:16` | `def max_version(self, a, b)` |
 | `write_version_file` | method | `deploynator/_semver.py:66` | `def write_version_file(self, project_path, version, version_file)` |
-| `TomlConfig` | class | `deploynator/_toml.py:14` | `class TomlConfig` |
-| `__post_init__` | method | `deploynator/_toml.py:30` | `def __post_init__(self)` |
-| `_clamp_timeout` | function | `deploynator/_toml.py:38` | `def _clamp_timeout(value)` |
-| `load_toml_config` | function | `deploynator/_toml.py:46` | `def load_toml_config(project_path)` |
+| `TomlConfig` | class | `deploynator/_toml.py:132` | `class TomlConfig` |
+| `__post_init__` | method | `deploynator/_toml.py:148` | `def __post_init__(self)` |
+| `_auto_toml_config` | function | `deploynator/_toml.py:110` | `def _auto_toml_config(project_path)` |
+| `_clamp_timeout` | function | `deploynator/_toml.py:156` | `def _clamp_timeout(value)` |
+| `_has_python_tests` | function | `deploynator/_toml.py:64` | `def _has_python_tests(project_path)` |
+| `_target_regex` | function | `deploynator/_toml.py:23` | `def _target_regex()` |
+| `detect_test_commands` | function | `deploynator/_toml.py:77` | `def detect_test_commands(project_path)` |
+| `list_make_targets` | function | `deploynator/_toml.py:31` | `def list_make_targets(project_path)` |
+| `load_toml_config` | function | `deploynator/_toml.py:164` | `def load_toml_config(project_path)` |
 | `TestBDDDeployScenarios` | class | `tests/bdd_test_deploy.py:28` | `class TestBDDDeployScenarios` |
 | `TestBDDPipeline` | class | `tests/bdd_test_deploy.py:84` | `class TestBDDPipeline` |
 | `project` | method | `tests/bdd_test_deploy.py:30` | `def project(self)` |
@@ -384,20 +389,21 @@
 | `test_ensure_footer_wraps_plain_line` | function | `tests/test_readme_footer.py:48` | `def test_ensure_footer_wraps_plain_line(tmp_path)` |
 | `test_footer_block_is_anchored` | function | `tests/test_readme_footer.py:22` | `def test_footer_block_is_anchored()` |
 | `test_footer_line_is_english_without_emoji` | function | `tests/test_readme_footer.py:15` | `def test_footer_line_is_english_without_emoji()` |
-| `TestDocsRunner` | class | `tests/test_runner.py:105` | `class TestDocsRunner` |
+| `TestDocsRunner` | class | `tests/test_runner.py:119` | `class TestDocsRunner` |
 | `TestTestRunner` | class | `tests/test_runner.py:23` | `class TestTestRunner` |
 | `_toml` | function | `tests/test_runner.py:7` | `def _toml(commands, timeout)` |
-| `test_auto_false_skips` | method | `tests/test_runner.py:127` | `def test_auto_false_skips(self)` |
+| `test_auto_false_skips` | method | `tests/test_runner.py:141` | `def test_auto_false_skips(self)` |
 | `test_empty_commands_allow_no_tests_passes` | method | `tests/test_runner.py:58` | `def test_empty_commands_allow_no_tests_passes(self)` |
 | `test_empty_commands_no_tests_dir_fails` | method | `tests/test_runner.py:49` | `def test_empty_commands_no_tests_dir_fails(self)` |
 | `test_empty_string_command_rejected` | method | `tests/test_runner.py:96` | `def test_empty_string_command_rejected(self)` |
 | `test_failing_command` | method | `tests/test_runner.py:32` | `def test_failing_command(self)` |
-| `test_failing_docs_returns_false` | method | `tests/test_runner.py:113` | `def test_failing_docs_returns_false(self)` |
+| `test_failing_docs_returns_false` | method | `tests/test_runner.py:127` | `def test_failing_docs_returns_false(self)` |
+| `test_make_target_runs` | method | `tests/test_runner.py:104` | `def test_make_target_runs(self)` |
 | `test_multiple_commands_stop_on_first_failure` | method | `tests/test_runner.py:41` | `def test_multiple_commands_stop_on_first_failure(self)` |
 | `test_no_shell_injection` | method | `tests/test_runner.py:73` | `def test_no_shell_injection(self)` |
-| `test_no_shell_injection` | method | `tests/test_runner.py:141` | `def test_no_shell_injection(self)` |
+| `test_no_shell_injection` | method | `tests/test_runner.py:155` | `def test_no_shell_injection(self)` |
 | `test_passing_command` | method | `tests/test_runner.py:24` | `def test_passing_command(self)` |
-| `test_passing_docs` | method | `tests/test_runner.py:106` | `def test_passing_docs(self)` |
+| `test_passing_docs` | method | `tests/test_runner.py:120` | `def test_passing_docs(self)` |
 | `test_timeout_fails` | method | `tests/test_runner.py:87` | `def test_timeout_fails(self)` |
 | `TestSemverManager` | class | `tests/test_semver.py:10` | `class TestSemverManager` |
 | `manager` | method | `tests/test_semver.py:12` | `def manager(self)` |
@@ -410,11 +416,22 @@
 | `test_get_current_version_no_file` | method | `tests/test_semver.py:24` | `def test_get_current_version_no_file(self, manager)` |
 | `test_is_valid_version` | method | `tests/test_semver.py:72` | `def test_is_valid_version(self, manager, ver_str, expected)` |
 | `test_write_version_file` | method | `tests/test_semver.py:29` | `def test_write_version_file(self, manager)` |
+| `TestCMakefileDetection` | class | `tests/test_toml.py:84` | `class TestCMakefileDetection` |
 | `TestTomlConfig` | class | `tests/test_toml.py:7` | `class TestTomlConfig` |
+| `_mk` | method | `tests/test_toml.py:85` | `def _mk(self, tmp, content)` |
+| `test_detect_cmake` | method | `tests/test_toml.py:116` | `def test_detect_cmake(self)` |
+| `test_detect_falls_back_to_check` | method | `tests/test_toml.py:110` | `def test_detect_falls_back_to_check(self)` |
+| `test_detect_falls_back_to_test` | method | `tests/test_toml.py:104` | `def test_detect_falls_back_to_test(self)` |
+| `test_detect_prefers_test_host` | method | `tests/test_toml.py:98` | `def test_detect_prefers_test_host(self)` |
 | `test_frozen` | method | `tests/test_toml.py:76` | `def test_frozen(self)` |
+| `test_list_targets_ignores_recipes` | method | `tests/test_toml.py:89` | `def test_list_targets_ignores_recipes(self)` |
+| `test_load_missing_makefile_uses_make` | method | `tests/test_toml.py:124` | `def test_load_missing_makefile_uses_make(self)` |
 | `test_load_missing_returns_defaults` | method | `tests/test_toml.py:8` | `def test_load_missing_returns_defaults(self)` |
 | `test_load_valid_toml` | method | `tests/test_toml.py:18` | `def test_load_valid_toml(self)` |
+| `test_makefile_symlink_rejected` | method | `tests/test_toml.py:153` | `def test_makefile_symlink_rejected(self)` |
 | `test_malformed_toml_raises` | method | `tests/test_toml.py:56` | `def test_malformed_toml_raises(self)` |
 | `test_oversize_rejected` | method | `tests/test_toml.py:48` | `def test_oversize_rejected(self)` |
+| `test_python_with_aux_makefile_keeps_pytest` | method | `tests/test_toml.py:133` | `def test_python_with_aux_makefile_keeps_pytest(self)` |
 | `test_symlink_rejected` | method | `tests/test_toml.py:37` | `def test_symlink_rejected(self)` |
+| `test_test_host_wins_over_python_tests` | method | `tests/test_toml.py:143` | `def test_test_host_wins_over_python_tests(self)` |
 | `test_timeout_clamped` | method | `tests/test_toml.py:64` | `def test_timeout_clamped(self)` |

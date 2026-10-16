@@ -7,7 +7,7 @@ These files have the most connections. Changes here have high blast radius.
 - `deploynator/_config.py` (score: 54.60, imported by 27 files)
 - `deploynator/_deploy.py` (score: 36.00, imported by 6 files)
 - `deploynator/_models.py` (score: 30.70, imported by 14 files)
-- `deploynator/_toml.py` (score: 22.40, imported by 10 files)
+- `deploynator/_toml.py` (score: 22.90, imported by 10 files)
 - `deploynator/_app.py` (score: 17.20, imported by 1 files)
 - `deploynator/__init__.py` (score: 16.00, imported by 7 files)
 - `deploynator/_semver.py` (score: 14.90, imported by 5 files)
@@ -36,10 +36,10 @@ Editing these files can break the listed number of dependents. Run their tests a
 - `deploynator/_models.py` -- complexity: 0.6, centrality: 0.3, combined: 0.4
 - `deploynator/_platforms.py` -- complexity: 0.8, centrality: 0.1, combined: 0.4
 - `deploynator/_mcp_server.py` -- complexity: 0.7, centrality: 0.2, combined: 0.4
+- `deploynator/_toml.py` -- complexity: 0.2, centrality: 0.4, combined: 0.3
 - `deploynator/_git.py` -- complexity: 0.5, centrality: 0.1, combined: 0.3
 - `deploynator/_pypi.py` -- complexity: 0.2, centrality: 0.3, combined: 0.3
 - `deploynator/_semver.py` -- complexity: 0.2, centrality: 0.2, combined: 0.2
-- `deploynator/_toml.py` -- complexity: 0.1, centrality: 0.3, combined: 0.2
 
 ## Dataflow Issues (INFERRED, review each lead)
 

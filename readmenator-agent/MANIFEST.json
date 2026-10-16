@@ -1,19 +1,19 @@
 {
   "tool": "readmenator",
   "schema_version": 2,
-  "generated_at": "2026-10-16T01:28:55Z",
+  "generated_at": "2026-10-16T05:55:36Z",
   "project_root": ".",
   "project_name": "deploynator",
-  "git_commit": "a7a1db9c002be96eb140e87bc7d669440b160678",
+  "git_commit": "787590dc6f0ad583a253932616b5e3ebbcfe4c1c",
   "git_branch": "main",
-  "source_fingerprint": "f7f55d4f7b5038e683d3ca378211c61d8e8b2a90c478d0d7649952e1c2ff40d5",
+  "source_fingerprint": "f4e23ef56097adf4709dcaa409f70709218eacaa1aeedc85d31e8a12b18c0669",
   "freshness_check": "readmenator . fresh  # exit 0 = docs match sources, exit 1 = run: readmenator . --rebuild",
   "files": 35,
-  "symbols": 416,
-  "imports": 356,
-  "calls": 1998,
+  "symbols": 433,
+  "imports": 369,
+  "calls": 2096,
   "inherits": 6,
-  "resolved_imports": 203,
+  "resolved_imports": 214,
   "security_findings": 0,
   "languages": {
     "py": 33,
@@ -46,18 +46,18 @@
   "documents": [
     {
       "path": "API.md",
-      "lines": 205,
-      "approx_tokens": 4745
+      "lines": 207,
+      "approx_tokens": 4826
     },
     {
       "path": "ARCHITECTURE.md",
       "lines": 126,
-      "approx_tokens": 1715
+      "approx_tokens": 1718
     },
     {
       "path": "CONCEPTS.md",
       "lines": 120,
-      "approx_tokens": 3364
+      "approx_tokens": 3388
     },
     {
       "path": "GOTCHAS.md",
@@ -67,12 +67,12 @@
     {
       "path": "INDEX.md",
       "lines": 39,
-      "approx_tokens": 733
+      "approx_tokens": 752
     },
     {
       "path": "KB_deploynator.md",
-      "lines": 330,
-      "approx_tokens": 5262
+      "lines": 336,
+      "approx_tokens": 5383
     },
     {
       "path": "KB_root.md",
@@ -81,8 +81,8 @@
     },
     {
       "path": "KB_tests.md",
-      "lines": 304,
-      "approx_tokens": 5154
+      "lines": 316,
+      "approx_tokens": 5438
     },
     {
       "path": "MEMORY.md",
@@ -96,8 +96,8 @@
     },
     {
       "path": "SYMBOLS.md",
-      "lines": 420,
-      "approx_tokens": 10704
+      "lines": 437,
+      "approx_tokens": 11172
     },
     {
       "path": "recipes/add-function.md",

@@ -108,7 +108,7 @@
 - `deploynator/_readme.py` -> __future__, os, pathlib
 - `deploynator/_runner.py` -> __future__, os, shlex, subprocess
 - `deploynator/_semver.py` -> __future__, json, os, re, subprocess, typing
-- `deploynator/_toml.py` -> __future__, dataclasses, os, tomllib
+- `deploynator/_toml.py` -> __future__, dataclasses, os, re, tomllib
 - `tests/bdd_test_deploy.py` -> json, os, pytest, subprocess, tempfile
 - `tests/test_changelog.py` -> pytest
 - `tests/test_cli_mcp.py` -> pytest
@@ -121,6 +121,6 @@
 - `tests/test_pipeline.py` -> json, os, pytest, subprocess, tempfile
 - `tests/test_pypi.py` -> configparser, inspect, os, pytest, subprocess, sys, tempfile
 - `tests/test_readme_footer.py` -> __future__
-- `tests/test_runner.py` -> inspect, os, pytest, tempfile
+- `tests/test_runner.py` -> inspect, os, pytest, shutil, tempfile
 - `tests/test_semver.py` -> json, os, pytest, tempfile
 - `tests/test_toml.py` -> os, pytest, tempfile

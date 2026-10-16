@@ -19,7 +19,7 @@
 | `deploynator/_readme.py` | footer_block: Return the anchored deploy footer block. | deploynator | 4 | 2 |
 | `deploynator/_runner.py` | - | deploynator | 3 | 2 |
 | `deploynator/_semver.py` | - | deploynator | 9 | 5 |
-| `deploynator/_toml.py` | - | deploynator | 4 | 10 |
+| `deploynator/_toml.py` | list_make_targets: Lee el Makefile y devuelve sus targets sin ejecutar nada. | deploynator | 9 | 10 |
 | `install.sh` | - | root | 0 | 0 |
 | `tests/__init__.py` | - | tests | 0 | 0 |
 | `tests/bdd_test_deploy.py` | BDD-style tests for deploynator using behavior-driven patterns. | tests | 10 | 0 |
@@ -34,6 +34,6 @@
 | `tests/test_pipeline.py` | RED: pipeline deploy — tests gate + docs non-blocking + bump override + max(file,tag). | tests | 12 | 0 |
 | `tests/test_pypi.py` | RED: PyPI runner — detecta packaging, build limpio, upload twine. | tests | 25 | 0 |
 | `tests/test_readme_footer.py` | Tests for the deploy README footer injector. | tests | 6 | 0 |
-| `tests/test_runner.py` | RED: TestRunner + DocsRunner contracts. | tests | 15 | 0 |
+| `tests/test_runner.py` | RED: TestRunner + DocsRunner contracts. | tests | 16 | 0 |
 | `tests/test_semver.py` | - | tests | 11 | 0 |
-| `tests/test_toml.py` | RED: TomlConfig contract — deploynator.toml per-project. | tests | 8 | 0 |
+| `tests/test_toml.py` | RED: TomlConfig contract — deploynator.toml per-project. | tests | 19 | 0 |

@@ -35,6 +35,7 @@
 
 ## C
 
+- [`C_TEST_TIMEOUT_S`](modules/deploynator._toml.py.md#c_test_timeout_s) constant in `deploynator._toml`
 - [`calculate_next_version`](modules/deploynator._semver.py.md#semvermanager-calculate_next_version) method of `SemverManager` in `deploynator._semver`
 - [`call`](modules/deploynator._mcp_server.py.md#mcptool-call) method of `MCPTool` in `deploynator._mcp_server`
 - [`changelog_file`](modules/deploynator._config.py.md#config-changelog_file) attribute of `Config` in `deploynator._config`
@@ -94,6 +95,7 @@
 - [`DeployOrchestrator`](modules/deploynator._deploy.py.md#deployorchestrator) class in `deploynator._deploy`
 - [`DeployResult`](modules/deploynator._models.py.md#deployresult) class in `deploynator._models`
 - [`description`](modules/deploynator._models.py.md#projectconfig-description) attribute of `ProjectConfig` in `deploynator._models`
+- [`detect_test_commands`](modules/deploynator._toml.py.md#detect_test_commands) function in `deploynator._toml`
 - [`determine_bump`](modules/deploynator._semver.py.md#semvermanager-determine_bump) method of `SemverManager` in `deploynator._semver`
 - [`discover`](modules/deploynator._deploy.py.md#projectdiscovery-discover) method of `ProjectDiscovery` in `deploynator._deploy`
 - [`dispatch`](modules/deploynator._mcp_server.py.md#mcpserver-dispatch) method of `MCPServer` in `deploynator._mcp_server`
@@ -233,6 +235,7 @@
 - [`label`](modules/deploynator._models.py.md#platform-label) method of `Platform` in `deploynator._models`
 - [`lazygit_cli`](modules/deploynator._config.py.md#config-lazygit_cli) attribute of `Config` in `deploynator._config`
 - [`lazygit_config_key`](modules/deploynator._config.py.md#config-lazygit_config_key) attribute of `Config` in `deploynator._config`
+- [`list_make_targets`](modules/deploynator._toml.py.md#list_make_targets) function in `deploynator._toml`
 - [`list_projects`](modules/deploynator._app.py.md#deploynatorapp-list_projects) method of `DeploynatorApp` in `deploynator._app`
 - [`load_toml_config`](modules/deploynator._toml.py.md#load_toml_config) function in `deploynator._toml`
 
@@ -244,6 +247,8 @@
 - [`main`](modules/deploynator.__main__.py.md#main) function in `deploynator.__main__`
 - [`main`](modules/deploynator._mcp_server.py.md#main) function in `deploynator._mcp_server`
 - [`major`](modules/deploynator._models.py.md#versioninfo-major) attribute of `VersionInfo` in `deploynator._models`
+- [`MAKE_TEST_PRIORITY`](modules/deploynator._toml.py.md#make_test_priority) constant in `deploynator._toml`
+- [`MAKEFILE_NAMES`](modules/deploynator._toml.py.md#makefile_names) constant in `deploynator._toml`
 - [`max_dir_depth`](modules/deploynator._config.py.md#config-max_dir_depth) attribute of `Config` in `deploynator._config`
 - [`max_file_size_bytes`](modules/deploynator._config.py.md#config-max_file_size_bytes) attribute of `Config` in `deploynator._config`
 - [`max_release_chars`](modules/deploynator._config.py.md#config-max_release_chars) attribute of `Config` in `deploynator._config`

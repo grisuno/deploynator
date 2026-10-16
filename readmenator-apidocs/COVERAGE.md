@@ -1,6 +1,6 @@
 # Documentation Coverage
 
-Overall: **5.3%** (10 of 190 public modules, types, and callables). Data members are excluded from the ratio.
+Overall: **6.2%** (12 of 192 public modules, types, and callables). Data members are excluded from the ratio.
 
 [Back to index](index.md)
 
@@ -12,7 +12,7 @@ Overall: **5.3%** (10 of 190 public modules, types, and callables). Data members
 | classmethod | 0 | 12 | 0.0% |
 | constructor | 0 | 14 | 0.0% |
 | enum | 0 | 2 | 0.0% |
-| function | 4 | 10 | 40.0% |
+| function | 6 | 12 | 50.0% |
 | method | 3 | 99 | 3.0% |
 | module | 3 | 19 | 15.8% |
 | property | 0 | 4 | 0.0% |
@@ -33,11 +33,11 @@ Overall: **5.3%** (10 of 190 public modules, types, and callables). Data members
 | [`deploynator._platforms`](modules/deploynator._platforms.py.md) | 0 | 34 | 0.0% |
 | [`deploynator._runner`](modules/deploynator._runner.py.md) | 0 | 4 | 0.0% |
 | [`deploynator._semver`](modules/deploynator._semver.py.md) | 0 | 9 | 0.0% |
-| [`deploynator._toml`](modules/deploynator._toml.py.md) | 0 | 3 | 0.0% |
 | [`install.sh`](modules/install.sh.md) | 0 | 1 | 0.0% |
 | [`deploynator._mcp_server`](modules/deploynator._mcp_server.py.md) | 1 | 21 | 4.8% |
 | [`deploynator._app`](modules/deploynator._app.py.md) | 1 | 16 | 6.2% |
 | [`deploynator._pypi`](modules/deploynator._pypi.py.md) | 2 | 9 | 22.2% |
+| [`deploynator._toml`](modules/deploynator._toml.py.md) | 2 | 5 | 40.0% |
 | [`app`](modules/app.py.md) | 1 | 2 | 50.0% |
 | [`deploynator._readme`](modules/deploynator._readme.py.md) | 3 | 4 | 75.0% |
 | [`deploy.sh`](modules/deploy.sh.md) | 2 | 2 | 100.0% |
@@ -225,6 +225,6 @@ DOC001: 180
 - DOC001 `deploynator/_semver.py:114` method SemverManager.calculate_next_version is not documented
 - DOC001 `deploynator/_semver.py:118` staticmethod SemverManager.is_valid_version is not documented
 - DOC001 `deploynator/_toml.py:1` module deploynator/_toml.py is not documented
-- DOC001 `deploynator/_toml.py:14` class TomlConfig is not documented
-- DOC001 `deploynator/_toml.py:46` function load_toml_config is not documented
+- DOC001 `deploynator/_toml.py:132` class TomlConfig is not documented
+- DOC001 `deploynator/_toml.py:164` function load_toml_config is not documented
 - DOC001 `install.sh:1` module install.sh is not documented

@@ -53,7 +53,7 @@ This community groups 6 file(s) rooted at `deploynator` with dominant language p
 ## Internal vs External Edges
 
 - Internal resolved imports (EXTRACTED): 7
-- Cross-boundary resolved imports (EXTRACTED): 65
+- Cross-boundary resolved imports (EXTRACTED): 66
 
 ## Connections
 

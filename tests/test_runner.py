@@ -101,6 +101,20 @@ class TestTestRunner:
             ok, out = r.run(tmp, _toml([""]))
             assert ok is False
 
+    def test_make_target_runs(self):
+        from deploynator._runner import TestRunner
+        from deploynator._config import Config
+        import shutil
+        if shutil.which("make") is None:
+            pytest.skip("make not available")
+        r = TestRunner(Config.create())
+        with tempfile.TemporaryDirectory() as tmp:
+            with open(os.path.join(tmp, "Makefile"), "w") as f:
+                f.write("test-host:\n\techo host-ok\n")
+            ok, out = r.run(tmp, _toml(["make test-host"]))
+            assert ok is True
+            assert "host-ok" in out
+
 
 class TestDocsRunner:
     def test_passing_docs(self):

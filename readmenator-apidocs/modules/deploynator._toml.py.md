@@ -1,12 +1,12 @@
 # `deploynator._toml`
 
-> Source: [deploynator/_toml.py:1](../../deploynator/_toml.py#L1) | language `py` | coverage 0.0% | [API index](../index.md)
+> Source: [deploynator/_toml.py:1](../../deploynator/_toml.py#L1) | language `py` | coverage 40.0% | [API index](../index.md)
 
 ## Contents
 
 - **Classes:** [`TomlConfig`](#tomlconfig)
-- **Functions:** [`load_toml_config`](#load_toml_config)
-- **Constants:** [`TOML_FILENAME`](#toml_filename), [`DEFAULT_TEST_COMMANDS`](#default_test_commands), [`DEFAULT_DOCS_COMMAND`](#default_docs_command)
+- **Functions:** [`list_make_targets`](#list_make_targets), [`detect_test_commands`](#detect_test_commands), [`load_toml_config`](#load_toml_config)
+- **Constants:** [`TOML_FILENAME`](#toml_filename), [`DEFAULT_TEST_COMMANDS`](#default_test_commands), [`DEFAULT_DOCS_COMMAND`](#default_docs_command), [`MAKEFILE_NAMES`](#makefile_names), [`MAKE_TEST_PRIORITY`](#make_test_priority), [`C_TEST_TIMEOUT_S`](#c_test_timeout_s)
 
 ## Call Graph
 
@@ -14,10 +14,15 @@ Solid arrows stay in this module, dashed arrows leave it.
 
 ```mermaid
 flowchart LR
+    n_deploynator__toml_py__detect_test_commands(["detect_test_commands"])
+    n_deploynator__toml_py__list_make_targets(["list_make_targets"])
     n_deploynator__toml_py__load_toml_config(["load_toml_config"])
     n_deploynator__toml_py__TomlConfig(["TomlConfig"])
     n_deploynator__config_py__Config_create["_config.Config.create"]
+    n_deploynator__toml_py__detect_test_commands --> n_deploynator__toml_py__list_make_targets
     n_deploynator__toml_py__load_toml_config --> n_deploynator__toml_py__TomlConfig
+    n_deploynator__toml_py__load_toml_config --> n_deploynator__toml_py__detect_test_commands
+    n_deploynator__toml_py__list_make_targets -.-> n_deploynator__config_py__Config_create
     n_deploynator__toml_py__load_toml_config -.-> n_deploynator__config_py__Config_create
 ```
 
@@ -27,7 +32,7 @@ flowchart LR
 
 ### `TomlConfig`
 
-`class` `dataclass` | [deploynator/_toml.py:14](../../deploynator/_toml.py#L14)
+`class` `dataclass` | [deploynator/_toml.py:132](../../deploynator/_toml.py#L132)
 
 Decorators: `@dataclass(frozen=True)`
 
@@ -58,11 +63,73 @@ class TomlConfig
 
 ## Functions
 
+<a id="list_make_targets"></a>
+
+### `list_make_targets`
+
+`function` | [deploynator/_toml.py:31](../../deploynator/_toml.py#L31)
+
+```python
+def list_make_targets(project_path: str) -> list[str]
+```
+
+Lee el Makefile y devuelve sus targets sin ejecutar nada.
+
+Seguro: rechaza symlinks, limita tamaño (Config.max_file_size_bytes).
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `project_path` | `str` |  |  |
+
+**Returns:** `list[str]`
+
+**Raises**
+
+- `ValueError`: (raised in the body, not documented)
+
+*Calls:* [`Config.create`](deploynator._config.py.md#config-create)
+
+*Called by:* [`detect_test_commands`](#detect_test_commands)
+
+---
+
+<a id="detect_test_commands"></a>
+
+### `detect_test_commands`
+
+`function` | [deploynator/_toml.py:77](../../deploynator/_toml.py#L77)
+
+```python
+def detect_test_commands(project_path: str) -> list[str] | None
+```
+
+Detecta comandos de test para proyectos C/autotools sin toml.
+
+Orden: Makefile (test-host > test > check > tests, o primer
+test* disponible) → CMake (build+ctest) → meson (setup+test).
+Devuelve None si no hay nada detectable (caller usa pytest default).
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `project_path` | `str` |  |  |
+
+**Returns:** `list[str] | None`
+
+*Calls:* [`list_make_targets`](#list_make_targets)
+
+*Called by:* [`load_toml_config`](#load_toml_config)
+
+---
+
 <a id="load_toml_config"></a>
 
 ### `load_toml_config`
 
-`function` | [deploynator/_toml.py:46](../../deploynator/_toml.py#L46)
+`function` | [deploynator/_toml.py:164](../../deploynator/_toml.py#L164)
 
 ```python
 def load_toml_config(project_path: str) -> TomlConfig
@@ -80,7 +147,7 @@ def load_toml_config(project_path: str) -> TomlConfig
 
 - `ValueError`: (raised in the body, not documented)
 
-*Calls:* [`Config.create`](deploynator._config.py.md#config-create), [`TomlConfig`](#tomlconfig)
+*Calls:* [`Config.create`](deploynator._config.py.md#config-create), [`TomlConfig`](#tomlconfig), [`detect_test_commands`](#detect_test_commands)
 
 *Called by:* [`DeploynatorApp.release`](deploynator._app.py.md#deploynatorapp-release), [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy), [`DeployOrchestrator.integrate_readmenator`](deploynator._deploy.py.md#deployorchestrator-integrate_readmenator)
 
@@ -120,6 +187,42 @@ DEFAULT_TEST_COMMANDS: list[str] = ['python -m pytest tests/ -q']
 
 ```python
 DEFAULT_DOCS_COMMAND = 'python -m readmenator . --rebuild'
+```
+
+---
+
+<a id="makefile_names"></a>
+
+### `MAKEFILE_NAMES`
+
+`constant` | [deploynator/_toml.py:16](../../deploynator/_toml.py#L16)
+
+```python
+MAKEFILE_NAMES: tuple[str, ...] = ('Makefile', 'makefile', 'GNUmakefile')
+```
+
+---
+
+<a id="make_test_priority"></a>
+
+### `MAKE_TEST_PRIORITY`
+
+`constant` | [deploynator/_toml.py:17](../../deploynator/_toml.py#L17)
+
+```python
+MAKE_TEST_PRIORITY: list[str] = ['test-host', 'test', 'check', 'tests']
+```
+
+---
+
+<a id="c_test_timeout_s"></a>
+
+### `C_TEST_TIMEOUT_S`
+
+`constant` | [deploynator/_toml.py:18](../../deploynator/_toml.py#L18)
+
+```python
+C_TEST_TIMEOUT_S: int = 900
 ```
 
 ---

@@ -1,28 +1,28 @@
 ```mermaid
 graph LR
     deploynator__platforms["deploynator: _platforms"]
-    deploynator__pypi["deploynator: _pypi"]
+    deploynator__toml["deploynator: _toml"]
     deploynator__mcp_server["deploynator: _mcp_server"]
     deploynator__changelog["deploynator: _changelog"]
-    deploynator__platforms -- "calls into" --> deploynator__pypi
+    deploynator__platforms -- "calls into" --> deploynator__toml
     deploynator__platforms -- "calls into" --> deploynator__mcp_server
     deploynator__platforms -- "calls into" --> deploynator__changelog
-    deploynator__pypi -- "calls into" --> deploynator__platforms
-    deploynator__pypi -- "calls into" --> deploynator__mcp_server
-    deploynator__pypi -- "depends on" --> deploynator__changelog
+    deploynator__toml -- "calls into" --> deploynator__platforms
+    deploynator__toml -- "calls into" --> deploynator__mcp_server
+    deploynator__toml -- "depends on" --> deploynator__changelog
     deploynator__mcp_server -- "calls into" --> deploynator__platforms
-    deploynator__mcp_server -- "calls into" --> deploynator__pypi
+    deploynator__mcp_server -- "calls into" --> deploynator__toml
     deploynator__mcp_server -- "calls into" --> deploynator__changelog
     deploynator__changelog -- "calls into" --> deploynator__platforms
     click deploynator__platforms href "./deploynator__platforms.md" "Details"
-    click deploynator__pypi href "./deploynator__pypi.md" "Details"
+    click deploynator__toml href "./deploynator__toml.md" "Details"
     click deploynator__mcp_server href "./deploynator__mcp_server.md" "Details"
     click deploynator__changelog href "./deploynator__changelog.md" "Details"
 ```
 
 ## Details
 
-Static architecture map of 35 files (py, sh) in 4 components: deploynator: _platforms, deploynator: _pypi, deploynator: _mcp_server, deploynator: _changelog. Structure is extracted statically without LLM calls; component prose may be enriched locally.
+Static architecture map of 35 files (py, sh) in 4 components: deploynator: _platforms, deploynator: _toml, deploynator: _mcp_server, deploynator: _changelog. Structure is extracted statically without LLM calls; component prose may be enriched locally.
 
 ### deploynator: _platforms (1)
 
@@ -39,20 +39,20 @@ deploynator: _platforms groups 11 files (py) around Platform, from_string, label
 - <a href="../deploynator/_models.py#L58-L64">deploynator/_models.py::from_string</a>
 - <a href="../deploynator/_models.py#L65-L67">deploynator/_models.py::valid_types</a>
 
-### deploynator: _pypi (2)
+### deploynator: _toml (2)
 
-deploynator: _pypi groups 8 files (py) around TomlConfig, __post_init__, _clamp_timeout, load_toml_config, PyPIRunner. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.
+deploynator: _toml groups 8 files (py) around _target_regex, list_make_targets, _has_python_tests, detect_test_commands, _auto_toml_config. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.
 
 **Related Classes/Methods**:
 
-- <a href="../deploynator/_toml.py#L14-L29">deploynator/_toml.py::TomlConfig</a>
-- <a href="../deploynator/_toml.py#L30-L37">deploynator/_toml.py::__post_init__</a>
-- <a href="../deploynator/_toml.py#L38-L45">deploynator/_toml.py::_clamp_timeout</a>
-- <a href="../deploynator/_toml.py#L46-L100">deploynator/_toml.py::load_toml_config</a>
-- <a href="../deploynator/_pypi.py">deploynator/_pypi.py::PyPIRunner</a>
-- <a href="../deploynator/_pypi.py#L13-L15">deploynator/_pypi.py::__init__</a>
-- <a href="../deploynator/_pypi.py#L16-L32">deploynator/_pypi.py::is_packaging_project</a>
-- <a href="../deploynator/_pypi.py#L33-L38">deploynator/_pypi.py::has_credentials</a>
+- <a href="../deploynator/_toml.py#L23-L30">deploynator/_toml.py::_target_regex</a>
+- <a href="../deploynator/_toml.py#L31-L63">deploynator/_toml.py::list_make_targets</a>
+- <a href="../deploynator/_toml.py#L64-L76">deploynator/_toml.py::_has_python_tests</a>
+- <a href="../deploynator/_toml.py#L77-L109">deploynator/_toml.py::detect_test_commands</a>
+- <a href="../deploynator/_toml.py#L110-L131">deploynator/_toml.py::_auto_toml_config</a>
+- <a href="../deploynator/_toml.py#L132-L147">deploynator/_toml.py::TomlConfig</a>
+- <a href="../deploynator/_toml.py#L148-L155">deploynator/_toml.py::__post_init__</a>
+- <a href="../deploynator/_toml.py#L156-L163">deploynator/_toml.py::_clamp_timeout</a>
 
 ### deploynator: _mcp_server (3)
 

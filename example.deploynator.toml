@@ -9,6 +9,10 @@ version_file = "version.json"
 [tests]
 # Comandos en orden. Se ejecutan con shell=False (shlex), cwd=project_path.
 # Default si falta el archivo: ["python -m pytest tests/ -q"]
+# Proyectos C sin toml: auto-detecta el Makefile (test-host > test > check,
+# o primer test-*; si no hay target de test usa `make`). CMake/meson
+# también se detectan. Ejemplo C explícito:
+# commands = ["make test-host"]
 commands = ["python -m pytest tests/ -q"]
 timeout_s = 300
 # Si true y commands=[] → pasa sin tests. Si false y sin tests/ → falla.
