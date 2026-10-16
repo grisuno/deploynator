@@ -3,7 +3,7 @@
  "format": "jsonl",
  "meta": {
   "modules": 19,
-  "entities": 306,
+  "entities": 307,
   "languages": {
    "py": 17,
    "sh": 2
@@ -15,7 +15,7 @@
    "constant": 13,
    "constructor": 14,
    "enum": 2,
-   "function": 12,
+   "function": 13,
    "method": 99,
    "module": 19,
    "property": 4,
@@ -27,9 +27,9 @@
  },
  "coverage": {
   "overall": {
-   "documented": 12,
-   "total": 192,
-   "percent": 6.2
+   "documented": 13,
+   "total": 193,
+   "percent": 6.7
   },
   "by_kind": {
    "class": {
@@ -53,9 +53,9 @@
     "percent": 0.0
    },
    "function": {
-    "documented": 6,
-    "total": 12,
-    "percent": 50.0
+    "documented": 7,
+    "total": 13,
+    "percent": 53.8
    },
    "method": {
     "documented": 3,
@@ -165,9 +165,9 @@
     "percent": 0.0
    },
    "deploynator/_toml.py": {
-    "documented": 2,
-    "total": 5,
-    "percent": 40.0
+    "documented": 3,
+    "total": 6,
+    "percent": 50.0
    },
    "install.sh": {
     "documented": 0,
@@ -265,7 +265,7 @@
   {
    "uid": "deploynator/_toml.py",
    "path": "modules/deploynator._toml.py.jsonl",
-   "entities": 25
+   "entities": 26
   },
   {
    "uid": "install.sh",

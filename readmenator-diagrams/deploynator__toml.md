@@ -1,6 +1,6 @@
 # deploynator: _toml
 
-deploynator: _toml groups 8 files (py) around _target_regex, list_make_targets, _has_python_tests, detect_test_commands, _auto_toml_config. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.
+deploynator: _toml groups 8 files (py) around _target_regex, list_make_targets, _has_python_tests, looks_like_packaging_project, detect_test_commands. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.
 
 ```mermaid
 graph LR
@@ -11,7 +11,7 @@ graph LR
 
 ## deploynator (2.1)
 
-deploynator groups 4 files (py) around _target_regex, list_make_targets, _has_python_tests, detect_test_commands, _auto_toml_config. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.
+deploynator groups 4 files (py) around _target_regex, list_make_targets, _has_python_tests, looks_like_packaging_project, detect_test_commands. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.
 
 ## tests (2.2)
 

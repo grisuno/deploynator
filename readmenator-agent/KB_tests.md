@@ -113,8 +113,8 @@
   - `test_cli_install_parses_packages` (method, line 45) `def test_cli_install_parses_packages(self)`
   - `test_example_exists_and_compiles` (method, line 55) `def test_example_exists_and_compiles(self)`
   - `test_example_uses_library` (method, line 62) `def test_example_uses_library(self)`
-  - `fake_run` (method, line 17) `def fake_run(cmd)`
-  - `fake_run` (method, line 34) `def fake_run(cmd)`
+  - `fake_run` (function, line 17) `def fake_run(cmd)`
+  - `fake_run` (function, line 34) `def fake_run(cmd)`
   - `R` (class, line 19) `class R`
 - Depends on: `deploynator/__init__.py`, `deploynator/__main__.py`, `deploynator/_config.py`
 

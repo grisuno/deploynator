@@ -107,6 +107,7 @@ class DeployOrchestrator:
         run_docs: bool = True,
         force_bump: Optional[str] = None,
         run_pypi: bool = True,
+        verbose: bool = False,
     ) -> DeployResult:
         repo_path = self._resolve_project_path(project)
 
@@ -334,7 +335,8 @@ class DeployOrchestrator:
                     print("[!] PyPI packaging detected but no credentials "
                           "(TWINE_PASSWORD/PYPI_TOKEN/~/.pypirc). Skipping upload.")
                 else:
-                    ok, msg = self._pypi.run(repo_path, toml_cfg, new_version_str, token=token)
+                    ok, msg = self._pypi.run(repo_path, toml_cfg, new_version_str, token=token,
+                                             verbose=verbose)
                     print(f"[{'OK' if ok else 'FAIL'}] {msg}")
                     if not ok:
                         return DeployResult(
@@ -343,10 +345,10 @@ class DeployOrchestrator:
                             success=False,
                             platforms_pushed=platforms_pushed,
                             releases_created=releases_created,
-                            error=msg[:2000],
+                            error=msg if verbose else msg[:2000],
                         )
             else:
-                ok, msg = self._pypi.run(repo_path, toml_cfg, new_version_str)
+                ok, msg = self._pypi.run(repo_path, toml_cfg, new_version_str, verbose=verbose)
                 print(f"[{'OK' if ok else 'FAIL'}] {msg}")
                 if not ok:
                     return DeployResult(
@@ -355,7 +357,7 @@ class DeployOrchestrator:
                         success=False,
                         platforms_pushed=platforms_pushed,
                         releases_created=releases_created,
-                        error=msg[:2000],
+                        error=msg if verbose else msg[:2000],
                     )
 
         return DeployResult(

@@ -105,7 +105,7 @@ class PyPIRunner:
                     shutil.rmtree(target)
 
     def run(self, project_path: str, toml: TomlConfig, version: str,
-            token: str | None = None) -> tuple[bool, str]:
+            token: str | None = None, verbose: bool = False) -> tuple[bool, str]:
         if not self.is_packaging_project(project_path):
             return True, "PyPI skipped: no packaging files"
         try:
@@ -120,7 +120,10 @@ class PyPIRunner:
             timeout=toml.pypi_timeout_s,
         )
         if build.returncode != 0:
-            err = (build.stderr or build.stdout or "").strip()[-2000:]
+            raw = (build.stderr or build.stdout or "").strip()
+            if verbose and raw:
+                print(raw)
+            err = raw if verbose else raw[-2000:]
             hint = "" if "build" not in err.lower() else " (pip install build)"
             return False, f"PyPI build failed for {version}{hint}: {err}"
         dist_dir = os.path.join(project_path, "dist")
@@ -128,11 +131,15 @@ class PyPIRunner:
         if not artifacts:
             return False, f"PyPI build produced no artifacts for {version}"
         cmd = [sys.executable, "-m", "twine", "upload", "--non-interactive"]
+        if verbose:
+            cmd += ["--verbose"]
         if toml.pypi_repo == "testpypi":
             cmd += ["--repository", "testpypi"]
         elif toml.pypi_repo not in ("pypi", "testpypi"):
             cmd += ["--repository-url", toml.pypi_repo]
         cmd += [os.path.join("dist", a) for a in artifacts]
+        if verbose:
+            print(f"[...] {subprocess.list2cmdline(cmd)} (cwd={project_path})")
         env = dict(os.environ)
         token = token or os.environ.get("PYPI_TOKEN")
         if token and not os.environ.get("TWINE_PASSWORD"):
@@ -150,6 +157,9 @@ class PyPIRunner:
         except subprocess.TimeoutExpired:
             return False, f"PyPI upload timed out after {toml.pypi_timeout_s}s"
         if upload.returncode != 0:
-            err = (upload.stderr or upload.stdout or "").strip()[-2000:]
+            raw = (upload.stderr or upload.stdout or "").strip()
+            if verbose and raw:
+                print(raw)
+            err = raw if verbose else raw[-2000:]
             return False, f"PyPI upload failed for {version}: {err}"
         return True, f"PyPI uploaded {version}: {', '.join(artifacts)}"

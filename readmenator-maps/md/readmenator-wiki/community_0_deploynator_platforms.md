@@ -39,21 +39,21 @@ This community groups 11 file(s) rooted at `deploynator` with dominant language 
 - `_smart_prepare` (method, `deploynator/_app.py:290`) `def _smart_prepare(self, base, changelog_content, dry_run)`
 - `commit` (method, `deploynator/_app.py:305`) `def commit(self, commit_type, subject, scope, body, project_path, project_name,`
 - `release` (method, `deploynator/_app.py:345`) `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run`
-- `generate_docs` (method, `deploynator/_app.py:435`) `def generate_docs(self, project_path, project_name)`
-- `status` (method, `deploynator/_app.py:441`) `def status(self, project_path, project_name)`
-- `list_projects` (method, `deploynator/_app.py:461`) `def list_projects(self, search_path)`
-- `generate_ci` (method, `deploynator/_app.py:466`) `def generate_ci(self, project_name, all_projects)`
-- `install_deps` (method, `deploynator/_app.py:482`) `def install_deps(self, project_name)`
-- `install_packages` (method, `deploynator/_app.py:493`) `def install_packages(self, packages)` - pip install/upgrade packages (default: deploynator from PyPI).
-- `interactive_menu` (method, `deploynator/_app.py:521`) `def interactive_menu(self)`
-- `_interactive_release` (method, `deploynator/_app.py:557`) `def _interactive_release(self)`
-- `_interactive_commit` (method, `deploynator/_app.py:599`) `def _interactive_commit(self)`
-- `_interactive_start` (method, `deploynator/_app.py:626`) `def _interactive_start(self)`
-- `_interactive_auth` (method, `deploynator/_app.py:650`) `def _interactive_auth(self)`
-- `_interactive_auth_status` (method, `deploynator/_app.py:673`) `def _interactive_auth_status(self)`
-- `_interactive_docs` (method, `deploynator/_app.py:679`) `def _interactive_docs(self)`
-- `_interactive_ci` (method, `deploynator/_app.py:686`) `def _interactive_ci(self)`
-- `_interactive_status` (method, `deploynator/_app.py:695`) `def _interactive_status(self)`
+- `generate_docs` (method, `deploynator/_app.py:437`) `def generate_docs(self, project_path, project_name)`
+- `status` (method, `deploynator/_app.py:443`) `def status(self, project_path, project_name)`
+- `list_projects` (method, `deploynator/_app.py:463`) `def list_projects(self, search_path)`
+- `generate_ci` (method, `deploynator/_app.py:468`) `def generate_ci(self, project_name, all_projects)`
+- `install_deps` (method, `deploynator/_app.py:484`) `def install_deps(self, project_name)`
+- `install_packages` (method, `deploynator/_app.py:495`) `def install_packages(self, packages)` - pip install/upgrade packages (default: deploynator from PyPI).
+- `interactive_menu` (method, `deploynator/_app.py:523`) `def interactive_menu(self)`
+- `_interactive_release` (method, `deploynator/_app.py:559`) `def _interactive_release(self)`
+- `_interactive_commit` (method, `deploynator/_app.py:601`) `def _interactive_commit(self)`
+- `_interactive_start` (method, `deploynator/_app.py:628`) `def _interactive_start(self)`
+- `_interactive_auth` (method, `deploynator/_app.py:652`) `def _interactive_auth(self)`
+- `_interactive_auth_status` (method, `deploynator/_app.py:675`) `def _interactive_auth_status(self)`
+- `_interactive_docs` (method, `deploynator/_app.py:681`) `def _interactive_docs(self)`
+- `_interactive_ci` (method, `deploynator/_app.py:688`) `def _interactive_ci(self)`
+- `_interactive_status` (method, `deploynator/_app.py:697`) `def _interactive_status(self)`
 
 ## Internal vs External Edges
 
@@ -70,22 +70,23 @@ This community groups 11 file(s) rooted at `deploynator` with dominant language 
 - [INFERRED] bridges community 2 <-> 0 (strength 0.6): Inferred cross-community bridge: tests/test_init.py reaches tests/test_models.py in 4 hops.
 - [INFERRED] bridges community 0 <-> 3 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_readme_footer.py in 4 hops.
 - [INFERRED] bridges community 0 <-> 1 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_runner.py in 4 hops.
+- [INFERRED] shares_context community 0 <-> 4 (strength 0.5): Inferred shared context (layer utility) with no import path between community 0 (deploynator: _platforms) and community 4 (orphans).
 
 ## Risks
 
 - [taint high] `deploynator/_app.py` -> `deploynator/_app.py` via `subprocess` (0 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_models.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_deploy.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_platforms.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_config.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_git.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_config.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_platforms.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_deploy.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_readme.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_changelog.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_semver.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_pypi.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_semver.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_app.py` via `subprocess` (0 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_models.py` via `subprocess` (1 hops)
 

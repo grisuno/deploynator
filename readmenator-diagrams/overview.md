@@ -41,18 +41,18 @@ deploynator: _platforms groups 11 files (py) around Platform, from_string, label
 
 ### deploynator: _toml (2)
 
-deploynator: _toml groups 8 files (py) around _target_regex, list_make_targets, _has_python_tests, detect_test_commands, _auto_toml_config. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.
+deploynator: _toml groups 8 files (py) around _target_regex, list_make_targets, _has_python_tests, looks_like_packaging_project, detect_test_commands. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.
 
 **Related Classes/Methods**:
 
 - <a href="../deploynator/_toml.py#L23-L30">deploynator/_toml.py::_target_regex</a>
 - <a href="../deploynator/_toml.py#L31-L63">deploynator/_toml.py::list_make_targets</a>
-- <a href="../deploynator/_toml.py#L64-L76">deploynator/_toml.py::_has_python_tests</a>
-- <a href="../deploynator/_toml.py#L77-L109">deploynator/_toml.py::detect_test_commands</a>
-- <a href="../deploynator/_toml.py#L110-L131">deploynator/_toml.py::_auto_toml_config</a>
-- <a href="../deploynator/_toml.py#L132-L147">deploynator/_toml.py::TomlConfig</a>
-- <a href="../deploynator/_toml.py#L148-L155">deploynator/_toml.py::__post_init__</a>
-- <a href="../deploynator/_toml.py#L156-L163">deploynator/_toml.py::_clamp_timeout</a>
+- <a href="../deploynator/_toml.py#L64-L75">deploynator/_toml.py::_has_python_tests</a>
+- <a href="../deploynator/_toml.py#L76-L101">deploynator/_toml.py::looks_like_packaging_project</a>
+- <a href="../deploynator/_toml.py#L102-L151">deploynator/_toml.py::detect_test_commands</a>
+- <a href="../deploynator/_toml.py#L152-L178">deploynator/_toml.py::_auto_toml_config</a>
+- <a href="../deploynator/_toml.py#L179-L194">deploynator/_toml.py::TomlConfig</a>
+- <a href="../deploynator/_toml.py#L195-L202">deploynator/_toml.py::__post_init__</a>
 
 ### deploynator: _mcp_server (3)
 

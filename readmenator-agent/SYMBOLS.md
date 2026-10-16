@@ -5,40 +5,40 @@
 | `main` | function | `app.py:12` | `def main()` |
 | `ensure_pkg` | function | `deploy.sh:22` | `` |
 | `build_parser` | function | `deploynator/__main__.py:17` | `def build_parser()` |
-| `main` | function | `deploynator/__main__.py:167` | `def main(argv)` |
-| `preprocess_argv` | function | `deploynator/__main__.py:133` | `def preprocess_argv(argv)` |
+| `main` | function | `deploynator/__main__.py:171` | `def main(argv)` |
+| `preprocess_argv` | function | `deploynator/__main__.py:137` | `def preprocess_argv(argv)` |
 | `DeploynatorApp` | class | `deploynator/_app.py:20` | `class DeploynatorApp` |
 | `__init__` | method | `deploynator/_app.py:21` | `def __init__(self, config, workdir)` |
 | `_auth_bitbucket` | method | `deploynator/_app.py:86` | `def _auth_bitbucket()` |
 | `_auth_github` | method | `deploynator/_app.py:56` | `def _auth_github()` |
 | `_auth_gitlab` | method | `deploynator/_app.py:69` | `def _auth_gitlab()` |
-| `_interactive_auth` | method | `deploynator/_app.py:650` | `def _interactive_auth(self)` |
-| `_interactive_auth_status` | method | `deploynator/_app.py:673` | `def _interactive_auth_status(self)` |
-| `_interactive_ci` | method | `deploynator/_app.py:686` | `def _interactive_ci(self)` |
-| `_interactive_commit` | method | `deploynator/_app.py:599` | `def _interactive_commit(self)` |
-| `_interactive_docs` | method | `deploynator/_app.py:679` | `def _interactive_docs(self)` |
-| `_interactive_init` | method | `deploynator/_app.py:700` | `def _interactive_init(self)` |
-| `_interactive_release` | method | `deploynator/_app.py:557` | `def _interactive_release(self)` |
-| `_interactive_start` | method | `deploynator/_app.py:626` | `def _interactive_start(self)` |
-| `_interactive_status` | method | `deploynator/_app.py:695` | `def _interactive_status(self)` |
+| `_interactive_auth` | method | `deploynator/_app.py:652` | `def _interactive_auth(self)` |
+| `_interactive_auth_status` | method | `deploynator/_app.py:675` | `def _interactive_auth_status(self)` |
+| `_interactive_ci` | method | `deploynator/_app.py:688` | `def _interactive_ci(self)` |
+| `_interactive_commit` | method | `deploynator/_app.py:601` | `def _interactive_commit(self)` |
+| `_interactive_docs` | method | `deploynator/_app.py:681` | `def _interactive_docs(self)` |
+| `_interactive_init` | method | `deploynator/_app.py:702` | `def _interactive_init(self)` |
+| `_interactive_release` | method | `deploynator/_app.py:559` | `def _interactive_release(self)` |
+| `_interactive_start` | method | `deploynator/_app.py:628` | `def _interactive_start(self)` |
+| `_interactive_status` | method | `deploynator/_app.py:697` | `def _interactive_status(self)` |
 | `_is_path_like` | method | `deploynator/_app.py:265` | `def _is_path_like(value)` |
 | `_looks_like_path` | method | `deploynator/_app.py:269` | `def _looks_like_path(value)` |
-| `_print_result` | method | `deploynator/_app.py:706` | `def _print_result(result)` |
+| `_print_result` | method | `deploynator/_app.py:708` | `def _print_result(result)` |
 | `_resolve_project_path` | method | `deploynator/_app.py:276` | `def _resolve_project_path(self, project_name)` |
 | `_smart_prepare` | method | `deploynator/_app.py:290` | `def _smart_prepare(self, base, changelog_content, dry_run)` |
 | `auth_login` | method | `deploynator/_app.py:31` | `def auth_login(self, platforms)` |
 | `auth_status` | method | `deploynator/_app.py:45` | `def auth_status(self)` |
 | `commit` | method | `deploynator/_app.py:305` | `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)` |
-| `generate_ci` | method | `deploynator/_app.py:466` | `def generate_ci(self, project_name, all_projects)` |
-| `generate_docs` | method | `deploynator/_app.py:435` | `def generate_docs(self, project_path, project_name)` |
+| `generate_ci` | method | `deploynator/_app.py:468` | `def generate_ci(self, project_name, all_projects)` |
+| `generate_docs` | method | `deploynator/_app.py:437` | `def generate_docs(self, project_path, project_name)` |
 | `init_project` | method | `deploynator/_app.py:170` | `def init_project(self, project_path, name)` |
-| `install_deps` | method | `deploynator/_app.py:482` | `def install_deps(self, project_name)` |
-| `install_packages` | method | `deploynator/_app.py:493` | `def install_packages(self, packages)` |
-| `interactive_menu` | method | `deploynator/_app.py:521` | `def interactive_menu(self)` |
-| `list_projects` | method | `deploynator/_app.py:461` | `def list_projects(self, search_path)` |
+| `install_deps` | method | `deploynator/_app.py:484` | `def install_deps(self, project_name)` |
+| `install_packages` | method | `deploynator/_app.py:495` | `def install_packages(self, packages)` |
+| `interactive_menu` | method | `deploynator/_app.py:523` | `def interactive_menu(self)` |
+| `list_projects` | method | `deploynator/_app.py:463` | `def list_projects(self, search_path)` |
 | `release` | method | `deploynator/_app.py:345` | `def release(self, commit_type, subject, scope, body, project_name, bump, dry_run, platforms, all_projects, no_test...` |
 | `start_branch` | method | `deploynator/_app.py:247` | `def start_branch(self, commit_type, description, project_path, project_name, remote)` |
-| `status` | method | `deploynator/_app.py:441` | `def status(self, project_path, project_name)` |
+| `status` | method | `deploynator/_app.py:443` | `def status(self, project_path, project_name)` |
 | `ChangelogGenerator` | class | `deploynator/_changelog.py:12` | `class ChangelogGenerator` |
 | `__init__` | method | `deploynator/_changelog.py:13` | `def __init__(self, config)` |
 | `_collect_entries` | method | `deploynator/_changelog.py:48` | `def _collect_entries(self, repo_path, from_ref, to_ref)` |
@@ -58,22 +58,22 @@
 | `ProjectDiscovery` | class | `deploynator/_deploy.py:31` | `class ProjectDiscovery` |
 | `__init__` | method | `deploynator/_deploy.py:32` | `def __init__(self, config)` |
 | `__init__` | method | `deploynator/_deploy.py:77` | `def __init__(self, config)` |
-| `_add_temp_remote` | method | `deploynator/_deploy.py:403` | `def _add_temp_remote(self, repo_path, name, url)` |
-| `_ci_workflow_content` | method | `deploynator/_deploy.py:450` | `def _ci_workflow_content(self, project)` |
-| `_get_remote_url` | method | `deploynator/_deploy.py:422` | `def _get_remote_url(repo_path, pc)` |
-| `_gh_release_in_repo` | method | `deploynator/_deploy.py:370` | `def _gh_release_in_repo(self, repo_path, project_name, version, notes, branch)` |
-| `_listed` | method | `deploynator/_deploy.py:196` | `def _listed(files)` |
+| `_add_temp_remote` | method | `deploynator/_deploy.py:405` | `def _add_temp_remote(self, repo_path, name, url)` |
+| `_ci_workflow_content` | method | `deploynator/_deploy.py:452` | `def _ci_workflow_content(self, project)` |
+| `_get_remote_url` | method | `deploynator/_deploy.py:424` | `def _get_remote_url(repo_path, pc)` |
+| `_gh_release_in_repo` | method | `deploynator/_deploy.py:372` | `def _gh_release_in_repo(self, repo_path, project_name, version, notes, branch)` |
+| `_listed` | function | `deploynator/_deploy.py:197` | `def _listed(files)` |
 | `_load_single` | method | `deploynator/_deploy.py:63` | `def _load_single(yaml_path)` |
-| `_release_workflow_content` | method | `deploynator/_deploy.py:471` | `def _release_workflow_content(self, project)` |
-| `_remove_temp_remote` | method | `deploynator/_deploy.py:412` | `def _remove_temp_remote(self, repo_path, name)` |
+| `_release_workflow_content` | method | `deploynator/_deploy.py:473` | `def _release_workflow_content(self, project)` |
+| `_remove_temp_remote` | method | `deploynator/_deploy.py:414` | `def _remove_temp_remote(self, repo_path, name)` |
 | `_resolve_project_path` | method | `deploynator/_deploy.py:88` | `def _resolve_project_path(project)` |
 | `deploy` | method | `deploynator/_deploy.py:97` | `def deploy(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...` |
 | `discover` | method | `deploynator/_deploy.py:35` | `def discover(self, search_path)` |
 | `find_by_name` | method | `deploynator/_deploy.py:56` | `def find_by_name(self, name, search_path)` |
-| `generate_workflows` | method | `deploynator/_deploy.py:431` | `def generate_workflows(self, project, output_dir)` |
-| `install_dependencies` | method | `deploynator/_deploy.py:499` | `def install_dependencies(self, project)` |
-| `install_lazygit` | method | `deploynator/_deploy.py:543` | `def install_lazygit(self)` |
-| `integrate_readmenator` | method | `deploynator/_deploy.py:509` | `def integrate_readmenator(self, project_path)` |
+| `generate_workflows` | method | `deploynator/_deploy.py:433` | `def generate_workflows(self, project, output_dir)` |
+| `install_dependencies` | method | `deploynator/_deploy.py:501` | `def install_dependencies(self, project)` |
+| `install_lazygit` | method | `deploynator/_deploy.py:545` | `def install_lazygit(self)` |
+| `integrate_readmenator` | method | `deploynator/_deploy.py:511` | `def integrate_readmenator(self, project_path)` |
 | `DocsRunner` | class | `deploynator/_docs.py:10` | `class DocsRunner` |
 | `__init__` | method | `deploynator/_docs.py:11` | `def __init__(self, config)` |
 | `run` | method | `deploynator/_docs.py:14` | `def run(self, project_path, toml)` |
@@ -124,7 +124,7 @@
 | `dispatch` | method | `deploynator/_mcp_server.py:144` | `def dispatch(self, req)` |
 | `error` | method | `deploynator/_mcp_server.py:49` | `def error(self, code, message, data)` |
 | `is_notification` | method | `deploynator/_mcp_server.py:43` | `def is_notification(self)` |
-| `main` | method | `deploynator/_mcp_server.py:269` | `def main()` |
+| `main` | function | `deploynator/_mcp_server.py:269` | `def main()` |
 | `read` | method | `deploynator/_mcp_server.py:82` | `def read(self)` |
 | `register_resource` | method | `deploynator/_mcp_server.py:97` | `def register_resource(self, resource)` |
 | `register_tool` | method | `deploynator/_mcp_server.py:94` | `def register_tool(self, tool)` |
@@ -197,7 +197,7 @@
 | `has_credentials` | method | `deploynator/_pypi.py:33` | `def has_credentials(self)` |
 | `is_packaging_project` | method | `deploynator/_pypi.py:16` | `def is_packaging_project(self, project_path)` |
 | `prompt_for_credentials` | method | `deploynator/_pypi.py:39` | `def prompt_for_credentials(self)` |
-| `run` | method | `deploynator/_pypi.py:107` | `def run(self, project_path, toml, version, token)` |
+| `run` | method | `deploynator/_pypi.py:107` | `def run(self, project_path, toml, version, token, verbose)` |
 | `save_pypirc` | method | `deploynator/_pypi.py:72` | `def save_pypirc(self, token, path)` |
 | `_find_readme` | function | `deploynator/_readme.py:32` | `def _find_readme(repo_path)` |
 | `ensure_deployed_footer` | function | `deploynator/_readme.py:49` | `def ensure_deployed_footer(repo_path, config)` |
@@ -218,12 +218,12 @@
 | `TomlConfig` | class | `deploynator/_toml.py:179` | `class TomlConfig` |
 | `__post_init__` | method | `deploynator/_toml.py:195` | `def __post_init__(self)` |
 | `_auto_toml_config` | function | `deploynator/_toml.py:152` | `def _auto_toml_config(project_path)` |
-| `_clamp_timeout` | method | `deploynator/_toml.py:203` | `def _clamp_timeout(value)` |
+| `_clamp_timeout` | function | `deploynator/_toml.py:203` | `def _clamp_timeout(value)` |
 | `_has_python_tests` | function | `deploynator/_toml.py:64` | `def _has_python_tests(project_path)` |
 | `_target_regex` | function | `deploynator/_toml.py:23` | `def _target_regex()` |
 | `detect_test_commands` | function | `deploynator/_toml.py:102` | `def detect_test_commands(project_path)` |
 | `list_make_targets` | function | `deploynator/_toml.py:31` | `def list_make_targets(project_path)` |
-| `load_toml_config` | method | `deploynator/_toml.py:211` | `def load_toml_config(project_path)` |
+| `load_toml_config` | function | `deploynator/_toml.py:211` | `def load_toml_config(project_path)` |
 | `looks_like_packaging_project` | function | `deploynator/_toml.py:76` | `def looks_like_packaging_project(project_path)` |
 | `TestBDDDeployScenarios` | class | `tests/bdd_test_deploy.py:28` | `class TestBDDDeployScenarios` |
 | `TestBDDPipeline` | class | `tests/bdd_test_deploy.py:84` | `class TestBDDPipeline` |
@@ -284,8 +284,8 @@
 | `R` | class | `tests/test_install_example.py:19` | `class R` |
 | `TestAppExample` | class | `tests/test_install_example.py:54` | `class TestAppExample` |
 | `TestInstallPackages` | class | `tests/test_install_example.py:5` | `class TestInstallPackages` |
-| `fake_run` | method | `tests/test_install_example.py:17` | `def fake_run(cmd)` |
-| `fake_run` | method | `tests/test_install_example.py:34` | `def fake_run(cmd)` |
+| `fake_run` | function | `tests/test_install_example.py:17` | `def fake_run(cmd)` |
+| `fake_run` | function | `tests/test_install_example.py:34` | `def fake_run(cmd)` |
 | `test_cli_install_parses_packages` | method | `tests/test_install_example.py:45` | `def test_cli_install_parses_packages(self)` |
 | `test_default_targets_deploynator` | method | `tests/test_install_example.py:11` | `def test_default_targets_deploynator(self, monkeypatch)` |
 | `test_empty_is_noop` | method | `tests/test_install_example.py:6` | `def test_empty_is_noop(self)` |

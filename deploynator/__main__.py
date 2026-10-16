@@ -28,6 +28,10 @@ def build_parser() -> argparse.ArgumentParser:
         "--workdir", type=str, default="",
         help="Working directory (default: current dir)",
     )
+    parser.add_argument(
+        "--verbose", "-v", action="store_true",
+        help="Verbose output (twine --verbose, full command + untruncated errors)",
+    )
 
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
 
@@ -199,6 +203,7 @@ def main(argv: list[str] | None = None) -> NoReturn | None:
             no_test=getattr(args, "no_test", False),
             no_docs=getattr(args, "no_docs", False),
             no_pypi=getattr(args, "no_pypi", False),
+            verbose=getattr(args, "verbose", False),
         )
         sys.exit(0 if all(r.success for r in results) else 1)
 

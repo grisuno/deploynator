@@ -1,6 +1,6 @@
 # Documentation Coverage
 
-Overall: **6.2%** (12 of 192 public modules, types, and callables). Data members are excluded from the ratio.
+Overall: **6.7%** (13 of 193 public modules, types, and callables). Data members are excluded from the ratio.
 
 [Back to index](index.md)
 
@@ -12,7 +12,7 @@ Overall: **6.2%** (12 of 192 public modules, types, and callables). Data members
 | classmethod | 0 | 12 | 0.0% |
 | constructor | 0 | 14 | 0.0% |
 | enum | 0 | 2 | 0.0% |
-| function | 6 | 12 | 50.0% |
+| function | 7 | 13 | 53.8% |
 | method | 3 | 99 | 3.0% |
 | module | 3 | 19 | 15.8% |
 | property | 0 | 4 | 0.0% |
@@ -37,8 +37,8 @@ Overall: **6.2%** (12 of 192 public modules, types, and callables). Data members
 | [`deploynator._mcp_server`](modules/deploynator._mcp_server.py.md) | 1 | 21 | 4.8% |
 | [`deploynator._app`](modules/deploynator._app.py.md) | 1 | 16 | 6.2% |
 | [`deploynator._pypi`](modules/deploynator._pypi.py.md) | 2 | 9 | 22.2% |
-| [`deploynator._toml`](modules/deploynator._toml.py.md) | 2 | 5 | 40.0% |
 | [`app`](modules/app.py.md) | 1 | 2 | 50.0% |
+| [`deploynator._toml`](modules/deploynator._toml.py.md) | 3 | 6 | 50.0% |
 | [`deploynator._readme`](modules/deploynator._readme.py.md) | 3 | 4 | 75.0% |
 | [`deploy.sh`](modules/deploy.sh.md) | 2 | 2 | 100.0% |
 
@@ -52,23 +52,23 @@ DOC001: 180
 - DOC001 `deploynator/__init__.py:1` module deploynator/__init__.py is not documented
 - DOC001 `deploynator/__main__.py:1` module deploynator/__main__.py is not documented
 - DOC001 `deploynator/__main__.py:17` function build_parser is not documented
-- DOC001 `deploynator/__main__.py:133` function preprocess_argv is not documented
-- DOC001 `deploynator/__main__.py:167` function main is not documented
+- DOC001 `deploynator/__main__.py:137` function preprocess_argv is not documented
+- DOC001 `deploynator/__main__.py:171` function main is not documented
 - DOC001 `deploynator/_app.py:1` module deploynator/_app.py is not documented
 - DOC001 `deploynator/_app.py:20` class DeploynatorApp is not documented
 - DOC001 `deploynator/_app.py:21` constructor DeploynatorApp.__init__ is not documented
 - DOC001 `deploynator/_app.py:31` method DeploynatorApp.auth_login is not documented
 - DOC001 `deploynator/_app.py:45` method DeploynatorApp.auth_status is not documented
-- DOC001 `deploynator/_app.py:168` method DeploynatorApp.init_project is not documented
-- DOC001 `deploynator/_app.py:218` method DeploynatorApp.start_branch is not documented
-- DOC001 `deploynator/_app.py:276` method DeploynatorApp.commit is not documented
-- DOC001 `deploynator/_app.py:316` method DeploynatorApp.release is not documented
-- DOC001 `deploynator/_app.py:406` method DeploynatorApp.generate_docs is not documented
-- DOC001 `deploynator/_app.py:412` method DeploynatorApp.status is not documented
-- DOC001 `deploynator/_app.py:432` method DeploynatorApp.list_projects is not documented
-- DOC001 `deploynator/_app.py:437` method DeploynatorApp.generate_ci is not documented
-- DOC001 `deploynator/_app.py:453` method DeploynatorApp.install_deps is not documented
-- DOC001 `deploynator/_app.py:492` method DeploynatorApp.interactive_menu is not documented
+- DOC001 `deploynator/_app.py:170` method DeploynatorApp.init_project is not documented
+- DOC001 `deploynator/_app.py:247` method DeploynatorApp.start_branch is not documented
+- DOC001 `deploynator/_app.py:305` method DeploynatorApp.commit is not documented
+- DOC001 `deploynator/_app.py:345` method DeploynatorApp.release is not documented
+- DOC001 `deploynator/_app.py:437` method DeploynatorApp.generate_docs is not documented
+- DOC001 `deploynator/_app.py:443` method DeploynatorApp.status is not documented
+- DOC001 `deploynator/_app.py:463` method DeploynatorApp.list_projects is not documented
+- DOC001 `deploynator/_app.py:468` method DeploynatorApp.generate_ci is not documented
+- DOC001 `deploynator/_app.py:484` method DeploynatorApp.install_deps is not documented
+- DOC001 `deploynator/_app.py:523` method DeploynatorApp.interactive_menu is not documented
 - DOC001 `deploynator/_changelog.py:1` module deploynator/_changelog.py is not documented
 - DOC001 `deploynator/_changelog.py:12` class ChangelogGenerator is not documented
 - DOC001 `deploynator/_changelog.py:13` constructor ChangelogGenerator.__init__ is not documented
@@ -92,10 +92,10 @@ DOC001: 180
 - DOC001 `deploynator/_deploy.py:76` class DeployOrchestrator is not documented
 - DOC001 `deploynator/_deploy.py:77` constructor DeployOrchestrator.__init__ is not documented
 - DOC001 `deploynator/_deploy.py:97` method DeployOrchestrator.deploy is not documented
-- DOC001 `deploynator/_deploy.py:431` method DeployOrchestrator.generate_workflows is not documented
-- DOC001 `deploynator/_deploy.py:499` method DeployOrchestrator.install_dependencies is not documented
-- DOC001 `deploynator/_deploy.py:509` method DeployOrchestrator.integrate_readmenator is not documented
-- DOC001 `deploynator/_deploy.py:543` method DeployOrchestrator.install_lazygit is not documented
+- DOC001 `deploynator/_deploy.py:433` method DeployOrchestrator.generate_workflows is not documented
+- DOC001 `deploynator/_deploy.py:501` method DeployOrchestrator.install_dependencies is not documented
+- DOC001 `deploynator/_deploy.py:511` method DeployOrchestrator.integrate_readmenator is not documented
+- DOC001 `deploynator/_deploy.py:545` method DeployOrchestrator.install_lazygit is not documented
 - DOC001 `deploynator/_docs.py:1` module deploynator/_docs.py is not documented
 - DOC001 `deploynator/_docs.py:10` class DocsRunner is not documented
 - DOC001 `deploynator/_docs.py:11` constructor DocsRunner.__init__ is not documented
@@ -225,6 +225,6 @@ DOC001: 180
 - DOC001 `deploynator/_semver.py:114` method SemverManager.calculate_next_version is not documented
 - DOC001 `deploynator/_semver.py:118` staticmethod SemverManager.is_valid_version is not documented
 - DOC001 `deploynator/_toml.py:1` module deploynator/_toml.py is not documented
-- DOC001 `deploynator/_toml.py:132` class TomlConfig is not documented
-- DOC001 `deploynator/_toml.py:164` function load_toml_config is not documented
+- DOC001 `deploynator/_toml.py:179` class TomlConfig is not documented
+- DOC001 `deploynator/_toml.py:211` function load_toml_config is not documented
 - DOC001 `install.sh:1` module install.sh is not documented

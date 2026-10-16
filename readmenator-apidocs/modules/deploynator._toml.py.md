@@ -1,11 +1,11 @@
 # `deploynator._toml`
 
-> Source: [deploynator/_toml.py:1](../../deploynator/_toml.py#L1) | language `py` | coverage 40.0% | [API index](../index.md)
+> Source: [deploynator/_toml.py:1](../../deploynator/_toml.py#L1) | language `py` | coverage 50.0% | [API index](../index.md)
 
 ## Contents
 
 - **Classes:** [`TomlConfig`](#tomlconfig)
-- **Functions:** [`list_make_targets`](#list_make_targets), [`detect_test_commands`](#detect_test_commands), [`load_toml_config`](#load_toml_config)
+- **Functions:** [`list_make_targets`](#list_make_targets), [`looks_like_packaging_project`](#looks_like_packaging_project), [`detect_test_commands`](#detect_test_commands), [`load_toml_config`](#load_toml_config)
 - **Constants:** [`TOML_FILENAME`](#toml_filename), [`DEFAULT_TEST_COMMANDS`](#default_test_commands), [`DEFAULT_DOCS_COMMAND`](#default_docs_command), [`MAKEFILE_NAMES`](#makefile_names), [`MAKE_TEST_PRIORITY`](#make_test_priority), [`C_TEST_TIMEOUT_S`](#c_test_timeout_s)
 
 ## Call Graph
@@ -32,7 +32,7 @@ flowchart LR
 
 ### `TomlConfig`
 
-`class` `dataclass` | [deploynator/_toml.py:132](../../deploynator/_toml.py#L132)
+`class` `dataclass` | [deploynator/_toml.py:179](../../deploynator/_toml.py#L179)
 
 Decorators: `@dataclass(frozen=True)`
 
@@ -95,11 +95,37 @@ Seguro: rechaza symlinks, limita tamaño (Config.max_file_size_bytes).
 
 ---
 
+<a id="looks_like_packaging_project"></a>
+
+### `looks_like_packaging_project`
+
+`function` | [deploynator/_toml.py:76](../../deploynator/_toml.py#L76)
+
+```python
+def looks_like_packaging_project(project_path: str) -> bool
+```
+
+Inferencia runtime (multi-proyecto): ¿es un paquete PyPI?
+
+Espejo liviano de PyPIRunner.is_packaging_project sin importar
+_pypi (evita ciclo). El gate final sigue en PyPIRunner al
+desplegar; aquí solo se usa para el default de pypi_enabled.
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `project_path` | `str` |  |  |
+
+**Returns:** `bool`
+
+---
+
 <a id="detect_test_commands"></a>
 
 ### `detect_test_commands`
 
-`function` | [deploynator/_toml.py:77](../../deploynator/_toml.py#L77)
+`function` | [deploynator/_toml.py:102](../../deploynator/_toml.py#L102)
 
 ```python
 def detect_test_commands(project_path: str) -> list[str] | None
@@ -107,8 +133,11 @@ def detect_test_commands(project_path: str) -> list[str] | None
 
 Detecta comandos de test para proyectos C/autotools sin toml.
 
-Orden: Makefile (test-host > test > check > tests, o primer
-test* disponible) → CMake (build+ctest) → meson (setup+test).
+Runtime multi-proyecto, sin hardcodear nombres de proyecto:
+Makefile (test-host canónico solo; si no, TODOS los targets de
+test en una sola invocación `make test test-* ...`, p. ej.
+`make test test-dsp test-transport`) → CMake (build+ctest) →
+meson (setup+test).
 Devuelve None si no hay nada detectable (caller usa pytest default).
 
 **Parameters**
@@ -121,7 +150,7 @@ Devuelve None si no hay nada detectable (caller usa pytest default).
 
 *Calls:* [`list_make_targets`](#list_make_targets)
 
-*Called by:* [`load_toml_config`](#load_toml_config)
+*Called by:* [`DeploynatorApp.init_project`](deploynator._app.py.md#deploynatorapp-init_project), [`load_toml_config`](#load_toml_config)
 
 ---
 
@@ -129,7 +158,7 @@ Devuelve None si no hay nada detectable (caller usa pytest default).
 
 ### `load_toml_config`
 
-`function` | [deploynator/_toml.py:164](../../deploynator/_toml.py#L164)
+`function` | [deploynator/_toml.py:211](../../deploynator/_toml.py#L211)
 
 ```python
 def load_toml_config(project_path: str) -> TomlConfig

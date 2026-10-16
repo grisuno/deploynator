@@ -31,7 +31,7 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 - `prompt_for_credentials` (method, `deploynator/_pypi.py:39`) `def prompt_for_credentials(self)` - Pide el token PyPI por input oculto solo si hay TTY.
 - `save_pypirc` (method, `deploynator/_pypi.py:72`) `def save_pypirc(self, token, path)` - Guarda el token en ~/.pypirc (username __token__, modo 600).
 - `clean` (method, `deploynator/_pypi.py:90`) `def clean(self, project_path, toml)`
-- `run` (method, `deploynator/_pypi.py:107`) `def run(self, project_path, toml, version, token)`
+- `run` (method, `deploynator/_pypi.py:107`) `def run(self, project_path, toml, version, token, verbose)`
 - `TestRunner` (class, `deploynator/_runner.py:11`) `class TestRunner`
 - `__init__` (method, `deploynator/_runner.py:12`) `def __init__(self, config)`
 - `run` (method, `deploynator/_runner.py:15`) `def run(self, project_path, toml)`
@@ -43,8 +43,8 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 - `_auto_toml_config` (function, `deploynator/_toml.py:152`) `def _auto_toml_config(project_path)` - Config auto para proyectos sin deploynator.toml (C primero).
 - `TomlConfig` (class, `deploynator/_toml.py:179`) `class TomlConfig`
 - `__post_init__` (method, `deploynator/_toml.py:195`) `def __post_init__(self)`
-- `_clamp_timeout` (method, `deploynator/_toml.py:203`) `def _clamp_timeout(value)`
-- `load_toml_config` (method, `deploynator/_toml.py:211`) `def load_toml_config(project_path)`
+- `_clamp_timeout` (function, `deploynator/_toml.py:203`) `def _clamp_timeout(value)`
+- `load_toml_config` (function, `deploynator/_toml.py:211`) `def load_toml_config(project_path)`
 - `TestBDDDeployScenarios` (class, `tests/bdd_test_deploy.py:28`) `class TestBDDDeployScenarios`
 - `project` (method, `tests/bdd_test_deploy.py:30`) `def project(self)`
 - `test_version_bump_by_commit_type` (method, `tests/bdd_test_deploy.py:46`) `def test_version_bump_by_commit_type(self, project, commit_type, expected_bump,`
@@ -63,7 +63,6 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 - [EXTRACTED] depends_on community 1 <-> 3 (strength 0.9): Extracted import edge crosses communities: deploynator/_docs.py imports deploynator/_config.py.
 - [EXTRACTED] depends_on community 2 <-> 1 (strength 0.9): Extracted import edge crosses communities: tests/test_init.py imports deploynator/_toml.py.
 - [INFERRED] bridges community 0 <-> 1 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_runner.py in 4 hops.
-- [INFERRED] shares_context community 1 <-> 4 (strength 0.5): Inferred shared context (layer utility) with no import path between community 1 (deploynator: _toml) and community 4 (orphans).
 
 ## Risks
 

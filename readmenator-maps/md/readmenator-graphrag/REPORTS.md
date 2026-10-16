@@ -96,7 +96,7 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.9).
 - Hotspot `tests/test_init.py`: 6 symbols, 30 connections (score 0.25).
 - Dataflow: 2 INFERRED issues (first: UNCHECKED_ALLOC in test_deploy_sh_content_generic).
 - Surprising bridge: app.py <-> test_models.py (4 hops across communities).
-- Key entities: file:deploynator/_mcp_server.py, file:tests/test_install_example.py, file:tests/test_cli_mcp.py, sym:deploynator/__main__.py::main@167, file:tests/test_init.py, file:deploynator/__main__.py, sym:deploynator/_mcp_server.py::_register_all@180, sym:deploynator/_mcp_server.py::read@82
+- Key entities: file:deploynator/_mcp_server.py, file:tests/test_install_example.py, file:tests/test_cli_mcp.py, sym:deploynator/__main__.py::main@171, file:tests/test_init.py, file:deploynator/__main__.py, sym:deploynator/_mcp_server.py::_register_all@180, sym:deploynator/_mcp_server.py::read@82
 - Rating 3.0/10 = 7 x PageRank share 0.43 + 3 x risk 0.00. Internal imports: 24.
 
 ## unassigned files (`c4`, community, rating 0.9)

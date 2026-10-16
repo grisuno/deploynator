@@ -356,6 +356,7 @@ version:
         no_test: bool = False,
         no_docs: bool = False,
         no_pypi: bool = False,
+        verbose: bool = False,
     ) -> list[DeployResult]:
         base = os.getcwd()
         ctype = CommitType.from_string(commit_type)
@@ -424,6 +425,7 @@ version:
                 run_docs=not no_docs,
                 force_bump=bump or None,
                 run_pypi=not no_pypi,
+                verbose=verbose,
             )
             results.append(result)
             self._print_result(result)

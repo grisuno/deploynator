@@ -22,8 +22,8 @@ This community groups 7 file(s) rooted at `deploynator` with dominant language p
 
 - `main` (function, `app.py:12`) `def main()`
 - `build_parser` (function, `deploynator/__main__.py:17`) `def build_parser()`
-- `preprocess_argv` (function, `deploynator/__main__.py:133`) `def preprocess_argv(argv)`
-- `main` (function, `deploynator/__main__.py:167`) `def main(argv)`
+- `preprocess_argv` (function, `deploynator/__main__.py:137`) `def preprocess_argv(argv)`
+- `main` (function, `deploynator/__main__.py:171`) `def main(argv)`
 - `MCPRequest` (class, `deploynator/_mcp_server.py:35`) `class MCPRequest`
 - `__init__` (method, `deploynator/_mcp_server.py:36`) `def __init__(self, msg)`
 - `is_notification` (method, `deploynator/_mcp_server.py:43`) `def is_notification(self)`

@@ -238,6 +238,7 @@
 - [`list_make_targets`](modules/deploynator._toml.py.md#list_make_targets) function in `deploynator._toml`
 - [`list_projects`](modules/deploynator._app.py.md#deploynatorapp-list_projects) method of `DeploynatorApp` in `deploynator._app`
 - [`load_toml_config`](modules/deploynator._toml.py.md#load_toml_config) function in `deploynator._toml`
+- [`looks_like_packaging_project`](modules/deploynator._toml.py.md#looks_like_packaging_project) function in `deploynator._toml`
 
 <a id="m"></a>
 

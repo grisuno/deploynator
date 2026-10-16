@@ -24,13 +24,13 @@ flowchart TB
     end
     subgraph lane_2["Tier 3"]
         direction LR
-        n_c1["deploynator: _toml<br/>4 files, 23 symbols<br/>Core / utility"]:::cycle
+        n_c1["deploynator: _toml<br/>4 files, 24 symbols<br/>Core / utility"]:::cycle
     end
     subgraph lane_3["Tier 4 - foundation"]
         direction LR
         n_c3["deploynator: _changelog<br/>3 files, 19 symbols<br/>Core / utility"]:::cycle
     end
-    n_c0 ==>|"5"| n_c1
+    n_c0 ==>|"6"| n_c1
     n_c1 ==>|"4"| n_c3
     n_c2 -->|"2"| n_c0
     n_c0 <-.-|"1 upward"| n_c3
@@ -84,32 +84,32 @@ flowchart LR
     n_deploynator__app_py__DeploynatorApp["_app.DeploynatorApp<br/>_app.py:20"]:::external
     n_deploynator__config_py__create["_config.Config.create<br/>_config.py:79"]:::external
     n_deploynator__config_py__Config["_config.Config<br/>_config.py:8"]:::external
-    n_deploynator__app_py__list_projects["_app.DeploynatorApp.list_projects<br/>_app.py:432"]:::external
+    n_deploynator__app_py__list_projects["_app.DeploynatorApp.list_projects<br/>_app.py:463"]:::external
     n_deploynator__deploy_py__discover["_deploy.ProjectDiscovery.discover<br/>_deploy.py:35"]:::external
     n_deploynator__deploy_py___load_single["_deploy.ProjectDiscovery._load_single<br/>_deploy.py:63"]:::external
     n_deploynator__models_py__from_dict_139["_models.ProjectConfig.from_dict<br/>_models.py:139"]:::external
-    n_deploynator__app_py__status["_app.DeploynatorApp.status<br/>_app.py:412"]:::external
+    n_deploynator__app_py__status["_app.DeploynatorApp.status<br/>_app.py:443"]:::external
     n_deploynator__git_py__GitOperations["_git.GitOperations<br/>_git.py:10"]:::external
-    n_deploynator__app_py___resolve_project_path["_app.DeploynatorApp._resolve_project_path<br/>_app.py:247"]:::external
+    n_deploynator__app_py___resolve_project_path["_app.DeploynatorApp._resolve_project_path<br/>_app.py:276"]:::external
     n_deploynator__deploy_py__find_by_name["_deploy.ProjectDiscovery.find_by_name<br/>_deploy.py:56"]:::external
     n_deploynator__deploy_py___resolve_project_path["_deploy.DeployOrchestrator._resolve_project_path<br/>_deploy.py:88"]:::external
-    n_deploynator__app_py___looks_like_path["_app.DeploynatorApp._looks_like_path<br/>_app.py:240"]:::external
+    n_deploynator__app_py___looks_like_path["_app.DeploynatorApp._looks_like_path<br/>_app.py:269"]:::external
     n_deploynator__git_py__current_branch["_git.GitOperations.current_branch<br/>_git.py:234"]:::external
     n_deploynator__git_py__is_dirty["_git.GitOperations.is_dirty<br/>_git.py:246"]:::external
     n_deploynator__git_py__has_remote["_git.GitOperations.has_remote<br/>_git.py:256"]:::external
-    n_deploynator__app_py__release["_app.DeploynatorApp.release<br/>_app.py:316"]:::external
+    n_deploynator__app_py__release["_app.DeploynatorApp.release<br/>_app.py:345"]:::external
     n_deploynator__models_py__from_string_58["_models.CommitType.from_string<br/>_models.py:58"]:::external
-    n_deploynator__toml_py__load_toml_config["_toml.load_toml_config<br/>_toml.py:164"]:::external
-    n_deploynator__toml_py___auto_toml_config["_toml._auto_toml_config<br/>Config auto para proyectos sin deploynator.to...<br/>_toml.py:110"]:::external
-    n_deploynator__toml_py__detect_test_commands["_toml.detect_test_commands<br/>Detecta comandos de test para proyectos C/aut...<br/>_toml.py:77"]:::external
+    n_deploynator__toml_py__load_toml_config["_toml.load_toml_config<br/>_toml.py:211"]:::external
+    n_deploynator__toml_py___auto_toml_config["_toml._auto_toml_config<br/>Config auto para proyectos sin deploynator.to...<br/>_toml.py:152"]:::external
+    n_deploynator__toml_py__detect_test_commands["_toml.detect_test_commands<br/>Detecta comandos de test para proyectos C/aut...<br/>_toml.py:102"]:::external
     n_deploynator__toml_py___has_python_tests["_toml._has_python_tests<br/>_toml.py:64"]:::external
-    n_deploynator__toml_py__TomlConfig["_toml.TomlConfig<br/>_toml.py:132"]:::external
+    n_deploynator__toml_py__TomlConfig["_toml.TomlConfig<br/>_toml.py:179"]:::external
+    n_deploynator__toml_py__looks_like_packaging_project["_toml.looks_like_packaging_project<br/>Inferencia runtime (multi-proyecto): ¿es un p...<br/>_toml.py:76"]:::external
     n_deploynator__toml_py__list_make_targets["_toml.list_make_targets<br/>Lee el Makefile y devuelve sus targets sin ej...<br/>_toml.py:31"]:::external
-    n_deploynator__toml_py___clamp_timeout["_toml._clamp_timeout<br/>_toml.py:156"]:::external
+    n_deploynator__toml_py___clamp_timeout["_toml._clamp_timeout<br/>_toml.py:203"]:::external
     n_deploynator__models_py__ProjectConfig["_models.ProjectConfig<br/>_models.py:130"]:::external
     n_deploynator__models_py__VersionConfig["_models.VersionConfig<br/>_models.py:115"]:::external
     n_deploynator__models_py__DeployResult["_models.DeployResult<br/>_models.py:276"]:::external
-    n_deploynator__models_py__from_string["_models.Platform.from_string<br/>_models.py:16"]:::external
     n_app_py__main -->|"1"| n_deploynator__app_py__DeploynatorApp
     n_app_py__main -->|"2"| n_deploynator__config_py__create
     n_deploynator__config_py__create -->|"1"| n_deploynator__config_py__Config
@@ -139,6 +139,7 @@ flowchart LR
     n_deploynator__toml_py___auto_toml_config -->|"1"| n_deploynator__toml_py__detect_test_commands
     n_deploynator__toml_py___auto_toml_config -->|"2"| n_deploynator__toml_py___has_python_tests
     n_deploynator__toml_py___auto_toml_config -->|"3"| n_deploynator__toml_py__TomlConfig
+    n_deploynator__toml_py___auto_toml_config -->|"4"| n_deploynator__toml_py__looks_like_packaging_project
     n_deploynator__toml_py__load_toml_config -->|"2"| n_deploynator__toml_py__TomlConfig
     n_deploynator__toml_py__load_toml_config -.-> n_deploynator__config_py__create
     n_deploynator__toml_py__load_toml_config -->|"3"| n_deploynator__toml_py__detect_test_commands
@@ -149,7 +150,6 @@ flowchart LR
     n_deploynator__app_py__release -->|"4"| n_deploynator__models_py__VersionConfig
     n_deploynator__app_py__release -.-> n_deploynator__deploy_py___load_single
     n_deploynator__app_py__release -->|"5"| n_deploynator__models_py__DeployResult
-    n_deploynator__app_py__release -->|"6"| n_deploynator__models_py__from_string
 ```
 
 Cross-file sequence:
@@ -182,12 +182,11 @@ sequenceDiagram
     p_deploynator__app_py->>p_deploynator__models_py: ProjectConfig()
     p_deploynator__app_py->>p_deploynator__models_py: VersionConfig()
     p_deploynator__app_py->>p_deploynator__models_py: DeployResult()
-    p_deploynator__app_py->>p_deploynator__models_py: Platform.from_string()
 ```
 
 ### `__main__.main`
 
-`deploynator/__main__.py:167`, score 9: entry-style name `main`; defined in entry file `__main__.py`; called from the `__main__` guard.
+`deploynator/__main__.py:171`, score 9: entry-style name `main`; defined in entry file `__main__.py`; called from the `__main__` guard.
 
 Control flow:
 
@@ -321,28 +320,29 @@ flowchart LR
     classDef default fill:#111827,stroke:#38bdf8,color:#e5e7eb;
     classDef entry fill:#0e7490,stroke:#22d3ee,color:#ecfeff,stroke-width:2px;
     classDef external fill:#1a1530,stroke:#a78bfa,color:#ede9fe;
-    n_deploynator___main___py__main["__main__.main<br/>__main__.py:167"]:::entry
+    n_deploynator___main___py__main["__main__.main<br/>__main__.py:171"]:::entry
     n_deploynator__config_py__create["_config.Config.create<br/>_config.py:79"]:::external
     n_deploynator__config_py__Config["_config.Config<br/>_config.py:8"]:::external
     n_deploynator__app_py__DeploynatorApp["_app.DeploynatorApp<br/>_app.py:20"]:::external
-    n_deploynator__app_py__interactive_menu["_app.DeploynatorApp.interactive_menu<br/>_app.py:492"]:::external
-    n_deploynator___main___py__preprocess_argv["__main__.preprocess_argv<br/>__main__.py:133"]:::default
+    n_deploynator__app_py__interactive_menu["_app.DeploynatorApp.interactive_menu<br/>_app.py:523"]:::external
+    n_deploynator___main___py__preprocess_argv["__main__.preprocess_argv<br/>__main__.py:137"]:::default
     n_deploynator___main___py__build_parser["__main__.build_parser<br/>__main__.py:17"]:::default
     n_deploynator__models_py__valid_types["_models.CommitType.valid_types<br/>_models.py:65"]:::external
-    n_deploynator__app_py__release["_app.DeploynatorApp.release<br/>_app.py:316"]:::external
+    n_deploynator__app_py__release["_app.DeploynatorApp.release<br/>_app.py:345"]:::external
     n_deploynator__models_py__from_string_58["_models.CommitType.from_string<br/>_models.py:58"]:::external
     n_deploynator__deploy_py__discover["_deploy.ProjectDiscovery.discover<br/>_deploy.py:35"]:::external
     n_deploynator__deploy_py___load_single["_deploy.ProjectDiscovery._load_single<br/>_deploy.py:63"]:::external
     n_deploynator__models_py__from_dict_139["_models.ProjectConfig.from_dict<br/>_models.py:139"]:::external
     n_deploynator__deploy_py__find_by_name["_deploy.ProjectDiscovery.find_by_name<br/>_deploy.py:56"]:::external
-    n_deploynator__app_py___looks_like_path["_app.DeploynatorApp._looks_like_path<br/>_app.py:240"]:::external
-    n_deploynator__toml_py__load_toml_config["_toml.load_toml_config<br/>_toml.py:164"]:::external
-    n_deploynator__toml_py___auto_toml_config["_toml._auto_toml_config<br/>Config auto para proyectos sin deploynator.to...<br/>_toml.py:110"]:::external
-    n_deploynator__toml_py__detect_test_commands["_toml.detect_test_commands<br/>Detecta comandos de test para proyectos C/aut...<br/>_toml.py:77"]:::external
+    n_deploynator__app_py___looks_like_path["_app.DeploynatorApp._looks_like_path<br/>_app.py:269"]:::external
+    n_deploynator__toml_py__load_toml_config["_toml.load_toml_config<br/>_toml.py:211"]:::external
+    n_deploynator__toml_py___auto_toml_config["_toml._auto_toml_config<br/>Config auto para proyectos sin deploynator.to...<br/>_toml.py:152"]:::external
+    n_deploynator__toml_py__detect_test_commands["_toml.detect_test_commands<br/>Detecta comandos de test para proyectos C/aut...<br/>_toml.py:102"]:::external
     n_deploynator__toml_py___has_python_tests["_toml._has_python_tests<br/>_toml.py:64"]:::external
-    n_deploynator__toml_py__TomlConfig["_toml.TomlConfig<br/>_toml.py:132"]:::external
+    n_deploynator__toml_py__TomlConfig["_toml.TomlConfig<br/>_toml.py:179"]:::external
+    n_deploynator__toml_py__looks_like_packaging_project["_toml.looks_like_packaging_project<br/>Inferencia runtime (multi-proyecto): ¿es un p...<br/>_toml.py:76"]:::external
     n_deploynator__toml_py__list_make_targets["_toml.list_make_targets<br/>Lee el Makefile y devuelve sus targets sin ej...<br/>_toml.py:31"]:::external
-    n_deploynator__toml_py___clamp_timeout["_toml._clamp_timeout<br/>_toml.py:156"]:::external
+    n_deploynator__toml_py___clamp_timeout["_toml._clamp_timeout<br/>_toml.py:203"]:::external
     n_deploynator__models_py__ProjectConfig["_models.ProjectConfig<br/>_models.py:130"]:::external
     n_deploynator__models_py__VersionConfig["_models.VersionConfig<br/>_models.py:115"]:::external
     n_deploynator__models_py__DeployResult["_models.DeployResult<br/>_models.py:276"]:::external
@@ -351,7 +351,6 @@ flowchart LR
     n_deploynator__deploy_py___resolve_project_path["_deploy.DeployOrchestrator._resolve_project_path<br/>_deploy.py:88"]:::external
     n_deploynator__semver_py__get_current_version["_semver.SemverManager.get_current_version<br/>_semver.py:21"]:::external
     n_deploynator__models_py__parse_217["_models.VersionInfo.parse<br/>_models.py:217"]:::external
-    n_deploynator__models_py__VersionInfo["_models.VersionInfo<br/>_models.py:208"]:::external
     n_deploynator___main___py__main -->|"1"| n_deploynator__config_py__create
     n_deploynator__config_py__create -->|"1"| n_deploynator__config_py__Config
     n_deploynator___main___py__main -->|"2"| n_deploynator__app_py__DeploynatorApp
@@ -374,6 +373,7 @@ flowchart LR
     n_deploynator__toml_py___auto_toml_config -->|"1"| n_deploynator__toml_py__detect_test_commands
     n_deploynator__toml_py___auto_toml_config -->|"2"| n_deploynator__toml_py___has_python_tests
     n_deploynator__toml_py___auto_toml_config -->|"3"| n_deploynator__toml_py__TomlConfig
+    n_deploynator__toml_py___auto_toml_config -->|"4"| n_deploynator__toml_py__looks_like_packaging_project
     n_deploynator__toml_py__load_toml_config -->|"2"| n_deploynator__toml_py__TomlConfig
     n_deploynator__toml_py__load_toml_config -.-> n_deploynator__config_py__create
     n_deploynator__toml_py__load_toml_config -->|"3"| n_deploynator__toml_py__detect_test_commands
@@ -391,7 +391,6 @@ flowchart LR
     n_deploynator__deploy_py__deploy -.-> n_deploynator__toml_py__load_toml_config
     n_deploynator__deploy_py__deploy -->|"2"| n_deploynator__semver_py__get_current_version
     n_deploynator__semver_py__get_current_version -->|"1"| n_deploynator__models_py__parse_217
-    n_deploynator__semver_py__get_current_version -->|"2"| n_deploynator__models_py__VersionInfo
 ```
 
 Cross-file sequence:
@@ -423,7 +422,6 @@ sequenceDiagram
     p_deploynator__app_py->>p_deploynator__deploy_py: DeployOrchestrator.deploy()
     p_deploynator__deploy_py->>p_deploynator__semver_py: SemverManager.get_current_version()
     p_deploynator__semver_py->>p_deploynator__models_py: VersionInfo.parse()
-    p_deploynator__semver_py->>p_deploynator__models_py: VersionInfo()
 ```
 
 ### `_mcp_server (__main__)`

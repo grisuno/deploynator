@@ -1,17 +1,17 @@
 {
   "tool": "readmenator",
   "schema_version": 2,
-  "generated_at": "2026-10-16T14:50:31Z",
+  "generated_at": "2026-10-16T23:15:57Z",
   "project_root": ".",
   "project_name": "deploynator",
-  "git_commit": "68595c6f99f4786f2e4c059569a5db77b052b1c9",
+  "git_commit": "4d081ffeaf67e0c3342c0085f6802901f76d16e0",
   "git_branch": "main",
-  "source_fingerprint": "9207d4c3c23592d10233d22010858a0d84fed434d38bf283e7e7a50a03a4709f",
+  "source_fingerprint": "0d2484b4b988824b74b5e39804d2d519aead820af1c02a8cc219a44961b8d4b6",
   "freshness_check": "readmenator . fresh  # exit 0 = docs match sources, exit 1 = run: readmenator . --rebuild",
   "files": 35,
   "symbols": 442,
   "imports": 377,
-  "calls": 2145,
+  "calls": 2151,
   "inherits": 6,
   "resolved_imports": 221,
   "security_findings": 0,
@@ -47,7 +47,7 @@
     {
       "path": "API.md",
       "lines": 208,
-      "approx_tokens": 4876
+      "approx_tokens": 4874
     },
     {
       "path": "ARCHITECTURE.md",
@@ -72,7 +72,7 @@
     {
       "path": "KB_deploynator.md",
       "lines": 337,
-      "approx_tokens": 5407
+      "approx_tokens": 5411
     },
     {
       "path": "KB_root.md",
@@ -82,17 +82,12 @@
     {
       "path": "KB_tests.md",
       "lines": 324,
-      "approx_tokens": 5636
+      "approx_tokens": 5637
     },
     {
       "path": "MEMORY.md",
       "lines": 98,
-      "approx_tokens": 1520
-    },
-    {
-      "path": "README.md",
-      "lines": 33,
-      "approx_tokens": 505
+      "approx_tokens": 1519
     },
     {
       "path": "SECURITY.md",
@@ -102,7 +97,7 @@
     {
       "path": "SYMBOLS.md",
       "lines": 446,
-      "approx_tokens": 11437
+      "approx_tokens": 11442
     },
     {
       "path": "recipes/add-function.md",

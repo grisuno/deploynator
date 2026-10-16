@@ -176,7 +176,7 @@ def clean(self, project_path: str, toml: TomlConfig) -> None
 `method` | [deploynator/_pypi.py:107](../../deploynator/_pypi.py#L107)
 
 ```python
-def run(self, project_path: str, toml: TomlConfig, version: str, token: str | None = None) -> tuple[bool, str]
+def run(self, project_path: str, toml: TomlConfig, version: str, token: str | None = None, verbose: bool = False) -> tuple[bool, str]
 ```
 
 **Parameters**
@@ -187,6 +187,7 @@ def run(self, project_path: str, toml: TomlConfig, version: str, token: str | No
 | `toml` | `TomlConfig` |  |  |
 | `version` | `str` |  |  |
 | `token` | `str \| None` | `None` |  |
+| `verbose` | `bool` | `False` |  |
 
 **Returns:** `tuple[bool, str]`
 

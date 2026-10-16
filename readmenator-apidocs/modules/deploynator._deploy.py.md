@@ -214,7 +214,7 @@ def __init__(self, config: Config) -> None
 `method` | [deploynator/_deploy.py:97](../../deploynator/_deploy.py#L97)
 
 ```python
-def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, scope: str = '', body: str = '', dry_run: bool = False, platforms_override: Optional[list[Platform]] = None, run_tests: bool = True, run_docs: bool = True, force_bump: Optional[str] = None, run_pypi: bool = True) -> DeployResult
+def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, scope: str = '', body: str = '', dry_run: bool = False, platforms_override: Optional[list[Platform]] = None, run_tests: bool = True, run_docs: bool = True, force_bump: Optional[str] = None, run_pypi: bool = True, verbose: bool = False) -> DeployResult
 ```
 
 **Parameters**
@@ -232,6 +232,7 @@ def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, 
 | `run_docs` | `bool` | `True` |  |
 | `force_bump` | `Optional[str]` | `None` |  |
 | `run_pypi` | `bool` | `True` |  |
+| `verbose` | `bool` | `False` |  |
 
 **Returns:** `DeployResult`
 
@@ -243,7 +244,7 @@ def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, 
 
 #### `DeployOrchestrator.generate_workflows`
 
-`method` | [deploynator/_deploy.py:431](../../deploynator/_deploy.py#L431)
+`method` | [deploynator/_deploy.py:433](../../deploynator/_deploy.py#L433)
 
 ```python
 def generate_workflows(self, project: ProjectConfig, output_dir: str = '.github/workflows') -> list[str]
@@ -264,7 +265,7 @@ def generate_workflows(self, project: ProjectConfig, output_dir: str = '.github/
 
 #### `DeployOrchestrator.install_dependencies`
 
-`method` | [deploynator/_deploy.py:499](../../deploynator/_deploy.py#L499)
+`method` | [deploynator/_deploy.py:501](../../deploynator/_deploy.py#L501)
 
 ```python
 def install_dependencies(self, project: ProjectConfig) -> dict[str, bool]
@@ -286,7 +287,7 @@ def install_dependencies(self, project: ProjectConfig) -> dict[str, bool]
 
 #### `DeployOrchestrator.integrate_readmenator`
 
-`method` | [deploynator/_deploy.py:509](../../deploynator/_deploy.py#L509)
+`method` | [deploynator/_deploy.py:511](../../deploynator/_deploy.py#L511)
 
 ```python
 def integrate_readmenator(self, project_path: str) -> bool
@@ -308,7 +309,7 @@ def integrate_readmenator(self, project_path: str) -> bool
 
 #### `DeployOrchestrator.install_lazygit`
 
-`method` | [deploynator/_deploy.py:543](../../deploynator/_deploy.py#L543)
+`method` | [deploynator/_deploy.py:545](../../deploynator/_deploy.py#L545)
 
 ```python
 def install_lazygit(self) -> bool
