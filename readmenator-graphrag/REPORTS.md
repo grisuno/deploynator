@@ -1,6 +1,6 @@
 # GraphRAG Community Reports
 
-Entities: 527 | Relationships: 1474 | Communities: 5 | Themes: 2 | Text units: 428
+Entities: 528 | Relationships: 1477 | Communities: 5 | Themes: 2 | Text units: 429
 
 Query with `readmenator . ask "<question>"` (local: BM25 + Personalized PageRank; global: map-reduce over these reports) or the MCP tool `readmenator.graphrag`.
 
@@ -49,9 +49,9 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.9).
 
 - `deploynator/_models.py` ranks 1 by PageRank, 24 importers, 27 symbols.
 - `deploynator/_app.py` ranks 2 by PageRank, 1 importers, 32 symbols: install_packages: pip install/upgrade packages (default: deploynator from PyPI).
-- `deploynator/_deploy.py` ranks 3 by PageRank, 15 importers, 19 symbols: _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.
+- `deploynator/_deploy.py` ranks 3 by PageRank, 15 importers, 20 symbols: _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.
 - Hotspot `deploynator/_app.py`: 32 symbols, 39 connections (score 0.55).
-- Hotspot `deploynator/_deploy.py`: 19 symbols, 45 connections (score 0.47).
+- Hotspot `deploynator/_deploy.py`: 20 symbols, 45 connections (score 0.48).
 - Taint: 11 paths reach this group via subprocess.
 - Surprising bridge: app.py <-> test_models.py (4 hops across communities).
 - Key entities: file:tests/test_models.py, file:deploynator/_platforms.py, file:deploynator/_models.py, file:deploynator/_deploy.py, file:deploynator/_app.py, sym:deploynator/_deploy.py::deploy@97, file:deploynator/_git.py, file:tests/test_pipeline.py

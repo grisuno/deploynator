@@ -98,16 +98,17 @@
   - `__init__` (method, line 77) `def __init__(self, config)`
   - `_resolve_project_path` (method, line 88) `def _resolve_project_path(project)`
   - `deploy` (method, line 97) `def deploy(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...`
-  - `_gh_release_in_repo` (method, line 360) `def _gh_release_in_repo(self, repo_path, project_name, version, notes, branch)`
-  - `_add_temp_remote` (method, line 393) `def _add_temp_remote(self, repo_path, name, url)`
-  - `_remove_temp_remote` (method, line 402) `def _remove_temp_remote(self, repo_path, name)`
-  - `_get_remote_url` (method, line 412) `def _get_remote_url(repo_path, pc)`
-  - `generate_workflows` (method, line 421) `def generate_workflows(self, project, output_dir)`
-  - `_ci_workflow_content` (method, line 440) `def _ci_workflow_content(self, project)`
-  - `_release_workflow_content` (method, line 461) `def _release_workflow_content(self, project)`
-  - `install_dependencies` (method, line 489) `def install_dependencies(self, project)`
-  - `integrate_readmenator` (method, line 499) `def integrate_readmenator(self, project_path)`
-  - `install_lazygit` (method, line 533) `def install_lazygit(self)`
+  - `_gh_release_in_repo` (method, line 370) `def _gh_release_in_repo(self, repo_path, project_name, version, notes, branch)`
+  - `_add_temp_remote` (method, line 403) `def _add_temp_remote(self, repo_path, name, url)`
+  - `_remove_temp_remote` (method, line 412) `def _remove_temp_remote(self, repo_path, name)`
+  - `_get_remote_url` (method, line 422) `def _get_remote_url(repo_path, pc)`
+  - `generate_workflows` (method, line 431) `def generate_workflows(self, project, output_dir)`
+  - `_ci_workflow_content` (method, line 450) `def _ci_workflow_content(self, project)`
+  - `_release_workflow_content` (method, line 471) `def _release_workflow_content(self, project)`
+  - `install_dependencies` (method, line 499) `def install_dependencies(self, project)`
+  - `integrate_readmenator` (method, line 509) `def integrate_readmenator(self, project_path)`
+  - `install_lazygit` (method, line 543) `def install_lazygit(self)`
+  - `_listed` (function, line 196) `def _listed(files)`
 - Depends on: `deploynator/_changelog.py`, `deploynator/_config.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`
 - Imported by: `deploynator/_app.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`
 
@@ -131,21 +132,21 @@
   - `gpg_sign_flag` (method, line 32) `def gpg_sign_flag(self)`
   - `clone` (method, line 36) `def clone(self, url, dest, depth)`
   - `add_all` (method, line 46) `def add_all(self, repo_path)`
-  - `commit` (method, line 56) `def commit(self, repo_path, message)`
-  - `amend_no_edit` (method, line 68) `def amend_no_edit(self, repo_path)`
-  - `tag` (method, line 77) `def tag(self, repo_path, tag_name, message)`
-  - `delete_tag` (method, line 87) `def delete_tag(self, repo_path, tag_name)`
-  - `tag_exists` (method, line 97) `def tag_exists(self, repo_path, tag_name)`
-  - `push` (method, line 107) `def push(self, repo_path, remote, branch, follow_tags)`
-  - `push_tags` (method, line 117) `def push_tags(self, repo_path, remote)`
-  - `create_branch` (method, line 127) `def create_branch(self, repo_path, branch_name, base)`
-  - `checkout` (method, line 143) `def checkout(self, repo_path, branch)`
-  - `get_changed_files` (method, line 153) `def get_changed_files(self, repo_path, from_ref, to_ref)`
-  - `get_log` (method, line 184) `def get_log(self, repo_path, from_ref, to_ref, format_str)`
-  - `get_start_ref` (method, line 196) `def get_start_ref(self, repo_path)`
-  - `current_branch` (method, line 214) `def current_branch(self, repo_path)`
-  - `is_dirty` (method, line 226) `def is_dirty(self, repo_path)`
-  - `has_remote` (method, line 236) `def has_remote(self, repo_path, remote)`
+  - `commit` (method, line 59) `def commit(self, repo_path, message)`
+  - `amend_no_edit` (method, line 88) `def amend_no_edit(self, repo_path)`
+  - `tag` (method, line 97) `def tag(self, repo_path, tag_name, message)`
+  - `delete_tag` (method, line 107) `def delete_tag(self, repo_path, tag_name)`
+  - `tag_exists` (method, line 117) `def tag_exists(self, repo_path, tag_name)`
+  - `push` (method, line 127) `def push(self, repo_path, remote, branch, follow_tags)`
+  - `push_tags` (method, line 137) `def push_tags(self, repo_path, remote)`
+  - `create_branch` (method, line 147) `def create_branch(self, repo_path, branch_name, base)`
+  - `checkout` (method, line 163) `def checkout(self, repo_path, branch)`
+  - `get_changed_files` (method, line 173) `def get_changed_files(self, repo_path, from_ref, to_ref)`
+  - `get_log` (method, line 204) `def get_log(self, repo_path, from_ref, to_ref, format_str)`
+  - `get_start_ref` (method, line 216) `def get_start_ref(self, repo_path)`
+  - `current_branch` (method, line 234) `def current_branch(self, repo_path)`
+  - `is_dirty` (method, line 246) `def is_dirty(self, repo_path)`
+  - `has_remote` (method, line 256) `def has_remote(self, repo_path, remote)`
 - Depends on: `deploynator/_config.py`
 - Imported by: `deploynator/_app.py`, `deploynator/_deploy.py`
 

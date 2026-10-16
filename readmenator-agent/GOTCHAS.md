@@ -5,7 +5,7 @@
 These files have the most connections. Changes here have high blast radius.
 
 - `deploynator/_config.py` (score: 54.60, imported by 27 files)
-- `deploynator/_deploy.py` (score: 35.90, imported by 6 files)
+- `deploynator/_deploy.py` (score: 36.00, imported by 6 files)
 - `deploynator/_models.py` (score: 30.70, imported by 14 files)
 - `deploynator/_toml.py` (score: 22.40, imported by 10 files)
 - `deploynator/_app.py` (score: 17.20, imported by 1 files)
@@ -32,7 +32,7 @@ Editing these files can break the listed number of dependents. Run their tests a
 
 - `deploynator/_app.py` -- complexity: 0.7, centrality: 0.4, combined: 0.5
 - `deploynator/_config.py` -- complexity: 0.1, centrality: 0.8, combined: 0.5
-- `deploynator/_deploy.py` -- complexity: 0.4, centrality: 0.5, combined: 0.5
+- `deploynator/_deploy.py` -- complexity: 0.5, centrality: 0.5, combined: 0.5
 - `deploynator/_models.py` -- complexity: 0.6, centrality: 0.3, combined: 0.4
 - `deploynator/_platforms.py` -- complexity: 0.8, centrality: 0.1, combined: 0.4
 - `deploynator/_mcp_server.py` -- complexity: 0.7, centrality: 0.2, combined: 0.4

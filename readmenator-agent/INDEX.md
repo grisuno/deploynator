@@ -9,7 +9,7 @@
 | `deploynator/_app.py` | install_packages: pip install/upgrade packages (default: deploynator from PyPI). | deploynator | 32 | 1 |
 | `deploynator/_changelog.py` | - | deploynator | 9 | 2 |
 | `deploynator/_config.py` | - | deploynator | 6 | 27 |
-| `deploynator/_deploy.py` | _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin. | deploynator | 19 | 6 |
+| `deploynator/_deploy.py` | _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin. | deploynator | 20 | 6 |
 | `deploynator/_docs.py` | - | deploynator | 3 | 3 |
 | `deploynator/_git.py` | - | deploynator | 21 | 2 |
 | `deploynator/_mcp_server.py` | MCP (Model Context Protocol) stdio server for deploynator. | deploynator | 32 | 2 |

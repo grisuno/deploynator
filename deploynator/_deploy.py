@@ -189,12 +189,22 @@ class DeployOrchestrator:
 
         changed_files = self._git.get_changed_files(repo_path, start_ref)
         listfiles_parts = []
+        # Cap each section: full file lists can exceed MAX_ARG_STRLEN
+        # (E2BIG) when passed via `git commit -m`. Counts stay exact.
+        _MAX_LISTED = 50
+
+        def _listed(files: list) -> str:
+            shown = [f"- {f}" for f in files[:_MAX_LISTED]]
+            if len(files) > _MAX_LISTED:
+                shown.append(f"- ... and {len(files) - _MAX_LISTED} more")
+            return "\n".join(shown)
+
         if changed_files["modified"]:
-            listfiles_parts.append("Modified file(s):\n" + "\n".join(f"- {f}" for f in changed_files["modified"]))
+            listfiles_parts.append(f"Modified file(s) [{len(changed_files['modified'])}]:\n" + _listed(changed_files["modified"]))
         if changed_files["deleted"]:
-            listfiles_parts.append("Deleted file(s):\n" + "\n".join(f"- {f}" for f in changed_files["deleted"]))
+            listfiles_parts.append(f"Deleted file(s) [{len(changed_files['deleted'])}]:\n" + _listed(changed_files["deleted"]))
         if changed_files["created"]:
-            listfiles_parts.append("Created file(s):\n" + "\n".join(f"- {f}" for f in changed_files["created"]))
+            listfiles_parts.append(f"Created file(s) [{len(changed_files['created'])}]:\n" + _listed(changed_files["created"]))
         listfiles_str = "\n".join(listfiles_parts)
 
         footer = (

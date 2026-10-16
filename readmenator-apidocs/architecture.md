@@ -20,7 +20,7 @@ flowchart TB
     end
     subgraph lane_1["Tier 2"]
         direction LR
-        n_c0["deploynator: _platforms<br/>6 files, 142 symbols<br/>Core / utility"]:::cycle
+        n_c0["deploynator: _platforms<br/>6 files, 143 symbols<br/>Core / utility"]:::cycle
     end
     subgraph lane_2["Tier 3"]
         direction LR
@@ -94,9 +94,9 @@ flowchart LR
     n_deploynator__deploy_py__find_by_name["_deploy.ProjectDiscovery.find_by_name<br/>_deploy.py:56"]:::external
     n_deploynator__deploy_py___resolve_project_path["_deploy.DeployOrchestrator._resolve_project_path<br/>_deploy.py:88"]:::external
     n_deploynator__app_py___looks_like_path["_app.DeploynatorApp._looks_like_path<br/>_app.py:240"]:::external
-    n_deploynator__git_py__current_branch["_git.GitOperations.current_branch<br/>_git.py:214"]:::external
-    n_deploynator__git_py__is_dirty["_git.GitOperations.is_dirty<br/>_git.py:226"]:::external
-    n_deploynator__git_py__has_remote["_git.GitOperations.has_remote<br/>_git.py:236"]:::external
+    n_deploynator__git_py__current_branch["_git.GitOperations.current_branch<br/>_git.py:234"]:::external
+    n_deploynator__git_py__is_dirty["_git.GitOperations.is_dirty<br/>_git.py:246"]:::external
+    n_deploynator__git_py__has_remote["_git.GitOperations.has_remote<br/>_git.py:256"]:::external
     n_deploynator__app_py__release["_app.DeploynatorApp.release<br/>_app.py:316"]:::external
     n_deploynator__models_py__from_string_58["_models.CommitType.from_string<br/>_models.py:58"]:::external
     n_deploynator__toml_py__load_toml_config["_toml.load_toml_config<br/>_toml.py:46"]:::external

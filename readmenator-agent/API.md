@@ -58,10 +58,10 @@ Imported by: `deploynator/_app.py`, `tests/bdd_test_deploy.py`, `tests/test_depl
 - `ProjectDiscovery.find_by_name` (method) `deploynator/_deploy.py:56` `def find_by_name(self, name, search_path)`
 - `DeployOrchestrator.__init__` (method) `deploynator/_deploy.py:77` `def __init__(self, config)`
 - `DeployOrchestrator.deploy` (method) `deploynator/_deploy.py:97` `def deploy(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...`
-- `DeployOrchestrator.generate_workflows` (method) `deploynator/_deploy.py:421` `def generate_workflows(self, project, output_dir)`
-- `DeployOrchestrator.install_dependencies` (method) `deploynator/_deploy.py:489` `def install_dependencies(self, project)`
-- `DeployOrchestrator.integrate_readmenator` (method) `deploynator/_deploy.py:499` `def integrate_readmenator(self, project_path)`
-- `DeployOrchestrator.install_lazygit` (method) `deploynator/_deploy.py:533` `def install_lazygit(self)`
+- `DeployOrchestrator.generate_workflows` (method) `deploynator/_deploy.py:431` `def generate_workflows(self, project, output_dir)`
+- `DeployOrchestrator.install_dependencies` (method) `deploynator/_deploy.py:499` `def install_dependencies(self, project)`
+- `DeployOrchestrator.integrate_readmenator` (method) `deploynator/_deploy.py:509` `def integrate_readmenator(self, project_path)`
+- `DeployOrchestrator.install_lazygit` (method) `deploynator/_deploy.py:543` `def install_lazygit(self)`
 
 ## deploynator/_docs.py
 Depends on: `deploynator/_config.py`, `deploynator/_toml.py`
@@ -77,21 +77,21 @@ Imported by: `deploynator/_app.py`, `deploynator/_deploy.py`
 - `GitOperations.gpg_sign_flag` (method) `deploynator/_git.py:32` `def gpg_sign_flag(self)`
 - `GitOperations.clone` (method) `deploynator/_git.py:36` `def clone(self, url, dest, depth)`
 - `GitOperations.add_all` (method) `deploynator/_git.py:46` `def add_all(self, repo_path)`
-- `GitOperations.commit` (method) `deploynator/_git.py:56` `def commit(self, repo_path, message)`
-- `GitOperations.amend_no_edit` (method) `deploynator/_git.py:68` `def amend_no_edit(self, repo_path)`
-- `GitOperations.tag` (method) `deploynator/_git.py:77` `def tag(self, repo_path, tag_name, message)`
-- `GitOperations.delete_tag` (method) `deploynator/_git.py:87` `def delete_tag(self, repo_path, tag_name)`
-- `GitOperations.tag_exists` (method) `deploynator/_git.py:97` `def tag_exists(self, repo_path, tag_name)`
-- `GitOperations.push` (method) `deploynator/_git.py:107` `def push(self, repo_path, remote, branch, follow_tags)`
-- `GitOperations.push_tags` (method) `deploynator/_git.py:117` `def push_tags(self, repo_path, remote)`
-- `GitOperations.create_branch` (method) `deploynator/_git.py:127` `def create_branch(self, repo_path, branch_name, base)`
-- `GitOperations.checkout` (method) `deploynator/_git.py:143` `def checkout(self, repo_path, branch)`
-- `GitOperations.get_changed_files` (method) `deploynator/_git.py:153` `def get_changed_files(self, repo_path, from_ref, to_ref)`
-- `GitOperations.get_log` (method) `deploynator/_git.py:184` `def get_log(self, repo_path, from_ref, to_ref, format_str)`
-- `GitOperations.get_start_ref` (method) `deploynator/_git.py:196` `def get_start_ref(self, repo_path)`
-- `GitOperations.current_branch` (method) `deploynator/_git.py:214` `def current_branch(self, repo_path)`
-- `GitOperations.is_dirty` (method) `deploynator/_git.py:226` `def is_dirty(self, repo_path)`
-- `GitOperations.has_remote` (method) `deploynator/_git.py:236` `def has_remote(self, repo_path, remote)`
+- `GitOperations.commit` (method) `deploynator/_git.py:59` `def commit(self, repo_path, message)`
+- `GitOperations.amend_no_edit` (method) `deploynator/_git.py:88` `def amend_no_edit(self, repo_path)`
+- `GitOperations.tag` (method) `deploynator/_git.py:97` `def tag(self, repo_path, tag_name, message)`
+- `GitOperations.delete_tag` (method) `deploynator/_git.py:107` `def delete_tag(self, repo_path, tag_name)`
+- `GitOperations.tag_exists` (method) `deploynator/_git.py:117` `def tag_exists(self, repo_path, tag_name)`
+- `GitOperations.push` (method) `deploynator/_git.py:127` `def push(self, repo_path, remote, branch, follow_tags)`
+- `GitOperations.push_tags` (method) `deploynator/_git.py:137` `def push_tags(self, repo_path, remote)`
+- `GitOperations.create_branch` (method) `deploynator/_git.py:147` `def create_branch(self, repo_path, branch_name, base)`
+- `GitOperations.checkout` (method) `deploynator/_git.py:163` `def checkout(self, repo_path, branch)`
+- `GitOperations.get_changed_files` (method) `deploynator/_git.py:173` `def get_changed_files(self, repo_path, from_ref, to_ref)`
+- `GitOperations.get_log` (method) `deploynator/_git.py:204` `def get_log(self, repo_path, from_ref, to_ref, format_str)`
+- `GitOperations.get_start_ref` (method) `deploynator/_git.py:216` `def get_start_ref(self, repo_path)`
+- `GitOperations.current_branch` (method) `deploynator/_git.py:234` `def current_branch(self, repo_path)`
+- `GitOperations.is_dirty` (method) `deploynator/_git.py:246` `def is_dirty(self, repo_path)`
+- `GitOperations.has_remote` (method) `deploynator/_git.py:256` `def has_remote(self, repo_path, remote)`
 
 ## deploynator/_mcp_server.py
 Depends on: `deploynator/__init__.py`, `deploynator/_config.py`

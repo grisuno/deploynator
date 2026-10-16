@@ -150,7 +150,7 @@ def add_all(self, repo_path: str) -> bool
 
 #### `GitOperations.commit`
 
-`method` | [deploynator/_git.py:56](../../deploynator/_git.py#L56)
+`method` | [deploynator/_git.py:59](../../deploynator/_git.py#L59)
 
 ```python
 def commit(self, repo_path: str, message: str) -> tuple[bool, str]
@@ -173,7 +173,7 @@ def commit(self, repo_path: str, message: str) -> tuple[bool, str]
 
 #### `GitOperations.amend_no_edit`
 
-`method` | [deploynator/_git.py:68](../../deploynator/_git.py#L68)
+`method` | [deploynator/_git.py:88](../../deploynator/_git.py#L88)
 
 ```python
 def amend_no_edit(self, repo_path: str) -> bool
@@ -193,7 +193,7 @@ def amend_no_edit(self, repo_path: str) -> bool
 
 #### `GitOperations.tag`
 
-`method` | [deploynator/_git.py:77](../../deploynator/_git.py#L77)
+`method` | [deploynator/_git.py:97](../../deploynator/_git.py#L97)
 
 ```python
 def tag(self, repo_path: str, tag_name: str, message: str) -> bool
@@ -215,7 +215,7 @@ def tag(self, repo_path: str, tag_name: str, message: str) -> bool
 
 #### `GitOperations.delete_tag`
 
-`method` | [deploynator/_git.py:87](../../deploynator/_git.py#L87)
+`method` | [deploynator/_git.py:107](../../deploynator/_git.py#L107)
 
 ```python
 def delete_tag(self, repo_path: str, tag_name: str) -> bool
@@ -234,7 +234,7 @@ def delete_tag(self, repo_path: str, tag_name: str) -> bool
 
 #### `GitOperations.tag_exists`
 
-`method` | [deploynator/_git.py:97](../../deploynator/_git.py#L97)
+`method` | [deploynator/_git.py:117](../../deploynator/_git.py#L117)
 
 ```python
 def tag_exists(self, repo_path: str, tag_name: str) -> bool
@@ -255,7 +255,7 @@ def tag_exists(self, repo_path: str, tag_name: str) -> bool
 
 #### `GitOperations.push`
 
-`method` | [deploynator/_git.py:107](../../deploynator/_git.py#L107)
+`method` | [deploynator/_git.py:127](../../deploynator/_git.py#L127)
 
 ```python
 def push(self, repo_path: str, remote: str, branch: str, follow_tags: bool = True) -> bool
@@ -278,7 +278,7 @@ def push(self, repo_path: str, remote: str, branch: str, follow_tags: bool = Tru
 
 #### `GitOperations.push_tags`
 
-`method` | [deploynator/_git.py:117](../../deploynator/_git.py#L117)
+`method` | [deploynator/_git.py:137](../../deploynator/_git.py#L137)
 
 ```python
 def push_tags(self, repo_path: str, remote: str = 'origin') -> bool
@@ -297,7 +297,7 @@ def push_tags(self, repo_path: str, remote: str = 'origin') -> bool
 
 #### `GitOperations.create_branch`
 
-`method` | [deploynator/_git.py:127](../../deploynator/_git.py#L127)
+`method` | [deploynator/_git.py:147](../../deploynator/_git.py#L147)
 
 ```python
 def create_branch(self, repo_path: str, branch_name: str, base: Optional[str] = None) -> bool
@@ -319,7 +319,7 @@ def create_branch(self, repo_path: str, branch_name: str, base: Optional[str] = 
 
 #### `GitOperations.checkout`
 
-`method` | [deploynator/_git.py:143](../../deploynator/_git.py#L143)
+`method` | [deploynator/_git.py:163](../../deploynator/_git.py#L163)
 
 ```python
 def checkout(self, repo_path: str, branch: str) -> bool
@@ -338,7 +338,7 @@ def checkout(self, repo_path: str, branch: str) -> bool
 
 #### `GitOperations.get_changed_files`
 
-`method` | [deploynator/_git.py:153](../../deploynator/_git.py#L153)
+`method` | [deploynator/_git.py:173](../../deploynator/_git.py#L173)
 
 ```python
 def get_changed_files(self, repo_path: str, from_ref: str, to_ref: str = 'HEAD') -> dict[str, list[str]]
@@ -360,7 +360,7 @@ def get_changed_files(self, repo_path: str, from_ref: str, to_ref: str = 'HEAD')
 
 #### `GitOperations.get_log`
 
-`method` | [deploynator/_git.py:184](../../deploynator/_git.py#L184)
+`method` | [deploynator/_git.py:204](../../deploynator/_git.py#L204)
 
 ```python
 def get_log(self, repo_path: str, from_ref: str, to_ref: str = 'HEAD', format_str: str = '%s|||%an|||%h') -> list[str]
@@ -381,7 +381,7 @@ def get_log(self, repo_path: str, from_ref: str, to_ref: str = 'HEAD', format_st
 
 #### `GitOperations.get_start_ref`
 
-`method` | [deploynator/_git.py:196](../../deploynator/_git.py#L196)
+`method` | [deploynator/_git.py:216](../../deploynator/_git.py#L216)
 
 ```python
 def get_start_ref(self, repo_path: str) -> Optional[str]
@@ -401,7 +401,7 @@ def get_start_ref(self, repo_path: str) -> Optional[str]
 
 #### `GitOperations.current_branch`
 
-`method` | [deploynator/_git.py:214](../../deploynator/_git.py#L214)
+`method` | [deploynator/_git.py:234](../../deploynator/_git.py#L234)
 
 ```python
 def current_branch(self, repo_path: str) -> Optional[str]
@@ -421,7 +421,7 @@ def current_branch(self, repo_path: str) -> Optional[str]
 
 #### `GitOperations.is_dirty`
 
-`method` | [deploynator/_git.py:226](../../deploynator/_git.py#L226)
+`method` | [deploynator/_git.py:246](../../deploynator/_git.py#L246)
 
 ```python
 def is_dirty(self, repo_path: str) -> bool
@@ -441,7 +441,7 @@ def is_dirty(self, repo_path: str) -> bool
 
 #### `GitOperations.has_remote`
 
-`method` | [deploynator/_git.py:236](../../deploynator/_git.py#L236)
+`method` | [deploynator/_git.py:256](../../deploynator/_git.py#L256)
 
 ```python
 def has_remote(self, repo_path: str, remote: str = 'origin') -> bool

@@ -9,7 +9,7 @@
 
 The codebase centres on `_config.py`, `_deploy.py`, `_models.py`. Architecturally it is 4 layers, dominant utility (17 files) across 5 import-based communities. Recorded risk surface: 0 security findings and 0 dependency cycles.
 
-Surprising tissue lives between deploynator: _platforms, deploynator: _pypi, deploynator: _mcp_server: 6 extracted cross-community imports and 6 inferred bridges. Follow `connections.json` sorted by strength before refactoring.
+Surprising tissue lives between deploynator: _platforms, deploynator: _pypi, deploynator: _mcp_server: 6 extracted cross-community imports and 7 inferred bridges. Follow `connections.json` sorted by strength before refactoring.
 
 Open work clusters around documentation (37% file coverage), 0 security findings, 20 taint paths, and 5 suggested exploration questions in `queries.md`.
 
@@ -18,13 +18,13 @@ Open work clusters around documentation (37% file coverage), 0 security findings
 | Metric | Value |
 |--------|-------|
 | Files | 35 |
-| Symbols | 415 |
+| Symbols | 416 |
 | Resolved imports | 203 |
 | Languages | py, sh |
 | Communities | 5 |
 | Doc coverage | 37% (13/35 files) |
 | Security findings | 0 |
-| Estimated read cost | ~4025 tokens (chars/4, offline so $0) |
+| Estimated read cost | ~4057 tokens (chars/4, offline so $0) |
 
 ## Reading Order
 
@@ -50,7 +50,7 @@ readmenator query "<question>" --target deploynator
 | File | Score |
 |------|-------|
 | `deploynator/_config.py` | 54.6 |
-| `deploynator/_deploy.py` | 35.9 |
+| `deploynator/_deploy.py` | 36.0 |
 | `deploynator/_models.py` | 30.7 |
 | `deploynator/_toml.py` | 22.4 |
 | `deploynator/_app.py` | 17.2 |

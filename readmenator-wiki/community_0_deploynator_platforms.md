@@ -11,7 +11,7 @@ This community groups 11 file(s) rooted at `deploynator` with dominant language 
 | File | Language | Layer | Symbols | Doc |
 |------|----------|-------|---------|-----|
 | `deploynator/_app.py` | py | utility | 32 | no |
-| `deploynator/_deploy.py` | py | utility | 19 | no |
+| `deploynator/_deploy.py` | py | utility | 20 | no |
 | `deploynator/_git.py` | py | utility | 21 | no |
 | `deploynator/_models.py` | py | business_logic | 27 | no |
 | `deploynator/_platforms.py` | py | utility | 34 | no |
@@ -70,24 +70,25 @@ This community groups 11 file(s) rooted at `deploynator` with dominant language 
 - [INFERRED] bridges community 2 <-> 0 (strength 0.6): Inferred cross-community bridge: tests/test_init.py reaches tests/test_models.py in 4 hops.
 - [INFERRED] bridges community 0 <-> 3 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_readme_footer.py in 4 hops.
 - [INFERRED] bridges community 0 <-> 1 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_runner.py in 4 hops.
+- [INFERRED] shares_context community 0 <-> 4 (strength 0.5): Inferred shared context (layer utility) with no import path between community 0 (deploynator: _platforms) and community 4 (orphans).
 
 ## Risks
 
 - [taint high] `deploynator/_app.py` -> `deploynator/_app.py` via `subprocess` (0 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_models.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_deploy.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_config.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_git.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_platforms.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_changelog.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_config.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_deploy.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_models.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_changelog.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_pypi.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_readme.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_semver.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_app.py` via `subprocess` (0 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_git.py` via `subprocess` (1 hops)
 
 ## Open Questions
 

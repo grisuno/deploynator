@@ -1,7 +1,7 @@
 {
  "metadata": {
-  "generated_at": "2026-10-15T23:25:28.736056+00:00",
-  "source_tree_hash": "aa401b248142d3decb59f8f3ab4adfbba3ca3dd8b0559eba2bea4925fce2591e",
+  "generated_at": "2026-10-16T01:29:35.601214+00:00",
+  "source_tree_hash": "f7f55d4f7b5038e683d3ca378211c61d8e8b2a90c478d0d7649952e1c2ff40d5",
   "repo_name": "deploynator",
   "depth_level": 2,
   "depth_cap": 3,
@@ -45,7 +45,7 @@
   },
   "deploynator/_deploy.py": {
    "language": "py",
-   "symbols": 19
+   "symbols": 20
   },
   "deploynator/_docs.py": {
    "language": "py",
@@ -633,89 +633,97 @@
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::deploy",
    "start_line": 97,
-   "end_line": 359,
+   "end_line": 195,
    "type": "FUNCTION",
    "content_hash": "809d5c331560054d"
+  },
+  "deploynator/_deploy.py|deploynator/_deploy.py::_listed": {
+   "file_path": "deploynator/_deploy.py",
+   "qualified_name": "deploynator/_deploy.py::_listed",
+   "start_line": 196,
+   "end_line": 369,
+   "type": "FUNCTION",
+   "content_hash": "182f6b1be0591c2c"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_gh_release_in_repo": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_gh_release_in_repo",
-   "start_line": 360,
-   "end_line": 392,
+   "start_line": 370,
+   "end_line": 402,
    "type": "FUNCTION",
-   "content_hash": "964aa830e678b8ce"
+   "content_hash": "bcc201770de658d9"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_add_temp_remote": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_add_temp_remote",
-   "start_line": 393,
-   "end_line": 401,
+   "start_line": 403,
+   "end_line": 411,
    "type": "FUNCTION",
-   "content_hash": "84992321b965658c"
+   "content_hash": "30f4a473e29687db"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_remove_temp_remote": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_remove_temp_remote",
-   "start_line": 402,
-   "end_line": 411,
+   "start_line": 412,
+   "end_line": 421,
    "type": "FUNCTION",
-   "content_hash": "cb27a0529a750224"
+   "content_hash": "3576f1b8a03a9930"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_get_remote_url": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_get_remote_url",
-   "start_line": 412,
-   "end_line": 420,
+   "start_line": 422,
+   "end_line": 430,
    "type": "FUNCTION",
-   "content_hash": "b6111228089530cc"
+   "content_hash": "ce0ecad163fb7731"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::generate_workflows": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::generate_workflows",
-   "start_line": 421,
-   "end_line": 439,
+   "start_line": 431,
+   "end_line": 449,
    "type": "FUNCTION",
-   "content_hash": "7a810a764c9050bb"
+   "content_hash": "f51965b2859c7ade"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_ci_workflow_content": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_ci_workflow_content",
-   "start_line": 440,
-   "end_line": 460,
+   "start_line": 450,
+   "end_line": 470,
    "type": "FUNCTION",
-   "content_hash": "cdd855d7b8723e3e"
+   "content_hash": "8d39c8129589732b"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_release_workflow_content": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_release_workflow_content",
-   "start_line": 461,
-   "end_line": 488,
+   "start_line": 471,
+   "end_line": 498,
    "type": "FUNCTION",
-   "content_hash": "e5ca24c9c4e93812"
+   "content_hash": "f15eea3f2b868ffd"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::install_dependencies": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::install_dependencies",
-   "start_line": 489,
-   "end_line": 498,
+   "start_line": 499,
+   "end_line": 508,
    "type": "FUNCTION",
-   "content_hash": "cc739b8ece358995"
+   "content_hash": "c043d64e936b4152"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::integrate_readmenator": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::integrate_readmenator",
-   "start_line": 499,
-   "end_line": 532,
+   "start_line": 509,
+   "end_line": 542,
    "type": "FUNCTION",
-   "content_hash": "0fea6bf2a03770a9"
+   "content_hash": "57f8f390b0bb6cbb"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::install_lazygit": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::install_lazygit",
-   "start_line": 533,
-   "end_line": 554,
+   "start_line": 543,
+   "end_line": 564,
    "type": "FUNCTION",
-   "content_hash": "accd56fa6497aaec"
+   "content_hash": "3f51a51c10c7e625"
   },
   "deploynator/_docs.py|deploynator/_docs.py::DocsRunner": {
    "file_path": "deploynator/_docs.py",
@@ -785,129 +793,129 @@
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::add_all",
    "start_line": 46,
-   "end_line": 55,
+   "end_line": 58,
    "type": "FUNCTION",
    "content_hash": "c61f1a926a17bf35"
   },
   "deploynator/_git.py|deploynator/_git.py::commit": {
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::commit",
-   "start_line": 56,
-   "end_line": 67,
+   "start_line": 59,
+   "end_line": 87,
    "type": "FUNCTION",
-   "content_hash": "7099d77a20b3f4ec"
+   "content_hash": "923f5c133af54801"
   },
   "deploynator/_git.py|deploynator/_git.py::amend_no_edit": {
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::amend_no_edit",
-   "start_line": 68,
-   "end_line": 76,
+   "start_line": 88,
+   "end_line": 96,
    "type": "FUNCTION",
-   "content_hash": "c02d437de1621bb0"
+   "content_hash": "9e1535a905b93291"
   },
   "deploynator/_git.py|deploynator/_git.py::tag": {
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::tag",
-   "start_line": 77,
-   "end_line": 86,
+   "start_line": 97,
+   "end_line": 106,
    "type": "FUNCTION",
-   "content_hash": "3cdecdf1b9ed607d"
+   "content_hash": "ff544997d8063653"
   },
   "deploynator/_git.py|deploynator/_git.py::delete_tag": {
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::delete_tag",
-   "start_line": 87,
-   "end_line": 96,
+   "start_line": 107,
+   "end_line": 116,
    "type": "FUNCTION",
-   "content_hash": "d5061fcd1c39e5d4"
+   "content_hash": "1ba75169bf1e6e50"
   },
   "deploynator/_git.py|deploynator/_git.py::tag_exists": {
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::tag_exists",
-   "start_line": 97,
-   "end_line": 106,
+   "start_line": 117,
+   "end_line": 126,
    "type": "FUNCTION",
-   "content_hash": "ff84d867af2578ec"
+   "content_hash": "e6ccaf7cae2d16f8"
   },
   "deploynator/_git.py|deploynator/_git.py::push": {
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::push",
-   "start_line": 107,
-   "end_line": 116,
+   "start_line": 127,
+   "end_line": 136,
    "type": "FUNCTION",
-   "content_hash": "09f5a3847cd86e7d"
+   "content_hash": "2b2c194ee390646a"
   },
   "deploynator/_git.py|deploynator/_git.py::push_tags": {
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::push_tags",
-   "start_line": 117,
-   "end_line": 126,
+   "start_line": 137,
+   "end_line": 146,
    "type": "FUNCTION",
-   "content_hash": "4176534543496ebb"
+   "content_hash": "bfac577dddd4fec3"
   },
   "deploynator/_git.py|deploynator/_git.py::create_branch": {
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::create_branch",
-   "start_line": 127,
-   "end_line": 142,
+   "start_line": 147,
+   "end_line": 162,
    "type": "FUNCTION",
-   "content_hash": "54ba44ad81659bec"
+   "content_hash": "29f5b400c92708f6"
   },
   "deploynator/_git.py|deploynator/_git.py::checkout": {
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::checkout",
-   "start_line": 143,
-   "end_line": 152,
+   "start_line": 163,
+   "end_line": 172,
    "type": "FUNCTION",
-   "content_hash": "934cf4a54588ac3a"
+   "content_hash": "480b937615f557f6"
   },
   "deploynator/_git.py|deploynator/_git.py::get_changed_files": {
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::get_changed_files",
-   "start_line": 153,
-   "end_line": 183,
+   "start_line": 173,
+   "end_line": 203,
    "type": "FUNCTION",
-   "content_hash": "56aea10a82233fcd"
+   "content_hash": "52394b9d54bf3114"
   },
   "deploynator/_git.py|deploynator/_git.py::get_log": {
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::get_log",
-   "start_line": 184,
-   "end_line": 195,
+   "start_line": 204,
+   "end_line": 215,
    "type": "FUNCTION",
-   "content_hash": "a08ec6c9cdf8879e"
+   "content_hash": "7b9fd946e544b10a"
   },
   "deploynator/_git.py|deploynator/_git.py::get_start_ref": {
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::get_start_ref",
-   "start_line": 196,
-   "end_line": 213,
+   "start_line": 216,
+   "end_line": 233,
    "type": "FUNCTION",
-   "content_hash": "f918f02999641828"
+   "content_hash": "0fb94b5273e244e3"
   },
   "deploynator/_git.py|deploynator/_git.py::current_branch": {
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::current_branch",
-   "start_line": 214,
-   "end_line": 225,
+   "start_line": 234,
+   "end_line": 245,
    "type": "FUNCTION",
-   "content_hash": "6866ed68299f0600"
+   "content_hash": "d9876806e59fc062"
   },
   "deploynator/_git.py|deploynator/_git.py::is_dirty": {
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::is_dirty",
-   "start_line": 226,
-   "end_line": 235,
+   "start_line": 246,
+   "end_line": 255,
    "type": "FUNCTION",
-   "content_hash": "6ea855be6f567944"
+   "content_hash": "57dddf545de802a0"
   },
   "deploynator/_git.py|deploynator/_git.py::has_remote": {
    "file_path": "deploynator/_git.py",
    "qualified_name": "deploynator/_git.py::has_remote",
-   "start_line": 236,
-   "end_line": 244,
+   "start_line": 256,
+   "end_line": 264,
    "type": "FUNCTION",
-   "content_hash": "3f82e750e017e70d"
+   "content_hash": "97f5bf0ff8d211bd"
   },
   "deploynator/_mcp_server.py|deploynator/_mcp_server.py::MCPRequest": {
    "file_path": "deploynator/_mcp_server.py",
@@ -3327,6 +3335,7 @@
       "deploynator/_deploy.py::__init__",
       "deploynator/_deploy.py::_resolve_project_path",
       "deploynator/_deploy.py::deploy",
+      "deploynator/_deploy.py::_listed",
       "deploynator/_deploy.py::_gh_release_in_repo",
       "deploynator/_deploy.py::_add_temp_remote",
       "deploynator/_deploy.py::_remove_temp_remote",
@@ -3671,6 +3680,7 @@
         "deploynator/_deploy.py::__init__",
         "deploynator/_deploy.py::_resolve_project_path",
         "deploynator/_deploy.py::deploy",
+        "deploynator/_deploy.py::_listed",
         "deploynator/_deploy.py::_gh_release_in_repo",
         "deploynator/_deploy.py::_add_temp_remote",
         "deploynator/_deploy.py::_remove_temp_remote",
@@ -3800,7 +3810,7 @@
      "components": [],
      "components_relations": [],
      "layer": "utility",
-     "symbol_count": 142,
+     "symbol_count": 143,
      "top_symbols": [
       {
        "n": "Platform",
@@ -3815,7 +3825,7 @@
        "k": "method"
       }
      ],
-     "top_symbols_more": 110
+     "top_symbols_more": 111
     },
     {
      "name": "tests",
@@ -4665,7 +4675,7 @@
     }
    ],
    "layer": "testing",
-   "symbol_count": 230,
+   "symbol_count": 231,
    "top_symbols": [
     {
      "n": "Platform",
@@ -4680,7 +4690,7 @@
      "k": "method"
     }
    ],
-   "top_symbols_more": 194,
+   "top_symbols_more": 195,
    "hub": false
   },
   {
@@ -7699,7 +7709,7 @@
      "target": "deploynator/_pypi.py|deploynator/_pypi.py::is_packaging_project",
      "call_sites": [
       {
-       "line": 318,
+       "line": 328,
        "column": 50
       }
      ],
@@ -7792,7 +7802,7 @@
      "target": "deploynator/_pypi.py|deploynator/_pypi.py::is_packaging_project",
      "call_sites": [
       {
-       "line": 318,
+       "line": 328,
        "column": 50
       }
      ],
@@ -7803,7 +7813,7 @@
      "target": "deploynator/_pypi.py|deploynator/_pypi.py::has_credentials",
      "call_sites": [
       {
-       "line": 321,
+       "line": 331,
        "column": 21
       }
      ],
@@ -7814,7 +7824,7 @@
      "target": "deploynator/_pypi.py|deploynator/_pypi.py::prompt_for_credentials",
      "call_sites": [
       {
-       "line": 322,
+       "line": 332,
        "column": 24
       }
      ],
@@ -7825,7 +7835,7 @@
      "target": "deploynator/_docs.py|deploynator/_docs.py::run",
      "call_sites": [
       {
-       "line": 327,
+       "line": 337,
        "column": 30
       }
      ],
@@ -7836,7 +7846,7 @@
      "target": "deploynator/_docs.py|deploynator/_docs.py::run",
      "call_sites": [
       {
-       "line": 339,
+       "line": 349,
        "column": 26
       }
      ],
@@ -7847,7 +7857,7 @@
      "target": "deploynator/_docs.py|deploynator/_docs.py::run",
      "call_sites": [
       {
-       "line": 371,
+       "line": 381,
        "column": 21
       }
      ],
@@ -7858,7 +7868,7 @@
      "target": "deploynator/_docs.py|deploynator/_docs.py::run",
      "call_sites": [
       {
-       "line": 395,
+       "line": 405,
        "column": 12
       }
      ],
@@ -7869,7 +7879,7 @@
      "target": "deploynator/_docs.py|deploynator/_docs.py::run",
      "call_sites": [
       {
-       "line": 404,
+       "line": 414,
        "column": 12
       }
      ],
@@ -7880,7 +7890,7 @@
      "target": "deploynator/_toml.py|deploynator/_toml.py::load_toml_config",
      "call_sites": [
       {
-       "line": 501,
+       "line": 511,
        "column": 23
       }
      ],
@@ -7891,7 +7901,7 @@
      "target": "deploynator/_docs.py|deploynator/_docs.py::run",
      "call_sites": [
       {
-       "line": 505,
+       "line": 515,
        "column": 19
       }
      ],
@@ -7902,7 +7912,7 @@
      "target": "deploynator/_docs.py|deploynator/_docs.py::run",
      "call_sites": [
       {
-       "line": 508,
+       "line": 518,
        "column": 21
       }
      ],
@@ -7913,7 +7923,7 @@
      "target": "deploynator/_docs.py|deploynator/_docs.py::run",
      "call_sites": [
       {
-       "line": 521,
+       "line": 531,
        "column": 29
       }
      ],
@@ -7924,7 +7934,7 @@
      "target": "deploynator/_docs.py|deploynator/_docs.py::run",
      "call_sites": [
       {
-       "line": 523,
+       "line": 533,
        "column": 33
       }
      ],
@@ -7935,7 +7945,7 @@
      "target": "deploynator/_docs.py|deploynator/_docs.py::run",
      "call_sites": [
       {
-       "line": 535,
+       "line": 545,
        "column": 21
       }
      ],
@@ -7946,7 +7956,7 @@
      "target": "deploynator/_docs.py|deploynator/_docs.py::run",
      "call_sites": [
       {
-       "line": 547,
+       "line": 557,
        "column": 29
       }
      ],
@@ -8262,7 +8272,7 @@
      "target": "deploynator/_changelog.py|deploynator/_changelog.py::write_changelog",
      "call_sites": [
       {
-       "line": 215,
+       "line": 225,
        "column": 12
       }
      ],
@@ -8273,7 +8283,7 @@
      "target": "deploynator/_changelog.py|deploynator/_changelog.py::format_for_release",
      "call_sites": [
       {
-       "line": 267,
+       "line": 277,
        "column": 28
       }
      ],
@@ -8284,7 +8294,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 279,
+       "line": 289,
        "column": 25
       }
      ],
@@ -8295,7 +8305,7 @@
      "target": "deploynator/_changelog.py|deploynator/_changelog.py::format_for_release",
      "call_sites": [
       {
-       "line": 305,
+       "line": 315,
        "column": 28
       }
      ],
@@ -8306,7 +8316,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 494,
+       "line": 504,
        "column": 21
       }
      ],

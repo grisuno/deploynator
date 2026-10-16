@@ -100,7 +100,7 @@
 - `deploynator/_config.py` -> __future__, dataclasses, os
 - `deploynator/_deploy.py` -> __future__, os, readmenator, shutil, subprocess, tempfile, typing, yaml
 - `deploynator/_docs.py` -> __future__, shlex, subprocess
-- `deploynator/_git.py` -> __future__, os, subprocess, typing
+- `deploynator/_git.py` -> __future__, os, subprocess, tempfile, typing
 - `deploynator/_mcp_server.py` -> __future__, json, logging, sys, typing
 - `deploynator/_models.py` -> __future__, dataclasses, datetime, enum, re, typing
 - `deploynator/_platforms.py` -> __future__, abc, json, os, subprocess, tempfile, typing

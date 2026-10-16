@@ -58,45 +58,46 @@
 | `ProjectDiscovery` | class | `deploynator/_deploy.py:31` | `class ProjectDiscovery` |
 | `__init__` | method | `deploynator/_deploy.py:32` | `def __init__(self, config)` |
 | `__init__` | method | `deploynator/_deploy.py:77` | `def __init__(self, config)` |
-| `_add_temp_remote` | method | `deploynator/_deploy.py:393` | `def _add_temp_remote(self, repo_path, name, url)` |
-| `_ci_workflow_content` | method | `deploynator/_deploy.py:440` | `def _ci_workflow_content(self, project)` |
-| `_get_remote_url` | method | `deploynator/_deploy.py:412` | `def _get_remote_url(repo_path, pc)` |
-| `_gh_release_in_repo` | method | `deploynator/_deploy.py:360` | `def _gh_release_in_repo(self, repo_path, project_name, version, notes, branch)` |
+| `_add_temp_remote` | method | `deploynator/_deploy.py:403` | `def _add_temp_remote(self, repo_path, name, url)` |
+| `_ci_workflow_content` | method | `deploynator/_deploy.py:450` | `def _ci_workflow_content(self, project)` |
+| `_get_remote_url` | method | `deploynator/_deploy.py:422` | `def _get_remote_url(repo_path, pc)` |
+| `_gh_release_in_repo` | method | `deploynator/_deploy.py:370` | `def _gh_release_in_repo(self, repo_path, project_name, version, notes, branch)` |
+| `_listed` | function | `deploynator/_deploy.py:196` | `def _listed(files)` |
 | `_load_single` | method | `deploynator/_deploy.py:63` | `def _load_single(yaml_path)` |
-| `_release_workflow_content` | method | `deploynator/_deploy.py:461` | `def _release_workflow_content(self, project)` |
-| `_remove_temp_remote` | method | `deploynator/_deploy.py:402` | `def _remove_temp_remote(self, repo_path, name)` |
+| `_release_workflow_content` | method | `deploynator/_deploy.py:471` | `def _release_workflow_content(self, project)` |
+| `_remove_temp_remote` | method | `deploynator/_deploy.py:412` | `def _remove_temp_remote(self, repo_path, name)` |
 | `_resolve_project_path` | method | `deploynator/_deploy.py:88` | `def _resolve_project_path(project)` |
 | `deploy` | method | `deploynator/_deploy.py:97` | `def deploy(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...` |
 | `discover` | method | `deploynator/_deploy.py:35` | `def discover(self, search_path)` |
 | `find_by_name` | method | `deploynator/_deploy.py:56` | `def find_by_name(self, name, search_path)` |
-| `generate_workflows` | method | `deploynator/_deploy.py:421` | `def generate_workflows(self, project, output_dir)` |
-| `install_dependencies` | method | `deploynator/_deploy.py:489` | `def install_dependencies(self, project)` |
-| `install_lazygit` | method | `deploynator/_deploy.py:533` | `def install_lazygit(self)` |
-| `integrate_readmenator` | method | `deploynator/_deploy.py:499` | `def integrate_readmenator(self, project_path)` |
+| `generate_workflows` | method | `deploynator/_deploy.py:431` | `def generate_workflows(self, project, output_dir)` |
+| `install_dependencies` | method | `deploynator/_deploy.py:499` | `def install_dependencies(self, project)` |
+| `install_lazygit` | method | `deploynator/_deploy.py:543` | `def install_lazygit(self)` |
+| `integrate_readmenator` | method | `deploynator/_deploy.py:509` | `def integrate_readmenator(self, project_path)` |
 | `DocsRunner` | class | `deploynator/_docs.py:10` | `class DocsRunner` |
 | `__init__` | method | `deploynator/_docs.py:11` | `def __init__(self, config)` |
 | `run` | method | `deploynator/_docs.py:14` | `def run(self, project_path, toml)` |
 | `GitOperations` | class | `deploynator/_git.py:10` | `class GitOperations` |
 | `__init__` | method | `deploynator/_git.py:11` | `def __init__(self, config)` |
 | `add_all` | method | `deploynator/_git.py:46` | `def add_all(self, repo_path)` |
-| `amend_no_edit` | method | `deploynator/_git.py:68` | `def amend_no_edit(self, repo_path)` |
+| `amend_no_edit` | method | `deploynator/_git.py:88` | `def amend_no_edit(self, repo_path)` |
 | `check_gpg` | method | `deploynator/_git.py:14` | `def check_gpg(self)` |
-| `checkout` | method | `deploynator/_git.py:143` | `def checkout(self, repo_path, branch)` |
+| `checkout` | method | `deploynator/_git.py:163` | `def checkout(self, repo_path, branch)` |
 | `clone` | method | `deploynator/_git.py:36` | `def clone(self, url, dest, depth)` |
-| `commit` | method | `deploynator/_git.py:56` | `def commit(self, repo_path, message)` |
-| `create_branch` | method | `deploynator/_git.py:127` | `def create_branch(self, repo_path, branch_name, base)` |
-| `current_branch` | method | `deploynator/_git.py:214` | `def current_branch(self, repo_path)` |
-| `delete_tag` | method | `deploynator/_git.py:87` | `def delete_tag(self, repo_path, tag_name)` |
-| `get_changed_files` | method | `deploynator/_git.py:153` | `def get_changed_files(self, repo_path, from_ref, to_ref)` |
-| `get_log` | method | `deploynator/_git.py:184` | `def get_log(self, repo_path, from_ref, to_ref, format_str)` |
-| `get_start_ref` | method | `deploynator/_git.py:196` | `def get_start_ref(self, repo_path)` |
+| `commit` | method | `deploynator/_git.py:59` | `def commit(self, repo_path, message)` |
+| `create_branch` | method | `deploynator/_git.py:147` | `def create_branch(self, repo_path, branch_name, base)` |
+| `current_branch` | method | `deploynator/_git.py:234` | `def current_branch(self, repo_path)` |
+| `delete_tag` | method | `deploynator/_git.py:107` | `def delete_tag(self, repo_path, tag_name)` |
+| `get_changed_files` | method | `deploynator/_git.py:173` | `def get_changed_files(self, repo_path, from_ref, to_ref)` |
+| `get_log` | method | `deploynator/_git.py:204` | `def get_log(self, repo_path, from_ref, to_ref, format_str)` |
+| `get_start_ref` | method | `deploynator/_git.py:216` | `def get_start_ref(self, repo_path)` |
 | `gpg_sign_flag` | method | `deploynator/_git.py:32` | `def gpg_sign_flag(self)` |
-| `has_remote` | method | `deploynator/_git.py:236` | `def has_remote(self, repo_path, remote)` |
-| `is_dirty` | method | `deploynator/_git.py:226` | `def is_dirty(self, repo_path)` |
-| `push` | method | `deploynator/_git.py:107` | `def push(self, repo_path, remote, branch, follow_tags)` |
-| `push_tags` | method | `deploynator/_git.py:117` | `def push_tags(self, repo_path, remote)` |
-| `tag` | method | `deploynator/_git.py:77` | `def tag(self, repo_path, tag_name, message)` |
-| `tag_exists` | method | `deploynator/_git.py:97` | `def tag_exists(self, repo_path, tag_name)` |
+| `has_remote` | method | `deploynator/_git.py:256` | `def has_remote(self, repo_path, remote)` |
+| `is_dirty` | method | `deploynator/_git.py:246` | `def is_dirty(self, repo_path)` |
+| `push` | method | `deploynator/_git.py:127` | `def push(self, repo_path, remote, branch, follow_tags)` |
+| `push_tags` | method | `deploynator/_git.py:137` | `def push_tags(self, repo_path, remote)` |
+| `tag` | method | `deploynator/_git.py:97` | `def tag(self, repo_path, tag_name, message)` |
+| `tag_exists` | method | `deploynator/_git.py:117` | `def tag_exists(self, repo_path, tag_name)` |
 | `MCPRequest` | class | `deploynator/_mcp_server.py:35` | `class MCPRequest` |
 | `MCPResource` | class | `deploynator/_mcp_server.py:71` | `class MCPResource` |
 | `MCPServer` | class | `deploynator/_mcp_server.py:86` | `class MCPServer` |

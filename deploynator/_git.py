@@ -53,11 +53,31 @@ class GitOperations:
         except FileNotFoundError:
             return False
 
+    # Single argv entries above this size risk E2BIG (MAX_ARG_STRLEN).
+    _MAX_MESSAGE_INLINE = 100 * 1024
+
     def commit(self, repo_path: str, message: str) -> tuple[bool, str]:
         try:
             flags = self.gpg_sign_flag()
-            cmd = ["git", "-C", repo_path, "commit"] + flags + ["-m", message]
-            result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+            if len(message.encode("utf-8", errors="replace")) > self._MAX_MESSAGE_INLINE:
+                import tempfile
+
+                with tempfile.NamedTemporaryFile(
+                    mode="w", suffix=".commitmsg", prefix="deploynator-", delete=False, encoding="utf-8"
+                ) as fh:
+                    fh.write(message)
+                    msg_file = fh.name
+                try:
+                    cmd = ["git", "-C", repo_path, "commit"] + flags + ["-F", msg_file]
+                    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+                finally:
+                    try:
+                        os.unlink(msg_file)
+                    except OSError:
+                        pass
+            else:
+                cmd = ["git", "-C", repo_path, "commit"] + flags + ["-m", message]
+                result = subprocess.run(cmd, capture_output=True, text=True, check=False)
             if result.returncode != 0:
                 err_msg = result.stderr.strip() or result.stdout.strip() or "unknown error"
                 return False, err_msg
