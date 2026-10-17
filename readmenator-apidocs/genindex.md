@@ -86,6 +86,7 @@
 - [`delete_tag`](modules/deploynator._git.py.md#gitoperations-delete_tag) method of `GitOperations` in `deploynator._git`
 - [`deploy`](modules/deploynator._deploy.py.md#deployorchestrator-deploy) method of `DeployOrchestrator` in `deploynator._deploy`
 - [`deploy_branch`](modules/deploynator._toml.py.md#tomlconfig-deploy_branch) attribute of `TomlConfig` in `deploynator._toml`
+- [`deploy_message`](modules/deploynator._toml.py.md#tomlconfig-deploy_message) attribute of `TomlConfig` in `deploynator._toml`
 - [`deploy_remote`](modules/deploynator._toml.py.md#tomlconfig-deploy_remote) attribute of `TomlConfig` in `deploynator._toml`
 - [`DEPLOY_SH_TEMPLATE`](modules/deploynator._app.py.md#deploynatorapp-deploy_sh_template) attribute of `DeploynatorApp` in `deploynator._app`
 - [`DEPLOY_TOML_TEMPLATE`](modules/deploynator._app.py.md#deploynatorapp-deploy_toml_template) attribute of `DeploynatorApp` in `deploynator._app`

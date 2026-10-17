@@ -42,9 +42,9 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 - `detect_test_commands` (function, `deploynator/_toml.py:102`) `def detect_test_commands(project_path)` - Detecta comandos de test para proyectos C/autotools sin toml.
 - `_auto_toml_config` (function, `deploynator/_toml.py:152`) `def _auto_toml_config(project_path)` - Config auto para proyectos sin deploynator.toml (C primero).
 - `TomlConfig` (class, `deploynator/_toml.py:179`) `class TomlConfig`
-- `__post_init__` (method, `deploynator/_toml.py:195`) `def __post_init__(self)`
-- `_clamp_timeout` (function, `deploynator/_toml.py:203`) `def _clamp_timeout(value)`
-- `load_toml_config` (function, `deploynator/_toml.py:211`) `def load_toml_config(project_path)`
+- `__post_init__` (method, `deploynator/_toml.py:196`) `def __post_init__(self)`
+- `_clamp_timeout` (function, `deploynator/_toml.py:204`) `def _clamp_timeout(value)`
+- `load_toml_config` (function, `deploynator/_toml.py:212`) `def load_toml_config(project_path)`
 - `TestBDDDeployScenarios` (class, `tests/bdd_test_deploy.py:28`) `class TestBDDDeployScenarios`
 - `project` (method, `tests/bdd_test_deploy.py:30`) `def project(self)`
 - `test_version_bump_by_commit_type` (method, `tests/bdd_test_deploy.py:46`) `def test_version_bump_by_commit_type(self, project, commit_type, expected_bump,`
@@ -55,7 +55,7 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 ## Internal vs External Edges
 
 - Internal resolved imports (EXTRACTED): 61
-- Cross-boundary resolved imports (EXTRACTED): 56
+- Cross-boundary resolved imports (EXTRACTED): 57
 
 ## Connections
 
@@ -68,8 +68,8 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 ## Risks
 
 - [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_pypi.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
 

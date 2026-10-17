@@ -27,6 +27,10 @@ timeout_s = 300
 [deploy]
 branch = "main"
 remote = "origin"
+# Default release message when CLI gives no --subject/--message
+# nor trailing words. CLI always wins. Ej:
+# message = "chore: nightly sync"
+message = ""
 
 [pypi]
 # Si el proyecto tiene packaging (pyproject con [project] o setup.py),

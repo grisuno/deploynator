@@ -65,7 +65,7 @@
         "tests/test_models.py",
         "tests/test_path_deploy.py"
       ],
-      "mentions": 33,
+      "mentions": 34,
       "confidence": "EXTRACTED"
     },
     {
@@ -151,20 +151,6 @@
       "confidence": "EXTRACTED"
     },
     {
-      "name": "bump",
-      "files": [
-        "deploy.sh",
-        "deploynator/_models.py",
-        "deploynator/_semver.py",
-        "tests/bdd_test_deploy.py",
-        "tests/test_models.py",
-        "tests/test_pipeline.py",
-        "tests/test_semver.py"
-      ],
-      "mentions": 18,
-      "confidence": "EXTRACTED"
-    },
-    {
       "name": "commit",
       "files": [
         "deploynator/_app.py",
@@ -174,6 +160,20 @@
         "tests/bdd_test_deploy.py",
         "tests/test_config.py",
         "tests/test_models.py"
+      ],
+      "mentions": 19,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "bump",
+      "files": [
+        "deploy.sh",
+        "deploynator/_models.py",
+        "deploynator/_semver.py",
+        "tests/bdd_test_deploy.py",
+        "tests/test_models.py",
+        "tests/test_pipeline.py",
+        "tests/test_semver.py"
       ],
       "mentions": 18,
       "confidence": "EXTRACTED"
@@ -204,6 +204,20 @@
         "tests/test_semver.py"
       ],
       "mentions": 14,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "none",
+      "files": [
+        "deploynator/_app.py",
+        "deploynator/_pypi.py",
+        "deploynator/_readme.py",
+        "deploynator/_toml.py",
+        "tests/test_models.py",
+        "tests/test_pypi.py",
+        "tests/test_semver.py"
+      ],
+      "mentions": 9,
       "confidence": "EXTRACTED"
     },
     {
@@ -275,6 +289,19 @@
       "confidence": "EXTRACTED"
     },
     {
+      "name": "type",
+      "files": [
+        "deploynator/_app.py",
+        "deploynator/_models.py",
+        "tests/bdd_test_deploy.py",
+        "tests/test_changelog.py",
+        "tests/test_config.py",
+        "tests/test_models.py"
+      ],
+      "mentions": 15,
+      "confidence": "EXTRACTED"
+    },
+    {
       "name": "path",
       "files": [
         "deploynator/_app.py",
@@ -327,19 +354,6 @@
       "confidence": "EXTRACTED"
     },
     {
-      "name": "none",
-      "files": [
-        "deploynator/_pypi.py",
-        "deploynator/_readme.py",
-        "deploynator/_toml.py",
-        "tests/test_models.py",
-        "tests/test_pypi.py",
-        "tests/test_semver.py"
-      ],
-      "mentions": 7,
-      "confidence": "EXTRACTED"
-    },
-    {
       "name": "create",
       "files": [
         "deploynator/_config.py",
@@ -349,18 +363,6 @@
         "tests/bdd_test_deploy.py"
       ],
       "mentions": 18,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "type",
-      "files": [
-        "deploynator/_models.py",
-        "tests/bdd_test_deploy.py",
-        "tests/test_changelog.py",
-        "tests/test_config.py",
-        "tests/test_models.py"
-      ],
-      "mentions": 14,
       "confidence": "EXTRACTED"
     },
     {
@@ -1115,6 +1117,25 @@
       ]
     },
     {
+      "source": "none",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.45,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_app.py->deploynator/_config.py",
+        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_app.py->deploynator/_git.py",
+        "deploynator/_app.py->deploynator/_models.py",
+        "deploynator/_app.py->deploynator/_platforms.py",
+        "deploynator/_app.py->deploynator/_toml.py",
+        "deploynator/_pypi.py->deploynator/_config.py",
+        "deploynator/_pypi.py->deploynator/_toml.py",
+        "deploynator/_readme.py->deploynator/_config.py",
+        "deploynator/_toml.py->deploynator/_config.py"
+      ]
+    },
+    {
       "source": "toml",
       "target": "deploynator",
       "verb": "depends_on",
@@ -1264,6 +1285,25 @@
         "deploynator/_pypi.py->deploynator/_config.py",
         "deploynator/_toml.py->deploynator/_config.py",
         "tests/bdd_test_deploy.py->deploynator/_config.py"
+      ]
+    },
+    {
+      "source": "type",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.4,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_app.py->deploynator/_config.py",
+        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_app.py->deploynator/_git.py",
+        "deploynator/_app.py->deploynator/_models.py",
+        "deploynator/_app.py->deploynator/_platforms.py",
+        "deploynator/_app.py->deploynator/_toml.py",
+        "tests/bdd_test_deploy.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/bdd_test_deploy.py->deploynator/_docs.py",
+        "tests/bdd_test_deploy.py->deploynator/_models.py"
       ]
     },
     {
@@ -1762,21 +1802,21 @@
     },
     {
       "source": "none",
-      "target": "deploynator",
+      "target": "config",
       "verb": "depends_on",
       "strength": 0.31,
       "confidence": "INFERRED",
       "evidence": [
+        "deploynator/_app.py->deploynator/_config.py",
+        "deploynator/_app.py->deploynator/_models.py",
+        "deploynator/_app.py->deploynator/_toml.py",
         "deploynator/_pypi.py->deploynator/_config.py",
         "deploynator/_pypi.py->deploynator/_toml.py",
         "deploynator/_readme.py->deploynator/_config.py",
         "deploynator/_toml.py->deploynator/_config.py",
         "tests/test_models.py->deploynator/_models.py",
         "tests/test_pypi.py->deploynator/_config.py",
-        "tests/test_pypi.py->deploynator/_deploy.py",
-        "tests/test_pypi.py->deploynator/_models.py",
-        "tests/test_pypi.py->deploynator/_pypi.py",
-        "tests/test_pypi.py->deploynator/_toml.py"
+        "tests/test_pypi.py->deploynator/_models.py"
       ]
     },
     {
@@ -2119,6 +2159,25 @@
         "deploynator/_platforms.py->deploynator/_models.py",
         "deploynator/_semver.py->deploynator/_models.py",
         "tests/bdd_test_deploy.py->deploynator/_models.py"
+      ]
+    },
+    {
+      "source": "deploynator",
+      "target": "none",
+      "verb": "depends_on",
+      "strength": 0.26,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/__init__.py->deploynator/_app.py",
+        "deploynator/_app.py->deploynator/_toml.py",
+        "deploynator/_deploy.py->deploynator/_pypi.py",
+        "deploynator/_deploy.py->deploynator/_readme.py",
+        "deploynator/_deploy.py->deploynator/_toml.py",
+        "deploynator/_docs.py->deploynator/_toml.py",
+        "deploynator/_pypi.py->deploynator/_toml.py",
+        "deploynator/_runner.py->deploynator/_toml.py",
+        "tests/bdd_test_deploy.py->deploynator/_toml.py",
+        "tests/test_init.py->deploynator/_toml.py"
       ]
     },
     {
@@ -2500,63 +2559,6 @@
         "tests/test_pipeline.py->deploynator/_models.py",
         "tests/test_semver.py->deploynator/_config.py"
       ]
-    },
-    {
-      "source": "tag",
-      "target": "config",
-      "verb": "depends_on",
-      "strength": 0.26,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_git.py->deploynator/_config.py",
-        "deploynator/_mcp_server.py->deploynator/_config.py",
-        "deploynator/_semver.py->deploynator/_config.py",
-        "deploynator/_semver.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_path_deploy.py->deploynator/_config.py",
-        "tests/test_path_deploy.py->deploynator/_models.py",
-        "tests/test_pipeline.py->deploynator/_config.py"
-      ]
-    },
-    {
-      "source": "toml",
-      "target": "config",
-      "verb": "depends_on",
-      "strength": 0.26,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_toml.py->deploynator/_config.py",
-        "tests/test_init.py->deploynator/_config.py",
-        "tests/test_init.py->deploynator/_toml.py",
-        "tests/test_path_deploy.py->deploynator/_config.py",
-        "tests/test_path_deploy.py->deploynator/_models.py",
-        "tests/test_pypi.py->deploynator/_config.py",
-        "tests/test_pypi.py->deploynator/_models.py",
-        "tests/test_pypi.py->deploynator/_toml.py",
-        "tests/test_runner.py->deploynator/_config.py",
-        "tests/test_runner.py->deploynator/_toml.py"
-      ]
-    },
-    {
-      "source": "type",
-      "target": "deploynator",
-      "verb": "depends_on",
-      "strength": 0.26,
-      "confidence": "INFERRED",
-      "evidence": [
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_docs.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_semver.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_changelog.py->deploynator/_changelog.py",
-        "tests/test_changelog.py->deploynator/_config.py",
-        "tests/test_changelog.py->deploynator/_models.py",
-        "tests/test_config.py->deploynator/_config.py"
-      ]
     }
   ],
   "dialectic": [
@@ -2567,7 +2569,7 @@
     "Thesis: `auth` centralizes 4 files; Antithesis: `line` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
     "Thesis: `auth` centralizes 4 files; Antithesis: `log` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
     "Thesis: `auth` centralizes 4 files; Antithesis: `platform` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
-    "Thesis: `auth` centralizes 4 files; Antithesis: `type` pulls 5 files with 3 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `auth` centralizes 4 files; Antithesis: `type` pulls 6 files with 4 shared (Jaccard 0.67); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
     "Thesis: `auth` centralizes 4 files; Antithesis: `valid` pulls 7 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
     "Thesis: `block` centralizes 4 files; Antithesis: `current` pulls 7 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?"
   ]

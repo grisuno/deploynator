@@ -244,7 +244,7 @@ def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, 
 
 #### `DeployOrchestrator.generate_workflows`
 
-`method` | [deploynator/_deploy.py:433](../../deploynator/_deploy.py#L433)
+`method` | [deploynator/_deploy.py:435](../../deploynator/_deploy.py#L435)
 
 ```python
 def generate_workflows(self, project: ProjectConfig, output_dir: str = '.github/workflows') -> list[str]
@@ -265,7 +265,7 @@ def generate_workflows(self, project: ProjectConfig, output_dir: str = '.github/
 
 #### `DeployOrchestrator.install_dependencies`
 
-`method` | [deploynator/_deploy.py:501](../../deploynator/_deploy.py#L501)
+`method` | [deploynator/_deploy.py:503](../../deploynator/_deploy.py#L503)
 
 ```python
 def install_dependencies(self, project: ProjectConfig) -> dict[str, bool]
@@ -287,7 +287,7 @@ def install_dependencies(self, project: ProjectConfig) -> dict[str, bool]
 
 #### `DeployOrchestrator.integrate_readmenator`
 
-`method` | [deploynator/_deploy.py:511](../../deploynator/_deploy.py#L511)
+`method` | [deploynator/_deploy.py:513](../../deploynator/_deploy.py#L513)
 
 ```python
 def integrate_readmenator(self, project_path: str) -> bool
@@ -309,7 +309,7 @@ def integrate_readmenator(self, project_path: str) -> bool
 
 #### `DeployOrchestrator.install_lazygit`
 
-`method` | [deploynator/_deploy.py:545](../../deploynator/_deploy.py#L545)
+`method` | [deploynator/_deploy.py:547](../../deploynator/_deploy.py#L547)
 
 ```python
 def install_lazygit(self) -> bool

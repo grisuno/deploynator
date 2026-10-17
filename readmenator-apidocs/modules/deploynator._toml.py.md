@@ -54,6 +54,7 @@ class TomlConfig
 | [`docs_timeout_s`](#tomlconfig-docs_timeout_s) | `int` | `300` |  |
 | [`deploy_branch`](#tomlconfig-deploy_branch) | `str` | `'main'` |  |
 | [`deploy_remote`](#tomlconfig-deploy_remote) | `str` | `'origin'` |  |
+| [`deploy_message`](#tomlconfig-deploy_message) | `str` | `''` |  |
 | [`pypi_enabled`](#tomlconfig-pypi_enabled) | `bool` | `True` |  |
 | [`pypi_repo`](#tomlconfig-pypi_repo) | `str` | `'pypi'` |  |
 | [`pypi_clean_dist`](#tomlconfig-pypi_clean_dist) | `bool` | `True` |  |
@@ -158,7 +159,7 @@ Devuelve None si no hay nada detectable (caller usa pytest default).
 
 ### `load_toml_config`
 
-`function` | [deploynator/_toml.py:211](../../deploynator/_toml.py#L211)
+`function` | [deploynator/_toml.py:212](../../deploynator/_toml.py#L212)
 
 ```python
 def load_toml_config(project_path: str) -> TomlConfig

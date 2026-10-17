@@ -130,7 +130,9 @@ class DeployOrchestrator:
             )
 
         if dry_run:
+            _scope = f"({scope})" if scope else ""
             print(f"[DRY-RUN] Would deploy {project.name} with type={commit_type.value}")
+            print(f"[DRY-RUN] Would commit: {commit_type.value}{_scope}: {subject}")
             if run_tests:
                 print(f"[DRY-RUN] Would run tests: {toml_cfg.test_commands}")
             if run_docs:

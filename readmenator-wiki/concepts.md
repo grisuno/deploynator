@@ -6,28 +6,28 @@ Second-brain semantic layer: nouns map atomically to file sets (EXTRACTED); verb
 |---------|-------|----------|-----------|
 | `deploynator` | 23 | 37 | `app.py`, `deploy.sh`, `deploynator/__init__.py`, `deploynator/__main__.py`, `deploynator/_app.py` |
 | `deploy` | 12 | 35 | `deploy.sh`, `deploynator/_deploy.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`, `deploynator/_readme.py` |
-| `release` | 12 | 33 | `deploy.sh`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_mcp_server.py` |
+| `release` | 12 | 34 | `deploy.sh`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_mcp_server.py` |
 | `run` | 12 | 17 | `app.py`, `deploy.sh`, `deploynator/_docs.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py` |
 | `project` | 11 | 19 | `deploynator/_app.py`, `deploynator/_deploy.py`, `deploynator/_models.py`, `deploynator/_pypi.py`, `deploynator/_toml.py` |
 | `git` | 10 | 18 | `deploy.sh`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py` |
 | `version` | 7 | 27 | `deploynator/_models.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_models.py`, `tests/test_path_deploy.py` |
 | `config` | 7 | 25 | `deploynator/_config.py`, `deploynator/_models.py`, `deploynator/_readme.py`, `deploynator/_toml.py`, `tests/test_config.py` |
+| `commit` | 7 | 19 | `deploynator/_app.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`, `tests/bdd_test_deploy.py` |
 | `bump` | 7 | 18 | `deploy.sh`, `deploynator/_models.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_models.py` |
-| `commit` | 7 | 18 | `deploynator/_app.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`, `tests/bdd_test_deploy.py` |
 | `install` | 7 | 17 | `app.py`, `deploy.sh`, `deploynator/_app.py`, `deploynator/_deploy.py`, `install.sh` |
 | `file` | 7 | 14 | `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_path_deploy.py` |
+| `none` | 7 | 9 | `deploynator/_app.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_toml.py`, `tests/test_models.py` |
 | `valid` | 7 | 9 | `deploynator/_models.py`, `deploynator/_semver.py`, `tests/test_config.py`, `tests/test_init.py`, `tests/test_models.py` |
 | `current` | 7 | 8 | `deploy.sh`, `deploynator/_git.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_pipeline.py` |
 | `red` | 7 | 7 | `tests/test_cli_mcp.py`, `tests/test_init.py`, `tests/test_install_example.py`, `tests/test_pipeline.py`, `tests/test_pypi.py` |
 | `toml` | 6 | 21 | `deploynator/_toml.py`, `tests/test_init.py`, `tests/test_path_deploy.py`, `tests/test_pypi.py`, `tests/test_runner.py` |
 | `docs` | 6 | 20 | `deploynator/_app.py`, `deploynator/_docs.py`, `deploynator/_mcp_server.py`, `tests/bdd_test_deploy.py`, `tests/test_pipeline.py` |
+| `type` | 6 | 15 | `deploynator/_app.py`, `deploynator/_models.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_config.py` |
 | `path` | 6 | 14 | `deploynator/_app.py`, `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_readme.py`, `tests/test_config.py` |
 | `tag` | 6 | 14 | `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_path_deploy.py` |
 | `semver` | 6 | 10 | `deploynator/_mcp_server.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_config.py`, `tests/test_pipeline.py` |
 | `name` | 6 | 9 | `deploynator/_deploy.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `tests/test_deploy.py`, `tests/test_models.py` |
-| `none` | 6 | 7 | `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_toml.py`, `tests/test_models.py`, `tests/test_pypi.py` |
 | `create` | 5 | 18 | `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_git.py`, `deploynator/_platforms.py`, `tests/bdd_test_deploy.py` |
-| `type` | 5 | 14 | `deploynator/_models.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_config.py`, `tests/test_models.py` |
 | `cli` | 5 | 9 | `deploynator/_models.py`, `deploynator/_platforms.py`, `tests/test_cli_mcp.py`, `tests/test_install_example.py`, `tests/test_models.py` |
 | `format` | 5 | 9 | `deploynator/_changelog.py`, `deploynator/_models.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_models.py` |
 | `empty` | 5 | 8 | `tests/test_changelog.py`, `tests/test_deploy.py`, `tests/test_install_example.py`, `tests/test_pypi.py`, `tests/test_runner.py` |
@@ -83,6 +83,7 @@ Second-brain semantic layer: nouns map atomically to file sets (EXTRACTED); verb
 | `deploy` | `depends_on` | `config` | 0.48 |
 | `run` | `depends_on` | `config` | 0.48 |
 | `tag` | `depends_on` | `deploynator` | 0.48 |
+| `none` | `depends_on` | `deploynator` | 0.45 |
 | `toml` | `depends_on` | `deploynator` | 0.45 |
 | `current` | `depends_on` | `deploynator` | 0.43 |
 | `empty` | `depends_on` | `deploynator` | 0.43 |
@@ -91,6 +92,7 @@ Second-brain semantic layer: nouns map atomically to file sets (EXTRACTED); verb
 | `get` | `depends_on` | `deploynator` | 0.40 |
 | `pipeline` | `depends_on` | `deploynator` | 0.40 |
 | `project` | `depends_on` | `create` | 0.40 |
+| `type` | `depends_on` | `deploynator` | 0.40 |
 | `bump` | `depends_on` | `deploynator` | 0.38 |
 | `default` | `depends_on` | `deploynator` | 0.38 |
 | `deploynator` | `depends_on` | `release` | 0.38 |
@@ -107,8 +109,6 @@ Second-brain semantic layer: nouns map atomically to file sets (EXTRACTED); verb
 | `git` | `depends_on` | `project` | 0.33 |
 | `list` | `depends_on` | `deploynator` | 0.33 |
 | `project` | `depends_on` | `name` | 0.33 |
-| `project` | `depends_on` | `path` | 0.33 |
-| `repo` | `depends_on` | `deploynator` | 0.33 |
 
 ## Dialectic Prompts
 
@@ -119,6 +119,6 @@ Second-brain semantic layer: nouns map atomically to file sets (EXTRACTED); verb
 - Thesis: `auth` centralizes 4 files; Antithesis: `line` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
 - Thesis: `auth` centralizes 4 files; Antithesis: `log` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
 - Thesis: `auth` centralizes 4 files; Antithesis: `platform` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
-- Thesis: `auth` centralizes 4 files; Antithesis: `type` pulls 5 files with 3 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
+- Thesis: `auth` centralizes 4 files; Antithesis: `type` pulls 6 files with 4 shared (Jaccard 0.67); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
 - Thesis: `auth` centralizes 4 files; Antithesis: `valid` pulls 7 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
 - Thesis: `block` centralizes 4 files; Antithesis: `current` pulls 7 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?

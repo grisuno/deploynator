@@ -81,7 +81,7 @@ class DeploynatorApp
 | Name | Type | Default | Description |
 |---|---|---|---|
 | [`DEPLOY_SH_TEMPLATE`](#deploynatorapp-deploy_sh_template) |  | `'#!/bin/bash\n# deploy.sh -- one-liner deploy via deploynator (generic per-repo script).\n# Deployed by deploynator: detects its own directory, ensures tooling,\n# then releases this repo. Usage:\n# ./deploy.sh # patch release (smallest bump)\n# ./deploy.sh feat --dry-run # preview a minor release\n# ./deploy.sh fix --no-test # patch release skipping tests\nset -euo pipefail\n\nDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"\nTYPE="patch"\nif [ $# -gt 0 ]; then\n TYPE="$1"\n shift\nfi\n\nPIP_BIN="pip"\ncommand -v pip >/dev/null 2>&1 \|\| PIP_BIN="pip3"\n\n# Install or update one package (best effort: works offline with current versions,\n# on PEP 668 systems, and before the PyPI upload via git fallback).\nensure_pkg() {\n if python3 -c "import $1" 2>/dev/null; then\n "$PIP_BIN" install -U "$2" 2>/dev/null \|\| true\n else\n "$PIP_BIN" install "$2" 2>/dev/null \\\n \|\| "$PIP_BIN" install "$3" 2>/dev/null \\\n \|\| "$PIP_BIN" install --break-system-packages "$2" 2>/dev/null \\\n \|\| "$PIP_BIN" install --break-system-packages "$3" 2>/dev/null \\\n \|\| true\n fi\n}\n\nensure_pkg deploynator deploynator "git+https://github.com/grisuno/deploynator.git"\nensure_pkg readmenator readmenator readmenator\nensure_pkg build build build\nensure_pkg twine twine twine\n\nif ! python3 -c "import deploynator" 2>/dev/null; then\n echo "[!] deploynator not available and install failed (offline?)." >&2\n exit 1\nfi\n\nexec python3 -m deploynator release --type "$TYPE" --project "$DIR" "$@"\n'` |  |
-| [`DEPLOY_TOML_TEMPLATE`](#deploynatorapp-deploy_toml_template) |  | `` '# deploynator.toml -- per-project deploy config (created by `deploynator init`).\n# Docs: specify version file, tests, docs and PyPI behaviour for this repo.\n\n[project]\nname = "{name}"\nversion_file = "version.json"\n\n[tests]\ncommands = ["python -m pytest tests/ -q"]\ntimeout_s = 300\nallow_no_tests = false\n\n[docs]\nauto = true\ncommand = "python -m readmenator . --rebuild"\ntimeout_s = 300\n\n[deploy]\nbranch = "main"\nremote = "origin"\n\n[pypi]\nenabled = true\nrepo = "pypi"\nclean_dist = true\ntimeout_s = 600\n' `` |  |
+| [`DEPLOY_TOML_TEMPLATE`](#deploynatorapp-deploy_toml_template) |  | `` '# deploynator.toml -- per-project deploy config (created by `deploynator init`).\n# Docs: specify version file, tests, docs and PyPI behaviour for this repo.\n\n[project]\nname = "{name}"\nversion_file = "version.json"\n\n[tests]\ncommands = ["python -m pytest tests/ -q"]\ntimeout_s = 300\nallow_no_tests = false\n\n[docs]\nauto = true\ncommand = "python -m readmenator . --rebuild"\ntimeout_s = 300\n\n[deploy]\nbranch = "main"\nremote = "origin"\n# Default release message when CLI gives no --subject/--message\n# nor trailing words (e.g. message = "chore: nightly sync").\n# CLI always wins over this value.\nmessage = ""\n\n[pypi]\nenabled = true\nrepo = "pypi"\nclean_dist = true\ntimeout_s = 600\n' `` |  |
 
 **Members**
 
@@ -163,7 +163,7 @@ def auth_status(self) -> dict[str, bool]
 
 #### `DeploynatorApp.init_project`
 
-`method` | [deploynator/_app.py:170](../../deploynator/_app.py#L170)
+`method` | [deploynator/_app.py:174](../../deploynator/_app.py#L174)
 
 ```python
 def init_project(self, project_path: str = '', name: str = '') -> str
@@ -186,7 +186,7 @@ def init_project(self, project_path: str = '', name: str = '') -> str
 
 #### `DeploynatorApp.start_branch`
 
-`method` | [deploynator/_app.py:247](../../deploynator/_app.py#L247)
+`method` | [deploynator/_app.py:251](../../deploynator/_app.py#L251)
 
 ```python
 def start_branch(self, commit_type: str, description: str, project_path: str = '', project_name: str = '', remote: bool = False) -> str
@@ -212,7 +212,7 @@ def start_branch(self, commit_type: str, description: str, project_path: str = '
 
 #### `DeploynatorApp.commit`
 
-`method` | [deploynator/_app.py:305](../../deploynator/_app.py#L305)
+`method` | [deploynator/_app.py:309](../../deploynator/_app.py#L309)
 
 ```python
 def commit(self, commit_type: str, subject: str, scope: str = '', body: str = '', project_path: str = '', project_name: str = '', dry_run: bool = False) -> str
@@ -240,10 +240,10 @@ def commit(self, commit_type: str, subject: str, scope: str = '', body: str = ''
 
 #### `DeploynatorApp.release`
 
-`method` | [deploynator/_app.py:345](../../deploynator/_app.py#L345)
+`method` | [deploynator/_app.py:367](../../deploynator/_app.py#L367)
 
 ```python
-def release(self, commit_type: str = 'release', subject: str = '', scope: str = '', body: str = '', project_name: str = '', bump: str = '', dry_run: bool = False, platforms: list[str] | None = None, all_projects: bool = False, no_test: bool = False, no_docs: bool = False, no_pypi: bool = False, verbose: bool = False) -> list[DeployResult]
+def release(self, commit_type: str = 'release', subject: str = '', scope: str = '', body: str = '', message: str = '', project_name: str = '', bump: str = '', dry_run: bool = False, platforms: list[str] | None = None, all_projects: bool = False, no_test: bool = False, no_docs: bool = False, no_pypi: bool = False, verbose: bool = False) -> list[DeployResult]
 ```
 
 **Parameters**
@@ -254,6 +254,7 @@ def release(self, commit_type: str = 'release', subject: str = '', scope: str = 
 | `subject` | `str` | `''` |  |
 | `scope` | `str` | `''` |  |
 | `body` | `str` | `''` |  |
+| `message` | `str` | `''` |  |
 | `project_name` | `str` | `''` |  |
 | `bump` | `str` | `''` |  |
 | `dry_run` | `bool` | `False` |  |
@@ -274,7 +275,7 @@ def release(self, commit_type: str = 'release', subject: str = '', scope: str = 
 
 #### `DeploynatorApp.generate_docs`
 
-`method` | [deploynator/_app.py:437](../../deploynator/_app.py#L437)
+`method` | [deploynator/_app.py:503](../../deploynator/_app.py#L503)
 
 ```python
 def generate_docs(self, project_path: str = '', project_name: str = '') -> bool
@@ -297,7 +298,7 @@ def generate_docs(self, project_path: str = '', project_name: str = '') -> bool
 
 #### `DeploynatorApp.status`
 
-`method` | [deploynator/_app.py:443](../../deploynator/_app.py#L443)
+`method` | [deploynator/_app.py:509](../../deploynator/_app.py#L509)
 
 ```python
 def status(self, project_path: str = '', project_name: str = '') -> dict
@@ -320,7 +321,7 @@ def status(self, project_path: str = '', project_name: str = '') -> dict
 
 #### `DeploynatorApp.list_projects`
 
-`method` | [deploynator/_app.py:463](../../deploynator/_app.py#L463)
+`method` | [deploynator/_app.py:529](../../deploynator/_app.py#L529)
 
 ```python
 def list_projects(self, search_path: str = '') -> list[ProjectConfig]
@@ -342,7 +343,7 @@ def list_projects(self, search_path: str = '') -> list[ProjectConfig]
 
 #### `DeploynatorApp.generate_ci`
 
-`method` | [deploynator/_app.py:468](../../deploynator/_app.py#L468)
+`method` | [deploynator/_app.py:534](../../deploynator/_app.py#L534)
 
 ```python
 def generate_ci(self, project_name: str = '', all_projects: bool = False) -> list[str]
@@ -365,7 +366,7 @@ def generate_ci(self, project_name: str = '', all_projects: bool = False) -> lis
 
 #### `DeploynatorApp.install_deps`
 
-`method` | [deploynator/_app.py:484](../../deploynator/_app.py#L484)
+`method` | [deploynator/_app.py:550](../../deploynator/_app.py#L550)
 
 ```python
 def install_deps(self, project_name: str = '') -> dict[str, bool]
@@ -387,7 +388,7 @@ def install_deps(self, project_name: str = '') -> dict[str, bool]
 
 #### `DeploynatorApp.install_packages`
 
-`method` | [deploynator/_app.py:495](../../deploynator/_app.py#L495)
+`method` | [deploynator/_app.py:561](../../deploynator/_app.py#L561)
 
 ```python
 def install_packages(self, packages: list[str] | None = None) -> dict[str, bool]
@@ -409,7 +410,7 @@ pip install/upgrade packages (default: deploynator from PyPI).
 
 #### `DeploynatorApp.interactive_menu`
 
-`method` | [deploynator/_app.py:523](../../deploynator/_app.py#L523)
+`method` | [deploynator/_app.py:589](../../deploynator/_app.py#L589)
 
 ```python
 def interactive_menu(self) -> None

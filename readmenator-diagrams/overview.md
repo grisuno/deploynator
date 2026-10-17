@@ -51,8 +51,8 @@ deploynator: _toml groups 8 files (py) around _target_regex, list_make_targets, 
 - <a href="../deploynator/_toml.py#L76-L101">deploynator/_toml.py::looks_like_packaging_project</a>
 - <a href="../deploynator/_toml.py#L102-L151">deploynator/_toml.py::detect_test_commands</a>
 - <a href="../deploynator/_toml.py#L152-L178">deploynator/_toml.py::_auto_toml_config</a>
-- <a href="../deploynator/_toml.py#L179-L194">deploynator/_toml.py::TomlConfig</a>
-- <a href="../deploynator/_toml.py#L195-L202">deploynator/_toml.py::__post_init__</a>
+- <a href="../deploynator/_toml.py#L179-L195">deploynator/_toml.py::TomlConfig</a>
+- <a href="../deploynator/_toml.py#L196-L203">deploynator/_toml.py::__post_init__</a>
 
 ### deploynator: _mcp_server (3)
 

@@ -81,7 +81,7 @@ def build_parser() -> argparse.ArgumentParser
 
 ### `preprocess_argv`
 
-`function` | [deploynator/__main__.py:137](../../deploynator/__main__.py#L137)
+`function` | [deploynator/__main__.py:145](../../deploynator/__main__.py#L145)
 
 ```python
 def preprocess_argv(argv: list[str]) -> tuple[argparse.Namespace, str]
@@ -105,7 +105,7 @@ def preprocess_argv(argv: list[str]) -> tuple[argparse.Namespace, str]
 
 ### `main`
 
-`function` | [deploynator/__main__.py:171](../../deploynator/__main__.py#L171)
+`function` | [deploynator/__main__.py:179](../../deploynator/__main__.py#L179)
 
 ```python
 def main(argv: list[str] | None = None) -> NoReturn | None

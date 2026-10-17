@@ -1,19 +1,19 @@
 {
   "tool": "readmenator",
   "schema_version": 2,
-  "generated_at": "2026-10-16T23:25:37Z",
+  "generated_at": "2026-10-17T06:33:20Z",
   "project_root": ".",
   "project_name": "deploynator",
-  "git_commit": "a516a89aadfd2e0a208fe825a2f10f6d043bebf3",
+  "git_commit": "ff0a15c05de18cc9df2a60cfac98b3d40bc36374",
   "git_branch": "main",
-  "source_fingerprint": "0a430377e120fa1d87871b4b8bea8965936f133a0207ae2ce4863146b039af26",
+  "source_fingerprint": "8f509c70063149e99e2c2df19c98d08432160451319978072be3e43169879fed",
   "freshness_check": "readmenator . fresh  # exit 0 = docs match sources, exit 1 = run: readmenator . --rebuild",
   "files": 35,
-  "symbols": 442,
-  "imports": 377,
-  "calls": 2151,
+  "symbols": 443,
+  "imports": 381,
+  "calls": 2183,
   "inherits": 6,
-  "resolved_imports": 221,
+  "resolved_imports": 224,
   "security_findings": 0,
   "languages": {
     "py": 33,
@@ -57,7 +57,7 @@
     {
       "path": "CONCEPTS.md",
       "lines": 120,
-      "approx_tokens": 3381
+      "approx_tokens": 3394
     },
     {
       "path": "GOTCHAS.md",
@@ -71,8 +71,8 @@
     },
     {
       "path": "KB_deploynator.md",
-      "lines": 337,
-      "approx_tokens": 5411
+      "lines": 338,
+      "approx_tokens": 5434
     },
     {
       "path": "KB_root.md",
@@ -96,8 +96,8 @@
     },
     {
       "path": "SYMBOLS.md",
-      "lines": 446,
-      "approx_tokens": 11442
+      "lines": 447,
+      "approx_tokens": 11470
     },
     {
       "path": "recipes/add-function.md",

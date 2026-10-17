@@ -1,6 +1,6 @@
 # Second Brain
 
-*Last synthesized: 2026-10-16 | 35 files | 5 concept pages | offline, zero tokens*
+*Last synthesized: 2026-10-17 | 35 files | 5 concept pages | offline, zero tokens*
 
 > Raw sources -> readmenator wiki -> links (Karpathy LLM Wiki Pattern, deterministic).
 > Start here, then open one community page. Prefer grep over full reads.
@@ -18,13 +18,13 @@ Open work clusters around documentation (37% file coverage), 0 security findings
 | Metric | Value |
 |--------|-------|
 | Files | 35 |
-| Symbols | 442 |
-| Resolved imports | 221 |
+| Symbols | 443 |
+| Resolved imports | 224 |
 | Languages | py, sh |
 | Communities | 5 |
 | Doc coverage | 37% (13/35 files) |
 | Security findings | 0 |
-| Estimated read cost | ~4537 tokens (chars/4, offline so $0) |
+| Estimated read cost | ~4587 tokens (chars/4, offline so $0) |
 
 ## Reading Order
 
@@ -53,7 +53,7 @@ readmenator query "<question>" --target deploynator
 | `deploynator/_deploy.py` | 36.0 |
 | `deploynator/_models.py` | 30.7 |
 | `deploynator/_toml.py` | 23.0 |
-| `deploynator/_app.py` | 17.2 |
+| `deploynator/_app.py` | 17.3 |
 
 ## Strongest Connections
 

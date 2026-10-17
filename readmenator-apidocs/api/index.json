@@ -3,13 +3,13 @@
  "format": "jsonl",
  "meta": {
   "modules": 19,
-  "entities": 307,
+  "entities": 308,
   "languages": {
    "py": 17,
    "sh": 2
   },
   "kinds": {
-   "attribute": 101,
+   "attribute": 102,
    "class": 28,
    "classmethod": 12,
    "constant": 13,
@@ -265,7 +265,7 @@
   {
    "uid": "deploynator/_toml.py",
    "path": "modules/deploynator._toml.py.jsonl",
-   "entities": 26
+   "entities": 27
   },
   {
    "uid": "install.sh",

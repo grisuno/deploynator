@@ -4,28 +4,28 @@ Nouns map atomically to file sets (EXTRACTED); verbs aggregate structural edges 
 
 - `deploynator` | files=23 | mentions=37 | `app.py`, `deploy.sh`, `deploynator/__init__.py`, `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`
 - `deploy` | files=12 | mentions=35 | `deploy.sh`, `deploynator/_deploy.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`, `deploynator/_readme.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_init.py`, `tests/test_models.py`, `tests/test_path_deploy.py`
-- `release` | files=12 | mentions=33 | `deploy.sh`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`
+- `release` | files=12 | mentions=34 | `deploy.sh`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`
 - `run` | files=12 | mentions=17 | `app.py`, `deploy.sh`, `deploynator/_docs.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `tests/test_install_example.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`
 - `project` | files=11 | mentions=19 | `deploynator/_app.py`, `deploynator/_deploy.py`, `deploynator/_models.py`, `deploynator/_pypi.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_models.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`
 - `git` | files=10 | mentions=18 | `deploy.sh`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `tests/bdd_test_deploy.py`, `tests/test_models.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`
 - `version` | files=7 | mentions=27 | `deploynator/_models.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_models.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_semver.py`
 - `config` | files=7 | mentions=25 | `deploynator/_config.py`, `deploynator/_models.py`, `deploynator/_readme.py`, `deploynator/_toml.py`, `tests/test_config.py`, `tests/test_models.py`, `tests/test_toml.py`
+- `commit` | files=7 | mentions=19 | `deploynator/_app.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`, `tests/bdd_test_deploy.py`, `tests/test_config.py`, `tests/test_models.py`
 - `bump` | files=7 | mentions=18 | `deploy.sh`, `deploynator/_models.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_models.py`, `tests/test_pipeline.py`, `tests/test_semver.py`
-- `commit` | files=7 | mentions=18 | `deploynator/_app.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`, `tests/bdd_test_deploy.py`, `tests/test_config.py`, `tests/test_models.py`
 - `install` | files=7 | mentions=17 | `app.py`, `deploy.sh`, `deploynator/_app.py`, `deploynator/_deploy.py`, `install.sh`, `tests/test_deploy.py`, `tests/test_install_example.py`
 - `file` | files=7 | mentions=14 | `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_semver.py`
+- `none` | files=7 | mentions=9 | `deploynator/_app.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_toml.py`, `tests/test_models.py`, `tests/test_pypi.py`, `tests/test_semver.py`
 - `valid` | files=7 | mentions=9 | `deploynator/_models.py`, `deploynator/_semver.py`, `tests/test_config.py`, `tests/test_init.py`, `tests/test_models.py`, `tests/test_semver.py`, `tests/test_toml.py`
 - `current` | files=7 | mentions=8 | `deploy.sh`, `deploynator/_git.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_pipeline.py`, `tests/test_readme_footer.py`, `tests/test_semver.py`
 - `red` | files=7 | mentions=7 | `tests/test_cli_mcp.py`, `tests/test_init.py`, `tests/test_install_example.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_toml.py`
 - `toml` | files=6 | mentions=21 | `deploynator/_toml.py`, `tests/test_init.py`, `tests/test_path_deploy.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_toml.py`
 - `docs` | files=6 | mentions=20 | `deploynator/_app.py`, `deploynator/_docs.py`, `deploynator/_mcp_server.py`, `tests/bdd_test_deploy.py`, `tests/test_pipeline.py`, `tests/test_runner.py`
+- `type` | files=6 | mentions=15 | `deploynator/_app.py`, `deploynator/_models.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_config.py`, `tests/test_models.py`
 - `path` | files=6 | mentions=14 | `deploynator/_app.py`, `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_readme.py`, `tests/test_config.py`, `tests/test_path_deploy.py`
 - `tag` | files=6 | mentions=14 | `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`
 - `semver` | files=6 | mentions=10 | `deploynator/_mcp_server.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_config.py`, `tests/test_pipeline.py`, `tests/test_semver.py`
 - `name` | files=6 | mentions=9 | `deploynator/_deploy.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `tests/test_deploy.py`, `tests/test_models.py`, `tests/test_path_deploy.py`
-- `none` | files=6 | mentions=7 | `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_toml.py`, `tests/test_models.py`, `tests/test_pypi.py`, `tests/test_semver.py`
 - `create` | files=5 | mentions=18 | `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_git.py`, `deploynator/_platforms.py`, `tests/bdd_test_deploy.py`
-- `type` | files=5 | mentions=14 | `deploynator/_models.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_config.py`, `tests/test_models.py`
 - `cli` | files=5 | mentions=9 | `deploynator/_models.py`, `deploynator/_platforms.py`, `tests/test_cli_mcp.py`, `tests/test_install_example.py`, `tests/test_models.py`
 - `format` | files=5 | mentions=9 | `deploynator/_changelog.py`, `deploynator/_models.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_models.py`
 - `empty` | files=5 | mentions=8 | `tests/test_changelog.py`, `tests/test_deploy.py`, `tests/test_install_example.py`, `tests/test_pypi.py`, `tests/test_runner.py`
@@ -79,6 +79,7 @@ Nouns map atomically to file sets (EXTRACTED); verbs aggregate structural edges 
 - `deploy` --depends_on--> `config` (strength 0.48)
 - `run` --depends_on--> `config` (strength 0.48)
 - `tag` --depends_on--> `deploynator` (strength 0.48)
+- `none` --depends_on--> `deploynator` (strength 0.45)
 - `toml` --depends_on--> `deploynator` (strength 0.45)
 - `current` --depends_on--> `deploynator` (strength 0.43)
 - `empty` --depends_on--> `deploynator` (strength 0.43)
@@ -87,6 +88,7 @@ Nouns map atomically to file sets (EXTRACTED); verbs aggregate structural edges 
 - `get` --depends_on--> `deploynator` (strength 0.40)
 - `pipeline` --depends_on--> `deploynator` (strength 0.40)
 - `project` --depends_on--> `create` (strength 0.40)
+- `type` --depends_on--> `deploynator` (strength 0.40)
 - `bump` --depends_on--> `deploynator` (strength 0.38)
 - `default` --depends_on--> `deploynator` (strength 0.38)
 - `deploynator` --depends_on--> `release` (strength 0.38)
@@ -103,8 +105,6 @@ Nouns map atomically to file sets (EXTRACTED); verbs aggregate structural edges 
 - `git` --depends_on--> `project` (strength 0.33)
 - `list` --depends_on--> `deploynator` (strength 0.33)
 - `project` --depends_on--> `name` (strength 0.33)
-- `project` --depends_on--> `path` (strength 0.33)
-- `repo` --depends_on--> `deploynator` (strength 0.33)
 
 ## Dialectic
 
@@ -115,6 +115,6 @@ Nouns map atomically to file sets (EXTRACTED); verbs aggregate structural edges 
 - Thesis: `auth` centralizes 4 files; Antithesis: `line` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
 - Thesis: `auth` centralizes 4 files; Antithesis: `log` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
 - Thesis: `auth` centralizes 4 files; Antithesis: `platform` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
-- Thesis: `auth` centralizes 4 files; Antithesis: `type` pulls 5 files with 3 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
+- Thesis: `auth` centralizes 4 files; Antithesis: `type` pulls 6 files with 4 shared (Jaccard 0.67); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
 - Thesis: `auth` centralizes 4 files; Antithesis: `valid` pulls 7 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
 - Thesis: `block` centralizes 4 files; Antithesis: `current` pulls 7 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?

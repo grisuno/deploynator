@@ -159,6 +159,10 @@ timeout_s = 300
 [deploy]
 branch = "main"
 remote = "origin"
+# Default release message when CLI gives no --subject/--message
+# nor trailing words (e.g. message = "chore: nightly sync").
+# CLI always wins over this value.
+message = ""
 
 [pypi]
 enabled = true
@@ -342,12 +346,31 @@ version:
 
     # ---- Release ----
 
+    @staticmethod
+    def _parse_release_message(raw: str) -> tuple[str | None, str, str]:
+        """Parsea `test(module): texto` o `test(module) texto` (colon opcional).
+
+        Devuelve (commit_type|None, scope, subject). Si no hay prefijo
+        convencional, devuelve (None, "", raw.strip()).
+        """
+        import re as _re
+        from deploynator._models import CommitType as _CT
+        text = (raw or "").strip()
+        if not text:
+            return None, "", ""
+        types = "|".join(_CT.valid_types())
+        m = _re.match(rf"^({types})(?:\(([^)]+)\))?\s*:?\s+(.+)$", text, _re.IGNORECASE)
+        if m:
+            return m.group(1).lower(), (m.group(2) or "").strip(), m.group(3).strip()
+        return None, "", text
+
     def release(
         self,
         commit_type: str = "release",
         subject: str = "",
         scope: str = "",
         body: str = "",
+        message: str = "",
         project_name: str = "",
         bump: str = "",
         dry_run: bool = False,
@@ -408,16 +431,59 @@ version:
         if platforms:
             platform_objs = [Platform.from_string(p) for p in platforms]
 
-        subject_text = subject or f"{ctype.value}: automated release"
+        # Precedencia mensaje: CLI trailing/--message > --subject > [deploy] message > auto.
+        cli_message = (message or "").strip()
+        base_ctype = ctype
+        if cli_message:
+            p_type, p_scope, p_subject = self._parse_release_message(cli_message)
+            if p_type:
+                base_ctype = CommitType.from_string(p_type)
+                base_scope = p_scope or scope
+                base_subject = p_subject
+            else:
+                base_scope = scope
+                base_subject = cli_message
+            has_base_subject = True
+        elif (subject or "").strip():
+            base_scope = scope
+            base_subject = subject.strip()
+            has_base_subject = True
+        else:
+            base_scope = scope
+            base_subject = ""
+            has_base_subject = False
 
         for project in projects:
             if not project:
                 continue
+            proj_ctype = base_ctype
+            proj_scope = base_scope
+            if has_base_subject:
+                subject_text = base_subject
+            else:
+                # Fallback per-proyecto: [deploy] message del deploynator.toml.
+                toml_msg = ""
+                try:
+                    from deploynator._deploy import DeployOrchestrator as _DO
+                    from deploynator._toml import load_toml_config as _load
+                    toml_msg = (_load(_DO._resolve_project_path(project)).deploy_message or "").strip()
+                except (ValueError, OSError):
+                    toml_msg = ""
+                if toml_msg:
+                    t_type, t_scope, t_subject = self._parse_release_message(toml_msg)
+                    if t_type:
+                        proj_ctype = CommitType.from_string(t_type)
+                        proj_scope = t_scope or scope
+                        subject_text = t_subject
+                    else:
+                        subject_text = toml_msg
+                else:
+                    subject_text = f"{proj_ctype.value}: automated release"
             result = self._orchestrator.deploy(
                 project=project,
-                commit_type=ctype,
+                commit_type=proj_ctype,
                 subject=subject_text,
-                scope=scope,
+                scope=proj_scope,
                 body=body,
                 dry_run=dry_run,
                 platforms_override=platform_objs,
@@ -573,6 +639,9 @@ version:
             return
 
         subject = input("Subject (optional, press Enter for auto): ").strip()
+        message = input("Message (optional, e.g. test(module) testing ...): ").strip()
+        if message and not subject:
+            subject = ""
         scope = input("Scope (optional): ").strip()
         body = input("Body (optional): ").strip()
         bump = input("Force bump (major/minor/patch or Enter for auto): ").strip()
@@ -585,6 +654,7 @@ version:
         results = self.release(
             commit_type=ctype,
             subject=subject,
+            message=message,
             scope=scope,
             body=body,
             bump=bump,

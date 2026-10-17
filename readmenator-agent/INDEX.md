@@ -6,7 +6,7 @@
 | `deploy.sh` | one-liner deploy via deploynator (generic per-repo script). | root | 1 | 0 |
 | `deploynator/__init__.py` | - | deploynator | 0 | 7 |
 | `deploynator/__main__.py` | - | deploynator | 3 | 2 |
-| `deploynator/_app.py` | install_packages: pip install/upgrade packages (default: deploynator from PyPI). | deploynator | 32 | 1 |
+| `deploynator/_app.py` | install_packages: pip install/upgrade packages (default: deploynator from PyPI). | deploynator | 33 | 1 |
 | `deploynator/_changelog.py` | - | deploynator | 9 | 2 |
 | `deploynator/_config.py` | - | deploynator | 6 | 27 |
 | `deploynator/_deploy.py` | _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin. | deploynator | 20 | 6 |

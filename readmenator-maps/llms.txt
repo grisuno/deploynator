@@ -1,13 +1,13 @@
 # deploynator
 
-> Static analysis knowledge base for deploynator: 4 communities, 35 files, 377 imports, 2 languages, 442 symbols.
+> Static analysis knowledge base for deploynator: 4 communities, 35 files, 381 imports, 2 languages, 443 symbols.
 
 Generated offline by readmenator (zero LLM tokens). Start with the wiki index for the big picture, then the agent INDEX for file lookup.
 
 ## Wiki
 
 - [readmenator-wiki/index.md](md/readmenator-wiki/index.md): The codebase centres on config.py, deploy.py, models.py. Architecturally it is 4 layers, dominant utility (17 files) across 5 import-based communities....
-- [readmenator-wiki/REPORT.md](md/readmenator-wiki/REPORT.md): Project: deploynator | 2026-10-16 | offline, deterministic
+- [readmenator-wiki/REPORT.md](md/readmenator-wiki/REPORT.md): Project: deploynator | 2026-10-17 | offline, deterministic
 - [readmenator-wiki/community_0_deploynator_platforms.md](md/readmenator-wiki/community_0_deploynator_platforms.md): Community 0 | 11 files | cohesion 0.45
 - [readmenator-wiki/community_1_deploynator_toml.md](md/readmenator-wiki/community_1_deploynator_toml.md): Community 1 | 8 files | cohesion 0.38
 - [readmenator-wiki/community_2_deploynator_mcp_server.md](md/readmenator-wiki/community_2_deploynator_mcp_server.md): Community 2 | 7 files | cohesion 0.50
@@ -18,7 +18,7 @@ Generated offline by readmenator (zero LLM tokens). Start with the wiki index fo
 
 ## GraphRAG
 
-- [readmenator-graphrag/REPORTS.md](md/readmenator-graphrag/REPORTS.md): Entities: 554 | Relationships: 1550 | Communities: 5 | Themes: 2 | Text units: 455
+- [readmenator-graphrag/REPORTS.md](md/readmenator-graphrag/REPORTS.md): Entities: 555 | Relationships: 1556 | Communities: 5 | Themes: 2 | Text units: 456
 
 ## Agent Docs
 
@@ -30,7 +30,7 @@ Generated offline by readmenator (zero LLM tokens). Start with the wiki index fo
 - [readmenator-agent/KB_deploynator.md](md/readmenator-agent/KB_deploynator.md): Depends on: deploynator/app.py
 - [readmenator-agent/KB_root.md](md/readmenator-agent/KB_root.md): Doc: example: use deploynator programmatically as a library.
 - [readmenator-agent/KB_tests.md](md/readmenator-agent/KB_tests.md): Doc: BDD-style tests for deploynator using behavior-driven patterns.
-- [readmenator-agent/MEMORY.md](md/readmenator-agent/MEMORY.md): Generated from 35 files at commit a516a89aadfd. Read this first, then readmenator-wiki/index.md, then readmenator . ask "<question>" for anything specific.
+- [readmenator-agent/MEMORY.md](md/readmenator-agent/MEMORY.md): Generated from 35 files at commit ff0a15c05de1. Read this first, then readmenator-wiki/index.md, then readmenator . ask "<question>" for anything specific.
 - [readmenator-agent/SECURITY.md](md/readmenator-agent/SECURITY.md)
 - [readmenator-agent/SYMBOLS.md](md/readmenator-agent/SYMBOLS.md)
 - [readmenator-agent/recipes/add-function.md](md/readmenator-agent/recipes/add-function.md): Find the target file by purpose: grep -in '<topic>' readmenator-agent/INDEX.md

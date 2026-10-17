@@ -187,6 +187,7 @@ class TomlConfig:
     docs_timeout_s: int = 300
     deploy_branch: str = "main"
     deploy_remote: str = "origin"
+    deploy_message: str = ""
     pypi_enabled: bool = True
     pypi_repo: str = "pypi"
     pypi_clean_dist: bool = True
@@ -280,6 +281,7 @@ def load_toml_config(project_path: str) -> TomlConfig:
         docs_timeout_s=_clamp_timeout(docs_raw.get("timeout_s", 300)),
         deploy_branch=str(deploy_raw.get("branch", "main")),
         deploy_remote=str(deploy_raw.get("remote", "origin")),
+        deploy_message=str(deploy_raw.get("message", "") or ""),
         pypi_enabled=bool(pypi_raw.get("enabled", True)),
         pypi_repo=str(pypi_raw.get("repo", "pypi")),
         pypi_clean_dist=bool(pypi_raw.get("clean_dist", True)),

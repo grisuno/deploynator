@@ -43,6 +43,10 @@ def build_parser() -> argparse.ArgumentParser:
         help="Commit type (default: release)",
     )
     release_p.add_argument("--subject", type=str, default="", help="Commit subject")
+    release_p.add_argument("--message", "-m", type=str, default="",
+                           help="Release message (overrides [deploy] message; "
+                                "also accepts trailing words: "
+                                "--project . test(module) testing ...)")
     release_p.add_argument("--scope", type=str, default="", help="Commit scope")
     release_p.add_argument("--body", type=str, default="", help="Commit body")
     release_p.add_argument("--project", "-p", type=str, default="", help="Project name from projects/")
@@ -60,6 +64,10 @@ def build_parser() -> argparse.ArgumentParser:
                            help="Platforms to deploy to")
     release_p.add_argument("--all", dest="all_projects", action="store_true",
                            help="Deploy all discovered projects")
+    release_p.add_argument("message_args", type=str, nargs="*",
+                           help="Trailing release message words after project "
+                                "(e.g. release --type test --project . "
+                                "test(module) testing the autonomous module)")
 
     # commit
     commit_p = subparsers.add_parser("commit", help="Create a conventional commit")
@@ -190,11 +198,15 @@ def main(argv: list[str] | None = None) -> NoReturn | None:
     project = getattr(args, "project", "") or project_pos
 
     if args.command == "release":
+        _flag_msg = getattr(args, "message", "") or ""
+        _tail = " ".join(getattr(args, "message_args", []) or []).strip()
+        _cli_message = f"{_flag_msg} {_tail}".strip() if _flag_msg and _tail else (_flag_msg or _tail)
         results = app.release(
             commit_type=args.commit_type,
             subject=args.subject,
             scope=args.scope,
             body=args.body,
+            message=_cli_message,
             project_name=project,
             bump=args.bump if hasattr(args, "bump") else "",
             dry_run=args.dry_run,

@@ -185,7 +185,8 @@ class MCPServer:
             self._tool_release,
             {"type": "object", "properties": {
                 "project": {"type": "string"}, "commit_type": {"type": "string", "default": "release"},
-                "subject": {"type": "string", "default": ""}, "scope": {"type": "string", "default": ""},
+                "subject": {"type": "string", "default": ""}, "message": {"type": "string", "default": ""},
+                "scope": {"type": "string", "default": ""},
                 "body": {"type": "string", "default": ""}, "bump": {"type": "string", "default": ""},
                 "dry_run": {"type": "boolean", "default": False},
                 "no_test": {"type": "boolean", "default": False},
@@ -231,11 +232,11 @@ class MCPServer:
         ))
 
     def _tool_release(self, project: str = "", commit_type: str = "release", subject: str = "",
-                      scope: str = "", body: str = "", bump: str = "",
+                      message: str = "", scope: str = "", body: str = "", bump: str = "",
                       dry_run: bool = False, no_test: bool = False, no_docs: bool = False,
                       no_pypi: bool = False) -> str:
         results = self._app.release(
-            commit_type=commit_type, subject=subject, scope=scope, body=body,
+            commit_type=commit_type, subject=subject, message=message, scope=scope, body=body,
             project_name=project, bump=bump, dry_run=dry_run,
             all_projects=not project, no_test=no_test, no_docs=no_docs, no_pypi=no_pypi,
         )

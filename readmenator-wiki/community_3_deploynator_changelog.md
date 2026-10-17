@@ -66,8 +66,8 @@ This community groups 6 file(s) rooted at `deploynator` with dominant language p
 ## Risks
 
 - [taint high] `deploynator/_app.py` -> `deploynator/_config.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_readme.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_changelog.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_readme.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_config.py` via `subprocess` (1 hops)
 
 ## Open Questions
