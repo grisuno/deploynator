@@ -32,7 +32,7 @@ flowchart LR
 
 ### `TomlConfig`
 
-`class` `dataclass` | [deploynator/_toml.py:179](../../deploynator/_toml.py#L179)
+`class` `dataclass` | [deploynator/_toml.py:177](../../deploynator/_toml.py#L177)
 
 Decorators: `@dataclass(frozen=True)`
 
@@ -100,7 +100,7 @@ Seguro: rechaza symlinks, limita tamaño (Config.max_file_size_bytes).
 
 ### `looks_like_packaging_project`
 
-`function` | [deploynator/_toml.py:76](../../deploynator/_toml.py#L76)
+`function` | [deploynator/_toml.py:75](../../deploynator/_toml.py#L75)
 
 ```python
 def looks_like_packaging_project(project_path: str) -> bool
@@ -126,7 +126,7 @@ desplegar; aquí solo se usa para el default de pypi_enabled.
 
 ### `detect_test_commands`
 
-`function` | [deploynator/_toml.py:102](../../deploynator/_toml.py#L102)
+`function` | [deploynator/_toml.py:101](../../deploynator/_toml.py#L101)
 
 ```python
 def detect_test_commands(project_path: str) -> list[str] | None
@@ -159,7 +159,7 @@ Devuelve None si no hay nada detectable (caller usa pytest default).
 
 ### `load_toml_config`
 
-`function` | [deploynator/_toml.py:212](../../deploynator/_toml.py#L212)
+`function` | [deploynator/_toml.py:210](../../deploynator/_toml.py#L210)
 
 ```python
 def load_toml_config(project_path: str) -> TomlConfig
@@ -175,6 +175,7 @@ def load_toml_config(project_path: str) -> TomlConfig
 
 **Raises**
 
+- `TypeError`: (raised in the body, not documented)
 - `ValueError`: (raised in the body, not documented)
 
 *Calls:* [`Config.create`](deploynator._config.py.md#config-create), [`TomlConfig`](#tomlconfig), [`detect_test_commands`](#detect_test_commands)

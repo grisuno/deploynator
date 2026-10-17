@@ -3,15 +3,15 @@
     "god_nodes": [
       [
         "deploynator/_config.py",
-        54.6
+        56.6
       ],
       [
         "deploynator/_deploy.py",
-        36.0
+        38.1
       ],
       [
         "deploynator/_models.py",
-        30.7
+        28.7
       ],
       [
         "deploynator/_toml.py",
@@ -45,67 +45,76 @@
     "communities": [
       {
         "id": 0,
-        "label": "deploynator: _platforms",
-        "file_ids": [
-          "deploynator/_deploy.py",
-          "deploynator/_app.py",
-          "deploynator/_models.py",
-          "tests/test_path_deploy.py",
-          "tests/test_deploy.py",
-          "tests/test_models.py",
-          "tests/test_semver.py",
-          "deploynator/_semver.py",
-          "tests/test_pipeline.py",
-          "deploynator/_platforms.py",
-          "deploynator/_git.py"
-        ],
-        "cohesion": 0.44680851063829785,
-        "size": 11
-      },
-      {
-        "id": 1,
         "label": "deploynator: _toml",
         "file_ids": [
-          "deploynator/_pypi.py",
-          "deploynator/_docs.py",
-          "tests/test_pypi.py",
-          "tests/bdd_test_deploy.py",
-          "tests/test_toml.py",
           "deploynator/_runner.py",
           "deploynator/_toml.py",
-          "tests/test_runner.py"
+          "deploynator/_pypi.py",
+          "deploynator/_docs.py",
+          "tests/test_runner.py",
+          "tests/test_pypi.py",
+          "tests/bdd_test_deploy.py",
+          "tests/test_toml.py"
         ],
         "cohesion": 0.3793103448275862,
         "size": 8
       },
       {
-        "id": 2,
+        "id": 1,
         "label": "deploynator: _mcp_server",
         "file_ids": [
-          "deploynator/__init__.py",
+          "app.py",
           "deploynator/_mcp_server.py",
-          "deploynator/__main__.py",
           "tests/test_cli_mcp.py",
+          "deploynator/__init__.py",
+          "deploynator/__main__.py",
           "tests/test_install_example.py",
-          "tests/test_init.py",
-          "app.py"
+          "tests/test_init.py"
         ],
         "cohesion": 0.5,
+        "size": 7
+      },
+      {
+        "id": 2,
+        "label": "deploynator: _models",
+        "file_ids": [
+          "deploynator/_semver.py",
+          "tests/test_path_deploy.py",
+          "tests/test_semver.py",
+          "tests/test_deploy.py",
+          "tests/test_models.py",
+          "deploynator/_models.py",
+          "tests/test_pipeline.py"
+        ],
+        "cohesion": 0.3333333333333333,
         "size": 7
       },
       {
         "id": 3,
         "label": "deploynator: _changelog",
         "file_ids": [
-          "deploynator/_changelog.py",
+          "tests/test_config.py",
           "tests/test_changelog.py",
-          "deploynator/_readme.py",
-          "tests/test_readme_footer.py",
           "deploynator/_config.py",
-          "tests/test_config.py"
+          "deploynator/_changelog.py",
+          "deploynator/_readme.py",
+          "tests/test_readme_footer.py"
         ],
         "cohesion": 0.21212121212121213,
         "size": 6
+      },
+      {
+        "id": 4,
+        "label": "deploynator: _platforms",
+        "file_ids": [
+          "deploynator/_deploy.py",
+          "deploynator/_platforms.py",
+          "tests/test_git_sync.py",
+          "deploynator/_git.py",
+          "deploynator/_app.py"
+        ],
+        "cohesion": 0.2413793103448276,
+        "size": 5
       }
     ],
     "surprising_connections": [
@@ -113,25 +122,25 @@
         "app.py",
         "tests/test_models.py",
         4,
-        "{0, 2}"
+        "{1, 2}"
       ],
       [
         "tests/test_config.py",
         "tests/test_models.py",
         4,
-        "{0, 2, 3}"
+        "{1, 2, 3}"
       ],
       [
         "tests/test_init.py",
         "tests/test_models.py",
         4,
-        "{0, 2}"
+        "{1, 2}"
       ],
       [
         "tests/test_models.py",
         "tests/test_readme_footer.py",
         4,
-        "{0, 2, 3}"
+        "{1, 2, 3}"
       ],
       [
         "tests/test_models.py",
@@ -141,10 +150,10 @@
       ]
     ],
     "suggested_questions": [
-      "What does _config.py depend on, and what depends on it? (27 connections)",
-      "What does _deploy.py depend on, and what depends on it? (17 connections)",
-      "What does _models.py depend on, and what depends on it? (14 connections)",
-      "How are the 11 files in 'deploynator: _platforms' related to each other?",
+      "What does _config.py depend on, and what depends on it? (28 connections)",
+      "What does _deploy.py depend on, and what depends on it? (18 connections)",
+      "What does _models.py depend on, and what depends on it? (13 connections)",
+      "How are the 8 files in 'deploynator: _toml' related to each other?",
       "Why are app.py and test_models.py connected through 4 hops across 2 communities?"
     ]
   },
@@ -174,6 +183,7 @@
     "tests/test_cli_mcp.py": "testing",
     "tests/test_config.py": "testing",
     "tests/test_deploy.py": "testing",
+    "tests/test_git_sync.py": "testing",
     "tests/test_init.py": "testing",
     "tests/test_install_example.py": "testing",
     "tests/test_models.py": "testing",

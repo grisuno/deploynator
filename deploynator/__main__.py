@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import sys
-from typing import NoReturn
 
 from deploynator import DeploynatorApp
 from deploynator._config import Config
@@ -176,7 +175,7 @@ def preprocess_argv(argv: list[str]) -> tuple[argparse.Namespace, str]:
     return args, extracted_project
 
 
-def main(argv: list[str] | None = None) -> NoReturn | None:
+def main(argv: list[str] | None = None) -> None:
     raw_argv = list(argv) if argv is not None else sys.argv[1:]
 
     # Bare `deploynator` (no args) = interactive menu. Flags = headless.

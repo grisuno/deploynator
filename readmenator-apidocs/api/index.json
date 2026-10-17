@@ -3,33 +3,33 @@
  "format": "jsonl",
  "meta": {
   "modules": 19,
-  "entities": 308,
+  "entities": 312,
   "languages": {
    "py": 17,
    "sh": 2
   },
   "kinds": {
-   "attribute": 102,
+   "attribute": 103,
    "class": 28,
    "classmethod": 12,
    "constant": 13,
    "constructor": 14,
    "enum": 2,
    "function": 13,
-   "method": 99,
+   "method": 102,
    "module": 19,
    "property": 4,
    "staticmethod": 2
   },
   "truncated": false,
-  "skipped_files": 16,
+  "skipped_files": 17,
   "privacy_mode": false
  },
  "coverage": {
   "overall": {
-   "documented": 13,
-   "total": 193,
-   "percent": 6.7
+   "documented": 14,
+   "total": 196,
+   "percent": 7.1
   },
   "by_kind": {
    "class": {
@@ -58,9 +58,9 @@
     "percent": 53.8
    },
    "method": {
-    "documented": 3,
-    "total": 99,
-    "percent": 3.0
+    "documented": 4,
+    "total": 102,
+    "percent": 3.9
    },
    "module": {
     "documented": 3,
@@ -125,9 +125,9 @@
     "percent": 0.0
    },
    "deploynator/_git.py": {
-    "documented": 0,
-    "total": 22,
-    "percent": 0.0
+    "documented": 1,
+    "total": 25,
+    "percent": 4.0
    },
    "deploynator/_mcp_server.py": {
     "documented": 1,
@@ -210,7 +210,7 @@
   {
    "uid": "deploynator/_config.py",
    "path": "modules/deploynator._config.py.jsonl",
-   "entities": 40
+   "entities": 41
   },
   {
    "uid": "deploynator/_deploy.py",
@@ -225,7 +225,7 @@
   {
    "uid": "deploynator/_git.py",
    "path": "modules/deploynator._git.py.jsonl",
-   "entities": 22
+   "entities": 25
   },
   {
    "uid": "deploynator/_mcp_server.py",
@@ -275,7 +275,7 @@
  ],
  "warnings": {
   "path": "warnings.jsonl",
-  "total": 180
+  "total": 182
  },
  "usage": [
   "grep -h '\"name\":\"<Name>\"' readmenator-apidocs/api/modules/*.jsonl",

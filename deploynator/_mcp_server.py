@@ -23,7 +23,8 @@ from __future__ import annotations
 import json
 import logging
 import sys
-from typing import Any, Callable, Dict, Optional
+from collections.abc import Callable
+from typing import Any
 
 logger = logging.getLogger(__name__)
 
@@ -33,7 +34,7 @@ INTERNAL_ERROR = -32603
 
 
 class MCPRequest:
-    def __init__(self, msg: Dict[str, Any]):
+    def __init__(self, msg: dict[str, Any]):
         self.jsonrpc = msg.get("jsonrpc", "2.0")
         self.id: Any = msg.get("id")
         self.method: str = msg.get("method", "")
@@ -43,11 +44,11 @@ class MCPRequest:
     def is_notification(self) -> bool:
         return self.id is None
 
-    def response(self, result: Any = None) -> Dict[str, Any]:
+    def response(self, result: Any = None) -> dict[str, Any]:
         return {"jsonrpc": "2.0", "id": self.id, "result": result}
 
-    def error(self, code: int, message: str, data: Any = None) -> Dict[str, Any]:
-        err: Dict[str, Any] = {"jsonrpc": "2.0", "id": self.id, "error": {"code": code, "message": message}}
+    def error(self, code: int, message: str, data: Any = None) -> dict[str, Any]:
+        err: dict[str, Any] = {"jsonrpc": "2.0", "id": self.id, "error": {"code": code, "message": message}}
         if data is not None:
             err["error"]["data"] = data
         return err
@@ -55,16 +56,16 @@ class MCPRequest:
 
 class MCPTool:
     def __init__(self, name: str, description: str, handler: Callable,
-                 input_schema: Optional[Dict[str, Any]] = None):
+                 input_schema: dict[str, Any] | None = None):
         self.name = name
         self.description = description
         self.handler = handler
         self.input_schema = input_schema or {"type": "object", "properties": {}}
 
-    def definition(self) -> Dict[str, Any]:
+    def definition(self) -> dict[str, Any]:
         return {"name": self.name, "description": self.description, "inputSchema": self.input_schema}
 
-    def call(self, arguments: Dict[str, Any]) -> Any:
+    def call(self, arguments: dict[str, Any]) -> Any:
         return self.handler(**arguments)
 
 
@@ -76,7 +77,7 @@ class MCPResource:
         self.mime_type = mime_type
         self.handler = handler
 
-    def definition(self) -> Dict[str, Any]:
+    def definition(self) -> dict[str, Any]:
         return {"uri": self.uri, "name": self.name, "description": self.description, "mimeType": self.mime_type}
 
     def read(self) -> Any:
@@ -87,8 +88,8 @@ class MCPServer:
     def __init__(self, app: Any, target_dir: str):
         self._app = app
         self._target_dir = target_dir
-        self._tools: Dict[str, MCPTool] = {}
-        self._resources: Dict[str, MCPResource] = {}
+        self._tools: dict[str, MCPTool] = {}
+        self._resources: dict[str, MCPResource] = {}
         self._initialized = False
 
     def register_tool(self, tool: MCPTool) -> None:
@@ -97,7 +98,7 @@ class MCPServer:
     def register_resource(self, resource: MCPResource) -> None:
         self._resources[resource.uri] = resource
 
-    def _handle_initialize(self, req: MCPRequest) -> Dict[str, Any]:
+    def _handle_initialize(self, req: MCPRequest) -> dict[str, Any]:
         self._initialized = True
         return req.response({
             "protocolVersion": "2024-11-05",
@@ -105,10 +106,10 @@ class MCPServer:
             "capabilities": {"tools": {}, "resources": {}},
         })
 
-    def _handle_list_tools(self, req: MCPRequest) -> Dict[str, Any]:
+    def _handle_list_tools(self, req: MCPRequest) -> dict[str, Any]:
         return req.response({"tools": [t.definition() for t in self._tools.values()]})
 
-    def _handle_call_tool(self, req: MCPRequest) -> Dict[str, Any]:
+    def _handle_call_tool(self, req: MCPRequest) -> dict[str, Any]:
         name = req.params.get("name", "")
         arguments = req.params.get("arguments", {})
         tool = self._tools.get(name)
@@ -125,10 +126,10 @@ class MCPServer:
             logger.exception("Tool call failed: %s", name)
             return req.error(INTERNAL_ERROR, str(e))
 
-    def _handle_list_resources(self, req: MCPRequest) -> Dict[str, Any]:
+    def _handle_list_resources(self, req: MCPRequest) -> dict[str, Any]:
         return req.response({"resources": [r.definition() for r in self._resources.values()]})
 
-    def _handle_read_resource(self, req: MCPRequest) -> Dict[str, Any]:
+    def _handle_read_resource(self, req: MCPRequest) -> dict[str, Any]:
         uri = req.params.get("uri", "")
         resource = self._resources.get(uri)
         if not resource:
@@ -141,7 +142,7 @@ class MCPServer:
             logger.exception("Resource read failed: %s", uri)
             return req.error(INTERNAL_ERROR, str(e))
 
-    def dispatch(self, req: MCPRequest) -> Optional[Dict[str, Any]]:
+    def dispatch(self, req: MCPRequest) -> dict[str, Any] | None:
         if req.method == "initialize":
             return self._handle_initialize(req)
         if req.method == "notifications/initialized":
@@ -268,8 +269,8 @@ class MCPServer:
 
 
 def main() -> None:
-    from deploynator._config import Config
     from deploynator import DeploynatorApp
+    from deploynator._config import Config
     target = sys.argv[1] if len(sys.argv) > 1 else "."
     app = DeploynatorApp(Config.create(), workdir=target)
     MCPServer(app, target).run()

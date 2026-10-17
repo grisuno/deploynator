@@ -33,7 +33,7 @@ flowchart LR
 
 ### `SemverManager`
 
-`class` | [deploynator/_semver.py:12](../../deploynator/_semver.py#L12)
+`class` | [deploynator/_semver.py:11](../../deploynator/_semver.py#L11)
 
 ```python
 class SemverManager
@@ -55,7 +55,7 @@ class SemverManager
 
 #### `SemverManager.__init__`
 
-`constructor` | [deploynator/_semver.py:13](../../deploynator/_semver.py#L13)
+`constructor` | [deploynator/_semver.py:12](../../deploynator/_semver.py#L12)
 
 ```python
 def __init__(self, config: Config) -> None
@@ -73,7 +73,7 @@ def __init__(self, config: Config) -> None
 
 #### `SemverManager.max_version`
 
-`method` | [deploynator/_semver.py:16](../../deploynator/_semver.py#L16)
+`method` | [deploynator/_semver.py:15](../../deploynator/_semver.py#L15)
 
 ```python
 def max_version(self, a: VersionInfo, b: VersionInfo) -> VersionInfo
@@ -94,7 +94,7 @@ def max_version(self, a: VersionInfo, b: VersionInfo) -> VersionInfo
 
 #### `SemverManager.get_current_version`
 
-`method` | [deploynator/_semver.py:21](../../deploynator/_semver.py#L21)
+`method` | [deploynator/_semver.py:20](../../deploynator/_semver.py#L20)
 
 ```python
 def get_current_version(self, project_path: str, version_file: str = 'version.json', version_pattern: str = '(\\d+)\\.(\\d+)\\.(\\d+)') -> VersionInfo
@@ -118,7 +118,7 @@ def get_current_version(self, project_path: str, version_file: str = 'version.js
 
 #### `SemverManager.write_version_file`
 
-`method` | [deploynator/_semver.py:66](../../deploynator/_semver.py#L66)
+`method` | [deploynator/_semver.py:65](../../deploynator/_semver.py#L65)
 
 ```python
 def write_version_file(self, project_path: str, version: VersionInfo, version_file: str = 'version.json') -> str
@@ -145,10 +145,10 @@ def write_version_file(self, project_path: str, version: VersionInfo, version_fi
 
 #### `SemverManager.determine_bump`
 
-`method` | [deploynator/_semver.py:111](../../deploynator/_semver.py#L111)
+`method` | [deploynator/_semver.py:110](../../deploynator/_semver.py#L110)
 
 ```python
-def determine_bump(self, commit_type: CommitType) -> Optional[str]
+def determine_bump(self, commit_type: CommitType) -> str | None
 ```
 
 **Parameters**
@@ -157,7 +157,7 @@ def determine_bump(self, commit_type: CommitType) -> Optional[str]
 |---|---|---|---|
 | `commit_type` | `CommitType` |  |  |
 
-**Returns:** `Optional[str]`
+**Returns:** `str | None`
 
 *Calls:* [`CommitType.bump_strategy`](deploynator._models.py.md#committype-bump_strategy)
 
@@ -167,10 +167,10 @@ def determine_bump(self, commit_type: CommitType) -> Optional[str]
 
 #### `SemverManager.calculate_next_version`
 
-`method` | [deploynator/_semver.py:114](../../deploynator/_semver.py#L114)
+`method` | [deploynator/_semver.py:113](../../deploynator/_semver.py#L113)
 
 ```python
-def calculate_next_version(self, current: VersionInfo, strategy: Optional[str]) -> VersionInfo
+def calculate_next_version(self, current: VersionInfo, strategy: str | None) -> VersionInfo
 ```
 
 **Parameters**
@@ -178,7 +178,7 @@ def calculate_next_version(self, current: VersionInfo, strategy: Optional[str]) 
 | Name | Type | Default | Description |
 |---|---|---|---|
 | `current` | `VersionInfo` |  |  |
-| `strategy` | `Optional[str]` |  |  |
+| `strategy` | `str \| None` |  |  |
 
 **Returns:** `VersionInfo`
 
@@ -190,7 +190,7 @@ def calculate_next_version(self, current: VersionInfo, strategy: Optional[str]) 
 
 #### `SemverManager.is_valid_version`
 
-`staticmethod` | [deploynator/_semver.py:118](../../deploynator/_semver.py#L118)
+`staticmethod` | [deploynator/_semver.py:117](../../deploynator/_semver.py#L117)
 
 Decorators: `@staticmethod`
 

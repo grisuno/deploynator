@@ -44,6 +44,7 @@ class Config
 | [`modules_dir`](#config-modules_dir) | `str` | `'modules'` |  |
 | [`workflows_dir`](#config-workflows_dir) | `str` | `'.github/workflows'` |  |
 | [`default_branch`](#config-default_branch) | `str` | `'main'` |  |
+| [`dev_branch`](#config-dev_branch) | `str` | `'dev'` |  |
 | [`default_remote`](#config-default_remote) | `str` | `'origin'` |  |
 | [`release_branch`](#config-release_branch) | `str` | `'main'` |  |
 | [`max_release_chars`](#config-max_release_chars) | `int` | `120000` |  |
@@ -83,7 +84,7 @@ class Config
 
 #### `Config.create`
 
-`staticmethod` | [deploynator/_config.py:79](../../deploynator/_config.py#L79)
+`staticmethod` | [deploynator/_config.py:80](../../deploynator/_config.py#L80)
 
 Decorators: `@staticmethod`
 
@@ -107,7 +108,7 @@ def create(overrides: dict | None = None) -> Config
 
 #### `Config.resolve_path`
 
-`method` | [deploynator/_config.py:85](../../deploynator/_config.py#L85)
+`method` | [deploynator/_config.py:86](../../deploynator/_config.py#L86)
 
 ```python
 def resolve_path(self, *parts: str) -> str
@@ -125,7 +126,7 @@ def resolve_path(self, *parts: str) -> str
 
 #### `Config.gh_authd`
 
-`property` | [deploynator/_config.py:91](../../deploynator/_config.py#L91)
+`property` | [deploynator/_config.py:92](../../deploynator/_config.py#L92)
 
 Decorators: `@property`
 
@@ -139,7 +140,7 @@ def gh_authd(self) -> bool
 
 #### `Config.glab_authd`
 
-`property` | [deploynator/_config.py:95](../../deploynator/_config.py#L95)
+`property` | [deploynator/_config.py:96](../../deploynator/_config.py#L96)
 
 Decorators: `@property`
 
@@ -153,7 +154,7 @@ def glab_authd(self) -> bool
 
 #### `Config.bb_authd`
 
-`property` | [deploynator/_config.py:99](../../deploynator/_config.py#L99)
+`property` | [deploynator/_config.py:100](../../deploynator/_config.py#L100)
 
 Decorators: `@property`
 

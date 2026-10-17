@@ -1,10 +1,12 @@
 import json
 import os
 import tempfile
+
 import pytest
+
 from deploynator._config import Config
+from deploynator._models import CommitType, VersionInfo
 from deploynator._semver import SemverManager
-from deploynator._models import VersionInfo, CommitType
 
 
 class TestSemverManager:

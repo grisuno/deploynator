@@ -1,6 +1,6 @@
 # deploynator API Reference
 
-> Generated offline by readmenator: 19 modules, 308 documented entities, documentation coverage 6.7% (13/193 public items). Deterministic, zero tokens: signatures from source, docs parsed from Google, NumPy, reST, Javadoc/JSDoc/Doxygen, C# XML, and Rustdoc comments.
+> Generated offline by readmenator: 19 modules, 312 documented entities, documentation coverage 7.1% (14/196 public items). Deterministic, zero tokens: signatures from source, docs parsed from Google, NumPy, reST, Javadoc/JSDoc/Doxygen, C# XML, and Rustdoc comments.
 
 Navigate: [Interactive architecture and flows](flows.html) | [Architecture and flows (Mermaid)](architecture.md) | [Class hierarchy](classes.md) | [General index](genindex.md) | [Coverage and warnings](COVERAGE.md) | [`api/index.json`](api/index.json) | [HTML browser](index.html)
 
@@ -27,7 +27,7 @@ Languages: py (17), sh (2)
 | [`deploynator._config`](modules/deploynator._config.py.md) |  | 1 | 5 | 0.0% |
 | [`deploynator._deploy`](modules/deploynator._deploy.py.md) |  | 2 | 9 | 0.0% |
 | [`deploynator._docs`](modules/deploynator._docs.py.md) |  | 1 | 2 | 0.0% |
-| [`deploynator._git`](modules/deploynator._git.py.md) |  | 1 | 20 | 0.0% |
+| [`deploynator._git`](modules/deploynator._git.py.md) |  | 1 | 23 | 4.0% |
 | [`deploynator._mcp_server`](modules/deploynator._mcp_server.py.md) | MCP (Model Context Protocol) stdio server for deploynator. | 4 | 16 | 4.8% |
 | [`deploynator._models`](modules/deploynator._models.py.md) |  | 10 | 16 | 0.0% |
 | [`deploynator._platforms`](modules/deploynator._platforms.py.md) |  | 5 | 28 | 0.0% |

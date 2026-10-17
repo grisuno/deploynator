@@ -1,9 +1,17 @@
+
 import pytest
-from datetime import datetime
+
 from deploynator._models import (
-    Platform, CommitType, PlatformConfig, ProjectConfig,
-    CommitMessage, VersionInfo, ChangelogEntry, ReleaseInfo,
-    DeployResult, VersionConfig,
+    ChangelogEntry,
+    CommitMessage,
+    CommitType,
+    DeployResult,
+    Platform,
+    PlatformConfig,
+    ProjectConfig,
+    ReleaseInfo,
+    VersionConfig,
+    VersionInfo,
 )
 
 

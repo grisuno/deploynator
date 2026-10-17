@@ -6,9 +6,10 @@ import subprocess
 
 class TestInitScript:
     def test_init_creates_files(self):
+        import tempfile
+
         from deploynator import DeploynatorApp
         from deploynator._config import Config
-        import tempfile
         with tempfile.TemporaryDirectory() as tmp:
             msg = DeploynatorApp(Config.create()).init_project(project_path=tmp, name="demo")
             assert os.path.isfile(os.path.join(tmp, "deploynator.yaml"))
@@ -17,23 +18,26 @@ class TestInitScript:
             assert "deploy.sh" in msg and "deploynator.toml" in msg
 
     def test_deploy_sh_executable_and_valid_bash(self):
+        import tempfile
+
         from deploynator import DeploynatorApp
         from deploynator._config import Config
-        import tempfile
         with tempfile.TemporaryDirectory() as tmp:
             DeploynatorApp(Config.create()).init_project(project_path=tmp, name="demo")
             path = os.path.join(tmp, "deploy.sh")
             assert os.stat(path).st_mode & stat.S_IXUSR
-            r = subprocess.run(["bash", "-n", path], capture_output=True, text=True)
+            r = subprocess.run(["bash", "-n", path], capture_output=True, text=True, check=False)
             assert r.returncode == 0, r.stderr
 
     def test_deploy_sh_content_generic(self):
+        import tempfile
+
         from deploynator import DeploynatorApp
         from deploynator._config import Config
-        import tempfile
         with tempfile.TemporaryDirectory() as tmp:
             DeploynatorApp(Config.create()).init_project(project_path=tmp, name="demo")
-            content = open(os.path.join(tmp, "deploy.sh")).read()
+            with open(os.path.join(tmp, "deploy.sh")) as f:
+                content = f.read()
             assert "dirname" in content  # autodetecta su directorio
             assert "PIP_BIN" in content and "install" in content  # instala/actualiza tooling
             assert "break-system-packages" in content  # PEP 668 (Kali)
@@ -44,22 +48,25 @@ class TestInitScript:
             assert "demo" not in content  # genérico: sin nombre hardcodeado
 
     def test_init_no_overwrite(self):
+        import tempfile
+
         from deploynator import DeploynatorApp
         from deploynator._config import Config
-        import tempfile
         with tempfile.TemporaryDirectory() as tmp:
             app = DeploynatorApp(Config.create())
             app.init_project(project_path=tmp, name="demo")
             with open(os.path.join(tmp, "deploy.sh"), "w") as f:
                 f.write("# custom\n")
             app.init_project(project_path=tmp, name="demo")
-            assert open(os.path.join(tmp, "deploy.sh")).read() == "# custom\n"
+            with open(os.path.join(tmp, "deploy.sh")) as f:
+                assert f.read() == "# custom\n"
 
     def test_toml_starter_parseable(self):
+        import tempfile
+
         from deploynator import DeploynatorApp
         from deploynator._config import Config
         from deploynator._toml import load_toml_config
-        import tempfile
         with tempfile.TemporaryDirectory() as tmp:
             DeploynatorApp(Config.create()).init_project(project_path=tmp, name="demo")
             cfg = load_toml_config(tmp)

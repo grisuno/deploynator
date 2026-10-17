@@ -4,7 +4,6 @@ import re
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum, auto
-from typing import Optional
 
 
 class Platform(Enum):
@@ -65,7 +64,7 @@ class CommitType(Enum):
     def valid_types(cls) -> list[str]:
         return [m.value for m in cls]
 
-    def bump_strategy(self) -> Optional[str]:
+    def bump_strategy(self) -> str | None:
         return {
             CommitType.FEAT: "minor",
             CommitType.FIX: "patch",
@@ -99,7 +98,7 @@ class PlatformConfig:
     platform: Platform
     repo: str
     enabled: bool = True
-    auth_env: Optional[str] = None
+    auth_env: str | None = None
 
     @classmethod
     def from_dict(cls, data: dict) -> PlatformConfig:
@@ -225,7 +224,7 @@ class VersionInfo:
             patch=int(match.group(3)),
         )
 
-    def bump(self, strategy: Optional[str]) -> VersionInfo:
+    def bump(self, strategy: str | None) -> VersionInfo:
         if strategy == "major":
             return VersionInfo(self.major + 1, 0, 0)
         elif strategy == "minor":
@@ -279,4 +278,4 @@ class DeployResult:
     success: bool
     platforms_pushed: list[str] = field(default_factory=list)
     releases_created: list[str] = field(default_factory=list)
-    error: Optional[str] = None
+    error: str | None = None

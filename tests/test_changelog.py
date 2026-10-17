@@ -1,7 +1,7 @@
 import pytest
-from deploynator._config import Config
+
 from deploynator._changelog import ChangelogGenerator
-from deploynator._models import CommitType, CommitMessage, ChangelogEntry
+from deploynator._config import Config
 
 
 class TestChangelogGenerator:

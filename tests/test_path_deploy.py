@@ -1,5 +1,4 @@
 """Path-direct deploy + tag prefijos + version_file toml (ReadMenator real)."""
-import json
 import os
 import subprocess
 import tempfile
@@ -17,8 +16,8 @@ def _git_init(tmp):
 
 class TestTagPrefixes:
     def test_release_v_prefix(self):
-        from deploynator._semver import SemverManager
         from deploynator._config import Config
+        from deploynator._semver import SemverManager
         m = SemverManager(Config.create())
         with tempfile.TemporaryDirectory() as tmp:
             _git_init(tmp)
@@ -26,8 +25,8 @@ class TestTagPrefixes:
             assert str(m.get_current_version(tmp)) == "1.3.4"
 
     def test_v_prefix(self):
-        from deploynator._semver import SemverManager
         from deploynator._config import Config
+        from deploynator._semver import SemverManager
         m = SemverManager(Config.create())
         with tempfile.TemporaryDirectory() as tmp:
             _git_init(tmp)
@@ -37,9 +36,9 @@ class TestTagPrefixes:
 
 class TestTomlVersionFile:
     def test_write_pyproject_toml(self):
-        from deploynator._semver import SemverManager
         from deploynator._config import Config
         from deploynator._models import VersionInfo
+        from deploynator._semver import SemverManager
         m = SemverManager(Config.create())
         with tempfile.TemporaryDirectory() as tmp:
             with open(os.path.join(tmp, "pyproject.toml"), "w") as f:
@@ -62,8 +61,8 @@ class TestPathDirectRelease:
             assert res[0].version == "0.2.0"  # 0.1.0 default + minor
 
     def test_no_platforms_pushes_to_origin(self):
-        from deploynator._deploy import DeployOrchestrator
         from deploynator._config import Config
+        from deploynator._deploy import DeployOrchestrator
         from deploynator._models import CommitType, ProjectConfig
         with tempfile.TemporaryDirectory() as tmp:
             origin = os.path.join(tmp, "origin.git")
@@ -89,7 +88,7 @@ class TestPathDirectRelease:
             assert res.success is True
             assert any("origin" in p for p in res.platforms_pushed)
             tags = subprocess.run(["git", "--git-dir", origin, "tag", "--list"],
-                                  capture_output=True, text=True).stdout
+                                  capture_output=True, text=True, check=False).stdout
             assert res.version in tags
 
     def test_name_wins_over_cwd_subdir(self):

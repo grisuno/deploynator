@@ -1,6 +1,6 @@
 # orphans
 
-*Community 4 | 3 files | cohesion 0.00*
+*Community 5 | 3 files | cohesion 0.00*
 
 ## Definition
 
@@ -25,9 +25,9 @@ This community groups 3 file(s) rooted at `root` with dominant language sh (cohe
 
 ## Connections
 
-- [INFERRED] shares_context community 0 <-> 4 (strength 0.5): Inferred shared context (layer utility) with no import path between community 0 (deploynator: _platforms) and community 4 (orphans).
-- [INFERRED] shares_context community 1 <-> 4 (strength 0.5): Inferred shared context (layer utility) with no import path between community 1 (deploynator: _toml) and community 4 (orphans).
-- [INFERRED] shares_context community 2 <-> 4 (strength 0.5): Inferred shared context (layer utility) with no import path between community 2 (deploynator: _mcp_server) and community 4 (orphans).
+- [INFERRED] shares_context community 0 <-> 5 (strength 0.5): Inferred shared context (layer utility) with no import path between community 0 (deploynator: _toml) and community 5 (orphans).
+- [INFERRED] shares_context community 1 <-> 5 (strength 0.5): Inferred shared context (layer utility) with no import path between community 1 (deploynator: _mcp_server) and community 5 (orphans).
+- [INFERRED] shares_context community 4 <-> 5 (strength 0.5): Inferred shared context (layer utility) with no import path between community 4 (deploynator: _platforms) and community 5 (orphans).
 
 ## Risks
 

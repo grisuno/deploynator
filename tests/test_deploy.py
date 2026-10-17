@@ -1,10 +1,11 @@
 import os
-import json
 import tempfile
+
 import pytest
+
 from deploynator._config import Config
 from deploynator._deploy import ProjectDiscovery
-from deploynator._models import ProjectConfig, PlatformConfig, Platform
+from deploynator._models import Platform, PlatformConfig, ProjectConfig
 
 
 class TestProjectDiscovery:

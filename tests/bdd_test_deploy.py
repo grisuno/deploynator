@@ -22,6 +22,7 @@ Scenario: Documentation changes don't bump version
   Then the version should NOT change
 """
 import pytest
+
 from deploynator._models import CommitType, VersionInfo
 
 
@@ -94,6 +95,7 @@ class TestBDDPipeline:
         import os
         import subprocess
         import tempfile
+
         from deploynator._config import Config
         from deploynator._deploy import DeployOrchestrator
         from deploynator._models import CommitType, ProjectConfig
@@ -119,8 +121,8 @@ class TestBDDPipeline:
 
     def test_docs_failure_does_not_block_release(self):
         """Given docs fallan, When deploy, Then continúa (solo warning)."""
-        import os
         import tempfile
+
         from deploynator._config import Config
         from deploynator._docs import DocsRunner
         from deploynator._toml import TomlConfig
@@ -147,6 +149,7 @@ class TestBDDPipeline:
         import os
         import subprocess
         import tempfile
+
         from deploynator._config import Config
         from deploynator._semver import SemverManager
 

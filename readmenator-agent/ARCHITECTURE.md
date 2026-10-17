@@ -51,7 +51,6 @@
 - `tests/bdd_test_deploy.py` -> `deploynator/_toml.py`
 - `tests/test_changelog.py` -> `deploynator/_changelog.py`
 - `tests/test_changelog.py` -> `deploynator/_config.py`
-- `tests/test_changelog.py` -> `deploynator/_models.py`
 - `tests/test_cli_mcp.py` -> `deploynator/__init__.py`
 - `tests/test_cli_mcp.py` -> `deploynator/__main__.py`
 - `tests/test_cli_mcp.py` -> `deploynator/_config.py`
@@ -60,6 +59,9 @@
 - `tests/test_deploy.py` -> `deploynator/_config.py`
 - `tests/test_deploy.py` -> `deploynator/_deploy.py`
 - `tests/test_deploy.py` -> `deploynator/_models.py`
+- `tests/test_git_sync.py` -> `deploynator/_config.py`
+- `tests/test_git_sync.py` -> `deploynator/_deploy.py`
+- `tests/test_git_sync.py` -> `deploynator/_git.py`
 - `tests/test_init.py` -> `deploynator/__init__.py`
 - `tests/test_init.py` -> `deploynator/_config.py`
 - `tests/test_init.py` -> `deploynator/_toml.py`
@@ -94,33 +96,33 @@
 
 ## External Imports
 
-- `deploynator/__main__.py` -> __future__, argparse, sys, typing
-- `deploynator/_app.py` -> __future__, json, os, re, subprocess, sys, typing
-- `deploynator/_changelog.py` -> __future__, collections, os, subprocess, typing
+- `deploynator/__main__.py` -> __future__, argparse, sys
+- `deploynator/_app.py` -> __future__, os, re, subprocess, sys
+- `deploynator/_changelog.py` -> __future__, collections, os, subprocess
 - `deploynator/_config.py` -> __future__, dataclasses, os
-- `deploynator/_deploy.py` -> __future__, os, readmenator, shutil, subprocess, tempfile, typing, yaml
+- `deploynator/_deploy.py` -> __future__, importlib.util, os, shutil, subprocess, tempfile, yaml
 - `deploynator/_docs.py` -> __future__, shlex, subprocess
-- `deploynator/_git.py` -> __future__, os, subprocess, tempfile, typing
-- `deploynator/_mcp_server.py` -> __future__, json, logging, sys, typing
-- `deploynator/_models.py` -> __future__, dataclasses, datetime, enum, re, typing
-- `deploynator/_platforms.py` -> __future__, abc, json, os, subprocess, tempfile, typing
+- `deploynator/_git.py` -> __future__, os, subprocess, tempfile
+- `deploynator/_mcp_server.py` -> __future__, collections.abc, json, logging, sys, typing
+- `deploynator/_models.py` -> __future__, dataclasses, datetime, enum, re
+- `deploynator/_platforms.py` -> __future__, abc, os, subprocess, tempfile, typing
 - `deploynator/_pypi.py` -> __future__, configparser, getpass, os, shutil, subprocess, sys, tomllib
-- `deploynator/_readme.py` -> __future__, os, pathlib
+- `deploynator/_readme.py` -> __future__, pathlib
 - `deploynator/_runner.py` -> __future__, os, shlex, subprocess
-- `deploynator/_semver.py` -> __future__, json, os, re, subprocess, typing
+- `deploynator/_semver.py` -> __future__, json, os, re, subprocess
 - `deploynator/_toml.py` -> __future__, dataclasses, os, re, tomllib
 - `tests/bdd_test_deploy.py` -> json, os, pytest, subprocess, tempfile
 - `tests/test_changelog.py` -> pytest
-- `tests/test_cli_mcp.py` -> pytest
-- `tests/test_config.py` -> pytest, re
-- `tests/test_deploy.py` -> json, os, pytest, tempfile
+- `tests/test_config.py` -> dataclasses, pytest, re
+- `tests/test_deploy.py` -> os, pytest, tempfile
+- `tests/test_git_sync.py` -> os, subprocess, tempfile
 - `tests/test_init.py` -> os, stat, subprocess, tempfile
 - `tests/test_install_example.py` -> inspect, os, py_compile, subprocess
-- `tests/test_models.py` -> datetime, pytest
-- `tests/test_path_deploy.py` -> json, os, subprocess, tempfile
-- `tests/test_pipeline.py` -> json, os, pytest, subprocess, tempfile
+- `tests/test_models.py` -> pytest
+- `tests/test_path_deploy.py` -> os, subprocess, tempfile
+- `tests/test_pipeline.py` -> json, os, subprocess, tempfile
 - `tests/test_pypi.py` -> configparser, inspect, os, pytest, subprocess, sys, tempfile
 - `tests/test_readme_footer.py` -> __future__
 - `tests/test_runner.py` -> inspect, os, pytest, shutil, tempfile
 - `tests/test_semver.py` -> json, os, pytest, tempfile
-- `tests/test_toml.py` -> os, pytest, tempfile
+- `tests/test_toml.py` -> dataclasses, os, pytest, tempfile

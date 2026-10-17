@@ -1,24 +1,22 @@
 from __future__ import annotations
 
-import json
 import os
 import re
 import sys
-from typing import Optional
 
 from deploynator._config import Config
+from deploynator._deploy import DeployOrchestrator, ProjectDiscovery
 from deploynator._models import (
-    Platform,
     CommitType,
-    ProjectConfig,
     DeployResult,
+    Platform,
+    ProjectConfig,
 )
-from deploynator._deploy import ProjectDiscovery, DeployOrchestrator
 from deploynator._platforms import PlatformFactory
 
 
 class DeploynatorApp:
-    def __init__(self, config: Optional[Config] = None, workdir: str = "") -> None:
+    def __init__(self, config: Config | None = None, workdir: str = "") -> None:
         self._config = config or Config.create()
         self._workdir = workdir
         if workdir:
@@ -28,7 +26,7 @@ class DeploynatorApp:
 
     # ---- Auth ----
 
-    def auth_login(self, platforms: Optional[list[str]] = None) -> dict[str, bool]:
+    def auth_login(self, platforms: list[str] | None = None) -> dict[str, bool]:
         results = {}
 
         if platforms is None or "github" in platforms:
@@ -201,7 +199,7 @@ version:
 
         toml_path = os.path.join(base, "deploynator.toml")
         if not os.path.isfile(toml_path):
-            from deploynator._toml import detect_test_commands, _has_python_tests
+            from deploynator._toml import _has_python_tests, detect_test_commands
             inferred: list[str] | None = None
             try:
                 detected = detect_test_commands(base)
@@ -308,8 +306,8 @@ version:
 
     def commit(self, commit_type: str, subject: str, scope: str = "", body: str = "",
                project_path: str = "", project_name: str = "", dry_run: bool = False) -> str:
-        from deploynator._models import CommitMessage
         from deploynator._git import GitOperations
+        from deploynator._models import CommitMessage
 
         ctype = CommitType.from_string(commit_type)
         git = GitOperations(self._config)
@@ -354,6 +352,7 @@ version:
         convencional, devuelve (None, "", raw.strip()).
         """
         import re as _re
+
         from deploynator._models import CommitType as _CT
         text = (raw or "").strip()
         if not text:
@@ -561,7 +560,6 @@ version:
     def install_packages(self, packages: list[str] | None = None) -> dict[str, bool]:
         """pip install/upgrade packages (default: deploynator from PyPI)."""
         import subprocess
-        import sys
         targets = packages if packages is not None else ["deploynator"]
         results: dict[str, bool] = {}
         for pkg in targets:
@@ -617,7 +615,7 @@ version:
             if entry and entry[1]:
                 try:
                     entry[1]()
-                except Exception as exc:
+                except (OSError, ValueError, RuntimeError) as exc:
                     print(f"[!] Error: {exc}")
             else:
                 print("[!] Invalid option")

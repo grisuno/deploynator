@@ -1,4 +1,7 @@
+from dataclasses import FrozenInstanceError
+
 import pytest
+
 from deploynator._config import Config
 
 
@@ -18,7 +21,7 @@ class TestConfigContract:
 
     def test_config_frozen(self):
         config = Config.create()
-        with pytest.raises(Exception):
+        with pytest.raises(FrozenInstanceError):
             config.changelog_file = "new.md"
 
     def test_config_immutability(self):

@@ -3,7 +3,7 @@ import json
 import os
 import subprocess
 import tempfile
-import pytest
+
 from deploynator._config import Config
 from deploynator._models import CommitType, ProjectConfig, VersionInfo
 
@@ -79,7 +79,7 @@ class TestDeployPipeline:
             assert "Tests failed" in (res.error or "")
             # sin mutar: no debe crear tag 0.1.1
             tags = subprocess.run(
-                ["git", "-C", tmp, "tag", "--list"], capture_output=True, text=True
+                ["git", "-C", tmp, "tag", "--list"], capture_output=True, text=True, check=False
             ).stdout
             assert "0.1.1" not in tags
 
@@ -146,7 +146,7 @@ class TestDeployPipeline:
         orch = DeployOrchestrator(Config.create())
         with tempfile.TemporaryDirectory() as tmp:
             _git_init(tmp)
-            res = orch.deploy(
+            orch.deploy(
                 project=self._project(tmp),
                 commit_type=CommitType.FEAT,
                 subject="x",

@@ -41,7 +41,7 @@ classDiagram
     PlatformConfig : Platform platform
     PlatformConfig : str repo
     PlatformConfig : bool enabled
-    PlatformConfig : Optional[str] auth_env
+    PlatformConfig : str  None auth_env
     PlatformConfig : from_dict()
     class VersionConfig
     VersionConfig : str file
@@ -91,7 +91,7 @@ classDiagram
     DeployResult : bool success
     DeployResult : list[str] platforms_pushed
     DeployResult : list[str] releases_created
-    DeployResult : Optional[str] error
+    DeployResult : str  None error
 ```
 
 ## Call Graph
@@ -127,7 +127,7 @@ flowchart LR
 
 ### `PlatformConfig`
 
-`class` `dataclass` | [deploynator/_models.py:98](../../deploynator/_models.py#L98)
+`class` `dataclass` | [deploynator/_models.py:97](../../deploynator/_models.py#L97)
 
 Decorators: `@dataclass(frozen=True)`
 
@@ -142,7 +142,7 @@ class PlatformConfig
 | [`platform`](#platformconfig-platform) | `Platform` |  |  |
 | [`repo`](#platformconfig-repo) | `str` |  |  |
 | [`enabled`](#platformconfig-enabled) | `bool` | `True` |  |
-| [`auth_env`](#platformconfig-auth_env) | `Optional[str]` | `None` |  |
+| [`auth_env`](#platformconfig-auth_env) | `str \| None` | `None` |  |
 
 **Members**
 
@@ -154,7 +154,7 @@ class PlatformConfig
 
 #### `PlatformConfig.from_dict`
 
-`classmethod` | [deploynator/_models.py:105](../../deploynator/_models.py#L105)
+`classmethod` | [deploynator/_models.py:104](../../deploynator/_models.py#L104)
 
 Decorators: `@classmethod`
 
@@ -178,7 +178,7 @@ def from_dict(cls, data: dict) -> PlatformConfig
 
 ### `VersionConfig`
 
-`class` `dataclass` | [deploynator/_models.py:115](../../deploynator/_models.py#L115)
+`class` `dataclass` | [deploynator/_models.py:114](../../deploynator/_models.py#L114)
 
 Decorators: `@dataclass(frozen=True)`
 
@@ -204,7 +204,7 @@ class VersionConfig
 
 #### `VersionConfig.from_dict`
 
-`classmethod` | [deploynator/_models.py:121](../../deploynator/_models.py#L121)
+`classmethod` | [deploynator/_models.py:120](../../deploynator/_models.py#L120)
 
 Decorators: `@classmethod`
 
@@ -228,7 +228,7 @@ def from_dict(cls, data: dict) -> VersionConfig
 
 ### `ProjectConfig`
 
-`class` `dataclass` | [deploynator/_models.py:130](../../deploynator/_models.py#L130)
+`class` `dataclass` | [deploynator/_models.py:129](../../deploynator/_models.py#L129)
 
 Decorators: `@dataclass(frozen=True)`
 
@@ -257,7 +257,7 @@ class ProjectConfig
 
 #### `ProjectConfig.from_dict`
 
-`classmethod` | [deploynator/_models.py:139](../../deploynator/_models.py#L139)
+`classmethod` | [deploynator/_models.py:138](../../deploynator/_models.py#L138)
 
 Decorators: `@classmethod`
 
@@ -281,7 +281,7 @@ def from_dict(cls, data: dict) -> ProjectConfig
 
 ### `CommitMessage`
 
-`class` `dataclass` | [deploynator/_models.py:175](../../deploynator/_models.py#L175)
+`class` `dataclass` | [deploynator/_models.py:174](../../deploynator/_models.py#L174)
 
 Decorators: `@dataclass(frozen=True)`
 
@@ -311,7 +311,7 @@ class CommitMessage
 
 #### `CommitMessage.format`
 
-`method` | [deploynator/_models.py:183](../../deploynator/_models.py#L183)
+`method` | [deploynator/_models.py:182](../../deploynator/_models.py#L182)
 
 ```python
 def format(self) -> str
@@ -323,7 +323,7 @@ def format(self) -> str
 
 #### `CommitMessage.parse`
 
-`classmethod` | [deploynator/_models.py:195](../../deploynator/_models.py#L195)
+`classmethod` | [deploynator/_models.py:194](../../deploynator/_models.py#L194)
 
 Decorators: `@classmethod`
 
@@ -353,7 +353,7 @@ def parse(cls, raw: str) -> CommitMessage
 
 ### `VersionInfo`
 
-`class` `dataclass` | [deploynator/_models.py:208](../../deploynator/_models.py#L208)
+`class` `dataclass` | [deploynator/_models.py:207](../../deploynator/_models.py#L207)
 
 Decorators: `@dataclass(frozen=True)`
 
@@ -380,7 +380,7 @@ class VersionInfo
 
 #### `VersionInfo.parse`
 
-`classmethod` | [deploynator/_models.py:217](../../deploynator/_models.py#L217)
+`classmethod` | [deploynator/_models.py:216](../../deploynator/_models.py#L216)
 
 Decorators: `@classmethod`
 
@@ -406,17 +406,17 @@ def parse(cls, version_str: str) -> VersionInfo
 
 #### `VersionInfo.bump`
 
-`method` | [deploynator/_models.py:228](../../deploynator/_models.py#L228)
+`method` | [deploynator/_models.py:227](../../deploynator/_models.py#L227)
 
 ```python
-def bump(self, strategy: Optional[str]) -> VersionInfo
+def bump(self, strategy: str | None) -> VersionInfo
 ```
 
 **Parameters**
 
 | Name | Type | Default | Description |
 |---|---|---|---|
-| `strategy` | `Optional[str]` |  |  |
+| `strategy` | `str \| None` |  |  |
 
 **Returns:** `VersionInfo`
 
@@ -430,7 +430,7 @@ def bump(self, strategy: Optional[str]) -> VersionInfo
 
 ### `ChangelogEntry`
 
-`class` `dataclass` | [deploynator/_models.py:239](../../deploynator/_models.py#L239)
+`class` `dataclass` | [deploynator/_models.py:238](../../deploynator/_models.py#L238)
 
 Decorators: `@dataclass(frozen=True)`
 
@@ -458,7 +458,7 @@ class ChangelogEntry
 
 #### `ChangelogEntry.from_git_log_line`
 
-`classmethod` | [deploynator/_models.py:247](../../deploynator/_models.py#L247)
+`classmethod` | [deploynator/_models.py:246](../../deploynator/_models.py#L246)
 
 Decorators: `@classmethod`
 
@@ -484,7 +484,7 @@ def from_git_log_line(cls, line: str, author: str = '', sha: str = '') -> Change
 
 ### `ReleaseInfo`
 
-`class` `dataclass` | [deploynator/_models.py:266](../../deploynator/_models.py#L266)
+`class` `dataclass` | [deploynator/_models.py:265](../../deploynator/_models.py#L265)
 
 Decorators: `@dataclass(frozen=True)`
 
@@ -509,7 +509,7 @@ class ReleaseInfo
 
 ### `DeployResult`
 
-`class` `dataclass` | [deploynator/_models.py:276](../../deploynator/_models.py#L276)
+`class` `dataclass` | [deploynator/_models.py:275](../../deploynator/_models.py#L275)
 
 Decorators: `@dataclass`
 
@@ -526,7 +526,7 @@ class DeployResult
 | [`success`](#deployresult-success) | `bool` |  |  |
 | [`platforms_pushed`](#deployresult-platforms_pushed) | `list[str]` | `field(default_factory=list)` |  |
 | [`releases_created`](#deployresult-releases_created) | `list[str]` | `field(default_factory=list)` |  |
-| [`error`](#deployresult-error) | `Optional[str]` | `None` |  |
+| [`error`](#deployresult-error) | `str \| None` | `None` |  |
 
 ---
 
@@ -536,7 +536,7 @@ class DeployResult
 
 ### `Platform`
 
-`enum` | [deploynator/_models.py:10](../../deploynator/_models.py#L10)
+`enum` | [deploynator/_models.py:9](../../deploynator/_models.py#L9)
 
 ```python
 class Platform(Enum)
@@ -565,7 +565,7 @@ Bases: `Enum`
 
 #### `Platform.from_string`
 
-`classmethod` | [deploynator/_models.py:16](../../deploynator/_models.py#L16)
+`classmethod` | [deploynator/_models.py:15](../../deploynator/_models.py#L15)
 
 Decorators: `@classmethod`
 
@@ -591,7 +591,7 @@ def from_string(cls, name: str) -> Platform
 
 #### `Platform.label`
 
-`method` | [deploynator/_models.py:27](../../deploynator/_models.py#L27)
+`method` | [deploynator/_models.py:26](../../deploynator/_models.py#L26)
 
 ```python
 def label(self) -> str
@@ -603,7 +603,7 @@ def label(self) -> str
 
 #### `Platform.cli_name`
 
-`method` | [deploynator/_models.py:30](../../deploynator/_models.py#L30)
+`method` | [deploynator/_models.py:29](../../deploynator/_models.py#L29)
 
 ```python
 def cli_name(self) -> str
@@ -615,7 +615,7 @@ def cli_name(self) -> str
 
 #### `Platform.auth_env_var`
 
-`method` | [deploynator/_models.py:37](../../deploynator/_models.py#L37)
+`method` | [deploynator/_models.py:36](../../deploynator/_models.py#L36)
 
 ```python
 def auth_env_var(self) -> str
@@ -629,7 +629,7 @@ def auth_env_var(self) -> str
 
 ### `CommitType`
 
-`enum` | [deploynator/_models.py:45](../../deploynator/_models.py#L45)
+`enum` | [deploynator/_models.py:44](../../deploynator/_models.py#L44)
 
 ```python
 class CommitType(Enum)
@@ -665,7 +665,7 @@ Bases: `Enum`
 
 #### `CommitType.from_string`
 
-`classmethod` | [deploynator/_models.py:58](../../deploynator/_models.py#L58)
+`classmethod` | [deploynator/_models.py:57](../../deploynator/_models.py#L57)
 
 Decorators: `@classmethod`
 
@@ -691,7 +691,7 @@ def from_string(cls, value: str) -> CommitType
 
 #### `CommitType.valid_types`
 
-`classmethod` | [deploynator/_models.py:65](../../deploynator/_models.py#L65)
+`classmethod` | [deploynator/_models.py:64](../../deploynator/_models.py#L64)
 
 Decorators: `@classmethod`
 
@@ -707,13 +707,13 @@ def valid_types(cls) -> list[str]
 
 #### `CommitType.bump_strategy`
 
-`method` | [deploynator/_models.py:68](../../deploynator/_models.py#L68)
+`method` | [deploynator/_models.py:67](../../deploynator/_models.py#L67)
 
 ```python
-def bump_strategy(self) -> Optional[str]
+def bump_strategy(self) -> str | None
 ```
 
-**Returns:** `Optional[str]`
+**Returns:** `str | None`
 
 *Called by:* [`SemverManager.determine_bump`](deploynator._semver.py.md#semvermanager-determine_bump)
 
@@ -721,7 +721,7 @@ def bump_strategy(self) -> Optional[str]
 
 #### `CommitType.section_header`
 
-`method` | [deploynator/_models.py:82](../../deploynator/_models.py#L82)
+`method` | [deploynator/_models.py:81](../../deploynator/_models.py#L81)
 
 ```python
 def section_header(self) -> str

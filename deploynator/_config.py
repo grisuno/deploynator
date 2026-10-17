@@ -17,6 +17,7 @@ class Config:
     workflows_dir: str = ".github/workflows"
 
     default_branch: str = "main"
+    dev_branch: str = "dev"
     default_remote: str = "origin"
     release_branch: str = "main"
 

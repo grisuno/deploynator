@@ -23,7 +23,7 @@ class PyPIRunner:
                 project = data.get("project", {})
                 if isinstance(project, dict) and project.get("name"):
                     return True
-            except Exception:
+            except (OSError, ValueError):
                 pass
         for candidate in ("setup.py", "setup.cfg"):
             if os.path.isfile(os.path.join(project_path, candidate)):

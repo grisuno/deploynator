@@ -89,7 +89,7 @@ flowchart LR
 
 ### `ProjectDiscovery`
 
-`class` | [deploynator/_deploy.py:31](../../deploynator/_deploy.py#L31)
+`class` | [deploynator/_deploy.py:29](../../deploynator/_deploy.py#L29)
 
 ```python
 class ProjectDiscovery
@@ -107,7 +107,7 @@ class ProjectDiscovery
 
 #### `ProjectDiscovery.__init__`
 
-`constructor` | [deploynator/_deploy.py:32](../../deploynator/_deploy.py#L32)
+`constructor` | [deploynator/_deploy.py:30](../../deploynator/_deploy.py#L30)
 
 ```python
 def __init__(self, config: Config) -> None
@@ -125,7 +125,7 @@ def __init__(self, config: Config) -> None
 
 #### `ProjectDiscovery.discover`
 
-`method` | [deploynator/_deploy.py:35](../../deploynator/_deploy.py#L35)
+`method` | [deploynator/_deploy.py:33](../../deploynator/_deploy.py#L33)
 
 ```python
 def discover(self, search_path: str = '') -> list[ProjectConfig]
@@ -145,10 +145,10 @@ def discover(self, search_path: str = '') -> list[ProjectConfig]
 
 #### `ProjectDiscovery.find_by_name`
 
-`method` | [deploynator/_deploy.py:56](../../deploynator/_deploy.py#L56)
+`method` | [deploynator/_deploy.py:54](../../deploynator/_deploy.py#L54)
 
 ```python
-def find_by_name(self, name: str, search_path: str = '') -> Optional[ProjectConfig]
+def find_by_name(self, name: str, search_path: str = '') -> ProjectConfig | None
 ```
 
 **Parameters**
@@ -158,7 +158,7 @@ def find_by_name(self, name: str, search_path: str = '') -> Optional[ProjectConf
 | `name` | `str` |  |  |
 | `search_path` | `str` | `''` |  |
 
-**Returns:** `Optional[ProjectConfig]`
+**Returns:** `ProjectConfig | None`
 
 *Calls:* [`ProjectDiscovery.discover`](#projectdiscovery-discover)
 
@@ -170,7 +170,7 @@ def find_by_name(self, name: str, search_path: str = '') -> Optional[ProjectConf
 
 ### `DeployOrchestrator`
 
-`class` | [deploynator/_deploy.py:76](../../deploynator/_deploy.py#L76)
+`class` | [deploynator/_deploy.py:74](../../deploynator/_deploy.py#L74)
 
 ```python
 class DeployOrchestrator
@@ -191,7 +191,7 @@ class DeployOrchestrator
 
 #### `DeployOrchestrator.__init__`
 
-`constructor` | [deploynator/_deploy.py:77](../../deploynator/_deploy.py#L77)
+`constructor` | [deploynator/_deploy.py:75](../../deploynator/_deploy.py#L75)
 
 ```python
 def __init__(self, config: Config) -> None
@@ -211,10 +211,10 @@ def __init__(self, config: Config) -> None
 
 #### `DeployOrchestrator.deploy`
 
-`method` | [deploynator/_deploy.py:97](../../deploynator/_deploy.py#L97)
+`method` | [deploynator/_deploy.py:95](../../deploynator/_deploy.py#L95)
 
 ```python
-def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, scope: str = '', body: str = '', dry_run: bool = False, platforms_override: Optional[list[Platform]] = None, run_tests: bool = True, run_docs: bool = True, force_bump: Optional[str] = None, run_pypi: bool = True, verbose: bool = False) -> DeployResult
+def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, scope: str = '', body: str = '', dry_run: bool = False, platforms_override: list[Platform] | None = None, run_tests: bool = True, run_docs: bool = True, force_bump: str | None = None, run_pypi: bool = True, verbose: bool = False) -> DeployResult
 ```
 
 **Parameters**
@@ -227,10 +227,10 @@ def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, 
 | `scope` | `str` | `''` |  |
 | `body` | `str` | `''` |  |
 | `dry_run` | `bool` | `False` |  |
-| `platforms_override` | `Optional[list[Platform]]` | `None` |  |
+| `platforms_override` | `list[Platform] \| None` | `None` |  |
 | `run_tests` | `bool` | `True` |  |
 | `run_docs` | `bool` | `True` |  |
-| `force_bump` | `Optional[str]` | `None` |  |
+| `force_bump` | `str \| None` | `None` |  |
 | `run_pypi` | `bool` | `True` |  |
 | `verbose` | `bool` | `False` |  |
 
@@ -244,7 +244,7 @@ def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, 
 
 #### `DeployOrchestrator.generate_workflows`
 
-`method` | [deploynator/_deploy.py:435](../../deploynator/_deploy.py#L435)
+`method` | [deploynator/_deploy.py:465](../../deploynator/_deploy.py#L465)
 
 ```python
 def generate_workflows(self, project: ProjectConfig, output_dir: str = '.github/workflows') -> list[str]
@@ -265,7 +265,7 @@ def generate_workflows(self, project: ProjectConfig, output_dir: str = '.github/
 
 #### `DeployOrchestrator.install_dependencies`
 
-`method` | [deploynator/_deploy.py:503](../../deploynator/_deploy.py#L503)
+`method` | [deploynator/_deploy.py:532](../../deploynator/_deploy.py#L532)
 
 ```python
 def install_dependencies(self, project: ProjectConfig) -> dict[str, bool]
@@ -287,7 +287,7 @@ def install_dependencies(self, project: ProjectConfig) -> dict[str, bool]
 
 #### `DeployOrchestrator.integrate_readmenator`
 
-`method` | [deploynator/_deploy.py:513](../../deploynator/_deploy.py#L513)
+`method` | [deploynator/_deploy.py:542](../../deploynator/_deploy.py#L542)
 
 ```python
 def integrate_readmenator(self, project_path: str) -> bool
@@ -301,6 +301,10 @@ def integrate_readmenator(self, project_path: str) -> bool
 
 **Returns:** `bool`
 
+**Raises**
+
+- `ImportError`: (raised in the body, not documented)
+
 *Calls:* [`DocsRunner.run`](deploynator._docs.py.md#docsrunner-run), [`load_toml_config`](deploynator._toml.py.md#load_toml_config)
 
 *Called by:* [`DeploynatorApp.generate_docs`](deploynator._app.py.md#deploynatorapp-generate_docs)
@@ -309,7 +313,7 @@ def integrate_readmenator(self, project_path: str) -> bool
 
 #### `DeployOrchestrator.install_lazygit`
 
-`method` | [deploynator/_deploy.py:547](../../deploynator/_deploy.py#L547)
+`method` | [deploynator/_deploy.py:578](../../deploynator/_deploy.py#L578)
 
 ```python
 def install_lazygit(self) -> bool

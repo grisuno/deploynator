@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import os
 import subprocess
-from typing import Optional
 
 from deploynator._config import Config
 
@@ -144,7 +143,7 @@ class GitOperations:
         except FileNotFoundError:
             return False
 
-    def create_branch(self, repo_path: str, branch_name: str, base: Optional[str] = None) -> bool:
+    def create_branch(self, repo_path: str, branch_name: str, base: str | None = None) -> bool:
         try:
             if base:
                 result = subprocess.run(
@@ -213,7 +212,7 @@ class GitOperations:
             pass
         return []
 
-    def get_start_ref(self, repo_path: str) -> Optional[str]:
+    def get_start_ref(self, repo_path: str) -> str | None:
         try:
             result = subprocess.run(
                 ["git", "-C", repo_path, "describe", "--tags", "--abbrev=0"],
@@ -231,7 +230,7 @@ class GitOperations:
             pass
         return None
 
-    def current_branch(self, repo_path: str) -> Optional[str]:
+    def current_branch(self, repo_path: str) -> str | None:
         try:
             result = subprocess.run(
                 ["git", "-C", repo_path, "rev-parse", "--abbrev-ref", "HEAD"],
@@ -259,6 +258,41 @@ class GitOperations:
                 ["git", "-C", repo_path, "remote", "get-url", remote],
                 capture_output=True, text=True, check=False,
             )
+            return result.returncode == 0
+        except FileNotFoundError:
+            return False
+
+    def branch_exists(self, repo_path: str, branch: str) -> bool:
+        try:
+            result = subprocess.run(
+                ["git", "-C", repo_path, "rev-parse", "--verify", f"refs/heads/{branch}"],
+                capture_output=True, text=True, check=False,
+            )
+            return result.returncode == 0
+        except FileNotFoundError:
+            return False
+
+    def is_behind(self, repo_path: str, behind_branch: str, ahead_branch: str) -> bool:
+        """True si `ahead_branch` tiene commits que `behind_branch` no tiene
+        (es decir, behind_branch esta por debajo de ahead_branch)."""
+        try:
+            result = subprocess.run(
+                ["git", "-C", repo_path, "rev-list", "--count",
+                 f"{behind_branch}..{ahead_branch}"],
+                capture_output=True, text=True, check=False,
+            )
+            if result.returncode != 0:
+                return False
+            return int(result.stdout.strip() or "0") > 0
+        except (FileNotFoundError, ValueError):
+            return False
+
+    def push_force(self, repo_path: str, remote: str, src_branch: str,
+                   dst_branch: str) -> bool:
+        try:
+            cmd = ["git", "-C", repo_path, "push", remote,
+                   f"+{src_branch}:{dst_branch}"]
+            result = subprocess.run(cmd, capture_output=True, text=True, check=False)
             return result.returncode == 0
         except FileNotFoundError:
             return False

@@ -4,19 +4,19 @@ Log each answered question here so the wiki compounds. Format: question, answer,
 
 ## Suggested
 
-### Q: What does _config.py depend on, and what depends on it? (27 connections)
+### Q: What does _config.py depend on, and what depends on it? (28 connections)
 
 - Status: unanswered
 
-### Q: What does _deploy.py depend on, and what depends on it? (17 connections)
+### Q: What does _deploy.py depend on, and what depends on it? (18 connections)
 
 - Status: unanswered
 
-### Q: What does _models.py depend on, and what depends on it? (14 connections)
+### Q: What does _models.py depend on, and what depends on it? (13 connections)
 
 - Status: unanswered
 
-### Q: How are the 11 files in 'deploynator: _platforms' related to each other?
+### Q: How are the 8 files in 'deploynator: _toml' related to each other?
 
 - Status: unanswered
 

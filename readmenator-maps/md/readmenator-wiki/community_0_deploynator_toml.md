@@ -1,6 +1,6 @@
 # deploynator: _toml
 
-*Community 1 | 8 files | cohesion 0.38*
+*Community 0 | 8 files | cohesion 0.38*
 
 ## Definition
 
@@ -37,20 +37,20 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 - `run` (method, `deploynator/_runner.py:15`) `def run(self, project_path, toml)`
 - `_target_regex` (function, `deploynator/_toml.py:23`) `def _target_regex()`
 - `list_make_targets` (function, `deploynator/_toml.py:31`) `def list_make_targets(project_path)` - Lee el Makefile y devuelve sus targets sin ejecutar nada.
-- `_has_python_tests` (function, `deploynator/_toml.py:64`) `def _has_python_tests(project_path)`
-- `looks_like_packaging_project` (function, `deploynator/_toml.py:76`) `def looks_like_packaging_project(project_path)` - Inferencia runtime (multi-proyecto): ¿es un paquete PyPI?
-- `detect_test_commands` (function, `deploynator/_toml.py:102`) `def detect_test_commands(project_path)` - Detecta comandos de test para proyectos C/autotools sin toml.
-- `_auto_toml_config` (function, `deploynator/_toml.py:152`) `def _auto_toml_config(project_path)` - Config auto para proyectos sin deploynator.toml (C primero).
-- `TomlConfig` (class, `deploynator/_toml.py:179`) `class TomlConfig`
-- `__post_init__` (method, `deploynator/_toml.py:196`) `def __post_init__(self)`
-- `_clamp_timeout` (function, `deploynator/_toml.py:204`) `def _clamp_timeout(value)`
-- `load_toml_config` (function, `deploynator/_toml.py:212`) `def load_toml_config(project_path)`
-- `TestBDDDeployScenarios` (class, `tests/bdd_test_deploy.py:28`) `class TestBDDDeployScenarios`
-- `project` (method, `tests/bdd_test_deploy.py:30`) `def project(self)`
-- `test_version_bump_by_commit_type` (method, `tests/bdd_test_deploy.py:46`) `def test_version_bump_by_commit_type(self, project, commit_type, expected_bump,`
-- `test_conventional_commit_parsing` (method, `tests/bdd_test_deploy.py:55`) `def test_conventional_commit_parsing(self)`
-- `test_commit_message_format_is_consistent` (method, `tests/bdd_test_deploy.py:69`) `def test_commit_message_format_is_consistent(self)`
-- `TestBDDPipeline` (class, `tests/bdd_test_deploy.py:84`) `class TestBDDPipeline` - Feature: Pipeline release con tests + docs + semver secuencial
+- `_has_python_tests` (function, `deploynator/_toml.py:63`) `def _has_python_tests(project_path)`
+- `looks_like_packaging_project` (function, `deploynator/_toml.py:75`) `def looks_like_packaging_project(project_path)` - Inferencia runtime (multi-proyecto): ¿es un paquete PyPI?
+- `detect_test_commands` (function, `deploynator/_toml.py:101`) `def detect_test_commands(project_path)` - Detecta comandos de test para proyectos C/autotools sin toml.
+- `_auto_toml_config` (function, `deploynator/_toml.py:150`) `def _auto_toml_config(project_path)` - Config auto para proyectos sin deploynator.toml (C primero).
+- `TomlConfig` (class, `deploynator/_toml.py:177`) `class TomlConfig`
+- `__post_init__` (method, `deploynator/_toml.py:194`) `def __post_init__(self)`
+- `_clamp_timeout` (function, `deploynator/_toml.py:202`) `def _clamp_timeout(value)`
+- `load_toml_config` (function, `deploynator/_toml.py:210`) `def load_toml_config(project_path)`
+- `TestBDDDeployScenarios` (class, `tests/bdd_test_deploy.py:29`) `class TestBDDDeployScenarios`
+- `project` (method, `tests/bdd_test_deploy.py:31`) `def project(self)`
+- `test_version_bump_by_commit_type` (method, `tests/bdd_test_deploy.py:47`) `def test_version_bump_by_commit_type(self, project, commit_type, expected_bump,`
+- `test_conventional_commit_parsing` (method, `tests/bdd_test_deploy.py:56`) `def test_conventional_commit_parsing(self)`
+- `test_commit_message_format_is_consistent` (method, `tests/bdd_test_deploy.py:70`) `def test_commit_message_format_is_consistent(self)`
+- `TestBDDPipeline` (class, `tests/bdd_test_deploy.py:85`) `class TestBDDPipeline` - Feature: Pipeline release con tests + docs + semver secuencial
 
 ## Internal vs External Edges
 
@@ -59,18 +59,19 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 
 ## Connections
 
-- [EXTRACTED] depends_on community 0 <-> 1 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_toml.py.
-- [EXTRACTED] depends_on community 1 <-> 3 (strength 0.9): Extracted import edge crosses communities: deploynator/_docs.py imports deploynator/_config.py.
-- [EXTRACTED] depends_on community 2 <-> 1 (strength 0.9): Extracted import edge crosses communities: tests/test_init.py imports deploynator/_toml.py.
-- [INFERRED] bridges community 0 <-> 1 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_runner.py in 4 hops.
-- [INFERRED] shares_context community 1 <-> 4 (strength 0.5): Inferred shared context (layer utility) with no import path between community 1 (deploynator: _toml) and community 4 (orphans).
+- [EXTRACTED] depends_on community 4 <-> 0 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_toml.py.
+- [EXTRACTED] depends_on community 0 <-> 3 (strength 0.9): Extracted import edge crosses communities: deploynator/_docs.py imports deploynator/_config.py.
+- [EXTRACTED] depends_on community 0 <-> 2 (strength 0.9): Extracted import edge crosses communities: tests/bdd_test_deploy.py imports deploynator/_models.py.
+- [EXTRACTED] depends_on community 1 <-> 0 (strength 0.9): Extracted import edge crosses communities: tests/test_init.py imports deploynator/_toml.py.
+- [INFERRED] bridges community 2 <-> 0 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_runner.py in 4 hops.
+- [INFERRED] shares_context community 0 <-> 5 (strength 0.5): Inferred shared context (layer utility) with no import path between community 0 (deploynator: _toml) and community 5 (orphans).
 
 ## Risks
 
 - [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_pypi.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
 
 ## Open Questions

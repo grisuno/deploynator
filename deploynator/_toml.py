@@ -53,9 +53,8 @@ def list_make_targets(project_path: str) -> list[str]:
                 if line[:1] in (" ", "\t"):
                     continue
                 m = _target_regex().match(line.strip())
-                if m and m.group(1) not in targets:
-                    if not m.group(1).startswith("."):
-                        targets.append(m.group(1))
+                if m and m.group(1) not in targets and not m.group(1).startswith("."):
+                    targets.append(m.group(1))
     except OSError as exc:
         raise ValueError(f"Cannot read Makefile: {exc}") from exc
     return targets
@@ -89,7 +88,7 @@ def looks_like_packaging_project(project_path: str) -> bool:
             project = data.get("project", {})
             if isinstance(project, dict) and project.get("name"):
                 return True
-        except Exception:
+        except (OSError, ValueError):
             pass
     for candidate in ("setup.py", "setup.cfg"):
         candidate_path = os.path.join(project_path, candidate)
@@ -128,10 +127,9 @@ def detect_test_commands(project_path: str) -> list[str] | None:
                 continue
             if preferred in targets and preferred not in combined:
                 combined.append(preferred)
-        for extra in sorted(t for t in targets
-                            if (t.startswith("test-") or t.startswith("test_"))
-                            and t not in combined):
-            combined.append(extra)
+        extras = [t for t in sorted(targets)
+                  if t.startswith(("test-", "test_")) and t not in combined]
+        combined.extend(extras)
         if combined:
             return [f"make {' '.join(combined)}"]
         # Makefile sin target de test: al menos verifica que compila.
@@ -230,7 +228,7 @@ def load_toml_config(project_path: str) -> TomlConfig:
     except Exception as exc:
         raise ValueError(f"Invalid {TOML_FILENAME}: {exc}") from exc
     if not isinstance(data, dict):
-        raise ValueError(f"Invalid {TOML_FILENAME}: root must be a table")
+        raise TypeError(f"Invalid {TOML_FILENAME}: root must be a table")
 
     project_raw = data.get("project", {}) or {}
     tests_raw = data.get("tests", {}) or {}
@@ -239,11 +237,11 @@ def load_toml_config(project_path: str) -> TomlConfig:
     pypi_raw = data.get("pypi", {}) or {}
 
     if not isinstance(project_raw, dict) or not isinstance(tests_raw, dict):
-        raise ValueError(f"Invalid {TOML_FILENAME}: bad sections")
+        raise TypeError(f"Invalid {TOML_FILENAME}: bad sections")
     if not isinstance(docs_raw, dict) or not isinstance(deploy_raw, dict):
-        raise ValueError(f"Invalid {TOML_FILENAME}: bad sections")
+        raise TypeError(f"Invalid {TOML_FILENAME}: bad sections")
     if not isinstance(pypi_raw, dict):
-        raise ValueError(f"Invalid {TOML_FILENAME}: bad sections")
+        raise TypeError(f"Invalid {TOML_FILENAME}: bad sections")
 
     _sentinel: list[str] = []  # type: ignore[assignment]
     commands = tests_raw.get("commands", _sentinel)

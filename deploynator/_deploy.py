@@ -4,28 +4,26 @@ import os
 import shutil
 import subprocess
 import tempfile
-from typing import Optional
 
+from deploynator._changelog import ChangelogGenerator
 from deploynator._config import Config
+from deploynator._docs import DocsRunner
+from deploynator._git import GitOperations
 from deploynator._models import (
+    CommitMessage,
+    CommitType,
+    DeployResult,
     Platform,
     PlatformConfig,
     ProjectConfig,
-    CommitType,
-    CommitMessage,
-    VersionInfo,
     ReleaseInfo,
-    DeployResult,
-    ChangelogEntry,
+    VersionInfo,
 )
-from deploynator._git import GitOperations
-from deploynator._semver import SemverManager
-from deploynator._changelog import ChangelogGenerator
-from deploynator._platforms import PlatformFactory, PlatformClient
-from deploynator._toml import load_toml_config
-from deploynator._runner import TestRunner
-from deploynator._docs import DocsRunner
+from deploynator._platforms import PlatformFactory
 from deploynator._pypi import PyPIRunner
+from deploynator._runner import TestRunner
+from deploynator._semver import SemverManager
+from deploynator._toml import load_toml_config
 
 
 class ProjectDiscovery:
@@ -49,11 +47,11 @@ class ProjectDiscovery:
                 try:
                     project = self._load_single(yaml_path)
                     projects.append(project)
-                except (ValueError, KeyError, OSError) as exc:
+                except (ValueError, KeyError, OSError):
                     continue
         return projects
 
-    def find_by_name(self, name: str, search_path: str = "") -> Optional[ProjectConfig]:
+    def find_by_name(self, name: str, search_path: str = "") -> ProjectConfig | None:
         for project in self.discover(search_path):
             if project.name == name:
                 return project
@@ -102,10 +100,10 @@ class DeployOrchestrator:
         scope: str = "",
         body: str = "",
         dry_run: bool = False,
-        platforms_override: Optional[list[Platform]] = None,
+        platforms_override: list[Platform] | None = None,
         run_tests: bool = True,
         run_docs: bool = True,
-        force_bump: Optional[str] = None,
+        force_bump: str | None = None,
         run_pypi: bool = True,
         verbose: bool = False,
     ) -> DeployResult:
@@ -164,7 +162,7 @@ class DeployOrchestrator:
 
                 if ensure_deployed_footer(repo_path, self._config):
                     print(f"[+] deploy footer ensured for {project.name}")
-            except Exception as exc:
+            except (OSError, ValueError) as exc:
                 print(f"[!] deploy footer skipped for {project.name}: {exc}")
 
         if not dry_run and not self._git.has_remote(repo_path):
@@ -253,6 +251,11 @@ class DeployOrchestrator:
             new_version_str = tag_name
         else:
             new_version_str = str(new_version)
+
+        # Mantenimiento: antes de empujar a main, si dev existe y esta por
+        # debajo, fuerza main sobre dev para que dev quede igual que main.
+        if not dry_run:
+            self._sync_dev_to_main(repo_path)
 
         platforms_to_deploy: list[PlatformConfig] = []
         for pc in project.platforms:
@@ -377,7 +380,7 @@ class DeployOrchestrator:
         if shutil.which(self._config.gh_cli) is None:
             print("[!] gh CLI not found. Push done, create the release manually.")
             return False
-        notes_file: Optional[str] = None
+        notes_file: str | None = None
         try:
             with tempfile.NamedTemporaryFile(mode="w", suffix=".md", delete=False) as nf:
                 nf.write(notes[:self._config.max_release_chars])
@@ -422,8 +425,35 @@ class DeployOrchestrator:
         except FileNotFoundError:
             pass
 
+    def _sync_dev_to_main(self, repo_path: str) -> None:
+        """Sincroniza dev con main antes del push.
+
+        Si la rama dev existe, esta por debajo de main y hay diferencias,
+        empuja main sobre dev con force (+main:dev) para que dev quede
+        igual de actualizado que main. Nunca falla el despliegue si el
+        sync no se puede completar.
+        """
+        main = self._config.default_branch
+        dev = self._config.dev_branch
+        remote = self._config.default_remote
+
+        if not self._git.branch_exists(repo_path, dev):
+            return
+        if not self._git.branch_exists(repo_path, main):
+            return
+        if not self._git.is_behind(repo_path, dev, main):
+            return
+        if not self._git.has_remote(repo_path, remote):
+            return
+
+        ok = self._git.push_force(repo_path, remote, main, dev)
+        if ok:
+            print(f"[+] dev sincronizado con main (force): {main} -> {dev}")
+        else:
+            print(f"[!] No se pudo sincronizar dev con main: {main} -> {dev}")
+
     @staticmethod
-    def _get_remote_url(repo_path: str, pc: PlatformConfig) -> Optional[str]:
+    def _get_remote_url(repo_path: str, pc: PlatformConfig) -> str | None:
         if pc.platform == Platform.GITHUB:
             return f"https://github.com/{pc.repo}.git"
         elif pc.platform == Platform.GITLAB:
@@ -452,7 +482,7 @@ class DeployOrchestrator:
         return created
 
     def _ci_workflow_content(self, project: ProjectConfig) -> str:
-        return f"""name: deploynator CI
+        return """name: deploynator CI
 
 on:
   push:
@@ -473,8 +503,7 @@ jobs:
 """
 
     def _release_workflow_content(self, project: ProjectConfig) -> str:
-        platforms_gh = any(p.platform == Platform.GITHUB for p in project.platforms if p.enabled)
-        return f"""name: deploynator Release
+        return """name: deploynator Release
 
 on:
   push:
@@ -518,7 +547,9 @@ jobs:
         if toml_cfg is not None:
             return self._docs.run(project_path, toml_cfg)
         try:
-            import readmenator
+            import importlib.util
+            if importlib.util.find_spec("readmenator") is None:
+                raise ImportError("readmenator not installed")
             result = subprocess.run(
                 ["python", "-m", "readmenator", project_path, "--rebuild"],
                 capture_output=True, text=True, check=False,

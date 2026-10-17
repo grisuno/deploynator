@@ -27,9 +27,10 @@ class TestInstallPackages:
         assert any("deploynator" in c for c in calls)
 
     def test_failure_reported(self, monkeypatch):
+        import subprocess
+
         from deploynator import DeploynatorApp
         from deploynator._config import Config
-        import subprocess
 
         def fake_run(cmd, **kw):
             raise FileNotFoundError("no pip")
@@ -38,6 +39,7 @@ class TestInstallPackages:
 
     def test_no_shell(self):
         import inspect
+
         from deploynator import _app
         src = inspect.getsource(_app.DeploynatorApp.install_packages)
         assert "shell=True" not in src
@@ -62,6 +64,7 @@ class TestAppExample:
     def test_example_uses_library(self):
         path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                             "app.py")
-        content = open(path).read()
+        with open(path) as f:
+            content = f.read()
         assert "from deploynator import DeploynatorApp" in content
         assert "dry_run" in content

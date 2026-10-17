@@ -63,7 +63,7 @@ flowchart LR
 
 ### `build_parser`
 
-`function` | [deploynator/__main__.py:17](../../deploynator/__main__.py#L17)
+`function` | [deploynator/__main__.py:16](../../deploynator/__main__.py#L16)
 
 ```python
 def build_parser() -> argparse.ArgumentParser
@@ -81,7 +81,7 @@ def build_parser() -> argparse.ArgumentParser
 
 ### `preprocess_argv`
 
-`function` | [deploynator/__main__.py:145](../../deploynator/__main__.py#L145)
+`function` | [deploynator/__main__.py:144](../../deploynator/__main__.py#L144)
 
 ```python
 def preprocess_argv(argv: list[str]) -> tuple[argparse.Namespace, str]
@@ -105,10 +105,10 @@ def preprocess_argv(argv: list[str]) -> tuple[argparse.Namespace, str]
 
 ### `main`
 
-`function` | [deploynator/__main__.py:179](../../deploynator/__main__.py#L179)
+`function` | [deploynator/__main__.py:178](../../deploynator/__main__.py#L178)
 
 ```python
-def main(argv: list[str] | None = None) -> NoReturn | None
+def main(argv: list[str] | None = None) -> None
 ```
 
 **Parameters**
@@ -116,8 +116,6 @@ def main(argv: list[str] | None = None) -> NoReturn | None
 | Name | Type | Default | Description |
 |---|---|---|---|
 | `argv` | `list[str] \| None` | `None` |  |
-
-**Returns:** `NoReturn | None`
 
 *Calls:* [`build_parser`](#build_parser), [`preprocess_argv`](#preprocess_argv), [`DeploynatorApp.__init__`](deploynator._app.py.md#deploynatorapp-__init__), [`DeploynatorApp.auth_login`](deploynator._app.py.md#deploynatorapp-auth_login), [`DeploynatorApp.auth_status`](deploynator._app.py.md#deploynatorapp-auth_status), [`DeploynatorApp.commit`](deploynator._app.py.md#deploynatorapp-commit), [`DeploynatorApp.generate_ci`](deploynator._app.py.md#deploynatorapp-generate_ci), [`DeploynatorApp.generate_docs`](deploynator._app.py.md#deploynatorapp-generate_docs), [`DeploynatorApp.init_project`](deploynator._app.py.md#deploynatorapp-init_project), [`DeploynatorApp.install_deps`](deploynator._app.py.md#deploynatorapp-install_deps), [`DeploynatorApp.install_packages`](deploynator._app.py.md#deploynatorapp-install_packages), [`DeploynatorApp.interactive_menu`](deploynator._app.py.md#deploynatorapp-interactive_menu) and 7 more
 
@@ -129,7 +127,7 @@ def main(argv: list[str] | None = None) -> NoReturn | None
 
 ### `KNOWN_COMMANDS`
 
-`constant` | [deploynator/__main__.py:11](../../deploynator/__main__.py#L11)
+`constant` | [deploynator/__main__.py:10](../../deploynator/__main__.py#L10)
 
 ```python
 KNOWN_COMMANDS

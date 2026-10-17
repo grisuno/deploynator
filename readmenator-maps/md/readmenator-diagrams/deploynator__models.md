@@ -1,6 +1,6 @@
-# deploynator: _platforms
+# deploynator: _models
 
-deploynator: _platforms groups 11 files (py) around Platform, from_string, label, cli_name, auth_env_var. install_packages: pip install/upgrade packages (default: deploynator from PyPI).
+deploynator: _models groups 7 files (py) around Platform, from_string, label, cli_name, auth_env_var.
 
 ```mermaid
 graph LR
@@ -9,21 +9,17 @@ graph LR
     tests -- "calls into" --> deploynator
 ```
 
-## deploynator (1.1)
+## deploynator (3.1)
 
-deploynator groups 6 files (py) around Platform, from_string, label, cli_name, auth_env_var. install_packages: pip install/upgrade packages (default: deploynator from PyPI).
+deploynator groups 2 files (py) around Platform, from_string, label, cli_name, auth_env_var.
 
-## tests (1.2)
+## tests (3.2)
 
 tests groups 5 files (py) around TestProjectDiscovery, discovery, test_discover_empty_dir, test_discover_single_yaml, test_discover_multiple_yamls. Path-direct deploy + tag prefijos + version_file toml (ReadMenator real).
 
 **Files**:
 
-- deploynator/_app.py
-- deploynator/_deploy.py
-- deploynator/_git.py
 - deploynator/_models.py
-- deploynator/_platforms.py
 - deploynator/_semver.py
 - tests/test_deploy.py
 - tests/test_models.py

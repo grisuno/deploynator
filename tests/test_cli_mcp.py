@@ -1,5 +1,4 @@
 """RED: bare = interactive, flags = headless + MCP server."""
-import pytest
 
 
 class TestCliMode:
@@ -35,9 +34,9 @@ class TestCliMode:
 
 class TestMCPServer:
     def _server(self, tmp):
-        from deploynator._mcp_server import MCPServer
-        from deploynator._config import Config
         from deploynator import DeploynatorApp
+        from deploynator._config import Config
+        from deploynator._mcp_server import MCPServer
         app = DeploynatorApp(Config.create(), workdir=tmp)
         return MCPServer(app, tmp)
 

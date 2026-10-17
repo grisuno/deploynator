@@ -25,7 +25,7 @@ flowchart LR
 
 ### `ChangelogGenerator`
 
-`class` | [deploynator/_changelog.py:12](../../deploynator/_changelog.py#L12)
+`class` | [deploynator/_changelog.py:11](../../deploynator/_changelog.py#L11)
 
 ```python
 class ChangelogGenerator
@@ -46,7 +46,7 @@ class ChangelogGenerator
 
 #### `ChangelogGenerator.__init__`
 
-`constructor` | [deploynator/_changelog.py:13](../../deploynator/_changelog.py#L13)
+`constructor` | [deploynator/_changelog.py:12](../../deploynator/_changelog.py#L12)
 
 ```python
 def __init__(self, config: Config) -> None
@@ -64,7 +64,7 @@ def __init__(self, config: Config) -> None
 
 #### `ChangelogGenerator.generate_from_log`
 
-`method` | [deploynator/_changelog.py:16](../../deploynator/_changelog.py#L16)
+`method` | [deploynator/_changelog.py:15](../../deploynator/_changelog.py#L15)
 
 ```python
 def generate_from_log(self, repo_path: str, from_ref: str, to_ref: str = 'HEAD') -> str
@@ -86,7 +86,7 @@ def generate_from_log(self, repo_path: str, from_ref: str, to_ref: str = 'HEAD')
 
 #### `ChangelogGenerator.generate_from_messages`
 
-`method` | [deploynator/_changelog.py:25](../../deploynator/_changelog.py#L25)
+`method` | [deploynator/_changelog.py:24](../../deploynator/_changelog.py#L24)
 
 ```python
 def generate_from_messages(self, messages: list[str]) -> str
@@ -108,7 +108,7 @@ def generate_from_messages(self, messages: list[str]) -> str
 
 #### `ChangelogGenerator.generate_header`
 
-`method` | [deploynator/_changelog.py:45](../../deploynator/_changelog.py#L45)
+`method` | [deploynator/_changelog.py:44](../../deploynator/_changelog.py#L44)
 
 ```python
 def generate_header(self) -> str
@@ -120,10 +120,10 @@ def generate_header(self) -> str
 
 #### `ChangelogGenerator.write_changelog`
 
-`method` | [deploynator/_changelog.py:100](../../deploynator/_changelog.py#L100)
+`method` | [deploynator/_changelog.py:99](../../deploynator/_changelog.py#L99)
 
 ```python
-def write_changelog(self, repo_path: str, content: str, filename: Optional[str] = None) -> str
+def write_changelog(self, repo_path: str, content: str, filename: str | None = None) -> str
 ```
 
 **Parameters**
@@ -132,7 +132,7 @@ def write_changelog(self, repo_path: str, content: str, filename: Optional[str] 
 |---|---|---|---|
 | `repo_path` | `str` |  |  |
 | `content` | `str` |  |  |
-| `filename` | `Optional[str]` | `None` |  |
+| `filename` | `str \| None` | `None` |  |
 
 **Returns:** `str`
 
@@ -146,10 +146,10 @@ def write_changelog(self, repo_path: str, content: str, filename: Optional[str] 
 
 #### `ChangelogGenerator.format_for_release`
 
-`method` | [deploynator/_changelog.py:110](../../deploynator/_changelog.py#L110)
+`method` | [deploynator/_changelog.py:108](../../deploynator/_changelog.py#L108)
 
 ```python
-def format_for_release(self, changelog_content: str, max_chars: Optional[int] = None) -> str
+def format_for_release(self, changelog_content: str, max_chars: int | None = None) -> str
 ```
 
 **Parameters**
@@ -157,7 +157,7 @@ def format_for_release(self, changelog_content: str, max_chars: Optional[int] = 
 | Name | Type | Default | Description |
 |---|---|---|---|
 | `changelog_content` | `str` |  |  |
-| `max_chars` | `Optional[int]` | `None` |  |
+| `max_chars` | `int \| None` | `None` |  |
 
 **Returns:** `str`
 

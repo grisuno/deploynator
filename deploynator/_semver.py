@@ -3,10 +3,9 @@ from __future__ import annotations
 import json
 import os
 import re
-from typing import Optional
 
 from deploynator._config import Config
-from deploynator._models import VersionInfo, CommitType
+from deploynator._models import CommitType, VersionInfo
 
 
 class SemverManager:
@@ -108,10 +107,10 @@ class SemverManager:
                 f.write(new_content)
         return vfile
 
-    def determine_bump(self, commit_type: CommitType) -> Optional[str]:
+    def determine_bump(self, commit_type: CommitType) -> str | None:
         return commit_type.bump_strategy()
 
-    def calculate_next_version(self, current: VersionInfo, strategy: Optional[str]) -> VersionInfo:
+    def calculate_next_version(self, current: VersionInfo, strategy: str | None) -> VersionInfo:
         return current.bump(strategy)
 
     @staticmethod
@@ -119,7 +118,7 @@ class SemverManager:
         pattern = r"^\d+\.\d+\.\d+$"
         return bool(re.match(pattern, version_str.strip()))
 
-    def _get_latest_tag(self, project_path: str) -> Optional[str]:
+    def _get_latest_tag(self, project_path: str) -> str | None:
         import subprocess
         try:
             result = subprocess.run(

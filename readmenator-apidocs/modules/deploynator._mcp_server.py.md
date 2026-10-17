@@ -82,7 +82,7 @@ flowchart LR
 
 ### `MCPRequest`
 
-`class` | [deploynator/_mcp_server.py:35](../../deploynator/_mcp_server.py#L35)
+`class` | [deploynator/_mcp_server.py:36](../../deploynator/_mcp_server.py#L36)
 
 ```python
 class MCPRequest
@@ -101,17 +101,17 @@ class MCPRequest
 
 #### `MCPRequest.__init__`
 
-`constructor` | [deploynator/_mcp_server.py:36](../../deploynator/_mcp_server.py#L36)
+`constructor` | [deploynator/_mcp_server.py:37](../../deploynator/_mcp_server.py#L37)
 
 ```python
-def __init__(self, msg: Dict[str, Any])
+def __init__(self, msg: dict[str, Any])
 ```
 
 **Parameters**
 
 | Name | Type | Default | Description |
 |---|---|---|---|
-| `msg` | `Dict[str, Any]` |  |  |
+| `msg` | `dict[str, Any]` |  |  |
 
 *Called by:* [`MCPServer.run`](#mcpserver-run)
 
@@ -119,7 +119,7 @@ def __init__(self, msg: Dict[str, Any])
 
 #### `MCPRequest.is_notification`
 
-`property` | [deploynator/_mcp_server.py:43](../../deploynator/_mcp_server.py#L43)
+`property` | [deploynator/_mcp_server.py:44](../../deploynator/_mcp_server.py#L44)
 
 Decorators: `@property`
 
@@ -133,10 +133,10 @@ def is_notification(self) -> bool
 
 #### `MCPRequest.response`
 
-`method` | [deploynator/_mcp_server.py:46](../../deploynator/_mcp_server.py#L46)
+`method` | [deploynator/_mcp_server.py:47](../../deploynator/_mcp_server.py#L47)
 
 ```python
-def response(self, result: Any = None) -> Dict[str, Any]
+def response(self, result: Any = None) -> dict[str, Any]
 ```
 
 **Parameters**
@@ -145,16 +145,16 @@ def response(self, result: Any = None) -> Dict[str, Any]
 |---|---|---|---|
 | `result` | `Any` | `None` |  |
 
-**Returns:** `Dict[str, Any]`
+**Returns:** `dict[str, Any]`
 
 <a id="mcprequest-error"></a>
 
 #### `MCPRequest.error`
 
-`method` | [deploynator/_mcp_server.py:49](../../deploynator/_mcp_server.py#L49)
+`method` | [deploynator/_mcp_server.py:50](../../deploynator/_mcp_server.py#L50)
 
 ```python
-def error(self, code: int, message: str, data: Any = None) -> Dict[str, Any]
+def error(self, code: int, message: str, data: Any = None) -> dict[str, Any]
 ```
 
 **Parameters**
@@ -165,7 +165,7 @@ def error(self, code: int, message: str, data: Any = None) -> Dict[str, Any]
 | `message` | `str` |  |  |
 | `data` | `Any` | `None` |  |
 
-**Returns:** `Dict[str, Any]`
+**Returns:** `dict[str, Any]`
 
 *Called by:* [`MCPServer.dispatch`](#mcpserver-dispatch)
 
@@ -175,7 +175,7 @@ def error(self, code: int, message: str, data: Any = None) -> Dict[str, Any]
 
 ### `MCPTool`
 
-`class` | [deploynator/_mcp_server.py:56](../../deploynator/_mcp_server.py#L56)
+`class` | [deploynator/_mcp_server.py:57](../../deploynator/_mcp_server.py#L57)
 
 ```python
 class MCPTool
@@ -193,10 +193,10 @@ class MCPTool
 
 #### `MCPTool.__init__`
 
-`constructor` | [deploynator/_mcp_server.py:57](../../deploynator/_mcp_server.py#L57)
+`constructor` | [deploynator/_mcp_server.py:58](../../deploynator/_mcp_server.py#L58)
 
 ```python
-def __init__(self, name: str, description: str, handler: Callable, input_schema: Optional[Dict[str, Any]] = None)
+def __init__(self, name: str, description: str, handler: Callable, input_schema: dict[str, Any] | None = None)
 ```
 
 **Parameters**
@@ -206,35 +206,35 @@ def __init__(self, name: str, description: str, handler: Callable, input_schema:
 | `name` | `str` |  |  |
 | `description` | `str` |  |  |
 | `handler` | `Callable` |  |  |
-| `input_schema` | `Optional[Dict[str, Any]]` | `None` |  |
+| `input_schema` | `dict[str, Any] \| None` | `None` |  |
 
 <a id="mcptool-definition"></a>
 
 #### `MCPTool.definition`
 
-`method` | [deploynator/_mcp_server.py:64](../../deploynator/_mcp_server.py#L64)
+`method` | [deploynator/_mcp_server.py:65](../../deploynator/_mcp_server.py#L65)
 
 ```python
-def definition(self) -> Dict[str, Any]
+def definition(self) -> dict[str, Any]
 ```
 
-**Returns:** `Dict[str, Any]`
+**Returns:** `dict[str, Any]`
 
 <a id="mcptool-call"></a>
 
 #### `MCPTool.call`
 
-`method` | [deploynator/_mcp_server.py:67](../../deploynator/_mcp_server.py#L67)
+`method` | [deploynator/_mcp_server.py:68](../../deploynator/_mcp_server.py#L68)
 
 ```python
-def call(self, arguments: Dict[str, Any]) -> Any
+def call(self, arguments: dict[str, Any]) -> Any
 ```
 
 **Parameters**
 
 | Name | Type | Default | Description |
 |---|---|---|---|
-| `arguments` | `Dict[str, Any]` |  |  |
+| `arguments` | `dict[str, Any]` |  |  |
 
 **Returns:** `Any`
 
@@ -244,7 +244,7 @@ def call(self, arguments: Dict[str, Any]) -> Any
 
 ### `MCPResource`
 
-`class` | [deploynator/_mcp_server.py:71](../../deploynator/_mcp_server.py#L71)
+`class` | [deploynator/_mcp_server.py:72](../../deploynator/_mcp_server.py#L72)
 
 ```python
 class MCPResource
@@ -262,7 +262,7 @@ class MCPResource
 
 #### `MCPResource.__init__`
 
-`constructor` | [deploynator/_mcp_server.py:72](../../deploynator/_mcp_server.py#L72)
+`constructor` | [deploynator/_mcp_server.py:73](../../deploynator/_mcp_server.py#L73)
 
 ```python
 def __init__(self, uri: str, name: str, description: str, mime_type: str, handler: Callable)
@@ -282,19 +282,19 @@ def __init__(self, uri: str, name: str, description: str, mime_type: str, handle
 
 #### `MCPResource.definition`
 
-`method` | [deploynator/_mcp_server.py:79](../../deploynator/_mcp_server.py#L79)
+`method` | [deploynator/_mcp_server.py:80](../../deploynator/_mcp_server.py#L80)
 
 ```python
-def definition(self) -> Dict[str, Any]
+def definition(self) -> dict[str, Any]
 ```
 
-**Returns:** `Dict[str, Any]`
+**Returns:** `dict[str, Any]`
 
 <a id="mcpresource-read"></a>
 
 #### `MCPResource.read`
 
-`method` | [deploynator/_mcp_server.py:82](../../deploynator/_mcp_server.py#L82)
+`method` | [deploynator/_mcp_server.py:83](../../deploynator/_mcp_server.py#L83)
 
 ```python
 def read(self) -> Any
@@ -308,7 +308,7 @@ def read(self) -> Any
 
 ### `MCPServer`
 
-`class` | [deploynator/_mcp_server.py:86](../../deploynator/_mcp_server.py#L86)
+`class` | [deploynator/_mcp_server.py:87](../../deploynator/_mcp_server.py#L87)
 
 ```python
 class MCPServer
@@ -328,7 +328,7 @@ class MCPServer
 
 #### `MCPServer.__init__`
 
-`constructor` | [deploynator/_mcp_server.py:87](../../deploynator/_mcp_server.py#L87)
+`constructor` | [deploynator/_mcp_server.py:88](../../deploynator/_mcp_server.py#L88)
 
 ```python
 def __init__(self, app: Any, target_dir: str)
@@ -347,7 +347,7 @@ def __init__(self, app: Any, target_dir: str)
 
 #### `MCPServer.register_tool`
 
-`method` | [deploynator/_mcp_server.py:94](../../deploynator/_mcp_server.py#L94)
+`method` | [deploynator/_mcp_server.py:95](../../deploynator/_mcp_server.py#L95)
 
 ```python
 def register_tool(self, tool: MCPTool) -> None
@@ -363,7 +363,7 @@ def register_tool(self, tool: MCPTool) -> None
 
 #### `MCPServer.register_resource`
 
-`method` | [deploynator/_mcp_server.py:97](../../deploynator/_mcp_server.py#L97)
+`method` | [deploynator/_mcp_server.py:98](../../deploynator/_mcp_server.py#L98)
 
 ```python
 def register_resource(self, resource: MCPResource) -> None
@@ -379,10 +379,10 @@ def register_resource(self, resource: MCPResource) -> None
 
 #### `MCPServer.dispatch`
 
-`method` | [deploynator/_mcp_server.py:144](../../deploynator/_mcp_server.py#L144)
+`method` | [deploynator/_mcp_server.py:145](../../deploynator/_mcp_server.py#L145)
 
 ```python
-def dispatch(self, req: MCPRequest) -> Optional[Dict[str, Any]]
+def dispatch(self, req: MCPRequest) -> dict[str, Any] | None
 ```
 
 **Parameters**
@@ -391,7 +391,7 @@ def dispatch(self, req: MCPRequest) -> Optional[Dict[str, Any]]
 |---|---|---|---|
 | `req` | `MCPRequest` |  |  |
 
-**Returns:** `Optional[Dict[str, Any]]`
+**Returns:** `dict[str, Any] | None`
 
 *Calls:* [`MCPRequest.error`](#mcprequest-error)
 
@@ -401,7 +401,7 @@ def dispatch(self, req: MCPRequest) -> Optional[Dict[str, Any]]
 
 #### `MCPServer.run`
 
-`method` | [deploynator/_mcp_server.py:162](../../deploynator/_mcp_server.py#L162)
+`method` | [deploynator/_mcp_server.py:163](../../deploynator/_mcp_server.py#L163)
 
 ```python
 def run(self) -> None
@@ -419,7 +419,7 @@ def run(self) -> None
 
 ### `main`
 
-`function` | [deploynator/_mcp_server.py:270](../../deploynator/_mcp_server.py#L270)
+`function` | [deploynator/_mcp_server.py:271](../../deploynator/_mcp_server.py#L271)
 
 ```python
 def main() -> None
@@ -435,7 +435,7 @@ def main() -> None
 
 ### `METHOD_NOT_FOUND`
 
-`constant` | [deploynator/_mcp_server.py:30](../../deploynator/_mcp_server.py#L30)
+`constant` | [deploynator/_mcp_server.py:31](../../deploynator/_mcp_server.py#L31)
 
 ```python
 METHOD_NOT_FOUND = -32601
@@ -447,7 +447,7 @@ METHOD_NOT_FOUND = -32601
 
 ### `INVALID_PARAMS`
 
-`constant` | [deploynator/_mcp_server.py:31](../../deploynator/_mcp_server.py#L31)
+`constant` | [deploynator/_mcp_server.py:32](../../deploynator/_mcp_server.py#L32)
 
 ```python
 INVALID_PARAMS = -32602
@@ -459,7 +459,7 @@ INVALID_PARAMS = -32602
 
 ### `INTERNAL_ERROR`
 
-`constant` | [deploynator/_mcp_server.py:32](../../deploynator/_mcp_server.py#L32)
+`constant` | [deploynator/_mcp_server.py:33](../../deploynator/_mcp_server.py#L33)
 
 ```python
 INTERNAL_ERROR = -32603

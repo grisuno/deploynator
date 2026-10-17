@@ -28,7 +28,7 @@ flowchart LR
 
 ### `footer_block`
 
-`function` | [deploynator/_readme.py:19](../../deploynator/_readme.py#L19)
+`function` | [deploynator/_readme.py:18](../../deploynator/_readme.py#L18)
 
 ```python
 def footer_block(config: Config) -> str
@@ -52,7 +52,7 @@ Return the anchored deploy footer block.
 
 ### `ensure_deployed_footer`
 
-`function` | [deploynator/_readme.py:49](../../deploynator/_readme.py#L49)
+`function` | [deploynator/_readme.py:48](../../deploynator/_readme.py#L48)
 
 ```python
 def ensure_deployed_footer(repo_path: str, config: Config | None = None) -> bool
@@ -79,7 +79,7 @@ Append or refresh the deploy footer in the repository README.
 
 ### `footer_line`
 
-`function` | [deploynator/_readme.py:96](../../deploynator/_readme.py#L96)
+`function` | [deploynator/_readme.py:95](../../deploynator/_readme.py#L95)
 
 ```python
 def footer_line(config: Config | None = None) -> str
@@ -105,7 +105,7 @@ Return the plain deploy footer line.
 
 ### `FOOTER_START`
 
-`constant` | [deploynator/_readme.py:8](../../deploynator/_readme.py#L8)
+`constant` | [deploynator/_readme.py:7](../../deploynator/_readme.py#L7)
 
 ```python
 FOOTER_START = '<!-- deploynator-footer -->'
@@ -117,7 +117,7 @@ FOOTER_START = '<!-- deploynator-footer -->'
 
 ### `FOOTER_END`
 
-`constant` | [deploynator/_readme.py:9](../../deploynator/_readme.py#L9)
+`constant` | [deploynator/_readme.py:8](../../deploynator/_readme.py#L8)
 
 ```python
 FOOTER_END = '<!-- /deploynator-footer -->'
@@ -129,7 +129,7 @@ FOOTER_END = '<!-- /deploynator-footer -->'
 
 ### `README_CANDIDATES`
 
-`constant` | [deploynator/_readme.py:11](../../deploynator/_readme.py#L11)
+`constant` | [deploynator/_readme.py:10](../../deploynator/_readme.py#L10)
 
 ```python
 README_CANDIDATES = ('README.md', 'README.rst', 'Readme.md', 'readme.md')

@@ -70,7 +70,7 @@ flowchart LR
 
 ### `DeploynatorApp`
 
-`class` | [deploynator/_app.py:20](../../deploynator/_app.py#L20)
+`class` | [deploynator/_app.py:18](../../deploynator/_app.py#L18)
 
 ```python
 class DeploynatorApp
@@ -106,17 +106,17 @@ class DeploynatorApp
 
 #### `DeploynatorApp.__init__`
 
-`constructor` | [deploynator/_app.py:21](../../deploynator/_app.py#L21)
+`constructor` | [deploynator/_app.py:19](../../deploynator/_app.py#L19)
 
 ```python
-def __init__(self, config: Optional[Config] = None, workdir: str = '') -> None
+def __init__(self, config: Config | None = None, workdir: str = '') -> None
 ```
 
 **Parameters**
 
 | Name | Type | Default | Description |
 |---|---|---|---|
-| `config` | `Optional[Config]` | `None` |  |
+| `config` | `Config \| None` | `None` |  |
 | `workdir` | `str` | `''` |  |
 
 *Calls:* [`Config.create`](deploynator._config.py.md#config-create), [`DeployOrchestrator.__init__`](deploynator._deploy.py.md#deployorchestrator-__init__), [`ProjectDiscovery.__init__`](deploynator._deploy.py.md#projectdiscovery-__init__)
@@ -127,17 +127,17 @@ def __init__(self, config: Optional[Config] = None, workdir: str = '') -> None
 
 #### `DeploynatorApp.auth_login`
 
-`method` | [deploynator/_app.py:31](../../deploynator/_app.py#L31)
+`method` | [deploynator/_app.py:29](../../deploynator/_app.py#L29)
 
 ```python
-def auth_login(self, platforms: Optional[list[str]] = None) -> dict[str, bool]
+def auth_login(self, platforms: list[str] | None = None) -> dict[str, bool]
 ```
 
 **Parameters**
 
 | Name | Type | Default | Description |
 |---|---|---|---|
-| `platforms` | `Optional[list[str]]` | `None` |  |
+| `platforms` | `list[str] \| None` | `None` |  |
 
 **Returns:** `dict[str, bool]`
 
@@ -147,7 +147,7 @@ def auth_login(self, platforms: Optional[list[str]] = None) -> dict[str, bool]
 
 #### `DeploynatorApp.auth_status`
 
-`method` | [deploynator/_app.py:45](../../deploynator/_app.py#L45)
+`method` | [deploynator/_app.py:43](../../deploynator/_app.py#L43)
 
 ```python
 def auth_status(self) -> dict[str, bool]
@@ -163,7 +163,7 @@ def auth_status(self) -> dict[str, bool]
 
 #### `DeploynatorApp.init_project`
 
-`method` | [deploynator/_app.py:174](../../deploynator/_app.py#L174)
+`method` | [deploynator/_app.py:172](../../deploynator/_app.py#L172)
 
 ```python
 def init_project(self, project_path: str = '', name: str = '') -> str
@@ -186,7 +186,7 @@ def init_project(self, project_path: str = '', name: str = '') -> str
 
 #### `DeploynatorApp.start_branch`
 
-`method` | [deploynator/_app.py:251](../../deploynator/_app.py#L251)
+`method` | [deploynator/_app.py:249](../../deploynator/_app.py#L249)
 
 ```python
 def start_branch(self, commit_type: str, description: str, project_path: str = '', project_name: str = '', remote: bool = False) -> str
@@ -212,7 +212,7 @@ def start_branch(self, commit_type: str, description: str, project_path: str = '
 
 #### `DeploynatorApp.commit`
 
-`method` | [deploynator/_app.py:309](../../deploynator/_app.py#L309)
+`method` | [deploynator/_app.py:307](../../deploynator/_app.py#L307)
 
 ```python
 def commit(self, commit_type: str, subject: str, scope: str = '', body: str = '', project_path: str = '', project_name: str = '', dry_run: bool = False) -> str
@@ -240,7 +240,7 @@ def commit(self, commit_type: str, subject: str, scope: str = '', body: str = ''
 
 #### `DeploynatorApp.release`
 
-`method` | [deploynator/_app.py:367](../../deploynator/_app.py#L367)
+`method` | [deploynator/_app.py:366](../../deploynator/_app.py#L366)
 
 ```python
 def release(self, commit_type: str = 'release', subject: str = '', scope: str = '', body: str = '', message: str = '', project_name: str = '', bump: str = '', dry_run: bool = False, platforms: list[str] | None = None, all_projects: bool = False, no_test: bool = False, no_docs: bool = False, no_pypi: bool = False, verbose: bool = False) -> list[DeployResult]
@@ -275,7 +275,7 @@ def release(self, commit_type: str = 'release', subject: str = '', scope: str = 
 
 #### `DeploynatorApp.generate_docs`
 
-`method` | [deploynator/_app.py:503](../../deploynator/_app.py#L503)
+`method` | [deploynator/_app.py:502](../../deploynator/_app.py#L502)
 
 ```python
 def generate_docs(self, project_path: str = '', project_name: str = '') -> bool
@@ -298,7 +298,7 @@ def generate_docs(self, project_path: str = '', project_name: str = '') -> bool
 
 #### `DeploynatorApp.status`
 
-`method` | [deploynator/_app.py:509](../../deploynator/_app.py#L509)
+`method` | [deploynator/_app.py:508](../../deploynator/_app.py#L508)
 
 ```python
 def status(self, project_path: str = '', project_name: str = '') -> dict
@@ -321,7 +321,7 @@ def status(self, project_path: str = '', project_name: str = '') -> dict
 
 #### `DeploynatorApp.list_projects`
 
-`method` | [deploynator/_app.py:529](../../deploynator/_app.py#L529)
+`method` | [deploynator/_app.py:528](../../deploynator/_app.py#L528)
 
 ```python
 def list_projects(self, search_path: str = '') -> list[ProjectConfig]
@@ -343,7 +343,7 @@ def list_projects(self, search_path: str = '') -> list[ProjectConfig]
 
 #### `DeploynatorApp.generate_ci`
 
-`method` | [deploynator/_app.py:534](../../deploynator/_app.py#L534)
+`method` | [deploynator/_app.py:533](../../deploynator/_app.py#L533)
 
 ```python
 def generate_ci(self, project_name: str = '', all_projects: bool = False) -> list[str]
@@ -366,7 +366,7 @@ def generate_ci(self, project_name: str = '', all_projects: bool = False) -> lis
 
 #### `DeploynatorApp.install_deps`
 
-`method` | [deploynator/_app.py:550](../../deploynator/_app.py#L550)
+`method` | [deploynator/_app.py:549](../../deploynator/_app.py#L549)
 
 ```python
 def install_deps(self, project_name: str = '') -> dict[str, bool]
@@ -388,7 +388,7 @@ def install_deps(self, project_name: str = '') -> dict[str, bool]
 
 #### `DeploynatorApp.install_packages`
 
-`method` | [deploynator/_app.py:561](../../deploynator/_app.py#L561)
+`method` | [deploynator/_app.py:560](../../deploynator/_app.py#L560)
 
 ```python
 def install_packages(self, packages: list[str] | None = None) -> dict[str, bool]
@@ -410,7 +410,7 @@ pip install/upgrade packages (default: deploynator from PyPI).
 
 #### `DeploynatorApp.interactive_menu`
 
-`method` | [deploynator/_app.py:589](../../deploynator/_app.py#L589)
+`method` | [deploynator/_app.py:587](../../deploynator/_app.py#L587)
 
 ```python
 def interactive_menu(self) -> None

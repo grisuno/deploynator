@@ -1,6 +1,8 @@
 """RED: TomlConfig contract — deploynator.toml per-project."""
 import os
 import tempfile
+from dataclasses import FrozenInstanceError
+
 import pytest
 
 
@@ -77,7 +79,7 @@ class TestTomlConfig:
         from deploynator._toml import load_toml_config
         with tempfile.TemporaryDirectory() as tmp:
             cfg = load_toml_config(tmp)
-            with pytest.raises(Exception):
+            with pytest.raises(FrozenInstanceError):
                 cfg.project_name = "mutated"
 
 

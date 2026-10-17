@@ -24,30 +24,30 @@ def _git_init(tmp):
 
 class TestDetect:
     def test_pyproject_with_project_table(self):
-        from deploynator._pypi import PyPIRunner
         from deploynator._config import Config
+        from deploynator._pypi import PyPIRunner
         with tempfile.TemporaryDirectory() as tmp:
             with open(os.path.join(tmp, "pyproject.toml"), "w") as f:
                 f.write('[build-system]\nrequires=["hatchling"]\n[project]\nname="x"\nversion="0.1.0"\n')
             assert PyPIRunner(Config.create()).is_packaging_project(tmp) is True
 
     def test_empty_dir_no_packaging(self):
-        from deploynator._pypi import PyPIRunner
         from deploynator._config import Config
+        from deploynator._pypi import PyPIRunner
         with tempfile.TemporaryDirectory() as tmp:
             assert PyPIRunner(Config.create()).is_packaging_project(tmp) is False
 
     def test_setup_py_counts(self):
-        from deploynator._pypi import PyPIRunner
         from deploynator._config import Config
+        from deploynator._pypi import PyPIRunner
         with tempfile.TemporaryDirectory() as tmp:
             with open(os.path.join(tmp, "setup.py"), "w") as f:
                 f.write("from setuptools import setup\nsetup(name='x')\n")
             assert PyPIRunner(Config.create()).is_packaging_project(tmp) is True
 
     def test_credentials_from_env(self, monkeypatch):
-        from deploynator._pypi import PyPIRunner
         from deploynator._config import Config
+        from deploynator._pypi import PyPIRunner
         r = PyPIRunner(Config.create())
         monkeypatch.delenv("TWINE_PASSWORD", raising=False)
         monkeypatch.delenv("PYPI_TOKEN", raising=False)
@@ -57,6 +57,7 @@ class TestDetect:
 
     def test_no_shell_in_runner(self):
         import inspect
+
         import deploynator._pypi as mod
         assert "shell=True" not in inspect.getsource(mod)
 
@@ -64,15 +65,17 @@ class TestDetect:
 class TestPromptCredentials:
     def test_no_tty_returns_none(self, monkeypatch):
         import sys
-        from deploynator._pypi import PyPIRunner
+
         from deploynator._config import Config
+        from deploynator._pypi import PyPIRunner
         monkeypatch.setattr(sys.stdin, "isatty", lambda: False)
         assert PyPIRunner(Config.create()).prompt_for_credentials() is None
 
     def test_prompt_returns_token_without_save(self, monkeypatch):
         import sys
-        from deploynator._pypi import PyPIRunner
+
         from deploynator._config import Config
+        from deploynator._pypi import PyPIRunner
         monkeypatch.setattr(sys.stdin, "isatty", lambda: True)
         monkeypatch.setattr("getpass.getpass", lambda *a, **k: "pypi-fake-token")
         monkeypatch.setattr("builtins.input", lambda *a, **k: "n")
@@ -80,8 +83,9 @@ class TestPromptCredentials:
 
     def test_prompt_empty_token_returns_none(self, monkeypatch):
         import sys
-        from deploynator._pypi import PyPIRunner
+
         from deploynator._config import Config
+        from deploynator._pypi import PyPIRunner
         monkeypatch.setattr(sys.stdin, "isatty", lambda: True)
         monkeypatch.setattr("getpass.getpass", lambda *a, **k: "   ")
         assert PyPIRunner(Config.create()).prompt_for_credentials() is None
@@ -89,8 +93,9 @@ class TestPromptCredentials:
     def test_prompt_default_is_no_save(self, monkeypatch):
         """Enter (vacío) NO guarda: el default es NO."""
         import sys
-        from deploynator._pypi import PyPIRunner
+
         from deploynator._config import Config
+        from deploynator._pypi import PyPIRunner
         monkeypatch.setattr(sys.stdin, "isatty", lambda: True)
         monkeypatch.setattr("getpass.getpass", lambda *a, **k: "pypi-fake-token")
         monkeypatch.setattr("builtins.input", lambda *a, **k: "")
@@ -102,8 +107,9 @@ class TestPromptCredentials:
 
     def test_prompt_yes_saves(self, monkeypatch):
         import sys
-        from deploynator._pypi import PyPIRunner
+
         from deploynator._config import Config
+        from deploynator._pypi import PyPIRunner
         monkeypatch.setattr(sys.stdin, "isatty", lambda: True)
         monkeypatch.setattr("getpass.getpass", lambda *a, **k: "pypi-fake-token")
         monkeypatch.setattr("builtins.input", lambda *a, **k: "y")
@@ -115,9 +121,10 @@ class TestPromptCredentials:
 
     def test_save_pypirc_roundtrip(self):
         import configparser
-        from deploynator._pypi import PyPIRunner
-        from deploynator._config import Config
         import tempfile
+
+        from deploynator._config import Config
+        from deploynator._pypi import PyPIRunner
         with tempfile.TemporaryDirectory() as tmp:
             target = os.path.join(tmp, ".pypirc")
             PyPIRunner(Config.create()).save_pypirc("pypi-secret", path=target)
@@ -128,10 +135,12 @@ class TestPromptCredentials:
             assert cfg["pypi"]["password"] == "pypi-secret"
 
     def test_save_pypirc_rejects_symlink(self):
-        from deploynator._pypi import PyPIRunner
-        from deploynator._config import Config
         import tempfile
+
         import pytest
+
+        from deploynator._config import Config
+        from deploynator._pypi import PyPIRunner
         with tempfile.TemporaryDirectory() as tmp:
             real = os.path.join(tmp, "real")
             with open(real, "w") as f:
@@ -142,8 +151,8 @@ class TestPromptCredentials:
                 PyPIRunner(Config.create()).save_pypirc("t", path=link)
 
     def test_prompted_token_used_for_upload(self, monkeypatch):
-        from deploynator._deploy import DeployOrchestrator
         from deploynator._config import Config
+        from deploynator._deploy import DeployOrchestrator
         from deploynator._models import CommitType, ProjectConfig
         monkeypatch.delenv("TWINE_PASSWORD", raising=False)
         monkeypatch.delenv("PYPI_TOKEN", raising=False)
@@ -181,16 +190,16 @@ class TestPromptCredentials:
 class TestCleanAndRun:
     def _toml(self, **kw):
         from deploynator._toml import TomlConfig
-        base = dict(project_name="t", version_file="version.json",
-                    test_commands=["true"], test_timeout_s=30, allow_no_tests=False,
-                    docs_auto=False, docs_command="true", docs_timeout_s=30,
-                    deploy_branch="main", deploy_remote="origin")
+        base = {"project_name": "t", "version_file": "version.json",
+                "test_commands": ["true"], "test_timeout_s": 30, "allow_no_tests": False,
+                "docs_auto": False, "docs_command": "true", "docs_timeout_s": 30,
+                "deploy_branch": "main", "deploy_remote": "origin"}
         base.update(kw)
         return TomlConfig(**base)
 
     def test_clean_removes_dist(self):
-        from deploynator._pypi import PyPIRunner
         from deploynator._config import Config
+        from deploynator._pypi import PyPIRunner
         with tempfile.TemporaryDirectory() as tmp:
             d = os.path.join(tmp, "dist")
             os.makedirs(d)
@@ -201,19 +210,19 @@ class TestCleanAndRun:
             assert not os.path.exists(os.path.join(d, "old.whl"))
 
     def test_run_fails_on_broken_build(self, monkeypatch):
-        from deploynator._pypi import PyPIRunner
         from deploynator._config import Config
+        from deploynator._pypi import PyPIRunner
         monkeypatch.setenv("PYPI_TOKEN", "pypi-fake")
         with tempfile.TemporaryDirectory() as tmp:
             with open(os.path.join(tmp, "pyproject.toml"), "w") as f:
                 f.write('[build-system]\nrequires=["no-such-backend-xyz"]\n'
                         'build-backend="nope"\n[project]\nname="x"\nversion="0.1.0"\n')
-            ok, msg = PyPIRunner(Config.create()).run(tmp, self._toml(), "0.1.0")
+            ok, _msg = PyPIRunner(Config.create()).run(tmp, self._toml(), "0.1.0")
             assert ok is False
 
     def test_run_skips_without_packaging(self):
-        from deploynator._pypi import PyPIRunner
         from deploynator._config import Config
+        from deploynator._pypi import PyPIRunner
         with tempfile.TemporaryDirectory() as tmp:
             ok, msg = PyPIRunner(Config.create()).run(tmp, self._toml(), "0.1.0")
             assert ok is True
@@ -222,8 +231,8 @@ class TestCleanAndRun:
 
 class TestPipelinePyPI:
     def test_pypi_failure_aborts_with_error(self, monkeypatch):
-        from deploynator._deploy import DeployOrchestrator
         from deploynator._config import Config
+        from deploynator._deploy import DeployOrchestrator
         from deploynator._models import CommitType, ProjectConfig
         monkeypatch.setenv("PYPI_TOKEN", "pypi-fake")
         with tempfile.TemporaryDirectory() as tmp:
@@ -254,8 +263,8 @@ class TestPipelinePyPI:
             assert any("origin" in p for p in res.platforms_pushed)
 
     def test_no_credentials_skips_pypi(self, monkeypatch):
-        from deploynator._deploy import DeployOrchestrator
         from deploynator._config import Config
+        from deploynator._deploy import DeployOrchestrator
         from deploynator._models import CommitType, ProjectConfig
         monkeypatch.delenv("TWINE_PASSWORD", raising=False)
         monkeypatch.delenv("PYPI_TOKEN", raising=False)

@@ -27,6 +27,7 @@
 - [`bitbucket_token_env`](modules/deploynator._config.py.md#config-bitbucket_token_env) attribute of `Config` in `deploynator._config`
 - [`BitbucketCLI`](modules/deploynator._platforms.py.md#bitbucketcli) class in `deploynator._platforms`
 - [`body`](modules/deploynator._models.py.md#commitmessage-body) attribute of `CommitMessage` in `deploynator._models`
+- [`branch_exists`](modules/deploynator._git.py.md#gitoperations-branch_exists) method of `GitOperations` in `deploynator._git`
 - [`build_parser`](modules/deploynator.__main__.py.md#build_parser) function in `deploynator.__main__`
 - [`bump`](modules/deploynator._models.py.md#versioninfo-bump) method of `VersionInfo` in `deploynator._models`
 - [`bump_strategy`](modules/deploynator._models.py.md#committype-bump_strategy) method of `CommitType` in `deploynator._models`
@@ -98,6 +99,7 @@
 - [`description`](modules/deploynator._models.py.md#projectconfig-description) attribute of `ProjectConfig` in `deploynator._models`
 - [`detect_test_commands`](modules/deploynator._toml.py.md#detect_test_commands) function in `deploynator._toml`
 - [`determine_bump`](modules/deploynator._semver.py.md#semvermanager-determine_bump) method of `SemverManager` in `deploynator._semver`
+- [`dev_branch`](modules/deploynator._config.py.md#config-dev_branch) attribute of `Config` in `deploynator._config`
 - [`discover`](modules/deploynator._deploy.py.md#projectdiscovery-discover) method of `ProjectDiscovery` in `deploynator._deploy`
 - [`dispatch`](modules/deploynator._mcp_server.py.md#mcpserver-dispatch) method of `MCPServer` in `deploynator._mcp_server`
 - [`DOCS`](modules/deploynator._models.py.md#committype-docs) attribute of `CommitType` in `deploynator._models`
@@ -211,6 +213,7 @@
 - [`is_available`](modules/deploynator._platforms.py.md#githubcli-is_available) method of `GitHubCLI` in `deploynator._platforms`
 - [`is_available`](modules/deploynator._platforms.py.md#gitlabcli-is_available) method of `GitLabCLI` in `deploynator._platforms`
 - [`is_available`](modules/deploynator._platforms.py.md#platformclient-is_available) method of `PlatformClient` in `deploynator._platforms`
+- [`is_behind`](modules/deploynator._git.py.md#gitoperations-is_behind) method of `GitOperations` in `deploynator._git`
 - [`is_dirty`](modules/deploynator._git.py.md#gitoperations-is_dirty) method of `GitOperations` in `deploynator._git`
 - [`is_notification`](modules/deploynator._mcp_server.py.md#mcprequest-is_notification) property of `MCPRequest` in `deploynator._mcp_server`
 - [`is_packaging_project`](modules/deploynator._pypi.py.md#pypirunner-is_packaging_project) method of `PyPIRunner` in `deploynator._pypi`
@@ -306,6 +309,7 @@
 - [`push_changes`](modules/deploynator._platforms.py.md#githubcli-push_changes) method of `GitHubCLI` in `deploynator._platforms`
 - [`push_changes`](modules/deploynator._platforms.py.md#gitlabcli-push_changes) method of `GitLabCLI` in `deploynator._platforms`
 - [`push_changes`](modules/deploynator._platforms.py.md#platformclient-push_changes) method of `PlatformClient` in `deploynator._platforms`
+- [`push_force`](modules/deploynator._git.py.md#gitoperations-push_force) method of `GitOperations` in `deploynator._git`
 - [`push_tags`](modules/deploynator._git.py.md#gitoperations-push_tags) method of `GitOperations` in `deploynator._git`
 - [`pypi_clean_dist`](modules/deploynator._toml.py.md#tomlconfig-pypi_clean_dist) attribute of `TomlConfig` in `deploynator._toml`
 - [`pypi_enabled`](modules/deploynator._toml.py.md#tomlconfig-pypi_enabled) attribute of `TomlConfig` in `deploynator._toml`

@@ -8,12 +8,12 @@
 | `deploynator/__main__.py` | - | deploynator | 3 | 2 |
 | `deploynator/_app.py` | install_packages: pip install/upgrade packages (default: deploynator from PyPI). | deploynator | 33 | 1 |
 | `deploynator/_changelog.py` | - | deploynator | 9 | 2 |
-| `deploynator/_config.py` | - | deploynator | 6 | 27 |
-| `deploynator/_deploy.py` | _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin. | deploynator | 20 | 6 |
+| `deploynator/_config.py` | - | deploynator | 6 | 28 |
+| `deploynator/_deploy.py` | _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin. | deploynator | 21 | 7 |
 | `deploynator/_docs.py` | - | deploynator | 3 | 3 |
-| `deploynator/_git.py` | - | deploynator | 21 | 2 |
+| `deploynator/_git.py` | is_behind: True si `ahead_branch` tiene commits que `behind_branch` no tiene (es decir... | deploynator | 24 | 3 |
 | `deploynator/_mcp_server.py` | MCP (Model Context Protocol) stdio server for deploynator. | deploynator | 32 | 2 |
-| `deploynator/_models.py` | - | deploynator | 27 | 14 |
+| `deploynator/_models.py` | - | deploynator | 27 | 13 |
 | `deploynator/_platforms.py` | - | deploynator | 34 | 2 |
 | `deploynator/_pypi.py` | prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY. | deploynator | 8 | 2 |
 | `deploynator/_readme.py` | footer_block: Return the anchored deploy footer block. | deploynator | 4 | 2 |
@@ -27,6 +27,7 @@
 | `tests/test_cli_mcp.py` | RED: bare = interactive, flags = headless + MCP server. | tests | 11 | 0 |
 | `tests/test_config.py` | - | tests | 10 | 0 |
 | `tests/test_deploy.py` | - | tests | 11 | 0 |
+| `tests/test_git_sync.py` | - | tests | 6 | 0 |
 | `tests/test_init.py` | RED: init deja deploy.sh genérico + deploynator.toml starter. | tests | 6 | 0 |
 | `tests/test_install_example.py` | RED: install como pip install + app.py ejemplo de librería. | tests | 12 | 0 |
 | `tests/test_models.py` | - | tests | 44 | 0 |

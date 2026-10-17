@@ -1,14 +1,13 @@
 from __future__ import annotations
 
-import json
 import os
 import subprocess
 import tempfile
 from abc import ABC, abstractmethod
-from typing import Optional
+from typing import ClassVar
 
 from deploynator._config import Config
-from deploynator._models import Platform, ReleaseInfo, DeployResult
+from deploynator._models import Platform, ReleaseInfo
 
 
 class PlatformClient(ABC):
@@ -32,14 +31,14 @@ class PlatformClient(ABC):
         ...
 
     @abstractmethod
-    def create_pull_request(self, repo: str, title: str, body: str, head: str, base: str) -> Optional[str]:
+    def create_pull_request(self, repo: str, title: str, body: str, head: str, base: str) -> str | None:
         ...
 
     @abstractmethod
     def push_changes(self, repo_path: str, remote: str, branch: str, tags: bool) -> bool:
         ...
 
-    def _run(self, cmd: list[str], cwd: Optional[str] = None, check: bool = False) -> subprocess.CompletedProcess:
+    def _run(self, cmd: list[str], cwd: str | None = None, check: bool = False) -> subprocess.CompletedProcess:
         try:
             return subprocess.run(cmd, capture_output=True, text=True, check=check, cwd=cwd)
         except subprocess.SubprocessError as exc:
@@ -88,7 +87,7 @@ class GitHubCLI(PlatformClient):
         result = self._run(cmd, check=False)
         return result.returncode == 0
 
-    def create_pull_request(self, repo: str, title: str, body: str, head: str, base: str) -> Optional[str]:
+    def create_pull_request(self, repo: str, title: str, body: str, head: str, base: str) -> str | None:
         cmd = [
             self._config.gh_cli, "pr", "create",
             "--repo", repo,
@@ -139,7 +138,7 @@ class GitLabCLI(PlatformClient):
         result = self._run(cmd, check=False)
         return result.returncode == 0
 
-    def create_pull_request(self, repo: str, title: str, body: str, head: str, base: str) -> Optional[str]:
+    def create_pull_request(self, repo: str, title: str, body: str, head: str, base: str) -> str | None:
         cmd = [
             self._config.glab_cli, "mr", "create",
             "--repo", repo,
@@ -198,7 +197,7 @@ class BitbucketCLI(PlatformClient):
         result = self._run(cmd, check=False)
         return result.returncode == 0
 
-    def create_pull_request(self, repo: str, title: str, body: str, head: str, base: str) -> Optional[str]:
+    def create_pull_request(self, repo: str, title: str, body: str, head: str, base: str) -> str | None:
         cmd = [
             self._config.bb_cli, "pr", "create",
             "--repo", repo,
@@ -221,7 +220,7 @@ class BitbucketCLI(PlatformClient):
 
 
 class PlatformFactory:
-    _registry: dict[Platform, type[PlatformClient]] = {
+    _registry: ClassVar[dict[Platform, type[PlatformClient]]] = {
         Platform.GITHUB: GitHubCLI,
         Platform.GITLAB: GitLabCLI,
         Platform.BITBUCKET: BitbucketCLI,
@@ -241,7 +240,7 @@ class PlatformFactory:
     @classmethod
     def create_all_available(cls, config: Config) -> list[PlatformClient]:
         clients = []
-        for platform, client_class in cls._registry.items():
+        for client_class in cls._registry.values():
             try:
                 client = client_class(config)
                 if client.is_available():
