@@ -269,6 +269,7 @@ class ReleaseInfo:
     target_branch: str = "main"
     prerelease: bool = False
     draft: bool = False
+    assets: list[str] = field(default_factory=list)
 
 
 @dataclass

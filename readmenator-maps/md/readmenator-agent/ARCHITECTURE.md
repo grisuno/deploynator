@@ -17,8 +17,11 @@
 - `deploynator/_app.py` -> `deploynator/_toml.py`
 - `deploynator/_changelog.py` -> `deploynator/_config.py`
 - `deploynator/_changelog.py` -> `deploynator/_models.py`
+- `deploynator/_deb.py` -> `deploynator/_config.py`
+- `deploynator/_deb.py` -> `deploynator/_toml.py`
 - `deploynator/_deploy.py` -> `deploynator/_changelog.py`
 - `deploynator/_deploy.py` -> `deploynator/_config.py`
+- `deploynator/_deploy.py` -> `deploynator/_deb.py`
 - `deploynator/_deploy.py` -> `deploynator/_docs.py`
 - `deploynator/_deploy.py` -> `deploynator/_git.py`
 - `deploynator/_deploy.py` -> `deploynator/_models.py`
@@ -56,6 +59,11 @@
 - `tests/test_cli_mcp.py` -> `deploynator/_config.py`
 - `tests/test_cli_mcp.py` -> `deploynator/_mcp_server.py`
 - `tests/test_config.py` -> `deploynator/_config.py`
+- `tests/test_deb.py` -> `deploynator/_config.py`
+- `tests/test_deb.py` -> `deploynator/_deb.py`
+- `tests/test_deb.py` -> `deploynator/_deploy.py`
+- `tests/test_deb.py` -> `deploynator/_models.py`
+- `tests/test_deb.py` -> `deploynator/_toml.py`
 - `tests/test_deploy.py` -> `deploynator/_config.py`
 - `tests/test_deploy.py` -> `deploynator/_deploy.py`
 - `tests/test_deploy.py` -> `deploynator/_models.py`
@@ -100,6 +108,7 @@
 - `deploynator/_app.py` -> __future__, os, re, subprocess, sys
 - `deploynator/_changelog.py` -> __future__, collections, os, subprocess
 - `deploynator/_config.py` -> __future__, dataclasses, os
+- `deploynator/_deb.py` -> __future__, os, shlex, shutil, subprocess
 - `deploynator/_deploy.py` -> __future__, importlib.util, os, shutil, subprocess, tempfile, yaml
 - `deploynator/_docs.py` -> __future__, shlex, subprocess
 - `deploynator/_git.py` -> __future__, os, subprocess, tempfile
@@ -114,6 +123,7 @@
 - `tests/bdd_test_deploy.py` -> json, os, pytest, subprocess, tempfile
 - `tests/test_changelog.py` -> pytest
 - `tests/test_config.py` -> dataclasses, pytest, re
+- `tests/test_deb.py` -> inspect, os, subprocess, tempfile
 - `tests/test_deploy.py` -> os, pytest, tempfile
 - `tests/test_git_sync.py` -> os, subprocess, tempfile
 - `tests/test_init.py` -> os, stat, subprocess, tempfile

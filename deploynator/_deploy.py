@@ -7,6 +7,7 @@ import tempfile
 
 from deploynator._changelog import ChangelogGenerator
 from deploynator._config import Config
+from deploynator._deb import DebRunner
 from deploynator._docs import DocsRunner
 from deploynator._git import GitOperations
 from deploynator._models import (
@@ -81,6 +82,7 @@ class DeployOrchestrator:
         self._tests = TestRunner(config)
         self._docs = DocsRunner(config)
         self._pypi = PyPIRunner(config)
+        self._deb = DebRunner(config)
 
     @staticmethod
     def _resolve_project_path(project: ProjectConfig) -> str:
@@ -105,6 +107,7 @@ class DeployOrchestrator:
         run_docs: bool = True,
         force_bump: str | None = None,
         run_pypi: bool = True,
+        run_deb: bool = True,
         verbose: bool = False,
     ) -> DeployResult:
         repo_path = self._resolve_project_path(project)
@@ -267,6 +270,33 @@ class DeployOrchestrator:
         platforms_pushed = []
         releases_created = []
         overall_success = True
+        deb_artifacts: list[str] = []
+
+        # Build .deb ANTES de crear releases: los assets se suben justo
+        # después de cada `create_release` (espejo PyPI pero como asset
+        # descargable en vez de upload a un índice).
+        if run_deb and toml_cfg.deb_enabled and (
+            toml_cfg.deb_build.strip() or self._deb.is_deb_project(repo_path)
+        ):
+            if dry_run:
+                print(f"[DRY-RUN] Would build .deb (outdir={toml_cfg.deb_outdir}) version {new_version_str}")
+                if toml_cfg.deb_upload_assets:
+                    print(f"[DRY-RUN] Would upload *.deb as release assets version {new_version_str}")
+            else:
+                ok, msg, artifacts = self._deb.run(
+                    repo_path, toml_cfg, new_version_str, verbose=verbose
+                )
+                print(f"[{'OK' if ok else 'FAIL'}] {msg}")
+                if not ok:
+                    return DeployResult(
+                        project=project.name,
+                        version=new_version_str,
+                        success=False,
+                        platforms_pushed=platforms_pushed,
+                        releases_created=releases_created,
+                        error=msg if verbose else msg[:2000],
+                    )
+                deb_artifacts = artifacts
 
         if not platforms_to_deploy and dry_run:
             print(f"[DRY-RUN] Would push to {toml_cfg.deploy_remote}/"
@@ -284,6 +314,12 @@ class DeployOrchestrator:
             if self._gh_release_in_repo(repo_path, project.name, new_version_str,
                                         release_notes, branch):
                 releases_created.append("github")
+                if deb_artifacts and toml_cfg.deb_upload_assets and not dry_run:
+                    if self._gh_upload_assets(repo_path, new_version_str, deb_artifacts):
+                        print(f"[OK] deb assets uploaded: {', '.join(deb_artifacts)}")
+                    else:
+                        print("[!] deb assets upload failed (gh release upload)")
+                        overall_success = False
 
         for pc in platforms_to_deploy:
             if dry_run:
@@ -324,10 +360,18 @@ class DeployOrchestrator:
                 title=f"{project.name} {new_version_str}",
                 notes=release_notes,
                 target_branch=self._config.release_branch,
+                assets=list(deb_artifacts),
             )
 
             if client.create_release(pc.repo, release):
                 releases_created.append(pc.platform.label())
+                if deb_artifacts and toml_cfg.deb_upload_assets:
+                    if client.upload_release_assets(pc.repo, new_version_str, deb_artifacts):
+                        print(f"[OK] deb assets uploaded to {pc.platform.label()}: "
+                              f"{', '.join(deb_artifacts)}")
+                    else:
+                        print(f"[!] deb assets upload failed for {pc.platform.label()}")
+                        overall_success = False
             else:
                 overall_success = False
 
@@ -406,6 +450,21 @@ class DeployOrchestrator:
                     os.unlink(notes_file)
                 except OSError:
                     pass
+
+    def _gh_upload_assets(self, repo_path: str, version: str, assets: list[str]) -> bool:
+        """Best-effort `gh release upload <tag> <debs> --clobber`. Never raises."""
+        files = [a for a in assets if a and os.path.isfile(a) and not os.path.islink(a)]
+        if not files or shutil.which(self._config.gh_cli) is None:
+            return False
+        try:
+            result = subprocess.run(
+                [self._config.gh_cli, "release", "upload", version, *files, "--clobber"],
+                cwd=repo_path,
+                capture_output=True, text=True, check=False,
+            )
+            return result.returncode == 0
+        except (subprocess.SubprocessError, OSError):
+            return False
 
     def _add_temp_remote(self, repo_path: str, name: str, url: str) -> None:
         try:

@@ -11,8 +11,8 @@ Depends on: `deploynator/__init__.py`, `deploynator/_config.py`
 Depends on: `deploynator/__init__.py`, `deploynator/_config.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`
 Imported by: `tests/test_cli_mcp.py`, `tests/test_install_example.py`
 - `build_parser` (function) `deploynator/__main__.py:16` `def build_parser()`
-- `preprocess_argv` (function) `deploynator/__main__.py:144` `def preprocess_argv(argv)`
-- `main` (function) `deploynator/__main__.py:178` `def main(argv)`
+- `preprocess_argv` (function) `deploynator/__main__.py:146` `def preprocess_argv(argv)`
+- `main` (function) `deploynator/__main__.py:180` `def main(argv)`
 
 ## deploynator/_app.py
 Depends on: `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_toml.py`
@@ -20,17 +20,17 @@ Imported by: `deploynator/__init__.py`
 - `DeploynatorApp.__init__` (method) `deploynator/_app.py:19` `def __init__(self, config, workdir)`
 - `DeploynatorApp.auth_login` (method) `deploynator/_app.py:29` `def auth_login(self, platforms)`
 - `DeploynatorApp.auth_status` (method) `deploynator/_app.py:43` `def auth_status(self)`
-- `DeploynatorApp.init_project` (method) `deploynator/_app.py:172` `def init_project(self, project_path, name)`
-- `DeploynatorApp.start_branch` (method) `deploynator/_app.py:249` `def start_branch(self, commit_type, description, project_path, project_name, remote)`
-- `DeploynatorApp.commit` (method) `deploynator/_app.py:307` `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
-- `DeploynatorApp.release` (method) `deploynator/_app.py:366` `def release(self, commit_type, subject, scope, body, message, project_name, bump, dry_run, platforms, all_projects...`
-- `DeploynatorApp.generate_docs` (method) `deploynator/_app.py:502` `def generate_docs(self, project_path, project_name)`
-- `DeploynatorApp.status` (method) `deploynator/_app.py:508` `def status(self, project_path, project_name)`
-- `DeploynatorApp.list_projects` (method) `deploynator/_app.py:528` `def list_projects(self, search_path)`
-- `DeploynatorApp.generate_ci` (method) `deploynator/_app.py:533` `def generate_ci(self, project_name, all_projects)`
-- `DeploynatorApp.install_deps` (method) `deploynator/_app.py:549` `def install_deps(self, project_name)`
-- `DeploynatorApp.install_packages` (method) `deploynator/_app.py:560` `def install_packages(self, packages)` -- pip install/upgrade packages (default: deploynator from PyPI).
-- `DeploynatorApp.interactive_menu` (method) `deploynator/_app.py:587` `def interactive_menu(self)`
+- `DeploynatorApp.init_project` (method) `deploynator/_app.py:185` `def init_project(self, project_path, name)`
+- `DeploynatorApp.start_branch` (method) `deploynator/_app.py:262` `def start_branch(self, commit_type, description, project_path, project_name, remote)`
+- `DeploynatorApp.commit` (method) `deploynator/_app.py:320` `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
+- `DeploynatorApp.release` (method) `deploynator/_app.py:379` `def release(self, commit_type, subject, scope, body, message, project_name, bump, dry_run, platforms, all_projects...`
+- `DeploynatorApp.generate_docs` (method) `deploynator/_app.py:517` `def generate_docs(self, project_path, project_name)`
+- `DeploynatorApp.status` (method) `deploynator/_app.py:523` `def status(self, project_path, project_name)`
+- `DeploynatorApp.list_projects` (method) `deploynator/_app.py:543` `def list_projects(self, search_path)`
+- `DeploynatorApp.generate_ci` (method) `deploynator/_app.py:548` `def generate_ci(self, project_name, all_projects)`
+- `DeploynatorApp.install_deps` (method) `deploynator/_app.py:564` `def install_deps(self, project_name)`
+- `DeploynatorApp.install_packages` (method) `deploynator/_app.py:575` `def install_packages(self, packages)` -- pip install/upgrade packages (default: deploynator from PyPI).
+- `DeploynatorApp.interactive_menu` (method) `deploynator/_app.py:602` `def interactive_menu(self)`
 
 ## deploynator/_changelog.py
 Depends on: `deploynator/_config.py`, `deploynator/_models.py`
@@ -43,25 +43,35 @@ Imported by: `deploynator/_deploy.py`, `tests/test_changelog.py`
 - `ChangelogGenerator.format_for_release` (method) `deploynator/_changelog.py:108` `def format_for_release(self, changelog_content, max_chars)`
 
 ## deploynator/_config.py
-Imported by: `app.py`, `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deploy.py`, `tests/test_git_sync.py`, `tests/test_init.py`, `tests/test_install_example.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_readme_footer.py`, `tests/test_runner.py`, `tests/test_semver.py`
+Imported by: `app.py`, `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deb.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deb.py`, `tests/test_deploy.py`, `tests/test_git_sync.py`, `tests/test_init.py`, `tests/test_install_example.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_readme_footer.py`, `tests/test_runner.py`, `tests/test_semver.py`
 - `Config.create` (method) `deploynator/_config.py:80` `def create(overrides)`
 - `Config.resolve_path` (method) `deploynator/_config.py:86` `def resolve_path(self)`
 - `Config.gh_authd` (method) `deploynator/_config.py:92` `def gh_authd(self)`
 - `Config.glab_authd` (method) `deploynator/_config.py:96` `def glab_authd(self)`
 - `Config.bb_authd` (method) `deploynator/_config.py:100` `def bb_authd(self)`
 
+## deploynator/_deb.py
+Depends on: `deploynator/_config.py`, `deploynator/_toml.py`
+Imported by: `deploynator/_deploy.py`, `tests/test_deb.py`
+- `DebRunner.__init__` (method) `deploynator/_deb.py:35` `def __init__(self, config)`
+- `DebRunner.deb_make_target` (method) `deploynator/_deb.py:38` `def deb_make_target(self, project_path)`
+- `DebRunner.is_deb_project` (method) `deploynator/_deb.py:48` `def is_deb_project(self, project_path)`
+- `DebRunner.clean` (method) `deploynator/_deb.py:62` `def clean(self, project_path, toml)`
+- `DebRunner.build_command` (method) `deploynator/_deb.py:110` `def build_command(self, project_path, toml)`
+- `DebRunner.run` (method) `deploynator/_deb.py:126` `def run(self, project_path, toml, version, verbose)`
+
 ## deploynator/_deploy.py
-Depends on: `deploynator/_changelog.py`, `deploynator/_config.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`
-Imported by: `deploynator/_app.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_git_sync.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`
-- `ProjectDiscovery.__init__` (method) `deploynator/_deploy.py:30` `def __init__(self, config)`
-- `ProjectDiscovery.discover` (method) `deploynator/_deploy.py:33` `def discover(self, search_path)`
-- `ProjectDiscovery.find_by_name` (method) `deploynator/_deploy.py:54` `def find_by_name(self, name, search_path)`
-- `DeployOrchestrator.__init__` (method) `deploynator/_deploy.py:75` `def __init__(self, config)`
-- `DeployOrchestrator.deploy` (method) `deploynator/_deploy.py:95` `def deploy(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...`
-- `DeployOrchestrator.generate_workflows` (method) `deploynator/_deploy.py:465` `def generate_workflows(self, project, output_dir)`
-- `DeployOrchestrator.install_dependencies` (method) `deploynator/_deploy.py:532` `def install_dependencies(self, project)`
-- `DeployOrchestrator.integrate_readmenator` (method) `deploynator/_deploy.py:542` `def integrate_readmenator(self, project_path)`
-- `DeployOrchestrator.install_lazygit` (method) `deploynator/_deploy.py:578` `def install_lazygit(self)`
+Depends on: `deploynator/_changelog.py`, `deploynator/_config.py`, `deploynator/_deb.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`
+Imported by: `deploynator/_app.py`, `tests/bdd_test_deploy.py`, `tests/test_deb.py`, `tests/test_deploy.py`, `tests/test_git_sync.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`
+- `ProjectDiscovery.__init__` (method) `deploynator/_deploy.py:31` `def __init__(self, config)`
+- `ProjectDiscovery.discover` (method) `deploynator/_deploy.py:34` `def discover(self, search_path)`
+- `ProjectDiscovery.find_by_name` (method) `deploynator/_deploy.py:55` `def find_by_name(self, name, search_path)`
+- `DeployOrchestrator.__init__` (method) `deploynator/_deploy.py:76` `def __init__(self, config)`
+- `DeployOrchestrator.deploy` (method) `deploynator/_deploy.py:97` `def deploy(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...`
+- `DeployOrchestrator.generate_workflows` (method) `deploynator/_deploy.py:524` `def generate_workflows(self, project, output_dir)`
+- `DeployOrchestrator.install_dependencies` (method) `deploynator/_deploy.py:591` `def install_dependencies(self, project)`
+- `DeployOrchestrator.integrate_readmenator` (method) `deploynator/_deploy.py:601` `def integrate_readmenator(self, project_path)`
+- `DeployOrchestrator.install_lazygit` (method) `deploynator/_deploy.py:637` `def install_lazygit(self)`
 
 ## deploynator/_docs.py
 Depends on: `deploynator/_config.py`, `deploynator/_toml.py`
@@ -114,10 +124,10 @@ Imported by: `deploynator/__main__.py`, `tests/test_cli_mcp.py`
 - `MCPServer.register_resource` (method) `deploynator/_mcp_server.py:98` `def register_resource(self, resource)`
 - `MCPServer.dispatch` (method) `deploynator/_mcp_server.py:145` `def dispatch(self, req)`
 - `MCPServer.run` (method) `deploynator/_mcp_server.py:163` `def run(self)`
-- `main` (function) `deploynator/_mcp_server.py:271` `def main()`
+- `main` (function) `deploynator/_mcp_server.py:273` `def main()`
 
 ## deploynator/_models.py
-Imported by: `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_platforms.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_models.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_semver.py`
+Imported by: `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_platforms.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_deb.py`, `tests/test_deploy.py`, `tests/test_models.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_semver.py`
 - `Platform.from_string` (method) `deploynator/_models.py:15` `def from_string(cls, name)`
 - `Platform.label` (method) `deploynator/_models.py:26` `def label(self)`
 - `Platform.cli_name` (method) `deploynator/_models.py:29` `def cli_name(self)`
@@ -145,27 +155,29 @@ Imported by: `deploynator/_app.py`, `deploynator/_deploy.py`
 - `PlatformClient.create_release` (method) `deploynator/_platforms.py:30` `def create_release(self, repo, release)`
 - `PlatformClient.create_pull_request` (method) `deploynator/_platforms.py:34` `def create_pull_request(self, repo, title, body, head, base)`
 - `PlatformClient.push_changes` (method) `deploynator/_platforms.py:38` `def push_changes(self, repo_path, remote, branch, tags)`
-- `GitHubCLI.name` (method) `deploynator/_platforms.py:49` `def name(self)`
-- `GitHubCLI.is_available` (method) `deploynator/_platforms.py:52` `def is_available(self)`
-- `GitHubCLI.is_authenticated` (method) `deploynator/_platforms.py:59` `def is_authenticated(self)`
-- `GitHubCLI.create_release` (method) `deploynator/_platforms.py:66` `def create_release(self, repo, release)`
-- `GitHubCLI.create_pull_request` (method) `deploynator/_platforms.py:90` `def create_pull_request(self, repo, title, body, head, base)`
-- `GitHubCLI.push_changes` (method) `deploynator/_platforms.py:104` `def push_changes(self, repo_path, remote, branch, tags)`
-- `GitLabCLI.name` (method) `deploynator/_platforms.py:113` `def name(self)`
-- `GitLabCLI.is_available` (method) `deploynator/_platforms.py:116` `def is_available(self)`
-- `GitLabCLI.is_authenticated` (method) `deploynator/_platforms.py:123` `def is_authenticated(self)`
-- `GitLabCLI.create_release` (method) `deploynator/_platforms.py:130` `def create_release(self, repo, release)`
-- `GitLabCLI.create_pull_request` (method) `deploynator/_platforms.py:141` `def create_pull_request(self, repo, title, body, head, base)`
-- `GitLabCLI.push_changes` (method) `deploynator/_platforms.py:155` `def push_changes(self, repo_path, remote, branch, tags)`
-- `BitbucketCLI.name` (method) `deploynator/_platforms.py:164` `def name(self)`
-- `BitbucketCLI.is_available` (method) `deploynator/_platforms.py:167` `def is_available(self)`
-- `BitbucketCLI.is_authenticated` (method) `deploynator/_platforms.py:177` `def is_authenticated(self)`
-- `BitbucketCLI.create_release` (method) `deploynator/_platforms.py:180` `def create_release(self, repo, release)`
-- `BitbucketCLI.create_pull_request` (method) `deploynator/_platforms.py:200` `def create_pull_request(self, repo, title, body, head, base)`
-- `BitbucketCLI.push_changes` (method) `deploynator/_platforms.py:214` `def push_changes(self, repo_path, remote, branch, tags)`
-- `PlatformFactory.register` (method) `deploynator/_platforms.py:230` `def register(cls, platform, client_class)`
-- `PlatformFactory.create` (method) `deploynator/_platforms.py:234` `def create(cls, platform, config)`
-- `PlatformFactory.create_all_available` (method) `deploynator/_platforms.py:241` `def create_all_available(cls, config)`
+- `PlatformClient.upload_release_assets` (method) `deploynator/_platforms.py:41` `def upload_release_assets(self, repo, version, assets)` -- Sube ficheros como assets del release.
+- `GitHubCLI.name` (method) `deploynator/_platforms.py:53` `def name(self)`
+- `GitHubCLI.is_available` (method) `deploynator/_platforms.py:56` `def is_available(self)`
+- `GitHubCLI.is_authenticated` (method) `deploynator/_platforms.py:63` `def is_authenticated(self)`
+- `GitHubCLI.create_release` (method) `deploynator/_platforms.py:70` `def create_release(self, repo, release)`
+- `GitHubCLI.create_pull_request` (method) `deploynator/_platforms.py:94` `def create_pull_request(self, repo, title, body, head, base)`
+- `GitHubCLI.upload_release_assets` (method) `deploynator/_platforms.py:108` `def upload_release_assets(self, repo, version, assets)` -- `gh release upload <tag> <files> --repo <repo> --clobber` (shell=False).
+- `GitHubCLI.push_changes` (method) `deploynator/_platforms.py:125` `def push_changes(self, repo_path, remote, branch, tags)`
+- `GitLabCLI.name` (method) `deploynator/_platforms.py:134` `def name(self)`
+- `GitLabCLI.is_available` (method) `deploynator/_platforms.py:137` `def is_available(self)`
+- `GitLabCLI.is_authenticated` (method) `deploynator/_platforms.py:144` `def is_authenticated(self)`
+- `GitLabCLI.create_release` (method) `deploynator/_platforms.py:151` `def create_release(self, repo, release)`
+- `GitLabCLI.create_pull_request` (method) `deploynator/_platforms.py:162` `def create_pull_request(self, repo, title, body, head, base)`
+- `GitLabCLI.push_changes` (method) `deploynator/_platforms.py:176` `def push_changes(self, repo_path, remote, branch, tags)`
+- `BitbucketCLI.name` (method) `deploynator/_platforms.py:185` `def name(self)`
+- `BitbucketCLI.is_available` (method) `deploynator/_platforms.py:188` `def is_available(self)`
+- `BitbucketCLI.is_authenticated` (method) `deploynator/_platforms.py:198` `def is_authenticated(self)`
+- `BitbucketCLI.create_release` (method) `deploynator/_platforms.py:201` `def create_release(self, repo, release)`
+- `BitbucketCLI.create_pull_request` (method) `deploynator/_platforms.py:221` `def create_pull_request(self, repo, title, body, head, base)`
+- `BitbucketCLI.push_changes` (method) `deploynator/_platforms.py:235` `def push_changes(self, repo_path, remote, branch, tags)`
+- `PlatformFactory.register` (method) `deploynator/_platforms.py:251` `def register(cls, platform, client_class)`
+- `PlatformFactory.create` (method) `deploynator/_platforms.py:255` `def create(cls, platform, config)`
+- `PlatformFactory.create_all_available` (method) `deploynator/_platforms.py:262` `def create_all_available(cls, config)`
 
 ## deploynator/_pypi.py
 Depends on: `deploynator/_config.py`, `deploynator/_toml.py`
@@ -204,8 +216,8 @@ Imported by: `deploynator/_deploy.py`, `tests/bdd_test_deploy.py`, `tests/test_p
 
 ## deploynator/_toml.py
 Depends on: `deploynator/_config.py`
-Imported by: `deploynator/_app.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `tests/bdd_test_deploy.py`, `tests/test_init.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_toml.py`
+Imported by: `deploynator/_app.py`, `deploynator/_deb.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `tests/bdd_test_deploy.py`, `tests/test_deb.py`, `tests/test_init.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_toml.py`
 - `list_make_targets` (function) `deploynator/_toml.py:31` `def list_make_targets(project_path)` -- Lee el Makefile y devuelve sus targets sin ejecutar nada.
 - `looks_like_packaging_project` (function) `deploynator/_toml.py:75` `def looks_like_packaging_project(project_path)` -- Inferencia runtime (multi-proyecto): ¿es un paquete PyPI?
 - `detect_test_commands` (function) `deploynator/_toml.py:101` `def detect_test_commands(project_path)` -- Detecta comandos de test para proyectos C/autotools sin toml.
-- `load_toml_config` (function) `deploynator/_toml.py:210` `def load_toml_config(project_path)`
+- `load_toml_config` (function) `deploynator/_toml.py:217` `def load_toml_config(project_path)`

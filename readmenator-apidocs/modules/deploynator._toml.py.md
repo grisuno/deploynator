@@ -59,6 +59,12 @@ class TomlConfig
 | [`pypi_repo`](#tomlconfig-pypi_repo) | `str` | `'pypi'` |  |
 | [`pypi_clean_dist`](#tomlconfig-pypi_clean_dist) | `bool` | `True` |  |
 | [`pypi_timeout_s`](#tomlconfig-pypi_timeout_s) | `int` | `600` |  |
+| [`deb_enabled`](#tomlconfig-deb_enabled) | `bool` | `True` |  |
+| [`deb_build`](#tomlconfig-deb_build) | `str` | `''` |  |
+| [`deb_outdir`](#tomlconfig-deb_outdir) | `str` | `'dist-deb'` |  |
+| [`deb_clean_dist`](#tomlconfig-deb_clean_dist) | `bool` | `True` |  |
+| [`deb_timeout_s`](#tomlconfig-deb_timeout_s) | `int` | `600` |  |
+| [`deb_upload_assets`](#tomlconfig-deb_upload_assets) | `bool` | `True` |  |
 
 ---
 
@@ -92,7 +98,7 @@ Seguro: rechaza symlinks, limita tamaño (Config.max_file_size_bytes).
 
 *Calls:* [`Config.create`](deploynator._config.py.md#config-create)
 
-*Called by:* [`detect_test_commands`](#detect_test_commands)
+*Called by:* [`DebRunner.deb_make_target`](deploynator._deb.py.md#debrunner-deb_make_target), [`detect_test_commands`](#detect_test_commands)
 
 ---
 
@@ -159,7 +165,7 @@ Devuelve None si no hay nada detectable (caller usa pytest default).
 
 ### `load_toml_config`
 
-`function` | [deploynator/_toml.py:210](../../deploynator/_toml.py#L210)
+`function` | [deploynator/_toml.py:217](../../deploynator/_toml.py#L217)
 
 ```python
 def load_toml_config(project_path: str) -> TomlConfig

@@ -11,8 +11,8 @@
 - Language: py
 - Symbols:
   - `build_parser` (function, line 16) `def build_parser()`
-  - `preprocess_argv` (function, line 144) `def preprocess_argv(argv)`
-  - `main` (function, line 178) `def main(argv)`
+  - `preprocess_argv` (function, line 146) `def preprocess_argv(argv)`
+  - `main` (function, line 180) `def main(argv)`
 - Depends on: `deploynator/__init__.py`, `deploynator/_config.py`, `deploynator/_mcp_server.py`, `deploynator/_models.py`
 - Imported by: `tests/test_cli_mcp.py`, `tests/test_install_example.py`
 
@@ -28,32 +28,32 @@
   - `_auth_github` (method, line 54) `def _auth_github()`
   - `_auth_gitlab` (method, line 67) `def _auth_gitlab()`
   - `_auth_bitbucket` (method, line 84) `def _auth_bitbucket()`
-  - `init_project` (method, line 172) `def init_project(self, project_path, name)`
-  - `start_branch` (method, line 249) `def start_branch(self, commit_type, description, project_path, project_name, remote)`
-  - `_is_path_like` (method, line 267) `def _is_path_like(value)`
-  - `_looks_like_path` (method, line 271) `def _looks_like_path(value)`
-  - `_resolve_project_path` (method, line 278) `def _resolve_project_path(self, project_name)`
-  - `_smart_prepare` (method, line 292) `def _smart_prepare(self, base, changelog_content, dry_run)`
-  - `commit` (method, line 307) `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
-  - `_parse_release_message` (method, line 348) `def _parse_release_message(raw)`
-  - `release` (method, line 366) `def release(self, commit_type, subject, scope, body, message, project_name, bump, dry_run, platforms, all_projects...`
-  - `generate_docs` (method, line 502) `def generate_docs(self, project_path, project_name)`
-  - `status` (method, line 508) `def status(self, project_path, project_name)`
-  - `list_projects` (method, line 528) `def list_projects(self, search_path)`
-  - `generate_ci` (method, line 533) `def generate_ci(self, project_name, all_projects)`
-  - `install_deps` (method, line 549) `def install_deps(self, project_name)`
-  - `install_packages` (method, line 560) `def install_packages(self, packages)`
-  - `interactive_menu` (method, line 587) `def interactive_menu(self)`
-  - `_interactive_release` (method, line 623) `def _interactive_release(self)`
-  - `_interactive_commit` (method, line 669) `def _interactive_commit(self)`
-  - `_interactive_start` (method, line 696) `def _interactive_start(self)`
-  - `_interactive_auth` (method, line 720) `def _interactive_auth(self)`
-  - `_interactive_auth_status` (method, line 743) `def _interactive_auth_status(self)`
-  - `_interactive_docs` (method, line 749) `def _interactive_docs(self)`
-  - `_interactive_ci` (method, line 756) `def _interactive_ci(self)`
-  - `_interactive_status` (method, line 765) `def _interactive_status(self)`
-  - `_interactive_init` (method, line 770) `def _interactive_init(self)`
-  - `_print_result` (method, line 776) `def _print_result(result)`
+  - `init_project` (method, line 185) `def init_project(self, project_path, name)`
+  - `start_branch` (method, line 262) `def start_branch(self, commit_type, description, project_path, project_name, remote)`
+  - `_is_path_like` (method, line 280) `def _is_path_like(value)`
+  - `_looks_like_path` (method, line 284) `def _looks_like_path(value)`
+  - `_resolve_project_path` (method, line 291) `def _resolve_project_path(self, project_name)`
+  - `_smart_prepare` (method, line 305) `def _smart_prepare(self, base, changelog_content, dry_run)`
+  - `commit` (method, line 320) `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
+  - `_parse_release_message` (method, line 361) `def _parse_release_message(raw)`
+  - `release` (method, line 379) `def release(self, commit_type, subject, scope, body, message, project_name, bump, dry_run, platforms, all_projects...`
+  - `generate_docs` (method, line 517) `def generate_docs(self, project_path, project_name)`
+  - `status` (method, line 523) `def status(self, project_path, project_name)`
+  - `list_projects` (method, line 543) `def list_projects(self, search_path)`
+  - `generate_ci` (method, line 548) `def generate_ci(self, project_name, all_projects)`
+  - `install_deps` (method, line 564) `def install_deps(self, project_name)`
+  - `install_packages` (method, line 575) `def install_packages(self, packages)`
+  - `interactive_menu` (method, line 602) `def interactive_menu(self)`
+  - `_interactive_release` (method, line 638) `def _interactive_release(self)`
+  - `_interactive_commit` (method, line 686) `def _interactive_commit(self)`
+  - `_interactive_start` (method, line 713) `def _interactive_start(self)`
+  - `_interactive_auth` (method, line 737) `def _interactive_auth(self)`
+  - `_interactive_auth_status` (method, line 760) `def _interactive_auth_status(self)`
+  - `_interactive_docs` (method, line 766) `def _interactive_docs(self)`
+  - `_interactive_ci` (method, line 773) `def _interactive_ci(self)`
+  - `_interactive_status` (method, line 782) `def _interactive_status(self)`
+  - `_interactive_init` (method, line 787) `def _interactive_init(self)`
+  - `_print_result` (method, line 793) `def _print_result(result)`
 - Depends on: `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_toml.py`
 - Imported by: `deploynator/__init__.py`
 
@@ -83,36 +83,54 @@
   - `gh_authd` (method, line 92) `def gh_authd(self)`
   - `glab_authd` (method, line 96) `def glab_authd(self)`
   - `bb_authd` (method, line 100) `def bb_authd(self)`
-- Imported by: `app.py`, `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deploy.py`, `tests/test_git_sync.py`, `tests/test_init.py`, `tests/test_install_example.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_readme_footer.py`, `tests/test_runner.py`, `tests/test_semver.py`
+- Imported by: `app.py`, `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deb.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_mcp_server.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`, `tests/bdd_test_deploy.py`, `tests/test_changelog.py`, `tests/test_cli_mcp.py`, `tests/test_config.py`, `tests/test_deb.py`, `tests/test_deploy.py`, `tests/test_git_sync.py`, `tests/test_init.py`, `tests/test_install_example.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_readme_footer.py`, `tests/test_runner.py`, `tests/test_semver.py`
+
+## deploynator/_deb.py
+- Doc: DebRunner: Construye paquetes .deb desde fuentes C, espejo del flujo PyPI.
+- Layer: utility
+- Language: py
+- Symbols:
+  - `DebRunner` (class, line 12) `class DebRunner`
+  - `__init__` (method, line 35) `def __init__(self, config)`
+  - `deb_make_target` (method, line 38) `def deb_make_target(self, project_path)`
+  - `is_deb_project` (method, line 48) `def is_deb_project(self, project_path)`
+  - `_outdir` (method, line 54) `def _outdir(self, project_path, toml)`
+  - `clean` (method, line 62) `def clean(self, project_path, toml)`
+  - `_collect_debs` (method, line 71) `def _collect_debs(self, project_path, outdir)`
+  - `build_command` (method, line 110) `def build_command(self, project_path, toml)`
+  - `run` (method, line 126) `def run(self, project_path, toml, version, verbose)`
+- Depends on: `deploynator/_config.py`, `deploynator/_toml.py`
+- Imported by: `deploynator/_deploy.py`, `tests/test_deb.py`
 
 ## deploynator/_deploy.py
 - Doc: _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.
 - Layer: utility
 - Language: py
 - Symbols:
-  - `ProjectDiscovery` (class, line 29) `class ProjectDiscovery`
-  - `DeployOrchestrator` (class, line 74) `class DeployOrchestrator`
-  - `__init__` (method, line 30) `def __init__(self, config)`
-  - `discover` (method, line 33) `def discover(self, search_path)`
-  - `find_by_name` (method, line 54) `def find_by_name(self, name, search_path)`
-  - `_load_single` (method, line 61) `def _load_single(yaml_path)`
-  - `__init__` (method, line 75) `def __init__(self, config)`
-  - `_resolve_project_path` (method, line 86) `def _resolve_project_path(project)`
-  - `deploy` (method, line 95) `def deploy(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...`
-  - `_gh_release_in_repo` (method, line 377) `def _gh_release_in_repo(self, repo_path, project_name, version, notes, branch)`
-  - `_add_temp_remote` (method, line 410) `def _add_temp_remote(self, repo_path, name, url)`
-  - `_remove_temp_remote` (method, line 419) `def _remove_temp_remote(self, repo_path, name)`
-  - `_sync_dev_to_main` (method, line 428) `def _sync_dev_to_main(self, repo_path)`
-  - `_get_remote_url` (method, line 456) `def _get_remote_url(repo_path, pc)`
-  - `generate_workflows` (method, line 465) `def generate_workflows(self, project, output_dir)`
-  - `_ci_workflow_content` (method, line 484) `def _ci_workflow_content(self, project)`
-  - `_release_workflow_content` (method, line 505) `def _release_workflow_content(self, project)`
-  - `install_dependencies` (method, line 532) `def install_dependencies(self, project)`
-  - `integrate_readmenator` (method, line 542) `def integrate_readmenator(self, project_path)`
-  - `install_lazygit` (method, line 578) `def install_lazygit(self)`
-  - `_listed` (function, line 197) `def _listed(files)`
-- Depends on: `deploynator/_changelog.py`, `deploynator/_config.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`
-- Imported by: `deploynator/_app.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_git_sync.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`
+  - `ProjectDiscovery` (class, line 30) `class ProjectDiscovery`
+  - `DeployOrchestrator` (class, line 75) `class DeployOrchestrator`
+  - `__init__` (method, line 31) `def __init__(self, config)`
+  - `discover` (method, line 34) `def discover(self, search_path)`
+  - `find_by_name` (method, line 55) `def find_by_name(self, name, search_path)`
+  - `_load_single` (method, line 62) `def _load_single(yaml_path)`
+  - `__init__` (method, line 76) `def __init__(self, config)`
+  - `_resolve_project_path` (method, line 88) `def _resolve_project_path(project)`
+  - `deploy` (method, line 97) `def deploy(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...`
+  - `_gh_release_in_repo` (method, line 421) `def _gh_release_in_repo(self, repo_path, project_name, version, notes, branch)`
+  - `_gh_upload_assets` (method, line 454) `def _gh_upload_assets(self, repo_path, version, assets)`
+  - `_add_temp_remote` (method, line 469) `def _add_temp_remote(self, repo_path, name, url)`
+  - `_remove_temp_remote` (method, line 478) `def _remove_temp_remote(self, repo_path, name)`
+  - `_sync_dev_to_main` (method, line 487) `def _sync_dev_to_main(self, repo_path)`
+  - `_get_remote_url` (method, line 515) `def _get_remote_url(repo_path, pc)`
+  - `generate_workflows` (method, line 524) `def generate_workflows(self, project, output_dir)`
+  - `_ci_workflow_content` (method, line 543) `def _ci_workflow_content(self, project)`
+  - `_release_workflow_content` (method, line 564) `def _release_workflow_content(self, project)`
+  - `install_dependencies` (method, line 591) `def install_dependencies(self, project)`
+  - `integrate_readmenator` (method, line 601) `def integrate_readmenator(self, project_path)`
+  - `install_lazygit` (method, line 637) `def install_lazygit(self)`
+  - `_listed` (function, line 200) `def _listed(files)`
+- Depends on: `deploynator/_changelog.py`, `deploynator/_config.py`, `deploynator/_deb.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`
+- Imported by: `deploynator/_app.py`, `tests/bdd_test_deploy.py`, `tests/test_deb.py`, `tests/test_deploy.py`, `tests/test_git_sync.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`
 
 ## deploynator/_docs.py
 - Layer: utility
@@ -165,7 +183,7 @@
   - `MCPTool` (class, line 57) `class MCPTool`
   - `MCPResource` (class, line 72) `class MCPResource`
   - `MCPServer` (class, line 87) `class MCPServer`
-  - `main` (function, line 271) `def main()`
+  - `main` (function, line 273) `def main()`
   - `__init__` (method, line 37) `def __init__(self, msg)`
   - `is_notification` (method, line 44) `def is_notification(self)`
   - `response` (method, line 47) `def response(self, result)`
@@ -187,12 +205,12 @@
   - `dispatch` (method, line 145) `def dispatch(self, req)`
   - `run` (method, line 163) `def run(self)`
   - `_register_all` (method, line 181) `def _register_all(self)`
-  - `_tool_release` (method, line 235) `def _tool_release(self, project, commit_type, subject, message, scope, body, bump, dry_run, no_test, no_docs, no_pypi)`
-  - `_tool_commit` (method, line 250) `def _tool_commit(self, commit_type, subject, project, scope, body, dry_run)`
-  - `_tool_status` (method, line 254) `def _tool_status(self, project)`
-  - `_tool_projects` (method, line 257) `def _tool_projects(self)`
-  - `_tool_docs` (method, line 263) `def _tool_docs(self, project)`
-  - `_resource_projects` (method, line 267) `def _resource_projects(self)`
+  - `_tool_release` (method, line 236) `def _tool_release(self, project, commit_type, subject, message, scope, body, bump, dry_run, no_test, no_docs...`
+  - `_tool_commit` (method, line 252) `def _tool_commit(self, commit_type, subject, project, scope, body, dry_run)`
+  - `_tool_status` (method, line 256) `def _tool_status(self, project)`
+  - `_tool_projects` (method, line 259) `def _tool_projects(self)`
+  - `_tool_docs` (method, line 265) `def _tool_docs(self, project)`
+  - `_resource_projects` (method, line 269) `def _resource_projects(self)`
 - Depends on: `deploynator/__init__.py`, `deploynator/_config.py`
 - Imported by: `deploynator/__main__.py`, `tests/test_cli_mcp.py`
 
@@ -209,7 +227,7 @@
   - `VersionInfo` (class, line 207) `class VersionInfo`
   - `ChangelogEntry` (class, line 238) `class ChangelogEntry`
   - `ReleaseInfo` (class, line 265) `class ReleaseInfo`
-  - `DeployResult` (class, line 275) `class DeployResult`
+  - `DeployResult` (class, line 276) `class DeployResult`
   - `from_string` (method, line 15) `def from_string(cls, name)`
   - `label` (method, line 26) `def label(self)`
   - `cli_name` (method, line 29) `def cli_name(self)`
@@ -227,17 +245,18 @@
   - `parse` (method, line 216) `def parse(cls, version_str)`
   - `bump` (method, line 227) `def bump(self, strategy)`
   - `from_git_log_line` (method, line 246) `def from_git_log_line(cls, line, author, sha)`
-- Imported by: `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_platforms.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_deploy.py`, `tests/test_models.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_semver.py`
+- Imported by: `deploynator/__main__.py`, `deploynator/_app.py`, `deploynator/_changelog.py`, `deploynator/_deploy.py`, `deploynator/_platforms.py`, `deploynator/_semver.py`, `tests/bdd_test_deploy.py`, `tests/test_deb.py`, `tests/test_deploy.py`, `tests/test_models.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_semver.py`
 
 ## deploynator/_platforms.py
+- Doc: upload_release_assets: Sube ficheros como assets del release.
 - Layer: utility
 - Language: py
 - Symbols:
   - `PlatformClient` (class, line 13) `class PlatformClient(ABC)`
-  - `GitHubCLI` (class, line 48) `class GitHubCLI(PlatformClient)`
-  - `GitLabCLI` (class, line 112) `class GitLabCLI(PlatformClient)`
-  - `BitbucketCLI` (class, line 163) `class BitbucketCLI(PlatformClient)`
-  - `PlatformFactory` (class, line 222) `class PlatformFactory`
+  - `GitHubCLI` (class, line 52) `class GitHubCLI(PlatformClient)`
+  - `GitLabCLI` (class, line 133) `class GitLabCLI(PlatformClient)`
+  - `BitbucketCLI` (class, line 184) `class BitbucketCLI(PlatformClient)`
+  - `PlatformFactory` (class, line 243) `class PlatformFactory`
   - `__init__` (method, line 14) `def __init__(self, config)`
   - `name` (method, line 18) `def name(self)`
   - `is_available` (method, line 22) `def is_available(self)`
@@ -245,28 +264,30 @@
   - `create_release` (method, line 30) `def create_release(self, repo, release)`
   - `create_pull_request` (method, line 34) `def create_pull_request(self, repo, title, body, head, base)`
   - `push_changes` (method, line 38) `def push_changes(self, repo_path, remote, branch, tags)`
-  - `_run` (method, line 41) `def _run(self, cmd, cwd, check)`
-  - `name` (method, line 49) `def name(self)`
-  - `is_available` (method, line 52) `def is_available(self)`
-  - `is_authenticated` (method, line 59) `def is_authenticated(self)`
-  - `create_release` (method, line 66) `def create_release(self, repo, release)`
-  - `create_pull_request` (method, line 90) `def create_pull_request(self, repo, title, body, head, base)`
-  - `push_changes` (method, line 104) `def push_changes(self, repo_path, remote, branch, tags)`
-  - `name` (method, line 113) `def name(self)`
-  - `is_available` (method, line 116) `def is_available(self)`
-  - `is_authenticated` (method, line 123) `def is_authenticated(self)`
-  - `create_release` (method, line 130) `def create_release(self, repo, release)`
-  - `create_pull_request` (method, line 141) `def create_pull_request(self, repo, title, body, head, base)`
-  - `push_changes` (method, line 155) `def push_changes(self, repo_path, remote, branch, tags)`
-  - `name` (method, line 164) `def name(self)`
-  - `is_available` (method, line 167) `def is_available(self)`
-  - `is_authenticated` (method, line 177) `def is_authenticated(self)`
-  - `create_release` (method, line 180) `def create_release(self, repo, release)`
-  - `create_pull_request` (method, line 200) `def create_pull_request(self, repo, title, body, head, base)`
-  - `push_changes` (method, line 214) `def push_changes(self, repo_path, remote, branch, tags)`
-  - `register` (method, line 230) `def register(cls, platform, client_class)`
-  - `create` (method, line 234) `def create(cls, platform, config)`
-  - `create_all_available` (method, line 241) `def create_all_available(cls, config)`
+  - `upload_release_assets` (method, line 41) `def upload_release_assets(self, repo, version, assets)`
+  - `_run` (method, line 45) `def _run(self, cmd, cwd, check)`
+  - `name` (method, line 53) `def name(self)`
+  - `is_available` (method, line 56) `def is_available(self)`
+  - `is_authenticated` (method, line 63) `def is_authenticated(self)`
+  - `create_release` (method, line 70) `def create_release(self, repo, release)`
+  - `create_pull_request` (method, line 94) `def create_pull_request(self, repo, title, body, head, base)`
+  - `upload_release_assets` (method, line 108) `def upload_release_assets(self, repo, version, assets)`
+  - `push_changes` (method, line 125) `def push_changes(self, repo_path, remote, branch, tags)`
+  - `name` (method, line 134) `def name(self)`
+  - `is_available` (method, line 137) `def is_available(self)`
+  - `is_authenticated` (method, line 144) `def is_authenticated(self)`
+  - `create_release` (method, line 151) `def create_release(self, repo, release)`
+  - `create_pull_request` (method, line 162) `def create_pull_request(self, repo, title, body, head, base)`
+  - `push_changes` (method, line 176) `def push_changes(self, repo_path, remote, branch, tags)`
+  - `name` (method, line 185) `def name(self)`
+  - `is_available` (method, line 188) `def is_available(self)`
+  - `is_authenticated` (method, line 198) `def is_authenticated(self)`
+  - `create_release` (method, line 201) `def create_release(self, repo, release)`
+  - `create_pull_request` (method, line 221) `def create_pull_request(self, repo, title, body, head, base)`
+  - `push_changes` (method, line 235) `def push_changes(self, repo_path, remote, branch, tags)`
+  - `register` (method, line 251) `def register(cls, platform, client_class)`
+  - `create` (method, line 255) `def create(cls, platform, config)`
+  - `create_all_available` (method, line 262) `def create_all_available(cls, config)`
 - Depends on: `deploynator/_config.py`, `deploynator/_models.py`
 - Imported by: `deploynator/_app.py`, `deploynator/_deploy.py`
 
@@ -336,8 +357,8 @@
   - `detect_test_commands` (function, line 101) `def detect_test_commands(project_path)`
   - `_auto_toml_config` (function, line 150) `def _auto_toml_config(project_path)`
   - `TomlConfig` (class, line 177) `class TomlConfig`
-  - `_clamp_timeout` (function, line 202) `def _clamp_timeout(value)`
-  - `load_toml_config` (function, line 210) `def load_toml_config(project_path)`
-  - `__post_init__` (method, line 194) `def __post_init__(self)`
+  - `_clamp_timeout` (function, line 209) `def _clamp_timeout(value)`
+  - `load_toml_config` (function, line 217) `def load_toml_config(project_path)`
+  - `__post_init__` (method, line 200) `def __post_init__(self)`
 - Depends on: `deploynator/_config.py`
-- Imported by: `deploynator/_app.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `tests/bdd_test_deploy.py`, `tests/test_init.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_toml.py`
+- Imported by: `deploynator/_app.py`, `deploynator/_deb.py`, `deploynator/_deploy.py`, `deploynator/_docs.py`, `deploynator/_pypi.py`, `deploynator/_runner.py`, `tests/bdd_test_deploy.py`, `tests/test_deb.py`, `tests/test_init.py`, `tests/test_pypi.py`, `tests/test_runner.py`, `tests/test_toml.py`

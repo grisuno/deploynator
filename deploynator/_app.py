@@ -167,6 +167,19 @@ enabled = true
 repo = "pypi"
 clean_dist = true
 timeout_s = 600
+
+[deb]
+# Proyectos C (Makefile): si hay debian/control o un target
+# deb|package-deb|dist-deb|deb-package|package, construye el .deb
+# y lo sube como asset del release (equivalente PyPI para apt/dpkg).
+# build = "" -> auto (`make <target>` o dpkg-buildpackage).
+# Ej. C explícito: build = "make deb".
+enabled = true
+build = ""
+outdir = "dist-deb"
+clean_dist = true
+timeout_s = 600
+upload_assets = true
 """
 
     def init_project(self, project_path: str = "", name: str = "") -> str:
@@ -378,6 +391,7 @@ version:
         no_test: bool = False,
         no_docs: bool = False,
         no_pypi: bool = False,
+        no_deb: bool = False,
         verbose: bool = False,
     ) -> list[DeployResult]:
         base = os.getcwd()
@@ -490,6 +504,7 @@ version:
                 run_docs=not no_docs,
                 force_bump=bump or None,
                 run_pypi=not no_pypi,
+                run_deb=not no_deb,
                 verbose=verbose,
             )
             results.append(result)
@@ -647,6 +662,7 @@ version:
         no_test = input("Skip tests? (--no-test) (y/N): ").strip().lower() == "y"
         no_docs = input("Skip docs? (--no-docs) (y/N): ").strip().lower() == "y"
         no_pypi = input("Skip PyPI? (--no-pypi) (y/N): ").strip().lower() == "y"
+        no_deb = input("Skip .deb? (--no-deb) (y/N): ").strip().lower() == "y"
         all_proj = input("Deploy all projects? (y/N): ").strip().lower() == "y"
 
         results = self.release(
@@ -661,6 +677,7 @@ version:
             no_test=no_test,
             no_docs=no_docs,
             no_pypi=no_pypi,
+            no_deb=no_deb,
         )
 
         for r in results:

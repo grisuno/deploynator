@@ -2,40 +2,40 @@
  "schema_version": 1,
  "format": "jsonl",
  "meta": {
-  "modules": 19,
-  "entities": 312,
+  "modules": 20,
+  "entities": 330,
   "languages": {
-   "py": 17,
+   "py": 18,
    "sh": 2
   },
   "kinds": {
-   "attribute": 103,
-   "class": 28,
+   "attribute": 111,
+   "class": 29,
    "classmethod": 12,
    "constant": 13,
-   "constructor": 14,
+   "constructor": 15,
    "enum": 2,
    "function": 13,
-   "method": 102,
-   "module": 19,
+   "method": 109,
+   "module": 20,
    "property": 4,
    "staticmethod": 2
   },
   "truncated": false,
-  "skipped_files": 17,
+  "skipped_files": 18,
   "privacy_mode": false
  },
  "coverage": {
   "overall": {
-   "documented": 14,
-   "total": 196,
-   "percent": 7.1
+   "documented": 17,
+   "total": 206,
+   "percent": 8.3
   },
   "by_kind": {
    "class": {
-    "documented": 0,
-    "total": 28,
-    "percent": 0.0
+    "documented": 1,
+    "total": 29,
+    "percent": 3.4
    },
    "classmethod": {
     "documented": 0,
@@ -44,7 +44,7 @@
    },
    "constructor": {
     "documented": 0,
-    "total": 14,
+    "total": 15,
     "percent": 0.0
    },
    "enum": {
@@ -58,14 +58,14 @@
     "percent": 53.8
    },
    "method": {
-    "documented": 4,
-    "total": 102,
-    "percent": 3.9
+    "documented": 6,
+    "total": 109,
+    "percent": 5.5
    },
    "module": {
     "documented": 3,
-    "total": 19,
-    "percent": 15.8
+    "total": 20,
+    "percent": 15.0
    },
    "property": {
     "documented": 0,
@@ -114,6 +114,11 @@
     "total": 7,
     "percent": 0.0
    },
+   "deploynator/_deb.py": {
+    "documented": 1,
+    "total": 8,
+    "percent": 12.5
+   },
    "deploynator/_deploy.py": {
     "documented": 0,
     "total": 12,
@@ -140,9 +145,9 @@
     "percent": 0.0
    },
    "deploynator/_platforms.py": {
-    "documented": 0,
-    "total": 34,
-    "percent": 0.0
+    "documented": 2,
+    "total": 36,
+    "percent": 5.6
    },
    "deploynator/_pypi.py": {
     "documented": 2,
@@ -213,6 +218,11 @@
    "entities": 41
   },
   {
+   "uid": "deploynator/_deb.py",
+   "path": "modules/deploynator._deb.py.jsonl",
+   "entities": 9
+  },
+  {
    "uid": "deploynator/_deploy.py",
    "path": "modules/deploynator._deploy.py.jsonl",
    "entities": 12
@@ -235,12 +245,12 @@
   {
    "uid": "deploynator/_models.py",
    "path": "modules/deploynator._models.py.jsonl",
-   "entities": 79
+   "entities": 80
   },
   {
    "uid": "deploynator/_platforms.py",
    "path": "modules/deploynator._platforms.py.jsonl",
-   "entities": 34
+   "entities": 36
   },
   {
    "uid": "deploynator/_pypi.py",
@@ -265,7 +275,7 @@
   {
    "uid": "deploynator/_toml.py",
    "path": "modules/deploynator._toml.py.jsonl",
-   "entities": 27
+   "entities": 33
   },
   {
    "uid": "install.sh",
@@ -275,7 +285,7 @@
  ],
  "warnings": {
   "path": "warnings.jsonl",
-  "total": 182
+  "total": 188
  },
  "usage": [
   "grep -h '\"name\":\"<Name>\"' readmenator-apidocs/api/modules/*.jsonl",

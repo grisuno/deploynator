@@ -1,6 +1,6 @@
 # deploynator: _toml
 
-deploynator: _toml groups 8 files (py) around _target_regex, list_make_targets, _has_python_tests, looks_like_packaging_project, detect_test_commands. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.
+deploynator: _toml groups 8 files (py) around _target_regex, list_make_targets, _has_python_tests, looks_like_packaging_project, detect_test_commands. DebRunner: Construye paquetes .deb desde fuentes C, espejo del flujo PyPI.
 
 ```mermaid
 graph LR
@@ -11,7 +11,7 @@ graph LR
 
 ## deploynator (1.1)
 
-deploynator groups 4 files (py) around _target_regex, list_make_targets, _has_python_tests, looks_like_packaging_project, detect_test_commands. prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.
+deploynator groups 4 files (py) around _target_regex, list_make_targets, _has_python_tests, looks_like_packaging_project, detect_test_commands. DebRunner: Construye paquetes .deb desde fuentes C, espejo del flujo PyPI.
 
 ## tests (1.2)
 
@@ -19,11 +19,11 @@ tests groups 4 files (py) around TestBDDDeployScenarios, project, test_version_b
 
 **Files**:
 
+- deploynator/_deb.py
 - deploynator/_docs.py
-- deploynator/_pypi.py
 - deploynator/_runner.py
 - deploynator/_toml.py
 - tests/bdd_test_deploy.py
-- tests/test_pypi.py
+- tests/test_deb.py
 - tests/test_runner.py
 - tests/test_toml.py

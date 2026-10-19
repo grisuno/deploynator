@@ -190,6 +190,12 @@ class TomlConfig:
     pypi_repo: str = "pypi"
     pypi_clean_dist: bool = True
     pypi_timeout_s: int = 600
+    deb_enabled: bool = True
+    deb_build: str = ""
+    deb_outdir: str = "dist-deb"
+    deb_clean_dist: bool = True
+    deb_timeout_s: int = 600
+    deb_upload_assets: bool = True
 
     def __post_init__(self) -> None:
         if self.test_commands is None:
@@ -197,6 +203,7 @@ class TomlConfig:
         object.__setattr__(self, "test_timeout_s", _clamp_timeout(self.test_timeout_s))
         object.__setattr__(self, "docs_timeout_s", _clamp_timeout(self.docs_timeout_s))
         object.__setattr__(self, "pypi_timeout_s", _clamp_timeout(self.pypi_timeout_s))
+        object.__setattr__(self, "deb_timeout_s", _clamp_timeout(self.deb_timeout_s))
 
 
 def _clamp_timeout(value: int) -> int:
@@ -235,12 +242,13 @@ def load_toml_config(project_path: str) -> TomlConfig:
     docs_raw = data.get("docs", {}) or {}
     deploy_raw = data.get("deploy", {}) or {}
     pypi_raw = data.get("pypi", {}) or {}
+    deb_raw = data.get("deb", {}) or {}
 
     if not isinstance(project_raw, dict) or not isinstance(tests_raw, dict):
         raise TypeError(f"Invalid {TOML_FILENAME}: bad sections")
     if not isinstance(docs_raw, dict) or not isinstance(deploy_raw, dict):
         raise TypeError(f"Invalid {TOML_FILENAME}: bad sections")
-    if not isinstance(pypi_raw, dict):
+    if not isinstance(pypi_raw, dict) or not isinstance(deb_raw, dict):
         raise TypeError(f"Invalid {TOML_FILENAME}: bad sections")
 
     _sentinel: list[str] = []  # type: ignore[assignment]
@@ -284,4 +292,10 @@ def load_toml_config(project_path: str) -> TomlConfig:
         pypi_repo=str(pypi_raw.get("repo", "pypi")),
         pypi_clean_dist=bool(pypi_raw.get("clean_dist", True)),
         pypi_timeout_s=_clamp_timeout(pypi_raw.get("timeout_s", 600)),
+        deb_enabled=bool(deb_raw.get("enabled", True)),
+        deb_build=str(deb_raw.get("build", "")),
+        deb_outdir=str(deb_raw.get("outdir", "dist-deb")),
+        deb_clean_dist=bool(deb_raw.get("clean_dist", True)),
+        deb_timeout_s=_clamp_timeout(deb_raw.get("timeout_s", 600)),
+        deb_upload_assets=bool(deb_raw.get("upload_assets", True)),
     )

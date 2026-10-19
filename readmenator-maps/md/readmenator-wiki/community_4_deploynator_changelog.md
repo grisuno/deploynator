@@ -1,10 +1,10 @@
 # deploynator: _changelog
 
-*Community 3 | 6 files | cohesion 0.21*
+*Community 4 | 6 files | cohesion 0.20*
 
 ## Definition
 
-This community groups 6 file(s) rooted at `deploynator` with dominant language py (cohesion 0.21). Central symbols: `ChangelogGenerator`, `Config`, `TestChangelogGenerator`, `TestConfigContract`, `__init__`, `_collect_entries`, `_find_readme`, `_format_entries`. Core file: `tests/test_config.py` (10 symbols). Documented purpose: Tests for the deploy README footer injector..
+This community groups 6 file(s) rooted at `deploynator` with dominant language py (cohesion 0.20). Central symbols: `ChangelogGenerator`, `Config`, `TestChangelogGenerator`, `TestConfigContract`, `__init__`, `_collect_entries`, `_find_readme`, `_format_entries`. Core file: `tests/test_config.py` (10 symbols). Documented purpose: Tests for the deploy README footer injector..
 
 ## Files
 
@@ -53,29 +53,29 @@ This community groups 6 file(s) rooted at `deploynator` with dominant language p
 ## Internal vs External Edges
 
 - Internal resolved imports (EXTRACTED): 7
-- Cross-boundary resolved imports (EXTRACTED): 66
+- Cross-boundary resolved imports (EXTRACTED): 81
 
 ## Connections
 
-- [EXTRACTED] depends_on community 1 <-> 3 (strength 0.9): Extracted import edge crosses communities: app.py imports deploynator/_config.py.
-- [EXTRACTED] depends_on community 4 <-> 3 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_config.py.
-- [EXTRACTED] depends_on community 3 <-> 2 (strength 0.9): Extracted import edge crosses communities: deploynator/_changelog.py imports deploynator/_models.py.
-- [EXTRACTED] depends_on community 0 <-> 3 (strength 0.9): Extracted import edge crosses communities: deploynator/_docs.py imports deploynator/_config.py.
-- [INFERRED] bridges community 3 <-> 2 (strength 0.6): Inferred cross-community bridge: tests/test_config.py reaches tests/test_models.py in 4 hops.
-- [INFERRED] bridges community 2 <-> 3 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_readme_footer.py in 4 hops.
+- [EXTRACTED] depends_on community 1 <-> 4 (strength 0.9): Extracted import edge crosses communities: app.py imports deploynator/_config.py.
+- [EXTRACTED] depends_on community 2 <-> 4 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_config.py.
+- [EXTRACTED] depends_on community 4 <-> 3 (strength 0.9): Extracted import edge crosses communities: deploynator/_changelog.py imports deploynator/_models.py.
+- [EXTRACTED] depends_on community 0 <-> 4 (strength 0.9): Extracted import edge crosses communities: deploynator/_deb.py imports deploynator/_config.py.
+- [INFERRED] bridges community 4 <-> 3 (strength 0.6): Inferred cross-community bridge: tests/test_config.py reaches tests/test_models.py in 4 hops.
+- [INFERRED] bridges community 3 <-> 4 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_readme_footer.py in 4 hops.
 
 ## Risks
 
 - [taint high] `deploynator/_app.py` -> `deploynator/_config.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_changelog.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_readme.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_changelog.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_config.py` via `subprocess` (1 hops)
 
 ## Open Questions
 
 - Why do 5 file(s) lack file-level docs (e.g. `deploynator/_changelog.py`)? What purpose do they serve?
 - What would break if the most connected file in deploynator: _changelog changed?
-- Should deploynator: _changelog be split, given cohesion 0.21?
+- Should deploynator: _changelog be split, given cohesion 0.20?
 
 ## Sources
 

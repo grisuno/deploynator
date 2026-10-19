@@ -4,15 +4,15 @@ Log each answered question here so the wiki compounds. Format: question, answer,
 
 ## Suggested
 
-### Q: What does _config.py depend on, and what depends on it? (28 connections)
+### Q: What does _config.py depend on, and what depends on it? (30 connections)
 
 - Status: unanswered
 
-### Q: What does _deploy.py depend on, and what depends on it? (18 connections)
+### Q: What does _deploy.py depend on, and what depends on it? (20 connections)
 
 - Status: unanswered
 
-### Q: What does _models.py depend on, and what depends on it? (13 connections)
+### Q: What does _models.py depend on, and what depends on it? (14 connections)
 
 - Status: unanswered
 

@@ -38,6 +38,10 @@ class PlatformClient(ABC):
     def push_changes(self, repo_path: str, remote: str, branch: str, tags: bool) -> bool:
         ...
 
+    def upload_release_assets(self, repo: str, version: str, assets: list[str]) -> bool:
+        """Sube ficheros como assets del release. Default: no soportado."""
+        return False
+
     def _run(self, cmd: list[str], cwd: str | None = None, check: bool = False) -> subprocess.CompletedProcess:
         try:
             return subprocess.run(cmd, capture_output=True, text=True, check=check, cwd=cwd)
@@ -100,6 +104,23 @@ class GitHubCLI(PlatformClient):
         if result.returncode == 0:
             return result.stdout.strip()
         return None
+
+    def upload_release_assets(self, repo: str, version: str, assets: list[str]) -> bool:
+        """`gh release upload <tag> <files> --repo <repo> --clobber` (shell=False)."""
+        files = [a for a in assets if a and os.path.isfile(a) and not os.path.islink(a)]
+        if not files:
+            return False
+        cmd = [
+            self._config.gh_cli, "release", "upload", version,
+            *files,
+            "--repo", repo,
+            "--clobber",
+        ]
+        try:
+            result = self._run(cmd, check=False)
+            return result.returncode == 0
+        except (FileNotFoundError, RuntimeError):
+            return False
 
     def push_changes(self, repo_path: str, remote: str, branch: str, tags: bool) -> bool:
         cmd = ["git", "-C", repo_path, "push", remote, branch]

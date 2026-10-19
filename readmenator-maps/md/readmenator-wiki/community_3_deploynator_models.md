@@ -1,10 +1,10 @@
 # deploynator: _models
 
-*Community 2 | 7 files | cohesion 0.33*
+*Community 3 | 7 files | cohesion 0.32*
 
 ## Definition
 
-This community groups 7 file(s) rooted at `tests` with dominant language py (cohesion 0.33). Central symbols: `ChangelogEntry`, `CommitMessage`, `CommitType`, `DeployResult`, `Platform`, `PlatformConfig`, `ProjectConfig`, `ReleaseInfo`. Core file: `tests/test_models.py` (44 symbols). Documented purpose: Path-direct deploy + tag prefijos + version_file toml (ReadMenator real)..
+This community groups 7 file(s) rooted at `tests` with dominant language py (cohesion 0.32). Central symbols: `ChangelogEntry`, `CommitMessage`, `CommitType`, `DeployResult`, `Platform`, `PlatformConfig`, `ProjectConfig`, `ReleaseInfo`. Core file: `tests/test_models.py` (44 symbols). Documented purpose: Path-direct deploy + tag prefijos + version_file toml (ReadMenator real)..
 
 ## Files
 
@@ -46,7 +46,7 @@ This community groups 7 file(s) rooted at `tests` with dominant language py (coh
 - `ChangelogEntry` (class, `deploynator/_models.py:238`) `class ChangelogEntry`
 - `from_git_log_line` (method, `deploynator/_models.py:246`) `def from_git_log_line(cls, line, author, sha)`
 - `ReleaseInfo` (class, `deploynator/_models.py:265`) `class ReleaseInfo`
-- `DeployResult` (class, `deploynator/_models.py:275`) `class DeployResult`
+- `DeployResult` (class, `deploynator/_models.py:276`) `class DeployResult`
 - `SemverManager` (class, `deploynator/_semver.py:11`) `class SemverManager`
 - `__init__` (method, `deploynator/_semver.py:12`) `def __init__(self, config)`
 - `max_version` (method, `deploynator/_semver.py:15`) `def max_version(self, a, b)`
@@ -54,19 +54,19 @@ This community groups 7 file(s) rooted at `tests` with dominant language py (coh
 ## Internal vs External Edges
 
 - Internal resolved imports (EXTRACTED): 14
-- Cross-boundary resolved imports (EXTRACTED): 39
+- Cross-boundary resolved imports (EXTRACTED): 42
 
 ## Connections
 
-- [EXTRACTED] depends_on community 1 <-> 2 (strength 0.9): Extracted import edge crosses communities: deploynator/__main__.py imports deploynator/_models.py.
-- [EXTRACTED] depends_on community 4 <-> 2 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_models.py.
-- [EXTRACTED] depends_on community 3 <-> 2 (strength 0.9): Extracted import edge crosses communities: deploynator/_changelog.py imports deploynator/_models.py.
-- [EXTRACTED] depends_on community 0 <-> 2 (strength 0.9): Extracted import edge crosses communities: tests/bdd_test_deploy.py imports deploynator/_models.py.
-- [INFERRED] bridges community 1 <-> 2 (strength 0.6): Inferred cross-community bridge: app.py reaches tests/test_models.py in 4 hops.
-- [INFERRED] bridges community 3 <-> 2 (strength 0.6): Inferred cross-community bridge: tests/test_config.py reaches tests/test_models.py in 4 hops.
-- [INFERRED] bridges community 1 <-> 2 (strength 0.6): Inferred cross-community bridge: tests/test_init.py reaches tests/test_models.py in 4 hops.
-- [INFERRED] bridges community 2 <-> 3 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_readme_footer.py in 4 hops.
-- [INFERRED] bridges community 2 <-> 0 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_runner.py in 4 hops.
+- [EXTRACTED] depends_on community 1 <-> 3 (strength 0.9): Extracted import edge crosses communities: deploynator/__main__.py imports deploynator/_models.py.
+- [EXTRACTED] depends_on community 2 <-> 3 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_models.py.
+- [EXTRACTED] depends_on community 4 <-> 3 (strength 0.9): Extracted import edge crosses communities: deploynator/_changelog.py imports deploynator/_models.py.
+- [EXTRACTED] depends_on community 0 <-> 3 (strength 0.9): Extracted import edge crosses communities: tests/bdd_test_deploy.py imports deploynator/_models.py.
+- [INFERRED] bridges community 1 <-> 3 (strength 0.6): Inferred cross-community bridge: app.py reaches tests/test_models.py in 4 hops.
+- [INFERRED] bridges community 4 <-> 3 (strength 0.6): Inferred cross-community bridge: tests/test_config.py reaches tests/test_models.py in 4 hops.
+- [INFERRED] bridges community 1 <-> 3 (strength 0.6): Inferred cross-community bridge: tests/test_init.py reaches tests/test_models.py in 4 hops.
+- [INFERRED] bridges community 3 <-> 4 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_readme_footer.py in 4 hops.
+- [INFERRED] bridges community 3 <-> 0 (strength 0.6): Inferred cross-community bridge: tests/test_models.py reaches tests/test_runner.py in 4 hops.
 
 ## Risks
 
@@ -78,7 +78,7 @@ This community groups 7 file(s) rooted at `tests` with dominant language py (coh
 
 - Why do 5 file(s) lack file-level docs (e.g. `deploynator/_models.py`)? What purpose do they serve?
 - What would break if the most connected file in deploynator: _models changed?
-- Should deploynator: _models be split, given cohesion 0.33?
+- Should deploynator: _models be split, given cohesion 0.32?
 
 ## Sources
 

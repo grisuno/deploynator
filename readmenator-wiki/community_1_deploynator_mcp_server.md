@@ -22,8 +22,8 @@ This community groups 7 file(s) rooted at `deploynator` with dominant language p
 
 - `main` (function, `app.py:12`) `def main()`
 - `build_parser` (function, `deploynator/__main__.py:16`) `def build_parser()`
-- `preprocess_argv` (function, `deploynator/__main__.py:144`) `def preprocess_argv(argv)`
-- `main` (function, `deploynator/__main__.py:178`) `def main(argv)`
+- `preprocess_argv` (function, `deploynator/__main__.py:146`) `def preprocess_argv(argv)`
+- `main` (function, `deploynator/__main__.py:180`) `def main(argv)`
 - `MCPRequest` (class, `deploynator/_mcp_server.py:36`) `class MCPRequest`
 - `__init__` (method, `deploynator/_mcp_server.py:37`) `def __init__(self, msg)`
 - `is_notification` (method, `deploynator/_mcp_server.py:44`) `def is_notification(self)`
@@ -49,7 +49,7 @@ This community groups 7 file(s) rooted at `deploynator` with dominant language p
 - `dispatch` (method, `deploynator/_mcp_server.py:145`) `def dispatch(self, req)`
 - `run` (method, `deploynator/_mcp_server.py:163`) `def run(self)`
 - `_register_all` (method, `deploynator/_mcp_server.py:181`) `def _register_all(self)`
-- `_tool_release` (method, `deploynator/_mcp_server.py:235`) `def _tool_release(self, project, commit_type, subject, message, scope, body, bum`
+- `_tool_release` (method, `deploynator/_mcp_server.py:236`) `def _tool_release(self, project, commit_type, subject, message, scope, body, bum`
 
 ## Internal vs External Edges
 
@@ -58,12 +58,12 @@ This community groups 7 file(s) rooted at `deploynator` with dominant language p
 
 ## Connections
 
-- [EXTRACTED] depends_on community 1 <-> 3 (strength 0.9): Extracted import edge crosses communities: app.py imports deploynator/_config.py.
-- [EXTRACTED] depends_on community 1 <-> 4 (strength 0.9): Extracted import edge crosses communities: deploynator/__init__.py imports deploynator/_app.py.
-- [EXTRACTED] depends_on community 1 <-> 2 (strength 0.9): Extracted import edge crosses communities: deploynator/__main__.py imports deploynator/_models.py.
+- [EXTRACTED] depends_on community 1 <-> 4 (strength 0.9): Extracted import edge crosses communities: app.py imports deploynator/_config.py.
+- [EXTRACTED] depends_on community 1 <-> 2 (strength 0.9): Extracted import edge crosses communities: deploynator/__init__.py imports deploynator/_app.py.
+- [EXTRACTED] depends_on community 1 <-> 3 (strength 0.9): Extracted import edge crosses communities: deploynator/__main__.py imports deploynator/_models.py.
 - [EXTRACTED] depends_on community 1 <-> 0 (strength 0.9): Extracted import edge crosses communities: tests/test_init.py imports deploynator/_toml.py.
-- [INFERRED] bridges community 1 <-> 2 (strength 0.6): Inferred cross-community bridge: app.py reaches tests/test_models.py in 4 hops.
-- [INFERRED] bridges community 1 <-> 2 (strength 0.6): Inferred cross-community bridge: tests/test_init.py reaches tests/test_models.py in 4 hops.
+- [INFERRED] bridges community 1 <-> 3 (strength 0.6): Inferred cross-community bridge: app.py reaches tests/test_models.py in 4 hops.
+- [INFERRED] bridges community 1 <-> 3 (strength 0.6): Inferred cross-community bridge: tests/test_init.py reaches tests/test_models.py in 4 hops.
 - [INFERRED] shares_context community 1 <-> 5 (strength 0.5): Inferred shared context (layer utility) with no import path between community 1 (deploynator: _mcp_server) and community 5 (orphans).
 
 ## Risks

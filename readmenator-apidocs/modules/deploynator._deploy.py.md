@@ -35,6 +35,7 @@ flowchart LR
     n_deploynator__deploy_py__DeployOrchestrator___init__(["DeployOrchestrator.__init__"])
     n_deploynator__deploy_py__ProjectDiscovery___init__(["ProjectDiscovery.__init__"])
     n_deploynator__changelog_py__ChangelogGenerator___init__["_changelog.ChangelogGenerator.__init__"]
+    n_deploynator__deb_py__DebRunner___init__["_deb.DebRunner.__init__"]
     n_deploynator__docs_py__DocsRunner___init__["_docs.DocsRunner.__init__"]
     n_deploynator__git_py__GitOperations___init__["_git.GitOperations.__init__"]
     n_deploynator__pypi_py__PyPIRunner___init__["_pypi.PyPIRunner.__init__"]
@@ -44,6 +45,8 @@ flowchart LR
     n_deploynator__changelog_py__ChangelogGenerator_format_for_release["_changelog.ChangelogGenerator.format_for_release"]
     n_deploynator__changelog_py__ChangelogGenerator_generate_from_log["_changelog.ChangelogGenerator.generate_from_log"]
     n_deploynator__changelog_py__ChangelogGenerator_write_changelog["_changelog.ChangelogGenerator.write_changelog"]
+    n_deploynator__deb_py__DebRunner_is_deb_project["_deb.DebRunner.is_deb_project"]
+    n_deploynator__deb_py__DebRunner_run["_deb.DebRunner.run"]
     n_deploynator__docs_py__DocsRunner_run["_docs.DocsRunner.run"]
     n_deploynator__git_py__GitOperations_add_all["_git.GitOperations.add_all"]
     n_deploynator__git_py__GitOperations_commit["_git.GitOperations.commit"]
@@ -54,12 +57,10 @@ flowchart LR
     n_deploynator__git_py__GitOperations_push["_git.GitOperations.push"]
     n_deploynator__git_py__GitOperations_tag["_git.GitOperations.tag"]
     n_deploynator__git_py__GitOperations_tag_exists["_git.GitOperations.tag_exists"]
-    n_deploynator__models_py__CommitMessage["_models.CommitMessage"]
-    n_deploynator__models_py__DeployResult["_models.DeployResult"]
-    n_deploynator__models_py__ReleaseInfo["_models.ReleaseInfo"]
     n_deploynator__deploy_py__ProjectDiscovery_find_by_name --> n_deploynator__deploy_py__ProjectDiscovery_discover
     n_deploynator__deploy_py__DeployOrchestrator___init__ --> n_deploynator__deploy_py__ProjectDiscovery___init__
     n_deploynator__deploy_py__DeployOrchestrator___init__ -.-> n_deploynator__changelog_py__ChangelogGenerator___init__
+    n_deploynator__deploy_py__DeployOrchestrator___init__ -.-> n_deploynator__deb_py__DebRunner___init__
     n_deploynator__deploy_py__DeployOrchestrator___init__ -.-> n_deploynator__docs_py__DocsRunner___init__
     n_deploynator__deploy_py__DeployOrchestrator___init__ -.-> n_deploynator__git_py__GitOperations___init__
     n_deploynator__deploy_py__DeployOrchestrator___init__ -.-> n_deploynator__pypi_py__PyPIRunner___init__
@@ -68,6 +69,8 @@ flowchart LR
     n_deploynator__deploy_py__DeployOrchestrator_deploy -.-> n_deploynator__changelog_py__ChangelogGenerator_format_for_release
     n_deploynator__deploy_py__DeployOrchestrator_deploy -.-> n_deploynator__changelog_py__ChangelogGenerator_generate_from_log
     n_deploynator__deploy_py__DeployOrchestrator_deploy -.-> n_deploynator__changelog_py__ChangelogGenerator_write_changelog
+    n_deploynator__deploy_py__DeployOrchestrator_deploy -.-> n_deploynator__deb_py__DebRunner_is_deb_project
+    n_deploynator__deploy_py__DeployOrchestrator_deploy -.-> n_deploynator__deb_py__DebRunner_run
     n_deploynator__deploy_py__DeployOrchestrator_deploy -.-> n_deploynator__docs_py__DocsRunner_run
     n_deploynator__deploy_py__DeployOrchestrator_deploy -.-> n_deploynator__git_py__GitOperations_add_all
     n_deploynator__deploy_py__DeployOrchestrator_deploy -.-> n_deploynator__git_py__GitOperations_commit
@@ -78,9 +81,6 @@ flowchart LR
     n_deploynator__deploy_py__DeployOrchestrator_deploy -.-> n_deploynator__git_py__GitOperations_push
     n_deploynator__deploy_py__DeployOrchestrator_deploy -.-> n_deploynator__git_py__GitOperations_tag
     n_deploynator__deploy_py__DeployOrchestrator_deploy -.-> n_deploynator__git_py__GitOperations_tag_exists
-    n_deploynator__deploy_py__DeployOrchestrator_deploy -.-> n_deploynator__models_py__CommitMessage
-    n_deploynator__deploy_py__DeployOrchestrator_deploy -.-> n_deploynator__models_py__DeployResult
-    n_deploynator__deploy_py__DeployOrchestrator_deploy -.-> n_deploynator__models_py__ReleaseInfo
 ```
 
 ## Classes
@@ -89,7 +89,7 @@ flowchart LR
 
 ### `ProjectDiscovery`
 
-`class` | [deploynator/_deploy.py:29](../../deploynator/_deploy.py#L29)
+`class` | [deploynator/_deploy.py:30](../../deploynator/_deploy.py#L30)
 
 ```python
 class ProjectDiscovery
@@ -107,7 +107,7 @@ class ProjectDiscovery
 
 #### `ProjectDiscovery.__init__`
 
-`constructor` | [deploynator/_deploy.py:30](../../deploynator/_deploy.py#L30)
+`constructor` | [deploynator/_deploy.py:31](../../deploynator/_deploy.py#L31)
 
 ```python
 def __init__(self, config: Config) -> None
@@ -125,7 +125,7 @@ def __init__(self, config: Config) -> None
 
 #### `ProjectDiscovery.discover`
 
-`method` | [deploynator/_deploy.py:33](../../deploynator/_deploy.py#L33)
+`method` | [deploynator/_deploy.py:34](../../deploynator/_deploy.py#L34)
 
 ```python
 def discover(self, search_path: str = '') -> list[ProjectConfig]
@@ -145,7 +145,7 @@ def discover(self, search_path: str = '') -> list[ProjectConfig]
 
 #### `ProjectDiscovery.find_by_name`
 
-`method` | [deploynator/_deploy.py:54](../../deploynator/_deploy.py#L54)
+`method` | [deploynator/_deploy.py:55](../../deploynator/_deploy.py#L55)
 
 ```python
 def find_by_name(self, name: str, search_path: str = '') -> ProjectConfig | None
@@ -170,7 +170,7 @@ def find_by_name(self, name: str, search_path: str = '') -> ProjectConfig | None
 
 ### `DeployOrchestrator`
 
-`class` | [deploynator/_deploy.py:74](../../deploynator/_deploy.py#L74)
+`class` | [deploynator/_deploy.py:75](../../deploynator/_deploy.py#L75)
 
 ```python
 class DeployOrchestrator
@@ -191,7 +191,7 @@ class DeployOrchestrator
 
 #### `DeployOrchestrator.__init__`
 
-`constructor` | [deploynator/_deploy.py:75](../../deploynator/_deploy.py#L75)
+`constructor` | [deploynator/_deploy.py:76](../../deploynator/_deploy.py#L76)
 
 ```python
 def __init__(self, config: Config) -> None
@@ -203,7 +203,7 @@ def __init__(self, config: Config) -> None
 |---|---|---|---|
 | `config` | `Config` |  |  |
 
-*Calls:* [`ChangelogGenerator.__init__`](deploynator._changelog.py.md#changeloggenerator-__init__), [`ProjectDiscovery.__init__`](#projectdiscovery-__init__), [`DocsRunner.__init__`](deploynator._docs.py.md#docsrunner-__init__), [`GitOperations.__init__`](deploynator._git.py.md#gitoperations-__init__), [`PyPIRunner.__init__`](deploynator._pypi.py.md#pypirunner-__init__), [`TestRunner.__init__`](deploynator._runner.py.md#testrunner-__init__), [`SemverManager.__init__`](deploynator._semver.py.md#semvermanager-__init__)
+*Calls:* [`ChangelogGenerator.__init__`](deploynator._changelog.py.md#changeloggenerator-__init__), [`DebRunner.__init__`](deploynator._deb.py.md#debrunner-__init__), [`ProjectDiscovery.__init__`](#projectdiscovery-__init__), [`DocsRunner.__init__`](deploynator._docs.py.md#docsrunner-__init__), [`GitOperations.__init__`](deploynator._git.py.md#gitoperations-__init__), [`PyPIRunner.__init__`](deploynator._pypi.py.md#pypirunner-__init__), [`TestRunner.__init__`](deploynator._runner.py.md#testrunner-__init__), [`SemverManager.__init__`](deploynator._semver.py.md#semvermanager-__init__)
 
 *Called by:* [`DeploynatorApp.__init__`](deploynator._app.py.md#deploynatorapp-__init__)
 
@@ -211,10 +211,10 @@ def __init__(self, config: Config) -> None
 
 #### `DeployOrchestrator.deploy`
 
-`method` | [deploynator/_deploy.py:95](../../deploynator/_deploy.py#L95)
+`method` | [deploynator/_deploy.py:97](../../deploynator/_deploy.py#L97)
 
 ```python
-def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, scope: str = '', body: str = '', dry_run: bool = False, platforms_override: list[Platform] | None = None, run_tests: bool = True, run_docs: bool = True, force_bump: str | None = None, run_pypi: bool = True, verbose: bool = False) -> DeployResult
+def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, scope: str = '', body: str = '', dry_run: bool = False, platforms_override: list[Platform] | None = None, run_tests: bool = True, run_docs: bool = True, force_bump: str | None = None, run_pypi: bool = True, run_deb: bool = True, verbose: bool = False) -> DeployResult
 ```
 
 **Parameters**
@@ -232,11 +232,12 @@ def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, 
 | `run_docs` | `bool` | `True` |  |
 | `force_bump` | `str \| None` | `None` |  |
 | `run_pypi` | `bool` | `True` |  |
+| `run_deb` | `bool` | `True` |  |
 | `verbose` | `bool` | `False` |  |
 
 **Returns:** `DeployResult`
 
-*Calls:* [`ChangelogGenerator.format_for_release`](deploynator._changelog.py.md#changeloggenerator-format_for_release), [`ChangelogGenerator.generate_from_log`](deploynator._changelog.py.md#changeloggenerator-generate_from_log), [`ChangelogGenerator.write_changelog`](deploynator._changelog.py.md#changeloggenerator-write_changelog), [`DocsRunner.run`](deploynator._docs.py.md#docsrunner-run), [`GitOperations.add_all`](deploynator._git.py.md#gitoperations-add_all), [`GitOperations.commit`](deploynator._git.py.md#gitoperations-commit), [`GitOperations.current_branch`](deploynator._git.py.md#gitoperations-current_branch), [`GitOperations.get_changed_files`](deploynator._git.py.md#gitoperations-get_changed_files), [`GitOperations.get_start_ref`](deploynator._git.py.md#gitoperations-get_start_ref), [`GitOperations.has_remote`](deploynator._git.py.md#gitoperations-has_remote), [`GitOperations.push`](deploynator._git.py.md#gitoperations-push), [`GitOperations.tag`](deploynator._git.py.md#gitoperations-tag) and 18 more
+*Calls:* [`ChangelogGenerator.format_for_release`](deploynator._changelog.py.md#changeloggenerator-format_for_release), [`ChangelogGenerator.generate_from_log`](deploynator._changelog.py.md#changeloggenerator-generate_from_log), [`ChangelogGenerator.write_changelog`](deploynator._changelog.py.md#changeloggenerator-write_changelog), [`DebRunner.is_deb_project`](deploynator._deb.py.md#debrunner-is_deb_project), [`DebRunner.run`](deploynator._deb.py.md#debrunner-run), [`DocsRunner.run`](deploynator._docs.py.md#docsrunner-run), [`GitOperations.add_all`](deploynator._git.py.md#gitoperations-add_all), [`GitOperations.commit`](deploynator._git.py.md#gitoperations-commit), [`GitOperations.current_branch`](deploynator._git.py.md#gitoperations-current_branch), [`GitOperations.get_changed_files`](deploynator._git.py.md#gitoperations-get_changed_files), [`GitOperations.get_start_ref`](deploynator._git.py.md#gitoperations-get_start_ref), [`GitOperations.has_remote`](deploynator._git.py.md#gitoperations-has_remote) and 20 more
 
 *Called by:* [`DeploynatorApp.release`](deploynator._app.py.md#deploynatorapp-release)
 
@@ -244,7 +245,7 @@ def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, 
 
 #### `DeployOrchestrator.generate_workflows`
 
-`method` | [deploynator/_deploy.py:465](../../deploynator/_deploy.py#L465)
+`method` | [deploynator/_deploy.py:524](../../deploynator/_deploy.py#L524)
 
 ```python
 def generate_workflows(self, project: ProjectConfig, output_dir: str = '.github/workflows') -> list[str]
@@ -265,7 +266,7 @@ def generate_workflows(self, project: ProjectConfig, output_dir: str = '.github/
 
 #### `DeployOrchestrator.install_dependencies`
 
-`method` | [deploynator/_deploy.py:532](../../deploynator/_deploy.py#L532)
+`method` | [deploynator/_deploy.py:591](../../deploynator/_deploy.py#L591)
 
 ```python
 def install_dependencies(self, project: ProjectConfig) -> dict[str, bool]
@@ -287,7 +288,7 @@ def install_dependencies(self, project: ProjectConfig) -> dict[str, bool]
 
 #### `DeployOrchestrator.integrate_readmenator`
 
-`method` | [deploynator/_deploy.py:542](../../deploynator/_deploy.py#L542)
+`method` | [deploynator/_deploy.py:601](../../deploynator/_deploy.py#L601)
 
 ```python
 def integrate_readmenator(self, project_path: str) -> bool
@@ -313,7 +314,7 @@ def integrate_readmenator(self, project_path: str) -> bool
 
 #### `DeployOrchestrator.install_lazygit`
 
-`method` | [deploynator/_deploy.py:578](../../deploynator/_deploy.py#L578)
+`method` | [deploynator/_deploy.py:637](../../deploynator/_deploy.py#L637)
 
 ```python
 def install_lazygit(self) -> bool

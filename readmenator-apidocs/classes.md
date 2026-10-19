@@ -9,6 +9,7 @@ Project types nested under the project types they derive from. External bases ar
 - [`CommitMessage`](modules/deploynator._models.py.md#commitmessage) class in `deploynator._models`
 - [`CommitType`](modules/deploynator._models.py.md#committype) enum in `deploynator._models`(Enum)
 - [`Config`](modules/deploynator._config.py.md#config) class in `deploynator._config`
+- [`DebRunner`](modules/deploynator._deb.py.md#debrunner) class in `deploynator._deb`
 - [`DeploynatorApp`](modules/deploynator._app.py.md#deploynatorapp) class in `deploynator._app`
 - [`DeployOrchestrator`](modules/deploynator._deploy.py.md#deployorchestrator) class in `deploynator._deploy`
 - [`DeployResult`](modules/deploynator._models.py.md#deployresult) class in `deploynator._models`

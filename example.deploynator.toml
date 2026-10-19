@@ -41,3 +41,16 @@ enabled = true
 repo = "pypi"      # pypi | testpypi | URL custom
 clean_dist = true
 timeout_s = 600
+
+[deb]
+# Proyectos C (Makefile): equivale PyPI pero como asset .deb descargable.
+# Detecta debian/control o target make: deb|package-deb|dist-deb|deb-package|package.
+# Construye antes del release y sube el .deb con `gh release upload --clobber`.
+# build = "" -> auto (`make <target>` o `dpkg-buildpackage -us -uc -b`).
+# Ej. C explícito: build = "make deb". Salta con --no-deb.
+enabled = true
+build = ""
+outdir = "dist-deb"
+clean_dist = true
+timeout_s = 600
+upload_assets = true

@@ -10,6 +10,7 @@
         "deploynator/_app.py",
         "deploynator/_changelog.py",
         "deploynator/_config.py",
+        "deploynator/_deb.py",
         "deploynator/_deploy.py",
         "deploynator/_docs.py",
         "deploynator/_git.py",
@@ -27,7 +28,28 @@
         "tests/test_install_example.py",
         "tests/test_toml.py"
       ],
-      "mentions": 37,
+      "mentions": 38,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "run",
+      "files": [
+        "app.py",
+        "deploy.sh",
+        "deploynator/_deb.py",
+        "deploynator/_docs.py",
+        "deploynator/_mcp_server.py",
+        "deploynator/_platforms.py",
+        "deploynator/_pypi.py",
+        "deploynator/_runner.py",
+        "tests/test_deb.py",
+        "tests/test_install_example.py",
+        "tests/test_path_deploy.py",
+        "tests/test_pipeline.py",
+        "tests/test_pypi.py",
+        "tests/test_readme_footer.py"
+      ],
+      "mentions": 23,
       "confidence": "EXTRACTED"
     },
     {
@@ -39,6 +61,7 @@
         "deploynator/_models.py",
         "deploynator/_readme.py",
         "tests/bdd_test_deploy.py",
+        "tests/test_deb.py",
         "tests/test_deploy.py",
         "tests/test_init.py",
         "tests/test_models.py",
@@ -46,7 +69,27 @@
         "tests/test_pipeline.py",
         "tests/test_readme_footer.py"
       ],
-      "mentions": 35,
+      "mentions": 36,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "project",
+      "files": [
+        "deploynator/_app.py",
+        "deploynator/_deb.py",
+        "deploynator/_deploy.py",
+        "deploynator/_models.py",
+        "deploynator/_pypi.py",
+        "deploynator/_toml.py",
+        "tests/bdd_test_deploy.py",
+        "tests/test_deb.py",
+        "tests/test_deploy.py",
+        "tests/test_models.py",
+        "tests/test_pipeline.py",
+        "tests/test_pypi.py",
+        "tests/test_toml.py"
+      ],
+      "mentions": 22,
       "confidence": "EXTRACTED"
     },
     {
@@ -65,26 +108,7 @@
         "tests/test_models.py",
         "tests/test_path_deploy.py"
       ],
-      "mentions": 34,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "run",
-      "files": [
-        "app.py",
-        "deploy.sh",
-        "deploynator/_docs.py",
-        "deploynator/_mcp_server.py",
-        "deploynator/_platforms.py",
-        "deploynator/_pypi.py",
-        "deploynator/_runner.py",
-        "tests/test_install_example.py",
-        "tests/test_path_deploy.py",
-        "tests/test_pipeline.py",
-        "tests/test_pypi.py",
-        "tests/test_readme_footer.py"
-      ],
-      "mentions": 17,
+      "mentions": 39,
       "confidence": "EXTRACTED"
     },
     {
@@ -96,31 +120,14 @@
         "deploynator/_platforms.py",
         "deploynator/_pypi.py",
         "tests/bdd_test_deploy.py",
+        "tests/test_deb.py",
         "tests/test_git_sync.py",
         "tests/test_models.py",
         "tests/test_path_deploy.py",
         "tests/test_pipeline.py",
         "tests/test_pypi.py"
       ],
-      "mentions": 22,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "project",
-      "files": [
-        "deploynator/_app.py",
-        "deploynator/_deploy.py",
-        "deploynator/_models.py",
-        "deploynator/_pypi.py",
-        "deploynator/_toml.py",
-        "tests/bdd_test_deploy.py",
-        "tests/test_deploy.py",
-        "tests/test_models.py",
-        "tests/test_pipeline.py",
-        "tests/test_pypi.py",
-        "tests/test_toml.py"
-      ],
-      "mentions": 19,
+      "mentions": 23,
       "confidence": "EXTRACTED"
     },
     {
@@ -139,6 +146,36 @@
       "confidence": "EXTRACTED"
     },
     {
+      "name": "tag",
+      "files": [
+        "deploynator/_deploy.py",
+        "deploynator/_git.py",
+        "deploynator/_mcp_server.py",
+        "deploynator/_platforms.py",
+        "deploynator/_semver.py",
+        "tests/bdd_test_deploy.py",
+        "tests/test_path_deploy.py",
+        "tests/test_pipeline.py"
+      ],
+      "mentions": 16,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "red",
+      "files": [
+        "tests/test_cli_mcp.py",
+        "tests/test_deb.py",
+        "tests/test_init.py",
+        "tests/test_install_example.py",
+        "tests/test_pipeline.py",
+        "tests/test_pypi.py",
+        "tests/test_runner.py",
+        "tests/test_toml.py"
+      ],
+      "mentions": 8,
+      "confidence": "EXTRACTED"
+    },
+    {
       "name": "version",
       "files": [
         "deploynator/_models.py",
@@ -150,6 +187,20 @@
         "tests/test_semver.py"
       ],
       "mentions": 27,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "toml",
+      "files": [
+        "deploynator/_toml.py",
+        "tests/test_deb.py",
+        "tests/test_init.py",
+        "tests/test_path_deploy.py",
+        "tests/test_pypi.py",
+        "tests/test_runner.py",
+        "tests/test_toml.py"
+      ],
+      "mentions": 23,
       "confidence": "EXTRACTED"
     },
     {
@@ -209,6 +260,20 @@
       "confidence": "EXTRACTED"
     },
     {
+      "name": "default",
+      "files": [
+        "deploynator/_app.py",
+        "deploynator/_deb.py",
+        "deploynator/_platforms.py",
+        "deploynator/_toml.py",
+        "tests/test_config.py",
+        "tests/test_install_example.py",
+        "tests/test_pypi.py"
+      ],
+      "mentions": 9,
+      "confidence": "EXTRACTED"
+    },
+    {
       "name": "none",
       "files": [
         "deploynator/_app.py",
@@ -251,33 +316,6 @@
       "confidence": "EXTRACTED"
     },
     {
-      "name": "red",
-      "files": [
-        "tests/test_cli_mcp.py",
-        "tests/test_init.py",
-        "tests/test_install_example.py",
-        "tests/test_pipeline.py",
-        "tests/test_pypi.py",
-        "tests/test_runner.py",
-        "tests/test_toml.py"
-      ],
-      "mentions": 7,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "toml",
-      "files": [
-        "deploynator/_toml.py",
-        "tests/test_init.py",
-        "tests/test_path_deploy.py",
-        "tests/test_pypi.py",
-        "tests/test_runner.py",
-        "tests/test_toml.py"
-      ],
-      "mentions": 21,
-      "confidence": "EXTRACTED"
-    },
-    {
       "name": "docs",
       "files": [
         "deploynator/_app.py",
@@ -288,6 +326,19 @@
         "tests/test_runner.py"
       ],
       "mentions": 20,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "runner",
+      "files": [
+        "deploynator/_deb.py",
+        "deploynator/_docs.py",
+        "deploynator/_runner.py",
+        "tests/test_deb.py",
+        "tests/test_pypi.py",
+        "tests/test_runner.py"
+      ],
+      "mentions": 15,
       "confidence": "EXTRACTED"
     },
     {
@@ -317,16 +368,29 @@
       "confidence": "EXTRACTED"
     },
     {
-      "name": "tag",
+      "name": "make",
       "files": [
-        "deploynator/_git.py",
-        "deploynator/_mcp_server.py",
-        "deploynator/_semver.py",
-        "tests/bdd_test_deploy.py",
-        "tests/test_path_deploy.py",
-        "tests/test_pipeline.py"
+        "deploynator/_deb.py",
+        "deploynator/_toml.py",
+        "tests/test_deb.py",
+        "tests/test_git_sync.py",
+        "tests/test_runner.py",
+        "tests/test_toml.py"
       ],
-      "mentions": 14,
+      "mentions": 11,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "repo",
+      "files": [
+        "deploy.sh",
+        "deploynator/_deploy.py",
+        "deploynator/_mcp_server.py",
+        "deploynator/_platforms.py",
+        "deploynator/_readme.py",
+        "tests/test_git_sync.py"
+      ],
+      "mentions": 10,
       "confidence": "EXTRACTED"
     },
     {
@@ -343,6 +407,19 @@
       "confidence": "EXTRACTED"
     },
     {
+      "name": "empty",
+      "files": [
+        "tests/test_changelog.py",
+        "tests/test_deb.py",
+        "tests/test_deploy.py",
+        "tests/test_install_example.py",
+        "tests/test_pypi.py",
+        "tests/test_runner.py"
+      ],
+      "mentions": 9,
+      "confidence": "EXTRACTED"
+    },
+    {
       "name": "name",
       "files": [
         "deploynator/_deploy.py",
@@ -356,6 +433,32 @@
       "confidence": "EXTRACTED"
     },
     {
+      "name": "failure",
+      "files": [
+        "tests/bdd_test_deploy.py",
+        "tests/test_deb.py",
+        "tests/test_install_example.py",
+        "tests/test_pipeline.py",
+        "tests/test_pypi.py",
+        "tests/test_runner.py"
+      ],
+      "mentions": 8,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "shell",
+      "files": [
+        "deploynator/_deb.py",
+        "deploynator/_platforms.py",
+        "tests/test_deb.py",
+        "tests/test_install_example.py",
+        "tests/test_pypi.py",
+        "tests/test_runner.py"
+      ],
+      "mentions": 7,
+      "confidence": "EXTRACTED"
+    },
+    {
       "name": "create",
       "files": [
         "deploynator/_config.py",
@@ -365,6 +468,30 @@
         "tests/bdd_test_deploy.py"
       ],
       "mentions": 18,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "packaging",
+      "files": [
+        "deploynator/_pypi.py",
+        "deploynator/_toml.py",
+        "tests/test_deb.py",
+        "tests/test_pypi.py",
+        "tests/test_toml.py"
+      ],
+      "mentions": 13,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "build",
+      "files": [
+        "deploynator/__main__.py",
+        "deploynator/_deb.py",
+        "deploynator/_toml.py",
+        "tests/test_deb.py",
+        "tests/test_pypi.py"
+      ],
+      "mentions": 12,
       "confidence": "EXTRACTED"
     },
     {
@@ -392,15 +519,15 @@
       "confidence": "EXTRACTED"
     },
     {
-      "name": "empty",
+      "name": "upload",
       "files": [
-        "tests/test_changelog.py",
-        "tests/test_deploy.py",
-        "tests/test_install_example.py",
-        "tests/test_pypi.py",
-        "tests/test_runner.py"
+        "deploy.sh",
+        "deploynator/_deploy.py",
+        "deploynator/_platforms.py",
+        "tests/test_deb.py",
+        "tests/test_pypi.py"
       ],
-      "mentions": 8,
+      "mentions": 9,
       "confidence": "EXTRACTED"
     },
     {
@@ -416,37 +543,49 @@
       "confidence": "EXTRACTED"
     },
     {
-      "name": "repo",
+      "name": "pipeline",
       "files": [
-        "deploy.sh",
-        "deploynator/_deploy.py",
         "deploynator/_mcp_server.py",
-        "deploynator/_readme.py",
-        "tests/test_git_sync.py"
+        "tests/bdd_test_deploy.py",
+        "tests/test_deb.py",
+        "tests/test_pipeline.py",
+        "tests/test_pypi.py"
       ],
       "mentions": 8,
       "confidence": "EXTRACTED"
     },
     {
-      "name": "default",
+      "name": "target",
       "files": [
-        "deploynator/_app.py",
+        "deploynator/_deb.py",
         "deploynator/_toml.py",
-        "tests/test_config.py",
-        "tests/test_install_example.py",
-        "tests/test_pypi.py"
+        "tests/test_deb.py",
+        "tests/test_runner.py",
+        "tests/test_toml.py"
       ],
-      "mentions": 7,
+      "mentions": 8,
       "confidence": "EXTRACTED"
     },
     {
-      "name": "failure",
+      "name": "without",
       "files": [
-        "tests/bdd_test_deploy.py",
-        "tests/test_install_example.py",
-        "tests/test_pipeline.py",
+        "deploynator/_mcp_server.py",
+        "deploynator/_readme.py",
+        "tests/test_deb.py",
         "tests/test_pypi.py",
-        "tests/test_runner.py"
+        "tests/test_readme_footer.py"
+      ],
+      "mentions": 8,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "para",
+      "files": [
+        "deploynator/_deb.py",
+        "deploynator/_deploy.py",
+        "deploynator/_pypi.py",
+        "deploynator/_toml.py",
+        "tests/bdd_test_deploy.py"
       ],
       "mentions": 7,
       "confidence": "EXTRACTED"
@@ -461,6 +600,30 @@
         "tests/test_install_example.py"
       ],
       "mentions": 6,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "como",
+      "files": [
+        "deploynator/_deb.py",
+        "deploynator/_platforms.py",
+        "tests/bdd_test_deploy.py",
+        "tests/test_deb.py",
+        "tests/test_install_example.py"
+      ],
+      "mentions": 5,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "dir",
+      "files": [
+        "deploynator/_deb.py",
+        "tests/test_deb.py",
+        "tests/test_deploy.py",
+        "tests/test_pypi.py",
+        "tests/test_runner.py"
+      ],
+      "mentions": 5,
       "confidence": "EXTRACTED"
     },
     {
@@ -488,6 +651,18 @@
       "confidence": "EXTRACTED"
     },
     {
+      "name": "hay",
+      "files": [
+        "deploynator/_app.py",
+        "deploynator/_deb.py",
+        "deploynator/_deploy.py",
+        "deploynator/_pypi.py",
+        "deploynator/_toml.py"
+      ],
+      "mentions": 5,
+      "confidence": "EXTRACTED"
+    },
+    {
       "name": "platform",
       "files": [
         "deploynator/_models.py",
@@ -510,17 +685,6 @@
       "confidence": "EXTRACTED"
     },
     {
-      "name": "runner",
-      "files": [
-        "deploynator/_docs.py",
-        "deploynator/_runner.py",
-        "tests/test_pypi.py",
-        "tests/test_runner.py"
-      ],
-      "mentions": 12,
-      "confidence": "EXTRACTED"
-    },
-    {
       "name": "when",
       "files": [
         "deploynator/_readme.py",
@@ -530,146 +694,52 @@
       ],
       "mentions": 12,
       "confidence": "EXTRACTED"
-    },
-    {
-      "name": "line",
-      "files": [
-        "deploynator/_models.py",
-        "deploynator/_readme.py",
-        "tests/test_models.py",
-        "tests/test_readme_footer.py"
-      ],
-      "mentions": 11,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "packaging",
-      "files": [
-        "deploynator/_pypi.py",
-        "deploynator/_toml.py",
-        "tests/test_pypi.py",
-        "tests/test_toml.py"
-      ],
-      "mentions": 11,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "auth",
-      "files": [
-        "deploynator/_app.py",
-        "deploynator/_models.py",
-        "tests/test_config.py",
-        "tests/test_models.py"
-      ],
-      "mentions": 10,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "generate",
-      "files": [
-        "deploynator/_app.py",
-        "deploynator/_changelog.py",
-        "deploynator/_deploy.py",
-        "tests/test_changelog.py"
-      ],
-      "mentions": 10,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "changelog",
-      "files": [
-        "deploynator/_changelog.py",
-        "deploynator/_models.py",
-        "tests/test_changelog.py",
-        "tests/test_models.py"
-      ],
-      "mentions": 9,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "push",
-      "files": [
-        "deploynator/_deploy.py",
-        "deploynator/_git.py",
-        "deploynator/_mcp_server.py",
-        "deploynator/_platforms.py"
-      ],
-      "mentions": 9,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "returns",
-      "files": [
-        "deploynator/_readme.py",
-        "tests/test_pypi.py",
-        "tests/test_runner.py",
-        "tests/test_toml.py"
-      ],
-      "mentions": 9,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "get",
-      "files": [
-        "deploynator/_deploy.py",
-        "deploynator/_git.py",
-        "deploynator/_semver.py",
-        "tests/test_semver.py"
-      ],
-      "mentions": 8,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "max",
-      "files": [
-        "deploynator/_semver.py",
-        "deploynator/_toml.py",
-        "tests/bdd_test_deploy.py",
-        "tests/test_pipeline.py"
-      ],
-      "mentions": 8,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "load",
-      "files": [
-        "deploynator/_deploy.py",
-        "deploynator/_toml.py",
-        "tests/test_deploy.py",
-        "tests/test_toml.py"
-      ],
-      "mentions": 7,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "pipeline",
-      "files": [
-        "deploynator/_mcp_server.py",
-        "tests/bdd_test_deploy.py",
-        "tests/test_pipeline.py",
-        "tests/test_pypi.py"
-      ],
-      "mentions": 7,
-      "confidence": "EXTRACTED"
-    },
-    {
-      "name": "block",
-      "files": [
-        "deploynator/_readme.py",
-        "tests/bdd_test_deploy.py",
-        "tests/test_pipeline.py",
-        "tests/test_readme_footer.py"
-      ],
-      "mentions": 6,
-      "confidence": "EXTRACTED"
     }
   ],
   "relations": [
     {
-      "source": "release",
+      "source": "project",
       "target": "deploynator",
       "verb": "depends_on",
       "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_app.py->deploynator/_config.py",
+        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_app.py->deploynator/_git.py",
+        "deploynator/_app.py->deploynator/_models.py",
+        "deploynator/_app.py->deploynator/_platforms.py",
+        "deploynator/_app.py->deploynator/_toml.py",
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_deploy.py->deploynator/_changelog.py",
+        "deploynator/_deploy.py->deploynator/_config.py"
+      ]
+    },
+    {
+      "source": "deploy",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.92,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_deploy.py->deploynator/_changelog.py",
+        "deploynator/_deploy.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
+        "deploynator/_deploy.py->deploynator/_docs.py",
+        "deploynator/_deploy.py->deploynator/_git.py",
+        "deploynator/_deploy.py->deploynator/_models.py",
+        "deploynator/_deploy.py->deploynator/_platforms.py",
+        "deploynator/_deploy.py->deploynator/_pypi.py",
+        "deploynator/_deploy.py->deploynator/_readme.py",
+        "deploynator/_deploy.py->deploynator/_runner.py"
+      ]
+    },
+    {
+      "source": "release",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.88,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_app.py->deploynator/_config.py",
@@ -685,48 +755,29 @@
       ]
     },
     {
-      "source": "project",
+      "source": "run",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.98,
+      "strength": 0.79,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_app.py->deploynator/_config.py",
-        "deploynator/_app.py->deploynator/_deploy.py",
-        "deploynator/_app.py->deploynator/_git.py",
-        "deploynator/_app.py->deploynator/_models.py",
-        "deploynator/_app.py->deploynator/_platforms.py",
-        "deploynator/_app.py->deploynator/_toml.py",
-        "deploynator/_deploy.py->deploynator/_changelog.py",
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_docs.py",
-        "deploynator/_deploy.py->deploynator/_git.py"
-      ]
-    },
-    {
-      "source": "deploy",
-      "target": "deploynator",
-      "verb": "depends_on",
-      "strength": 0.93,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_deploy.py->deploynator/_changelog.py",
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_docs.py",
-        "deploynator/_deploy.py->deploynator/_git.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_platforms.py",
-        "deploynator/_deploy.py->deploynator/_pypi.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_deploy.py->deploynator/_runner.py",
-        "deploynator/_deploy.py->deploynator/_semver.py"
+        "app.py->deploynator/__init__.py",
+        "app.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_docs.py->deploynator/_config.py",
+        "deploynator/_docs.py->deploynator/_toml.py",
+        "deploynator/_mcp_server.py->deploynator/__init__.py",
+        "deploynator/_mcp_server.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_models.py"
       ]
     },
     {
       "source": "deploynator",
       "target": "config",
       "verb": "depends_on",
-      "strength": 0.85,
+      "strength": 0.77,
       "confidence": "INFERRED",
       "evidence": [
         "app.py->deploynator/_config.py",
@@ -737,27 +788,8 @@
         "deploynator/_app.py->deploynator/_toml.py",
         "deploynator/_changelog.py->deploynator/_config.py",
         "deploynator/_changelog.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_models.py"
-      ]
-    },
-    {
-      "source": "run",
-      "target": "deploynator",
-      "verb": "depends_on",
-      "strength": 0.76,
-      "confidence": "INFERRED",
-      "evidence": [
-        "app.py->deploynator/__init__.py",
-        "app.py->deploynator/_config.py",
-        "deploynator/_docs.py->deploynator/_config.py",
-        "deploynator/_docs.py->deploynator/_toml.py",
-        "deploynator/_mcp_server.py->deploynator/__init__.py",
-        "deploynator/_mcp_server.py->deploynator/_config.py",
-        "deploynator/_platforms.py->deploynator/_config.py",
-        "deploynator/_platforms.py->deploynator/_models.py",
-        "deploynator/_pypi.py->deploynator/_config.py",
-        "deploynator/_pypi.py->deploynator/_toml.py"
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py"
       ]
     },
     {
@@ -780,10 +812,86 @@
       ]
     },
     {
+      "source": "tag",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.71,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_deploy.py->deploynator/_changelog.py",
+        "deploynator/_deploy.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
+        "deploynator/_deploy.py->deploynator/_docs.py",
+        "deploynator/_deploy.py->deploynator/_git.py",
+        "deploynator/_deploy.py->deploynator/_models.py",
+        "deploynator/_deploy.py->deploynator/_platforms.py",
+        "deploynator/_deploy.py->deploynator/_pypi.py",
+        "deploynator/_deploy.py->deploynator/_readme.py",
+        "deploynator/_deploy.py->deploynator/_runner.py"
+      ]
+    },
+    {
+      "source": "red",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.6,
+      "confidence": "INFERRED",
+      "evidence": [
+        "tests/test_cli_mcp.py->deploynator/__init__.py",
+        "tests/test_cli_mcp.py->deploynator/__main__.py",
+        "tests/test_cli_mcp.py->deploynator/_config.py",
+        "tests/test_cli_mcp.py->deploynator/_mcp_server.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_init.py->deploynator/__init__.py"
+      ]
+    },
+    {
+      "source": "failure",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.56,
+      "confidence": "INFERRED",
+      "evidence": [
+        "tests/bdd_test_deploy.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/bdd_test_deploy.py->deploynator/_docs.py",
+        "tests/bdd_test_deploy.py->deploynator/_models.py",
+        "tests/bdd_test_deploy.py->deploynator/_semver.py",
+        "tests/bdd_test_deploy.py->deploynator/_toml.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py"
+      ]
+    },
+    {
+      "source": "project",
+      "target": "config",
+      "verb": "depends_on",
+      "strength": 0.56,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_app.py->deploynator/_config.py",
+        "deploynator/_app.py->deploynator/_models.py",
+        "deploynator/_app.py->deploynator/_toml.py",
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_deploy.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_models.py",
+        "deploynator/_deploy.py->deploynator/_readme.py",
+        "deploynator/_deploy.py->deploynator/_toml.py",
+        "deploynator/_pypi.py->deploynator/_config.py"
+      ]
+    },
+    {
       "source": "deploynator",
       "target": "create",
       "verb": "depends_on",
-      "strength": 0.61,
+      "strength": 0.54,
       "confidence": "INFERRED",
       "evidence": [
         "app.py->deploynator/_config.py",
@@ -793,35 +901,35 @@
         "deploynator/_app.py->deploynator/_git.py",
         "deploynator/_app.py->deploynator/_platforms.py",
         "deploynator/_changelog.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_config.py",
         "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_git.py",
-        "deploynator/_deploy.py->deploynator/_platforms.py"
+        "deploynator/_deploy.py->deploynator/_git.py"
       ]
     },
     {
       "source": "force",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.61,
+      "strength": 0.54,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_deploy.py->deploynator/_changelog.py",
         "deploynator/_deploy.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
         "deploynator/_deploy.py->deploynator/_docs.py",
         "deploynator/_deploy.py->deploynator/_git.py",
         "deploynator/_deploy.py->deploynator/_models.py",
         "deploynator/_deploy.py->deploynator/_platforms.py",
         "deploynator/_deploy.py->deploynator/_pypi.py",
         "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_deploy.py->deploynator/_runner.py",
-        "deploynator/_deploy.py->deploynator/_semver.py"
+        "deploynator/_deploy.py->deploynator/_runner.py"
       ]
     },
     {
       "source": "install",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.61,
+      "strength": 0.54,
       "confidence": "INFERRED",
       "evidence": [
         "app.py->deploynator/__init__.py",
@@ -837,10 +945,67 @@
       ]
     },
     {
+      "source": "path",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.52,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_app.py->deploynator/_config.py",
+        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_app.py->deploynator/_git.py",
+        "deploynator/_app.py->deploynator/_models.py",
+        "deploynator/_app.py->deploynator/_platforms.py",
+        "deploynator/_app.py->deploynator/_toml.py",
+        "deploynator/_deploy.py->deploynator/_changelog.py",
+        "deploynator/_deploy.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
+        "deploynator/_deploy.py->deploynator/_docs.py"
+      ]
+    },
+    {
+      "source": "run",
+      "target": "config",
+      "verb": "depends_on",
+      "strength": 0.52,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_docs.py->deploynator/_config.py",
+        "deploynator/_docs.py->deploynator/_toml.py",
+        "deploynator/_mcp_server.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_models.py",
+        "deploynator/_pypi.py->deploynator/_config.py",
+        "deploynator/_pypi.py->deploynator/_toml.py"
+      ]
+    },
+    {
+      "source": "deploynator",
+      "target": "path",
+      "verb": "depends_on",
+      "strength": 0.5,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->deploynator/_config.py",
+        "deploynator/__init__.py->deploynator/_app.py",
+        "deploynator/__main__.py->deploynator/_config.py",
+        "deploynator/_app.py->deploynator/_config.py",
+        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_changelog.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_readme.py",
+        "deploynator/_docs.py->deploynator/_config.py"
+      ]
+    },
+    {
       "source": "docs",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.59,
+      "strength": 0.5,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_app.py->deploynator/_config.py",
@@ -859,7 +1024,7 @@
       "source": "file",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.59,
+      "strength": 0.5,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_semver.py->deploynator/_config.py",
@@ -875,124 +1040,67 @@
       ]
     },
     {
-      "source": "path",
+      "source": "toml",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.59,
+      "strength": 0.5,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_app.py->deploynator/_config.py",
-        "deploynator/_app.py->deploynator/_deploy.py",
-        "deploynator/_app.py->deploynator/_git.py",
-        "deploynator/_app.py->deploynator/_models.py",
-        "deploynator/_app.py->deploynator/_platforms.py",
-        "deploynator/_app.py->deploynator/_toml.py",
-        "deploynator/_deploy.py->deploynator/_changelog.py",
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_docs.py",
-        "deploynator/_deploy.py->deploynator/_git.py"
-      ]
-    },
-    {
-      "source": "red",
-      "target": "deploynator",
-      "verb": "depends_on",
-      "strength": 0.59,
-      "confidence": "INFERRED",
-      "evidence": [
-        "tests/test_cli_mcp.py->deploynator/__init__.py",
-        "tests/test_cli_mcp.py->deploynator/__main__.py",
-        "tests/test_cli_mcp.py->deploynator/_config.py",
-        "tests/test_cli_mcp.py->deploynator/_mcp_server.py",
+        "deploynator/_toml.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
         "tests/test_init.py->deploynator/__init__.py",
         "tests/test_init.py->deploynator/_config.py",
         "tests/test_init.py->deploynator/_toml.py",
-        "tests/test_install_example.py->deploynator/__init__.py",
-        "tests/test_install_example.py->deploynator/__main__.py",
-        "tests/test_install_example.py->deploynator/_config.py"
+        "tests/test_path_deploy.py->deploynator/__init__.py"
       ]
     },
     {
-      "source": "deploynator",
-      "target": "path",
-      "verb": "depends_on",
-      "strength": 0.56,
-      "confidence": "INFERRED",
-      "evidence": [
-        "app.py->deploynator/_config.py",
-        "deploynator/__init__.py->deploynator/_app.py",
-        "deploynator/__main__.py->deploynator/_config.py",
-        "deploynator/_app.py->deploynator/_config.py",
-        "deploynator/_app.py->deploynator/_deploy.py",
-        "deploynator/_changelog.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_docs.py->deploynator/_config.py",
-        "deploynator/_git.py->deploynator/_config.py"
-      ]
-    },
-    {
-      "source": "failure",
+      "source": "upload",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.54,
-      "confidence": "INFERRED",
-      "evidence": [
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_docs.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_semver.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_install_example.py->deploynator/__init__.py",
-        "tests/test_install_example.py->deploynator/__main__.py",
-        "tests/test_install_example.py->deploynator/_config.py",
-        "tests/test_pipeline.py->deploynator/_config.py"
-      ]
-    },
-    {
-      "source": "name",
-      "target": "deploynator",
-      "verb": "depends_on",
-      "strength": 0.54,
+      "strength": 0.5,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_deploy.py->deploynator/_changelog.py",
         "deploynator/_deploy.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
         "deploynator/_deploy.py->deploynator/_docs.py",
         "deploynator/_deploy.py->deploynator/_git.py",
         "deploynator/_deploy.py->deploynator/_models.py",
         "deploynator/_deploy.py->deploynator/_platforms.py",
         "deploynator/_deploy.py->deploynator/_pypi.py",
         "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_deploy.py->deploynator/_runner.py",
-        "deploynator/_deploy.py->deploynator/_semver.py"
+        "deploynator/_deploy.py->deploynator/_runner.py"
       ]
     },
     {
-      "source": "project",
+      "source": "deploy",
       "target": "config",
       "verb": "depends_on",
-      "strength": 0.54,
+      "strength": 0.48,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_app.py->deploynator/_config.py",
-        "deploynator/_app.py->deploynator/_models.py",
-        "deploynator/_app.py->deploynator/_toml.py",
         "deploynator/_deploy.py->deploynator/_config.py",
         "deploynator/_deploy.py->deploynator/_models.py",
         "deploynator/_deploy.py->deploynator/_readme.py",
         "deploynator/_deploy.py->deploynator/_toml.py",
-        "deploynator/_pypi.py->deploynator/_config.py",
-        "deploynator/_pypi.py->deploynator/_toml.py",
-        "deploynator/_toml.py->deploynator/_config.py"
+        "deploynator/_mcp_server.py->deploynator/_config.py",
+        "deploynator/_readme.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_models.py",
+        "tests/bdd_test_deploy.py->deploynator/_toml.py",
+        "tests/test_deb.py->deploynator/_config.py"
       ]
     },
     {
       "source": "deploynator",
       "target": "project",
       "verb": "depends_on",
-      "strength": 0.51,
+      "strength": 0.48,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/__init__.py->deploynator/_app.py",
@@ -1001,17 +1109,17 @@
         "deploynator/_app.py->deploynator/_models.py",
         "deploynator/_app.py->deploynator/_toml.py",
         "deploynator/_changelog.py->deploynator/_models.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
         "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_pypi.py",
-        "deploynator/_deploy.py->deploynator/_toml.py",
-        "deploynator/_docs.py->deploynator/_toml.py"
+        "deploynator/_deploy.py->deploynator/_pypi.py"
       ]
     },
     {
-      "source": "generate",
+      "source": "hay",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.51,
+      "strength": 0.48,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_app.py->deploynator/_config.py",
@@ -1020,17 +1128,131 @@
         "deploynator/_app.py->deploynator/_models.py",
         "deploynator/_app.py->deploynator/_platforms.py",
         "deploynator/_app.py->deploynator/_toml.py",
-        "deploynator/_changelog.py->deploynator/_config.py",
-        "deploynator/_changelog.py->deploynator/_models.py",
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
         "deploynator/_deploy.py->deploynator/_changelog.py",
         "deploynator/_deploy.py->deploynator/_config.py"
+      ]
+    },
+    {
+      "source": "name",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.48,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_deploy.py->deploynator/_changelog.py",
+        "deploynator/_deploy.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
+        "deploynator/_deploy.py->deploynator/_docs.py",
+        "deploynator/_deploy.py->deploynator/_git.py",
+        "deploynator/_deploy.py->deploynator/_models.py",
+        "deploynator/_deploy.py->deploynator/_platforms.py",
+        "deploynator/_deploy.py->deploynator/_pypi.py",
+        "deploynator/_deploy.py->deploynator/_readme.py",
+        "deploynator/_deploy.py->deploynator/_runner.py"
+      ]
+    },
+    {
+      "source": "para",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.48,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_deploy.py->deploynator/_changelog.py",
+        "deploynator/_deploy.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
+        "deploynator/_deploy.py->deploynator/_docs.py",
+        "deploynator/_deploy.py->deploynator/_git.py",
+        "deploynator/_deploy.py->deploynator/_models.py",
+        "deploynator/_deploy.py->deploynator/_platforms.py",
+        "deploynator/_deploy.py->deploynator/_pypi.py"
+      ]
+    },
+    {
+      "source": "empty",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.46,
+      "confidence": "INFERRED",
+      "evidence": [
+        "tests/test_changelog.py->deploynator/_changelog.py",
+        "tests/test_changelog.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_deploy.py->deploynator/_config.py",
+        "tests/test_deploy.py->deploynator/_deploy.py",
+        "tests/test_deploy.py->deploynator/_models.py"
+      ]
+    },
+    {
+      "source": "pipeline",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.46,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_mcp_server.py->deploynator/__init__.py",
+        "deploynator/_mcp_server.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/bdd_test_deploy.py->deploynator/_docs.py",
+        "tests/bdd_test_deploy.py->deploynator/_models.py",
+        "tests/bdd_test_deploy.py->deploynator/_semver.py",
+        "tests/bdd_test_deploy.py->deploynator/_toml.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deb.py"
+      ]
+    },
+    {
+      "source": "create",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.44,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_deploy.py->deploynator/_changelog.py",
+        "deploynator/_deploy.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
+        "deploynator/_deploy.py->deploynator/_docs.py",
+        "deploynator/_deploy.py->deploynator/_git.py",
+        "deploynator/_deploy.py->deploynator/_models.py",
+        "deploynator/_deploy.py->deploynator/_platforms.py",
+        "deploynator/_deploy.py->deploynator/_pypi.py",
+        "deploynator/_deploy.py->deploynator/_readme.py",
+        "deploynator/_deploy.py->deploynator/_runner.py"
+      ]
+    },
+    {
+      "source": "shell",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.44,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_platforms.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_install_example.py->deploynator/__init__.py"
       ]
     },
     {
       "source": "version",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.51,
+      "strength": 0.44,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_semver.py->deploynator/_config.py",
@@ -1046,48 +1268,67 @@
       ]
     },
     {
-      "source": "create",
+      "source": "default",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.49,
+      "strength": 0.42,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_deploy.py->deploynator/_changelog.py",
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_docs.py",
-        "deploynator/_deploy.py->deploynator/_git.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_platforms.py",
-        "deploynator/_deploy.py->deploynator/_pypi.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_deploy.py->deploynator/_runner.py",
-        "deploynator/_deploy.py->deploynator/_semver.py"
+        "deploynator/_app.py->deploynator/_config.py",
+        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_app.py->deploynator/_git.py",
+        "deploynator/_app.py->deploynator/_models.py",
+        "deploynator/_app.py->deploynator/_platforms.py",
+        "deploynator/_app.py->deploynator/_toml.py",
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_platforms.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_models.py"
       ]
     },
     {
-      "source": "deploy",
+      "source": "git",
       "target": "config",
       "verb": "depends_on",
-      "strength": 0.49,
+      "strength": 0.42,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_deploy.py->deploynator/_toml.py",
-        "deploynator/_mcp_server.py->deploynator/_config.py",
-        "deploynator/_readme.py->deploynator/_config.py",
+        "deploynator/_git.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_models.py",
+        "deploynator/_pypi.py->deploynator/_config.py",
+        "deploynator/_pypi.py->deploynator/_toml.py",
         "tests/bdd_test_deploy.py->deploynator/_config.py",
         "tests/bdd_test_deploy.py->deploynator/_models.py",
         "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_deploy.py->deploynator/_config.py"
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_models.py"
+      ]
+    },
+    {
+      "source": "project",
+      "target": "create",
+      "verb": "depends_on",
+      "strength": 0.42,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_app.py->deploynator/_config.py",
+        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_app.py->deploynator/_git.py",
+        "deploynator/_app.py->deploynator/_platforms.py",
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_git.py",
+        "deploynator/_deploy.py->deploynator/_platforms.py",
+        "deploynator/_pypi.py->deploynator/_config.py",
+        "deploynator/_toml.py->deploynator/_config.py"
       ]
     },
     {
       "source": "release",
       "target": "config",
       "verb": "depends_on",
-      "strength": 0.49,
+      "strength": 0.42,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_app.py->deploynator/_config.py",
@@ -1103,48 +1344,105 @@
       ]
     },
     {
-      "source": "run",
-      "target": "config",
+      "source": "repo",
+      "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.49,
+      "strength": 0.42,
       "confidence": "INFERRED",
       "evidence": [
-        "app.py->deploynator/_config.py",
-        "deploynator/_docs.py->deploynator/_config.py",
-        "deploynator/_docs.py->deploynator/_toml.py",
-        "deploynator/_mcp_server.py->deploynator/_config.py",
-        "deploynator/_platforms.py->deploynator/_config.py",
-        "deploynator/_platforms.py->deploynator/_models.py",
-        "deploynator/_pypi.py->deploynator/_config.py",
-        "deploynator/_pypi.py->deploynator/_toml.py",
-        "deploynator/_runner.py->deploynator/_config.py",
-        "deploynator/_runner.py->deploynator/_toml.py"
+        "deploynator/_deploy.py->deploynator/_changelog.py",
+        "deploynator/_deploy.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
+        "deploynator/_deploy.py->deploynator/_docs.py",
+        "deploynator/_deploy.py->deploynator/_git.py",
+        "deploynator/_deploy.py->deploynator/_models.py",
+        "deploynator/_deploy.py->deploynator/_platforms.py",
+        "deploynator/_deploy.py->deploynator/_pypi.py",
+        "deploynator/_deploy.py->deploynator/_readme.py",
+        "deploynator/_deploy.py->deploynator/_runner.py"
       ]
     },
     {
-      "source": "tag",
+      "source": "runner",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.49,
+      "strength": 0.42,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_git.py->deploynator/_config.py",
-        "deploynator/_mcp_server.py->deploynator/__init__.py",
-        "deploynator/_mcp_server.py->deploynator/_config.py",
-        "deploynator/_semver.py->deploynator/_config.py",
-        "deploynator/_semver.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_docs.py->deploynator/_config.py",
+        "deploynator/_docs.py->deploynator/_toml.py",
+        "deploynator/_runner.py->deploynator/_config.py",
+        "deploynator/_runner.py->deploynator/_toml.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py"
+      ]
+    },
+    {
+      "source": "deploy",
+      "target": "project",
+      "verb": "depends_on",
+      "strength": 0.4,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_deploy.py->deploynator/_deb.py",
+        "deploynator/_deploy.py->deploynator/_models.py",
+        "deploynator/_deploy.py->deploynator/_pypi.py",
+        "deploynator/_deploy.py->deploynator/_toml.py",
         "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_docs.py",
         "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_semver.py"
+        "tests/bdd_test_deploy.py->deploynator/_toml.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py"
+      ]
+    },
+    {
+      "source": "dir",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.4,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_deploy.py->deploynator/_config.py",
+        "tests/test_deploy.py->deploynator/_deploy.py",
+        "tests/test_deploy.py->deploynator/_models.py"
+      ]
+    },
+    {
+      "source": "git",
+      "target": "project",
+      "verb": "depends_on",
+      "strength": 0.4,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_platforms.py->deploynator/_models.py",
+        "deploynator/_pypi.py->deploynator/_toml.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/bdd_test_deploy.py->deploynator/_models.py",
+        "tests/bdd_test_deploy.py->deploynator/_toml.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_git_sync.py->deploynator/_deploy.py"
       ]
     },
     {
       "source": "none",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.46,
+      "strength": 0.4,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_app.py->deploynator/_config.py",
@@ -1160,29 +1458,29 @@
       ]
     },
     {
-      "source": "toml",
+      "source": "como",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.46,
+      "strength": 0.38,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_toml.py->deploynator/_config.py",
-        "tests/test_init.py->deploynator/__init__.py",
-        "tests/test_init.py->deploynator/_config.py",
-        "tests/test_init.py->deploynator/_toml.py",
-        "tests/test_path_deploy.py->deploynator/__init__.py",
-        "tests/test_path_deploy.py->deploynator/_config.py",
-        "tests/test_path_deploy.py->deploynator/_deploy.py",
-        "tests/test_path_deploy.py->deploynator/_models.py",
-        "tests/test_path_deploy.py->deploynator/_semver.py",
-        "tests/test_pypi.py->deploynator/_config.py"
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_platforms.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_models.py",
+        "tests/bdd_test_deploy.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/bdd_test_deploy.py->deploynator/_docs.py",
+        "tests/bdd_test_deploy.py->deploynator/_models.py",
+        "tests/bdd_test_deploy.py->deploynator/_semver.py",
+        "tests/bdd_test_deploy.py->deploynator/_toml.py"
       ]
     },
     {
       "source": "current",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.44,
+      "strength": 0.38,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_git.py->deploynator/_config.py",
@@ -1198,10 +1496,67 @@
       ]
     },
     {
+      "source": "project",
+      "target": "hay",
+      "verb": "depends_on",
+      "strength": 0.38,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_app.py->deploynator/_toml.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
+        "deploynator/_deploy.py->deploynator/_pypi.py",
+        "deploynator/_deploy.py->deploynator/_toml.py",
+        "deploynator/_pypi.py->deploynator/_toml.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/bdd_test_deploy.py->deploynator/_toml.py",
+        "tests/test_deb.py->deploynator/_deb.py"
+      ]
+    },
+    {
+      "source": "project",
+      "target": "para",
+      "verb": "depends_on",
+      "strength": 0.38,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_app.py->deploynator/_toml.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
+        "deploynator/_deploy.py->deploynator/_pypi.py",
+        "deploynator/_deploy.py->deploynator/_toml.py",
+        "deploynator/_pypi.py->deploynator/_toml.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/bdd_test_deploy.py->deploynator/_toml.py",
+        "tests/test_deb.py->deploynator/_deb.py"
+      ]
+    },
+    {
+      "source": "run",
+      "target": "path",
+      "verb": "depends_on",
+      "strength": 0.38,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_docs.py->deploynator/_config.py",
+        "deploynator/_mcp_server.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_config.py",
+        "deploynator/_pypi.py->deploynator/_config.py",
+        "deploynator/_runner.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_install_example.py->deploynator/_config.py"
+      ]
+    },
+    {
       "source": "semver",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.44,
+      "strength": 0.38,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_mcp_server.py->deploynator/__init__.py",
@@ -1217,10 +1572,29 @@
       ]
     },
     {
+      "source": "build",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.35,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/__main__.py->deploynator/__init__.py",
+        "deploynator/__main__.py->deploynator/_config.py",
+        "deploynator/__main__.py->deploynator/_mcp_server.py",
+        "deploynator/__main__.py->deploynator/_models.py",
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_toml.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py"
+      ]
+    },
+    {
       "source": "commit",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.41,
+      "strength": 0.35,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_app.py->deploynator/_config.py",
@@ -1236,124 +1610,143 @@
       ]
     },
     {
-      "source": "empty",
-      "target": "deploynator",
+      "source": "deploy",
+      "target": "create",
       "verb": "depends_on",
-      "strength": 0.41,
+      "strength": 0.35,
       "confidence": "INFERRED",
       "evidence": [
-        "tests/test_changelog.py->deploynator/_changelog.py",
-        "tests/test_changelog.py->deploynator/_config.py",
-        "tests/test_deploy.py->deploynator/_config.py",
-        "tests/test_deploy.py->deploynator/_deploy.py",
-        "tests/test_deploy.py->deploynator/_models.py",
-        "tests/test_install_example.py->deploynator/__init__.py",
-        "tests/test_install_example.py->deploynator/__main__.py",
-        "tests/test_install_example.py->deploynator/_config.py",
-        "tests/test_pypi.py->deploynator/_config.py",
-        "tests/test_pypi.py->deploynator/_deploy.py"
-      ]
-    },
-    {
-      "source": "get",
-      "target": "deploynator",
-      "verb": "depends_on",
-      "strength": 0.41,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_deploy.py->deploynator/_changelog.py",
         "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_docs.py",
         "deploynator/_deploy.py->deploynator/_git.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
         "deploynator/_deploy.py->deploynator/_platforms.py",
-        "deploynator/_deploy.py->deploynator/_pypi.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_deploy.py->deploynator/_runner.py",
-        "deploynator/_deploy.py->deploynator/_semver.py"
-      ]
-    },
-    {
-      "source": "git",
-      "target": "config",
-      "verb": "depends_on",
-      "strength": 0.41,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_git.py->deploynator/_config.py",
-        "deploynator/_platforms.py->deploynator/_config.py",
-        "deploynator/_platforms.py->deploynator/_models.py",
-        "deploynator/_pypi.py->deploynator/_config.py",
-        "deploynator/_pypi.py->deploynator/_toml.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_git_sync.py->deploynator/_config.py",
-        "tests/test_models.py->deploynator/_models.py"
-      ]
-    },
-    {
-      "source": "pipeline",
-      "target": "deploynator",
-      "verb": "depends_on",
-      "strength": 0.41,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_mcp_server.py->deploynator/__init__.py",
         "deploynator/_mcp_server.py->deploynator/_config.py",
+        "deploynator/_readme.py->deploynator/_config.py",
         "tests/bdd_test_deploy.py->deploynator/_config.py",
         "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_docs.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_semver.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_pipeline.py->deploynator/_config.py",
-        "tests/test_pipeline.py->deploynator/_deploy.py"
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deploy.py->deploynator/_config.py"
+      ]
+    },
+    {
+      "source": "deploy",
+      "target": "path",
+      "verb": "depends_on",
+      "strength": 0.35,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_deploy.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_readme.py",
+        "deploynator/_mcp_server.py->deploynator/_config.py",
+        "deploynator/_readme.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deploy.py->deploynator/_config.py",
+        "tests/test_deploy.py->deploynator/_deploy.py"
       ]
     },
     {
       "source": "project",
-      "target": "create",
+      "target": "path",
       "verb": "depends_on",
-      "strength": 0.41,
+      "strength": 0.35,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_app.py->deploynator/_config.py",
         "deploynator/_app.py->deploynator/_deploy.py",
-        "deploynator/_app.py->deploynator/_git.py",
-        "deploynator/_app.py->deploynator/_platforms.py",
+        "deploynator/_deb.py->deploynator/_config.py",
         "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_git.py",
-        "deploynator/_deploy.py->deploynator/_platforms.py",
+        "deploynator/_deploy.py->deploynator/_readme.py",
         "deploynator/_pypi.py->deploynator/_config.py",
         "deploynator/_toml.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py"
+        "tests/bdd_test_deploy.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_config.py"
       ]
     },
     {
-      "source": "repo",
-      "target": "deploynator",
+      "source": "project",
+      "target": "release",
       "verb": "depends_on",
-      "strength": 0.41,
+      "strength": 0.35,
       "confidence": "INFERRED",
       "evidence": [
+        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_app.py->deploynator/_models.py",
+        "deploynator/_app.py->deploynator/_platforms.py",
         "deploynator/_deploy.py->deploynator/_changelog.py",
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_docs.py",
-        "deploynator/_deploy.py->deploynator/_git.py",
         "deploynator/_deploy.py->deploynator/_models.py",
         "deploynator/_deploy.py->deploynator/_platforms.py",
-        "deploynator/_deploy.py->deploynator/_pypi.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/bdd_test_deploy.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py"
+      ]
+    },
+    {
+      "source": "run",
+      "target": "create",
+      "verb": "depends_on",
+      "strength": 0.35,
+      "confidence": "INFERRED",
+      "evidence": [
+        "app.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_docs.py->deploynator/_config.py",
+        "deploynator/_mcp_server.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_config.py",
+        "deploynator/_pypi.py->deploynator/_config.py",
+        "deploynator/_runner.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_install_example.py->deploynator/_config.py"
+      ]
+    },
+    {
+      "source": "run",
+      "target": "project",
+      "verb": "depends_on",
+      "strength": 0.35,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_docs.py->deploynator/_toml.py",
+        "deploynator/_platforms.py->deploynator/_models.py",
+        "deploynator/_pypi.py->deploynator/_toml.py",
+        "deploynator/_runner.py->deploynator/_toml.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_path_deploy.py->deploynator/_deploy.py"
+      ]
+    },
+    {
+      "source": "tag",
+      "target": "config",
+      "verb": "depends_on",
+      "strength": 0.35,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_deploy.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_models.py",
         "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_deploy.py->deploynator/_runner.py",
-        "deploynator/_deploy.py->deploynator/_semver.py"
+        "deploynator/_deploy.py->deploynator/_toml.py",
+        "deploynator/_git.py->deploynator/_config.py",
+        "deploynator/_mcp_server.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_models.py",
+        "deploynator/_semver.py->deploynator/_config.py",
+        "deploynator/_semver.py->deploynator/_models.py"
       ]
     },
     {
       "source": "bump",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.39,
+      "strength": 0.33,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_semver.py->deploynator/_config.py",
@@ -1369,29 +1762,10 @@
       ]
     },
     {
-      "source": "default",
-      "target": "deploynator",
-      "verb": "depends_on",
-      "strength": 0.39,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_app.py->deploynator/_config.py",
-        "deploynator/_app.py->deploynator/_deploy.py",
-        "deploynator/_app.py->deploynator/_git.py",
-        "deploynator/_app.py->deploynator/_models.py",
-        "deploynator/_app.py->deploynator/_platforms.py",
-        "deploynator/_app.py->deploynator/_toml.py",
-        "deploynator/_toml.py->deploynator/_config.py",
-        "tests/test_config.py->deploynator/_config.py",
-        "tests/test_install_example.py->deploynator/__init__.py",
-        "tests/test_install_example.py->deploynator/__main__.py"
-      ]
-    },
-    {
       "source": "deploynator",
       "target": "release",
       "verb": "depends_on",
-      "strength": 0.39,
+      "strength": 0.33,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/__init__.py->deploynator/_app.py",
@@ -1407,48 +1781,67 @@
       ]
     },
     {
-      "source": "load",
-      "target": "deploynator",
+      "source": "git",
+      "target": "create",
       "verb": "depends_on",
-      "strength": 0.39,
+      "strength": 0.33,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_deploy.py->deploynator/_changelog.py",
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_docs.py",
-        "deploynator/_deploy.py->deploynator/_git.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_platforms.py",
-        "deploynator/_deploy.py->deploynator/_pypi.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_deploy.py->deploynator/_runner.py",
-        "deploynator/_deploy.py->deploynator/_semver.py"
+        "deploynator/_git.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_config.py",
+        "deploynator/_pypi.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_git_sync.py->deploynator/_config.py",
+        "tests/test_git_sync.py->deploynator/_deploy.py",
+        "tests/test_git_sync.py->deploynator/_git.py"
       ]
     },
     {
-      "source": "push",
+      "source": "make",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.39,
+      "strength": 0.33,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_deploy.py->deploynator/_changelog.py",
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_docs.py",
-        "deploynator/_deploy.py->deploynator/_git.py",
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_toml.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_git_sync.py->deploynator/_config.py",
+        "tests/test_git_sync.py->deploynator/_deploy.py"
+      ]
+    },
+    {
+      "source": "project",
+      "target": "name",
+      "verb": "depends_on",
+      "strength": 0.33,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_app.py->deploynator/_models.py",
+        "deploynator/_app.py->deploynator/_platforms.py",
         "deploynator/_deploy.py->deploynator/_models.py",
         "deploynator/_deploy.py->deploynator/_platforms.py",
-        "deploynator/_deploy.py->deploynator/_pypi.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_deploy.py->deploynator/_runner.py",
-        "deploynator/_deploy.py->deploynator/_semver.py"
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/bdd_test_deploy.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deploy.py->deploynator/_deploy.py"
       ]
     },
     {
       "source": "release",
       "target": "create",
       "verb": "depends_on",
-      "strength": 0.39,
+      "strength": 0.33,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_app.py->deploynator/_config.py",
@@ -1467,7 +1860,7 @@
       "source": "type",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.39,
+      "strength": 0.33,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_app.py->deploynator/_config.py",
@@ -1483,124 +1876,200 @@
       ]
     },
     {
-      "source": "deploy",
-      "target": "create",
+      "source": "deploynator",
+      "target": "hay",
       "verb": "depends_on",
-      "strength": 0.37,
+      "strength": 0.31,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_git.py",
-        "deploynator/_deploy.py->deploynator/_platforms.py",
-        "deploynator/_mcp_server.py->deploynator/_config.py",
-        "deploynator/_readme.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/test_deploy.py->deploynator/_config.py",
-        "tests/test_deploy.py->deploynator/_deploy.py",
-        "tests/test_init.py->deploynator/_config.py"
-      ]
-    },
-    {
-      "source": "deploy",
-      "target": "path",
-      "verb": "depends_on",
-      "strength": 0.37,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_mcp_server.py->deploynator/_config.py",
-        "deploynator/_readme.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/test_deploy.py->deploynator/_config.py",
-        "tests/test_deploy.py->deploynator/_deploy.py",
-        "tests/test_init.py->deploynator/_config.py",
-        "tests/test_path_deploy.py->deploynator/_config.py"
+        "deploynator/__init__.py->deploynator/_app.py",
+        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_app.py->deploynator/_toml.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
+        "deploynator/_deploy.py->deploynator/_pypi.py",
+        "deploynator/_deploy.py->deploynator/_toml.py",
+        "deploynator/_docs.py->deploynator/_toml.py",
+        "deploynator/_pypi.py->deploynator/_toml.py",
+        "deploynator/_runner.py->deploynator/_toml.py"
       ]
     },
     {
       "source": "git",
-      "target": "project",
+      "target": "path",
       "verb": "depends_on",
-      "strength": 0.37,
+      "strength": 0.31,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_platforms.py->deploynator/_models.py",
-        "deploynator/_pypi.py->deploynator/_toml.py",
+        "deploynator/_git.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_config.py",
+        "deploynator/_pypi.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_config.py",
         "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_git_sync.py->deploynator/_config.py",
         "tests/test_git_sync.py->deploynator/_deploy.py",
-        "tests/test_models.py->deploynator/_models.py",
-        "tests/test_path_deploy.py->deploynator/_deploy.py",
-        "tests/test_path_deploy.py->deploynator/_models.py",
-        "tests/test_pipeline.py->deploynator/_deploy.py"
+        "tests/test_path_deploy.py->deploynator/_config.py"
       ]
     },
     {
       "source": "project",
-      "target": "release",
+      "target": "deploy",
       "verb": "depends_on",
-      "strength": 0.37,
+      "strength": 0.31,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_app.py->deploynator/_deploy.py",
         "deploynator/_app.py->deploynator/_models.py",
-        "deploynator/_app.py->deploynator/_platforms.py",
-        "deploynator/_deploy.py->deploynator/_changelog.py",
         "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_platforms.py",
+        "deploynator/_deploy.py->deploynator/_readme.py",
         "tests/bdd_test_deploy.py->deploynator/_deploy.py",
         "tests/bdd_test_deploy.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
         "tests/test_deploy.py->deploynator/_deploy.py",
         "tests/test_deploy.py->deploynator/_models.py"
       ]
     },
     {
-      "source": "run",
-      "target": "path",
+      "source": "red",
+      "target": "config",
       "verb": "depends_on",
-      "strength": 0.37,
+      "strength": 0.31,
       "confidence": "INFERRED",
       "evidence": [
-        "app.py->deploynator/_config.py",
-        "deploynator/_docs.py->deploynator/_config.py",
-        "deploynator/_mcp_server.py->deploynator/_config.py",
-        "deploynator/_platforms.py->deploynator/_config.py",
-        "deploynator/_pypi.py->deploynator/_config.py",
-        "deploynator/_runner.py->deploynator/_config.py",
+        "tests/test_cli_mcp.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_init.py->deploynator/_config.py",
+        "tests/test_init.py->deploynator/_toml.py",
         "tests/test_install_example.py->deploynator/_config.py",
-        "tests/test_path_deploy.py->deploynator/_config.py",
-        "tests/test_path_deploy.py->deploynator/_deploy.py",
-        "tests/test_pipeline.py->deploynator/_config.py"
+        "tests/test_pipeline.py->deploynator/_config.py",
+        "tests/test_pipeline.py->deploynator/_models.py",
+        "tests/test_pypi.py->deploynator/_config.py"
+      ]
+    },
+    {
+      "source": "release",
+      "target": "project",
+      "verb": "depends_on",
+      "strength": 0.31,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_app.py->deploynator/_models.py",
+        "deploynator/_app.py->deploynator/_toml.py",
+        "deploynator/_changelog.py->deploynator/_models.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
+        "deploynator/_deploy.py->deploynator/_models.py",
+        "deploynator/_deploy.py->deploynator/_pypi.py",
+        "deploynator/_deploy.py->deploynator/_toml.py",
+        "deploynator/_platforms.py->deploynator/_models.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py"
+      ]
+    },
+    {
+      "source": "without",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.31,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_mcp_server.py->deploynator/__init__.py",
+        "deploynator/_mcp_server.py->deploynator/_config.py",
+        "deploynator/_readme.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_pypi.py->deploynator/_config.py",
+        "tests/test_pypi.py->deploynator/_deploy.py"
       ]
     },
     {
       "source": "deploy",
-      "target": "project",
+      "target": "release",
       "verb": "depends_on",
-      "strength": 0.34,
+      "strength": 0.29,
       "confidence": "INFERRED",
       "evidence": [
+        "deploynator/_deploy.py->deploynator/_changelog.py",
         "deploynator/_deploy.py->deploynator/_models.py",
+        "deploynator/_deploy.py->deploynator/_platforms.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/bdd_test_deploy.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deploy.py->deploynator/_deploy.py",
+        "tests/test_deploy.py->deploynator/_models.py",
+        "tests/test_models.py->deploynator/_models.py"
+      ]
+    },
+    {
+      "source": "deploynator",
+      "target": "para",
+      "verb": "depends_on",
+      "strength": 0.29,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_app.py->deploynator/_toml.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
         "deploynator/_deploy.py->deploynator/_pypi.py",
         "deploynator/_deploy.py->deploynator/_toml.py",
+        "deploynator/_docs.py->deploynator/_toml.py",
+        "deploynator/_pypi.py->deploynator/_toml.py",
+        "deploynator/_runner.py->deploynator/_toml.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py"
+      ]
+    },
+    {
+      "source": "failure",
+      "target": "config",
+      "verb": "depends_on",
+      "strength": 0.29,
+      "confidence": "INFERRED",
+      "evidence": [
+        "tests/bdd_test_deploy.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_models.py",
+        "tests/bdd_test_deploy.py->deploynator/_toml.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_install_example.py->deploynator/_config.py",
+        "tests/test_pipeline.py->deploynator/_config.py",
+        "tests/test_pipeline.py->deploynator/_models.py",
+        "tests/test_pypi.py->deploynator/_config.py"
+      ]
+    },
+    {
+      "source": "failure",
+      "target": "project",
+      "verb": "depends_on",
+      "strength": 0.29,
+      "confidence": "INFERRED",
+      "evidence": [
         "tests/bdd_test_deploy.py->deploynator/_deploy.py",
         "tests/bdd_test_deploy.py->deploynator/_models.py",
         "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_deploy.py->deploynator/_deploy.py",
-        "tests/test_deploy.py->deploynator/_models.py",
-        "tests/test_init.py->deploynator/_toml.py",
-        "tests/test_models.py->deploynator/_models.py"
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_pipeline.py->deploynator/_deploy.py",
+        "tests/test_pipeline.py->deploynator/_models.py",
+        "tests/test_pypi.py->deploynator/_deploy.py"
       ]
     },
     {
       "source": "file",
       "target": "config",
       "verb": "depends_on",
-      "strength": 0.34,
+      "strength": 0.29,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_semver.py->deploynator/_config.py",
@@ -1616,29 +2085,10 @@
       ]
     },
     {
-      "source": "git",
-      "target": "create",
-      "verb": "depends_on",
-      "strength": 0.34,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_git.py->deploynator/_config.py",
-        "deploynator/_platforms.py->deploynator/_config.py",
-        "deploynator/_pypi.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/test_git_sync.py->deploynator/_config.py",
-        "tests/test_git_sync.py->deploynator/_deploy.py",
-        "tests/test_git_sync.py->deploynator/_git.py",
-        "tests/test_path_deploy.py->deploynator/_config.py",
-        "tests/test_path_deploy.py->deploynator/_deploy.py"
-      ]
-    },
-    {
       "source": "list",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.34,
+      "strength": 0.29,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_app.py->deploynator/_config.py",
@@ -1654,105 +2104,143 @@
       ]
     },
     {
-      "source": "project",
-      "target": "name",
+      "source": "packaging",
+      "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.34,
+      "strength": 0.29,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_pypi.py->deploynator/_config.py",
+        "deploynator/_pypi.py->deploynator/_toml.py",
+        "deploynator/_toml.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_pypi.py->deploynator/_config.py",
+        "tests/test_pypi.py->deploynator/_deploy.py"
+      ]
+    },
+    {
+      "source": "project",
+      "target": "git",
+      "verb": "depends_on",
+      "strength": 0.29,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_app.py->deploynator/_git.py",
         "deploynator/_app.py->deploynator/_models.py",
         "deploynator/_app.py->deploynator/_platforms.py",
+        "deploynator/_deploy.py->deploynator/_git.py",
+        "deploynator/_deploy.py->deploynator/_models.py",
+        "deploynator/_deploy.py->deploynator/_platforms.py",
+        "deploynator/_deploy.py->deploynator/_pypi.py",
+        "tests/bdd_test_deploy.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deploy.py->deploynator/_models.py"
+      ]
+    },
+    {
+      "source": "runner",
+      "target": "config",
+      "verb": "depends_on",
+      "strength": 0.29,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_docs.py->deploynator/_config.py",
+        "deploynator/_docs.py->deploynator/_toml.py",
+        "deploynator/_runner.py->deploynator/_config.py",
+        "deploynator/_runner.py->deploynator/_toml.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_pypi.py->deploynator/_config.py"
+      ]
+    },
+    {
+      "source": "toml",
+      "target": "config",
+      "verb": "depends_on",
+      "strength": 0.29,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_toml.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_init.py->deploynator/_config.py",
+        "tests/test_init.py->deploynator/_toml.py",
+        "tests/test_path_deploy.py->deploynator/_config.py",
+        "tests/test_path_deploy.py->deploynator/_models.py",
+        "tests/test_pypi.py->deploynator/_config.py",
+        "tests/test_pypi.py->deploynator/_models.py"
+      ]
+    },
+    {
+      "source": "default",
+      "target": "config",
+      "verb": "depends_on",
+      "strength": 0.27,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_app.py->deploynator/_config.py",
+        "deploynator/_app.py->deploynator/_models.py",
+        "deploynator/_app.py->deploynator/_toml.py",
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_platforms.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_models.py",
+        "deploynator/_toml.py->deploynator/_config.py",
+        "tests/test_config.py->deploynator/_config.py",
+        "tests/test_install_example.py->deploynator/_config.py"
+      ]
+    },
+    {
+      "source": "deploy",
+      "target": "name",
+      "verb": "depends_on",
+      "strength": 0.27,
+      "confidence": "INFERRED",
+      "evidence": [
         "deploynator/_deploy.py->deploynator/_models.py",
         "deploynator/_deploy.py->deploynator/_platforms.py",
         "tests/bdd_test_deploy.py->deploynator/_deploy.py",
         "tests/bdd_test_deploy.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
         "tests/test_deploy.py->deploynator/_deploy.py",
         "tests/test_deploy.py->deploynator/_models.py",
-        "tests/test_models.py->deploynator/_models.py"
+        "tests/test_models.py->deploynator/_models.py",
+        "tests/test_path_deploy.py->deploynator/_deploy.py"
       ]
     },
     {
-      "source": "project",
-      "target": "path",
+      "source": "deploynator",
+      "target": "default",
       "verb": "depends_on",
-      "strength": 0.34,
+      "strength": 0.27,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_app.py->deploynator/_config.py",
-        "deploynator/_app.py->deploynator/_deploy.py",
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_pypi.py->deploynator/_config.py",
-        "deploynator/_toml.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/test_deploy.py->deploynator/_config.py",
-        "tests/test_deploy.py->deploynator/_deploy.py"
-      ]
-    },
-    {
-      "source": "release",
-      "target": "project",
-      "verb": "depends_on",
-      "strength": 0.34,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_app.py->deploynator/_deploy.py",
-        "deploynator/_app.py->deploynator/_models.py",
+        "deploynator/__init__.py->deploynator/_app.py",
+        "deploynator/_app.py->deploynator/_platforms.py",
         "deploynator/_app.py->deploynator/_toml.py",
-        "deploynator/_changelog.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_pypi.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
+        "deploynator/_deploy.py->deploynator/_platforms.py",
         "deploynator/_deploy.py->deploynator/_toml.py",
-        "deploynator/_platforms.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py"
-      ]
-    },
-    {
-      "source": "run",
-      "target": "create",
-      "verb": "depends_on",
-      "strength": 0.34,
-      "confidence": "INFERRED",
-      "evidence": [
-        "app.py->deploynator/_config.py",
-        "deploynator/_docs.py->deploynator/_config.py",
-        "deploynator/_mcp_server.py->deploynator/_config.py",
-        "deploynator/_platforms.py->deploynator/_config.py",
-        "deploynator/_pypi.py->deploynator/_config.py",
-        "deploynator/_runner.py->deploynator/_config.py",
-        "tests/test_install_example.py->deploynator/_config.py",
-        "tests/test_path_deploy.py->deploynator/_config.py",
-        "tests/test_path_deploy.py->deploynator/_deploy.py",
-        "tests/test_pipeline.py->deploynator/_config.py"
-      ]
-    },
-    {
-      "source": "block",
-      "target": "deploynator",
-      "verb": "depends_on",
-      "strength": 0.32,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_readme.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_docs.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_semver.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_pipeline.py->deploynator/_config.py",
-        "tests/test_pipeline.py->deploynator/_deploy.py",
-        "tests/test_pipeline.py->deploynator/_models.py"
+        "deploynator/_docs.py->deploynator/_toml.py",
+        "deploynator/_pypi.py->deploynator/_toml.py",
+        "deploynator/_runner.py->deploynator/_toml.py"
       ]
     },
     {
       "source": "deploynator",
       "target": "deploy",
       "verb": "depends_on",
-      "strength": 0.32,
+      "strength": 0.27,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/__main__.py->deploynator/_mcp_server.py",
@@ -1771,7 +2259,7 @@
       "source": "deploynator",
       "target": "git",
       "verb": "depends_on",
-      "strength": 0.32,
+      "strength": 0.27,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/__main__.py->deploynator/_models.py",
@@ -1790,7 +2278,7 @@
       "source": "deploynator",
       "target": "name",
       "verb": "depends_on",
-      "strength": 0.32,
+      "strength": 0.27,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/__main__.py->deploynator/_models.py",
@@ -1809,7 +2297,7 @@
       "source": "docs",
       "target": "config",
       "verb": "depends_on",
-      "strength": 0.32,
+      "strength": 0.27,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_app.py->deploynator/_config.py",
@@ -1828,7 +2316,7 @@
       "source": "dry",
       "target": "deploynator",
       "verb": "depends_on",
-      "strength": 0.32,
+      "strength": 0.27,
       "confidence": "INFERRED",
       "evidence": [
         "app.py->deploynator/__init__.py",
@@ -1845,47 +2333,66 @@
     },
     {
       "source": "git",
-      "target": "path",
+      "target": "deploy",
       "verb": "depends_on",
-      "strength": 0.32,
+      "strength": 0.27,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_git.py->deploynator/_config.py",
-        "deploynator/_platforms.py->deploynator/_config.py",
-        "deploynator/_pypi.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_models.py",
         "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/test_git_sync.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
         "tests/test_git_sync.py->deploynator/_deploy.py",
-        "tests/test_path_deploy.py->deploynator/_config.py",
+        "tests/test_models.py->deploynator/_models.py",
         "tests/test_path_deploy.py->deploynator/_deploy.py",
-        "tests/test_pipeline.py->deploynator/_config.py"
+        "tests/test_path_deploy.py->deploynator/_models.py",
+        "tests/test_pipeline.py->deploynator/_deploy.py"
       ]
     },
     {
-      "source": "max",
-      "target": "deploynator",
+      "source": "git",
+      "target": "name",
       "verb": "depends_on",
-      "strength": 0.32,
+      "strength": 0.27,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_semver.py->deploynator/_config.py",
-        "deploynator/_semver.py->deploynator/_models.py",
-        "deploynator/_toml.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_models.py",
         "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_docs.py",
         "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_semver.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_pipeline.py->deploynator/_config.py"
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_git_sync.py->deploynator/_deploy.py",
+        "tests/test_models.py->deploynator/_models.py",
+        "tests/test_path_deploy.py->deploynator/_deploy.py",
+        "tests/test_path_deploy.py->deploynator/_models.py",
+        "tests/test_pipeline.py->deploynator/_deploy.py"
+      ]
+    },
+    {
+      "source": "git",
+      "target": "release",
+      "verb": "depends_on",
+      "strength": 0.27,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_platforms.py->deploynator/_models.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/bdd_test_deploy.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_git_sync.py->deploynator/_deploy.py",
+        "tests/test_models.py->deploynator/_models.py",
+        "tests/test_path_deploy.py->deploynator/_deploy.py",
+        "tests/test_path_deploy.py->deploynator/_models.py",
+        "tests/test_pipeline.py->deploynator/_deploy.py"
       ]
     },
     {
       "source": "none",
       "target": "config",
       "verb": "depends_on",
-      "strength": 0.32,
+      "strength": 0.27,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_app.py->deploynator/_config.py",
@@ -1901,681 +2408,206 @@
       ]
     },
     {
-      "source": "project",
-      "target": "deploy",
-      "verb": "depends_on",
-      "strength": 0.32,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_app.py->deploynator/_deploy.py",
-        "deploynator/_app.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/test_deploy.py->deploynator/_deploy.py",
-        "tests/test_deploy.py->deploynator/_models.py",
-        "tests/test_models.py->deploynator/_models.py",
-        "tests/test_pipeline.py->deploynator/_deploy.py"
-      ]
-    },
-    {
-      "source": "project",
-      "target": "git",
-      "verb": "depends_on",
-      "strength": 0.32,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_app.py->deploynator/_git.py",
-        "deploynator/_app.py->deploynator/_models.py",
-        "deploynator/_app.py->deploynator/_platforms.py",
-        "deploynator/_deploy.py->deploynator/_git.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_platforms.py",
-        "deploynator/_deploy.py->deploynator/_pypi.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/test_deploy.py->deploynator/_models.py",
-        "tests/test_models.py->deploynator/_models.py"
-      ]
-    },
-    {
-      "source": "release",
-      "target": "path",
-      "verb": "depends_on",
-      "strength": 0.32,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_app.py->deploynator/_config.py",
-        "deploynator/_app.py->deploynator/_deploy.py",
-        "deploynator/_changelog.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_mcp_server.py->deploynator/_config.py",
-        "deploynator/_platforms.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/test_changelog.py->deploynator/_config.py"
-      ]
-    },
-    {
-      "source": "runner",
-      "target": "deploynator",
-      "verb": "depends_on",
-      "strength": 0.32,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_docs.py->deploynator/_config.py",
-        "deploynator/_docs.py->deploynator/_toml.py",
-        "deploynator/_runner.py->deploynator/_config.py",
-        "deploynator/_runner.py->deploynator/_toml.py",
-        "tests/test_pypi.py->deploynator/_config.py",
-        "tests/test_pypi.py->deploynator/_deploy.py",
-        "tests/test_pypi.py->deploynator/_models.py",
-        "tests/test_pypi.py->deploynator/_pypi.py",
-        "tests/test_pypi.py->deploynator/_toml.py",
-        "tests/test_runner.py->deploynator/_config.py"
-      ]
-    },
-    {
-      "source": "current",
-      "target": "config",
-      "verb": "depends_on",
-      "strength": 0.29,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_git.py->deploynator/_config.py",
-        "deploynator/_semver.py->deploynator/_config.py",
-        "deploynator/_semver.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_pipeline.py->deploynator/_config.py",
-        "tests/test_pipeline.py->deploynator/_models.py",
-        "tests/test_readme_footer.py->deploynator/_config.py",
-        "tests/test_readme_footer.py->deploynator/_readme.py"
-      ]
-    },
-    {
-      "source": "deploy",
-      "target": "release",
-      "verb": "depends_on",
-      "strength": 0.29,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_deploy.py->deploynator/_changelog.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_platforms.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/test_deploy.py->deploynator/_deploy.py",
-        "tests/test_deploy.py->deploynator/_models.py",
-        "tests/test_models.py->deploynator/_models.py",
-        "tests/test_path_deploy.py->deploynator/_deploy.py",
-        "tests/test_path_deploy.py->deploynator/_models.py"
-      ]
-    },
-    {
-      "source": "deploynator",
-      "target": "commit",
-      "verb": "depends_on",
-      "strength": 0.29,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/__init__.py->deploynator/_app.py",
-        "deploynator/__main__.py->deploynator/_mcp_server.py",
-        "deploynator/__main__.py->deploynator/_models.py",
-        "deploynator/_app.py->deploynator/_git.py",
-        "deploynator/_app.py->deploynator/_models.py",
-        "deploynator/_changelog.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_git.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_platforms.py->deploynator/_models.py",
-        "deploynator/_semver.py->deploynator/_models.py"
-      ]
-    },
-    {
-      "source": "exists",
-      "target": "deploynator",
-      "verb": "depends_on",
-      "strength": 0.29,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_git.py->deploynator/_config.py",
-        "deploynator/_readme.py->deploynator/_config.py",
-        "tests/test_cli_mcp.py->deploynator/__init__.py",
-        "tests/test_cli_mcp.py->deploynator/__main__.py",
-        "tests/test_cli_mcp.py->deploynator/_config.py",
-        "tests/test_cli_mcp.py->deploynator/_mcp_server.py",
-        "tests/test_git_sync.py->deploynator/_config.py",
-        "tests/test_git_sync.py->deploynator/_deploy.py",
-        "tests/test_git_sync.py->deploynator/_git.py",
-        "tests/test_install_example.py->deploynator/__init__.py"
-      ]
-    },
-    {
-      "source": "red",
-      "target": "config",
-      "verb": "depends_on",
-      "strength": 0.29,
-      "confidence": "INFERRED",
-      "evidence": [
-        "tests/test_cli_mcp.py->deploynator/_config.py",
-        "tests/test_init.py->deploynator/_config.py",
-        "tests/test_init.py->deploynator/_toml.py",
-        "tests/test_install_example.py->deploynator/_config.py",
-        "tests/test_pipeline.py->deploynator/_config.py",
-        "tests/test_pipeline.py->deploynator/_models.py",
-        "tests/test_pypi.py->deploynator/_config.py",
-        "tests/test_pypi.py->deploynator/_models.py",
-        "tests/test_pypi.py->deploynator/_toml.py",
-        "tests/test_runner.py->deploynator/_config.py"
-      ]
-    },
-    {
-      "source": "release",
-      "target": "deploy",
-      "verb": "depends_on",
-      "strength": 0.29,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_app.py->deploynator/_deploy.py",
-        "deploynator/_app.py->deploynator/_models.py",
-        "deploynator/_changelog.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_platforms.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/test_cli_mcp.py->deploynator/_mcp_server.py",
-        "tests/test_models.py->deploynator/_models.py"
-      ]
-    },
-    {
-      "source": "release",
-      "target": "git",
-      "verb": "depends_on",
-      "strength": 0.29,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_app.py->deploynator/_git.py",
-        "deploynator/_app.py->deploynator/_models.py",
-        "deploynator/_app.py->deploynator/_platforms.py",
-        "deploynator/_changelog.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_git.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_platforms.py",
-        "deploynator/_deploy.py->deploynator/_pypi.py",
-        "deploynator/_platforms.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py"
-      ]
-    },
-    {
-      "source": "release",
-      "target": "name",
-      "verb": "depends_on",
-      "strength": 0.29,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_app.py->deploynator/_deploy.py",
-        "deploynator/_app.py->deploynator/_models.py",
-        "deploynator/_app.py->deploynator/_platforms.py",
-        "deploynator/_changelog.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_platforms.py",
-        "deploynator/_platforms.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/test_models.py->deploynator/_models.py"
-      ]
-    },
-    {
-      "source": "run",
-      "target": "project",
-      "verb": "depends_on",
-      "strength": 0.29,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_docs.py->deploynator/_toml.py",
-        "deploynator/_platforms.py->deploynator/_models.py",
-        "deploynator/_pypi.py->deploynator/_toml.py",
-        "deploynator/_runner.py->deploynator/_toml.py",
-        "tests/test_path_deploy.py->deploynator/_deploy.py",
-        "tests/test_path_deploy.py->deploynator/_models.py",
-        "tests/test_pipeline.py->deploynator/_deploy.py",
-        "tests/test_pipeline.py->deploynator/_models.py",
-        "tests/test_pypi.py->deploynator/_deploy.py",
-        "tests/test_pypi.py->deploynator/_models.py"
-      ]
-    },
-    {
-      "source": "version",
-      "target": "config",
-      "verb": "depends_on",
-      "strength": 0.29,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_semver.py->deploynator/_config.py",
-        "deploynator/_semver.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_models.py->deploynator/_models.py",
-        "tests/test_path_deploy.py->deploynator/_config.py",
-        "tests/test_path_deploy.py->deploynator/_models.py",
-        "tests/test_pipeline.py->deploynator/_config.py",
-        "tests/test_pipeline.py->deploynator/_models.py"
-      ]
-    },
-    {
-      "source": "when",
-      "target": "deploynator",
-      "verb": "depends_on",
-      "strength": 0.29,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_readme.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_docs.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_semver.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_git_sync.py->deploynator/_config.py",
-        "tests/test_git_sync.py->deploynator/_deploy.py",
-        "tests/test_git_sync.py->deploynator/_git.py"
-      ]
-    },
-    {
-      "source": "deploy",
-      "target": "name",
-      "verb": "depends_on",
-      "strength": 0.27,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_platforms.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/test_deploy.py->deploynator/_deploy.py",
-        "tests/test_deploy.py->deploynator/_models.py",
-        "tests/test_models.py->deploynator/_models.py",
-        "tests/test_path_deploy.py->deploynator/_deploy.py",
-        "tests/test_path_deploy.py->deploynator/_models.py",
-        "tests/test_pipeline.py->deploynator/_deploy.py"
-      ]
-    },
-    {
-      "source": "deploynator",
-      "target": "load",
-      "verb": "depends_on",
-      "strength": 0.27,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_app.py->deploynator/_deploy.py",
-        "deploynator/_app.py->deploynator/_toml.py",
-        "deploynator/_deploy.py->deploynator/_toml.py",
-        "deploynator/_docs.py->deploynator/_toml.py",
-        "deploynator/_pypi.py->deploynator/_toml.py",
-        "deploynator/_runner.py->deploynator/_toml.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_deploy.py->deploynator/_deploy.py",
-        "tests/test_init.py->deploynator/_toml.py"
-      ]
-    },
-    {
-      "source": "deploynator",
-      "target": "none",
-      "verb": "depends_on",
-      "strength": 0.27,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/__init__.py->deploynator/_app.py",
-        "deploynator/_app.py->deploynator/_toml.py",
-        "deploynator/_deploy.py->deploynator/_pypi.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_deploy.py->deploynator/_toml.py",
-        "deploynator/_docs.py->deploynator/_toml.py",
-        "deploynator/_pypi.py->deploynator/_toml.py",
-        "deploynator/_runner.py->deploynator/_toml.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_init.py->deploynator/_toml.py"
-      ]
-    },
-    {
-      "source": "docs",
-      "target": "create",
-      "verb": "depends_on",
-      "strength": 0.27,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_app.py->deploynator/_config.py",
-        "deploynator/_app.py->deploynator/_deploy.py",
-        "deploynator/_app.py->deploynator/_git.py",
-        "deploynator/_app.py->deploynator/_platforms.py",
-        "deploynator/_docs.py->deploynator/_config.py",
-        "deploynator/_mcp_server.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/test_pipeline.py->deploynator/_config.py",
-        "tests/test_pipeline.py->deploynator/_deploy.py"
-      ]
-    },
-    {
-      "source": "failure",
-      "target": "config",
-      "verb": "depends_on",
-      "strength": 0.27,
-      "confidence": "INFERRED",
-      "evidence": [
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_install_example.py->deploynator/_config.py",
-        "tests/test_pipeline.py->deploynator/_config.py",
-        "tests/test_pipeline.py->deploynator/_models.py",
-        "tests/test_pypi.py->deploynator/_config.py",
-        "tests/test_pypi.py->deploynator/_models.py",
-        "tests/test_pypi.py->deploynator/_toml.py",
-        "tests/test_runner.py->deploynator/_config.py"
-      ]
-    },
-    {
-      "source": "file",
-      "target": "create",
-      "verb": "depends_on",
-      "strength": 0.27,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_semver.py->deploynator/_config.py",
-        "deploynator/_toml.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/test_deploy.py->deploynator/_config.py",
-        "tests/test_deploy.py->deploynator/_deploy.py",
-        "tests/test_path_deploy.py->deploynator/_config.py",
-        "tests/test_path_deploy.py->deploynator/_deploy.py",
-        "tests/test_pipeline.py->deploynator/_config.py",
-        "tests/test_pipeline.py->deploynator/_deploy.py"
-      ]
-    },
-    {
-      "source": "file",
-      "target": "path",
-      "verb": "depends_on",
-      "strength": 0.27,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_semver.py->deploynator/_config.py",
-        "deploynator/_toml.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/test_deploy.py->deploynator/_config.py",
-        "tests/test_deploy.py->deploynator/_deploy.py",
-        "tests/test_path_deploy.py->deploynator/_config.py",
-        "tests/test_path_deploy.py->deploynator/_deploy.py",
-        "tests/test_pipeline.py->deploynator/_config.py",
-        "tests/test_pipeline.py->deploynator/_deploy.py"
-      ]
-    },
-    {
-      "source": "file",
+      "source": "pipeline",
       "target": "project",
       "verb": "depends_on",
       "strength": 0.27,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_semver.py->deploynator/_models.py",
         "tests/bdd_test_deploy.py->deploynator/_deploy.py",
         "tests/bdd_test_deploy.py->deploynator/_models.py",
         "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_deploy.py->deploynator/_deploy.py",
-        "tests/test_deploy.py->deploynator/_models.py",
-        "tests/test_path_deploy.py->deploynator/_deploy.py",
-        "tests/test_path_deploy.py->deploynator/_models.py",
-        "tests/test_pipeline.py->deploynator/_deploy.py",
-        "tests/test_pipeline.py->deploynator/_models.py"
-      ]
-    },
-    {
-      "source": "force",
-      "target": "config",
-      "verb": "depends_on",
-      "strength": 0.27,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_deploy.py->deploynator/_toml.py",
-        "deploynator/_git.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_git_sync.py->deploynator/_config.py",
-        "tests/test_pipeline.py->deploynator/_config.py"
-      ]
-    },
-    {
-      "source": "force",
-      "target": "create",
-      "verb": "depends_on",
-      "strength": 0.27,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_git.py",
-        "deploynator/_deploy.py->deploynator/_platforms.py",
-        "deploynator/_git.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/test_git_sync.py->deploynator/_config.py",
-        "tests/test_git_sync.py->deploynator/_deploy.py",
-        "tests/test_git_sync.py->deploynator/_git.py",
-        "tests/test_pipeline.py->deploynator/_config.py"
-      ]
-    },
-    {
-      "source": "format",
-      "target": "deploynator",
-      "verb": "depends_on",
-      "strength": 0.27,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_changelog.py->deploynator/_config.py",
-        "deploynator/_changelog.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_config.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_docs.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_semver.py",
-        "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_changelog.py->deploynator/_changelog.py",
-        "tests/test_changelog.py->deploynator/_config.py"
-      ]
-    },
-    {
-      "source": "git",
-      "target": "deploy",
-      "verb": "depends_on",
-      "strength": 0.27,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_platforms.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/test_git_sync.py->deploynator/_deploy.py",
-        "tests/test_models.py->deploynator/_models.py",
-        "tests/test_path_deploy.py->deploynator/_deploy.py",
-        "tests/test_path_deploy.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
         "tests/test_pipeline.py->deploynator/_deploy.py",
         "tests/test_pipeline.py->deploynator/_models.py",
         "tests/test_pypi.py->deploynator/_deploy.py"
       ]
     },
     {
-      "source": "git",
-      "target": "name",
+      "source": "project",
+      "target": "tag",
       "verb": "depends_on",
       "strength": 0.27,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_platforms.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/test_git_sync.py->deploynator/_deploy.py",
-        "tests/test_models.py->deploynator/_models.py",
-        "tests/test_path_deploy.py->deploynator/_deploy.py",
-        "tests/test_path_deploy.py->deploynator/_models.py",
-        "tests/test_pipeline.py->deploynator/_deploy.py",
-        "tests/test_pipeline.py->deploynator/_models.py",
-        "tests/test_pypi.py->deploynator/_deploy.py"
-      ]
-    },
-    {
-      "source": "git",
-      "target": "release",
-      "verb": "depends_on",
-      "strength": 0.27,
-      "confidence": "INFERRED",
-      "evidence": [
-        "deploynator/_platforms.py->deploynator/_models.py",
-        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
-        "tests/bdd_test_deploy.py->deploynator/_models.py",
-        "tests/test_git_sync.py->deploynator/_deploy.py",
-        "tests/test_models.py->deploynator/_models.py",
-        "tests/test_path_deploy.py->deploynator/_deploy.py",
-        "tests/test_path_deploy.py->deploynator/_models.py",
-        "tests/test_pipeline.py->deploynator/_deploy.py",
-        "tests/test_pipeline.py->deploynator/_models.py",
-        "tests/test_pypi.py->deploynator/_deploy.py"
-      ]
-    },
-    {
-      "source": "install",
-      "target": "config",
-      "verb": "depends_on",
-      "strength": 0.27,
-      "confidence": "INFERRED",
-      "evidence": [
-        "app.py->deploynator/_config.py",
-        "deploynator/_app.py->deploynator/_config.py",
-        "deploynator/_app.py->deploynator/_models.py",
-        "deploynator/_app.py->deploynator/_toml.py",
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_deploy.py->deploynator/_toml.py",
-        "tests/test_deploy.py->deploynator/_config.py",
-        "tests/test_deploy.py->deploynator/_models.py"
-      ]
-    },
-    {
-      "source": "install",
-      "target": "create",
-      "verb": "depends_on",
-      "strength": 0.27,
-      "confidence": "INFERRED",
-      "evidence": [
-        "app.py->deploynator/_config.py",
-        "deploynator/_app.py->deploynator/_config.py",
         "deploynator/_app.py->deploynator/_deploy.py",
         "deploynator/_app.py->deploynator/_git.py",
         "deploynator/_app.py->deploynator/_platforms.py",
-        "deploynator/_deploy.py->deploynator/_config.py",
         "deploynator/_deploy.py->deploynator/_git.py",
         "deploynator/_deploy.py->deploynator/_platforms.py",
-        "tests/test_deploy.py->deploynator/_config.py",
+        "deploynator/_deploy.py->deploynator/_semver.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/bdd_test_deploy.py->deploynator/_semver.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
         "tests/test_deploy.py->deploynator/_deploy.py"
       ]
     },
     {
-      "source": "name",
-      "target": "config",
+      "source": "red",
+      "target": "project",
       "verb": "depends_on",
       "strength": 0.27,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
-        "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_deploy.py->deploynator/_toml.py",
-        "deploynator/_platforms.py->deploynator/_config.py",
-        "deploynator/_platforms.py->deploynator/_models.py",
-        "tests/test_deploy.py->deploynator/_config.py",
-        "tests/test_deploy.py->deploynator/_models.py",
-        "tests/test_models.py->deploynator/_models.py",
-        "tests/test_path_deploy.py->deploynator/_config.py"
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_init.py->deploynator/_toml.py",
+        "tests/test_pipeline.py->deploynator/_deploy.py",
+        "tests/test_pipeline.py->deploynator/_models.py",
+        "tests/test_pypi.py->deploynator/_deploy.py",
+        "tests/test_pypi.py->deploynator/_models.py",
+        "tests/test_pypi.py->deploynator/_pypi.py"
       ]
     },
     {
-      "source": "path",
-      "target": "config",
+      "source": "release",
+      "target": "path",
       "verb": "depends_on",
       "strength": 0.27,
       "confidence": "INFERRED",
       "evidence": [
         "deploynator/_app.py->deploynator/_config.py",
-        "deploynator/_app.py->deploynator/_models.py",
-        "deploynator/_app.py->deploynator/_toml.py",
+        "deploynator/_app.py->deploynator/_deploy.py",
+        "deploynator/_changelog.py->deploynator/_config.py",
         "deploynator/_deploy.py->deploynator/_config.py",
-        "deploynator/_deploy.py->deploynator/_models.py",
         "deploynator/_deploy.py->deploynator/_readme.py",
-        "deploynator/_deploy.py->deploynator/_toml.py",
-        "deploynator/_readme.py->deploynator/_config.py",
-        "tests/test_config.py->deploynator/_config.py",
-        "tests/test_path_deploy.py->deploynator/_config.py"
+        "deploynator/_mcp_server.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/test_changelog.py->deploynator/_config.py"
       ]
     },
     {
-      "source": "path",
+      "source": "shell",
+      "target": "config",
+      "verb": "depends_on",
+      "strength": 0.27,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_platforms.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_install_example.py->deploynator/_config.py",
+        "tests/test_pypi.py->deploynator/_config.py",
+        "tests/test_pypi.py->deploynator/_models.py"
+      ]
+    },
+    {
+      "source": "tag",
       "target": "create",
       "verb": "depends_on",
       "strength": 0.27,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_app.py->deploynator/_config.py",
-        "deploynator/_app.py->deploynator/_deploy.py",
-        "deploynator/_app.py->deploynator/_git.py",
-        "deploynator/_app.py->deploynator/_platforms.py",
         "deploynator/_deploy.py->deploynator/_config.py",
         "deploynator/_deploy.py->deploynator/_git.py",
         "deploynator/_deploy.py->deploynator/_platforms.py",
-        "deploynator/_readme.py->deploynator/_config.py",
-        "tests/test_config.py->deploynator/_config.py",
+        "deploynator/_git.py->deploynator/_config.py",
+        "deploynator/_mcp_server.py->deploynator/_config.py",
+        "deploynator/_platforms.py->deploynator/_config.py",
+        "deploynator/_semver.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_config.py",
+        "tests/bdd_test_deploy.py->deploynator/_deploy.py",
         "tests/test_path_deploy.py->deploynator/_config.py"
       ]
     },
     {
-      "source": "project",
-      "target": "load",
+      "source": "tag",
+      "target": "project",
       "verb": "depends_on",
       "strength": 0.27,
       "confidence": "INFERRED",
       "evidence": [
-        "deploynator/_app.py->deploynator/_deploy.py",
-        "deploynator/_app.py->deploynator/_toml.py",
+        "deploynator/_deploy.py->deploynator/_deb.py",
+        "deploynator/_deploy.py->deploynator/_models.py",
+        "deploynator/_deploy.py->deploynator/_pypi.py",
         "deploynator/_deploy.py->deploynator/_toml.py",
-        "deploynator/_pypi.py->deploynator/_toml.py",
+        "deploynator/_platforms.py->deploynator/_models.py",
+        "deploynator/_semver.py->deploynator/_models.py",
         "tests/bdd_test_deploy.py->deploynator/_deploy.py",
+        "tests/bdd_test_deploy.py->deploynator/_models.py",
         "tests/bdd_test_deploy.py->deploynator/_toml.py",
-        "tests/test_deploy.py->deploynator/_deploy.py",
-        "tests/test_pipeline.py->deploynator/_deploy.py",
+        "tests/test_path_deploy.py->deploynator/_deploy.py"
+      ]
+    },
+    {
+      "source": "target",
+      "target": "deploynator",
+      "verb": "depends_on",
+      "strength": 0.27,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_deb.py->deploynator/_config.py",
+        "deploynator/_deb.py->deploynator/_toml.py",
+        "deploynator/_toml.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_config.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_runner.py->deploynator/_config.py",
+        "tests/test_runner.py->deploynator/_docs.py"
+      ]
+    },
+    {
+      "source": "toml",
+      "target": "project",
+      "verb": "depends_on",
+      "strength": 0.27,
+      "confidence": "INFERRED",
+      "evidence": [
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_init.py->deploynator/_toml.py",
+        "tests/test_path_deploy.py->deploynator/_deploy.py",
+        "tests/test_path_deploy.py->deploynator/_models.py",
         "tests/test_pypi.py->deploynator/_deploy.py",
-        "tests/test_pypi.py->deploynator/_toml.py"
+        "tests/test_pypi.py->deploynator/_models.py",
+        "tests/test_pypi.py->deploynator/_pypi.py"
+      ]
+    },
+    {
+      "source": "upload",
+      "target": "project",
+      "verb": "depends_on",
+      "strength": 0.27,
+      "confidence": "INFERRED",
+      "evidence": [
+        "deploynator/_deploy.py->deploynator/_deb.py",
+        "deploynator/_deploy.py->deploynator/_models.py",
+        "deploynator/_deploy.py->deploynator/_pypi.py",
+        "deploynator/_deploy.py->deploynator/_toml.py",
+        "deploynator/_platforms.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_deb.py",
+        "tests/test_deb.py->deploynator/_deploy.py",
+        "tests/test_deb.py->deploynator/_models.py",
+        "tests/test_deb.py->deploynator/_toml.py",
+        "tests/test_pypi.py->deploynator/_deploy.py"
       ]
     }
   ],
   "dialectic": [
-    "Thesis: `auth` centralizes 4 files; Antithesis: `changelog` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
-    "Thesis: `auth` centralizes 4 files; Antithesis: `commit` pulls 7 files with 4 shared (Jaccard 0.57); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
-    "Thesis: `auth` centralizes 4 files; Antithesis: `config` pulls 8 files with 3 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
-    "Thesis: `auth` centralizes 4 files; Antithesis: `line` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
-    "Thesis: `auth` centralizes 4 files; Antithesis: `platform` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
-    "Thesis: `auth` centralizes 4 files; Antithesis: `type` pulls 6 files with 4 shared (Jaccard 0.67); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
-    "Thesis: `auth` centralizes 4 files; Antithesis: `valid` pulls 7 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
-    "Thesis: `block` centralizes 4 files; Antithesis: `current` pulls 7 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
-    "Thesis: `block` centralizes 4 files; Antithesis: `deploy` pulls 12 files with 4 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
-    "Thesis: `block` centralizes 4 files; Antithesis: `line` pulls 4 files with 2 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?"
+    "Thesis: `build` centralizes 5 files; Antithesis: `default` pulls 7 files with 3 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `build` centralizes 5 files; Antithesis: `dir` pulls 5 files with 3 shared (Jaccard 0.43); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `build` centralizes 5 files; Antithesis: `make` pulls 6 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `build` centralizes 5 files; Antithesis: `packaging` pulls 5 files with 3 shared (Jaccard 0.43); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `build` centralizes 5 files; Antithesis: `runner` pulls 6 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `build` centralizes 5 files; Antithesis: `shell` pulls 6 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `build` centralizes 5 files; Antithesis: `target` pulls 5 files with 3 shared (Jaccard 0.43); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `build` centralizes 5 files; Antithesis: `toml` pulls 7 files with 3 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `bump` centralizes 7 files; Antithesis: `current` pulls 7 files with 5 shared (Jaccard 0.56); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `bump` centralizes 7 files; Antithesis: `deploy` pulls 13 files with 5 shared (Jaccard 0.33); Synthesis: should they merge, split by layer, or keep `bridges` explicit?"
   ]
 }

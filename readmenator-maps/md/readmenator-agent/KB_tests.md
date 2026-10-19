@@ -69,6 +69,37 @@
   - `test_commit_type_pattern_valid` (method, line 55) `def test_commit_type_pattern_valid(self)`
 - Depends on: `deploynator/_config.py`
 
+## tests/test_deb.py
+- Doc: RED: DebRunner — detecta packaging C, build .deb, upload como asset (espejo PyPI).
+- Layer: testing
+- Language: py
+- Symbols:
+  - `_git_init` (function, line 7) `def _git_init(tmp)`
+  - `_toml` (function, line 17) `def _toml()`
+  - `TestDetect` (class, line 27) `class TestDetect`
+  - `TestBuildCommand` (class, line 68) `class TestBuildCommand`
+  - `TestCleanAndRun` (class, line 96) `class TestCleanAndRun`
+  - `TestTomlDeb` (class, line 137) `class TestTomlDeb`
+  - `TestPipelineDeb` (class, line 160) `class TestPipelineDeb`
+  - `test_empty_dir_no_deb` (method, line 28) `def test_empty_dir_no_deb(self)`
+  - `test_debian_control_counts` (method, line 34) `def test_debian_control_counts(self)`
+  - `test_makefile_deb_target_counts` (method, line 43) `def test_makefile_deb_target_counts(self)`
+  - `test_makefile_without_deb_no_project` (method, line 53) `def test_makefile_without_deb_no_project(self)`
+  - `test_no_shell_in_runner` (method, line 61) `def test_no_shell_in_runner(self)`
+  - `test_custom_build_shlex` (method, line 69) `def test_custom_build_shlex(self)`
+  - `test_make_target_preferred` (method, line 77) `def test_make_target_preferred(self)`
+  - `test_dpkg_buildpackage_fallback` (method, line 85) `def test_dpkg_buildpackage_fallback(self)`
+  - `test_clean_removes_outdir` (method, line 97) `def test_clean_removes_outdir(self)`
+  - `test_run_skips_without_packaging` (method, line 108) `def test_run_skips_without_packaging(self)`
+  - `test_run_fails_on_broken_build` (method, line 116) `def test_run_fails_on_broken_build(self)`
+  - `test_run_builds_fake_deb_via_make` (method, line 125) `def test_run_builds_fake_deb_via_make(self)`
+  - `test_deb_section_parsed` (method, line 138) `def test_deb_section_parsed(self)`
+  - `test_deb_defaults` (method, line 151) `def test_deb_defaults(self)`
+  - `test_deb_failure_aborts_with_error` (method, line 161) `def test_deb_failure_aborts_with_error(self)`
+  - `test_deb_success_does_not_break_deploy` (method, line 191) `def test_deb_success_does_not_break_deploy(self)`
+  - `test_no_deb_flag_skips_build` (method, line 220) `def test_no_deb_flag_skips_build(self)`
+- Depends on: `deploynator/_config.py`, `deploynator/_deb.py`, `deploynator/_deploy.py`, `deploynator/_models.py`, `deploynator/_toml.py`
+
 ## tests/test_deploy.py
 - Layer: testing
 - Language: py

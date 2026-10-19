@@ -419,7 +419,7 @@ def run(self) -> None
 
 ### `main`
 
-`function` | [deploynator/_mcp_server.py:271](../../deploynator/_mcp_server.py#L271)
+`function` | [deploynator/_mcp_server.py:273](../../deploynator/_mcp_server.py#L273)
 
 ```python
 def main() -> None

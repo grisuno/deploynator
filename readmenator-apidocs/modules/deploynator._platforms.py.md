@@ -1,6 +1,6 @@
 # `deploynator._platforms`
 
-> Source: [deploynator/_platforms.py:1](../../deploynator/_platforms.py#L1) | language `py` | coverage 0.0% | [API index](../index.md)
+> Source: [deploynator/_platforms.py:1](../../deploynator/_platforms.py#L1) | language `py` | coverage 5.6% | [API index](../index.md)
 
 ## Contents
 
@@ -19,12 +19,14 @@ classDiagram
     PlatformClient : create_release()
     PlatformClient : create_pull_request()
     PlatformClient : push_changes()
+    PlatformClient : upload_release_assets()
     class GitHubCLI
     GitHubCLI : name()
     GitHubCLI : is_available()
     GitHubCLI : is_authenticated()
     GitHubCLI : create_release()
     GitHubCLI : create_pull_request()
+    GitHubCLI : upload_release_assets()
     GitHubCLI : push_changes()
     class GitLabCLI
     GitLabCLI : name()
@@ -76,6 +78,7 @@ Subclasses: [`BitbucketCLI`](#bitbucketcli), [`GitHubCLI`](#githubcli), [`GitLab
 | [`create_release`](#platformclient-create_release) | method |  |
 | [`create_pull_request`](#platformclient-create_pull_request) | method |  |
 | [`push_changes`](#platformclient-push_changes) | method |  |
+| [`upload_release_assets`](#platformclient-upload_release_assets) | method | Sube ficheros como assets del release. |
 
 <a id="platformclient-__init__"></a>
 
@@ -203,13 +206,37 @@ def push_changes(self, repo_path: str, remote: str, branch: str, tags: bool) -> 
 
 **Returns:** `bool`
 
+<a id="platformclient-upload_release_assets"></a>
+
+#### `PlatformClient.upload_release_assets`
+
+`method` | [deploynator/_platforms.py:41](../../deploynator/_platforms.py#L41)
+
+```python
+def upload_release_assets(self, repo: str, version: str, assets: list[str]) -> bool
+```
+
+Sube ficheros como assets del release.
+
+Default: no soportado.
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `repo` | `str` |  |  |
+| `version` | `str` |  |  |
+| `assets` | `list[str]` |  |  |
+
+**Returns:** `bool`
+
 ---
 
 <a id="githubcli"></a>
 
 ### `GitHubCLI`
 
-`class` | [deploynator/_platforms.py:48](../../deploynator/_platforms.py#L48)
+`class` | [deploynator/_platforms.py:52](../../deploynator/_platforms.py#L52)
 
 ```python
 class GitHubCLI(PlatformClient)
@@ -226,13 +253,14 @@ Bases: [`PlatformClient`](#platformclient)
 | [`is_authenticated`](#githubcli-is_authenticated) | method |  |
 | [`create_release`](#githubcli-create_release) | method |  |
 | [`create_pull_request`](#githubcli-create_pull_request) | method |  |
+| [`upload_release_assets`](#githubcli-upload_release_assets) | method | `gh release upload <tag> <files> --repo <repo> --clobber` (shell=False). |
 | [`push_changes`](#githubcli-push_changes) | method |  |
 
 <a id="githubcli-name"></a>
 
 #### `GitHubCLI.name`
 
-`method` | [deploynator/_platforms.py:49](../../deploynator/_platforms.py#L49)
+`method` | [deploynator/_platforms.py:53](../../deploynator/_platforms.py#L53)
 
 ```python
 def name(self) -> str
@@ -244,7 +272,7 @@ def name(self) -> str
 
 #### `GitHubCLI.is_available`
 
-`method` | [deploynator/_platforms.py:52](../../deploynator/_platforms.py#L52)
+`method` | [deploynator/_platforms.py:56](../../deploynator/_platforms.py#L56)
 
 ```python
 def is_available(self) -> bool
@@ -256,7 +284,7 @@ def is_available(self) -> bool
 
 #### `GitHubCLI.is_authenticated`
 
-`method` | [deploynator/_platforms.py:59](../../deploynator/_platforms.py#L59)
+`method` | [deploynator/_platforms.py:63](../../deploynator/_platforms.py#L63)
 
 ```python
 def is_authenticated(self) -> bool
@@ -268,7 +296,7 @@ def is_authenticated(self) -> bool
 
 #### `GitHubCLI.create_release`
 
-`method` | [deploynator/_platforms.py:66](../../deploynator/_platforms.py#L66)
+`method` | [deploynator/_platforms.py:70](../../deploynator/_platforms.py#L70)
 
 ```python
 def create_release(self, repo: str, release: ReleaseInfo) -> bool
@@ -287,7 +315,7 @@ def create_release(self, repo: str, release: ReleaseInfo) -> bool
 
 #### `GitHubCLI.create_pull_request`
 
-`method` | [deploynator/_platforms.py:90](../../deploynator/_platforms.py#L90)
+`method` | [deploynator/_platforms.py:94](../../deploynator/_platforms.py#L94)
 
 ```python
 def create_pull_request(self, repo: str, title: str, body: str, head: str, base: str) -> str | None
@@ -305,11 +333,33 @@ def create_pull_request(self, repo: str, title: str, body: str, head: str, base:
 
 **Returns:** `str | None`
 
+<a id="githubcli-upload_release_assets"></a>
+
+#### `GitHubCLI.upload_release_assets`
+
+`method` | [deploynator/_platforms.py:108](../../deploynator/_platforms.py#L108)
+
+```python
+def upload_release_assets(self, repo: str, version: str, assets: list[str]) -> bool
+```
+
+`gh release upload <tag> <files> --repo <repo> --clobber` (shell=False).
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `repo` | `str` |  |  |
+| `version` | `str` |  |  |
+| `assets` | `list[str]` |  |  |
+
+**Returns:** `bool`
+
 <a id="githubcli-push_changes"></a>
 
 #### `GitHubCLI.push_changes`
 
-`method` | [deploynator/_platforms.py:104](../../deploynator/_platforms.py#L104)
+`method` | [deploynator/_platforms.py:125](../../deploynator/_platforms.py#L125)
 
 ```python
 def push_changes(self, repo_path: str, remote: str, branch: str, tags: bool) -> bool
@@ -332,7 +382,7 @@ def push_changes(self, repo_path: str, remote: str, branch: str, tags: bool) -> 
 
 ### `GitLabCLI`
 
-`class` | [deploynator/_platforms.py:112](../../deploynator/_platforms.py#L112)
+`class` | [deploynator/_platforms.py:133](../../deploynator/_platforms.py#L133)
 
 ```python
 class GitLabCLI(PlatformClient)
@@ -355,7 +405,7 @@ Bases: [`PlatformClient`](#platformclient)
 
 #### `GitLabCLI.name`
 
-`method` | [deploynator/_platforms.py:113](../../deploynator/_platforms.py#L113)
+`method` | [deploynator/_platforms.py:134](../../deploynator/_platforms.py#L134)
 
 ```python
 def name(self) -> str
@@ -367,7 +417,7 @@ def name(self) -> str
 
 #### `GitLabCLI.is_available`
 
-`method` | [deploynator/_platforms.py:116](../../deploynator/_platforms.py#L116)
+`method` | [deploynator/_platforms.py:137](../../deploynator/_platforms.py#L137)
 
 ```python
 def is_available(self) -> bool
@@ -379,7 +429,7 @@ def is_available(self) -> bool
 
 #### `GitLabCLI.is_authenticated`
 
-`method` | [deploynator/_platforms.py:123](../../deploynator/_platforms.py#L123)
+`method` | [deploynator/_platforms.py:144](../../deploynator/_platforms.py#L144)
 
 ```python
 def is_authenticated(self) -> bool
@@ -391,7 +441,7 @@ def is_authenticated(self) -> bool
 
 #### `GitLabCLI.create_release`
 
-`method` | [deploynator/_platforms.py:130](../../deploynator/_platforms.py#L130)
+`method` | [deploynator/_platforms.py:151](../../deploynator/_platforms.py#L151)
 
 ```python
 def create_release(self, repo: str, release: ReleaseInfo) -> bool
@@ -410,7 +460,7 @@ def create_release(self, repo: str, release: ReleaseInfo) -> bool
 
 #### `GitLabCLI.create_pull_request`
 
-`method` | [deploynator/_platforms.py:141](../../deploynator/_platforms.py#L141)
+`method` | [deploynator/_platforms.py:162](../../deploynator/_platforms.py#L162)
 
 ```python
 def create_pull_request(self, repo: str, title: str, body: str, head: str, base: str) -> str | None
@@ -432,7 +482,7 @@ def create_pull_request(self, repo: str, title: str, body: str, head: str, base:
 
 #### `GitLabCLI.push_changes`
 
-`method` | [deploynator/_platforms.py:155](../../deploynator/_platforms.py#L155)
+`method` | [deploynator/_platforms.py:176](../../deploynator/_platforms.py#L176)
 
 ```python
 def push_changes(self, repo_path: str, remote: str, branch: str, tags: bool) -> bool
@@ -455,7 +505,7 @@ def push_changes(self, repo_path: str, remote: str, branch: str, tags: bool) -> 
 
 ### `BitbucketCLI`
 
-`class` | [deploynator/_platforms.py:163](../../deploynator/_platforms.py#L163)
+`class` | [deploynator/_platforms.py:184](../../deploynator/_platforms.py#L184)
 
 ```python
 class BitbucketCLI(PlatformClient)
@@ -478,7 +528,7 @@ Bases: [`PlatformClient`](#platformclient)
 
 #### `BitbucketCLI.name`
 
-`method` | [deploynator/_platforms.py:164](../../deploynator/_platforms.py#L164)
+`method` | [deploynator/_platforms.py:185](../../deploynator/_platforms.py#L185)
 
 ```python
 def name(self) -> str
@@ -490,7 +540,7 @@ def name(self) -> str
 
 #### `BitbucketCLI.is_available`
 
-`method` | [deploynator/_platforms.py:167](../../deploynator/_platforms.py#L167)
+`method` | [deploynator/_platforms.py:188](../../deploynator/_platforms.py#L188)
 
 ```python
 def is_available(self) -> bool
@@ -502,7 +552,7 @@ def is_available(self) -> bool
 
 #### `BitbucketCLI.is_authenticated`
 
-`method` | [deploynator/_platforms.py:177](../../deploynator/_platforms.py#L177)
+`method` | [deploynator/_platforms.py:198](../../deploynator/_platforms.py#L198)
 
 ```python
 def is_authenticated(self) -> bool
@@ -514,7 +564,7 @@ def is_authenticated(self) -> bool
 
 #### `BitbucketCLI.create_release`
 
-`method` | [deploynator/_platforms.py:180](../../deploynator/_platforms.py#L180)
+`method` | [deploynator/_platforms.py:201](../../deploynator/_platforms.py#L201)
 
 ```python
 def create_release(self, repo: str, release: ReleaseInfo) -> bool
@@ -533,7 +583,7 @@ def create_release(self, repo: str, release: ReleaseInfo) -> bool
 
 #### `BitbucketCLI.create_pull_request`
 
-`method` | [deploynator/_platforms.py:200](../../deploynator/_platforms.py#L200)
+`method` | [deploynator/_platforms.py:221](../../deploynator/_platforms.py#L221)
 
 ```python
 def create_pull_request(self, repo: str, title: str, body: str, head: str, base: str) -> str | None
@@ -555,7 +605,7 @@ def create_pull_request(self, repo: str, title: str, body: str, head: str, base:
 
 #### `BitbucketCLI.push_changes`
 
-`method` | [deploynator/_platforms.py:214](../../deploynator/_platforms.py#L214)
+`method` | [deploynator/_platforms.py:235](../../deploynator/_platforms.py#L235)
 
 ```python
 def push_changes(self, repo_path: str, remote: str, branch: str, tags: bool) -> bool
@@ -578,7 +628,7 @@ def push_changes(self, repo_path: str, remote: str, branch: str, tags: bool) -> 
 
 ### `PlatformFactory`
 
-`class` | [deploynator/_platforms.py:222](../../deploynator/_platforms.py#L222)
+`class` | [deploynator/_platforms.py:243](../../deploynator/_platforms.py#L243)
 
 ```python
 class PlatformFactory
@@ -596,7 +646,7 @@ class PlatformFactory
 
 #### `PlatformFactory.register`
 
-`classmethod` | [deploynator/_platforms.py:230](../../deploynator/_platforms.py#L230)
+`classmethod` | [deploynator/_platforms.py:251](../../deploynator/_platforms.py#L251)
 
 Decorators: `@classmethod`
 
@@ -615,7 +665,7 @@ def register(cls, platform: Platform, client_class: type[PlatformClient]) -> Non
 
 #### `PlatformFactory.create`
 
-`classmethod` | [deploynator/_platforms.py:234](../../deploynator/_platforms.py#L234)
+`classmethod` | [deploynator/_platforms.py:255](../../deploynator/_platforms.py#L255)
 
 Decorators: `@classmethod`
 
@@ -642,7 +692,7 @@ def create(cls, platform: Platform, config: Config) -> PlatformClient
 
 #### `PlatformFactory.create_all_available`
 
-`classmethod` | [deploynator/_platforms.py:241](../../deploynator/_platforms.py#L241)
+`classmethod` | [deploynator/_platforms.py:262](../../deploynator/_platforms.py#L262)
 
 Decorators: `@classmethod`
 

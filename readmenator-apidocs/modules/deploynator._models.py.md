@@ -85,6 +85,7 @@ classDiagram
     ReleaseInfo : str target_branch
     ReleaseInfo : bool prerelease
     ReleaseInfo : bool draft
+    ReleaseInfo : list[str] assets
     class DeployResult
     DeployResult : str project
     DeployResult : str version
@@ -502,6 +503,7 @@ class ReleaseInfo
 | [`target_branch`](#releaseinfo-target_branch) | `str` | `'main'` |  |
 | [`prerelease`](#releaseinfo-prerelease) | `bool` | `False` |  |
 | [`draft`](#releaseinfo-draft) | `bool` | `False` |  |
+| [`assets`](#releaseinfo-assets) | `list[str]` | `field(default_factory=list)` |  |
 
 ---
 
@@ -509,7 +511,7 @@ class ReleaseInfo
 
 ### `DeployResult`
 
-`class` `dataclass` | [deploynator/_models.py:275](../../deploynator/_models.py#L275)
+`class` `dataclass` | [deploynator/_models.py:276](../../deploynator/_models.py#L276)
 
 Decorators: `@dataclass`
 

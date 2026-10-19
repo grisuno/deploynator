@@ -193,6 +193,7 @@ class MCPServer:
                 "no_test": {"type": "boolean", "default": False},
                 "no_docs": {"type": "boolean", "default": False},
                 "no_pypi": {"type": "boolean", "default": False},
+                "no_deb": {"type": "boolean", "default": False},
             }},
         ))
         self.register_tool(MCPTool(
@@ -235,11 +236,12 @@ class MCPServer:
     def _tool_release(self, project: str = "", commit_type: str = "release", subject: str = "",
                       message: str = "", scope: str = "", body: str = "", bump: str = "",
                       dry_run: bool = False, no_test: bool = False, no_docs: bool = False,
-                      no_pypi: bool = False) -> str:
+                      no_pypi: bool = False, no_deb: bool = False) -> str:
         results = self._app.release(
             commit_type=commit_type, subject=subject, message=message, scope=scope, body=body,
             project_name=project, bump=bump, dry_run=dry_run,
             all_projects=not project, no_test=no_test, no_docs=no_docs, no_pypi=no_pypi,
+            no_deb=no_deb,
         )
         lines = []
         for r in results:

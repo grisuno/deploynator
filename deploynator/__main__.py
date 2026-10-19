@@ -58,6 +58,8 @@ def build_parser() -> argparse.ArgumentParser:
                            help="Skip readmenator docs regeneration")
     release_p.add_argument("--no-pypi", dest="no_pypi", action="store_true",
                            help="Skip PyPI build+upload")
+    release_p.add_argument("--no-deb", dest="no_deb", action="store_true",
+                           help="Skip .deb build+upload (C/Makefile projects)")
     release_p.add_argument("--platforms", type=str, nargs="*",
                            choices=["github", "gitlab", "bitbucket"],
                            help="Platforms to deploy to")
@@ -214,6 +216,7 @@ def main(argv: list[str] | None = None) -> None:
             no_test=getattr(args, "no_test", False),
             no_docs=getattr(args, "no_docs", False),
             no_pypi=getattr(args, "no_pypi", False),
+            no_deb=getattr(args, "no_deb", False),
             verbose=getattr(args, "verbose", False),
         )
         sys.exit(0 if all(r.success for r in results) else 1)

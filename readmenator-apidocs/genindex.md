@@ -2,7 +2,7 @@
 
 [Back to index](index.md)
 
-[A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [J](#j) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [P](#p) | [R](#r) | [S](#s) | [T](#t) | [V](#v) | [W](#w)
+[A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [J](#j) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [P](#p) | [R](#r) | [S](#s) | [T](#t) | [U](#u) | [V](#v) | [W](#w)
 
 <a id="a"></a>
 
@@ -11,6 +11,7 @@
 - [`add_all`](modules/deploynator._git.py.md#gitoperations-add_all) method of `GitOperations` in `deploynator._git`
 - [`allow_no_tests`](modules/deploynator._toml.py.md#tomlconfig-allow_no_tests) attribute of `TomlConfig` in `deploynator._toml`
 - [`amend_no_edit`](modules/deploynator._git.py.md#gitoperations-amend_no_edit) method of `GitOperations` in `deploynator._git`
+- [`assets`](modules/deploynator._models.py.md#releaseinfo-assets) attribute of `ReleaseInfo` in `deploynator._models`
 - [`auth_env`](modules/deploynator._models.py.md#platformconfig-auth_env) attribute of `PlatformConfig` in `deploynator._models`
 - [`auth_env_var`](modules/deploynator._models.py.md#platform-auth_env_var) method of `Platform` in `deploynator._models`
 - [`auth_login`](modules/deploynator._app.py.md#deploynatorapp-auth_login) method of `DeploynatorApp` in `deploynator._app`
@@ -28,6 +29,7 @@
 - [`BitbucketCLI`](modules/deploynator._platforms.py.md#bitbucketcli) class in `deploynator._platforms`
 - [`body`](modules/deploynator._models.py.md#commitmessage-body) attribute of `CommitMessage` in `deploynator._models`
 - [`branch_exists`](modules/deploynator._git.py.md#gitoperations-branch_exists) method of `GitOperations` in `deploynator._git`
+- [`build_command`](modules/deploynator._deb.py.md#debrunner-build_command) method of `DebRunner` in `deploynator._deb`
 - [`build_parser`](modules/deploynator.__main__.py.md#build_parser) function in `deploynator.__main__`
 - [`bump`](modules/deploynator._models.py.md#versioninfo-bump) method of `VersionInfo` in `deploynator._models`
 - [`bump_strategy`](modules/deploynator._models.py.md#committype-bump_strategy) method of `CommitType` in `deploynator._models`
@@ -47,6 +49,7 @@
 - [`check_gpg`](modules/deploynator._git.py.md#gitoperations-check_gpg) method of `GitOperations` in `deploynator._git`
 - [`checkout`](modules/deploynator._git.py.md#gitoperations-checkout) method of `GitOperations` in `deploynator._git`
 - [`CHORE`](modules/deploynator._models.py.md#committype-chore) attribute of `CommitType` in `deploynator._models`
+- [`clean`](modules/deploynator._deb.py.md#debrunner-clean) method of `DebRunner` in `deploynator._deb`
 - [`clean`](modules/deploynator._pypi.py.md#pypirunner-clean) method of `PyPIRunner` in `deploynator._pypi`
 - [`cli_name`](modules/deploynator._models.py.md#platform-cli_name) method of `Platform` in `deploynator._models`
 - [`clone`](modules/deploynator._git.py.md#gitoperations-clone) method of `GitOperations` in `deploynator._git`
@@ -78,6 +81,15 @@
 ## D
 
 - [`date`](modules/deploynator._models.py.md#changelogentry-date) attribute of `ChangelogEntry` in `deploynator._models`
+- [`deb_build`](modules/deploynator._toml.py.md#tomlconfig-deb_build) attribute of `TomlConfig` in `deploynator._toml`
+- [`deb_clean_dist`](modules/deploynator._toml.py.md#tomlconfig-deb_clean_dist) attribute of `TomlConfig` in `deploynator._toml`
+- [`deb_enabled`](modules/deploynator._toml.py.md#tomlconfig-deb_enabled) attribute of `TomlConfig` in `deploynator._toml`
+- [`deb_make_target`](modules/deploynator._deb.py.md#debrunner-deb_make_target) method of `DebRunner` in `deploynator._deb`
+- [`DEB_MAKE_TARGETS`](modules/deploynator._deb.py.md#debrunner-deb_make_targets) attribute of `DebRunner` in `deploynator._deb`
+- [`deb_outdir`](modules/deploynator._toml.py.md#tomlconfig-deb_outdir) attribute of `TomlConfig` in `deploynator._toml`
+- [`deb_timeout_s`](modules/deploynator._toml.py.md#tomlconfig-deb_timeout_s) attribute of `TomlConfig` in `deploynator._toml`
+- [`deb_upload_assets`](modules/deploynator._toml.py.md#tomlconfig-deb_upload_assets) attribute of `TomlConfig` in `deploynator._toml`
+- [`DebRunner`](modules/deploynator._deb.py.md#debrunner) class in `deploynator._deb`
 - [`default_branch`](modules/deploynator._config.py.md#config-default_branch) attribute of `Config` in `deploynator._config`
 - [`DEFAULT_DOCS_COMMAND`](modules/deploynator._toml.py.md#default_docs_command) constant in `deploynator._toml`
 - [`default_remote`](modules/deploynator._config.py.md#config-default_remote) attribute of `Config` in `deploynator._config`
@@ -183,6 +195,7 @@
 ## I
 
 - [`__init__`](modules/deploynator._changelog.py.md#changeloggenerator-__init__) constructor of `ChangelogGenerator` in `deploynator._changelog`
+- [`__init__`](modules/deploynator._deb.py.md#debrunner-__init__) constructor of `DebRunner` in `deploynator._deb`
 - [`__init__`](modules/deploynator._deploy.py.md#deployorchestrator-__init__) constructor of `DeployOrchestrator` in `deploynator._deploy`
 - [`__init__`](modules/deploynator._app.py.md#deploynatorapp-__init__) constructor of `DeploynatorApp` in `deploynator._app`
 - [`__init__`](modules/deploynator._docs.py.md#docsrunner-__init__) constructor of `DocsRunner` in `deploynator._docs`
@@ -214,6 +227,7 @@
 - [`is_available`](modules/deploynator._platforms.py.md#gitlabcli-is_available) method of `GitLabCLI` in `deploynator._platforms`
 - [`is_available`](modules/deploynator._platforms.py.md#platformclient-is_available) method of `PlatformClient` in `deploynator._platforms`
 - [`is_behind`](modules/deploynator._git.py.md#gitoperations-is_behind) method of `GitOperations` in `deploynator._git`
+- [`is_deb_project`](modules/deploynator._deb.py.md#debrunner-is_deb_project) method of `DebRunner` in `deploynator._deb`
 - [`is_dirty`](modules/deploynator._git.py.md#gitoperations-is_dirty) method of `GitOperations` in `deploynator._git`
 - [`is_notification`](modules/deploynator._mcp_server.py.md#mcprequest-is_notification) property of `MCPRequest` in `deploynator._mcp_server`
 - [`is_packaging_project`](modules/deploynator._pypi.py.md#pypirunner-is_packaging_project) method of `PyPIRunner` in `deploynator._pypi`
@@ -337,6 +351,7 @@
 - [`repo_url`](modules/deploynator._models.py.md#projectconfig-repo_url) attribute of `ProjectConfig` in `deploynator._models`
 - [`resolve_path`](modules/deploynator._config.py.md#config-resolve_path) method of `Config` in `deploynator._config`
 - [`response`](modules/deploynator._mcp_server.py.md#mcprequest-response) method of `MCPRequest` in `deploynator._mcp_server`
+- [`run`](modules/deploynator._deb.py.md#debrunner-run) method of `DebRunner` in `deploynator._deb`
 - [`run`](modules/deploynator._docs.py.md#docsrunner-run) method of `DocsRunner` in `deploynator._docs`
 - [`run`](modules/deploynator._mcp_server.py.md#mcpserver-run) method of `MCPServer` in `deploynator._mcp_server`
 - [`run`](modules/deploynator._pypi.py.md#pypirunner-run) method of `PyPIRunner` in `deploynator._pypi`
@@ -373,6 +388,13 @@
 - [`title`](modules/deploynator._models.py.md#releaseinfo-title) attribute of `ReleaseInfo` in `deploynator._models`
 - [`TOML_FILENAME`](modules/deploynator._toml.py.md#toml_filename) constant in `deploynator._toml`
 - [`TomlConfig`](modules/deploynator._toml.py.md#tomlconfig) class in `deploynator._toml`
+
+<a id="u"></a>
+
+## U
+
+- [`upload_release_assets`](modules/deploynator._platforms.py.md#githubcli-upload_release_assets) method of `GitHubCLI` in `deploynator._platforms`
+- [`upload_release_assets`](modules/deploynator._platforms.py.md#platformclient-upload_release_assets) method of `PlatformClient` in `deploynator._platforms`
 
 <a id="v"></a>
 
