@@ -163,3 +163,4 @@ cython_debug/
 
 # deploynator release receipts (operational trace)
 release-receipts/
+readmenator-releases/
