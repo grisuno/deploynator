@@ -72,6 +72,7 @@ This community groups 7 file(s) rooted at `tests` with dominant language py (coh
 
 - [taint high] `deploynator/_app.py` -> `deploynator/_models.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_semver.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_models.py` via `subprocess` (1 hops)
 
 ## Open Questions
 
