@@ -686,7 +686,7 @@ def create(cls, platform: Platform, config: Config) -> PlatformClient
 
 - `ValueError`: (raised in the body, not documented)
 
-*Called by:* [`DeploynatorApp.auth_status`](deploynator._app.py.md#deploynatorapp-auth_status), [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy), [`DeployOrchestrator.install_dependencies`](deploynator._deploy.py.md#deployorchestrator-install_dependencies)
+*Called by:* [`DeploynatorApp.auth_status`](deploynator._app.py.md#deploynatorapp-auth_status), [`DeployOrchestrator.install_dependencies`](deploynator._deploy.py.md#deployorchestrator-install_dependencies)
 
 <a id="platformfactory-create_all_available"></a>
 

@@ -243,7 +243,7 @@ def commit(self, commit_type: str, subject: str, scope: str = '', body: str = ''
 `method` | [deploynator/_app.py:379](../../deploynator/_app.py#L379)
 
 ```python
-def release(self, commit_type: str = 'release', subject: str = '', scope: str = '', body: str = '', message: str = '', project_name: str = '', bump: str = '', dry_run: bool = False, platforms: list[str] | None = None, all_projects: bool = False, no_test: bool = False, no_docs: bool = False, no_pypi: bool = False, no_deb: bool = False, verbose: bool = False) -> list[DeployResult]
+def release(self, commit_type: str = 'release', subject: str = '', scope: str = '', body: str = '', message: str = '', project_name: str = '', bump: str = '', dry_run: bool = False, platforms: list[str] | None = None, all_projects: bool = False, no_test: bool = False, no_docs: bool = False, no_pypi: bool = False, no_deb: bool = False, verbose: bool = False, receipt_path: str | None = None, trace: bool = False) -> list[DeployResult]
 ```
 
 **Parameters**
@@ -265,6 +265,8 @@ def release(self, commit_type: str = 'release', subject: str = '', scope: str = 
 | `no_pypi` | `bool` | `False` |  |
 | `no_deb` | `bool` | `False` |  |
 | `verbose` | `bool` | `False` |  |
+| `receipt_path` | `str \| None` | `None` |  |
+| `trace` | `bool` | `False` |  |
 
 **Returns:** `list[DeployResult]`
 
@@ -276,7 +278,7 @@ def release(self, commit_type: str = 'release', subject: str = '', scope: str = 
 
 #### `DeploynatorApp.generate_docs`
 
-`method` | [deploynator/_app.py:517](../../deploynator/_app.py#L517)
+`method` | [deploynator/_app.py:521](../../deploynator/_app.py#L521)
 
 ```python
 def generate_docs(self, project_path: str = '', project_name: str = '') -> bool
@@ -299,7 +301,7 @@ def generate_docs(self, project_path: str = '', project_name: str = '') -> bool
 
 #### `DeploynatorApp.status`
 
-`method` | [deploynator/_app.py:523](../../deploynator/_app.py#L523)
+`method` | [deploynator/_app.py:527](../../deploynator/_app.py#L527)
 
 ```python
 def status(self, project_path: str = '', project_name: str = '') -> dict
@@ -322,7 +324,7 @@ def status(self, project_path: str = '', project_name: str = '') -> dict
 
 #### `DeploynatorApp.list_projects`
 
-`method` | [deploynator/_app.py:543](../../deploynator/_app.py#L543)
+`method` | [deploynator/_app.py:547](../../deploynator/_app.py#L547)
 
 ```python
 def list_projects(self, search_path: str = '') -> list[ProjectConfig]
@@ -344,7 +346,7 @@ def list_projects(self, search_path: str = '') -> list[ProjectConfig]
 
 #### `DeploynatorApp.generate_ci`
 
-`method` | [deploynator/_app.py:548](../../deploynator/_app.py#L548)
+`method` | [deploynator/_app.py:552](../../deploynator/_app.py#L552)
 
 ```python
 def generate_ci(self, project_name: str = '', all_projects: bool = False) -> list[str]
@@ -367,7 +369,7 @@ def generate_ci(self, project_name: str = '', all_projects: bool = False) -> lis
 
 #### `DeploynatorApp.install_deps`
 
-`method` | [deploynator/_app.py:564](../../deploynator/_app.py#L564)
+`method` | [deploynator/_app.py:568](../../deploynator/_app.py#L568)
 
 ```python
 def install_deps(self, project_name: str = '') -> dict[str, bool]
@@ -389,7 +391,7 @@ def install_deps(self, project_name: str = '') -> dict[str, bool]
 
 #### `DeploynatorApp.install_packages`
 
-`method` | [deploynator/_app.py:575](../../deploynator/_app.py#L575)
+`method` | [deploynator/_app.py:579](../../deploynator/_app.py#L579)
 
 ```python
 def install_packages(self, packages: list[str] | None = None) -> dict[str, bool]
@@ -411,7 +413,7 @@ pip install/upgrade packages (default: deploynator from PyPI).
 
 #### `DeploynatorApp.interactive_menu`
 
-`method` | [deploynator/_app.py:602](../../deploynator/_app.py#L602)
+`method` | [deploynator/_app.py:606](../../deploynator/_app.py#L606)
 
 ```python
 def interactive_menu(self) -> None

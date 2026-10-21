@@ -1,6 +1,6 @@
 # Documentation Coverage
 
-Overall: **8.3%** (17 of 206 public modules, types, and callables). Data members are excluded from the ratio.
+Overall: **12.5%** (30 of 240 public modules, types, and callables). Data members are excluded from the ratio.
 
 [Back to index](index.md)
 
@@ -8,13 +8,13 @@ Overall: **8.3%** (17 of 206 public modules, types, and callables). Data members
 
 | Kind | Documented | Total | Coverage |
 |---|---|---|---|
-| class | 1 | 29 | 3.4% |
+| class | 3 | 34 | 8.8% |
 | classmethod | 0 | 12 | 0.0% |
-| constructor | 0 | 15 | 0.0% |
+| constructor | 0 | 17 | 0.0% |
 | enum | 0 | 2 | 0.0% |
-| function | 7 | 13 | 53.8% |
-| method | 6 | 109 | 5.5% |
-| module | 3 | 20 | 15.0% |
+| function | 11 | 18 | 61.1% |
+| method | 12 | 130 | 9.2% |
+| module | 4 | 21 | 19.0% |
 | property | 0 | 4 | 0.0% |
 | staticmethod | 0 | 2 | 0.0% |
 
@@ -32,12 +32,13 @@ Overall: **8.3%** (17 of 206 public modules, types, and callables). Data members
 | [`deploynator._runner`](modules/deploynator._runner.py.md) | 0 | 4 | 0.0% |
 | [`deploynator._semver`](modules/deploynator._semver.py.md) | 0 | 9 | 0.0% |
 | [`install.sh`](modules/install.sh.md) | 0 | 1 | 0.0% |
-| [`deploynator._git`](modules/deploynator._git.py.md) | 1 | 25 | 4.0% |
+| [`deploynator._git`](modules/deploynator._git.py.md) | 1 | 26 | 3.8% |
 | [`deploynator._mcp_server`](modules/deploynator._mcp_server.py.md) | 1 | 21 | 4.8% |
 | [`deploynator._platforms`](modules/deploynator._platforms.py.md) | 2 | 36 | 5.6% |
 | [`deploynator._app`](modules/deploynator._app.py.md) | 1 | 16 | 6.2% |
 | [`deploynator._deb`](modules/deploynator._deb.py.md) | 1 | 8 | 12.5% |
 | [`deploynator._pypi`](modules/deploynator._pypi.py.md) | 2 | 9 | 22.2% |
+| [`deploynator._receipt`](modules/deploynator._receipt.py.md) | 13 | 33 | 39.4% |
 | [`app`](modules/app.py.md) | 1 | 2 | 50.0% |
 | [`deploynator._toml`](modules/deploynator._toml.py.md) | 3 | 6 | 50.0% |
 | [`deploynator._readme`](modules/deploynator._readme.py.md) | 3 | 4 | 75.0% |
@@ -47,14 +48,14 @@ Overall: **8.3%** (17 of 206 public modules, types, and callables). Data members
 
 DOC001 undocumented public item, DOC002 parameter not documented, DOC003 documented parameter missing from the signature (stale doc), DOC004 return value not documented, DOC005 raised exception not documented.
 
-DOC001: 188
+DOC001: 207
 
 - DOC001 `app.py:12` function main is not documented
 - DOC001 `deploynator/__init__.py:1` module deploynator/__init__.py is not documented
 - DOC001 `deploynator/__main__.py:1` module deploynator/__main__.py is not documented
 - DOC001 `deploynator/__main__.py:16` function build_parser is not documented
-- DOC001 `deploynator/__main__.py:146` function preprocess_argv is not documented
-- DOC001 `deploynator/__main__.py:180` function main is not documented
+- DOC001 `deploynator/__main__.py:151` function preprocess_argv is not documented
+- DOC001 `deploynator/__main__.py:185` function main is not documented
 - DOC001 `deploynator/_app.py:1` module deploynator/_app.py is not documented
 - DOC001 `deploynator/_app.py:18` class DeploynatorApp is not documented
 - DOC001 `deploynator/_app.py:19` constructor DeploynatorApp.__init__ is not documented
@@ -64,12 +65,12 @@ DOC001: 188
 - DOC001 `deploynator/_app.py:262` method DeploynatorApp.start_branch is not documented
 - DOC001 `deploynator/_app.py:320` method DeploynatorApp.commit is not documented
 - DOC001 `deploynator/_app.py:379` method DeploynatorApp.release is not documented
-- DOC001 `deploynator/_app.py:517` method DeploynatorApp.generate_docs is not documented
-- DOC001 `deploynator/_app.py:523` method DeploynatorApp.status is not documented
-- DOC001 `deploynator/_app.py:543` method DeploynatorApp.list_projects is not documented
-- DOC001 `deploynator/_app.py:548` method DeploynatorApp.generate_ci is not documented
-- DOC001 `deploynator/_app.py:564` method DeploynatorApp.install_deps is not documented
-- DOC001 `deploynator/_app.py:602` method DeploynatorApp.interactive_menu is not documented
+- DOC001 `deploynator/_app.py:521` method DeploynatorApp.generate_docs is not documented
+- DOC001 `deploynator/_app.py:527` method DeploynatorApp.status is not documented
+- DOC001 `deploynator/_app.py:547` method DeploynatorApp.list_projects is not documented
+- DOC001 `deploynator/_app.py:552` method DeploynatorApp.generate_ci is not documented
+- DOC001 `deploynator/_app.py:568` method DeploynatorApp.install_deps is not documented
+- DOC001 `deploynator/_app.py:606` method DeploynatorApp.interactive_menu is not documented
 - DOC001 `deploynator/_changelog.py:1` module deploynator/_changelog.py is not documented
 - DOC001 `deploynator/_changelog.py:11` class ChangelogGenerator is not documented
 - DOC001 `deploynator/_changelog.py:12` constructor ChangelogGenerator.__init__ is not documented
@@ -80,11 +81,11 @@ DOC001: 188
 - DOC001 `deploynator/_changelog.py:108` method ChangelogGenerator.format_for_release is not documented
 - DOC001 `deploynator/_config.py:1` module deploynator/_config.py is not documented
 - DOC001 `deploynator/_config.py:8` class Config is not documented
-- DOC001 `deploynator/_config.py:80` staticmethod Config.create is not documented
-- DOC001 `deploynator/_config.py:86` method Config.resolve_path is not documented
-- DOC001 `deploynator/_config.py:92` property Config.gh_authd is not documented
-- DOC001 `deploynator/_config.py:96` property Config.glab_authd is not documented
-- DOC001 `deploynator/_config.py:100` property Config.bb_authd is not documented
+- DOC001 `deploynator/_config.py:83` staticmethod Config.create is not documented
+- DOC001 `deploynator/_config.py:89` method Config.resolve_path is not documented
+- DOC001 `deploynator/_config.py:95` property Config.gh_authd is not documented
+- DOC001 `deploynator/_config.py:99` property Config.glab_authd is not documented
+- DOC001 `deploynator/_config.py:103` property Config.bb_authd is not documented
 - DOC001 `deploynator/_deb.py:1` module deploynator/_deb.py is not documented
 - DOC001 `deploynator/_deb.py:38` method DebRunner.deb_make_target is not documented
 - DOC001 `deploynator/_deb.py:48` method DebRunner.is_deb_project is not documented
@@ -92,17 +93,17 @@ DOC001: 188
 - DOC001 `deploynator/_deb.py:110` method DebRunner.build_command is not documented
 - DOC001 `deploynator/_deb.py:126` method DebRunner.run is not documented
 - DOC001 `deploynator/_deploy.py:1` module deploynator/_deploy.py is not documented
-- DOC001 `deploynator/_deploy.py:30` class ProjectDiscovery is not documented
-- DOC001 `deploynator/_deploy.py:31` constructor ProjectDiscovery.__init__ is not documented
-- DOC001 `deploynator/_deploy.py:34` method ProjectDiscovery.discover is not documented
-- DOC001 `deploynator/_deploy.py:55` method ProjectDiscovery.find_by_name is not documented
-- DOC001 `deploynator/_deploy.py:75` class DeployOrchestrator is not documented
-- DOC001 `deploynator/_deploy.py:76` constructor DeployOrchestrator.__init__ is not documented
-- DOC001 `deploynator/_deploy.py:97` method DeployOrchestrator.deploy is not documented
-- DOC001 `deploynator/_deploy.py:524` method DeployOrchestrator.generate_workflows is not documented
-- DOC001 `deploynator/_deploy.py:591` method DeployOrchestrator.install_dependencies is not documented
-- DOC001 `deploynator/_deploy.py:601` method DeployOrchestrator.integrate_readmenator is not documented
-- DOC001 `deploynator/_deploy.py:637` method DeployOrchestrator.install_lazygit is not documented
+- DOC001 `deploynator/_deploy.py:38` class ProjectDiscovery is not documented
+- DOC001 `deploynator/_deploy.py:39` constructor ProjectDiscovery.__init__ is not documented
+- DOC001 `deploynator/_deploy.py:42` method ProjectDiscovery.discover is not documented
+- DOC001 `deploynator/_deploy.py:63` method ProjectDiscovery.find_by_name is not documented
+- DOC001 `deploynator/_deploy.py:83` class DeployOrchestrator is not documented
+- DOC001 `deploynator/_deploy.py:84` constructor DeployOrchestrator.__init__ is not documented
+- DOC001 `deploynator/_deploy.py:105` method DeployOrchestrator.deploy is not documented
+- DOC001 `deploynator/_deploy.py:707` method DeployOrchestrator.generate_workflows is not documented
+- DOC001 `deploynator/_deploy.py:774` method DeployOrchestrator.install_dependencies is not documented
+- DOC001 `deploynator/_deploy.py:784` method DeployOrchestrator.integrate_readmenator is not documented
+- DOC001 `deploynator/_deploy.py:820` method DeployOrchestrator.install_lazygit is not documented
 - DOC001 `deploynator/_docs.py:1` module deploynator/_docs.py is not documented
 - DOC001 `deploynator/_docs.py:10` class DocsRunner is not documented
 - DOC001 `deploynator/_docs.py:11` constructor DocsRunner.__init__ is not documented
@@ -110,27 +111,28 @@ DOC001: 188
 - DOC001 `deploynator/_git.py:1` module deploynator/_git.py is not documented
 - DOC001 `deploynator/_git.py:9` class GitOperations is not documented
 - DOC001 `deploynator/_git.py:10` constructor GitOperations.__init__ is not documented
-- DOC001 `deploynator/_git.py:13` method GitOperations.check_gpg is not documented
-- DOC001 `deploynator/_git.py:31` method GitOperations.gpg_sign_flag is not documented
-- DOC001 `deploynator/_git.py:35` method GitOperations.clone is not documented
-- DOC001 `deploynator/_git.py:45` method GitOperations.add_all is not documented
-- DOC001 `deploynator/_git.py:58` method GitOperations.commit is not documented
-- DOC001 `deploynator/_git.py:87` method GitOperations.amend_no_edit is not documented
-- DOC001 `deploynator/_git.py:96` method GitOperations.tag is not documented
-- DOC001 `deploynator/_git.py:106` method GitOperations.delete_tag is not documented
-- DOC001 `deploynator/_git.py:116` method GitOperations.tag_exists is not documented
-- DOC001 `deploynator/_git.py:126` method GitOperations.push is not documented
-- DOC001 `deploynator/_git.py:136` method GitOperations.push_tags is not documented
-- DOC001 `deploynator/_git.py:146` method GitOperations.create_branch is not documented
-- DOC001 `deploynator/_git.py:162` method GitOperations.checkout is not documented
-- DOC001 `deploynator/_git.py:172` method GitOperations.get_changed_files is not documented
-- DOC001 `deploynator/_git.py:203` method GitOperations.get_log is not documented
-- DOC001 `deploynator/_git.py:215` method GitOperations.get_start_ref is not documented
-- DOC001 `deploynator/_git.py:233` method GitOperations.current_branch is not documented
-- DOC001 `deploynator/_git.py:245` method GitOperations.is_dirty is not documented
-- DOC001 `deploynator/_git.py:255` method GitOperations.has_remote is not documented
-- DOC001 `deploynator/_git.py:265` method GitOperations.branch_exists is not documented
-- DOC001 `deploynator/_git.py:290` method GitOperations.push_force is not documented
+- DOC001 `deploynator/_git.py:13` method GitOperations.head_commit is not documented
+- DOC001 `deploynator/_git.py:23` method GitOperations.check_gpg is not documented
+- DOC001 `deploynator/_git.py:41` method GitOperations.gpg_sign_flag is not documented
+- DOC001 `deploynator/_git.py:45` method GitOperations.clone is not documented
+- DOC001 `deploynator/_git.py:55` method GitOperations.add_all is not documented
+- DOC001 `deploynator/_git.py:68` method GitOperations.commit is not documented
+- DOC001 `deploynator/_git.py:97` method GitOperations.amend_no_edit is not documented
+- DOC001 `deploynator/_git.py:106` method GitOperations.tag is not documented
+- DOC001 `deploynator/_git.py:116` method GitOperations.delete_tag is not documented
+- DOC001 `deploynator/_git.py:126` method GitOperations.tag_exists is not documented
+- DOC001 `deploynator/_git.py:136` method GitOperations.push is not documented
+- DOC001 `deploynator/_git.py:146` method GitOperations.push_tags is not documented
+- DOC001 `deploynator/_git.py:156` method GitOperations.create_branch is not documented
+- DOC001 `deploynator/_git.py:172` method GitOperations.checkout is not documented
+- DOC001 `deploynator/_git.py:182` method GitOperations.get_changed_files is not documented
+- DOC001 `deploynator/_git.py:213` method GitOperations.get_log is not documented
+- DOC001 `deploynator/_git.py:225` method GitOperations.get_start_ref is not documented
+- DOC001 `deploynator/_git.py:243` method GitOperations.current_branch is not documented
+- DOC001 `deploynator/_git.py:255` method GitOperations.is_dirty is not documented
+- DOC001 `deploynator/_git.py:265` method GitOperations.has_remote is not documented
+- DOC001 `deploynator/_git.py:275` method GitOperations.branch_exists is not documented
+- DOC001 `deploynator/_git.py:300` method GitOperations.push_force is not documented
 - DOC001 `deploynator/_mcp_server.py:36` class MCPRequest is not documented
 - DOC001 `deploynator/_mcp_server.py:37` constructor MCPRequest.__init__ is not documented
 - DOC001 `deploynator/_mcp_server.py:44` property MCPRequest.is_notification is not documented
@@ -150,7 +152,7 @@ DOC001: 188
 - DOC001 `deploynator/_mcp_server.py:98` method MCPServer.register_resource is not documented
 - DOC001 `deploynator/_mcp_server.py:145` method MCPServer.dispatch is not documented
 - DOC001 `deploynator/_mcp_server.py:163` method MCPServer.run is not documented
-- DOC001 `deploynator/_mcp_server.py:273` function main is not documented
+- DOC001 `deploynator/_mcp_server.py:277` function main is not documented
 - DOC001 `deploynator/_models.py:1` module deploynator/_models.py is not documented
 - DOC001 `deploynator/_models.py:9` enum Platform is not documented
 - DOC001 `deploynator/_models.py:15` classmethod Platform.from_string is not documented
@@ -220,6 +222,24 @@ DOC001: 188
 - DOC001 `deploynator/_pypi.py:90` method PyPIRunner.clean is not documented
 - DOC001 `deploynator/_pypi.py:107` method PyPIRunner.run is not documented
 - DOC001 `deploynator/_readme.py:1` module deploynator/_readme.py is not documented
+- DOC001 `deploynator/_receipt.py:96` function redact is not documented
+- DOC001 `deploynator/_receipt.py:106` class StepRecord is not documented
+- DOC001 `deploynator/_receipt.py:114` method StepRecord.to_dict is not documented
+- DOC001 `deploynator/_receipt.py:119` class CommandRecord is not documented
+- DOC001 `deploynator/_receipt.py:132` method CommandRecord.to_dict is not documented
+- DOC001 `deploynator/_receipt.py:137` class EdgeRecord is not documented
+- DOC001 `deploynator/_receipt.py:145` method EdgeRecord.to_dict is not documented
+- DOC001 `deploynator/_receipt.py:213` method ReleaseReceipt.to_dict is not documented
+- DOC001 `deploynator/_receipt.py:326` method ReceiptCollector.current_stage is not documented
+- DOC001 `deploynator/_receipt.py:331` method ReceiptCollector.observe_edge is not documented
+- DOC001 `deploynator/_receipt.py:342` method ReceiptCollector.add_edge is not documented
+- DOC001 `deploynator/_receipt.py:345` method ReceiptCollector.add_edges is not documented
+- DOC001 `deploynator/_receipt.py:348` method ReceiptCollector.add_commands is not documented
+- DOC001 `deploynator/_receipt.py:353` method ReceiptCollector.set_run_context is not documented
+- DOC001 `deploynator/_receipt.py:362` method ReceiptCollector.set_tag is not documented
+- DOC001 `deploynator/_receipt.py:367` method ReceiptCollector.set_commit is not documented
+- DOC001 `deploynator/_receipt.py:371` method ReceiptCollector.finalize is not documented
+- DOC001 `deploynator/_receipt.py:380` method ReceiptCollector.capture is not documented
 - DOC001 `deploynator/_runner.py:1` module deploynator/_runner.py is not documented
 - DOC001 `deploynator/_runner.py:11` class TestRunner is not documented
 - DOC001 `deploynator/_runner.py:12` constructor TestRunner.__init__ is not documented

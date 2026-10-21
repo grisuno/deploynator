@@ -22,6 +22,14 @@ from deploynator._models import (
 )
 from deploynator._platforms import PlatformFactory
 from deploynator._pypi import PyPIRunner
+from deploynator._receipt import (
+    MODE_PLAN,
+    MODE_RUN,
+    ReceiptCollector,
+    build_plan,
+    build_receipt_from_result,
+    default_receipt_path,
+)
 from deploynator._runner import TestRunner
 from deploynator._semver import SemverManager
 from deploynator._toml import load_toml_config
@@ -109,7 +117,78 @@ class DeployOrchestrator:
         run_pypi: bool = True,
         run_deb: bool = True,
         verbose: bool = False,
+        receipt_path: str | None = None,
+        trace: bool = False,
     ) -> DeployResult:
+        collector = ReceiptCollector(
+            project=project.name,
+            mode=(MODE_RUN if not dry_run else MODE_PLAN),
+            dry_run=dry_run,
+            trace=trace,
+            flags={
+                "bump": force_bump or "",
+                "no_test": not run_tests,
+                "no_docs": not run_docs,
+                "no_pypi": not run_pypi,
+                "no_deb": not run_deb,
+                "platforms": [p.label() for p in (platforms_override or [])],
+                "verbose": verbose,
+            },
+            tail_chars=self._config.receipt_tail_chars,
+        )
+        self._collector = collector
+        error = ""
+        try:
+            with collector.capture():
+                result = self._deploy_impl(
+                    project, commit_type, subject, scope, body, dry_run,
+                    platforms_override, run_tests, run_docs, force_bump,
+                    run_pypi, run_deb, verbose,
+                )
+        except Exception as exc:  # noqa: BLE001 -- contract boundary: receipt on crash
+            error = f"{type(exc).__name__}: {exc}"
+            result = DeployResult(
+                project=project.name,
+                version=collector.receipt.version_to or collector.receipt.version_from,
+                success=False,
+                error=error[:2000],
+            )
+        build_receipt_from_result(collector.receipt, result, error)
+        collector.finalize(collector.receipt.status)
+        written = None
+        if trace or receipt_path is not None:
+            target = receipt_path or default_receipt_path(
+                os.getcwd(), result.project, collector.receipt.mode,
+                collector.receipt.status, result.version or collector.receipt.version_from,
+            )
+            try:
+                written = collector.write(target)
+                print(f"[+] receipt: {written}")
+            except (OSError, ValueError) as exc:
+                print(f"[!] receipt write failed: {exc}")
+        result.receipt_path = written
+        return result
+
+    def _deploy_impl(
+        self,
+        project: ProjectConfig,
+        commit_type: CommitType,
+        subject: str,
+        scope: str = "",
+        body: str = "",
+        dry_run: bool = False,
+        platforms_override: list[Platform] | None = None,
+        run_tests: bool = True,
+        run_docs: bool = True,
+        force_bump: str | None = None,
+        run_pypi: bool = True,
+        run_deb: bool = True,
+        verbose: bool = False,
+    ) -> DeployResult:
+        collector = getattr(self, "_collector", None)
+        if collector is None:
+            collector = ReceiptCollector(project=project.name, dry_run=dry_run)
+            self._collector = collector
         repo_path = self._resolve_project_path(project)
 
         if force_bump not in (None, "", "major", "minor", "patch"):
@@ -123,6 +202,7 @@ class DeployOrchestrator:
         try:
             toml_cfg = load_toml_config(repo_path)
         except ValueError as exc:
+            collector.mark_failure("toml_load", str(exc), "load_toml_config")
             return DeployResult(
                 project=project.name,
                 version="",
@@ -143,32 +223,61 @@ class DeployOrchestrator:
         strategy = force_bump or self._semver.determine_bump(commit_type)
         new_version = self._semver.calculate_next_version(current_version, strategy)
 
-        if run_tests and not dry_run:
-            ok, output = self._tests.run(repo_path, toml_cfg)
-            if not ok:
-                return DeployResult(
-                    project=project.name,
-                    version=str(new_version),
-                    success=False,
-                    error=f"Tests failed: {output[:2000]}",
+        if collector is not None:
+            collector.set_run_context(
+                str(current_version), str(new_version),
+                branch=self._git.current_branch(repo_path) or "",
+            )
+            for pc_cfg in project.platforms:
+                will_deploy = bool(pc_cfg.enabled) and (
+                    not platforms_override or pc_cfg.platform in platforms_override
                 )
+                collector.note_platform(pc_cfg.platform.label(), pc_cfg.repo, will_deploy)
+            if collector.receipt.trace:
+                plan_edges, plan_commands = build_plan(
+                    self._config, project, toml_cfg, platforms_override,
+                    run_tests, run_docs, run_pypi, run_deb,
+                    version=str(new_version),
+                )
+                collector.add_edges(plan_edges)
+                collector.add_commands(plan_commands)
+
+        if run_tests and not dry_run:
+            with collector.stage("tests", caller="TestRunner.run") as tests_stage:
+                ok, output = self._tests.run(repo_path, toml_cfg)
+                if not ok:
+                    tests_stage.fail(f"Tests failed: {output[:2000]}")
+                    return DeployResult(
+                        project=project.name,
+                        version=str(new_version),
+                        success=False,
+                        error=f"Tests failed: {output[:2000]}",
+                    )
+            collector.observe_edge("DeployOrchestrator.deploy", "TestRunner.run", "step:tests")
             print(f"[+] tests passed for {project.name}")
 
         if run_docs and not dry_run:
-            docs_ok = self._docs.run(repo_path, toml_cfg)
+            with collector.stage("docs", caller="DocsRunner.run") as docs_stage:
+                docs_ok = self._docs.run(repo_path, toml_cfg)
+                if not docs_ok:
+                    docs_stage.fail("docs step failed")
+            collector.observe_edge("DeployOrchestrator.deploy", "DocsRunner.run", "step:docs")
             if not docs_ok:
                 print(f"[!] docs step failed for {project.name}, continuing deploy")
 
         if not dry_run:
             try:
                 from deploynator._readme import ensure_deployed_footer
-
-                if ensure_deployed_footer(repo_path, self._config):
-                    print(f"[+] deploy footer ensured for {project.name}")
             except (OSError, ValueError) as exc:
                 print(f"[!] deploy footer skipped for {project.name}: {exc}")
+                collector.mark_failure("footer", str(exc), "ensure_deployed_footer")
+            else:
+                with collector.stage("footer", caller="ensure_deployed_footer"):
+                    if ensure_deployed_footer(repo_path, self._config):
+                        print(f"[+] deploy footer ensured for {project.name}")
 
         if not dry_run and not self._git.has_remote(repo_path):
+            collector.mark_failure("remote_check", "No git remote configured", "GitOperations.has_remote")
             return DeployResult(
                 project=project.name,
                 version=str(new_version),
@@ -178,6 +287,8 @@ class DeployOrchestrator:
 
         start_ref = self._git.get_start_ref(repo_path)
         if not start_ref:
+            collector.mark_failure("start_ref", "No starting ref (tag or initial commit) found",
+                                   "GitOperations.get_start_ref")
             return DeployResult(
                 project=project.name,
                 version=str(new_version),
@@ -186,8 +297,9 @@ class DeployOrchestrator:
             )
 
         if not dry_run:
-            self._semver.write_version_file(repo_path, new_version, project.version.file)
-            self._git.add_all(repo_path)
+            with collector.stage("version_write", caller="SemverManager.write_version_file"):
+                self._semver.write_version_file(repo_path, new_version, project.version.file)
+                self._git.add_all(repo_path)
 
         changelog_content = self._changelog.generate_from_log(repo_path, start_ref)
 
@@ -229,27 +341,37 @@ class DeployOrchestrator:
             self._changelog.write_changelog(repo_path, changelog_content)
             self._git.add_all(repo_path)
 
-            ok_commit, commit_err = self._git.commit(repo_path, commit_msg.format())
-            if not ok_commit:
-                return DeployResult(
-                    project=project.name,
-                    version=str(new_version),
-                    success=False,
-                    error=f"Commit failed: {commit_err}",
-                )
+            with collector.stage("commit", caller="GitOperations.commit") as commit_stage:
+                ok_commit, commit_err = self._git.commit(repo_path, commit_msg.format())
+                if not ok_commit:
+                    commit_stage.fail(f"Commit failed: {commit_err}")
+                    return DeployResult(
+                        project=project.name,
+                        version=str(new_version),
+                        success=False,
+                        error=f"Commit failed: {commit_err}",
+                    )
+            collector.set_commit(self._git.head_commit(repo_path))
+            collector.observe_edge("DeployOrchestrator.deploy", "GitOperations.commit",
+                                   f"commit:{self._git.head_commit(repo_path)}")
 
             tag_name = str(new_version)
             while self._git.tag_exists(repo_path, tag_name):
                 current_ver = VersionInfo.parse(tag_name)
                 tag_name = str(VersionInfo(current_ver.major, current_ver.minor, current_ver.patch + 1))
 
-            if not self._git.tag(repo_path, tag_name, f"Version {tag_name}"):
-                return DeployResult(
-                    project=project.name,
-                    version=tag_name,
-                    success=False,
-                    error="Tag creation failed",
-                )
+            with collector.stage("tag", caller="GitOperations.tag") as tag_stage:
+                if not self._git.tag(repo_path, tag_name, f"Version {tag_name}"):
+                    tag_stage.fail("Tag creation failed")
+                    return DeployResult(
+                        project=project.name,
+                        version=tag_name,
+                        success=False,
+                        error="Tag creation failed",
+                    )
+            collector.set_tag(tag_name)
+            collector.observe_edge("DeployOrchestrator.deploy", "GitOperations.tag",
+                                   f"tag:{tag_name}")
 
             new_version_str = tag_name
         else:
@@ -258,7 +380,8 @@ class DeployOrchestrator:
         # Mantenimiento: antes de empujar a main, si dev existe y esta por
         # debajo, fuerza main sobre dev para que dev quede igual que main.
         if not dry_run:
-            self._sync_dev_to_main(repo_path)
+            with collector.stage("sync_dev", caller="DeployOrchestrator._sync_dev_to_main"):
+                self._sync_dev_to_main(repo_path)
 
         platforms_to_deploy: list[PlatformConfig] = []
         for pc in project.platforms:
@@ -283,19 +406,23 @@ class DeployOrchestrator:
                 if toml_cfg.deb_upload_assets:
                     print(f"[DRY-RUN] Would upload *.deb as release assets version {new_version_str}")
             else:
-                ok, msg, artifacts = self._deb.run(
-                    repo_path, toml_cfg, new_version_str, verbose=verbose
-                )
-                print(f"[{'OK' if ok else 'FAIL'}] {msg}")
-                if not ok:
-                    return DeployResult(
-                        project=project.name,
-                        version=new_version_str,
-                        success=False,
-                        platforms_pushed=platforms_pushed,
-                        releases_created=releases_created,
-                        error=msg if verbose else msg[:2000],
+                with collector.stage("deb", caller="DebRunner.run") as deb_stage:
+                    ok, msg, artifacts = self._deb.run(
+                        repo_path, toml_cfg, new_version_str, verbose=verbose
                     )
+                    if not ok:
+                        deb_stage.fail(msg if verbose else msg[:2000])
+                        return DeployResult(
+                            project=project.name,
+                            version=new_version_str,
+                            success=False,
+                            platforms_pushed=platforms_pushed,
+                            releases_created=releases_created,
+                            error=msg if verbose else msg[:2000],
+                        )
+                print(f"[{'OK' if ok else 'FAIL'}] {msg}")
+                collector.observe_edge("DeployOrchestrator.deploy", "DebRunner.run",
+                                       "step:deb")
                 deb_artifacts = artifacts
 
         if not platforms_to_deploy and dry_run:
@@ -306,14 +433,27 @@ class DeployOrchestrator:
             # Sin plataformas (ej. deploy por ruta): fallback estilo DEPLOY.sh —
             # push al remoto propio + release con gh si disponible.
             branch = self._git.current_branch(repo_path) or toml_cfg.deploy_branch
-            if self._git.push(repo_path, toml_cfg.deploy_remote, branch):
+            with collector.stage("push:origin", caller="GitOperations.push") as push_stage:
+                push_ok = self._git.push(repo_path, toml_cfg.deploy_remote, branch)
+                if not push_ok:
+                    push_stage.fail(f"push failed: {toml_cfg.deploy_remote}/{branch}")
+            if push_ok:
                 platforms_pushed.append(f"{toml_cfg.deploy_remote}/{branch}")
+                collector.observe_edge("DeployOrchestrator.deploy", "GitOperations.push",
+                                       f"platform:origin/{branch}")
             else:
                 overall_success = False
             release_notes = self._changelog.format_for_release(changelog_content)
-            if self._gh_release_in_repo(repo_path, project.name, new_version_str,
-                                        release_notes, branch):
+            with collector.stage("gh_release", caller="DeployOrchestrator._gh_release_in_repo") as gh_stage:
+                gh_ok = self._gh_release_in_repo(repo_path, project.name, new_version_str,
+                                                 release_notes, branch)
+                if not gh_ok:
+                    gh_stage.fail("gh release create failed")
+            if gh_ok:
                 releases_created.append("github")
+                collector.observe_edge("DeployOrchestrator.deploy",
+                                       "DeployOrchestrator._gh_release_in_repo",
+                                       f"platform:github/{new_version_str}")
                 if deb_artifacts and toml_cfg.deb_upload_assets and not dry_run:
                     if self._gh_upload_assets(repo_path, new_version_str, deb_artifacts):
                         print(f"[OK] deb assets uploaded: {', '.join(deb_artifacts)}")
@@ -327,14 +467,20 @@ class DeployOrchestrator:
                 platforms_pushed.append(pc.platform.label())
                 continue
 
+            label = pc.platform.label()
             try:
                 client = PlatformFactory.create(pc.platform, self._config)
             except ValueError:
+                collector.mark_failure(f"factory:{label}", f"Platform unavailable: {pc.platform.name}",
+                                       "PlatformFactory.create")
                 overall_success = False
                 continue
 
             if not client.is_authenticated():
                 print(f"[!] {pc.platform.label()} not authenticated. Skipping.")
+                collector.mark_failure(f"auth:{label}", "not authenticated",
+                                       "PlatformClient.is_authenticated")
+                collector.note_platform(label, pc.repo, True, error="not authenticated")
                 continue
 
             remote_url = self._get_remote_url(repo_path, pc)
@@ -350,8 +496,12 @@ class DeployOrchestrator:
 
             if push_ok:
                 platforms_pushed.append(pc.platform.label())
+                collector.observe_edge("DeployOrchestrator.deploy", "GitOperations.push",
+                                       f"platform:{label}/{branch}")
+                collector.note_platform(label, pc.repo, True, pushed=True)
             else:
                 overall_success = False
+                collector.note_platform(label, pc.repo, True, pushed=False, error="push failed")
                 continue
 
             release_notes = self._changelog.format_for_release(changelog_content)
@@ -363,10 +513,29 @@ class DeployOrchestrator:
                 assets=list(deb_artifacts),
             )
 
-            if client.create_release(pc.repo, release):
-                releases_created.append(pc.platform.label())
+            client_class = client.__class__.__name__
+            with collector.stage(f"release:{label}",
+                                 caller=f"{client_class}.create_release") as rel_stage:
+                rel_ok = client.create_release(pc.repo, release)
+                if not rel_ok:
+                    rel_stage.fail("create_release failed")
+            if rel_ok:
+                releases_created.append(label)
+                collector.note_platform(label, pc.repo, True, released=True)
+                collector.observe_edge("Platform.create_release",
+                                       f"{client_class}.create_release",
+                                       f"platform:{label}/{new_version_str}")
                 if deb_artifacts and toml_cfg.deb_upload_assets:
-                    if client.upload_release_assets(pc.repo, new_version_str, deb_artifacts):
+                    with collector.stage(f"assets:{label}",
+                                         caller=f"{client_class}.upload_release_assets") as ast_stage:
+                        assets_ok = client.upload_release_assets(pc.repo, new_version_str,
+                                                                 deb_artifacts)
+                        if not assets_ok:
+                            ast_stage.fail("deb assets upload failed")
+                    if assets_ok:
+                        collector.observe_edge("Platform.upload_release_assets",
+                                               f"{client_class}.upload_release_assets",
+                                               f"platform:{label}/{new_version_str}")
                         print(f"[OK] deb assets uploaded to {pc.platform.label()}: "
                               f"{', '.join(deb_artifacts)}")
                     else:
@@ -374,6 +543,8 @@ class DeployOrchestrator:
                         overall_success = False
             else:
                 overall_success = False
+                collector.note_platform(label, pc.repo, True, released=False,
+                                        error="create_release failed")
 
         if run_pypi and toml_cfg.pypi_enabled and self._pypi.is_packaging_project(repo_path):
             if dry_run:
@@ -383,11 +554,31 @@ class DeployOrchestrator:
                 if not token:
                     print("[!] PyPI packaging detected but no credentials "
                           "(TWINE_PASSWORD/PYPI_TOKEN/~/.pypirc). Skipping upload.")
+                    collector.mark_failure("pypi", "no credentials; skipped upload",
+                                           "PyPIRunner.has_credentials")
                 else:
-                    ok, msg = self._pypi.run(repo_path, toml_cfg, new_version_str, token=token,
-                                             verbose=verbose)
+                    with collector.stage("pypi", caller="PyPIRunner.run") as pypi_stage:
+                        ok, msg = self._pypi.run(repo_path, toml_cfg, new_version_str, token=token,
+                                                 verbose=verbose)
+                        if not ok:
+                            pypi_stage.fail(msg if verbose else msg[:2000])
+                            return DeployResult(
+                                project=project.name,
+                                version=new_version_str,
+                                success=False,
+                                platforms_pushed=platforms_pushed,
+                                releases_created=releases_created,
+                                error=msg if verbose else msg[:2000],
+                            )
                     print(f"[{'OK' if ok else 'FAIL'}] {msg}")
+                    if ok:
+                        collector.observe_edge("DeployOrchestrator.deploy", "PyPIRunner.run",
+                                               f"step:pypi/{new_version_str}")
+            else:
+                with collector.stage("pypi", caller="PyPIRunner.run") as pypi_stage:
+                    ok, msg = self._pypi.run(repo_path, toml_cfg, new_version_str, verbose=verbose)
                     if not ok:
+                        pypi_stage.fail(msg if verbose else msg[:2000])
                         return DeployResult(
                             project=project.name,
                             version=new_version_str,
@@ -396,18 +587,10 @@ class DeployOrchestrator:
                             releases_created=releases_created,
                             error=msg if verbose else msg[:2000],
                         )
-            else:
-                ok, msg = self._pypi.run(repo_path, toml_cfg, new_version_str, verbose=verbose)
                 print(f"[{'OK' if ok else 'FAIL'}] {msg}")
-                if not ok:
-                    return DeployResult(
-                        project=project.name,
-                        version=new_version_str,
-                        success=False,
-                        platforms_pushed=platforms_pushed,
-                        releases_created=releases_created,
-                        error=msg if verbose else msg[:2000],
-                    )
+                if ok:
+                    collector.observe_edge("DeployOrchestrator.deploy", "PyPIRunner.run",
+                                           f"step:pypi/{new_version_str}")
 
         return DeployResult(
             project=project.name,

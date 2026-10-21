@@ -82,7 +82,7 @@ def is_packaging_project(self, project_path: str) -> bool
 
 **Returns:** `bool`
 
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy), [`PyPIRunner.run`](#pypirunner-run)
+*Called by:* [`PyPIRunner.run`](#pypirunner-run)
 
 <a id="pypirunner-has_credentials"></a>
 
@@ -95,8 +95,6 @@ def has_credentials(self) -> bool
 ```
 
 **Returns:** `bool`
-
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
 
 <a id="pypirunner-prompt_for_credentials"></a>
 
@@ -116,8 +114,6 @@ Pregunta si guardar en ~/.pypirc (modo 600, fuera de git).
 **Returns:** `str | None`
 
 *Calls:* [`PyPIRunner.save_pypirc`](#pypirunner-save_pypirc)
-
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
 
 <a id="pypirunner-save_pypirc"></a>
 
@@ -192,7 +188,5 @@ def run(self, project_path: str, toml: TomlConfig, version: str, token: str | No
 **Returns:** `tuple[bool, str]`
 
 *Calls:* [`PyPIRunner.clean`](#pypirunner-clean), [`PyPIRunner.is_packaging_project`](#pypirunner-is_packaging_project)
-
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
 
 ---

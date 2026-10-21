@@ -2,38 +2,39 @@
 graph LR
     deploynator__toml["deploynator: _toml"]
     deploynator__mcp_server["deploynator: _mcp_server"]
-    deploynator__platforms["deploynator: _platforms"]
+    deploynator__receipt["deploynator: _receipt"]
     deploynator__models["deploynator: _models"]
     deploynator__changelog["deploynator: _changelog"]
-    deploynator__toml -- "calls into" --> deploynator__platforms
+    deploynator__toml -- "calls into" --> deploynator__mcp_server
+    deploynator__toml -- "calls into" --> deploynator__receipt
     deploynator__toml -- "calls into" --> deploynator__models
     deploynator__toml -- "depends on" --> deploynator__changelog
     deploynator__mcp_server -- "calls into" --> deploynator__toml
-    deploynator__mcp_server -- "calls into" --> deploynator__platforms
+    deploynator__mcp_server -- "calls into" --> deploynator__receipt
     deploynator__mcp_server -- "calls into" --> deploynator__models
     deploynator__mcp_server -- "calls into" --> deploynator__changelog
-    deploynator__platforms -- "calls into" --> deploynator__toml
-    deploynator__platforms -- "calls into" --> deploynator__mcp_server
-    deploynator__platforms -- "calls into" --> deploynator__models
-    deploynator__platforms -- "calls into" --> deploynator__changelog
+    deploynator__receipt -- "calls into" --> deploynator__toml
+    deploynator__receipt -- "calls into" --> deploynator__models
+    deploynator__receipt -- "calls into" --> deploynator__changelog
     deploynator__models -- "calls into" --> deploynator__mcp_server
-    deploynator__models -- "calls into" --> deploynator__platforms
+    deploynator__models -- "calls into" --> deploynator__receipt
     deploynator__models -- "calls into" --> deploynator__changelog
+    deploynator__changelog -- "calls into" --> deploynator__receipt
     deploynator__changelog -- "calls into" --> deploynator__models
     click deploynator__toml href "./deploynator__toml.md" "Details"
     click deploynator__mcp_server href "./deploynator__mcp_server.md" "Details"
-    click deploynator__platforms href "./deploynator__platforms.md" "Details"
+    click deploynator__receipt href "./deploynator__receipt.md" "Details"
     click deploynator__models href "./deploynator__models.md" "Details"
     click deploynator__changelog href "./deploynator__changelog.md" "Details"
 ```
 
 ## Details
 
-Static architecture map of 38 files (py, sh) in 5 components: deploynator: _toml, deploynator: _mcp_server, deploynator: _platforms, deploynator: _models, deploynator: _changelog. Structure is extracted statically without LLM calls; component prose may be enriched locally.
+Static architecture map of 40 files (py, sh) in 5 components: deploynator: _toml, deploynator: _mcp_server, deploynator: _receipt, deploynator: _models, deploynator: _changelog. Structure is extracted statically without LLM calls; component prose may be enriched locally.
 
 ### deploynator: _toml (1)
 
-deploynator: _toml groups 8 files (py) around _target_regex, list_make_targets, _has_python_tests, looks_like_packaging_project, detect_test_commands. DebRunner: Construye paquetes .deb desde fuentes C, espejo del flujo PyPI.
+deploynator: _toml groups 10 files (py) around _target_regex, list_make_targets, _has_python_tests, looks_like_packaging_project, detect_test_commands. DebRunner: Construye paquetes .deb desde fuentes C, espejo del flujo PyPI.
 
 **Related Classes/Methods**:
 
@@ -61,9 +62,9 @@ deploynator: _mcp_server groups 7 files (py) around MCPRequest, __init__, is_not
 - <a href="../deploynator/_mcp_server.py#L58-L64">deploynator/_mcp_server.py::__init__</a>
 - <a href="../deploynator/_mcp_server.py#L65-L67">deploynator/_mcp_server.py::definition</a>
 
-### deploynator: _platforms (3)
+### deploynator: _receipt (3)
 
-deploynator: _platforms groups 7 files (py) around DeploynatorApp, __init__, auth_login, auth_status, _auth_github. install_packages: pip install/upgrade packages (default: deploynator from PyPI).
+deploynator: _receipt groups 7 files (py) around DeploynatorApp, __init__, auth_login, auth_status, _auth_github. install_packages: pip install/upgrade packages (default: deploynator from PyPI).
 
 **Related Classes/Methods**:
 
@@ -97,11 +98,11 @@ deploynator: _changelog groups 6 files (py) around Config, create, resolve_path,
 
 **Related Classes/Methods**:
 
-- <a href="../deploynator/_config.py#L8-L79">deploynator/_config.py::Config</a>
-- <a href="../deploynator/_config.py#L80-L85">deploynator/_config.py::create</a>
-- <a href="../deploynator/_config.py#L86-L91">deploynator/_config.py::resolve_path</a>
-- <a href="../deploynator/_config.py#L92-L95">deploynator/_config.py::gh_authd</a>
-- <a href="../deploynator/_config.py#L96-L99">deploynator/_config.py::glab_authd</a>
-- <a href="../deploynator/_config.py#L100-L101">deploynator/_config.py::bb_authd</a>
+- <a href="../deploynator/_config.py#L8-L82">deploynator/_config.py::Config</a>
+- <a href="../deploynator/_config.py#L83-L88">deploynator/_config.py::create</a>
+- <a href="../deploynator/_config.py#L89-L94">deploynator/_config.py::resolve_path</a>
+- <a href="../deploynator/_config.py#L95-L98">deploynator/_config.py::gh_authd</a>
+- <a href="../deploynator/_config.py#L99-L102">deploynator/_config.py::glab_authd</a>
+- <a href="../deploynator/_config.py#L103-L104">deploynator/_config.py::bb_authd</a>
 - <a href="../deploynator/_changelog.py">deploynator/_changelog.py::ChangelogGenerator</a>
 - <a href="../deploynator/_changelog.py#L12-L14">deploynator/_changelog.py::__init__</a>

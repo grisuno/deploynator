@@ -2,13 +2,16 @@
 
 [Back to index](index.md)
 
-[A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [J](#j) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [P](#p) | [R](#r) | [S](#s) | [T](#t) | [U](#u) | [V](#v) | [W](#w)
+[A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [J](#j) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [O](#o) | [P](#p) | [R](#r) | [S](#s) | [T](#t) | [U](#u) | [V](#v) | [W](#w)
 
 <a id="a"></a>
 
 ## A
 
 - [`add_all`](modules/deploynator._git.py.md#gitoperations-add_all) method of `GitOperations` in `deploynator._git`
+- [`add_commands`](modules/deploynator._receipt.py.md#receiptcollector-add_commands) method of `ReceiptCollector` in `deploynator._receipt`
+- [`add_edge`](modules/deploynator._receipt.py.md#receiptcollector-add_edge) method of `ReceiptCollector` in `deploynator._receipt`
+- [`add_edges`](modules/deploynator._receipt.py.md#receiptcollector-add_edges) method of `ReceiptCollector` in `deploynator._receipt`
 - [`allow_no_tests`](modules/deploynator._toml.py.md#tomlconfig-allow_no_tests) attribute of `TomlConfig` in `deploynator._toml`
 - [`amend_no_edit`](modules/deploynator._git.py.md#gitoperations-amend_no_edit) method of `GitOperations` in `deploynator._git`
 - [`assets`](modules/deploynator._models.py.md#releaseinfo-assets) attribute of `ReleaseInfo` in `deploynator._models`
@@ -31,6 +34,8 @@
 - [`branch_exists`](modules/deploynator._git.py.md#gitoperations-branch_exists) method of `GitOperations` in `deploynator._git`
 - [`build_command`](modules/deploynator._deb.py.md#debrunner-build_command) method of `DebRunner` in `deploynator._deb`
 - [`build_parser`](modules/deploynator.__main__.py.md#build_parser) function in `deploynator.__main__`
+- [`build_plan`](modules/deploynator._receipt.py.md#build_plan) function in `deploynator._receipt`
+- [`build_receipt_from_result`](modules/deploynator._receipt.py.md#build_receipt_from_result) function in `deploynator._receipt`
 - [`bump`](modules/deploynator._models.py.md#versioninfo-bump) method of `VersionInfo` in `deploynator._models`
 - [`bump_strategy`](modules/deploynator._models.py.md#committype-bump_strategy) method of `CommitType` in `deploynator._models`
 
@@ -41,6 +46,10 @@
 - [`C_TEST_TIMEOUT_S`](modules/deploynator._toml.py.md#c_test_timeout_s) constant in `deploynator._toml`
 - [`calculate_next_version`](modules/deploynator._semver.py.md#semvermanager-calculate_next_version) method of `SemverManager` in `deploynator._semver`
 - [`call`](modules/deploynator._mcp_server.py.md#mcptool-call) method of `MCPTool` in `deploynator._mcp_server`
+- [`callee`](modules/deploynator._receipt.py.md#edgerecord-callee) attribute of `EdgeRecord` in `deploynator._receipt`
+- [`caller`](modules/deploynator._receipt.py.md#edgerecord-caller) attribute of `EdgeRecord` in `deploynator._receipt`
+- [`caller`](modules/deploynator._receipt.py.md#steprecord-caller) attribute of `StepRecord` in `deploynator._receipt`
+- [`capture`](modules/deploynator._receipt.py.md#receiptcollector-capture) method of `ReceiptCollector` in `deploynator._receipt`
 - [`changelog_file`](modules/deploynator._config.py.md#config-changelog_file) attribute of `Config` in `deploynator._config`
 - [`changelog_header`](modules/deploynator._config.py.md#config-changelog_header) attribute of `Config` in `deploynator._config`
 - [`changelog_html`](modules/deploynator._config.py.md#config-changelog_html) attribute of `Config` in `deploynator._config`
@@ -53,6 +62,9 @@
 - [`clean`](modules/deploynator._pypi.py.md#pypirunner-clean) method of `PyPIRunner` in `deploynator._pypi`
 - [`cli_name`](modules/deploynator._models.py.md#platform-cli_name) method of `Platform` in `deploynator._models`
 - [`clone`](modules/deploynator._git.py.md#gitoperations-clone) method of `GitOperations` in `deploynator._git`
+- [`collect_secret_values`](modules/deploynator._receipt.py.md#collect_secret_values) function in `deploynator._receipt`
+- [`command`](modules/deploynator._receipt.py.md#commandrecord-command) attribute of `CommandRecord` in `deploynator._receipt`
+- [`CommandRecord`](modules/deploynator._receipt.py.md#commandrecord) class in `deploynator._receipt`
 - [`commit`](modules/deploynator._app.py.md#deploynatorapp-commit) method of `DeploynatorApp` in `deploynator._app`
 - [`commit`](modules/deploynator._git.py.md#gitoperations-commit) method of `GitOperations` in `deploynator._git`
 - [`commit_type`](modules/deploynator._models.py.md#changelogentry-commit_type) attribute of `ChangelogEntry` in `deploynator._models`
@@ -60,6 +72,7 @@
 - [`commit_type_pattern`](modules/deploynator._config.py.md#config-commit_type_pattern) attribute of `Config` in `deploynator._config`
 - [`CommitMessage`](modules/deploynator._models.py.md#commitmessage) class in `deploynator._models`
 - [`CommitType`](modules/deploynator._models.py.md#committype) enum in `deploynator._models`
+- [`confidence`](modules/deploynator._receipt.py.md#edgerecord-confidence) attribute of `EdgeRecord` in `deploynator._receipt`
 - [`Config`](modules/deploynator._config.py.md#config) class in `deploynator._config`
 - [`conventional_types`](modules/deploynator._config.py.md#config-conventional_types) attribute of `Config` in `deploynator._config`
 - [`create`](modules/deploynator._config.py.md#config-create) staticmethod of `Config` in `deploynator._config`
@@ -75,6 +88,8 @@
 - [`create_release`](modules/deploynator._platforms.py.md#gitlabcli-create_release) method of `GitLabCLI` in `deploynator._platforms`
 - [`create_release`](modules/deploynator._platforms.py.md#platformclient-create_release) method of `PlatformClient` in `deploynator._platforms`
 - [`current_branch`](modules/deploynator._git.py.md#gitoperations-current_branch) method of `GitOperations` in `deploynator._git`
+- [`current_stage`](modules/deploynator._receipt.py.md#receiptcollector-current_stage) method of `ReceiptCollector` in `deploynator._receipt`
+- [`cwd`](modules/deploynator._receipt.py.md#commandrecord-cwd) attribute of `CommandRecord` in `deploynator._receipt`
 
 <a id="d"></a>
 
@@ -92,6 +107,7 @@
 - [`DebRunner`](modules/deploynator._deb.py.md#debrunner) class in `deploynator._deb`
 - [`default_branch`](modules/deploynator._config.py.md#config-default_branch) attribute of `Config` in `deploynator._config`
 - [`DEFAULT_DOCS_COMMAND`](modules/deploynator._toml.py.md#default_docs_command) constant in `deploynator._toml`
+- [`default_receipt_path`](modules/deploynator._receipt.py.md#default_receipt_path) function in `deploynator._receipt`
 - [`default_remote`](modules/deploynator._config.py.md#config-default_remote) attribute of `Config` in `deploynator._config`
 - [`DEFAULT_TEST_COMMANDS`](modules/deploynator._toml.py.md#default_test_commands) constant in `deploynator._toml`
 - [`definition`](modules/deploynator._mcp_server.py.md#mcpresource-definition) method of `MCPResource` in `deploynator._mcp_server`
@@ -120,16 +136,23 @@
 - [`docs_timeout_s`](modules/deploynator._toml.py.md#tomlconfig-docs_timeout_s) attribute of `TomlConfig` in `deploynator._toml`
 - [`DocsRunner`](modules/deploynator._docs.py.md#docsrunner) class in `deploynator._docs`
 - [`draft`](modules/deploynator._models.py.md#releaseinfo-draft) attribute of `ReleaseInfo` in `deploynator._models`
+- [`duration_ms`](modules/deploynator._receipt.py.md#commandrecord-duration_ms) attribute of `CommandRecord` in `deploynator._receipt`
+- [`duration_ms`](modules/deploynator._receipt.py.md#steprecord-duration_ms) attribute of `StepRecord` in `deploynator._receipt`
 
 <a id="e"></a>
 
 ## E
 
+- [`EdgeRecord`](modules/deploynator._receipt.py.md#edgerecord) class in `deploynator._receipt`
 - [`enabled`](modules/deploynator._models.py.md#platformconfig-enabled) attribute of `PlatformConfig` in `deploynator._models`
 - [`ensure_deployed_footer`](modules/deploynator._readme.py.md#ensure_deployed_footer) function in `deploynator._readme`
 - [`ensure_pkg`](modules/deploy.sh.md#ensure_pkg) function in `deploy.sh`
 - [`error`](modules/deploynator._models.py.md#deployresult-error) attribute of `DeployResult` in `deploynator._models`
 - [`error`](modules/deploynator._mcp_server.py.md#mcprequest-error) method of `MCPRequest` in `deploynator._mcp_server`
+- [`error`](modules/deploynator._receipt.py.md#steprecord-error) attribute of `StepRecord` in `deploynator._receipt`
+- [`evidence`](modules/deploynator._receipt.py.md#edgerecord-evidence) attribute of `EdgeRecord` in `deploynator._receipt`
+- [`exception`](modules/deploynator._receipt.py.md#commandrecord-exception) attribute of `CommandRecord` in `deploynator._receipt`
+- [`exit_code`](modules/deploynator._receipt.py.md#commandrecord-exit_code) attribute of `CommandRecord` in `deploynator._receipt`
 
 <a id="f"></a>
 
@@ -138,6 +161,7 @@
 - [`FEAT`](modules/deploynator._models.py.md#committype-feat) attribute of `CommitType` in `deploynator._models`
 - [`file`](modules/deploynator._models.py.md#versionconfig-file) attribute of `VersionConfig` in `deploynator._models`
 - [`file_type`](modules/deploynator._models.py.md#versionconfig-file_type) attribute of `VersionConfig` in `deploynator._models`
+- [`finalize`](modules/deploynator._receipt.py.md#receiptcollector-finalize) method of `ReceiptCollector` in `deploynator._receipt`
 - [`find_by_name`](modules/deploynator._deploy.py.md#projectdiscovery-find_by_name) method of `ProjectDiscovery` in `deploynator._deploy`
 - [`FIX`](modules/deploynator._models.py.md#committype-fix) attribute of `CommitType` in `deploynator._models`
 - [`footer`](modules/deploynator._models.py.md#commitmessage-footer) attribute of `CommitMessage` in `deploynator._models`
@@ -188,6 +212,7 @@
 
 - [`has_credentials`](modules/deploynator._pypi.py.md#pypirunner-has_credentials) method of `PyPIRunner` in `deploynator._pypi`
 - [`has_remote`](modules/deploynator._git.py.md#gitoperations-has_remote) method of `GitOperations` in `deploynator._git`
+- [`head_commit`](modules/deploynator._git.py.md#gitoperations-head_commit) method of `GitOperations` in `deploynator._git`
 - [`HOTFIX`](modules/deploynator._models.py.md#committype-hotfix) attribute of `CommitType` in `deploynator._models`
 
 <a id="i"></a>
@@ -207,6 +232,8 @@
 - [`__init__`](modules/deploynator._platforms.py.md#platformclient-__init__) constructor of `PlatformClient` in `deploynator._platforms`
 - [`__init__`](modules/deploynator._deploy.py.md#projectdiscovery-__init__) constructor of `ProjectDiscovery` in `deploynator._deploy`
 - [`__init__`](modules/deploynator._pypi.py.md#pypirunner-__init__) constructor of `PyPIRunner` in `deploynator._pypi`
+- [`__init__`](modules/deploynator._receipt.py.md#receiptcollector-__init__) constructor of `ReceiptCollector` in `deploynator._receipt`
+- [`__init__`](modules/deploynator._receipt.py.md#releasereceipt-__init__) constructor of `ReleaseReceipt` in `deploynator._receipt`
 - [`__init__`](modules/deploynator._semver.py.md#semvermanager-__init__) constructor of `SemverManager` in `deploynator._semver`
 - [`__init__`](modules/deploynator._runner.py.md#testrunner-__init__) constructor of `TestRunner` in `deploynator._runner`
 - [`init_project`](modules/deploynator._app.py.md#deploynatorapp-init_project) method of `DeploynatorApp` in `deploynator._app`
@@ -243,6 +270,10 @@
 
 ## K
 
+- [`kind`](modules/deploynator._receipt.py.md#commandrecord-kind) attribute of `CommandRecord` in `deploynator._receipt`
+- [`kind`](modules/deploynator._receipt.py.md#edgerecord-kind) attribute of `EdgeRecord` in `deploynator._receipt`
+- [`KIND_CANDIDATE`](modules/deploynator._receipt.py.md#kind_candidate) constant in `deploynator._receipt`
+- [`KIND_OBSERVED`](modules/deploynator._receipt.py.md#kind_observed) constant in `deploynator._receipt`
 - [`knowledge_base`](modules/deploynator._config.py.md#config-knowledge_base) attribute of `Config` in `deploynator._config`
 - [`KNOWN_COMMANDS`](modules/deploynator.__main__.py.md#known_commands) constant in `deploynator.__main__`
 
@@ -255,6 +286,7 @@
 - [`lazygit_config_key`](modules/deploynator._config.py.md#config-lazygit_config_key) attribute of `Config` in `deploynator._config`
 - [`list_make_targets`](modules/deploynator._toml.py.md#list_make_targets) function in `deploynator._toml`
 - [`list_projects`](modules/deploynator._app.py.md#deploynatorapp-list_projects) method of `DeploynatorApp` in `deploynator._app`
+- [`load_dict`](modules/deploynator._receipt.py.md#releasereceipt-load_dict) method of `ReleaseReceipt` in `deploynator._receipt`
 - [`load_toml_config`](modules/deploynator._toml.py.md#load_toml_config) function in `deploynator._toml`
 - [`looks_like_packaging_project`](modules/deploynator._toml.py.md#looks_like_packaging_project) function in `deploynator._toml`
 
@@ -268,6 +300,7 @@
 - [`major`](modules/deploynator._models.py.md#versioninfo-major) attribute of `VersionInfo` in `deploynator._models`
 - [`MAKE_TEST_PRIORITY`](modules/deploynator._toml.py.md#make_test_priority) constant in `deploynator._toml`
 - [`MAKEFILE_NAMES`](modules/deploynator._toml.py.md#makefile_names) constant in `deploynator._toml`
+- [`mark_failure`](modules/deploynator._receipt.py.md#receiptcollector-mark_failure) method of `ReceiptCollector` in `deploynator._receipt`
 - [`max_dir_depth`](modules/deploynator._config.py.md#config-max_dir_depth) attribute of `Config` in `deploynator._config`
 - [`max_file_size_bytes`](modules/deploynator._config.py.md#config-max_file_size_bytes) attribute of `Config` in `deploynator._config`
 - [`max_release_chars`](modules/deploynator._config.py.md#config-max_release_chars) attribute of `Config` in `deploynator._config`
@@ -279,6 +312,8 @@
 - [`message`](modules/deploynator._models.py.md#changelogentry-message) attribute of `ChangelogEntry` in `deploynator._models`
 - [`METHOD_NOT_FOUND`](modules/deploynator._mcp_server.py.md#method_not_found) constant in `deploynator._mcp_server`
 - [`minor`](modules/deploynator._models.py.md#versioninfo-minor) attribute of `VersionInfo` in `deploynator._models`
+- [`MODE_PLAN`](modules/deploynator._receipt.py.md#mode_plan) constant in `deploynator._receipt`
+- [`MODE_RUN`](modules/deploynator._receipt.py.md#mode_run) constant in `deploynator._receipt`
 - [`modules_dir`](modules/deploynator._config.py.md#config-modules_dir) attribute of `Config` in `deploynator._config`
 
 <a id="n"></a>
@@ -290,7 +325,15 @@
 - [`name`](modules/deploynator._platforms.py.md#gitlabcli-name) method of `GitLabCLI` in `deploynator._platforms`
 - [`name`](modules/deploynator._platforms.py.md#platformclient-name) method of `PlatformClient` in `deploynator._platforms`
 - [`name`](modules/deploynator._models.py.md#projectconfig-name) attribute of `ProjectConfig` in `deploynator._models`
+- [`note_platform`](modules/deploynator._receipt.py.md#receiptcollector-note_platform) method of `ReceiptCollector` in `deploynator._receipt`
+- [`note_platform`](modules/deploynator._receipt.py.md#releasereceipt-note_platform) method of `ReleaseReceipt` in `deploynator._receipt`
 - [`notes`](modules/deploynator._models.py.md#releaseinfo-notes) attribute of `ReleaseInfo` in `deploynator._models`
+
+<a id="o"></a>
+
+## O
+
+- [`observe_edge`](modules/deploynator._receipt.py.md#receiptcollector-observe_edge) method of `ReceiptCollector` in `deploynator._receipt`
 
 <a id="p"></a>
 
@@ -318,6 +361,7 @@
 - [`ProjectDiscovery`](modules/deploynator._deploy.py.md#projectdiscovery) class in `deploynator._deploy`
 - [`projects_dir`](modules/deploynator._config.py.md#config-projects_dir) attribute of `Config` in `deploynator._config`
 - [`prompt_for_credentials`](modules/deploynator._pypi.py.md#pypirunner-prompt_for_credentials) method of `PyPIRunner` in `deploynator._pypi`
+- [`provenance`](modules/deploynator._receipt.py.md#edgerecord-provenance) attribute of `EdgeRecord` in `deploynator._receipt`
 - [`push`](modules/deploynator._git.py.md#gitoperations-push) method of `GitOperations` in `deploynator._git`
 - [`push_changes`](modules/deploynator._platforms.py.md#bitbucketcli-push_changes) method of `BitbucketCLI` in `deploynator._platforms`
 - [`push_changes`](modules/deploynator._platforms.py.md#githubcli-push_changes) method of `GitHubCLI` in `deploynator._platforms`
@@ -338,6 +382,13 @@
 - [`read`](modules/deploynator._mcp_server.py.md#mcpresource-read) method of `MCPResource` in `deploynator._mcp_server`
 - [`README_CANDIDATES`](modules/deploynator._readme.py.md#readme_candidates) constant in `deploynator._readme`
 - [`readme_file`](modules/deploynator._config.py.md#config-readme_file) attribute of `Config` in `deploynator._config`
+- [`receipt_path`](modules/deploynator._models.py.md#deployresult-receipt_path) attribute of `DeployResult` in `deploynator._models`
+- [`RECEIPT_SCHEMA`](modules/deploynator._receipt.py.md#receipt_schema) constant in `deploynator._receipt`
+- [`receipt_tail_chars`](modules/deploynator._config.py.md#config-receipt_tail_chars) attribute of `Config` in `deploynator._config`
+- [`ReceiptCollector`](modules/deploynator._receipt.py.md#receiptcollector) class in `deploynator._receipt`
+- [`receipts_dir`](modules/deploynator._config.py.md#config-receipts_dir) attribute of `Config` in `deploynator._config`
+- [`redact`](modules/deploynator._receipt.py.md#redact) function in `deploynator._receipt`
+- [`REDACTED`](modules/deploynator._receipt.py.md#redacted) constant in `deploynator._receipt`
 - [`REFACTOR`](modules/deploynator._models.py.md#committype-refactor) attribute of `CommitType` in `deploynator._models`
 - [`register`](modules/deploynator._platforms.py.md#platformfactory-register) classmethod of `PlatformFactory` in `deploynator._platforms`
 - [`register_resource`](modules/deploynator._mcp_server.py.md#mcpserver-register_resource) method of `MCPServer` in `deploynator._mcp_server`
@@ -346,6 +397,7 @@
 - [`release`](modules/deploynator._app.py.md#deploynatorapp-release) method of `DeploynatorApp` in `deploynator._app`
 - [`release_branch`](modules/deploynator._config.py.md#config-release_branch) attribute of `Config` in `deploynator._config`
 - [`ReleaseInfo`](modules/deploynator._models.py.md#releaseinfo) class in `deploynator._models`
+- [`ReleaseReceipt`](modules/deploynator._receipt.py.md#releasereceipt) class in `deploynator._receipt`
 - [`releases_created`](modules/deploynator._models.py.md#deployresult-releases_created) attribute of `DeployResult` in `deploynator._models`
 - [`repo`](modules/deploynator._models.py.md#platformconfig-repo) attribute of `PlatformConfig` in `deploynator._models`
 - [`repo_url`](modules/deploynator._models.py.md#projectconfig-repo_url) attribute of `ProjectConfig` in `deploynator._models`
@@ -366,12 +418,29 @@
 - [`section_header`](modules/deploynator._models.py.md#committype-section_header) method of `CommitType` in `deploynator._models`
 - [`semver_pattern`](modules/deploynator._config.py.md#config-semver_pattern) attribute of `Config` in `deploynator._config`
 - [`SemverManager`](modules/deploynator._semver.py.md#semvermanager) class in `deploynator._semver`
+- [`set_commit`](modules/deploynator._receipt.py.md#receiptcollector-set_commit) method of `ReceiptCollector` in `deploynator._receipt`
+- [`set_run_context`](modules/deploynator._receipt.py.md#receiptcollector-set_run_context) method of `ReceiptCollector` in `deploynator._receipt`
+- [`set_tag`](modules/deploynator._receipt.py.md#receiptcollector-set_tag) method of `ReceiptCollector` in `deploynator._receipt`
 - [`sha`](modules/deploynator._models.py.md#changelogentry-sha) attribute of `ChangelogEntry` in `deploynator._models`
 - [`sponge_cli`](modules/deploynator._config.py.md#config-sponge_cli) attribute of `Config` in `deploynator._config`
+- [`stage`](modules/deploynator._receipt.py.md#commandrecord-stage) attribute of `CommandRecord` in `deploynator._receipt`
+- [`stage`](modules/deploynator._receipt.py.md#receiptcollector-stage) method of `ReceiptCollector` in `deploynator._receipt`
 - [`start_branch`](modules/deploynator._app.py.md#deploynatorapp-start_branch) method of `DeploynatorApp` in `deploynator._app`
+- [`started_at`](modules/deploynator._receipt.py.md#commandrecord-started_at) attribute of `CommandRecord` in `deploynator._receipt`
+- [`started_at`](modules/deploynator._receipt.py.md#steprecord-started_at) attribute of `StepRecord` in `deploynator._receipt`
 - [`status`](modules/deploynator._app.py.md#deploynatorapp-status) method of `DeploynatorApp` in `deploynator._app`
+- [`status`](modules/deploynator._receipt.py.md#steprecord-status) attribute of `StepRecord` in `deploynator._receipt`
+- [`STATUS_FAILED`](modules/deploynator._receipt.py.md#status_failed) constant in `deploynator._receipt`
+- [`STATUS_PARTIAL`](modules/deploynator._receipt.py.md#status_partial) constant in `deploynator._receipt`
+- [`STATUS_RUNNING`](modules/deploynator._receipt.py.md#status_running) constant in `deploynator._receipt`
+- [`STATUS_SUCCESS`](modules/deploynator._receipt.py.md#status_success) constant in `deploynator._receipt`
+- [`stderr_tail`](modules/deploynator._receipt.py.md#commandrecord-stderr_tail) attribute of `CommandRecord` in `deploynator._receipt`
+- [`stdout_tail`](modules/deploynator._receipt.py.md#commandrecord-stdout_tail) attribute of `CommandRecord` in `deploynator._receipt`
+- [`step`](modules/deploynator._receipt.py.md#steprecord-step) attribute of `StepRecord` in `deploynator._receipt`
+- [`StepRecord`](modules/deploynator._receipt.py.md#steprecord) class in `deploynator._receipt`
 - [`STYLE`](modules/deploynator._models.py.md#committype-style) attribute of `CommitType` in `deploynator._models`
 - [`subject`](modules/deploynator._models.py.md#commitmessage-subject) attribute of `CommitMessage` in `deploynator._models`
+- [`success`](modules/deploynator._receipt.py.md#commandrecord-success) attribute of `CommandRecord` in `deploynator._receipt`
 - [`success`](modules/deploynator._models.py.md#deployresult-success) attribute of `DeployResult` in `deploynator._models`
 
 <a id="t"></a>
@@ -386,6 +455,10 @@
 - [`test_timeout_s`](modules/deploynator._toml.py.md#tomlconfig-test_timeout_s) attribute of `TomlConfig` in `deploynator._toml`
 - [`TestRunner`](modules/deploynator._runner.py.md#testrunner) class in `deploynator._runner`
 - [`title`](modules/deploynator._models.py.md#releaseinfo-title) attribute of `ReleaseInfo` in `deploynator._models`
+- [`to_dict`](modules/deploynator._receipt.py.md#commandrecord-to_dict) method of `CommandRecord` in `deploynator._receipt`
+- [`to_dict`](modules/deploynator._receipt.py.md#edgerecord-to_dict) method of `EdgeRecord` in `deploynator._receipt`
+- [`to_dict`](modules/deploynator._receipt.py.md#releasereceipt-to_dict) method of `ReleaseReceipt` in `deploynator._receipt`
+- [`to_dict`](modules/deploynator._receipt.py.md#steprecord-to_dict) method of `StepRecord` in `deploynator._receipt`
 - [`TOML_FILENAME`](modules/deploynator._toml.py.md#toml_filename) constant in `deploynator._toml`
 - [`TomlConfig`](modules/deploynator._toml.py.md#tomlconfig) class in `deploynator._toml`
 
@@ -416,5 +489,6 @@
 ## W
 
 - [`workflows_dir`](modules/deploynator._config.py.md#config-workflows_dir) attribute of `Config` in `deploynator._config`
+- [`write`](modules/deploynator._receipt.py.md#receiptcollector-write) method of `ReceiptCollector` in `deploynator._receipt`
 - [`write_changelog`](modules/deploynator._changelog.py.md#changeloggenerator-write_changelog) method of `ChangelogGenerator` in `deploynator._changelog`
 - [`write_version_file`](modules/deploynator._semver.py.md#semvermanager-write_version_file) method of `SemverManager` in `deploynator._semver`

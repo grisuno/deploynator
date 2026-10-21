@@ -62,6 +62,6 @@ def run(self, project_path: str, toml: TomlConfig) -> bool
 
 **Returns:** `bool`
 
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy), [`DeployOrchestrator.integrate_readmenator`](deploynator._deploy.py.md#deployorchestrator-integrate_readmenator)
+*Called by:* [`DeployOrchestrator.integrate_readmenator`](deploynator._deploy.py.md#deployorchestrator-integrate_readmenator)
 
 ---

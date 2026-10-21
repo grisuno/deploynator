@@ -22,8 +22,8 @@ This community groups 7 file(s) rooted at `deploynator` with dominant language p
 
 - `main` (function, `app.py:12`) `def main()`
 - `build_parser` (function, `deploynator/__main__.py:16`) `def build_parser()`
-- `preprocess_argv` (function, `deploynator/__main__.py:146`) `def preprocess_argv(argv)`
-- `main` (function, `deploynator/__main__.py:180`) `def main(argv)`
+- `preprocess_argv` (function, `deploynator/__main__.py:151`) `def preprocess_argv(argv)`
+- `main` (function, `deploynator/__main__.py:185`) `def main(argv)`
 - `MCPRequest` (class, `deploynator/_mcp_server.py:36`) `class MCPRequest`
 - `__init__` (method, `deploynator/_mcp_server.py:37`) `def __init__(self, msg)`
 - `is_notification` (method, `deploynator/_mcp_server.py:44`) `def is_notification(self)`
@@ -49,7 +49,7 @@ This community groups 7 file(s) rooted at `deploynator` with dominant language p
 - `dispatch` (method, `deploynator/_mcp_server.py:145`) `def dispatch(self, req)`
 - `run` (method, `deploynator/_mcp_server.py:163`) `def run(self)`
 - `_register_all` (method, `deploynator/_mcp_server.py:181`) `def _register_all(self)`
-- `_tool_release` (method, `deploynator/_mcp_server.py:236`) `def _tool_release(self, project, commit_type, subject, message, scope, body, bum`
+- `_tool_release` (method, `deploynator/_mcp_server.py:238`) `def _tool_release(self, project, commit_type, subject, message, scope, body, bum`
 
 ## Internal vs External Edges
 

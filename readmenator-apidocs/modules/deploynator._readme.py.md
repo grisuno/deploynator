@@ -71,8 +71,6 @@ Append or refresh the deploy footer in the repository README.
 
 *Calls:* [`Config.create`](deploynator._config.py.md#config-create), [`footer_block`](#footer_block)
 
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
-
 ---
 
 <a id="footer_line"></a>

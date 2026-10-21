@@ -25,6 +25,9 @@ class Config:
     max_file_size_bytes: int = 10_485_760
     max_dir_depth: int = 20
 
+    receipts_dir: str = "release-receipts"
+    receipt_tail_chars: int = 2000
+
     changelog_header: str = "# Changelog"
 
     deploynator_badge_url: str = "https://github.com/grisuno/deploynator"

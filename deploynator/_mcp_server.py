@@ -194,6 +194,8 @@ class MCPServer:
                 "no_docs": {"type": "boolean", "default": False},
                 "no_pypi": {"type": "boolean", "default": False},
                 "no_deb": {"type": "boolean", "default": False},
+                "receipt_path": {"type": "string", "default": ""},
+                "trace": {"type": "boolean", "default": False},
             }},
         ))
         self.register_tool(MCPTool(
@@ -236,17 +238,19 @@ class MCPServer:
     def _tool_release(self, project: str = "", commit_type: str = "release", subject: str = "",
                       message: str = "", scope: str = "", body: str = "", bump: str = "",
                       dry_run: bool = False, no_test: bool = False, no_docs: bool = False,
-                      no_pypi: bool = False, no_deb: bool = False) -> str:
+                      no_pypi: bool = False, no_deb: bool = False,
+                      receipt_path: str | None = None, trace: bool = False) -> str:
         results = self._app.release(
             commit_type=commit_type, subject=subject, message=message, scope=scope, body=body,
             project_name=project, bump=bump, dry_run=dry_run,
             all_projects=not project, no_test=no_test, no_docs=no_docs, no_pypi=no_pypi,
-            no_deb=no_deb,
+            no_deb=no_deb, receipt_path=(receipt_path or None), trace=trace,
         )
         lines = []
         for r in results:
             lines.append(f"[{('OK' if r.success else 'FAIL')}] {r.project} v{r.version}"
-                         + (f" error={r.error}" if r.error else ""))
+                         + (f" error={r.error}" if r.error else "")
+                         + (f" receipt={r.receipt_path}" if r.receipt_path else ""))
         return "\n".join(lines) or "No projects found."
 
     def _tool_commit(self, commit_type: str, subject: str, project: str = "",

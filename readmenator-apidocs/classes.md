@@ -6,6 +6,7 @@ Project types nested under the project types they derive from. External bases ar
 
 - [`ChangelogEntry`](modules/deploynator._models.py.md#changelogentry) class in `deploynator._models`
 - [`ChangelogGenerator`](modules/deploynator._changelog.py.md#changeloggenerator) class in `deploynator._changelog`
+- [`CommandRecord`](modules/deploynator._receipt.py.md#commandrecord) class in `deploynator._receipt`
 - [`CommitMessage`](modules/deploynator._models.py.md#commitmessage) class in `deploynator._models`
 - [`CommitType`](modules/deploynator._models.py.md#committype) enum in `deploynator._models`(Enum)
 - [`Config`](modules/deploynator._config.py.md#config) class in `deploynator._config`
@@ -14,6 +15,7 @@ Project types nested under the project types they derive from. External bases ar
 - [`DeployOrchestrator`](modules/deploynator._deploy.py.md#deployorchestrator) class in `deploynator._deploy`
 - [`DeployResult`](modules/deploynator._models.py.md#deployresult) class in `deploynator._models`
 - [`DocsRunner`](modules/deploynator._docs.py.md#docsrunner) class in `deploynator._docs`
+- [`EdgeRecord`](modules/deploynator._receipt.py.md#edgerecord) class in `deploynator._receipt`
 - [`GitOperations`](modules/deploynator._git.py.md#gitoperations) class in `deploynator._git`
 - [`MCPRequest`](modules/deploynator._mcp_server.py.md#mcprequest) class in `deploynator._mcp_server`
 - [`MCPResource`](modules/deploynator._mcp_server.py.md#mcpresource) class in `deploynator._mcp_server`
@@ -29,8 +31,11 @@ Project types nested under the project types they derive from. External bases ar
 - [`ProjectConfig`](modules/deploynator._models.py.md#projectconfig) class in `deploynator._models`
 - [`ProjectDiscovery`](modules/deploynator._deploy.py.md#projectdiscovery) class in `deploynator._deploy`
 - [`PyPIRunner`](modules/deploynator._pypi.py.md#pypirunner) class in `deploynator._pypi`
+- [`ReceiptCollector`](modules/deploynator._receipt.py.md#receiptcollector) class in `deploynator._receipt`
 - [`ReleaseInfo`](modules/deploynator._models.py.md#releaseinfo) class in `deploynator._models`
+- [`ReleaseReceipt`](modules/deploynator._receipt.py.md#releasereceipt) class in `deploynator._receipt`
 - [`SemverManager`](modules/deploynator._semver.py.md#semvermanager) class in `deploynator._semver`
+- [`StepRecord`](modules/deploynator._receipt.py.md#steprecord) class in `deploynator._receipt`
 - [`TestRunner`](modules/deploynator._runner.py.md#testrunner) class in `deploynator._runner`
 - [`TomlConfig`](modules/deploynator._toml.py.md#tomlconfig) class in `deploynator._toml`
 - [`VersionConfig`](modules/deploynator._models.py.md#versionconfig) class in `deploynator._models`

@@ -80,8 +80,6 @@ def generate_from_log(self, repo_path: str, from_ref: str, to_ref: str = 'HEAD')
 
 **Returns:** `str`
 
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
-
 <a id="changeloggenerator-generate_from_messages"></a>
 
 #### `ChangelogGenerator.generate_from_messages`
@@ -140,8 +138,6 @@ def write_changelog(self, repo_path: str, content: str, filename: str | None = N
 
 - `OSError`: (raised in the body, not documented)
 
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
-
 <a id="changeloggenerator-format_for_release"></a>
 
 #### `ChangelogGenerator.format_for_release`
@@ -160,7 +156,5 @@ def format_for_release(self, changelog_content: str, max_chars: int | None = Non
 | `max_chars` | `int \| None` | `None` |  |
 
 **Returns:** `str`
-
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
 
 ---

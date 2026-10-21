@@ -62,6 +62,4 @@ def run(self, project_path: str, toml: TomlConfig) -> tuple[bool, str]
 
 **Returns:** `tuple[bool, str]`
 
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
-
 ---

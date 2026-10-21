@@ -71,7 +71,7 @@ O directo:
 
 | Tool | Propósito |
 |------|-----------|
-| `deploynator.release` | Pipeline completo (tests, docs, bump, tag, push). `dry_run=true` para preview |
+| `deploynator.release` | Pipeline completo (tests, docs, bump, tag, push). `dry_run=true` para preview. `receipt_path=X`/`trace=true` escriben receipt JSON |
 | `deploynator.commit` | Solo commit convencional |
 | `deploynator.status` | Branch, dirty, remote, counts |
 | `deploynator.projects` | Proyectos descubiertos |
@@ -89,6 +89,9 @@ O directo:
 deploynator release --type feat --project X --dry-run
 # Release real
 deploynator release --type feat --project X
+# Release con receipt (evidencia del release)
+deploynator release --type feat --project X --receipt
+deploynator release --type feat --project X --dry-run --trace
 deploynator release --type fix --project X --bump major --no-test --no-docs
 deploynator release --type feat --all --dry-run
 deploynator commit --type feat --subject "add login" --scope auth
@@ -137,6 +140,20 @@ command = "python -m readmenator . --rebuild"
 2. docs readmenator (no bloquea, solo warning, salvo `--no-docs`)
 3. bump → version.json → changelog → commit → tag → push → release
 4. PyPI (solo si hay packaging + credenciales, salvo `--no-pypi`): limpia `dist/`, `python -m build`, `twine upload`. Falla → error.
+5. receipt (`--receipt [path]`, default `<cwd>/release-receipts/`): JSON con steps, comandos capturados (tails con tokens redactados) y edges.
+
+## Receipts: evidencia, no prosa
+
+```
+Fact      = step observado con exit_code
+Candidate = conjunto factible (config/CLI/interface)
+Predicted = modelo, siempre etiquetado con version y provenance
+```
+
+- `--receipt` escribe el receipt en TODOS los caminos de salida (también early returns, status `failed`/`partial`).
+- `--trace` con `--dry-run` añade edges `candidate` del plan factible (respeta `--platforms`, TOML y la interfaz Platform); nunca afirma ejecución.
+- Consumir con ReadMenator: `readmenator . receipts [dir]` → `RELEASES.md` + `release-edges.json` (confirmed/unobserved/predicted). Predicciones (heuristic + sklearn opcional) citan número y modelo; jamás se presentan como hecho.
+- Hipótesis de LLM se validan contra el índice de símbolos (`readmenator/_hypotheses.py`); sin validación, quedan `unobserved`.
 
 ## Seguridad
 
@@ -148,7 +165,7 @@ command = "python -m readmenator . --rebuild"
 
 - Repo: https://github.com/grisuno/deploynator
 - MCP: `python3 -m deploynator._mcp_server <path>` / `deploynator serve <path>`
-- Hermana docs: https://github.com/grisuno/ReadMenator (`readmenator . --rebuild`)
+- Hermana docs: https://github.com/grisuno/ReadMenator (`readmenator . --rebuild`, `readmenator . receipts`)
 
 <!-- readmenator-agent-kb-link -->
 ## Project Knowledge Base (MUST read before coding)

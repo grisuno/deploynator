@@ -2,40 +2,40 @@
  "schema_version": 1,
  "format": "jsonl",
  "meta": {
-  "modules": 20,
-  "entities": 330,
+  "modules": 21,
+  "entities": 400,
   "languages": {
-   "py": 18,
+   "py": 19,
    "sh": 2
   },
   "kinds": {
-   "attribute": 111,
-   "class": 29,
+   "attribute": 137,
+   "class": 34,
    "classmethod": 12,
-   "constant": 13,
-   "constructor": 15,
+   "constant": 23,
+   "constructor": 17,
    "enum": 2,
-   "function": 13,
-   "method": 109,
-   "module": 20,
+   "function": 18,
+   "method": 130,
+   "module": 21,
    "property": 4,
    "staticmethod": 2
   },
   "truncated": false,
-  "skipped_files": 18,
+  "skipped_files": 19,
   "privacy_mode": false
  },
  "coverage": {
   "overall": {
-   "documented": 17,
-   "total": 206,
-   "percent": 8.3
+   "documented": 30,
+   "total": 240,
+   "percent": 12.5
   },
   "by_kind": {
    "class": {
-    "documented": 1,
-    "total": 29,
-    "percent": 3.4
+    "documented": 3,
+    "total": 34,
+    "percent": 8.8
    },
    "classmethod": {
     "documented": 0,
@@ -44,7 +44,7 @@
    },
    "constructor": {
     "documented": 0,
-    "total": 15,
+    "total": 17,
     "percent": 0.0
    },
    "enum": {
@@ -53,19 +53,19 @@
     "percent": 0.0
    },
    "function": {
-    "documented": 7,
-    "total": 13,
-    "percent": 53.8
+    "documented": 11,
+    "total": 18,
+    "percent": 61.1
    },
    "method": {
-    "documented": 6,
-    "total": 109,
-    "percent": 5.5
+    "documented": 12,
+    "total": 130,
+    "percent": 9.2
    },
    "module": {
-    "documented": 3,
-    "total": 20,
-    "percent": 15.0
+    "documented": 4,
+    "total": 21,
+    "percent": 19.0
    },
    "property": {
     "documented": 0,
@@ -131,8 +131,8 @@
    },
    "deploynator/_git.py": {
     "documented": 1,
-    "total": 25,
-    "percent": 4.0
+    "total": 26,
+    "percent": 3.8
    },
    "deploynator/_mcp_server.py": {
     "documented": 1,
@@ -158,6 +158,11 @@
     "documented": 3,
     "total": 4,
     "percent": 75.0
+   },
+   "deploynator/_receipt.py": {
+    "documented": 13,
+    "total": 33,
+    "percent": 39.4
    },
    "deploynator/_runner.py": {
     "documented": 0,
@@ -215,7 +220,7 @@
   {
    "uid": "deploynator/_config.py",
    "path": "modules/deploynator._config.py.jsonl",
-   "entities": 41
+   "entities": 43
   },
   {
    "uid": "deploynator/_deb.py",
@@ -235,7 +240,7 @@
   {
    "uid": "deploynator/_git.py",
    "path": "modules/deploynator._git.py.jsonl",
-   "entities": 25
+   "entities": 26
   },
   {
    "uid": "deploynator/_mcp_server.py",
@@ -245,7 +250,7 @@
   {
    "uid": "deploynator/_models.py",
    "path": "modules/deploynator._models.py.jsonl",
-   "entities": 80
+   "entities": 81
   },
   {
    "uid": "deploynator/_platforms.py",
@@ -261,6 +266,11 @@
    "uid": "deploynator/_readme.py",
    "path": "modules/deploynator._readme.py.jsonl",
    "entities": 7
+  },
+  {
+   "uid": "deploynator/_receipt.py",
+   "path": "modules/deploynator._receipt.py.jsonl",
+   "entities": 66
   },
   {
    "uid": "deploynator/_runner.py",
@@ -285,7 +295,7 @@
  ],
  "warnings": {
   "path": "warnings.jsonl",
-  "total": 188
+  "total": 207
  },
  "usage": [
   "grep -h '\"name\":\"<Name>\"' readmenator-apidocs/api/modules/*.jsonl",

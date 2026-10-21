@@ -1,10 +1,10 @@
 # deploynator: _toml
 
-*Community 0 | 8 files | cohesion 0.35*
+*Community 0 | 10 files | cohesion 0.37*
 
 ## Definition
 
-This community groups 8 file(s) rooted at `deploynator` with dominant language py (cohesion 0.35). Central symbols: `DebRunner`, `DocsRunner`, `TestBDDDeployScenarios`, `TestBDDPipeline`, `TestBuildCommand`, `TestCMakefileDetection`, `TestCleanAndRun`, `TestDetect`. Core file: `tests/test_toml.py` (27 symbols). Documented purpose: BDD-style tests for deploynator using behavior-driven patterns.  Feature: Multi-platform deployment As a developer I want to deploy my project to multiple git p.
+This community groups 10 file(s) rooted at `deploynator` with dominant language py (cohesion 0.37). Central symbols: `DebRunner`, `DocsRunner`, `PyPIRunner`, `TestBDDDeployScenarios`, `TestBDDPipeline`, `TestBuildCommand`, `TestCMakefileDetection`, `TestCleanAndRun`. Core file: `tests/test_toml.py` (27 symbols). Documented purpose: BDD-style tests for deploynator using behavior-driven patterns.  Feature: Multi-platform deployment As a developer I want to deploy my project to multiple git p.
 
 ## Files
 
@@ -12,10 +12,12 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 |------|----------|-------|---------|-----|
 | `deploynator/_deb.py` | py | utility | 9 | no |
 | `deploynator/_docs.py` | py | utility | 3 | no |
+| `deploynator/_pypi.py` | py | utility | 8 | no |
 | `deploynator/_runner.py` | py | utility | 3 | no |
 | `deploynator/_toml.py` | py | utility | 10 | no |
 | `tests/bdd_test_deploy.py` | py | testing | 10 | yes |
 | `tests/test_deb.py` | py | testing | 24 | yes |
+| `tests/test_pypi.py` | py | testing | 25 | yes |
 | `tests/test_runner.py` | py | testing | 16 | yes |
 | `tests/test_toml.py` | py | testing | 27 | yes |
 
@@ -33,6 +35,14 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 - `DocsRunner` (class, `deploynator/_docs.py:10`) `class DocsRunner`
 - `__init__` (method, `deploynator/_docs.py:11`) `def __init__(self, config)`
 - `run` (method, `deploynator/_docs.py:14`) `def run(self, project_path, toml)`
+- `PyPIRunner` (class, `deploynator/_pypi.py:12`) `class PyPIRunner`
+- `__init__` (method, `deploynator/_pypi.py:13`) `def __init__(self, config)`
+- `is_packaging_project` (method, `deploynator/_pypi.py:16`) `def is_packaging_project(self, project_path)`
+- `has_credentials` (method, `deploynator/_pypi.py:33`) `def has_credentials(self)`
+- `prompt_for_credentials` (method, `deploynator/_pypi.py:39`) `def prompt_for_credentials(self)` - Pide el token PyPI por input oculto solo si hay TTY.
+- `save_pypirc` (method, `deploynator/_pypi.py:72`) `def save_pypirc(self, token, path)` - Guarda el token en ~/.pypirc (username __token__, modo 600).
+- `clean` (method, `deploynator/_pypi.py:90`) `def clean(self, project_path, toml)`
+- `run` (method, `deploynator/_pypi.py:107`) `def run(self, project_path, toml, version, token, verbose)`
 - `TestRunner` (class, `deploynator/_runner.py:11`) `class TestRunner`
 - `__init__` (method, `deploynator/_runner.py:12`) `def __init__(self, config)`
 - `run` (method, `deploynator/_runner.py:15`) `def run(self, project_path, toml)`
@@ -43,19 +53,11 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 - `detect_test_commands` (function, `deploynator/_toml.py:101`) `def detect_test_commands(project_path)` - Detecta comandos de test para proyectos C/autotools sin toml.
 - `_auto_toml_config` (function, `deploynator/_toml.py:150`) `def _auto_toml_config(project_path)` - Config auto para proyectos sin deploynator.toml (C primero).
 - `TomlConfig` (class, `deploynator/_toml.py:177`) `class TomlConfig`
-- `__post_init__` (method, `deploynator/_toml.py:200`) `def __post_init__(self)`
-- `_clamp_timeout` (function, `deploynator/_toml.py:209`) `def _clamp_timeout(value)`
-- `load_toml_config` (function, `deploynator/_toml.py:217`) `def load_toml_config(project_path)`
-- `TestBDDDeployScenarios` (class, `tests/bdd_test_deploy.py:29`) `class TestBDDDeployScenarios`
-- `project` (method, `tests/bdd_test_deploy.py:31`) `def project(self)`
-- `test_version_bump_by_commit_type` (method, `tests/bdd_test_deploy.py:47`) `def test_version_bump_by_commit_type(self, project, commit_type, expected_bump,`
-- `test_conventional_commit_parsing` (method, `tests/bdd_test_deploy.py:56`) `def test_conventional_commit_parsing(self)`
-- `test_commit_message_format_is_consistent` (method, `tests/bdd_test_deploy.py:70`) `def test_commit_message_format_is_consistent(self)`
 
 ## Internal vs External Edges
 
-- Internal resolved imports (EXTRACTED): 60
-- Cross-boundary resolved imports (EXTRACTED): 56
+- Internal resolved imports (EXTRACTED): 77
+- Cross-boundary resolved imports (EXTRACTED): 81
 
 ## Connections
 
@@ -69,23 +71,26 @@ This community groups 8 file(s) rooted at `deploynator` with dominant language p
 ## Risks
 
 - [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_deb.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_deb.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_pypi.py` via `subprocess` (2 hops)
 
 ## Open Questions
 
-- Why do 4 file(s) lack file-level docs (e.g. `deploynator/_deb.py`)? What purpose do they serve?
+- Why do 5 file(s) lack file-level docs (e.g. `deploynator/_deb.py`)? What purpose do they serve?
 - What would break if the most connected file in deploynator: _toml changed?
-- Should deploynator: _toml be split, given cohesion 0.35?
+- Should deploynator: _toml be split, given cohesion 0.37?
 
 ## Sources
 
 - `deploynator/_deb.py`
 - `deploynator/_docs.py`
+- `deploynator/_pypi.py`
 - `deploynator/_runner.py`
 - `deploynator/_toml.py`
 - `tests/bdd_test_deploy.py`
 - `tests/test_deb.py`
+- `tests/test_pypi.py`
 - `tests/test_runner.py`
 - `tests/test_toml.py`

@@ -93,6 +93,7 @@ classDiagram
     DeployResult : list[str] platforms_pushed
     DeployResult : list[str] releases_created
     DeployResult : str  None error
+    DeployResult : str  None receipt_path
 ```
 
 ## Call Graph
@@ -401,7 +402,7 @@ def parse(cls, version_str: str) -> VersionInfo
 
 - `ValueError`: (raised in the body, not documented)
 
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy), [`SemverManager.get_current_version`](deploynator._semver.py.md#semvermanager-get_current_version)
+*Called by:* [`SemverManager.get_current_version`](deploynator._semver.py.md#semvermanager-get_current_version)
 
 <a id="versioninfo-bump"></a>
 
@@ -529,6 +530,7 @@ class DeployResult
 | [`platforms_pushed`](#deployresult-platforms_pushed) | `list[str]` | `field(default_factory=list)` |  |
 | [`releases_created`](#deployresult-releases_created) | `list[str]` | `field(default_factory=list)` |  |
 | [`error`](#deployresult-error) | `str \| None` | `None` |  |
+| [`receipt_path`](#deployresult-receipt_path) | `str \| None` | `None` |  |
 
 ---
 

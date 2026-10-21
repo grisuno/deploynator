@@ -1,10 +1,10 @@
 # deploynator: _models
 
-*Community 3 | 7 files | cohesion 0.32*
+*Community 3 | 7 files | cohesion 0.31*
 
 ## Definition
 
-This community groups 7 file(s) rooted at `tests` with dominant language py (cohesion 0.32). Central symbols: `ChangelogEntry`, `CommitMessage`, `CommitType`, `DeployResult`, `Platform`, `PlatformConfig`, `ProjectConfig`, `ReleaseInfo`. Core file: `tests/test_models.py` (44 symbols). Documented purpose: Path-direct deploy + tag prefijos + version_file toml (ReadMenator real)..
+This community groups 7 file(s) rooted at `tests` with dominant language py (cohesion 0.31). Central symbols: `ChangelogEntry`, `CommitMessage`, `CommitType`, `DeployResult`, `Platform`, `PlatformConfig`, `ProjectConfig`, `ReleaseInfo`. Core file: `tests/test_models.py` (44 symbols). Documented purpose: Path-direct deploy + tag prefijos + version_file toml (ReadMenator real)..
 
 ## Files
 
@@ -54,7 +54,7 @@ This community groups 7 file(s) rooted at `tests` with dominant language py (coh
 ## Internal vs External Edges
 
 - Internal resolved imports (EXTRACTED): 14
-- Cross-boundary resolved imports (EXTRACTED): 42
+- Cross-boundary resolved imports (EXTRACTED): 43
 
 ## Connections
 
@@ -72,13 +72,12 @@ This community groups 7 file(s) rooted at `tests` with dominant language py (coh
 
 - [taint high] `deploynator/_app.py` -> `deploynator/_models.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_semver.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_models.py` via `subprocess` (1 hops)
 
 ## Open Questions
 
 - Why do 5 file(s) lack file-level docs (e.g. `deploynator/_models.py`)? What purpose do they serve?
 - What would break if the most connected file in deploynator: _models changed?
-- Should deploynator: _models be split, given cohesion 0.32?
+- Should deploynator: _models be split, given cohesion 0.31?
 
 ## Sources
 

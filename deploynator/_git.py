@@ -10,6 +10,16 @@ class GitOperations:
     def __init__(self, config: Config) -> None:
         self._config = config
 
+    def head_commit(self, repo_path: str) -> str:
+        try:
+            result = subprocess.run(
+                ["git", "-C", repo_path, "rev-parse", "HEAD"],
+                capture_output=True, text=True, check=False,
+            )
+            return result.stdout.strip() if result.returncode == 0 else ""
+        except FileNotFoundError:
+            return ""
+
     def check_gpg(self) -> tuple[bool, str]:
         try:
             key_id = subprocess.run(

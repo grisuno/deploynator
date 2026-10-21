@@ -186,7 +186,7 @@ def load_toml_config(project_path: str) -> TomlConfig
 
 *Calls:* [`Config.create`](deploynator._config.py.md#config-create), [`TomlConfig`](#tomlconfig), [`detect_test_commands`](#detect_test_commands)
 
-*Called by:* [`DeploynatorApp.release`](deploynator._app.py.md#deploynatorapp-release), [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy), [`DeployOrchestrator.integrate_readmenator`](deploynator._deploy.py.md#deployorchestrator-integrate_readmenator)
+*Called by:* [`DeploynatorApp.release`](deploynator._app.py.md#deploynatorapp-release), [`DeployOrchestrator.integrate_readmenator`](deploynator._deploy.py.md#deployorchestrator-integrate_readmenator)
 
 ---
 

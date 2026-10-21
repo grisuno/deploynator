@@ -280,3 +280,4 @@ class DeployResult:
     platforms_pushed: list[str] = field(default_factory=list)
     releases_created: list[str] = field(default_factory=list)
     error: str | None = None
+    receipt_path: str | None = None

@@ -43,6 +43,7 @@ Each file is a single contract with strict separation of concerns:
 | `deploynator/_changelog.py` | Changelog contract | Log parsing, formatting |
 | `deploynator/_semver.py` | Semver contract | Version parsing and bumping |
 | `deploynator/_deploy.py` | Deploy contract | Orchestration, project discovery |
+| `deploynator/_receipt.py` | Receipt contract | Operational trace per release: steps, subprocess commands, evidence edges. Fact=observed, candidate=feasible set, predicted=model (never fact) |
 | `deploynator/_app.py` | App contract | High-level API, interactive menu |
 | `deploynator/__main__.py` | CLI contract | Argument parsing, dispatch |
 
@@ -139,7 +140,7 @@ deploynator --help
 deploynator                         # bare = interactive (no flags)
 deploynator interactive             # explicit interactive (no flags)
 deploynator serve [path]            # MCP stdio server (agent harnesses)
-deploynator release --type <type> --project <name> [--bump major|minor|patch] [--no-test] [--no-docs] [--dry-run] [--platforms ...]
+deploynator release --type <type> --project <name> [--bump major|minor|patch] [--no-test] [--no-docs] [--dry-run] [--platforms ...] [--receipt [path]] [--trace]
 deploynator commit --type <type> --subject <msg> [--scope <s>] [--body <b>]
 deploynator start --type <type> --desc <desc> [--remote]
 deploynator auth login [--platforms github gitlab bitbucket]
@@ -174,6 +175,47 @@ Environment variables used for tokens, never CLI arguments.
 File operations bounded by max_file_size_bytes (10MB) and max_dir_depth (20).
 Symlinks rejected by GitOperations layer.
 All exceptions caught at contract boundaries.
+
+## Release Receipts (evidence hierarchy)
+
+Every `deploynator release` can write a receipt JSON documenting the
+release as evidence, not prose:
+
+```bash
+deploynator release --type release --project deploynator --receipt [path]
+deploynator release --dry-run --trace            # feasible plan receipt
+```
+
+Golden rule: `Fact = observed step (exit_code)`, `Candidate = feasible
+set from config/CLI/interface`, `Predicted = model, always labeled`.
+A prediction is never presented as fact.
+
+Receipt fields: schema `deploynator/receipt@v1`, mode (`run`/`plan`),
+status (`success`/`partial`/`failed`), version_from → version_to, tag,
+commit, branch, flags, platforms (enabled/disabled + pushed/released),
+steps (logical stage results), commands (every subprocess captured via
+a `subprocess.run` wrapper, with argv, exit_code, output tails, stage
+label) and edges `(caller, callee, kind, evidence, confidence,
+provenance)`.
+
+Handled automatically:
+- Written on ALL deploy exits (early returns included): status is
+  `failed`/`partial` when the flow stops mid-way.
+- Default target `<cwd>/release-receipts/`; token env values
+  (GITHUB_TOKEN, GITLAB_TOKEN, BITBUCKET_TOKEN, TWINE...) are redacted
+  from tails.
+- `--dry-run --trace` adds candidate edges from `build_plan` (feasible
+  set honoring `--platforms`, TOML config and the Platform interface),
+  never claiming execution.
+
+ReadMenator consumes receipts:
+```bash
+readmenator . receipts [dir]    # RELEASES.md + release-edges.json
+```
+ reconciliation of observed vs candidate, uncertainty predictions
+(`readmenator/_uncertainty.py`, heuristic + optional sklearn random
+forest) and hypothesis validation (`readmenator/_hypotheses.py`,
+LLM/agent proposals constrained by the symbol index).
 
 <!-- readmenator-agent-kb-link -->
 ## Project Knowledge Base (MUST read before coding)

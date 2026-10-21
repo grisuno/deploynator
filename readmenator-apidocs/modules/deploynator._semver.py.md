@@ -112,8 +112,6 @@ def get_current_version(self, project_path: str, version_file: str = 'version.js
 
 *Calls:* [`VersionInfo`](deploynator._models.py.md#versioninfo), [`VersionInfo.parse`](deploynator._models.py.md#versioninfo-parse), [`SemverManager.max_version`](#semvermanager-max_version)
 
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
-
 <a id="semvermanager-write_version_file"></a>
 
 #### `SemverManager.write_version_file`
@@ -139,8 +137,6 @@ def write_version_file(self, project_path: str, version: VersionInfo, version_fi
 - `OSError`: (raised in the body, not documented)
 - `ValueError`: (raised in the body, not documented)
 
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
-
 <a id="semvermanager-determine_bump"></a>
 
 #### `SemverManager.determine_bump`
@@ -160,8 +156,6 @@ def determine_bump(self, commit_type: CommitType) -> str | None
 **Returns:** `str | None`
 
 *Calls:* [`CommitType.bump_strategy`](deploynator._models.py.md#committype-bump_strategy)
-
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
 
 <a id="semvermanager-calculate_next_version"></a>
 
@@ -183,8 +177,6 @@ def calculate_next_version(self, current: VersionInfo, strategy: str | None) -> 
 **Returns:** `VersionInfo`
 
 *Calls:* [`VersionInfo.bump`](deploynator._models.py.md#versioninfo-bump)
-
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
 
 <a id="semvermanager-is_valid_version"></a>
 

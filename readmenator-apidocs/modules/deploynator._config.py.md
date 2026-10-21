@@ -50,6 +50,8 @@ class Config
 | [`max_release_chars`](#config-max_release_chars) | `int` | `120000` |  |
 | [`max_file_size_bytes`](#config-max_file_size_bytes) | `int` | `10485760` |  |
 | [`max_dir_depth`](#config-max_dir_depth) | `int` | `20` |  |
+| [`receipts_dir`](#config-receipts_dir) | `str` | `'release-receipts'` |  |
+| [`receipt_tail_chars`](#config-receipt_tail_chars) | `int` | `2000` |  |
 | [`changelog_header`](#config-changelog_header) | `str` | `'# Changelog'` |  |
 | [`deploynator_badge_url`](#config-deploynator_badge_url) | `str` | `'https://github.com/grisuno/deploynator'` |  |
 | [`deploynator_badge_text`](#config-deploynator_badge_text) | `str` | `'Deployed with deploynator'` |  |
@@ -84,7 +86,7 @@ class Config
 
 #### `Config.create`
 
-`staticmethod` | [deploynator/_config.py:80](../../deploynator/_config.py#L80)
+`staticmethod` | [deploynator/_config.py:83](../../deploynator/_config.py#L83)
 
 Decorators: `@staticmethod`
 
@@ -102,13 +104,13 @@ def create(overrides: dict | None = None) -> Config
 
 *Calls:* [`Config`](#config)
 
-*Called by:* [`main`](app.py.md#main), [`main`](deploynator.__main__.py.md#main), [`DeploynatorApp.__init__`](deploynator._app.py.md#deploynatorapp-__init__), [`main`](deploynator._mcp_server.py.md#main), [`ensure_deployed_footer`](deploynator._readme.py.md#ensure_deployed_footer), [`footer_line`](deploynator._readme.py.md#footer_line), [`list_make_targets`](deploynator._toml.py.md#list_make_targets), [`load_toml_config`](deploynator._toml.py.md#load_toml_config)
+*Called by:* [`main`](app.py.md#main), [`main`](deploynator.__main__.py.md#main), [`DeploynatorApp.__init__`](deploynator._app.py.md#deploynatorapp-__init__), [`main`](deploynator._mcp_server.py.md#main), [`ensure_deployed_footer`](deploynator._readme.py.md#ensure_deployed_footer), [`footer_line`](deploynator._readme.py.md#footer_line), [`ReceiptCollector.__init__`](deploynator._receipt.py.md#receiptcollector-__init__), [`collect_secret_values`](deploynator._receipt.py.md#collect_secret_values), [`default_receipt_path`](deploynator._receipt.py.md#default_receipt_path), [`list_make_targets`](deploynator._toml.py.md#list_make_targets), [`load_toml_config`](deploynator._toml.py.md#load_toml_config)
 
 <a id="config-resolve_path"></a>
 
 #### `Config.resolve_path`
 
-`method` | [deploynator/_config.py:86](../../deploynator/_config.py#L86)
+`method` | [deploynator/_config.py:89](../../deploynator/_config.py#L89)
 
 ```python
 def resolve_path(self, *parts: str) -> str
@@ -126,7 +128,7 @@ def resolve_path(self, *parts: str) -> str
 
 #### `Config.gh_authd`
 
-`property` | [deploynator/_config.py:92](../../deploynator/_config.py#L92)
+`property` | [deploynator/_config.py:95](../../deploynator/_config.py#L95)
 
 Decorators: `@property`
 
@@ -140,7 +142,7 @@ def gh_authd(self) -> bool
 
 #### `Config.glab_authd`
 
-`property` | [deploynator/_config.py:96](../../deploynator/_config.py#L96)
+`property` | [deploynator/_config.py:99](../../deploynator/_config.py#L99)
 
 Decorators: `@property`
 
@@ -154,7 +156,7 @@ def glab_authd(self) -> bool
 
 #### `Config.bb_authd`
 
-`property` | [deploynator/_config.py:100](../../deploynator/_config.py#L100)
+`property` | [deploynator/_config.py:103](../../deploynator/_config.py#L103)
 
 Decorators: `@property`
 

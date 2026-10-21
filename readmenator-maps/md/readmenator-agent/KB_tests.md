@@ -292,6 +292,59 @@
   - `test_ensure_footer_missing_readme` (function, line 58) `def test_ensure_footer_missing_readme(tmp_path)`
 - Depends on: `deploynator/_config.py`, `deploynator/_readme.py`
 
+## tests/test_receipt.py
+- Layer: testing
+- Language: py
+- Symbols:
+  - `TestRedact` (class, line 30) `class TestRedact`
+  - `TestRecords` (class, line 56) `class TestRecords`
+  - `TestReleaseReceipt` (class, line 76) `class TestReleaseReceipt`
+  - `TestStages` (class, line 109) `class TestStages`
+  - `TestCapture` (class, line 153) `class TestCapture`
+  - `TestWrite` (class, line 200) `class TestWrite`
+  - `TestBuildPlan` (class, line 241) `class TestBuildPlan`
+  - `_DeployFixture` (class, line 295) `class _DeployFixture`
+  - `_make_repo` (function, line 301) `def _make_repo(base)`
+  - `TestDeployReceipts` (class, line 321) `class TestDeployReceipts`
+  - `test_replaces_secret` (method, line 31) `def test_replaces_secret(self)`
+  - `test_empty_text_unchanged` (method, line 35) `def test_empty_text_unchanged(self)`
+  - `test_no_match_unchanged` (method, line 38) `def test_no_match_unchanged(self)`
+  - `test_collect_secret_values_from_env` (method, line 41) `def test_collect_secret_values_from_env(self, monkeypatch)`
+  - `test_short_values_not_collected` (method, line 48) `def test_short_values_not_collected(self, monkeypatch)`
+  - `test_step_record_roundtrip` (method, line 57) `def test_step_record_roundtrip(self)`
+  - `test_command_record_defaults_observed` (method, line 63) `def test_command_record_defaults_observed(self)`
+  - `test_edge_record_fields` (method, line 68) `def test_edge_record_fields(self)`
+  - `test_to_dict_schema` (method, line 77) `def test_to_dict_schema(self)`
+  - `test_platform_merge_not_duplicate` (method, line 84) `def test_platform_merge_not_duplicate(self)`
+  - `test_platform_disabled_recorded` (method, line 91) `def test_platform_disabled_recorded(self)`
+  - `test_load_dict_roundtrip` (method, line 96) `def test_load_dict_roundtrip(self)`
+  - `test_stage_success` (method, line 110) `def test_stage_success(self)`
+  - `test_stage_failed_via_handle` (method, line 119) `def test_stage_failed_via_handle(self)`
+  - `test_stage_exception_recorded_and_raised` (method, line 126) `def test_stage_exception_recorded_and_raised(self)`
+  - `test_stage_nesting_attaches_current` (method, line 133) `def test_stage_nesting_attaches_current(self)`
+  - `test_mark_failure` (method, line 139) `def test_mark_failure(self)`
+  - `test_observe_edge` (method, line 145) `def test_observe_edge(self)`
+  - `test_records_success_and_failure` (method, line 154) `def test_records_success_and_failure(self)`
+  - `test_records_missing_binary` (method, line 167) `def test_records_missing_binary(self)`
+  - `test_restores_original_run` (method, line 175) `def test_restores_original_run(self)`
+  - `test_tails_truncated` (method, line 182) `def test_tails_truncated(self)`
+  - `test_redaction_in_tails` (method, line 189) `def test_redaction_in_tails(self, monkeypatch)`
+  - `test_write_and_reload` (method, line 201) `def test_write_and_reload(self)`
+  - `test_write_rejects_symlink` (method, line 211) `def test_write_rejects_symlink(self)`
+  - `test_write_rejects_symlink_parent` (method, line 222) `def test_write_rejects_symlink_parent(self)`
+  - `test_default_path_structure` (method, line 232) `def test_default_path_structure(self)`
+  - `_project` (method, line 242) `def _project(self, platforms)`
+  - `_toml` (method, line 248) `def _toml(self)`
+  - `test_feasible_set_respects_config` (method, line 252) `def test_feasible_set_respects_config(self)`
+  - `test_override_changes_evidence_and_confidence` (method, line 268) `def test_override_changes_evidence_and_confidence(self)`
+  - `test_test_docs_edges_from_toml` (method, line 278) `def test_test_docs_edges_from_toml(self)`
+  - `test_no_test_docs_flag_drops_edges` (method, line 288) `def test_no_test_docs_flag_drops_edges(self)`
+  - `__init__` (method, line 296) `def __init__(self, base)`
+  - `test_dry_run_trace_writes_plan` (method, line 322) `def test_dry_run_trace_writes_plan(self)`
+  - `test_failed_run_records_guard` (method, line 351) `def test_failed_run_records_guard(self)`
+  - `test_full_run_observed_edges` (method, line 375) `def test_full_run_observed_edges(self)`
+- Depends on: `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_models.py`, `deploynator/_receipt.py`, `deploynator/_toml.py`
+
 ## tests/test_runner.py
 - Doc: RED: TestRunner + DocsRunner contracts.
 - Layer: testing

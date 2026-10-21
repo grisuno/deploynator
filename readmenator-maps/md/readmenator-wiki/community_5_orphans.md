@@ -27,7 +27,7 @@ This community groups 3 file(s) rooted at `root` with dominant language sh (cohe
 
 - [INFERRED] shares_context community 0 <-> 5 (strength 0.5): Inferred shared context (layer utility) with no import path between community 0 (deploynator: _toml) and community 5 (orphans).
 - [INFERRED] shares_context community 1 <-> 5 (strength 0.5): Inferred shared context (layer utility) with no import path between community 1 (deploynator: _mcp_server) and community 5 (orphans).
-- [INFERRED] shares_context community 2 <-> 5 (strength 0.5): Inferred shared context (layer utility) with no import path between community 2 (deploynator: _platforms) and community 5 (orphans).
+- [INFERRED] shares_context community 2 <-> 5 (strength 0.5): Inferred shared context (layer utility) with no import path between community 2 (deploynator: _receipt) and community 5 (orphans).
 
 ## Risks
 

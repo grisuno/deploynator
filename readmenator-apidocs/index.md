@@ -1,10 +1,10 @@
 # deploynator API Reference
 
-> Generated offline by readmenator: 20 modules, 330 documented entities, documentation coverage 8.3% (17/206 public items). Deterministic, zero tokens: signatures from source, docs parsed from Google, NumPy, reST, Javadoc/JSDoc/Doxygen, C# XML, and Rustdoc comments.
+> Generated offline by readmenator: 21 modules, 400 documented entities, documentation coverage 12.5% (30/240 public items). Deterministic, zero tokens: signatures from source, docs parsed from Google, NumPy, reST, Javadoc/JSDoc/Doxygen, C# XML, and Rustdoc comments.
 
 Navigate: [Interactive architecture and flows](flows.html) | [Architecture and flows (Mermaid)](architecture.md) | [Class hierarchy](classes.md) | [General index](genindex.md) | [Coverage and warnings](COVERAGE.md) | [`api/index.json`](api/index.json) | [HTML browser](index.html)
 
-Languages: py (18), sh (2)
+Languages: py (19), sh (2)
 
 ## Modules
 
@@ -28,12 +28,13 @@ Languages: py (18), sh (2)
 | [`deploynator._deb`](modules/deploynator._deb.py.md) |  | 1 | 6 | 12.5% |
 | [`deploynator._deploy`](modules/deploynator._deploy.py.md) |  | 2 | 9 | 0.0% |
 | [`deploynator._docs`](modules/deploynator._docs.py.md) |  | 1 | 2 | 0.0% |
-| [`deploynator._git`](modules/deploynator._git.py.md) |  | 1 | 23 | 4.0% |
+| [`deploynator._git`](modules/deploynator._git.py.md) |  | 1 | 24 | 3.8% |
 | [`deploynator._mcp_server`](modules/deploynator._mcp_server.py.md) | MCP (Model Context Protocol) stdio server for deploynator. | 4 | 16 | 4.8% |
 | [`deploynator._models`](modules/deploynator._models.py.md) |  | 10 | 16 | 0.0% |
 | [`deploynator._platforms`](modules/deploynator._platforms.py.md) |  | 5 | 30 | 5.6% |
 | [`deploynator._pypi`](modules/deploynator._pypi.py.md) |  | 1 | 7 | 22.2% |
 | [`deploynator._readme`](modules/deploynator._readme.py.md) |  | 0 | 3 | 75.0% |
+| [`deploynator._receipt`](modules/deploynator._receipt.py.md) | Receipt contract: operational trace of a deploynator release. | 5 | 27 | 39.4% |
 | [`deploynator._runner`](modules/deploynator._runner.py.md) |  | 1 | 2 | 0.0% |
 | [`deploynator._semver`](modules/deploynator._semver.py.md) |  | 1 | 7 | 0.0% |
 | [`deploynator._toml`](modules/deploynator._toml.py.md) |  | 1 | 4 | 50.0% |

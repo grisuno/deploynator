@@ -20,18 +20,18 @@ flowchart TB
     end
     subgraph lane_1["Tier 2"]
         direction LR
-        n_c2["deploynator: _platforms<br/>5 files, 123 symbols<br/>Core / utility"]:::default
+        n_c2["deploynator: _receipt<br/>5 files, 160 symbols<br/>Core / utility"]:::default
     end
     subgraph lane_2["Tier 3"]
         direction LR
-        n_c0["deploynator: _toml<br/>4 files, 25 symbols<br/>Core / utility"]:::default
+        n_c0["deploynator: _toml<br/>5 files, 33 symbols<br/>Core / utility"]:::default
         n_c3["deploynator: _models<br/>2 files, 36 symbols<br/>Business logic"]:::cycle
     end
     subgraph lane_3["Tier 4 - foundation"]
         direction LR
         n_c4["deploynator: _changelog<br/>3 files, 19 symbols<br/>Core / utility"]:::cycle
     end
-    n_c0 -->|"4"| n_c4
+    n_c0 -->|"5"| n_c4
     n_c1 -->|"1"| n_c2
     n_c2 ==>|"8"| n_c0
     n_c2 ==>|"8"| n_c3
@@ -85,21 +85,21 @@ flowchart LR
     classDef external fill:#1a1530,stroke:#a78bfa,color:#ede9fe;
     n_app_py__main["app.main<br/>app.py:12"]:::entry
     n_deploynator__app_py__DeploynatorApp["_app.DeploynatorApp<br/>_app.py:18"]:::external
-    n_deploynator__config_py__create["_config.Config.create<br/>_config.py:80"]:::external
+    n_deploynator__config_py__create["_config.Config.create<br/>_config.py:83"]:::external
     n_deploynator__config_py__Config["_config.Config<br/>_config.py:8"]:::external
-    n_deploynator__app_py__list_projects["_app.DeploynatorApp.list_projects<br/>_app.py:543"]:::external
-    n_deploynator__deploy_py__discover["_deploy.ProjectDiscovery.discover<br/>_deploy.py:34"]:::external
-    n_deploynator__deploy_py___load_single["_deploy.ProjectDiscovery._load_single<br/>_deploy.py:62"]:::external
+    n_deploynator__app_py__list_projects["_app.DeploynatorApp.list_projects<br/>_app.py:547"]:::external
+    n_deploynator__deploy_py__discover["_deploy.ProjectDiscovery.discover<br/>_deploy.py:42"]:::external
+    n_deploynator__deploy_py___load_single["_deploy.ProjectDiscovery._load_single<br/>_deploy.py:70"]:::external
     n_deploynator__models_py__from_dict_138["_models.ProjectConfig.from_dict<br/>_models.py:138"]:::external
-    n_deploynator__app_py__status["_app.DeploynatorApp.status<br/>_app.py:523"]:::external
+    n_deploynator__app_py__status["_app.DeploynatorApp.status<br/>_app.py:527"]:::external
     n_deploynator__git_py__GitOperations["_git.GitOperations<br/>_git.py:9"]:::external
     n_deploynator__app_py___resolve_project_path["_app.DeploynatorApp._resolve_project_path<br/>_app.py:291"]:::external
-    n_deploynator__deploy_py__find_by_name["_deploy.ProjectDiscovery.find_by_name<br/>_deploy.py:55"]:::external
-    n_deploynator__deploy_py___resolve_project_path["_deploy.DeployOrchestrator._resolve_project_path<br/>_deploy.py:88"]:::external
+    n_deploynator__deploy_py__find_by_name["_deploy.ProjectDiscovery.find_by_name<br/>_deploy.py:63"]:::external
+    n_deploynator__deploy_py___resolve_project_path["_deploy.DeployOrchestrator._resolve_project_path<br/>_deploy.py:96"]:::external
     n_deploynator__app_py___looks_like_path["_app.DeploynatorApp._looks_like_path<br/>_app.py:284"]:::external
-    n_deploynator__git_py__current_branch["_git.GitOperations.current_branch<br/>_git.py:233"]:::external
-    n_deploynator__git_py__is_dirty["_git.GitOperations.is_dirty<br/>_git.py:245"]:::external
-    n_deploynator__git_py__has_remote["_git.GitOperations.has_remote<br/>_git.py:255"]:::external
+    n_deploynator__git_py__current_branch["_git.GitOperations.current_branch<br/>_git.py:243"]:::external
+    n_deploynator__git_py__is_dirty["_git.GitOperations.is_dirty<br/>_git.py:255"]:::external
+    n_deploynator__git_py__has_remote["_git.GitOperations.has_remote<br/>_git.py:265"]:::external
     n_deploynator__app_py__release["_app.DeploynatorApp.release<br/>_app.py:379"]:::external
     n_deploynator__models_py__from_string_57["_models.CommitType.from_string<br/>_models.py:57"]:::external
     n_deploynator__toml_py__load_toml_config["_toml.load_toml_config<br/>_toml.py:217"]:::external
@@ -189,7 +189,7 @@ sequenceDiagram
 
 ### `__main__.main`
 
-`deploynator/__main__.py:180`, score 9: entry-style name `main`; defined in entry file `__main__.py`; called from the `__main__` guard.
+`deploynator/__main__.py:185`, score 9: entry-style name `main`; defined in entry file `__main__.py`; called from the `__main__` guard.
 
 Control flow:
 
@@ -323,20 +323,20 @@ flowchart LR
     classDef default fill:#111827,stroke:#38bdf8,color:#e5e7eb;
     classDef entry fill:#0e7490,stroke:#22d3ee,color:#ecfeff,stroke-width:2px;
     classDef external fill:#1a1530,stroke:#a78bfa,color:#ede9fe;
-    n_deploynator___main___py__main["__main__.main<br/>__main__.py:180"]:::entry
-    n_deploynator__config_py__create["_config.Config.create<br/>_config.py:80"]:::external
+    n_deploynator___main___py__main["__main__.main<br/>__main__.py:185"]:::entry
+    n_deploynator__config_py__create["_config.Config.create<br/>_config.py:83"]:::external
     n_deploynator__config_py__Config["_config.Config<br/>_config.py:8"]:::external
     n_deploynator__app_py__DeploynatorApp["_app.DeploynatorApp<br/>_app.py:18"]:::external
-    n_deploynator__app_py__interactive_menu["_app.DeploynatorApp.interactive_menu<br/>_app.py:602"]:::external
-    n_deploynator___main___py__preprocess_argv["__main__.preprocess_argv<br/>__main__.py:146"]:::default
+    n_deploynator__app_py__interactive_menu["_app.DeploynatorApp.interactive_menu<br/>_app.py:606"]:::external
+    n_deploynator___main___py__preprocess_argv["__main__.preprocess_argv<br/>__main__.py:151"]:::default
     n_deploynator___main___py__build_parser["__main__.build_parser<br/>__main__.py:16"]:::default
     n_deploynator__models_py__valid_types["_models.CommitType.valid_types<br/>_models.py:64"]:::external
     n_deploynator__app_py__release["_app.DeploynatorApp.release<br/>_app.py:379"]:::external
     n_deploynator__models_py__from_string_57["_models.CommitType.from_string<br/>_models.py:57"]:::external
-    n_deploynator__deploy_py__discover["_deploy.ProjectDiscovery.discover<br/>_deploy.py:34"]:::external
-    n_deploynator__deploy_py___load_single["_deploy.ProjectDiscovery._load_single<br/>_deploy.py:62"]:::external
+    n_deploynator__deploy_py__discover["_deploy.ProjectDiscovery.discover<br/>_deploy.py:42"]:::external
+    n_deploynator__deploy_py___load_single["_deploy.ProjectDiscovery._load_single<br/>_deploy.py:70"]:::external
     n_deploynator__models_py__from_dict_138["_models.ProjectConfig.from_dict<br/>_models.py:138"]:::external
-    n_deploynator__deploy_py__find_by_name["_deploy.ProjectDiscovery.find_by_name<br/>_deploy.py:55"]:::external
+    n_deploynator__deploy_py__find_by_name["_deploy.ProjectDiscovery.find_by_name<br/>_deploy.py:63"]:::external
     n_deploynator__app_py___looks_like_path["_app.DeploynatorApp._looks_like_path<br/>_app.py:284"]:::external
     n_deploynator__toml_py__load_toml_config["_toml.load_toml_config<br/>_toml.py:217"]:::external
     n_deploynator__toml_py___auto_toml_config["_toml._auto_toml_config<br/>Config auto para proyectos sin deploynator.to...<br/>_toml.py:150"]:::external
@@ -351,9 +351,10 @@ flowchart LR
     n_deploynator__models_py__DeployResult["_models.DeployResult<br/>_models.py:276"]:::external
     n_deploynator__models_py__from_string["_models.Platform.from_string<br/>_models.py:15"]:::external
     n_deploynator__app_py___parse_release_message["_app.DeploynatorApp._parse_release_message<br/>Parsea #96;test(module): texto#96; o #96;test(module)...<br/>_app.py:361"]:::external
-    n_deploynator__deploy_py__deploy["_deploy.DeployOrchestrator.deploy<br/>_deploy.py:97"]:::external
-    n_deploynator__deploy_py___resolve_project_path["_deploy.DeployOrchestrator._resolve_project_path<br/>_deploy.py:88"]:::external
-    n_deploynator__semver_py__get_current_version["_semver.SemverManager.get_current_version<br/>_semver.py:20"]:::external
+    n_deploynator__deploy_py__deploy["_deploy.DeployOrchestrator.deploy<br/>_deploy.py:105"]:::external
+    n_deploynator__receipt_py__ReceiptCollector["_receipt.ReceiptCollector<br/>Collects steps, subprocess calls and evidence...<br/>_receipt.py:263"]:::external
+    n_deploynator__receipt_py__capture["_receipt.ReceiptCollector.capture<br/>_receipt.py:380"]:::external
+    n_deploynator__deploy_py___deploy_impl["_deploy.DeployOrchestrator._deploy_impl<br/>_deploy.py:172"]:::external
     n_deploynator___main___py__main -->|"1"| n_deploynator__config_py__create
     n_deploynator__config_py__create -->|"1"| n_deploynator__config_py__Config
     n_deploynator___main___py__main -->|"2"| n_deploynator__app_py__DeploynatorApp
@@ -390,10 +391,10 @@ flowchart LR
     n_deploynator__app_py__release -->|"9"| n_deploynator__models_py__from_string
     n_deploynator__app_py__release -->|"10"| n_deploynator__app_py___parse_release_message
     n_deploynator__app_py__release -->|"11"| n_deploynator__deploy_py__deploy
-    n_deploynator__deploy_py__deploy -->|"1"| n_deploynator__deploy_py___resolve_project_path
-    n_deploynator__deploy_py__deploy -.-> n_deploynator__models_py__DeployResult
-    n_deploynator__deploy_py__deploy -.-> n_deploynator__toml_py__load_toml_config
-    n_deploynator__deploy_py__deploy -->|"2"| n_deploynator__semver_py__get_current_version
+    n_deploynator__deploy_py__deploy -->|"1"| n_deploynator__receipt_py__ReceiptCollector
+    n_deploynator__deploy_py__deploy -->|"2"| n_deploynator__receipt_py__capture
+    n_deploynator__deploy_py__deploy -->|"3"| n_deploynator__deploy_py___deploy_impl
+    n_deploynator__deploy_py___deploy_impl -.-> n_deploynator__receipt_py__ReceiptCollector
 ```
 
 Cross-file sequence:
@@ -407,7 +408,7 @@ sequenceDiagram
     participant p_deploynator__models_py as _models.py
     participant p_deploynator__deploy_py as _deploy.py
     participant p_deploynator__toml_py as _toml.py
-    participant p_deploynator__semver_py as _semver.py
+    participant p_deploynator__receipt_py as _receipt.py
     p_deploynator___main___py->>p_deploynator__config_py: Config.create()
     p_deploynator___main___py->>p_deploynator__app_py: DeploynatorApp()
     p_deploynator___main___py->>p_deploynator__app_py: DeploynatorApp.interactive_menu()
@@ -423,12 +424,13 @@ sequenceDiagram
     p_deploynator__app_py->>p_deploynator__models_py: DeployResult()
     p_deploynator__app_py->>p_deploynator__models_py: Platform.from_string()
     p_deploynator__app_py->>p_deploynator__deploy_py: DeployOrchestrator.deploy()
-    p_deploynator__deploy_py->>p_deploynator__semver_py: SemverManager.get_current_version()
+    p_deploynator__deploy_py->>p_deploynator__receipt_py: ReceiptCollector()
+    p_deploynator__deploy_py->>p_deploynator__receipt_py: ReceiptCollector.capture()
 ```
 
 ### `_mcp_server (__main__)`
 
-`deploynator/_mcp_server.py:281`, score 8: `if __name__ == "__main__"` guard.
+`deploynator/_mcp_server.py:285`, score 8: `if __name__ == "__main__"` guard.
 
 Call tree:
 
@@ -438,9 +440,9 @@ flowchart LR
     classDef entry fill:#0e7490,stroke:#22d3ee,color:#ecfeff,stroke-width:2px;
     classDef external fill:#1a1530,stroke:#a78bfa,color:#ede9fe;
     n_deploynator__mcp_server_py___main_["_mcp_server (__main__)<br/>_mcp_server.py"]:::entry
-    n_deploynator__mcp_server_py__main["_mcp_server.main<br/>_mcp_server.py:273"]:::default
+    n_deploynator__mcp_server_py__main["_mcp_server.main<br/>_mcp_server.py:277"]:::default
     n_deploynator__app_py__DeploynatorApp["_app.DeploynatorApp<br/>_app.py:18"]:::external
-    n_deploynator__config_py__create["_config.Config.create<br/>_config.py:80"]:::external
+    n_deploynator__config_py__create["_config.Config.create<br/>_config.py:83"]:::external
     n_deploynator__config_py__Config["_config.Config<br/>_config.py:8"]:::external
     n_deploynator__mcp_server_py__MCPServer["_mcp_server.MCPServer<br/>_mcp_server.py:87"]:::default
     n_deploynator__mcp_server_py__run["_mcp_server.MCPServer.run<br/>_mcp_server.py:163"]:::default

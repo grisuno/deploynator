@@ -1,22 +1,22 @@
-# deploynator: _platforms
+# deploynator: _receipt
 
-*Community 2 | 7 files | cohesion 0.27*
+*Community 2 | 7 files | cohesion 0.26*
 
 ## Definition
 
-This community groups 7 file(s) rooted at `deploynator` with dominant language py (cohesion 0.27). Central symbols: `BitbucketCLI`, `DeployOrchestrator`, `DeploynatorApp`, `GitHubCLI`, `GitLabCLI`, `GitOperations`, `PlatformClient`, `PlatformFactory`. Core file: `deploynator/_platforms.py` (36 symbols). Documented purpose: RED: PyPI runner — detecta packaging, build limpio, upload twine..
+This community groups 7 file(s) rooted at `deploynator` with dominant language py (cohesion 0.26). Central symbols: `BitbucketCLI`, `CommandRecord`, `DeployOrchestrator`, `DeploynatorApp`, `EdgeRecord`, `GitHubCLI`, `GitLabCLI`, `GitOperations`. Core file: `tests/test_receipt.py` (47 symbols). Documented purpose: Receipt contract: operational trace of a deploynator release.  Evidence hierarchy (golden rule): Fact      = step observed at runtime (exit_code recorded)      .
 
 ## Files
 
 | File | Language | Layer | Symbols | Doc |
 |------|----------|-------|---------|-----|
 | `deploynator/_app.py` | py | utility | 33 | no |
-| `deploynator/_deploy.py` | py | utility | 22 | no |
-| `deploynator/_git.py` | py | utility | 24 | no |
+| `deploynator/_deploy.py` | py | utility | 23 | no |
+| `deploynator/_git.py` | py | utility | 25 | no |
 | `deploynator/_platforms.py` | py | utility | 36 | no |
-| `deploynator/_pypi.py` | py | utility | 8 | no |
+| `deploynator/_receipt.py` | py | utility | 43 | yes |
 | `tests/test_git_sync.py` | py | testing | 6 | no |
-| `tests/test_pypi.py` | py | testing | 25 | yes |
+| `tests/test_receipt.py` | py | testing | 47 | no |
 
 ## Key Symbols
 
@@ -36,25 +36,25 @@ This community groups 7 file(s) rooted at `deploynator` with dominant language p
 - `commit` (method, `deploynator/_app.py:320`) `def commit(self, commit_type, subject, scope, body, project_path, project_name,`
 - `_parse_release_message` (method, `deploynator/_app.py:361`) `def _parse_release_message(raw)` - Parsea `test(module): texto` o `test(module) texto` (colon opcional).
 - `release` (method, `deploynator/_app.py:379`) `def release(self, commit_type, subject, scope, body, message, project_name, bump`
-- `generate_docs` (method, `deploynator/_app.py:517`) `def generate_docs(self, project_path, project_name)`
-- `status` (method, `deploynator/_app.py:523`) `def status(self, project_path, project_name)`
-- `list_projects` (method, `deploynator/_app.py:543`) `def list_projects(self, search_path)`
-- `generate_ci` (method, `deploynator/_app.py:548`) `def generate_ci(self, project_name, all_projects)`
-- `install_deps` (method, `deploynator/_app.py:564`) `def install_deps(self, project_name)`
-- `install_packages` (method, `deploynator/_app.py:575`) `def install_packages(self, packages)` - pip install/upgrade packages (default: deploynator from PyPI).
-- `interactive_menu` (method, `deploynator/_app.py:602`) `def interactive_menu(self)`
-- `_interactive_release` (method, `deploynator/_app.py:638`) `def _interactive_release(self)`
-- `_interactive_commit` (method, `deploynator/_app.py:686`) `def _interactive_commit(self)`
-- `_interactive_start` (method, `deploynator/_app.py:713`) `def _interactive_start(self)`
-- `_interactive_auth` (method, `deploynator/_app.py:737`) `def _interactive_auth(self)`
-- `_interactive_auth_status` (method, `deploynator/_app.py:760`) `def _interactive_auth_status(self)`
-- `_interactive_docs` (method, `deploynator/_app.py:766`) `def _interactive_docs(self)`
-- `_interactive_ci` (method, `deploynator/_app.py:773`) `def _interactive_ci(self)`
+- `generate_docs` (method, `deploynator/_app.py:521`) `def generate_docs(self, project_path, project_name)`
+- `status` (method, `deploynator/_app.py:527`) `def status(self, project_path, project_name)`
+- `list_projects` (method, `deploynator/_app.py:547`) `def list_projects(self, search_path)`
+- `generate_ci` (method, `deploynator/_app.py:552`) `def generate_ci(self, project_name, all_projects)`
+- `install_deps` (method, `deploynator/_app.py:568`) `def install_deps(self, project_name)`
+- `install_packages` (method, `deploynator/_app.py:579`) `def install_packages(self, packages)` - pip install/upgrade packages (default: deploynator from PyPI).
+- `interactive_menu` (method, `deploynator/_app.py:606`) `def interactive_menu(self)`
+- `_interactive_release` (method, `deploynator/_app.py:642`) `def _interactive_release(self)`
+- `_interactive_commit` (method, `deploynator/_app.py:690`) `def _interactive_commit(self)`
+- `_interactive_start` (method, `deploynator/_app.py:717`) `def _interactive_start(self)`
+- `_interactive_auth` (method, `deploynator/_app.py:741`) `def _interactive_auth(self)`
+- `_interactive_auth_status` (method, `deploynator/_app.py:764`) `def _interactive_auth_status(self)`
+- `_interactive_docs` (method, `deploynator/_app.py:770`) `def _interactive_docs(self)`
+- `_interactive_ci` (method, `deploynator/_app.py:777`) `def _interactive_ci(self)`
 
 ## Internal vs External Edges
 
-- Internal resolved imports (EXTRACTED): 32
-- Cross-boundary resolved imports (EXTRACTED): 58
+- Internal resolved imports (EXTRACTED): 17
+- Cross-boundary resolved imports (EXTRACTED): 44
 
 ## Connections
 
@@ -62,32 +62,32 @@ This community groups 7 file(s) rooted at `deploynator` with dominant language p
 - [EXTRACTED] depends_on community 2 <-> 4 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_config.py.
 - [EXTRACTED] depends_on community 2 <-> 3 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_models.py.
 - [EXTRACTED] depends_on community 2 <-> 0 (strength 0.9): Extracted import edge crosses communities: deploynator/_app.py imports deploynator/_toml.py.
-- [INFERRED] shares_context community 2 <-> 5 (strength 0.5): Inferred shared context (layer utility) with no import path between community 2 (deploynator: _platforms) and community 5 (orphans).
+- [INFERRED] shares_context community 2 <-> 5 (strength 0.5): Inferred shared context (layer utility) with no import path between community 2 (deploynator: _receipt) and community 5 (orphans).
 
 ## Risks
 
 - [taint high] `deploynator/_app.py` -> `deploynator/_app.py` via `subprocess` (0 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_platforms.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_config.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_git.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_deploy.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_config.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_models.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_semver.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_deb.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_pypi.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_deb.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_semver.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_readme.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_changelog.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_app.py` via `subprocess` (0 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_receipt.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_pypi.py` via `subprocess` (2 hops)
 
 ## Open Questions
 
 - Why do 6 file(s) lack file-level docs (e.g. `deploynator/_app.py`)? What purpose do they serve?
 - Is the dangerous import `subprocess` in `deploynator/_app.py` still required, or can it be isolated?
-- What would break if the most connected file in deploynator: _platforms changed?
-- Should deploynator: _platforms be split, given cohesion 0.27?
+- What would break if the most connected file in deploynator: _receipt changed?
+- Should deploynator: _receipt be split, given cohesion 0.26?
 
 ## Sources
 
@@ -95,6 +95,6 @@ This community groups 7 file(s) rooted at `deploynator` with dominant language p
 - `deploynator/_deploy.py`
 - `deploynator/_git.py`
 - `deploynator/_platforms.py`
-- `deploynator/_pypi.py`
+- `deploynator/_receipt.py`
 - `tests/test_git_sync.py`
-- `tests/test_pypi.py`
+- `tests/test_receipt.py`

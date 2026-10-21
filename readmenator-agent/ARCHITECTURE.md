@@ -28,6 +28,7 @@
 - `deploynator/_deploy.py` -> `deploynator/_platforms.py`
 - `deploynator/_deploy.py` -> `deploynator/_pypi.py`
 - `deploynator/_deploy.py` -> `deploynator/_readme.py`
+- `deploynator/_deploy.py` -> `deploynator/_receipt.py`
 - `deploynator/_deploy.py` -> `deploynator/_runner.py`
 - `deploynator/_deploy.py` -> `deploynator/_semver.py`
 - `deploynator/_deploy.py` -> `deploynator/_toml.py`
@@ -41,6 +42,7 @@
 - `deploynator/_pypi.py` -> `deploynator/_config.py`
 - `deploynator/_pypi.py` -> `deploynator/_toml.py`
 - `deploynator/_readme.py` -> `deploynator/_config.py`
+- `deploynator/_receipt.py` -> `deploynator/_config.py`
 - `deploynator/_runner.py` -> `deploynator/_config.py`
 - `deploynator/_runner.py` -> `deploynator/_toml.py`
 - `deploynator/_semver.py` -> `deploynator/_config.py`
@@ -93,6 +95,11 @@
 - `tests/test_pypi.py` -> `deploynator/_toml.py`
 - `tests/test_readme_footer.py` -> `deploynator/_config.py`
 - `tests/test_readme_footer.py` -> `deploynator/_readme.py`
+- `tests/test_receipt.py` -> `deploynator/_config.py`
+- `tests/test_receipt.py` -> `deploynator/_deploy.py`
+- `tests/test_receipt.py` -> `deploynator/_models.py`
+- `tests/test_receipt.py` -> `deploynator/_receipt.py`
+- `tests/test_receipt.py` -> `deploynator/_toml.py`
 - `tests/test_runner.py` -> `deploynator/_config.py`
 - `tests/test_runner.py` -> `deploynator/_docs.py`
 - `tests/test_runner.py` -> `deploynator/_runner.py`
@@ -117,6 +124,7 @@
 - `deploynator/_platforms.py` -> __future__, abc, os, subprocess, tempfile, typing
 - `deploynator/_pypi.py` -> __future__, configparser, getpass, os, shutil, subprocess, sys, tomllib
 - `deploynator/_readme.py` -> __future__, pathlib
+- `deploynator/_receipt.py` -> __future__, contextlib, dataclasses, datetime, json, os, re, subprocess, tempfile, time
 - `deploynator/_runner.py` -> __future__, os, shlex, subprocess
 - `deploynator/_semver.py` -> __future__, json, os, re, subprocess
 - `deploynator/_toml.py` -> __future__, dataclasses, os, re, tomllib
@@ -133,6 +141,7 @@
 - `tests/test_pipeline.py` -> json, os, subprocess, tempfile
 - `tests/test_pypi.py` -> configparser, inspect, os, pytest, subprocess, sys, tempfile
 - `tests/test_readme_footer.py` -> __future__
+- `tests/test_receipt.py` -> dataclasses, json, os, pytest, subprocess, tempfile
 - `tests/test_runner.py` -> inspect, os, pytest, shutil, tempfile
 - `tests/test_semver.py` -> json, os, pytest, tempfile
 - `tests/test_toml.py` -> dataclasses, os, pytest, tempfile

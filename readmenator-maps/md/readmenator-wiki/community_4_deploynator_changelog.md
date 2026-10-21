@@ -1,10 +1,10 @@
 # deploynator: _changelog
 
-*Community 4 | 6 files | cohesion 0.20*
+*Community 4 | 6 files | cohesion 0.19*
 
 ## Definition
 
-This community groups 6 file(s) rooted at `deploynator` with dominant language py (cohesion 0.20). Central symbols: `ChangelogGenerator`, `Config`, `TestChangelogGenerator`, `TestConfigContract`, `__init__`, `_collect_entries`, `_find_readme`, `_format_entries`. Core file: `tests/test_config.py` (10 symbols). Documented purpose: Tests for the deploy README footer injector..
+This community groups 6 file(s) rooted at `deploynator` with dominant language py (cohesion 0.19). Central symbols: `ChangelogGenerator`, `Config`, `TestChangelogGenerator`, `TestConfigContract`, `__init__`, `_collect_entries`, `_find_readme`, `_format_entries`. Core file: `tests/test_config.py` (10 symbols). Documented purpose: Tests for the deploy README footer injector..
 
 ## Files
 
@@ -29,11 +29,11 @@ This community groups 6 file(s) rooted at `deploynator` with dominant language p
 - `write_changelog` (method, `deploynator/_changelog.py:99`) `def write_changelog(self, repo_path, content, filename)`
 - `format_for_release` (method, `deploynator/_changelog.py:108`) `def format_for_release(self, changelog_content, max_chars)`
 - `Config` (class, `deploynator/_config.py:8`) `class Config`
-- `create` (method, `deploynator/_config.py:80`) `def create(overrides)`
-- `resolve_path` (method, `deploynator/_config.py:86`) `def resolve_path(self)`
-- `gh_authd` (method, `deploynator/_config.py:92`) `def gh_authd(self)`
-- `glab_authd` (method, `deploynator/_config.py:96`) `def glab_authd(self)`
-- `bb_authd` (method, `deploynator/_config.py:100`) `def bb_authd(self)`
+- `create` (method, `deploynator/_config.py:83`) `def create(overrides)`
+- `resolve_path` (method, `deploynator/_config.py:89`) `def resolve_path(self)`
+- `gh_authd` (method, `deploynator/_config.py:95`) `def gh_authd(self)`
+- `glab_authd` (method, `deploynator/_config.py:99`) `def glab_authd(self)`
+- `bb_authd` (method, `deploynator/_config.py:103`) `def bb_authd(self)`
 - `footer_block` (function, `deploynator/_readme.py:18`) `def footer_block(config)` - Return the anchored deploy footer block.
 - `_find_readme` (function, `deploynator/_readme.py:31`) `def _find_readme(repo_path)` - Return the first README candidate in the repository.
 - `ensure_deployed_footer` (function, `deploynator/_readme.py:48`) `def ensure_deployed_footer(repo_path, config)` - Append or refresh the deploy footer in the repository README.
@@ -53,7 +53,7 @@ This community groups 6 file(s) rooted at `deploynator` with dominant language p
 ## Internal vs External Edges
 
 - Internal resolved imports (EXTRACTED): 7
-- Cross-boundary resolved imports (EXTRACTED): 81
+- Cross-boundary resolved imports (EXTRACTED): 83
 
 ## Connections
 
@@ -75,7 +75,7 @@ This community groups 6 file(s) rooted at `deploynator` with dominant language p
 
 - Why do 5 file(s) lack file-level docs (e.g. `deploynator/_changelog.py`)? What purpose do they serve?
 - What would break if the most connected file in deploynator: _changelog changed?
-- Should deploynator: _changelog be split, given cohesion 0.20?
+- Should deploynator: _changelog be split, given cohesion 0.19?
 
 ## Sources
 

@@ -393,6 +393,8 @@ version:
         no_pypi: bool = False,
         no_deb: bool = False,
         verbose: bool = False,
+        receipt_path: str | None = None,
+        trace: bool = False,
     ) -> list[DeployResult]:
         base = os.getcwd()
         ctype = CommitType.from_string(commit_type)
@@ -506,6 +508,8 @@ version:
                 run_pypi=not no_pypi,
                 run_deb=not no_deb,
                 verbose=verbose,
+                receipt_path=receipt_path,
+                trace=trace,
             )
             results.append(result)
             self._print_result(result)

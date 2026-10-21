@@ -65,6 +65,11 @@ def build_parser() -> argparse.ArgumentParser:
                            help="Platforms to deploy to")
     release_p.add_argument("--all", dest="all_projects", action="store_true",
                            help="Deploy all discovered projects")
+    release_p.add_argument("--receipt", nargs="?", const="", default=None,
+                           help="Write a release receipt JSON. With no value, uses "
+                                "<cwd>/release-receipts/ (never committed)")
+    release_p.add_argument("--trace", action="store_true",
+                           help="Record feasible plan edges (dry-run trace) in the receipt")
     release_p.add_argument("message_args", type=str, nargs="*",
                            help="Trailing release message words after project "
                                 "(e.g. release --type test --project . "
@@ -218,6 +223,8 @@ def main(argv: list[str] | None = None) -> None:
             no_pypi=getattr(args, "no_pypi", False),
             no_deb=getattr(args, "no_deb", False),
             verbose=getattr(args, "verbose", False),
+            receipt_path=getattr(args, "receipt", None),
+            trace=getattr(args, "trace", False),
         )
         sys.exit(0 if all(r.success for r in results) else 1)
 

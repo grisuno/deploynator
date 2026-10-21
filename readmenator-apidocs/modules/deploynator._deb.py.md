@@ -128,7 +128,7 @@ def is_deb_project(self, project_path: str) -> bool
 
 *Calls:* [`DebRunner.deb_make_target`](#debrunner-deb_make_target)
 
-*Called by:* [`DebRunner.run`](#debrunner-run), [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
+*Called by:* [`DebRunner.run`](#debrunner-run)
 
 <a id="debrunner-clean"></a>
 
@@ -198,7 +198,5 @@ def run(self, project_path: str, toml: TomlConfig, version: str, verbose: bool =
 **Returns:** `tuple[bool, str, list[str]]`
 
 *Calls:* [`DebRunner.build_command`](#debrunner-build_command), [`DebRunner.clean`](#debrunner-clean), [`DebRunner.is_deb_project`](#debrunner-is_deb_project)
-
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
 
 ---

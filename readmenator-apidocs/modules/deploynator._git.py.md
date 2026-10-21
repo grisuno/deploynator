@@ -1,6 +1,6 @@
 # `deploynator._git`
 
-> Source: [deploynator/_git.py:1](../../deploynator/_git.py#L1) | language `py` | coverage 4.0% | [API index](../index.md)
+> Source: [deploynator/_git.py:1](../../deploynator/_git.py#L1) | language `py` | coverage 3.8% | [API index](../index.md)
 
 ## Contents
 
@@ -38,6 +38,7 @@ class GitOperations
 | Member | Kind | Summary |
 |---|---|---|
 | [`__init__`](#gitoperations-__init__) | constructor |  |
+| [`head_commit`](#gitoperations-head_commit) | method |  |
 | [`check_gpg`](#gitoperations-check_gpg) | method |  |
 | [`gpg_sign_flag`](#gitoperations-gpg_sign_flag) | method |  |
 | [`clone`](#gitoperations-clone) | method |  |
@@ -79,11 +80,29 @@ def __init__(self, config: Config) -> None
 
 *Called by:* [`DeploynatorApp.commit`](deploynator._app.py.md#deploynatorapp-commit), [`DeploynatorApp.start_branch`](deploynator._app.py.md#deploynatorapp-start_branch), [`DeploynatorApp.status`](deploynator._app.py.md#deploynatorapp-status), [`DeployOrchestrator.__init__`](deploynator._deploy.py.md#deployorchestrator-__init__)
 
+<a id="gitoperations-head_commit"></a>
+
+#### `GitOperations.head_commit`
+
+`method` | [deploynator/_git.py:13](../../deploynator/_git.py#L13)
+
+```python
+def head_commit(self, repo_path: str) -> str
+```
+
+**Parameters**
+
+| Name | Type | Default | Description |
+|---|---|---|---|
+| `repo_path` | `str` |  |  |
+
+**Returns:** `str`
+
 <a id="gitoperations-check_gpg"></a>
 
 #### `GitOperations.check_gpg`
 
-`method` | [deploynator/_git.py:13](../../deploynator/_git.py#L13)
+`method` | [deploynator/_git.py:23](../../deploynator/_git.py#L23)
 
 ```python
 def check_gpg(self) -> tuple[bool, str]
@@ -97,7 +116,7 @@ def check_gpg(self) -> tuple[bool, str]
 
 #### `GitOperations.gpg_sign_flag`
 
-`method` | [deploynator/_git.py:31](../../deploynator/_git.py#L31)
+`method` | [deploynator/_git.py:41](../../deploynator/_git.py#L41)
 
 ```python
 def gpg_sign_flag(self) -> list[str]
@@ -113,7 +132,7 @@ def gpg_sign_flag(self) -> list[str]
 
 #### `GitOperations.clone`
 
-`method` | [deploynator/_git.py:35](../../deploynator/_git.py#L35)
+`method` | [deploynator/_git.py:45](../../deploynator/_git.py#L45)
 
 ```python
 def clone(self, url: str, dest: str, depth: int = 1) -> bool
@@ -133,7 +152,7 @@ def clone(self, url: str, dest: str, depth: int = 1) -> bool
 
 #### `GitOperations.add_all`
 
-`method` | [deploynator/_git.py:45](../../deploynator/_git.py#L45)
+`method` | [deploynator/_git.py:55](../../deploynator/_git.py#L55)
 
 ```python
 def add_all(self, repo_path: str) -> bool
@@ -147,13 +166,11 @@ def add_all(self, repo_path: str) -> bool
 
 **Returns:** `bool`
 
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
-
 <a id="gitoperations-commit"></a>
 
 #### `GitOperations.commit`
 
-`method` | [deploynator/_git.py:58](../../deploynator/_git.py#L58)
+`method` | [deploynator/_git.py:68](../../deploynator/_git.py#L68)
 
 ```python
 def commit(self, repo_path: str, message: str) -> tuple[bool, str]
@@ -170,13 +187,13 @@ def commit(self, repo_path: str, message: str) -> tuple[bool, str]
 
 *Calls:* [`GitOperations.gpg_sign_flag`](#gitoperations-gpg_sign_flag)
 
-*Called by:* [`DeploynatorApp.commit`](deploynator._app.py.md#deploynatorapp-commit), [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
+*Called by:* [`DeploynatorApp.commit`](deploynator._app.py.md#deploynatorapp-commit)
 
 <a id="gitoperations-amend_no_edit"></a>
 
 #### `GitOperations.amend_no_edit`
 
-`method` | [deploynator/_git.py:87](../../deploynator/_git.py#L87)
+`method` | [deploynator/_git.py:97](../../deploynator/_git.py#L97)
 
 ```python
 def amend_no_edit(self, repo_path: str) -> bool
@@ -196,7 +213,7 @@ def amend_no_edit(self, repo_path: str) -> bool
 
 #### `GitOperations.tag`
 
-`method` | [deploynator/_git.py:96](../../deploynator/_git.py#L96)
+`method` | [deploynator/_git.py:106](../../deploynator/_git.py#L106)
 
 ```python
 def tag(self, repo_path: str, tag_name: str, message: str) -> bool
@@ -212,13 +229,11 @@ def tag(self, repo_path: str, tag_name: str, message: str) -> bool
 
 **Returns:** `bool`
 
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
-
 <a id="gitoperations-delete_tag"></a>
 
 #### `GitOperations.delete_tag`
 
-`method` | [deploynator/_git.py:106](../../deploynator/_git.py#L106)
+`method` | [deploynator/_git.py:116](../../deploynator/_git.py#L116)
 
 ```python
 def delete_tag(self, repo_path: str, tag_name: str) -> bool
@@ -237,7 +252,7 @@ def delete_tag(self, repo_path: str, tag_name: str) -> bool
 
 #### `GitOperations.tag_exists`
 
-`method` | [deploynator/_git.py:116](../../deploynator/_git.py#L116)
+`method` | [deploynator/_git.py:126](../../deploynator/_git.py#L126)
 
 ```python
 def tag_exists(self, repo_path: str, tag_name: str) -> bool
@@ -252,13 +267,11 @@ def tag_exists(self, repo_path: str, tag_name: str) -> bool
 
 **Returns:** `bool`
 
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
-
 <a id="gitoperations-push"></a>
 
 #### `GitOperations.push`
 
-`method` | [deploynator/_git.py:126](../../deploynator/_git.py#L126)
+`method` | [deploynator/_git.py:136](../../deploynator/_git.py#L136)
 
 ```python
 def push(self, repo_path: str, remote: str, branch: str, follow_tags: bool = True) -> bool
@@ -275,13 +288,13 @@ def push(self, repo_path: str, remote: str, branch: str, follow_tags: bool = Tru
 
 **Returns:** `bool`
 
-*Called by:* [`DeploynatorApp.start_branch`](deploynator._app.py.md#deploynatorapp-start_branch), [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
+*Called by:* [`DeploynatorApp.start_branch`](deploynator._app.py.md#deploynatorapp-start_branch)
 
 <a id="gitoperations-push_tags"></a>
 
 #### `GitOperations.push_tags`
 
-`method` | [deploynator/_git.py:136](../../deploynator/_git.py#L136)
+`method` | [deploynator/_git.py:146](../../deploynator/_git.py#L146)
 
 ```python
 def push_tags(self, repo_path: str, remote: str = 'origin') -> bool
@@ -300,7 +313,7 @@ def push_tags(self, repo_path: str, remote: str = 'origin') -> bool
 
 #### `GitOperations.create_branch`
 
-`method` | [deploynator/_git.py:146](../../deploynator/_git.py#L146)
+`method` | [deploynator/_git.py:156](../../deploynator/_git.py#L156)
 
 ```python
 def create_branch(self, repo_path: str, branch_name: str, base: str | None = None) -> bool
@@ -322,7 +335,7 @@ def create_branch(self, repo_path: str, branch_name: str, base: str | None = Non
 
 #### `GitOperations.checkout`
 
-`method` | [deploynator/_git.py:162](../../deploynator/_git.py#L162)
+`method` | [deploynator/_git.py:172](../../deploynator/_git.py#L172)
 
 ```python
 def checkout(self, repo_path: str, branch: str) -> bool
@@ -341,7 +354,7 @@ def checkout(self, repo_path: str, branch: str) -> bool
 
 #### `GitOperations.get_changed_files`
 
-`method` | [deploynator/_git.py:172](../../deploynator/_git.py#L172)
+`method` | [deploynator/_git.py:182](../../deploynator/_git.py#L182)
 
 ```python
 def get_changed_files(self, repo_path: str, from_ref: str, to_ref: str = 'HEAD') -> dict[str, list[str]]
@@ -357,13 +370,11 @@ def get_changed_files(self, repo_path: str, from_ref: str, to_ref: str = 'HEAD')
 
 **Returns:** `dict[str, list[str]]`
 
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
-
 <a id="gitoperations-get_log"></a>
 
 #### `GitOperations.get_log`
 
-`method` | [deploynator/_git.py:203](../../deploynator/_git.py#L203)
+`method` | [deploynator/_git.py:213](../../deploynator/_git.py#L213)
 
 ```python
 def get_log(self, repo_path: str, from_ref: str, to_ref: str = 'HEAD', format_str: str = '%s|||%an|||%h') -> list[str]
@@ -384,7 +395,7 @@ def get_log(self, repo_path: str, from_ref: str, to_ref: str = 'HEAD', format_st
 
 #### `GitOperations.get_start_ref`
 
-`method` | [deploynator/_git.py:215](../../deploynator/_git.py#L215)
+`method` | [deploynator/_git.py:225](../../deploynator/_git.py#L225)
 
 ```python
 def get_start_ref(self, repo_path: str) -> str | None
@@ -398,13 +409,11 @@ def get_start_ref(self, repo_path: str) -> str | None
 
 **Returns:** `str | None`
 
-*Called by:* [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
-
 <a id="gitoperations-current_branch"></a>
 
 #### `GitOperations.current_branch`
 
-`method` | [deploynator/_git.py:233](../../deploynator/_git.py#L233)
+`method` | [deploynator/_git.py:243](../../deploynator/_git.py#L243)
 
 ```python
 def current_branch(self, repo_path: str) -> str | None
@@ -418,13 +427,13 @@ def current_branch(self, repo_path: str) -> str | None
 
 **Returns:** `str | None`
 
-*Called by:* [`DeploynatorApp.status`](deploynator._app.py.md#deploynatorapp-status), [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
+*Called by:* [`DeploynatorApp.status`](deploynator._app.py.md#deploynatorapp-status)
 
 <a id="gitoperations-is_dirty"></a>
 
 #### `GitOperations.is_dirty`
 
-`method` | [deploynator/_git.py:245](../../deploynator/_git.py#L245)
+`method` | [deploynator/_git.py:255](../../deploynator/_git.py#L255)
 
 ```python
 def is_dirty(self, repo_path: str) -> bool
@@ -444,7 +453,7 @@ def is_dirty(self, repo_path: str) -> bool
 
 #### `GitOperations.has_remote`
 
-`method` | [deploynator/_git.py:255](../../deploynator/_git.py#L255)
+`method` | [deploynator/_git.py:265](../../deploynator/_git.py#L265)
 
 ```python
 def has_remote(self, repo_path: str, remote: str = 'origin') -> bool
@@ -459,13 +468,13 @@ def has_remote(self, repo_path: str, remote: str = 'origin') -> bool
 
 **Returns:** `bool`
 
-*Called by:* [`DeploynatorApp.status`](deploynator._app.py.md#deploynatorapp-status), [`DeployOrchestrator.deploy`](deploynator._deploy.py.md#deployorchestrator-deploy)
+*Called by:* [`DeploynatorApp.status`](deploynator._app.py.md#deploynatorapp-status)
 
 <a id="gitoperations-branch_exists"></a>
 
 #### `GitOperations.branch_exists`
 
-`method` | [deploynator/_git.py:265](../../deploynator/_git.py#L265)
+`method` | [deploynator/_git.py:275](../../deploynator/_git.py#L275)
 
 ```python
 def branch_exists(self, repo_path: str, branch: str) -> bool
@@ -484,7 +493,7 @@ def branch_exists(self, repo_path: str, branch: str) -> bool
 
 #### `GitOperations.is_behind`
 
-`method` | [deploynator/_git.py:275](../../deploynator/_git.py#L275)
+`method` | [deploynator/_git.py:285](../../deploynator/_git.py#L285)
 
 ```python
 def is_behind(self, repo_path: str, behind_branch: str, ahead_branch: str) -> bool
@@ -506,7 +515,7 @@ True si `ahead_branch` tiene commits que `behind_branch` no tiene (es decir, beh
 
 #### `GitOperations.push_force`
 
-`method` | [deploynator/_git.py:290](../../deploynator/_git.py#L290)
+`method` | [deploynator/_git.py:300](../../deploynator/_git.py#L300)
 
 ```python
 def push_force(self, repo_path: str, remote: str, src_branch: str, dst_branch: str) -> bool
