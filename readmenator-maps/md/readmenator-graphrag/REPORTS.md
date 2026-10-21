@@ -53,7 +53,7 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.7).
 - `deploynator/_readme.py` ranks 3 by PageRank, 2 importers, 4 symbols: footer_block: Return the anchored deploy footer block.
 - Hotspot `deploynator/_config.py`: 6 symbols, 88 connections (score 0.62).
 - Hotspot `deploynator/_changelog.py`: 9 symbols, 10 connections (score 0.14).
-- Taint: 4 paths reach this group via subprocess.
+- Taint: 3 paths reach this group via subprocess.
 - Surprising bridge: test_config.py <-> test_models.py (4 hops across communities).
 - Key entities: file:deploynator/_config.py, file:tests/test_config.py, file:deploynator/_changelog.py, file:tests/test_changelog.py, file:deploynator/_readme.py, file:tests/test_readme_footer.py, sym:deploynator/_readme.py::ensure_deployed_footer@48, sym:deploynator/_changelog.py::generate_from_messages@24
 - Rating 7.0/10 = 7 x PageRank share 1.00 + 3 x risk 0.00. Internal imports: 7.
@@ -81,7 +81,7 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.7).
 - `deploynator/_git.py` ranks 3 by PageRank, 6 importers, 25 symbols: is_behind: True si `ahead_branch` tiene commits que `behind_branch` no tiene (es decir, behind_branch esta por debajo de ahead_branch).
 - Hotspot `deploynator/_app.py`: 33 symbols, 43 connections (score 0.56).
 - Hotspot `deploynator/_deploy.py`: 23 symbols, 53 connections (score 0.54).
-- Taint: 7 paths reach this group via subprocess.
+- Taint: 8 paths reach this group via subprocess.
 - Key entities: file:deploynator/_platforms.py, file:tests/test_receipt.py, file:deploynator/_receipt.py, sym:deploynator/_receipt.py::write@438, file:deploynator/_deploy.py, sym:deploynator/_deploy.py::_deploy_impl@180, file:deploynator/_app.py, file:deploynator/_git.py
 - Rating 3.5/10 = 7 x PageRank share 0.50 + 3 x risk 0.00. Internal imports: 16.
 

@@ -9,7 +9,7 @@
 
 The codebase centres on `_config.py`, `_deploy.py`, `_models.py`. Architecturally it is 4 layers, dominant utility (19 files) across 6 import-based communities. Recorded risk surface: 0 security findings and 0 dependency cycles.
 
-Surprising tissue lives between deploynator: _toml, deploynator: _mcp_server, deploynator: _receipt: 10 extracted cross-community imports and 8 inferred bridges. Follow `connections.json` sorted by strength before refactoring.
+Surprising tissue lives between deploynator: _toml, deploynator: _mcp_server, deploynator: _receipt: 10 extracted cross-community imports and 7 inferred bridges. Follow `connections.json` sorted by strength before refactoring.
 
 Open work clusters around documentation (38% file coverage), 0 security findings, 20 taint paths, and 5 suggested exploration questions in `queries.md`.
 
@@ -24,7 +24,7 @@ Open work clusters around documentation (38% file coverage), 0 security findings
 | Communities | 6 |
 | Doc coverage | 38% (15/40 files) |
 | Security findings | 0 |
-| Estimated read cost | ~6237 tokens (chars/4, offline so $0) |
+| Estimated read cost | ~6207 tokens (chars/4, offline so $0) |
 
 ## Reading Order
 
