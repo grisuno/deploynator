@@ -2,7 +2,7 @@
 
 > Cross-session context for agents. Sections 1-6 are regenerated from the source tree with zero LLM tokens: declared rules are quoted verbatim with `file:line`, measured baselines come from the scan. Section 7 is written by agents and humans and is preserved across rebuilds.
 
-Generated from 40 files at commit `399c736c5637`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
+Generated from 40 files at commit `e63143b99ea4`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
 
 ## 1. Purpose and domain
 
@@ -99,4 +99,5 @@ Append with `readmenator . remember "<note>" --kind <kind>` (kinds: business, de
 
 <!-- readmenator:memory:notes:begin -->
 - 2026-10-21 [decision] Added _receipt.py contract: release receipts (schema deploynator/receipt@v1) written on ALL deploy exits via ReceiptCollector + subprocess.run capture wrapper; --receipt [path] and --trace (feasible plan w/ candidate edges) flags added to release CLI/MCP. Evidence rule: observed=fact, candidate=feasible, predicted=model.
+- 2026-10-21 [decision] E2E receipts validated: real releases (ReadMenator 1.7.0, deploynator 1.4.0) each wrote receipts and both repos ingested them via readmenator . receipts producing RELEASES.md + release-edges.json (observed 17, confirmed 8, unobserved 3, predicted 3). Discovery fix committed: relative project path joins against scan base first.
 <!-- readmenator:memory:notes:end -->

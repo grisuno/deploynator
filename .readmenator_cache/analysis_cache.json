@@ -47,16 +47,16 @@
         "id": 0,
         "label": "deploynator: _toml",
         "file_ids": [
-          "tests/test_runner.py",
-          "deploynator/_pypi.py",
-          "deploynator/_toml.py",
-          "tests/bdd_test_deploy.py",
-          "deploynator/_deb.py",
           "tests/test_deb.py",
+          "deploynator/_deb.py",
           "tests/test_pypi.py",
+          "tests/bdd_test_deploy.py",
+          "tests/test_runner.py",
           "deploynator/_docs.py",
+          "deploynator/_toml.py",
           "tests/test_toml.py",
-          "deploynator/_runner.py"
+          "deploynator/_runner.py",
+          "deploynator/_pypi.py"
         ],
         "cohesion": 0.3684210526315789,
         "size": 10
@@ -65,13 +65,13 @@
         "id": 1,
         "label": "deploynator: _mcp_server",
         "file_ids": [
-          "deploynator/_mcp_server.py",
-          "tests/test_init.py",
-          "deploynator/__init__.py",
-          "tests/test_cli_mcp.py",
-          "app.py",
           "tests/test_install_example.py",
-          "deploynator/__main__.py"
+          "deploynator/__main__.py",
+          "deploynator/__init__.py",
+          "tests/test_init.py",
+          "deploynator/_mcp_server.py",
+          "tests/test_cli_mcp.py",
+          "app.py"
         ],
         "cohesion": 0.5,
         "size": 7
@@ -81,12 +81,12 @@
         "label": "deploynator: _receipt",
         "file_ids": [
           "tests/test_receipt.py",
-          "deploynator/_app.py",
-          "deploynator/_git.py",
+          "tests/test_git_sync.py",
           "deploynator/_deploy.py",
+          "deploynator/_app.py",
           "deploynator/_receipt.py",
           "deploynator/_platforms.py",
-          "tests/test_git_sync.py"
+          "deploynator/_git.py"
         ],
         "cohesion": 0.2631578947368421,
         "size": 7
@@ -95,12 +95,12 @@
         "id": 3,
         "label": "deploynator: _models",
         "file_ids": [
-          "tests/test_deploy.py",
-          "deploynator/_models.py",
+          "tests/test_path_deploy.py",
           "tests/test_semver.py",
           "tests/test_models.py",
+          "deploynator/_models.py",
+          "tests/test_deploy.py",
           "deploynator/_semver.py",
-          "tests/test_path_deploy.py",
           "tests/test_pipeline.py"
         ],
         "cohesion": 0.3103448275862069,
@@ -110,12 +110,12 @@
         "id": 4,
         "label": "deploynator: _changelog",
         "file_ids": [
-          "tests/test_config.py",
           "tests/test_changelog.py",
-          "tests/test_readme_footer.py",
           "deploynator/_readme.py",
-          "deploynator/_changelog.py",
-          "deploynator/_config.py"
+          "tests/test_config.py",
+          "tests/test_readme_footer.py",
+          "deploynator/_config.py",
+          "deploynator/_changelog.py"
         ],
         "cohesion": 0.1891891891891892,
         "size": 6

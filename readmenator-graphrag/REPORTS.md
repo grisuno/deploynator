@@ -67,7 +67,7 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.7).
 - `deploynator/_deb.py` ranks 3 by PageRank, 13 importers, 9 symbols: DebRunner: Construye paquetes .deb desde fuentes C, espejo del flujo PyPI.
 - Hotspot `tests/test_pypi.py`: 25 symbols, 92 connections (score 0.81).
 - Hotspot `tests/test_deb.py`: 24 symbols, 74 connections (score 0.69).
-- Taint: 6 paths reach this group via subprocess.
+- Taint: 5 paths reach this group via subprocess.
 - Surprising bridge: test_models.py <-> test_runner.py (4 hops across communities).
 - Key entities: file:tests/test_pypi.py, file:tests/test_deb.py, file:tests/test_toml.py, file:deploynator/_toml.py, file:tests/bdd_test_deploy.py, file:tests/test_runner.py, sym:deploynator/_toml.py::load_toml_config@217, file:deploynator/_pypi.py
 - Rating 4.1/10 = 7 x PageRank share 0.59 + 3 x risk 0.00. Internal imports: 77.
@@ -81,7 +81,7 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.7).
 - `deploynator/_git.py` ranks 3 by PageRank, 6 importers, 25 symbols: is_behind: True si `ahead_branch` tiene commits que `behind_branch` no tiene (es decir, behind_branch esta por debajo de ahead_branch).
 - Hotspot `deploynator/_app.py`: 33 symbols, 43 connections (score 0.56).
 - Hotspot `deploynator/_deploy.py`: 23 symbols, 53 connections (score 0.54).
-- Taint: 8 paths reach this group via subprocess.
+- Taint: 9 paths reach this group via subprocess.
 - Key entities: file:deploynator/_platforms.py, file:tests/test_receipt.py, file:deploynator/_receipt.py, sym:deploynator/_receipt.py::write@438, file:deploynator/_deploy.py, sym:deploynator/_deploy.py::_deploy_impl@180, file:deploynator/_app.py, file:deploynator/_git.py
 - Rating 3.5/10 = 7 x PageRank share 0.50 + 3 x risk 0.00. Internal imports: 16.
 

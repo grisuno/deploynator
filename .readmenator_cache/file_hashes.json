@@ -1,7 +1,7 @@
 {
   "app.py": "d4dd50a555369ceb2fbe05973908d7e07ef26c5992834697bbb44dd30bd606ff",
   "deploy.sh": "1c5fe239006e177942ee91522a397e24bcfa25f55dc8e75f8af1da28a53e23b9",
-  "deploynator/__init__.py": "c584c2bf43e3497d7661fc4f7fcac7c34d7103a4883abcb0ee8d94af92a9bc50",
+  "deploynator/__init__.py": "cd9f2ac9780af3291df2e4699940f690641da02f6423f7ec083a0e4b73580055",
   "deploynator/__main__.py": "3a2f56293a02fa3f2400a278b958411a0e24319037e16853fd9c3ba629b1696c",
   "deploynator/_app.py": "baf4c3dc09ca9f63b119d260ea7ba9f85993d22b8f61f2d1c034375e3038f516",
   "deploynator/_changelog.py": "4a62761ff69fadc2a98c27171efae8e3c5f3646989b4e165e9e9f1503ff1aa84",
