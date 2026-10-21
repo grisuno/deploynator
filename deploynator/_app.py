@@ -294,13 +294,11 @@ version:
         project = self._discovery.find_by_name(project_name)
         if project:
             from deploynator._deploy import DeployOrchestrator
-            return DeployOrchestrator._resolve_project_path(project)
+            return DeployOrchestrator._resolve_project_path(project, config=self._config)
         expanded = os.path.expanduser(project_name)
         if self._looks_like_path(project_name) and os.path.isdir(expanded):
             return os.path.abspath(expanded)
         return self._config._path or os.getcwd()
-        from deploynator._deploy import DeployOrchestrator
-        return DeployOrchestrator._resolve_project_path(project)
 
     def _smart_prepare(self, base: str, changelog_content: str = "", dry_run: bool = False) -> None:
         from deploynator._git import GitOperations

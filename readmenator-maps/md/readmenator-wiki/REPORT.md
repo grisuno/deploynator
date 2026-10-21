@@ -8,8 +8,8 @@ Every edge is tagged. Extracted means parsed from source; inferred means derived
 
 | Confidence | Count | Meaning |
 |------------|-------|---------|
-| EXTRACTED | 273 | Resolved import edges parsed from source |
-| EXTRACTED | 443 | Raw import statements (may include externals) |
+| EXTRACTED | 272 | Resolved import edges parsed from source |
+| EXTRACTED | 442 | Raw import statements (may include externals) |
 | INFERRED | 5 | Surprising cross-community bridges |
 | AMBIGUOUS | 0 | No uncertain edges are emitted by the static scanner |
 

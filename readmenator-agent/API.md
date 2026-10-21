@@ -22,15 +22,15 @@ Imported by: `deploynator/__init__.py`
 - `DeploynatorApp.auth_status` (method) `deploynator/_app.py:43` `def auth_status(self)`
 - `DeploynatorApp.init_project` (method) `deploynator/_app.py:185` `def init_project(self, project_path, name)`
 - `DeploynatorApp.start_branch` (method) `deploynator/_app.py:262` `def start_branch(self, commit_type, description, project_path, project_name, remote)`
-- `DeploynatorApp.commit` (method) `deploynator/_app.py:320` `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
-- `DeploynatorApp.release` (method) `deploynator/_app.py:379` `def release(self, commit_type, subject, scope, body, message, project_name, bump, dry_run, platforms, all_projects...`
-- `DeploynatorApp.generate_docs` (method) `deploynator/_app.py:521` `def generate_docs(self, project_path, project_name)`
-- `DeploynatorApp.status` (method) `deploynator/_app.py:527` `def status(self, project_path, project_name)`
-- `DeploynatorApp.list_projects` (method) `deploynator/_app.py:547` `def list_projects(self, search_path)`
-- `DeploynatorApp.generate_ci` (method) `deploynator/_app.py:552` `def generate_ci(self, project_name, all_projects)`
-- `DeploynatorApp.install_deps` (method) `deploynator/_app.py:568` `def install_deps(self, project_name)`
-- `DeploynatorApp.install_packages` (method) `deploynator/_app.py:579` `def install_packages(self, packages)` -- pip install/upgrade packages (default: deploynator from PyPI).
-- `DeploynatorApp.interactive_menu` (method) `deploynator/_app.py:606` `def interactive_menu(self)`
+- `DeploynatorApp.commit` (method) `deploynator/_app.py:318` `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
+- `DeploynatorApp.release` (method) `deploynator/_app.py:377` `def release(self, commit_type, subject, scope, body, message, project_name, bump, dry_run, platforms, all_projects...`
+- `DeploynatorApp.generate_docs` (method) `deploynator/_app.py:519` `def generate_docs(self, project_path, project_name)`
+- `DeploynatorApp.status` (method) `deploynator/_app.py:525` `def status(self, project_path, project_name)`
+- `DeploynatorApp.list_projects` (method) `deploynator/_app.py:545` `def list_projects(self, search_path)`
+- `DeploynatorApp.generate_ci` (method) `deploynator/_app.py:550` `def generate_ci(self, project_name, all_projects)`
+- `DeploynatorApp.install_deps` (method) `deploynator/_app.py:566` `def install_deps(self, project_name)`
+- `DeploynatorApp.install_packages` (method) `deploynator/_app.py:577` `def install_packages(self, packages)` -- pip install/upgrade packages (default: deploynator from PyPI).
+- `DeploynatorApp.interactive_menu` (method) `deploynator/_app.py:604` `def interactive_menu(self)`
 
 ## deploynator/_changelog.py
 Depends on: `deploynator/_config.py`, `deploynator/_models.py`
@@ -67,11 +67,11 @@ Imported by: `deploynator/_app.py`, `tests/bdd_test_deploy.py`, `tests/test_deb.
 - `ProjectDiscovery.discover` (method) `deploynator/_deploy.py:42` `def discover(self, search_path)`
 - `ProjectDiscovery.find_by_name` (method) `deploynator/_deploy.py:63` `def find_by_name(self, name, search_path)`
 - `DeployOrchestrator.__init__` (method) `deploynator/_deploy.py:84` `def __init__(self, config)`
-- `DeployOrchestrator.deploy` (method) `deploynator/_deploy.py:105` `def deploy(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...`
-- `DeployOrchestrator.generate_workflows` (method) `deploynator/_deploy.py:707` `def generate_workflows(self, project, output_dir)`
-- `DeployOrchestrator.install_dependencies` (method) `deploynator/_deploy.py:774` `def install_dependencies(self, project)`
-- `DeployOrchestrator.integrate_readmenator` (method) `deploynator/_deploy.py:784` `def integrate_readmenator(self, project_path)`
-- `DeployOrchestrator.install_lazygit` (method) `deploynator/_deploy.py:820` `def install_lazygit(self)`
+- `DeployOrchestrator.deploy` (method) `deploynator/_deploy.py:113` `def deploy(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...`
+- `DeployOrchestrator.generate_workflows` (method) `deploynator/_deploy.py:715` `def generate_workflows(self, project, output_dir)`
+- `DeployOrchestrator.install_dependencies` (method) `deploynator/_deploy.py:782` `def install_dependencies(self, project)`
+- `DeployOrchestrator.integrate_readmenator` (method) `deploynator/_deploy.py:792` `def integrate_readmenator(self, project_path)`
+- `DeployOrchestrator.install_lazygit` (method) `deploynator/_deploy.py:828` `def install_lazygit(self)`
 
 ## deploynator/_docs.py
 Depends on: `deploynator/_config.py`, `deploynator/_toml.py`

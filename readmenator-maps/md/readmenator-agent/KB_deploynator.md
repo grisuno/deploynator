@@ -33,27 +33,27 @@
   - `_is_path_like` (method, line 280) `def _is_path_like(value)`
   - `_looks_like_path` (method, line 284) `def _looks_like_path(value)`
   - `_resolve_project_path` (method, line 291) `def _resolve_project_path(self, project_name)`
-  - `_smart_prepare` (method, line 305) `def _smart_prepare(self, base, changelog_content, dry_run)`
-  - `commit` (method, line 320) `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
-  - `_parse_release_message` (method, line 361) `def _parse_release_message(raw)`
-  - `release` (method, line 379) `def release(self, commit_type, subject, scope, body, message, project_name, bump, dry_run, platforms, all_projects...`
-  - `generate_docs` (method, line 521) `def generate_docs(self, project_path, project_name)`
-  - `status` (method, line 527) `def status(self, project_path, project_name)`
-  - `list_projects` (method, line 547) `def list_projects(self, search_path)`
-  - `generate_ci` (method, line 552) `def generate_ci(self, project_name, all_projects)`
-  - `install_deps` (method, line 568) `def install_deps(self, project_name)`
-  - `install_packages` (method, line 579) `def install_packages(self, packages)`
-  - `interactive_menu` (method, line 606) `def interactive_menu(self)`
-  - `_interactive_release` (method, line 642) `def _interactive_release(self)`
-  - `_interactive_commit` (method, line 690) `def _interactive_commit(self)`
-  - `_interactive_start` (method, line 717) `def _interactive_start(self)`
-  - `_interactive_auth` (method, line 741) `def _interactive_auth(self)`
-  - `_interactive_auth_status` (method, line 764) `def _interactive_auth_status(self)`
-  - `_interactive_docs` (method, line 770) `def _interactive_docs(self)`
-  - `_interactive_ci` (method, line 777) `def _interactive_ci(self)`
-  - `_interactive_status` (method, line 786) `def _interactive_status(self)`
-  - `_interactive_init` (method, line 791) `def _interactive_init(self)`
-  - `_print_result` (method, line 797) `def _print_result(result)`
+  - `_smart_prepare` (method, line 303) `def _smart_prepare(self, base, changelog_content, dry_run)`
+  - `commit` (method, line 318) `def commit(self, commit_type, subject, scope, body, project_path, project_name, dry_run)`
+  - `_parse_release_message` (method, line 359) `def _parse_release_message(raw)`
+  - `release` (method, line 377) `def release(self, commit_type, subject, scope, body, message, project_name, bump, dry_run, platforms, all_projects...`
+  - `generate_docs` (method, line 519) `def generate_docs(self, project_path, project_name)`
+  - `status` (method, line 525) `def status(self, project_path, project_name)`
+  - `list_projects` (method, line 545) `def list_projects(self, search_path)`
+  - `generate_ci` (method, line 550) `def generate_ci(self, project_name, all_projects)`
+  - `install_deps` (method, line 566) `def install_deps(self, project_name)`
+  - `install_packages` (method, line 577) `def install_packages(self, packages)`
+  - `interactive_menu` (method, line 604) `def interactive_menu(self)`
+  - `_interactive_release` (method, line 640) `def _interactive_release(self)`
+  - `_interactive_commit` (method, line 688) `def _interactive_commit(self)`
+  - `_interactive_start` (method, line 715) `def _interactive_start(self)`
+  - `_interactive_auth` (method, line 739) `def _interactive_auth(self)`
+  - `_interactive_auth_status` (method, line 762) `def _interactive_auth_status(self)`
+  - `_interactive_docs` (method, line 768) `def _interactive_docs(self)`
+  - `_interactive_ci` (method, line 775) `def _interactive_ci(self)`
+  - `_interactive_status` (method, line 784) `def _interactive_status(self)`
+  - `_interactive_init` (method, line 789) `def _interactive_init(self)`
+  - `_print_result` (method, line 795) `def _print_result(result)`
 - Depends on: `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_toml.py`
 - Imported by: `deploynator/__init__.py`
 
@@ -114,22 +114,22 @@
   - `find_by_name` (method, line 63) `def find_by_name(self, name, search_path)`
   - `_load_single` (method, line 70) `def _load_single(yaml_path)`
   - `__init__` (method, line 84) `def __init__(self, config)`
-  - `_resolve_project_path` (method, line 96) `def _resolve_project_path(project)`
-  - `deploy` (method, line 105) `def deploy(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...`
-  - `_deploy_impl` (method, line 172) `def _deploy_impl(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...`
-  - `_gh_release_in_repo` (method, line 604) `def _gh_release_in_repo(self, repo_path, project_name, version, notes, branch)`
-  - `_gh_upload_assets` (method, line 637) `def _gh_upload_assets(self, repo_path, version, assets)`
-  - `_add_temp_remote` (method, line 652) `def _add_temp_remote(self, repo_path, name, url)`
-  - `_remove_temp_remote` (method, line 661) `def _remove_temp_remote(self, repo_path, name)`
-  - `_sync_dev_to_main` (method, line 670) `def _sync_dev_to_main(self, repo_path)`
-  - `_get_remote_url` (method, line 698) `def _get_remote_url(repo_path, pc)`
-  - `generate_workflows` (method, line 707) `def generate_workflows(self, project, output_dir)`
-  - `_ci_workflow_content` (method, line 726) `def _ci_workflow_content(self, project)`
-  - `_release_workflow_content` (method, line 747) `def _release_workflow_content(self, project)`
-  - `install_dependencies` (method, line 774) `def install_dependencies(self, project)`
-  - `integrate_readmenator` (method, line 784) `def integrate_readmenator(self, project_path)`
-  - `install_lazygit` (method, line 820) `def install_lazygit(self)`
-  - `_listed` (function, line 312) `def _listed(files)`
+  - `_resolve_project_path` (method, line 96) `def _resolve_project_path(project, config)`
+  - `deploy` (method, line 113) `def deploy(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...`
+  - `_deploy_impl` (method, line 180) `def _deploy_impl(self, project, commit_type, subject, scope, body, dry_run, platforms_override, run_tests, run_docs...`
+  - `_gh_release_in_repo` (method, line 612) `def _gh_release_in_repo(self, repo_path, project_name, version, notes, branch)`
+  - `_gh_upload_assets` (method, line 645) `def _gh_upload_assets(self, repo_path, version, assets)`
+  - `_add_temp_remote` (method, line 660) `def _add_temp_remote(self, repo_path, name, url)`
+  - `_remove_temp_remote` (method, line 669) `def _remove_temp_remote(self, repo_path, name)`
+  - `_sync_dev_to_main` (method, line 678) `def _sync_dev_to_main(self, repo_path)`
+  - `_get_remote_url` (method, line 706) `def _get_remote_url(repo_path, pc)`
+  - `generate_workflows` (method, line 715) `def generate_workflows(self, project, output_dir)`
+  - `_ci_workflow_content` (method, line 734) `def _ci_workflow_content(self, project)`
+  - `_release_workflow_content` (method, line 755) `def _release_workflow_content(self, project)`
+  - `install_dependencies` (method, line 782) `def install_dependencies(self, project)`
+  - `integrate_readmenator` (method, line 792) `def integrate_readmenator(self, project_path)`
+  - `install_lazygit` (method, line 828) `def install_lazygit(self)`
+  - `_listed` (function, line 320) `def _listed(files)`
 - Depends on: `deploynator/_changelog.py`, `deploynator/_config.py`, `deploynator/_deb.py`, `deploynator/_docs.py`, `deploynator/_git.py`, `deploynator/_models.py`, `deploynator/_platforms.py`, `deploynator/_pypi.py`, `deploynator/_readme.py`, `deploynator/_receipt.py`, `deploynator/_runner.py`, `deploynator/_semver.py`, `deploynator/_toml.py`
 - Imported by: `deploynator/_app.py`, `tests/bdd_test_deploy.py`, `tests/test_deb.py`, `tests/test_deploy.py`, `tests/test_git_sync.py`, `tests/test_path_deploy.py`, `tests/test_pipeline.py`, `tests/test_pypi.py`, `tests/test_receipt.py`
 

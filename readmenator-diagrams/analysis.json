@@ -1,7 +1,7 @@
 {
  "metadata": {
-  "generated_at": "2026-10-21T04:24:46.926070+00:00",
-  "source_tree_hash": "09b84ce632fa7e71196cbc8a03c3867645817572699a97e5ba0ce784bd08dabc",
+  "generated_at": "2026-10-21T04:39:01.949549+00:00",
+  "source_tree_hash": "f88fc6b64a81e7a7df35fbf9d895954025dca80b5b94a522a8e3fe9ac897841d",
   "repo_name": "deploynator",
   "depth_level": 2,
   "depth_cap": 3,
@@ -309,177 +309,177 @@
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_resolve_project_path",
    "start_line": 291,
-   "end_line": 304,
+   "end_line": 302,
    "type": "FUNCTION",
    "content_hash": "5f1e43df287ea381"
   },
   "deploynator/_app.py|deploynator/_app.py::_smart_prepare": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_smart_prepare",
-   "start_line": 305,
-   "end_line": 319,
+   "start_line": 303,
+   "end_line": 317,
    "type": "FUNCTION",
-   "content_hash": "02f753643fb8413d"
+   "content_hash": "792667213338a53a"
   },
   "deploynator/_app.py|deploynator/_app.py::commit": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::commit",
-   "start_line": 320,
-   "end_line": 360,
+   "start_line": 318,
+   "end_line": 358,
    "type": "FUNCTION",
-   "content_hash": "e10fdf3efc405db4"
+   "content_hash": "6325d316cb683d84"
   },
   "deploynator/_app.py|deploynator/_app.py::_parse_release_message": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_parse_release_message",
-   "start_line": 361,
-   "end_line": 378,
+   "start_line": 359,
+   "end_line": 376,
    "type": "FUNCTION",
-   "content_hash": "740cf877761ff8b0"
+   "content_hash": "20f523fcbbd1acd5"
   },
   "deploynator/_app.py|deploynator/_app.py::release": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::release",
-   "start_line": 379,
-   "end_line": 520,
+   "start_line": 377,
+   "end_line": 518,
    "type": "FUNCTION",
-   "content_hash": "55ce4f7056d31518"
+   "content_hash": "932d20f0ca623f44"
   },
   "deploynator/_app.py|deploynator/_app.py::generate_docs": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::generate_docs",
-   "start_line": 521,
-   "end_line": 526,
+   "start_line": 519,
+   "end_line": 524,
    "type": "FUNCTION",
-   "content_hash": "6fca362e5f0fd230"
+   "content_hash": "b51834ac9d8185d9"
   },
   "deploynator/_app.py|deploynator/_app.py::status": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::status",
-   "start_line": 527,
-   "end_line": 546,
+   "start_line": 525,
+   "end_line": 544,
    "type": "FUNCTION",
-   "content_hash": "29571b78ea3fa80c"
+   "content_hash": "4a9b6f2fd994e349"
   },
   "deploynator/_app.py|deploynator/_app.py::list_projects": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::list_projects",
-   "start_line": 547,
-   "end_line": 551,
+   "start_line": 545,
+   "end_line": 549,
    "type": "FUNCTION",
-   "content_hash": "a12d84e3db2566eb"
+   "content_hash": "456a195a8b8540a2"
   },
   "deploynator/_app.py|deploynator/_app.py::generate_ci": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::generate_ci",
-   "start_line": 552,
-   "end_line": 567,
+   "start_line": 550,
+   "end_line": 565,
    "type": "FUNCTION",
-   "content_hash": "790f533132696d3c"
+   "content_hash": "73d4e93c04722bc1"
   },
   "deploynator/_app.py|deploynator/_app.py::install_deps": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::install_deps",
-   "start_line": 568,
-   "end_line": 578,
+   "start_line": 566,
+   "end_line": 576,
    "type": "FUNCTION",
-   "content_hash": "560890bfcf88f36b"
+   "content_hash": "2409d942adb4a227"
   },
   "deploynator/_app.py|deploynator/_app.py::install_packages": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::install_packages",
-   "start_line": 579,
-   "end_line": 605,
+   "start_line": 577,
+   "end_line": 603,
    "type": "FUNCTION",
-   "content_hash": "f8f6fbd71d97ee27"
+   "content_hash": "97cfc4563cf5de25"
   },
   "deploynator/_app.py|deploynator/_app.py::interactive_menu": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::interactive_menu",
-   "start_line": 606,
-   "end_line": 641,
+   "start_line": 604,
+   "end_line": 639,
    "type": "FUNCTION",
-   "content_hash": "18ebe4956e65cdf1"
+   "content_hash": "74c0537704a33e59"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_release": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_release",
-   "start_line": 642,
-   "end_line": 689,
+   "start_line": 640,
+   "end_line": 687,
    "type": "FUNCTION",
-   "content_hash": "0b71a7b9017b8a53"
+   "content_hash": "657832a251bb2804"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_commit": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_commit",
-   "start_line": 690,
-   "end_line": 716,
+   "start_line": 688,
+   "end_line": 714,
    "type": "FUNCTION",
-   "content_hash": "663b7ca485c1155c"
+   "content_hash": "4853c82f16c77480"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_start": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_start",
-   "start_line": 717,
-   "end_line": 740,
+   "start_line": 715,
+   "end_line": 738,
    "type": "FUNCTION",
-   "content_hash": "8faac12bb5382b72"
+   "content_hash": "e9fba394d583aada"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_auth": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_auth",
-   "start_line": 741,
-   "end_line": 763,
+   "start_line": 739,
+   "end_line": 761,
    "type": "FUNCTION",
-   "content_hash": "135351a6ee201b67"
+   "content_hash": "b1e0334c47eac97b"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_auth_status": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_auth_status",
-   "start_line": 764,
-   "end_line": 769,
+   "start_line": 762,
+   "end_line": 767,
    "type": "FUNCTION",
-   "content_hash": "acfafb633097266b"
+   "content_hash": "430c78de82b71412"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_docs": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_docs",
-   "start_line": 770,
-   "end_line": 776,
+   "start_line": 768,
+   "end_line": 774,
    "type": "FUNCTION",
-   "content_hash": "ee719aa9cb0d3eae"
+   "content_hash": "aca065f9d9e05dc0"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_ci": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_ci",
-   "start_line": 777,
-   "end_line": 785,
+   "start_line": 775,
+   "end_line": 783,
    "type": "FUNCTION",
-   "content_hash": "20b704f5f3347ad9"
+   "content_hash": "11438aaf8b14bc8b"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_status": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_status",
-   "start_line": 786,
-   "end_line": 790,
+   "start_line": 784,
+   "end_line": 788,
    "type": "FUNCTION",
-   "content_hash": "a4b02071597da2d3"
+   "content_hash": "28ffaba8010941e4"
   },
   "deploynator/_app.py|deploynator/_app.py::_interactive_init": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_interactive_init",
-   "start_line": 791,
-   "end_line": 796,
+   "start_line": 789,
+   "end_line": 794,
    "type": "FUNCTION",
-   "content_hash": "c5a9dabf0f1259be"
+   "content_hash": "ab034259ad067b19"
   },
   "deploynator/_app.py|deploynator/_app.py::_print_result": {
    "file_path": "deploynator/_app.py",
    "qualified_name": "deploynator/_app.py::_print_result",
-   "start_line": 797,
-   "end_line": 805,
+   "start_line": 795,
+   "end_line": 803,
    "type": "FUNCTION",
-   "content_hash": "67e9fb09374d35e2"
+   "content_hash": "b7b51b293a5d617d"
   },
   "deploynator/_changelog.py|deploynator/_changelog.py::ChangelogGenerator": {
    "file_path": "deploynator/_changelog.py",
@@ -725,129 +725,129 @@
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_resolve_project_path",
    "start_line": 96,
-   "end_line": 104,
+   "end_line": 112,
    "type": "FUNCTION",
    "content_hash": "975ddd46b7075600"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::deploy": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::deploy",
-   "start_line": 105,
-   "end_line": 171,
+   "start_line": 113,
+   "end_line": 179,
    "type": "FUNCTION",
-   "content_hash": "e81cb27ceed882c6"
+   "content_hash": "325d452e88610a48"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_deploy_impl": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_deploy_impl",
-   "start_line": 172,
-   "end_line": 311,
+   "start_line": 180,
+   "end_line": 319,
    "type": "FUNCTION",
-   "content_hash": "486943b8f9296be9"
+   "content_hash": "bd718cc7910ede9a"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_listed": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_listed",
-   "start_line": 312,
-   "end_line": 603,
+   "start_line": 320,
+   "end_line": 611,
    "type": "FUNCTION",
-   "content_hash": "c868878f5b123093"
+   "content_hash": "d2d1795937b5e4cd"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_gh_release_in_repo": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_gh_release_in_repo",
-   "start_line": 604,
-   "end_line": 636,
+   "start_line": 612,
+   "end_line": 644,
    "type": "FUNCTION",
-   "content_hash": "1ab6074015b3b31f"
+   "content_hash": "991b8a7a3f329f93"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_gh_upload_assets": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_gh_upload_assets",
-   "start_line": 637,
-   "end_line": 651,
+   "start_line": 645,
+   "end_line": 659,
    "type": "FUNCTION",
-   "content_hash": "a59a64f47d2ce1b2"
+   "content_hash": "3e54c51a7216c36d"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_add_temp_remote": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_add_temp_remote",
-   "start_line": 652,
-   "end_line": 660,
+   "start_line": 660,
+   "end_line": 668,
    "type": "FUNCTION",
-   "content_hash": "f0b8f85644e107b9"
+   "content_hash": "c9d067d11dad554f"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_remove_temp_remote": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_remove_temp_remote",
-   "start_line": 661,
-   "end_line": 669,
+   "start_line": 669,
+   "end_line": 677,
    "type": "FUNCTION",
-   "content_hash": "2df62aef86225b35"
+   "content_hash": "0b588ca57fb20af9"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_sync_dev_to_main": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_sync_dev_to_main",
-   "start_line": 670,
-   "end_line": 697,
+   "start_line": 678,
+   "end_line": 705,
    "type": "FUNCTION",
-   "content_hash": "cb8cfae2abcf4c03"
+   "content_hash": "cbb44c0221d0f0e9"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_get_remote_url": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_get_remote_url",
-   "start_line": 698,
-   "end_line": 706,
+   "start_line": 706,
+   "end_line": 714,
    "type": "FUNCTION",
-   "content_hash": "8c4c0a028e3caa6d"
+   "content_hash": "bb90159817cf2bde"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::generate_workflows": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::generate_workflows",
-   "start_line": 707,
-   "end_line": 725,
+   "start_line": 715,
+   "end_line": 733,
    "type": "FUNCTION",
-   "content_hash": "b883e8a1cafcd02b"
+   "content_hash": "af2e949546065345"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_ci_workflow_content": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_ci_workflow_content",
-   "start_line": 726,
-   "end_line": 746,
+   "start_line": 734,
+   "end_line": 754,
    "type": "FUNCTION",
-   "content_hash": "90ae4da341e7df4f"
+   "content_hash": "ce5bb3f769b05482"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::_release_workflow_content": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::_release_workflow_content",
-   "start_line": 747,
-   "end_line": 773,
+   "start_line": 755,
+   "end_line": 781,
    "type": "FUNCTION",
-   "content_hash": "5fed3585746890cc"
+   "content_hash": "a003a82eef4863f3"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::install_dependencies": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::install_dependencies",
-   "start_line": 774,
-   "end_line": 783,
+   "start_line": 782,
+   "end_line": 791,
    "type": "FUNCTION",
-   "content_hash": "646244019833d4d3"
+   "content_hash": "2aeacc35c93e047c"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::integrate_readmenator": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::integrate_readmenator",
-   "start_line": 784,
-   "end_line": 819,
+   "start_line": 792,
+   "end_line": 827,
    "type": "FUNCTION",
-   "content_hash": "dd43339b877b80c1"
+   "content_hash": "b10c69475380987c"
   },
   "deploynator/_deploy.py|deploynator/_deploy.py::install_lazygit": {
    "file_path": "deploynator/_deploy.py",
    "qualified_name": "deploynator/_deploy.py::install_lazygit",
-   "start_line": 820,
-   "end_line": 841,
+   "start_line": 828,
+   "end_line": 849,
    "type": "FUNCTION",
-   "content_hash": "dc4266e6ce0b24a5"
+   "content_hash": "6fe528c3f9643fe6"
   },
   "deploynator/_docs.py|deploynator/_docs.py::DocsRunner": {
    "file_path": "deploynator/_docs.py",
@@ -12861,7 +12861,7 @@
      "target": "deploynator/_toml.py|deploynator/_toml.py::load_toml_config",
      "call_sites": [
       {
-       "line": 416,
+       "line": 414,
        "column": 35
       }
      ],
@@ -12916,7 +12916,7 @@
      "target": "deploynator/_toml.py|deploynator/_toml.py::load_toml_config",
      "call_sites": [
       {
-       "line": 203,
+       "line": 211,
        "column": 23
       }
      ],
@@ -12954,7 +12954,7 @@
      "target": "deploynator/_toml.py|deploynator/_toml.py::load_toml_config",
      "call_sites": [
       {
-       "line": 416,
+       "line": 414,
        "column": 35
       }
      ],
@@ -13009,7 +13009,7 @@
      "target": "deploynator/_toml.py|deploynator/_toml.py::load_toml_config",
      "call_sites": [
       {
-       "line": 203,
+       "line": 211,
        "column": 23
       }
      ],
@@ -13020,7 +13020,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::run",
      "call_sites": [
       {
-       "line": 247,
+       "line": 255,
        "column": 29
       }
      ],
@@ -13031,7 +13031,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::run",
      "call_sites": [
       {
-       "line": 261,
+       "line": 269,
        "column": 26
       }
      ],
@@ -13042,7 +13042,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::is_deb_project",
      "call_sites": [
       {
-       "line": 402,
+       "line": 410,
        "column": 42
       }
      ],
@@ -13053,7 +13053,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::run",
      "call_sites": [
       {
-       "line": 410,
+       "line": 418,
        "column": 41
       }
      ],
@@ -13064,7 +13064,7 @@
      "target": "deploynator/_pypi.py|deploynator/_pypi.py::is_packaging_project",
      "call_sites": [
       {
-       "line": 549,
+       "line": 557,
        "column": 50
       }
      ],
@@ -13075,7 +13075,7 @@
      "target": "deploynator/_pypi.py|deploynator/_pypi.py::has_credentials",
      "call_sites": [
       {
-       "line": 552,
+       "line": 560,
        "column": 21
       }
      ],
@@ -13086,7 +13086,7 @@
      "target": "deploynator/_pypi.py|deploynator/_pypi.py::prompt_for_credentials",
      "call_sites": [
       {
-       "line": 553,
+       "line": 561,
        "column": 24
       }
      ],
@@ -13097,7 +13097,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::run",
      "call_sites": [
       {
-       "line": 561,
+       "line": 569,
        "column": 34
       }
      ],
@@ -13108,7 +13108,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::run",
      "call_sites": [
       {
-       "line": 579,
+       "line": 587,
        "column": 30
       }
      ],
@@ -13119,7 +13119,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::run",
      "call_sites": [
       {
-       "line": 615,
+       "line": 623,
        "column": 21
       }
      ],
@@ -13130,7 +13130,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::run",
      "call_sites": [
       {
-       "line": 643,
+       "line": 651,
        "column": 21
       }
      ],
@@ -13141,7 +13141,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::run",
      "call_sites": [
       {
-       "line": 654,
+       "line": 662,
        "column": 12
       }
      ],
@@ -13152,7 +13152,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::run",
      "call_sites": [
       {
-       "line": 663,
+       "line": 671,
        "column": 12
       }
      ],
@@ -13163,7 +13163,7 @@
      "target": "deploynator/_toml.py|deploynator/_toml.py::load_toml_config",
      "call_sites": [
       {
-       "line": 786,
+       "line": 794,
        "column": 23
       }
      ],
@@ -13174,7 +13174,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::run",
      "call_sites": [
       {
-       "line": 790,
+       "line": 798,
        "column": 19
       }
      ],
@@ -13185,7 +13185,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::run",
      "call_sites": [
       {
-       "line": 795,
+       "line": 803,
        "column": 21
       }
      ],
@@ -13196,7 +13196,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::run",
      "call_sites": [
       {
-       "line": 808,
+       "line": 816,
        "column": 29
       }
      ],
@@ -13207,7 +13207,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::run",
      "call_sites": [
       {
-       "line": 810,
+       "line": 818,
        "column": 33
       }
      ],
@@ -13218,7 +13218,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::run",
      "call_sites": [
       {
-       "line": 822,
+       "line": 830,
        "column": 21
       }
      ],
@@ -13229,7 +13229,7 @@
      "target": "deploynator/_deb.py|deploynator/_deb.py::run",
      "call_sites": [
       {
-       "line": 834,
+       "line": 842,
        "column": 29
       }
      ],
@@ -13294,7 +13294,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::from_string",
      "call_sites": [
       {
-       "line": 325,
+       "line": 323,
        "column": 16
       }
      ],
@@ -13305,7 +13305,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::CommitMessage",
      "call_sites": [
       {
-       "line": 343,
+       "line": 341,
        "column": 21
       }
      ],
@@ -13316,7 +13316,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
      "call_sites": [
       {
-       "line": 373,
+       "line": 371,
        "column": 25
       }
      ],
@@ -13327,7 +13327,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::from_string",
      "call_sites": [
       {
-       "line": 400,
+       "line": 398,
        "column": 16
       }
      ],
@@ -13338,7 +13338,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::ProjectConfig",
      "call_sites": [
       {
-       "line": 420,
+       "line": 418,
        "column": 32
       }
      ],
@@ -13349,7 +13349,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::VersionConfig",
      "call_sites": [
       {
-       "line": 424,
+       "line": 422,
        "column": 32
       }
      ],
@@ -13387,7 +13387,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::from_string",
      "call_sites": [
       {
-       "line": 325,
+       "line": 323,
        "column": 16
       }
      ],
@@ -13398,7 +13398,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::CommitMessage",
      "call_sites": [
       {
-       "line": 343,
+       "line": 341,
        "column": 21
       }
      ],
@@ -13409,7 +13409,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
      "call_sites": [
       {
-       "line": 373,
+       "line": 371,
        "column": 25
       }
      ],
@@ -13420,7 +13420,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::from_string",
      "call_sites": [
       {
-       "line": 400,
+       "line": 398,
        "column": 16
       }
      ],
@@ -13431,7 +13431,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::ProjectConfig",
      "call_sites": [
       {
-       "line": 420,
+       "line": 418,
        "column": 32
       }
      ],
@@ -13442,7 +13442,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::VersionConfig",
      "call_sites": [
       {
-       "line": 424,
+       "line": 422,
        "column": 32
       }
      ],
@@ -13453,7 +13453,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::DeployResult",
      "call_sites": [
       {
-       "line": 438,
+       "line": 436,
        "column": 20
       }
      ],
@@ -13464,7 +13464,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::from_string",
      "call_sites": [
       {
-       "line": 447,
+       "line": 445,
        "column": 29
       }
      ],
@@ -13475,7 +13475,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::from_string",
      "call_sites": [
       {
-       "line": 455,
+       "line": 453,
        "column": 29
       }
      ],
@@ -13486,7 +13486,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::from_string",
      "call_sites": [
       {
-       "line": 490,
+       "line": 488,
        "column": 37
       }
      ],
@@ -13497,7 +13497,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
      "call_sites": [
       {
-       "line": 644,
+       "line": 642,
        "column": 31
       }
      ],
@@ -13508,7 +13508,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
      "call_sites": [
       {
-       "line": 648,
+       "line": 646,
        "column": 20
       }
      ],
@@ -13519,7 +13519,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
      "call_sites": [
       {
-       "line": 692,
+       "line": 690,
        "column": 31
       }
      ],
@@ -13530,7 +13530,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
      "call_sites": [
       {
-       "line": 696,
+       "line": 694,
        "column": 20
       }
      ],
@@ -13541,7 +13541,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
      "call_sites": [
       {
-       "line": 719,
+       "line": 717,
        "column": 31
       }
      ],
@@ -13552,7 +13552,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::valid_types",
      "call_sites": [
       {
-       "line": 723,
+       "line": 721,
        "column": 20
       }
      ],
@@ -13585,7 +13585,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::label",
      "call_sites": [
       {
-       "line": 134,
+       "line": 142,
        "column": 30
       }
      ],
@@ -13596,7 +13596,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::DeployResult",
      "call_sites": [
       {
-       "line": 150,
+       "line": 158,
        "column": 21
       }
      ],
@@ -13607,7 +13607,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::DeployResult",
      "call_sites": [
       {
-       "line": 195,
+       "line": 203,
        "column": 19
       }
      ],
@@ -13618,7 +13618,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::DeployResult",
      "call_sites": [
       {
-       "line": 206,
+       "line": 214,
        "column": 19
       }
      ],
@@ -13629,7 +13629,7 @@
      "target": "deploynator/_semver.py|deploynator/_semver.py::get_current_version",
      "call_sites": [
       {
-       "line": 222,
+       "line": 230,
        "column": 26
       }
      ],
@@ -13640,7 +13640,7 @@
      "target": "deploynator/_semver.py|deploynator/_semver.py::determine_bump",
      "call_sites": [
       {
-       "line": 223,
+       "line": 231,
        "column": 33
       }
      ],
@@ -13651,7 +13651,7 @@
      "target": "deploynator/_semver.py|deploynator/_semver.py::calculate_next_version",
      "call_sites": [
       {
-       "line": 224,
+       "line": 232,
        "column": 22
       }
      ],
@@ -13662,7 +13662,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::label",
      "call_sites": [
       {
-       "line": 235,
+       "line": 243,
        "column": 40
       }
      ],
@@ -13673,7 +13673,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::DeployResult",
      "call_sites": [
       {
-       "line": 250,
+       "line": 258,
        "column": 27
       }
      ],
@@ -13684,7 +13684,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::DeployResult",
      "call_sites": [
       {
-       "line": 281,
+       "line": 289,
        "column": 19
       }
      ],
@@ -13695,7 +13695,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::DeployResult",
      "call_sites": [
       {
-       "line": 292,
+       "line": 300,
        "column": 19
       }
      ],
@@ -13706,7 +13706,7 @@
      "target": "deploynator/_semver.py|deploynator/_semver.py::write_version_file",
      "call_sites": [
       {
-       "line": 301,
+       "line": 309,
        "column": 16
       }
      ],
@@ -13717,7 +13717,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::label",
      "call_sites": [
       {
-       "line": 328,
+       "line": 336,
        "column": 36
       }
      ],
@@ -13728,7 +13728,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::CommitMessage",
      "call_sites": [
       {
-       "line": 331,
+       "line": 339,
        "column": 21
       }
      ],
@@ -13739,7 +13739,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::DeployResult",
      "call_sites": [
       {
-       "line": 348,
+       "line": 356,
        "column": 27
       }
      ],
@@ -13750,7 +13750,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::parse",
      "call_sites": [
       {
-       "line": 360,
+       "line": 368,
        "column": 30
       }
      ],
@@ -13761,7 +13761,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::VersionInfo",
      "call_sites": [
       {
-       "line": 361,
+       "line": 369,
        "column": 31
       }
      ],
@@ -13772,7 +13772,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::DeployResult",
      "call_sites": [
       {
-       "line": 366,
+       "line": 374,
        "column": 27
       }
      ],
@@ -13783,7 +13783,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::DeployResult",
      "call_sites": [
       {
-       "line": 415,
+       "line": 423,
        "column": 31
       }
      ],
@@ -13794,7 +13794,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::label",
      "call_sites": [
       {
-       "line": 466,
+       "line": 474,
        "column": 49
       }
      ],
@@ -13805,7 +13805,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::label",
      "call_sites": [
       {
-       "line": 467,
+       "line": 475,
        "column": 40
       }
      ],
@@ -13816,7 +13816,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::label",
      "call_sites": [
       {
-       "line": 470,
+       "line": 478,
        "column": 20
       }
      ],
@@ -13827,7 +13827,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::label",
      "call_sites": [
       {
-       "line": 480,
+       "line": 488,
        "column": 29
       }
      ],
@@ -13838,7 +13838,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::label",
      "call_sites": [
       {
-       "line": 498,
+       "line": 506,
        "column": 40
       }
      ],
@@ -13849,7 +13849,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::ReleaseInfo",
      "call_sites": [
       {
-       "line": 508,
+       "line": 516,
        "column": 22
       }
      ],
@@ -13860,7 +13860,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::label",
      "call_sites": [
       {
-       "line": 539,
+       "line": 547,
        "column": 61
       }
      ],
@@ -13871,7 +13871,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::label",
      "call_sites": [
       {
-       "line": 542,
+       "line": 550,
        "column": 66
       }
      ],
@@ -13882,7 +13882,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::DeployResult",
      "call_sites": [
       {
-       "line": 565,
+       "line": 573,
        "column": 35
       }
      ],
@@ -13893,7 +13893,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::DeployResult",
      "call_sites": [
       {
-       "line": 582,
+       "line": 590,
        "column": 31
       }
      ],
@@ -13904,7 +13904,7 @@
      "target": "deploynator/_models.py|deploynator/_models.py::DeployResult",
      "call_sites": [
       {
-       "line": 595,
+       "line": 603,
        "column": 15
       }
      ],
@@ -13958,7 +13958,7 @@
      "target": "deploynator/_changelog.py|deploynator/_changelog.py::write_changelog",
      "call_sites": [
       {
-       "line": 313,
+       "line": 311,
        "column": 12
       }
      ],
@@ -13969,7 +13969,7 @@
      "target": "deploynator/_changelog.py|deploynator/_changelog.py::generate_from_messages",
      "call_sites": [
       {
-       "line": 334,
+       "line": 332,
        "column": 20
       }
      ],
@@ -14002,7 +14002,7 @@
      "target": "deploynator/_readme.py|deploynator/_readme.py::ensure_deployed_footer",
      "call_sites": [
       {
-       "line": 276,
+       "line": 284,
        "column": 23
       }
      ],
@@ -14051,7 +14051,7 @@
      "target": "deploynator/_changelog.py|deploynator/_changelog.py::write_changelog",
      "call_sites": [
       {
-       "line": 313,
+       "line": 311,
        "column": 12
       }
      ],
@@ -14062,7 +14062,7 @@
      "target": "deploynator/_changelog.py|deploynator/_changelog.py::generate_from_messages",
      "call_sites": [
       {
-       "line": 334,
+       "line": 332,
        "column": 20
       }
      ],
@@ -14095,7 +14095,7 @@
      "target": "deploynator/_readme.py|deploynator/_readme.py::ensure_deployed_footer",
      "call_sites": [
       {
-       "line": 276,
+       "line": 284,
        "column": 23
       }
      ],
@@ -14106,7 +14106,7 @@
      "target": "deploynator/_changelog.py|deploynator/_changelog.py::generate_from_log",
      "call_sites": [
       {
-       "line": 304,
+       "line": 312,
        "column": 28
       }
      ],
@@ -14117,7 +14117,7 @@
      "target": "deploynator/_changelog.py|deploynator/_changelog.py::write_changelog",
      "call_sites": [
       {
-       "line": 341,
+       "line": 349,
        "column": 12
       }
      ],
@@ -14128,7 +14128,7 @@
      "target": "deploynator/_changelog.py|deploynator/_changelog.py::format_for_release",
      "call_sites": [
       {
-       "line": 446,
+       "line": 454,
        "column": 28
       }
      ],
@@ -14139,7 +14139,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 472,
+       "line": 480,
        "column": 25
       }
      ],
@@ -14150,7 +14150,7 @@
      "target": "deploynator/_changelog.py|deploynator/_changelog.py::format_for_release",
      "call_sites": [
       {
-       "line": 507,
+       "line": 515,
        "column": 28
       }
      ],
@@ -14161,7 +14161,7 @@
      "target": "deploynator/_config.py|deploynator/_config.py::create",
      "call_sites": [
       {
-       "line": 779,
+       "line": 787,
        "column": 21
       }
      ],

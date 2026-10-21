@@ -32,28 +32,28 @@ This community groups 7 file(s) rooted at `deploynator` with dominant language p
 - `_is_path_like` (method, `deploynator/_app.py:280`) `def _is_path_like(value)`
 - `_looks_like_path` (method, `deploynator/_app.py:284`) `def _looks_like_path(value)`
 - `_resolve_project_path` (method, `deploynator/_app.py:291`) `def _resolve_project_path(self, project_name)`
-- `_smart_prepare` (method, `deploynator/_app.py:305`) `def _smart_prepare(self, base, changelog_content, dry_run)`
-- `commit` (method, `deploynator/_app.py:320`) `def commit(self, commit_type, subject, scope, body, project_path, project_name,`
-- `_parse_release_message` (method, `deploynator/_app.py:361`) `def _parse_release_message(raw)` - Parsea `test(module): texto` o `test(module) texto` (colon opcional).
-- `release` (method, `deploynator/_app.py:379`) `def release(self, commit_type, subject, scope, body, message, project_name, bump`
-- `generate_docs` (method, `deploynator/_app.py:521`) `def generate_docs(self, project_path, project_name)`
-- `status` (method, `deploynator/_app.py:527`) `def status(self, project_path, project_name)`
-- `list_projects` (method, `deploynator/_app.py:547`) `def list_projects(self, search_path)`
-- `generate_ci` (method, `deploynator/_app.py:552`) `def generate_ci(self, project_name, all_projects)`
-- `install_deps` (method, `deploynator/_app.py:568`) `def install_deps(self, project_name)`
-- `install_packages` (method, `deploynator/_app.py:579`) `def install_packages(self, packages)` - pip install/upgrade packages (default: deploynator from PyPI).
-- `interactive_menu` (method, `deploynator/_app.py:606`) `def interactive_menu(self)`
-- `_interactive_release` (method, `deploynator/_app.py:642`) `def _interactive_release(self)`
-- `_interactive_commit` (method, `deploynator/_app.py:690`) `def _interactive_commit(self)`
-- `_interactive_start` (method, `deploynator/_app.py:717`) `def _interactive_start(self)`
-- `_interactive_auth` (method, `deploynator/_app.py:741`) `def _interactive_auth(self)`
-- `_interactive_auth_status` (method, `deploynator/_app.py:764`) `def _interactive_auth_status(self)`
-- `_interactive_docs` (method, `deploynator/_app.py:770`) `def _interactive_docs(self)`
-- `_interactive_ci` (method, `deploynator/_app.py:777`) `def _interactive_ci(self)`
+- `_smart_prepare` (method, `deploynator/_app.py:303`) `def _smart_prepare(self, base, changelog_content, dry_run)`
+- `commit` (method, `deploynator/_app.py:318`) `def commit(self, commit_type, subject, scope, body, project_path, project_name,`
+- `_parse_release_message` (method, `deploynator/_app.py:359`) `def _parse_release_message(raw)` - Parsea `test(module): texto` o `test(module) texto` (colon opcional).
+- `release` (method, `deploynator/_app.py:377`) `def release(self, commit_type, subject, scope, body, message, project_name, bump`
+- `generate_docs` (method, `deploynator/_app.py:519`) `def generate_docs(self, project_path, project_name)`
+- `status` (method, `deploynator/_app.py:525`) `def status(self, project_path, project_name)`
+- `list_projects` (method, `deploynator/_app.py:545`) `def list_projects(self, search_path)`
+- `generate_ci` (method, `deploynator/_app.py:550`) `def generate_ci(self, project_name, all_projects)`
+- `install_deps` (method, `deploynator/_app.py:566`) `def install_deps(self, project_name)`
+- `install_packages` (method, `deploynator/_app.py:577`) `def install_packages(self, packages)` - pip install/upgrade packages (default: deploynator from PyPI).
+- `interactive_menu` (method, `deploynator/_app.py:604`) `def interactive_menu(self)`
+- `_interactive_release` (method, `deploynator/_app.py:640`) `def _interactive_release(self)`
+- `_interactive_commit` (method, `deploynator/_app.py:688`) `def _interactive_commit(self)`
+- `_interactive_start` (method, `deploynator/_app.py:715`) `def _interactive_start(self)`
+- `_interactive_auth` (method, `deploynator/_app.py:739`) `def _interactive_auth(self)`
+- `_interactive_auth_status` (method, `deploynator/_app.py:762`) `def _interactive_auth_status(self)`
+- `_interactive_docs` (method, `deploynator/_app.py:768`) `def _interactive_docs(self)`
+- `_interactive_ci` (method, `deploynator/_app.py:775`) `def _interactive_ci(self)`
 
 ## Internal vs External Edges
 
-- Internal resolved imports (EXTRACTED): 17
+- Internal resolved imports (EXTRACTED): 16
 - Cross-boundary resolved imports (EXTRACTED): 44
 
 ## Connections
@@ -67,20 +67,20 @@ This community groups 7 file(s) rooted at `deploynator` with dominant language p
 ## Risks
 
 - [taint high] `deploynator/_app.py` -> `deploynator/_app.py` via `subprocess` (0 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_platforms.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_config.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_models.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_deploy.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_config.py` via `subprocess` (1 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_toml.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_git.py` via `subprocess` (1 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_semver.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_changelog.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_readme.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_deb.py` via `subprocess` (2 hops)
-- [taint high] `deploynator/_app.py` -> `deploynator/_receipt.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_platforms.py` via `subprocess` (1 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_pypi.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_changelog.py` via `subprocess` (2 hops)
 - [taint high] `deploynator/_app.py` -> `deploynator/_runner.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_docs.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_receipt.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_deb.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_readme.py` via `subprocess` (2 hops)
+- [taint high] `deploynator/_app.py` -> `deploynator/_semver.py` via `subprocess` (2 hops)
 
 ## Open Questions
 

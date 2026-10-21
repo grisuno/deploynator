@@ -6,11 +6,11 @@ Query with `readmenator . ask "<question>"` (local: BM25 + Personalized PageRank
 
 ## Project overview (`root`, root, rating 7.0)
 
-40 files in 6 communities and 2 themes. Highest-impact communities: deploynator: _changelog (7.0), deploynator: _toml (4.1), deploynator: _receipt (3.6). God nodes: deploynator/_config.py, deploynator/_deploy.py, deploynator/_models.py, deploynator/_toml.py, deploynator/_app.py.
+40 files in 6 communities and 2 themes. Highest-impact communities: deploynator: _changelog (7.0), deploynator: _toml (4.1), deploynator: _receipt (3.5). God nodes: deploynator/_config.py, deploynator/_deploy.py, deploynator/_models.py, deploynator/_toml.py, deploynator/_app.py.
 
 - [deploynator: _changelog] rating 7.0: `deploynator/_config.py` ranks 1 by PageRank, 85 importers, 6 symbols.
 - [deploynator: _toml] rating 4.1: `deploynator/_toml.py` ranks 1 by PageRank, 42 importers, 10 symbols: list_make_targets: Lee el Makefile y devuelve sus targets sin ejecutar nada.
-- [deploynator: _receipt] rating 3.6: `deploynator/_app.py` ranks 1 by PageRank, 1 importers, 33 symbols: install_packages: pip install/upgrade packages (default: deploynator from PyPI).
+- [deploynator: _receipt] rating 3.5: `deploynator/_app.py` ranks 1 by PageRank, 1 importers, 33 symbols: install_packages: pip install/upgrade packages (default: deploynator from PyPI).
 - [deploynator: _models] rating 3.4: `deploynator/_models.py` ranks 1 by PageRank, 28 importers, 27 symbols.
 - [deploynator: _mcp_server] rating 2.6: `deploynator/__init__.py` ranks 1 by PageRank, 16 importers, 0 symbols.
 - [unassigned files] rating 0.7: `deploy.sh` ranks 1 by PageRank, 0 importers, 1 symbols: one-liner deploy via deploynator (generic per-repo script).
@@ -20,14 +20,14 @@ Query with `readmenator . ask "<question>"` (local: BM25 + Personalized PageRank
 
 ## deploynator: _changelog + deploynator: _toml +3 (`t0`, theme, rating 7.0)
 
-Theme of 5 communities and 37 files: deploynator: _changelog (6 files, rating 7.0); deploynator: _toml (10 files, rating 4.1); deploynator: _receipt (7 files, rating 3.6); deploynator: _models (7 files, rating 3.4); deploynator: _mcp_server (7 files, rating 2.6).
+Theme of 5 communities and 37 files: deploynator: _changelog (6 files, rating 7.0); deploynator: _toml (10 files, rating 4.1); deploynator: _receipt (7 files, rating 3.5); deploynator: _models (7 files, rating 3.4); deploynator: _mcp_server (7 files, rating 2.6).
 
 - [deploynator: _changelog] `deploynator/_config.py` ranks 1 by PageRank, 85 importers, 6 symbols.
 - [deploynator: _changelog] `deploynator/_changelog.py` ranks 2 by PageRank, 2 importers, 9 symbols.
 - [deploynator: _toml] `deploynator/_toml.py` ranks 1 by PageRank, 42 importers, 10 symbols: list_make_targets: Lee el Makefile y devuelve sus targets sin ejecutar nada.
 - [deploynator: _toml] `deploynator/_pypi.py` ranks 2 by PageRank, 16 importers, 8 symbols: prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.
 - [deploynator: _receipt] `deploynator/_app.py` ranks 1 by PageRank, 1 importers, 33 symbols: install_packages: pip install/upgrade packages (default: deploynator from PyPI).
-- [deploynator: _receipt] `deploynator/_deploy.py` ranks 2 by PageRank, 21 importers, 23 symbols: _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.
+- [deploynator: _receipt] `deploynator/_deploy.py` ranks 2 by PageRank, 20 importers, 23 symbols: _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.
 - [deploynator: _models] `deploynator/_models.py` ranks 1 by PageRank, 28 importers, 27 symbols.
 - [deploynator: _models] `deploynator/_semver.py` ranks 2 by PageRank, 9 importers, 9 symbols.
 - Key entities: file:deploynator/_config.py, file:tests/test_config.py, file:tests/test_pypi.py, file:tests/test_deb.py, file:deploynator/_platforms.py, file:tests/test_receipt.py, file:tests/test_models.py, file:deploynator/_models.py
@@ -46,7 +46,7 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.7).
 
 ## deploynator: _changelog (`c4`, community, rating 7.0)
 
-6 files under deploynator (py 6), mostly testing. Core file deploynator/_config.py (PageRank 0.2542, imported by 85 files). Key abstractions: Config, create, resolve_path, gh_authd, glab_authd, bb_authd. Depends on deploynator: _models (1). Used by deploynator: _toml (51), deploynator: _mcp_server (12), deploynator: _models (10).
+6 files under deploynator (py 6), mostly testing. Core file deploynator/_config.py (PageRank 0.2546, imported by 85 files). Key abstractions: Config, create, resolve_path, gh_authd, glab_authd, bb_authd. Depends on deploynator: _models (1). Used by deploynator: _toml (51), deploynator: _mcp_server (12), deploynator: _models (10).
 
 - `deploynator/_config.py` ranks 1 by PageRank, 85 importers, 6 symbols.
 - `deploynator/_changelog.py` ranks 2 by PageRank, 2 importers, 9 symbols.
@@ -60,7 +60,7 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.7).
 
 ## deploynator: _toml (`c0`, community, rating 4.1)
 
-10 files under deploynator (py 10), mostly testing. Core file deploynator/_toml.py (PageRank 0.0664, imported by 42 files): list_make_targets: Lee el Makefile y devuelve sus targets sin ejecutar nada. Key abstractions: TomlConfig, list_make_targets, looks_like_packaging_project, detect_test_commands, load_toml_config, PyPIRunner. Depends on deploynator: _changelog (51), deploynator: _models (12), deploynator: _receipt (7). Used by deploynator: _receipt (10), deploynator: _mcp_server (1).
+10 files under deploynator (py 10), mostly testing. Core file deploynator/_toml.py (PageRank 0.0666, imported by 42 files): list_make_targets: Lee el Makefile y devuelve sus targets sin ejecutar nada. Key abstractions: TomlConfig, list_make_targets, looks_like_packaging_project, detect_test_commands, load_toml_config, PyPIRunner. Depends on deploynator: _changelog (51), deploynator: _models (12), deploynator: _receipt (7). Used by deploynator: _receipt (10), deploynator: _mcp_server (1).
 
 - `deploynator/_toml.py` ranks 1 by PageRank, 42 importers, 10 symbols: list_make_targets: Lee el Makefile y devuelve sus targets sin ejecutar nada.
 - `deploynator/_pypi.py` ranks 2 by PageRank, 16 importers, 8 symbols: prompt_for_credentials: Pide el token PyPI por input oculto solo si hay TTY.
@@ -72,22 +72,22 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.7).
 - Key entities: file:tests/test_pypi.py, file:tests/test_deb.py, file:tests/test_toml.py, file:deploynator/_toml.py, file:tests/bdd_test_deploy.py, file:tests/test_runner.py, sym:deploynator/_toml.py::load_toml_config@217, file:deploynator/_pypi.py
 - Rating 4.1/10 = 7 x PageRank share 0.59 + 3 x risk 0.00. Internal imports: 77.
 
-## deploynator: _receipt (`c2`, community, rating 3.6)
+## deploynator: _receipt (`c2`, community, rating 3.5)
 
-7 files under deploynator (py 7), mostly utility. Core file deploynator/_app.py (PageRank 0.0459, imported by 1 files): install_packages: pip install/upgrade packages (default: deploynator from PyPI). Key abstractions: DeploynatorApp, auth_login, auth_status, init_project, start_branch, commit. Depends on deploynator: _toml (10), deploynator: _models (9), deploynator: _changelog (9). Used by deploynator: _models (8), deploynator: _toml (7), deploynator: _mcp_server (1).
+7 files under deploynator (py 7), mostly utility. Core file deploynator/_app.py (PageRank 0.0460, imported by 1 files): install_packages: pip install/upgrade packages (default: deploynator from PyPI). Key abstractions: DeploynatorApp, auth_login, auth_status, init_project, start_branch, commit. Depends on deploynator: _toml (10), deploynator: _models (9), deploynator: _changelog (9). Used by deploynator: _models (8), deploynator: _toml (7), deploynator: _mcp_server (1).
 
 - `deploynator/_app.py` ranks 1 by PageRank, 1 importers, 33 symbols: install_packages: pip install/upgrade packages (default: deploynator from PyPI).
-- `deploynator/_deploy.py` ranks 2 by PageRank, 21 importers, 23 symbols: _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.
+- `deploynator/_deploy.py` ranks 2 by PageRank, 20 importers, 23 symbols: _gh_release_in_repo: Best-effort `gh release create` inferring repo from origin.
 - `deploynator/_git.py` ranks 3 by PageRank, 6 importers, 25 symbols: is_behind: True si `ahead_branch` tiene commits que `behind_branch` no tiene (es decir, behind_branch esta por debajo de ahead_branch).
-- Hotspot `deploynator/_app.py`: 33 symbols, 45 connections (score 0.57).
-- Hotspot `deploynator/_deploy.py`: 23 symbols, 54 connections (score 0.55).
+- Hotspot `deploynator/_app.py`: 33 symbols, 43 connections (score 0.56).
+- Hotspot `deploynator/_deploy.py`: 23 symbols, 53 connections (score 0.54).
 - Taint: 7 paths reach this group via subprocess.
-- Key entities: file:deploynator/_platforms.py, file:tests/test_receipt.py, file:deploynator/_receipt.py, sym:deploynator/_receipt.py::write@438, file:deploynator/_deploy.py, sym:deploynator/_deploy.py::_deploy_impl@172, file:deploynator/_app.py, file:deploynator/_git.py
-- Rating 3.6/10 = 7 x PageRank share 0.51 + 3 x risk 0.00. Internal imports: 17.
+- Key entities: file:deploynator/_platforms.py, file:tests/test_receipt.py, file:deploynator/_receipt.py, sym:deploynator/_receipt.py::write@438, file:deploynator/_deploy.py, sym:deploynator/_deploy.py::_deploy_impl@180, file:deploynator/_app.py, file:deploynator/_git.py
+- Rating 3.5/10 = 7 x PageRank share 0.50 + 3 x risk 0.00. Internal imports: 16.
 
 ## deploynator: _models (`c3`, community, rating 3.4)
 
-7 files under tests (py 7), mostly testing. Core file deploynator/_models.py (PageRank 0.0779, imported by 28 files). Key abstractions: Platform, CommitType, PlatformConfig, VersionConfig, ProjectConfig, CommitMessage. Depends on deploynator: _changelog (10), deploynator: _receipt (8), deploynator: _mcp_server (2). Used by deploynator: _toml (12), deploynator: _receipt (9), deploynator: _mcp_server (1).
+7 files under tests (py 7), mostly testing. Core file deploynator/_models.py (PageRank 0.0785, imported by 28 files). Key abstractions: Platform, CommitType, PlatformConfig, VersionConfig, ProjectConfig, CommitMessage. Depends on deploynator: _changelog (10), deploynator: _receipt (8), deploynator: _mcp_server (2). Used by deploynator: _toml (12), deploynator: _receipt (9), deploynator: _mcp_server (1).
 
 - `deploynator/_models.py` ranks 1 by PageRank, 28 importers, 27 symbols.
 - `deploynator/_semver.py` ranks 2 by PageRank, 9 importers, 9 symbols.
@@ -101,7 +101,7 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.7).
 
 ## deploynator: _mcp_server (`c1`, community, rating 2.6)
 
-7 files under deploynator (py 7), mostly utility. Core file deploynator/__init__.py (PageRank 0.0405, imported by 16 files). Key abstractions: MCPRequest, MCPTool, MCPResource, MCPServer, is_notification, response. Depends on deploynator: _changelog (12), deploynator: _toml (1), deploynator: _receipt (1). Used by deploynator: _models (2).
+7 files under deploynator (py 7), mostly utility. Core file deploynator/__init__.py (PageRank 0.0406, imported by 16 files). Key abstractions: MCPRequest, MCPTool, MCPResource, MCPServer, is_notification, response. Depends on deploynator: _changelog (12), deploynator: _toml (1), deploynator: _receipt (1). Used by deploynator: _models (2).
 
 - `deploynator/__init__.py` ranks 1 by PageRank, 16 importers, 0 symbols.
 - `deploynator/_mcp_server.py` ranks 2 by PageRank, 6 importers, 32 symbols: MCP (Model Context Protocol) stdio server for deploynator.
@@ -114,7 +114,7 @@ Theme of 1 communities and 3 files: unassigned files (3 files, rating 0.7).
 
 ## unassigned files (`c5`, community, rating 0.7)
 
-3 files under root (sh 2, py 1), mostly utility. Core file deploy.sh (PageRank 0.0115, imported by 0 files): one-liner deploy via deploynator (generic per-repo script). Key abstractions: ensure_pkg.
+3 files under root (sh 2, py 1), mostly utility. Core file deploy.sh (PageRank 0.0116, imported by 0 files): one-liner deploy via deploynator (generic per-repo script). Key abstractions: ensure_pkg.
 
 - `deploy.sh` ranks 1 by PageRank, 0 importers, 1 symbols: one-liner deploy via deploynator (generic per-repo script).
 - `install.sh` ranks 2 by PageRank, 0 importers, 0 symbols.

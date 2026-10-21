@@ -19,7 +19,7 @@ Open work clusters around documentation (38% file coverage), 0 security findings
 |--------|-------|
 | Files | 40 |
 | Symbols | 581 |
-| Resolved imports | 273 |
+| Resolved imports | 272 |
 | Languages | py, sh |
 | Communities | 6 |
 | Doc coverage | 38% (15/40 files) |

@@ -87,11 +87,11 @@ flowchart LR
     n_deploynator__app_py__DeploynatorApp["_app.DeploynatorApp<br/>_app.py:18"]:::external
     n_deploynator__config_py__create["_config.Config.create<br/>_config.py:83"]:::external
     n_deploynator__config_py__Config["_config.Config<br/>_config.py:8"]:::external
-    n_deploynator__app_py__list_projects["_app.DeploynatorApp.list_projects<br/>_app.py:547"]:::external
+    n_deploynator__app_py__list_projects["_app.DeploynatorApp.list_projects<br/>_app.py:545"]:::external
     n_deploynator__deploy_py__discover["_deploy.ProjectDiscovery.discover<br/>_deploy.py:42"]:::external
     n_deploynator__deploy_py___load_single["_deploy.ProjectDiscovery._load_single<br/>_deploy.py:70"]:::external
     n_deploynator__models_py__from_dict_138["_models.ProjectConfig.from_dict<br/>_models.py:138"]:::external
-    n_deploynator__app_py__status["_app.DeploynatorApp.status<br/>_app.py:527"]:::external
+    n_deploynator__app_py__status["_app.DeploynatorApp.status<br/>_app.py:525"]:::external
     n_deploynator__git_py__GitOperations["_git.GitOperations<br/>_git.py:9"]:::external
     n_deploynator__app_py___resolve_project_path["_app.DeploynatorApp._resolve_project_path<br/>_app.py:291"]:::external
     n_deploynator__deploy_py__find_by_name["_deploy.ProjectDiscovery.find_by_name<br/>_deploy.py:63"]:::external
@@ -100,7 +100,7 @@ flowchart LR
     n_deploynator__git_py__current_branch["_git.GitOperations.current_branch<br/>_git.py:243"]:::external
     n_deploynator__git_py__is_dirty["_git.GitOperations.is_dirty<br/>_git.py:255"]:::external
     n_deploynator__git_py__has_remote["_git.GitOperations.has_remote<br/>_git.py:265"]:::external
-    n_deploynator__app_py__release["_app.DeploynatorApp.release<br/>_app.py:379"]:::external
+    n_deploynator__app_py__release["_app.DeploynatorApp.release<br/>_app.py:377"]:::external
     n_deploynator__models_py__from_string_57["_models.CommitType.from_string<br/>_models.py:57"]:::external
     n_deploynator__toml_py__load_toml_config["_toml.load_toml_config<br/>_toml.py:217"]:::external
     n_deploynator__toml_py___auto_toml_config["_toml._auto_toml_config<br/>Config auto para proyectos sin deploynator.to...<br/>_toml.py:150"]:::external
@@ -327,11 +327,11 @@ flowchart LR
     n_deploynator__config_py__create["_config.Config.create<br/>_config.py:83"]:::external
     n_deploynator__config_py__Config["_config.Config<br/>_config.py:8"]:::external
     n_deploynator__app_py__DeploynatorApp["_app.DeploynatorApp<br/>_app.py:18"]:::external
-    n_deploynator__app_py__interactive_menu["_app.DeploynatorApp.interactive_menu<br/>_app.py:606"]:::external
+    n_deploynator__app_py__interactive_menu["_app.DeploynatorApp.interactive_menu<br/>_app.py:604"]:::external
     n_deploynator___main___py__preprocess_argv["__main__.preprocess_argv<br/>__main__.py:151"]:::default
     n_deploynator___main___py__build_parser["__main__.build_parser<br/>__main__.py:16"]:::default
     n_deploynator__models_py__valid_types["_models.CommitType.valid_types<br/>_models.py:64"]:::external
-    n_deploynator__app_py__release["_app.DeploynatorApp.release<br/>_app.py:379"]:::external
+    n_deploynator__app_py__release["_app.DeploynatorApp.release<br/>_app.py:377"]:::external
     n_deploynator__models_py__from_string_57["_models.CommitType.from_string<br/>_models.py:57"]:::external
     n_deploynator__deploy_py__discover["_deploy.ProjectDiscovery.discover<br/>_deploy.py:42"]:::external
     n_deploynator__deploy_py___load_single["_deploy.ProjectDiscovery._load_single<br/>_deploy.py:70"]:::external
@@ -350,11 +350,11 @@ flowchart LR
     n_deploynator__models_py__VersionConfig["_models.VersionConfig<br/>_models.py:114"]:::external
     n_deploynator__models_py__DeployResult["_models.DeployResult<br/>_models.py:276"]:::external
     n_deploynator__models_py__from_string["_models.Platform.from_string<br/>_models.py:15"]:::external
-    n_deploynator__app_py___parse_release_message["_app.DeploynatorApp._parse_release_message<br/>Parsea #96;test(module): texto#96; o #96;test(module)...<br/>_app.py:361"]:::external
-    n_deploynator__deploy_py__deploy["_deploy.DeployOrchestrator.deploy<br/>_deploy.py:105"]:::external
+    n_deploynator__app_py___parse_release_message["_app.DeploynatorApp._parse_release_message<br/>Parsea #96;test(module): texto#96; o #96;test(module)...<br/>_app.py:359"]:::external
+    n_deploynator__deploy_py__deploy["_deploy.DeployOrchestrator.deploy<br/>_deploy.py:113"]:::external
     n_deploynator__receipt_py__ReceiptCollector["_receipt.ReceiptCollector<br/>Collects steps, subprocess calls and evidence...<br/>_receipt.py:263"]:::external
     n_deploynator__receipt_py__capture["_receipt.ReceiptCollector.capture<br/>_receipt.py:380"]:::external
-    n_deploynator__deploy_py___deploy_impl["_deploy.DeployOrchestrator._deploy_impl<br/>_deploy.py:172"]:::external
+    n_deploynator__deploy_py___deploy_impl["_deploy.DeployOrchestrator._deploy_impl<br/>_deploy.py:180"]:::external
     n_deploynator___main___py__main -->|"1"| n_deploynator__config_py__create
     n_deploynator__config_py__create -->|"1"| n_deploynator__config_py__Config
     n_deploynator___main___py__main -->|"2"| n_deploynator__app_py__DeploynatorApp

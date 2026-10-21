@@ -203,7 +203,7 @@ def __init__(self, config: Config) -> None
 
 #### `DeployOrchestrator.deploy`
 
-`method` | [deploynator/_deploy.py:105](../../deploynator/_deploy.py#L105)
+`method` | [deploynator/_deploy.py:113](../../deploynator/_deploy.py#L113)
 
 ```python
 def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, scope: str = '', body: str = '', dry_run: bool = False, platforms_override: list[Platform] | None = None, run_tests: bool = True, run_docs: bool = True, force_bump: str | None = None, run_pypi: bool = True, run_deb: bool = True, verbose: bool = False, receipt_path: str | None = None, trace: bool = False) -> DeployResult
@@ -239,7 +239,7 @@ def deploy(self, project: ProjectConfig, commit_type: CommitType, subject: str, 
 
 #### `DeployOrchestrator.generate_workflows`
 
-`method` | [deploynator/_deploy.py:707](../../deploynator/_deploy.py#L707)
+`method` | [deploynator/_deploy.py:715](../../deploynator/_deploy.py#L715)
 
 ```python
 def generate_workflows(self, project: ProjectConfig, output_dir: str = '.github/workflows') -> list[str]
@@ -260,7 +260,7 @@ def generate_workflows(self, project: ProjectConfig, output_dir: str = '.github/
 
 #### `DeployOrchestrator.install_dependencies`
 
-`method` | [deploynator/_deploy.py:774](../../deploynator/_deploy.py#L774)
+`method` | [deploynator/_deploy.py:782](../../deploynator/_deploy.py#L782)
 
 ```python
 def install_dependencies(self, project: ProjectConfig) -> dict[str, bool]
@@ -282,7 +282,7 @@ def install_dependencies(self, project: ProjectConfig) -> dict[str, bool]
 
 #### `DeployOrchestrator.integrate_readmenator`
 
-`method` | [deploynator/_deploy.py:784](../../deploynator/_deploy.py#L784)
+`method` | [deploynator/_deploy.py:792](../../deploynator/_deploy.py#L792)
 
 ```python
 def integrate_readmenator(self, project_path: str) -> bool
@@ -308,7 +308,7 @@ def integrate_readmenator(self, project_path: str) -> bool
 
 #### `DeployOrchestrator.install_lazygit`
 
-`method` | [deploynator/_deploy.py:820](../../deploynator/_deploy.py#L820)
+`method` | [deploynator/_deploy.py:828](../../deploynator/_deploy.py#L828)
 
 ```python
 def install_lazygit(self) -> bool

@@ -98,10 +98,10 @@ footer{color:var(--cb-muted);font-size:12px;margin:24px 0}
 <br><code>app.py::main@13 → deploynator/_config.py::create</code> · <code>deploynator/__main__.py::main@190 → deploynator/_config.py::create</code> · <code>deploynator/__main__.py::main@196 → deploynator/_config.py::create</code>
 </li>
 <li><b>deploynator: _receipt</b> calls into <b>deploynator: _toml</b> — 10 imports, 30 calls across the boundary
-<br><code>deploynator/_app.py::init_project@218 → deploynator/_toml.py::detect_test_commands</code> · <code>deploynator/_app.py::init_project@222 → deploynator/_toml.py::_has_python_tests</code> · <code>deploynator/_app.py::release@416 → deploynator/_toml.py::load_toml_config</code>
+<br><code>deploynator/_app.py::init_project@218 → deploynator/_toml.py::detect_test_commands</code> · <code>deploynator/_app.py::init_project@222 → deploynator/_toml.py::_has_python_tests</code> · <code>deploynator/_app.py::release@414 → deploynator/_toml.py::load_toml_config</code>
 </li>
 <li><b>deploynator: _receipt</b> calls into <b>deploynator: _models</b> — 9 imports, 60 calls across the boundary
-<br><code>deploynator/_app.py::auth_status@46 → deploynator/_models.py::from_string</code> · <code>deploynator/_app.py::start_branch@266 → deploynator/_models.py::from_string</code> · <code>deploynator/_app.py::commit@325 → deploynator/_models.py::from_string</code>
+<br><code>deploynator/_app.py::auth_status@46 → deploynator/_models.py::from_string</code> · <code>deploynator/_app.py::start_branch@266 → deploynator/_models.py::from_string</code> · <code>deploynator/_app.py::commit@323 → deploynator/_models.py::from_string</code>
 </li>
 <li><b>deploynator: _receipt</b> calls into <b>deploynator: _changelog</b> — 9 imports, 28 calls across the boundary
 <br><code>deploynator/_app.py::__init__@20 → deploynator/_config.py::create</code> · <code>deploynator/_app.py::__init__@23 → deploynator/_config.py::create</code> · <code>deploynator/_app.py::auth_status@46 → deploynator/_config.py::create</code>
@@ -291,7 +291,7 @@ footer{color:var(--cb-muted);font-size:12px;margin:24px 0}
 <li><code>tests/test_readme_footer.py</code></li>
 </ul>
 </section>
-<footer>Generated offline from static analysis &middot; 09b84ce632fa</footer>
+<footer>Generated offline from static analysis &middot; f88fc6b64a81</footer>
 </main>
 <div id="cb-tip" role="tooltip"></div>
 <script>

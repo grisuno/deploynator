@@ -93,14 +93,22 @@ class DeployOrchestrator:
         self._deb = DebRunner(config)
 
     @staticmethod
-    def _resolve_project_path(project: ProjectConfig) -> str:
+    def _resolve_project_path(project: ProjectConfig,
+                              config: Config | None = None) -> str:
         if not project.path:
             return os.getcwd()
         if os.path.isabs(project.path):
             return project.path
-        base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        resolved = os.path.join(base, project.path)
-        return os.path.abspath(resolved)
+        candidates: list[str] = []
+        if config is not None:
+            scan_base = getattr(config, "_path", "") or os.getcwd()
+            candidates.append(os.path.join(scan_base, project.path))
+        legacy_base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        candidates.append(os.path.join(legacy_base, project.path))
+        for resolved in candidates:
+            if os.path.isdir(resolved):
+                return os.path.abspath(resolved)
+        return os.path.abspath(candidates[-1])
 
     def deploy(
         self,
@@ -189,7 +197,7 @@ class DeployOrchestrator:
         if collector is None:
             collector = ReceiptCollector(project=project.name, dry_run=dry_run)
             self._collector = collector
-        repo_path = self._resolve_project_path(project)
+        repo_path = self._resolve_project_path(project, config=self._config)
 
         if force_bump not in (None, "", "major", "minor", "patch"):
             return DeployResult(

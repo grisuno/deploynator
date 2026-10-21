@@ -2,7 +2,7 @@
 
 > Cross-session context for agents. Sections 1-6 are regenerated from the source tree with zero LLM tokens: declared rules are quoted verbatim with `file:line`, measured baselines come from the scan. Section 7 is written by agents and humans and is preserved across rebuilds.
 
-Generated from 40 files at commit `90946111a116`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
+Generated from 40 files at commit `ebdbaa4c506b`. Read this first, then `readmenator-wiki/index.md`, then `readmenator . ask "<question>"` for anything specific.
 
 ## 1. Purpose and domain
 
@@ -68,7 +68,7 @@ Declared:
 - none declared in instruction files (add them to AGENTS.md or record them in section 7)
 
 Measured baseline:
-- py: 38 files, 580 symbols; docstrings on 8% of symbols; functions snake_case (100%); types PascalCase (100%); median file 158 lines, max 841.
+- py: 38 files, 580 symbols; docstrings on 8% of symbols; functions snake_case (100%); types PascalCase (100%); median file 158 lines, max 849.
 - sh: 2 files, 1 symbols; docstrings on 100% of symbols; functions snake_case (100%); median file 44 lines, max 44.
 - Tests: 19 files under tests; follow the existing naming (e.g. `bdd_test_deploy.py`).
 
@@ -90,7 +90,7 @@ Measured baseline:
 ## 6. Risks to respect
 
 - God nodes (changes ripple widely): `deploynator/_config.py`, `deploynator/_deploy.py`, `deploynator/_models.py`, `deploynator/_toml.py`, `deploynator/_app.py`
-- Hotspots (complex and central): `tests/test_pypi.py`, `tests/test_deb.py`, `deploynator/_config.py`, `deploynator/_app.py`, `tests/test_runner.py`
+- Hotspots (complex and central): `tests/test_pypi.py`, `tests/test_deb.py`, `deploynator/_config.py`, `tests/test_runner.py`, `deploynator/_app.py`
 - Full blast radius: `readmenator-agent/GOTCHAS.md`; findings: `readmenator-agent/SECURITY.md`.
 
 ## 7. Session log (preserved across rebuilds)

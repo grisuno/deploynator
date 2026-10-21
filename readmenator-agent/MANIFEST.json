@@ -1,19 +1,19 @@
 {
   "tool": "readmenator",
   "schema_version": 2,
-  "generated_at": "2026-10-21T04:23:34Z",
+  "generated_at": "2026-10-21T04:37:48Z",
   "project_root": ".",
   "project_name": "deploynator",
-  "git_commit": "90946111a116553cb1aba06e2cd7e0a5b94c77f0",
+  "git_commit": "ebdbaa4c506b5b181dbcdab91399558f5f0491d2",
   "git_branch": "main",
-  "source_fingerprint": "09b84ce632fa7e71196cbc8a03c3867645817572699a97e5ba0ce784bd08dabc",
+  "source_fingerprint": "f88fc6b64a81e7a7df35fbf9d895954025dca80b5b94a522a8e3fe9ac897841d",
   "freshness_check": "readmenator . fresh  # exit 0 = docs match sources, exit 1 = run: readmenator . --rebuild",
   "files": 40,
   "symbols": 581,
-  "imports": 443,
-  "calls": 2991,
+  "imports": 442,
+  "calls": 2997,
   "inherits": 6,
-  "resolved_imports": 273,
+  "resolved_imports": 272,
   "security_findings": 0,
   "languages": {
     "py": 38,
@@ -72,7 +72,7 @@
     {
       "path": "KB_deploynator.md",
       "lines": 417,
-      "approx_tokens": 6891
+      "approx_tokens": 6893
     },
     {
       "path": "KB_root.md",
@@ -97,7 +97,7 @@
     {
       "path": "SYMBOLS.md",
       "lines": 500,
-      "approx_tokens": 12575
+      "approx_tokens": 12577
     },
     {
       "path": "SYMBOLS_p2.md",
